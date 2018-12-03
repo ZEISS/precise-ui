@@ -1,0 +1,20 @@
+{
+  "name": "precise-ui",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/es6",
+  "typings": "dist/es6",
+  "scripts": {
+    "build": "tsc -t es6 -m es6 --outDir dist/es6 --declaration --inlineSourceMap --inlineSources",
+    "test": "node -v"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "author": "ZEISS Digital Innovation Partners",
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  },
+  "license": "MIT"
+}

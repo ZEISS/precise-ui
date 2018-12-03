@@ -1,0 +1,30 @@
+language: node_js
+if: tag IS blank
+node_js:
+  - "8"
+cache:
+  directories:
+  - node_modules
+script:
+  - npm run test
+  - npm run build
+before_deploy:
+  - >
+    if ! [ "$BEFORE_DEPLOY_RUN" ]; then
+      export BEFORE_DEPLOY_RUN=1;
+      git config --local user.name "$git_user";
+      git config --local user.email "$git_email";
+      git tag "$(node -p 'require(`./package.json`).version')";
+    fi
+deploy:
+  - provider: npm
+    email: $auth_email
+    api_key: $auth_token
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: releases
+    api_key: $git_token
+    skip_cleanup: true
+    on:
+      branch: master
