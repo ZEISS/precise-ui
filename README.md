@@ -9,3 +9,10 @@
 ## License
 
 Precise UI is released using the MIT license. For more information see the [LICENSE file](LICENSE).
+
+## Issues
+
+When creating a new Issue, please use one of the provided templates:
+
+- [BUG REPORT](https://github.com/ZEISS/precise-ui/issues/new?template=bugs.md)
+- [FEATURE PROPOSAL](https://github.com/ZEISS/precise-ui/issues/new?template=features.md)
