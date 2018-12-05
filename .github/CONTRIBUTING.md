@@ -109,7 +109,7 @@ npm version patch -m "Upgrade to %s for reasons"
 git commit -a -m "Bumped version number to 1.2.1"
 ```
 
-Don’t forget to bump the version number after branching off!
+Don't forget to bump the version number after branching off!
 Then, fix the bug and commit the fix in one or more separate commits.
 
 ```sh
@@ -121,8 +121,8 @@ git commit -m "Fixed severe production problem"
 Following is a short guide on how to make a valid Pull Request.
 
 1. Firstly you need a local fork of the the project, so go ahead and press the `fork` button in
-   GitHub. This will create a copy of the repository in your own GitHub account and you’ll see a
-   note that it’s been forked underneath the project name: `Forked from ZEISS/precise-ui`.
+   GitHub. This will create a copy of the repository in your own GitHub account and you'll see a
+   note that it's been forked underneath the project name: `Forked from ZEISS/precise-ui`.
    Clone the newly forked repository locally and set up a new remote that points to the original
    project so that you can grab any changes and bring them into your local copy.
 
@@ -139,7 +139,7 @@ Following is a short guide on how to make a valid Pull Request.
 
 2. Create the branch, following or [Branching Model](#branching-model).
 
-3. Do some work :) This is the fun part where oyu get to contribute to Precise UI.
+3. Do some work :) This is the fun part where you get to contribute to Precise UI.
 
 4. Before pushing your code, few more task that need to be preformed:
 
