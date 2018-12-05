@@ -3,7 +3,7 @@
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
 The following is a set of guidelines for contributing to Precise UI, which are hosted in the
-ZEISS Organization on GitHub. These are mostly guidelines, not rules.
+ZEISS organization on GitHub. These are mostly guidelines, not rules.
 Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 When contributing to this repository, please first discuss the change you wish to make via issue,
@@ -58,7 +58,7 @@ providing the following information:
 
 ### Main Branches
 
-The central repo holds two main branches with an infinite lifetime:
+The central repository holds two main branches with an infinite lifetime:
 
 - **master**
 - **develop**
@@ -82,7 +82,7 @@ The two main different types of branches we may use are:
 - **Feature branches**
 - **Hotfix branches**
 
-**Creating a feature branch**
+#### Creating a Feature Branch
 
 - branch **from** -> `develop` -> must merge back **into** -> `develop`
 
@@ -91,14 +91,13 @@ Naming convention:
 - anything except `master`, `develop`, `release*`, or `hotfix*`
 - preferred `feature/{issueId}-descriptive_feature_title`
 
-**Creating a hotfix branch**
+#### Creating a hotfix branch
 
 - branch **from** -> `master` -> must merge back **into** -> `master` and `develop`
 
 Naming convention:
 
-- `hotfix/{issueId}-descriptive_issue_title`
-- `hotfix/{new_patch_version}`
+- `hotfix/{issueId}-descriptive_issue_title` or `hotfix/{new_patch_version}`
 
 Hotfix branches are created from the master branch. For example, say version 1.2 is the current
 production release running live and causing troubles due to a severe bug. But changes on develop
@@ -124,8 +123,8 @@ Following is a short guide on how to make a valid Pull Request.
 1. Firstly you need a local fork of the the project, so go ahead and press the `fork` button in
    GitHub. This will create a copy of the repository in your own GitHub account and you’ll see a
    note that it’s been forked underneath the project name: `Forked from ZEISS/precise-ui`.
-   Clone the newly forked repo locally and set up a new remote that points to the original project
-   so that you can grab any changes and bring them into your local copy.
+   Clone the newly forked repository locally and set up a new remote that points to the original
+   project so that you can grab any changes and bring them into your local copy.
 
    ```sh
    git remote add upstream git@github.com:ZEISS/precise-ui.git
@@ -160,8 +159,9 @@ Following is a short guide on how to make a valid Pull Request.
    git push origin HEAD
    ```
 
-6. After the code is successfully pushed to the origin repo, navigate to
-   [Precise UI GitHub repo](https://github.com/ZEISS/precise-ui/pulls) and issue a New pull request.
+6. After the code is successfully pushed to the origin repository, navigate to
+   [Precise UI GitHub repository](https://github.com/ZEISS/precise-ui/pulls) and issue a New pull
+   request.
 
 You may merge the Pull Request in once you have the sign-off of two other developers, or if you
 do not have permission to do that, you may request the second reviewer to merge it for you.
