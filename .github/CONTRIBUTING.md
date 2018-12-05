@@ -134,7 +134,7 @@ Following is a short guide on how to make a valid Pull Request.
 
    1. `origin` which points to your GitHub fork of the project.
       You can read and write to this remote.
-   2. `upstream` which points to the main project’s GitHub repository.
+   2. `upstream` which points to the main project's GitHub repository.
       You can only read from this remote.
 
 2. Create the branch, following or [Branching Model](#branching-model).
