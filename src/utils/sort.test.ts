@@ -1,4 +1,4 @@
-import sortObjectList from './sort';
+import { sortObjectList } from './sort';
 
 describe('data sorting', () => {
   it('should do nothing for an empty table', () => {

@@ -34,7 +34,7 @@ const TileTitle = styled.span`
   z-index: 2;
 `;
 
-export interface MetroInfoTile extends AnchorProps {
+export interface MetroInfoTileProps extends AnchorProps {
   /**
    * The source URL of an icon, if used. The icon scaled to max. 33% of the tile.
    */
@@ -48,7 +48,7 @@ export interface MetroInfoTile extends AnchorProps {
 /**
  * Provides a simple tile component that gives a flat info appareance.
  */
-export const MetroInfoTile: React.SFC<MetroInfoTile> = ({ children, image, title, ...props }) => (
+export const MetroInfoTile: React.SFC<MetroInfoTileProps> = ({ children, image, title, ...props }) => (
   <Tile {...props}>
     {image && <StyledTileIcon src={image} width="33%" height="33%" />}
     {title && <TileTitle>{title}</TileTitle>}

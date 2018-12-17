@@ -1,13 +1,13 @@
 import * as React from 'react';
-import styled, { themed, reStyled } from '../../utils/styled';
-import { InputProps, InputChangeEvent } from '../../common';
+import styled, { reStyled } from '../../utils/styled';
+import { showInputInfo } from '../../utils/input';
+import { FileImagePreview, StyledFileImagePreview, StyledFileItem, StyledFileList } from '../../quarks';
+import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
 import { Icon, IconName } from '../Icon';
+import { InputChangeEvent, InputProps } from '../../common';
+import { FileSelectOpenEvent } from '../FileSelect';
 import { IconLink } from '../IconLink';
 import { Spinner } from '../Spinner';
-import { FileSelectOpenEvent } from '../FileSelect';
-import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
-import { showInputInfo } from '../../utils/input';
-import { StyledFileImagePreview, FileImagePreview, StyledFileItem, StyledFileList } from '../../quarks';
 import { distance } from '../../distance';
 
 export type DropzoneOpenEvent = FileSelectOpenEvent;
@@ -302,15 +302,16 @@ class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, Drop
     const reader = new FileReader();
     reader.onload = (file => () => {
       const result = reader.result;
-      this.setState(prevState => ({
-        previews: [
-          ...prevState.previews,
-          {
-            file,
-            data: result,
-          },
-        ],
-      }));
+      typeof result === 'string' &&
+        this.setState(prevState => ({
+          previews: [
+            ...prevState.previews,
+            {
+              file,
+              data: result,
+            },
+          ],
+        }));
     })(f);
     reader.readAsDataURL(f);
 

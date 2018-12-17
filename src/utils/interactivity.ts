@@ -24,7 +24,7 @@ export function trackTouch<T extends HTMLElement>(
 ) {
   if (e.touches.length === 1) {
     const f = e.currentTarget.getBoundingClientRect();
-    const updatePosition = (e: SimpleTouchEvent, active: boolean, moved: boolean) => {
+    const updatePosition = (e: SimpleTouchEvent | React.TouchEvent<T>, active: boolean, moved: boolean) => {
       const t = e.touches[0] || e.changedTouches[0];
       const x = t.clientX - f.left;
       const y = t.clientY - f.top;
