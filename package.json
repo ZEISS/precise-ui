@@ -1,7 +1,7 @@
 {
   "name": "precise-ui",
   "version": "0.5.0",
-  "description": "",
+  "description": "Precise UI React component library.",
   "main": "dist/es6",
   "typings": "dist/es6",
   "scripts": {
@@ -84,7 +84,8 @@
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.17.0",
     "tslint-plugin-prettier": "^2.0.1",
-    "typescript": "2.9.1",
+    "typescript": "3.2.2",
+    "typescript-plugin-inner-jsx": "^0.1.0",
     "webpack": "^4.27.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"

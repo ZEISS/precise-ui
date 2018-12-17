@@ -26,28 +26,25 @@ export interface RefProps {
   innerRef?(node: HTMLElement | null): void;
 }
 
-declare global {
-  interface Screen {
-    orientation?: {
-      angle: number;
-    };
-  }
-}
-
 export function withResponsive<
   ComponentType extends React.ComponentType<ResponsiveComponentProps & { [key: string]: any }>
 >(Component: ComponentType): ComponentType {
   class Responsive extends React.Component<ResponsiveComponentProps, ResponsiveComponentState> {
     node: HTMLElement | null;
 
-    state = {
-      width: window.innerWidth,
-      height: window.innerHeight,
-      angle: (screen.orientation && screen.orientation.angle) || 0,
-    };
-
     constructor(props: ResponsiveComponentProps) {
       super(props);
+      const screenWithOrientaion = screen as {
+        orientation?: {
+          angle: number;
+        };
+      };
+
+      this.state = {
+        width: window.innerWidth,
+        height: window.innerHeight,
+        angle: (screenWithOrientaion.orientation && screenWithOrientaion.orientation.angle) || 0,
+      };
     }
 
     componentDidMount() {

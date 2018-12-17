@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
 import { StandardProps } from '../../common';
-import { remCalc } from '../../utils/remCalc';
 import { colorCycle } from '../../utils/colorCycle';
+import { remCalc } from '../../utils/remCalc';
 
 export type AvatarSize = 'xx-small' | 'x-small' | 'small' | 'medium' | 'large' | 'x-large';
 
@@ -144,12 +144,13 @@ const AvatarBadge = styled<SizeProp, 'div'>('div')`
   `};
 `;
 
+const defaultSize: AvatarSize = 'medium';
 /**
  * The avatar component renders an avatar sticker with an optional badge.
  *
  * We must provide either an `image` or an `initials` prop for the Avatar component to work correctly.
  */
-export const Avatar: React.SFC<AvatarProps> = ({ image, description, children, size = 'medium', ...props }) => (
+export const Avatar: React.SFC<AvatarProps> = ({ image, description, children, size = defaultSize, ...props }) => (
   <AvatarContainer {...props} title={description} size={size}>
     <AvatarContent size={size} theme={props.theme}>
       {image ? (

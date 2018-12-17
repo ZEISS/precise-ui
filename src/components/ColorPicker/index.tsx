@@ -250,7 +250,7 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
     if (form) {
       form.change({
         name,
-        value: state.value,
+        value: (state as Pick<ColorPickerState, 'value'>).value,
       });
     } else {
       this.setState(state);

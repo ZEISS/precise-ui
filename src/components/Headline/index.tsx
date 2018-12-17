@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
-import { StandardProps } from '../../common';
 import { TextStyles, TextStylings } from '../../textStyles';
+import { StandardProps } from '../../common';
 import { distance } from '../../distance';
 
 export type HeadlineSize = 'small' | 'medium';
@@ -103,10 +103,11 @@ const HeadlineContainer = styled<StyledHeadlineProps, 'div'>('div')`
   color: ${themed(props => (props.subheader ? props.theme.text5 : 'inherit'))};
 `;
 
+const defaultSize: HeadlineSize = 'medium';
 /**
  * Headline component with styles for all headline levels.
  */
-export const Headline: React.SFC<HeadlineProps> = ({ level = 3, size = 'medium', children, ...rest }) => {
+export const Headline: React.SFC<HeadlineProps> = ({ level = 3, size = defaultSize, children, ...rest }) => {
   const StyledHeadline = getStyledHeadline(level);
   return (
     <HeadlineContainer level={level} size={size} {...rest}>

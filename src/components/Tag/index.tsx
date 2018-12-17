@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
 import { StandardProps } from '../../common';
-import { grey6m } from '../../colors';
 import { distance } from '../../distance';
+import { grey6m } from '../../colors';
 
 export type TagType = 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'danger' | 'disabled' | 'none';
 
@@ -22,7 +22,7 @@ export interface TagProps extends StandardProps {
   children?: React.ReactNode;
 }
 
-const StyledTag = styled.span`
+const StyledTag = styled<TagProps, 'span'>('span')`
   display: inline-block;
   border-radius: 3px;
   font-size: 0.8em;
@@ -78,10 +78,11 @@ function getStyle(type: TagType) {
   }
 }
 
+const defaultType: TagType = 'primary';
 /**
  * The tag component represents a simple block with a typed color and content.
  */
-export const Tag: React.SFC<TagProps> = ({ type = 'primary', ...props }) => (
+export const Tag: React.SFC<TagProps> = ({ type = defaultType, ...props }) => (
   <StyledTag {...props} theme={getStyle(type)} />
 );
 Tag.displayName = 'Tag';

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import styled, { themed, keyframes } from '../../utils/styled';
+import styled, { keyframes, themed } from '../../utils/styled';
 import { StandardProps } from '../../common';
-import { remCalc } from '../../utils/remCalc';
 import { distance } from '../../distance';
+import { remCalc } from '../../utils/remCalc';
 
 export type SpinnerSize = 'x-small' | 'small' | 'medium' | 'large' | 'x-large';
 
@@ -65,12 +65,16 @@ const SpinningContainer = styled.div`
   visibility: ${(props: { hidden?: boolean }) => (props.hidden ? 'hidden' : 'visible')};
 `;
 
-const SpinningLabel = styled.label`
+interface SpinningLabelProps {
+  size?: string;
+}
+
+const SpinningLabel = styled<SpinningLabelProps, 'label'>('label')`
   color: ${themed(props => props.theme.text)};
-  display: ${(props: { size?: string }) => (strToSize(props.size) >= 20 ? 'block' : 'inline-block')};
+  display: ${props => (strToSize(props.size) >= 20 ? 'block' : 'inline-block')};
   margin: ${distance.xsmall};
   color: ${themed(props => props.theme.textDisabled)};
-  font-size: ${(props: { size?: string }) => strToFontSize(props.size)};
+  font-size: ${props => strToFontSize(props.size)};
 `;
 
 const Cubes = styled.div`

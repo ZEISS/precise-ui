@@ -57,10 +57,14 @@ const StyledContainer = styled.div`
     props.maxWidth ? FixedWidthContainer : FluidContainer};
 `;
 
+const defaultAlign: ContainerAlignment = 'center';
 /**
  * Represents a simple reusable container for outer layouts.
  */
-export const Container: React.SFC<ContainerProps> = ({ align = 'center', maxWidth = undefined, innerRef, ...rest }) => (
-  <StyledContainer align={align} maxWidth={maxWidth} innerRef={innerRef} {...rest} />
-);
+export const Container: React.SFC<ContainerProps> = ({
+  align = defaultAlign,
+  maxWidth = undefined,
+  innerRef,
+  ...rest
+}) => <StyledContainer align={align} maxWidth={maxWidth} innerRef={innerRef} {...rest} />;
 Container.displayName = 'Container';

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import styled from '../../utils/styled';
+import { FileImagePreview, StyledFileImagePreview, StyledFileItem, StyledFileList } from '../../quarks';
+import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
+import { InputChangeEvent, InputProps } from '../../common';
 import { Button } from '../Button';
 import { Icon } from '../Icon';
-import { InputChangeEvent, InputProps } from '../../common';
-import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
-import { showInputInfo } from '../../utils/input';
-import { StyledFileImagePreview, FileImagePreview, StyledFileItem, StyledFileList } from '../../quarks';
 import { Spinner } from '../Spinner';
+import { showInputInfo } from '../../utils/input';
 
 export type FileSelectChangeEvent = InputChangeEvent<Array<File>>;
 
@@ -173,15 +173,16 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
     const reader = new FileReader();
     reader.onload = (file => () => {
       const result = reader.result;
-      this.setState(prevState => ({
-        previews: [
-          ...prevState.previews,
-          {
-            file,
-            data: result,
-          },
-        ],
-      }));
+      typeof result === 'string' &&
+        this.setState(prevState => ({
+          previews: [
+            ...prevState.previews,
+            {
+              file,
+              data: result,
+            },
+          ],
+        }));
     })(f);
     reader.readAsDataURL(f);
 
