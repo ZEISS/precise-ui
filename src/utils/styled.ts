@@ -22,7 +22,9 @@ const {
 
 export type WithOptionalTheme<P extends { theme?: T }, T> = Omit<P, 'theme'> & { theme?: T };
 export interface WithTheme {
-  <P extends { theme?: PreciseTheme }>(component: Component<P>): React.ComponentClass<WithOptionalTheme<P, PreciseTheme>>;
+  <P extends { theme?: PreciseTheme }>(component: Component<P>): React.ComponentClass<
+    WithOptionalTheme<P, PreciseTheme>
+  >;
 }
 
 export type PreciseInterpolationFunc<Props, Theme> = InterpolationFunction<

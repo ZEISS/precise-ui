@@ -12,7 +12,10 @@ export const distancePx = {
 
 export type Distance = { [T in keyof typeof distancePx]: string };
 
-export const distance = Object.keys(distancePx).reduce((distance, name) => {
-  distance[name] = remCalc(`${distancePx[name]}px`);
-  return distance;
-}, {} as Distance);
+export const distance = Object.keys(distancePx).reduce(
+  (distance, name) => {
+    distance[name] = remCalc(`${distancePx[name]}px`);
+    return distance;
+  },
+  {} as Distance,
+);
