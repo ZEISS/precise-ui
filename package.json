@@ -5,6 +5,7 @@
   "main": "dist/es6",
   "typings": "dist/es6",
   "scripts": {
+    "start": "styleguidist server",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --project tsconfig.json",
     "test:unit": "cross-env NODE_ENV=test jest src",
     "test:watch": "npm run test:unit -- --watch",
@@ -13,6 +14,7 @@
     "build:bundle": "cross-env NODE_ENV=production webpack -p",
     "build:es5": "tsc -t es5 --outDir dist/es5 --declaration --inlineSourceMap --inlineSources",
     "build:es6": "tsc -t es6 -m es6 --outDir dist/es6 --declaration --inlineSourceMap --inlineSources",
+    "build:demo": "cross-env NODE_ENV=production styleguidist build",
     "build": "rimraf dist && npm run build:bundle && npm run build:es5 && npm run build:es6",
     "icongen": "node tools/convert-icons.js",
     "prepush": "npm run test & npm run build"
