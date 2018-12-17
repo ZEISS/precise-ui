@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioButtonInt /> should render the controlled RadioButtonInt with a label 1`] = `
+<styled.div
+  onClick={[Function]}
+>
+  <styled.div>
+    <styled.div
+      disabled={false}
+      onKeyDown={[Function]}
+      selected={true}
+      tabIndex={0}
+    >
+      <styled.div
+        disabled={false}
+        onKeyDown={[Function]}
+        selected={true}
+        tabIndex={0}
+      />
+    </styled.div>
+    <Label
+      attached={true}
+    >
+      Value
+    </Label>
+  </styled.div>
+  <InputError />
+</styled.div>
+`;
+
+exports[`<RadioButtonInt /> should render the disabled, uncontrolled RadioButtonInt 1`] = `
+<styled.div
+  disabled={true}
+  onClick={[Function]}
+>
+  <styled.div>
+    <styled.div
+      disabled={true}
+      onKeyDown={[Function]}
+      selected={true}
+    >
+      <styled.div
+        disabled={true}
+        onKeyDown={[Function]}
+        selected={true}
+      />
+    </styled.div>
+  </styled.div>
+  <InputError />
+</styled.div>
+`;

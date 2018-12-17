@@ -1,0 +1,690 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordion /> should render a <Accordion> component with several tabs 1`] = `
+<Responsive>
+  <ModeProvider
+    dimensions={
+      Object {
+        "angle": 0,
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    innerRef={[Function]}
+  >
+    <AccordionInt
+      dimensions={
+        Object {
+          "angle": 0,
+          "height": 768,
+          "width": 1024,
+        }
+      }
+      innerRef={[Function]}
+      mode="accordion"
+    >
+      <div>
+        <AccordionBasic
+          dimensions={
+            Object {
+              "angle": 0,
+              "height": 768,
+              "width": 1024,
+            }
+          }
+        >
+          <styled.div>
+            <div
+              className="sc-htpNat KtFsv"
+            >
+              <styled.ul>
+                <ul
+                  className="sc-bxivhb gXAmgN"
+                >
+                  <styled.li
+                    key="item-0"
+                  >
+                    <li
+                      className="sc-ifAKCX jjhVVq"
+                    >
+                      <styled.div
+                        active={false}
+                      >
+                        <div
+                          className="sc-EHOje gABgLv"
+                        >
+                          <styled.div
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="sc-bZQynM cfpJkI"
+                              onClick={[Function]}
+                            >
+                              <Styled(Icon)
+                                isRotated={false}
+                                name="KeyboardArrowRight"
+                              >
+                                <Icon
+                                  className="sc-gzVnrw tmBcj"
+                                  isRotated={false}
+                                  name="KeyboardArrowRight"
+                                >
+                                  <styled.i
+                                    className="sc-gzVnrw tmBcj"
+                                    isRotated={false}
+                                  >
+                                    <i
+                                      className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                    >
+                                      <KeyboardArrowRight
+                                        height="1em"
+                                        style={
+                                          Object {
+                                            "fill": "currentColor",
+                                            "stroke": undefined,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        width="1em"
+                                      >
+                                        <svg
+                                          height="1em"
+                                          style={
+                                            Object {
+                                              "fill": "currentColor",
+                                              "stroke": undefined,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                          width="1em"
+                                        >
+                                          <path
+                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                          />
+                                        </svg>
+                                      </KeyboardArrowRight>
+                                    </i>
+                                  </styled.i>
+                                </Icon>
+                              </Styled(Icon)>
+                              First
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                      <Expander
+                        expand={false}
+                        timeout={300}
+                        unmountOnExit={true}
+                      />
+                    </li>
+                  </styled.li>
+                  <styled.li
+                    key="item-1"
+                  >
+                    <li
+                      className="sc-ifAKCX jjhVVq"
+                    >
+                      <styled.div
+                        active={false}
+                      >
+                        <div
+                          className="sc-EHOje gABgLv"
+                        >
+                          <styled.div
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="sc-bZQynM cfpJkI"
+                              onClick={[Function]}
+                            >
+                              <Styled(Icon)
+                                isRotated={false}
+                                name="KeyboardArrowRight"
+                              >
+                                <Icon
+                                  className="sc-gzVnrw tmBcj"
+                                  isRotated={false}
+                                  name="KeyboardArrowRight"
+                                >
+                                  <styled.i
+                                    className="sc-gzVnrw tmBcj"
+                                    isRotated={false}
+                                  >
+                                    <i
+                                      className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                    >
+                                      <KeyboardArrowRight
+                                        height="1em"
+                                        style={
+                                          Object {
+                                            "fill": "currentColor",
+                                            "stroke": undefined,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        width="1em"
+                                      >
+                                        <svg
+                                          height="1em"
+                                          style={
+                                            Object {
+                                              "fill": "currentColor",
+                                              "stroke": undefined,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                          width="1em"
+                                        >
+                                          <path
+                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                          />
+                                        </svg>
+                                      </KeyboardArrowRight>
+                                    </i>
+                                  </styled.i>
+                                </Icon>
+                              </Styled(Icon)>
+                              Second
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                      <Expander
+                        expand={false}
+                        timeout={300}
+                        unmountOnExit={true}
+                      />
+                    </li>
+                  </styled.li>
+                  <styled.li
+                    key="item-2"
+                  >
+                    <li
+                      className="sc-ifAKCX jjhVVq"
+                    >
+                      <styled.div
+                        active={false}
+                      >
+                        <div
+                          className="sc-EHOje gABgLv"
+                        >
+                          <styled.div
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="sc-bZQynM cfpJkI"
+                              onClick={[Function]}
+                            >
+                              <Styled(Icon)
+                                isRotated={false}
+                                name="KeyboardArrowRight"
+                              >
+                                <Icon
+                                  className="sc-gzVnrw tmBcj"
+                                  isRotated={false}
+                                  name="KeyboardArrowRight"
+                                >
+                                  <styled.i
+                                    className="sc-gzVnrw tmBcj"
+                                    isRotated={false}
+                                  >
+                                    <i
+                                      className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                    >
+                                      <KeyboardArrowRight
+                                        height="1em"
+                                        style={
+                                          Object {
+                                            "fill": "currentColor",
+                                            "stroke": undefined,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        width="1em"
+                                      >
+                                        <svg
+                                          height="1em"
+                                          style={
+                                            Object {
+                                              "fill": "currentColor",
+                                              "stroke": undefined,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                          width="1em"
+                                        >
+                                          <path
+                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                          />
+                                        </svg>
+                                      </KeyboardArrowRight>
+                                    </i>
+                                  </styled.i>
+                                </Icon>
+                              </Styled(Icon)>
+                              Third
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                      <Expander
+                        expand={false}
+                        timeout={300}
+                        unmountOnExit={true}
+                      />
+                    </li>
+                  </styled.li>
+                  <styled.li
+                    key="item-3"
+                  >
+                    <li
+                      className="sc-ifAKCX jjhVVq"
+                    >
+                      <styled.div
+                        active={false}
+                      >
+                        <div
+                          className="sc-EHOje gABgLv"
+                        >
+                          <styled.div
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="sc-bZQynM cfpJkI"
+                              onClick={[Function]}
+                            >
+                              <Styled(Icon)
+                                isRotated={false}
+                                name="KeyboardArrowRight"
+                              >
+                                <Icon
+                                  className="sc-gzVnrw tmBcj"
+                                  isRotated={false}
+                                  name="KeyboardArrowRight"
+                                >
+                                  <styled.i
+                                    className="sc-gzVnrw tmBcj"
+                                    isRotated={false}
+                                  >
+                                    <i
+                                      className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                    >
+                                      <KeyboardArrowRight
+                                        height="1em"
+                                        style={
+                                          Object {
+                                            "fill": "currentColor",
+                                            "stroke": undefined,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        width="1em"
+                                      >
+                                        <svg
+                                          height="1em"
+                                          style={
+                                            Object {
+                                              "fill": "currentColor",
+                                              "stroke": undefined,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                          width="1em"
+                                        >
+                                          <path
+                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                          />
+                                        </svg>
+                                      </KeyboardArrowRight>
+                                    </i>
+                                  </styled.i>
+                                </Icon>
+                              </Styled(Icon)>
+                              Last
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                      <Expander
+                        expand={false}
+                        timeout={300}
+                        unmountOnExit={true}
+                      />
+                    </li>
+                  </styled.li>
+                </ul>
+              </styled.ul>
+            </div>
+          </styled.div>
+        </AccordionBasic>
+      </div>
+    </AccordionInt>
+  </ModeProvider>
+</Responsive>
+`;
+
+exports[`<Accordion /> should render a <Accordion> component with several tabs in and selectedIndex 1`] = `
+<Responsive
+  selectedIndex={1}
+>
+  <ModeProvider
+    dimensions={
+      Object {
+        "angle": 0,
+        "height": 768,
+        "width": 1024,
+      }
+    }
+    innerRef={[Function]}
+    selectedIndex={1}
+  >
+    <AccordionInt
+      dimensions={
+        Object {
+          "angle": 0,
+          "height": 768,
+          "width": 1024,
+        }
+      }
+      innerRef={[Function]}
+      mode="accordion"
+      selectedIndex={1}
+    >
+      <div>
+        <AccordionBasic
+          dimensions={
+            Object {
+              "angle": 0,
+              "height": 768,
+              "width": 1024,
+            }
+          }
+          selectedIndex={1}
+        >
+          <styled.div>
+            <div
+              className="sc-htpNat KtFsv"
+            >
+              <styled.ul>
+                <ul
+                  className="sc-bxivhb gXAmgN"
+                >
+                  <styled.li
+                    key="item-0"
+                  >
+                    <li
+                      className="sc-ifAKCX jjhVVq"
+                    >
+                      <styled.div
+                        active={false}
+                      >
+                        <div
+                          className="sc-EHOje gABgLv"
+                        >
+                          <styled.div
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="sc-bZQynM cfpJkI"
+                              onClick={[Function]}
+                            >
+                              <Styled(Icon)
+                                isRotated={false}
+                                name="KeyboardArrowRight"
+                              >
+                                <Icon
+                                  className="sc-gzVnrw tmBcj"
+                                  isRotated={false}
+                                  name="KeyboardArrowRight"
+                                >
+                                  <styled.i
+                                    className="sc-gzVnrw tmBcj"
+                                    isRotated={false}
+                                  >
+                                    <i
+                                      className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                    >
+                                      <KeyboardArrowRight
+                                        height="1em"
+                                        style={
+                                          Object {
+                                            "fill": "currentColor",
+                                            "stroke": undefined,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        width="1em"
+                                      >
+                                        <svg
+                                          height="1em"
+                                          style={
+                                            Object {
+                                              "fill": "currentColor",
+                                              "stroke": undefined,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                          width="1em"
+                                        >
+                                          <path
+                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                          />
+                                        </svg>
+                                      </KeyboardArrowRight>
+                                    </i>
+                                  </styled.i>
+                                </Icon>
+                              </Styled(Icon)>
+                              First
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                      <Expander
+                        expand={false}
+                        timeout={300}
+                        unmountOnExit={true}
+                      />
+                    </li>
+                  </styled.li>
+                  <styled.li
+                    key="item-1"
+                  >
+                    <li
+                      className="sc-ifAKCX jjhVVq"
+                    >
+                      <styled.div
+                        active={true}
+                      >
+                        <div
+                          className="sc-EHOje cMsOjn"
+                        >
+                          <styled.div
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="sc-bZQynM cfpJkI"
+                              onClick={[Function]}
+                            >
+                              <Styled(Icon)
+                                isRotated={true}
+                                name="KeyboardArrowRight"
+                              >
+                                <Icon
+                                  className="sc-gzVnrw hZquvk"
+                                  isRotated={true}
+                                  name="KeyboardArrowRight"
+                                >
+                                  <styled.i
+                                    className="sc-gzVnrw hZquvk"
+                                    isRotated={true}
+                                  >
+                                    <i
+                                      className="sc-gzVnrw hZquvk sc-bdVaJa cIqOZO"
+                                    >
+                                      <KeyboardArrowRight
+                                        height="1em"
+                                        style={
+                                          Object {
+                                            "fill": "currentColor",
+                                            "stroke": undefined,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        width="1em"
+                                      >
+                                        <svg
+                                          height="1em"
+                                          style={
+                                            Object {
+                                              "fill": "currentColor",
+                                              "stroke": undefined,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                          width="1em"
+                                        >
+                                          <path
+                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                          />
+                                        </svg>
+                                      </KeyboardArrowRight>
+                                    </i>
+                                  </styled.i>
+                                </Icon>
+                              </Styled(Icon)>
+                              Second
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                      <Expander
+                        expand={true}
+                        timeout={300}
+                        unmountOnExit={true}
+                      >
+                        <styled.div
+                          innerRef={[Function]}
+                          style={
+                            Object {
+                              "minHeight": "0px",
+                            }
+                          }
+                        >
+                          <div
+                            className="sc-bwzfXH kuqbRN"
+                            style={
+                              Object {
+                                "minHeight": "0px",
+                              }
+                            }
+                          >
+                            <div>
+                              <styled.div>
+                                <div
+                                  className="sc-htoDjs fpYVDN"
+                                >
+                                  <AccordionTab
+                                    header="Second"
+                                  >
+                                    <div>
+                                      Second content.
+                                    </div>
+                                  </AccordionTab>
+                                </div>
+                              </styled.div>
+                            </div>
+                          </div>
+                        </styled.div>
+                      </Expander>
+                    </li>
+                  </styled.li>
+                  <styled.li
+                    key="item-2"
+                  >
+                    <li
+                      className="sc-ifAKCX jjhVVq"
+                    >
+                      <styled.div
+                        active={false}
+                      >
+                        <div
+                          className="sc-EHOje gABgLv"
+                        >
+                          <styled.div
+                            onClick={[Function]}
+                          >
+                            <div
+                              className="sc-bZQynM cfpJkI"
+                              onClick={[Function]}
+                            >
+                              <Styled(Icon)
+                                isRotated={false}
+                                name="KeyboardArrowRight"
+                              >
+                                <Icon
+                                  className="sc-gzVnrw tmBcj"
+                                  isRotated={false}
+                                  name="KeyboardArrowRight"
+                                >
+                                  <styled.i
+                                    className="sc-gzVnrw tmBcj"
+                                    isRotated={false}
+                                  >
+                                    <i
+                                      className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                    >
+                                      <KeyboardArrowRight
+                                        height="1em"
+                                        style={
+                                          Object {
+                                            "fill": "currentColor",
+                                            "stroke": undefined,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        width="1em"
+                                      >
+                                        <svg
+                                          height="1em"
+                                          style={
+                                            Object {
+                                              "fill": "currentColor",
+                                              "stroke": undefined,
+                                            }
+                                          }
+                                          viewBox="0 0 24 24"
+                                          width="1em"
+                                        >
+                                          <path
+                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                          />
+                                        </svg>
+                                      </KeyboardArrowRight>
+                                    </i>
+                                  </styled.i>
+                                </Icon>
+                              </Styled(Icon)>
+                              Last
+                            </div>
+                          </styled.div>
+                        </div>
+                      </styled.div>
+                      <Expander
+                        expand={false}
+                        timeout={300}
+                        unmountOnExit={true}
+                      />
+                    </li>
+                  </styled.li>
+                </ul>
+              </styled.ul>
+            </div>
+          </styled.div>
+        </AccordionBasic>
+      </div>
+    </AccordionInt>
+  </ModeProvider>
+</Responsive>
+`;

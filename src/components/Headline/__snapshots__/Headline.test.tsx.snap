@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Headline /> should render h2 headline 1`] = `
+.c0 {
+  padding: 0 0 0.5rem 0;
+  font-size: 3.375rem;
+  font-weight: 300;
+  text-transform: none;
+  font-family: inherit;
+  line-height: 4.25rem;
+  -webkit-letter-spacing: initial;
+  -moz-letter-spacing: initial;
+  -ms-letter-spacing: initial;
+  letter-spacing: initial;
+  color: inherit;
+}
+
+.c1 {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+<Headline
+  level={2}
+>
+  <styled.div
+    level={2}
+    size="medium"
+  >
+    <div
+      className="c0"
+      size="medium"
+    >
+      <styled.h2>
+        <h2
+          className="c1"
+        >
+          h2 Headline
+        </h2>
+      </styled.h2>
+    </div>
+  </styled.div>
+</Headline>
+`;

@@ -1,0 +1,237 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grid /> should distribute cells correctly with explicit and implicit placement 1`] = `
+<styled.div>
+  <Styled(styled.div)
+    columns={
+      Array [
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+      ]
+    }
+    rows={
+      Array [
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+      ]
+    }
+    spacing={
+      Array [
+        "0px",
+        "0px",
+      ]
+    }
+  >
+    <styled.div
+      cf={1}
+      ci={0}
+      key="0/.0"
+      rf={5}
+      ri={0}
+    >
+      <GridArea
+        rowSpan={5}
+      >
+        First
+      </GridArea>
+    </styled.div>
+    <styled.div
+      cf={2}
+      ci={1}
+      key="1/.1"
+      rf={1}
+      ri={0}
+    >
+      <GridArea>
+        Second
+      </GridArea>
+    </styled.div>
+    <styled.div
+      cf={5}
+      ci={1}
+      key="2/.2"
+      rf={2}
+      ri={1}
+    >
+      <GridArea
+        colSpan={4}
+      >
+        Third
+      </GridArea>
+    </styled.div>
+    <styled.div
+      cf={2}
+      ci={1}
+      key="3/.3"
+      rf={5}
+      ri={2}
+    >
+      <GridArea
+        rowSpan={3}
+      >
+        Fourth
+      </GridArea>
+    </styled.div>
+    <styled.div
+      cf={3}
+      ci={2}
+      key="4/.4"
+      rf={1}
+      ri={0}
+    >
+      <GridArea>
+        Fifth
+      </GridArea>
+    </styled.div>
+    <styled.div
+      cf={5}
+      ci={3}
+      key="5/.5"
+      rf={1}
+      ri={0}
+    >
+      <GridArea
+        colSpan={2}
+      >
+        Sixth
+      </GridArea>
+    </styled.div>
+    <styled.div
+      cf={3}
+      ci={2}
+      key="6/.6"
+      rf={3}
+      ri={2}
+    >
+      <GridArea>
+        Seventh
+      </GridArea>
+    </styled.div>
+    <styled.div
+      cf={3}
+      ci={2}
+      key="7/.7"
+      rf={5}
+      ri={4}
+    >
+      <GridArea
+        column={2}
+        row={4}
+      />
+    </styled.div>
+    <styled.div
+      cf={4}
+      ci={3}
+      key="8/.8"
+      rf={5}
+      ri={2}
+    >
+      <GridArea
+        rowSpan={3}
+      >
+        9
+      </GridArea>
+    </styled.div>
+  </Styled(styled.div)>
+</styled.div>
+`;
+
+exports[`<Grid /> should render a <Grid> component with custom spacing 1`] = `
+<styled.div>
+  <Styled(styled.div)
+    columns={
+      Array [
+        "1fr",
+      ]
+    }
+    rows={
+      Array [
+        "1fr",
+        "1fr",
+      ]
+    }
+    spacing={
+      Array [
+        "5px",
+        "5px",
+      ]
+    }
+  >
+    <styled.div
+      cf={1}
+      ci={0}
+      key="0/.0"
+      rf={1}
+      ri={0}
+    >
+      <div>
+        First
+      </div>
+    </styled.div>
+    <styled.div
+      cf={1}
+      ci={0}
+      key="1/.1"
+      rf={2}
+      ri={1}
+    >
+      <div>
+        Second
+      </div>
+    </styled.div>
+  </Styled(styled.div)>
+</styled.div>
+`;
+
+exports[`<Grid /> should render a <Grid> component with two columns 1`] = `
+<styled.div>
+  <Styled(styled.div)
+    columns={
+      Array [
+        "1fr",
+        "1fr",
+      ]
+    }
+    rows={
+      Array [
+        "1fr",
+      ]
+    }
+    spacing={
+      Array [
+        "0px",
+        "0px",
+      ]
+    }
+  >
+    <styled.div
+      cf={1}
+      ci={0}
+      key="0/.0"
+      rf={1}
+      ri={0}
+    >
+      <div>
+        First
+      </div>
+    </styled.div>
+    <styled.div
+      cf={2}
+      ci={1}
+      key="1/.1"
+      rf={1}
+      ri={0}
+    >
+      <div>
+        Second
+      </div>
+    </styled.div>
+  </Styled(styled.div)>
+</styled.div>
+`;

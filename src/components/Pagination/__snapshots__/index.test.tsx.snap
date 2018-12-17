@@ -1,0 +1,739 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> should be able to use a custom host 1`] = `
+<Pagination
+  host={[Function]}
+>
+  <Component
+    content={
+      Array [
+        <li>
+          First
+        </li>,
+        <li>
+          Second
+        </li>,
+      ]
+    }
+    controls={
+      <PaginationBar
+        availableSizes={Array []}
+        items={2}
+        onPageChanged={[Function]}
+        onSizeChanged={[Function]}
+        selectedPage={0}
+        size={20}
+      />
+    }
+    host={[Function]}
+  >
+    <styled.div>
+      <div
+        className="sc-hMqMXs cJbBkc"
+      >
+        <host>
+          <ul>
+            <li>
+              My custom zero-th
+            </li>
+            <li>
+              First
+            </li>
+            <li>
+              Second
+            </li>
+          </ul>
+        </host>
+        <PaginationBar
+          availableSizes={Array []}
+          items={2}
+          onPageChanged={[Function]}
+          onSizeChanged={[Function]}
+          selectedPage={0}
+          size={20}
+        >
+          <styled.div>
+            <div
+              className="sc-eNQAEJ eBTFJE"
+            >
+              <Component
+                changeToNext={[Function]}
+                changeToPrevious={[Function]}
+                changeToSelect={[Function]}
+                current={0}
+                pages={
+                  Array [
+                    "1",
+                  ]
+                }
+                total={1}
+              >
+                <styled.div>
+                  <div
+                    className="sc-ckVGcZ griOHA"
+                  >
+                    <Container>
+                      <styled.div
+                        align="center"
+                      >
+                        <div
+                          className="sc-dxgOiQ frZHhL"
+                        >
+                          1 of 1 pages
+                        </div>
+                      </styled.div>
+                    </Container>
+                    <styled.button
+                      disabled={true}
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <button
+                        className="sc-jKJlTe ggPkQB"
+                        disabled={true}
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <Icon
+                          name="KeyboardArrowLeft"
+                        >
+                          <styled.i>
+                            <i
+                              className="sc-bwzfXH eBXlKd"
+                            >
+                              <KeyboardArrowLeft
+                                height="1em"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": undefined,
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="1em"
+                              >
+                                <svg
+                                  height="1em"
+                                  style={
+                                    Object {
+                                      "fill": "currentColor",
+                                      "stroke": undefined,
+                                    }
+                                  }
+                                  viewBox="0 0 24 24"
+                                  width="1em"
+                                >
+                                  <path
+                                    d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                                  />
+                                </svg>
+                              </KeyboardArrowLeft>
+                            </i>
+                          </styled.i>
+                        </Icon>
+                      </button>
+                    </styled.button>
+                    <SelectButton
+                      data={
+                        Array [
+                          "1",
+                        ]
+                      }
+                      onChange={[Function]}
+                      value="1"
+                    >
+                      <styled.div>
+                        <div
+                          className="sc-kAzzGY dyRsxz"
+                        >
+                          <styled.div
+                            onMouseDown={[Function]}
+                          >
+                            <div
+                              className="sc-chPdSV irvcZR"
+                              onMouseDown={[Function]}
+                            >
+                              1
+                              <Icon
+                                name="ArrowDropDown"
+                                size={1.5}
+                              >
+                                <styled.i>
+                                  <i
+                                    className="sc-bwzfXH eBXlKd"
+                                  >
+                                    <ArrowDropDown
+                                      height="1.5em"
+                                      style={
+                                        Object {
+                                          "fill": "currentColor",
+                                          "stroke": undefined,
+                                        }
+                                      }
+                                      viewBox="0 0 24 24"
+                                      width="1.5em"
+                                    >
+                                      <svg
+                                        height="1.5em"
+                                        style={
+                                          Object {
+                                            "fill": "currentColor",
+                                            "stroke": undefined,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        width="1.5em"
+                                      >
+                                        <path
+                                          d="M7 10l5 5 5-5z"
+                                        />
+                                      </svg>
+                                    </ArrowDropDown>
+                                  </i>
+                                </styled.i>
+                              </Icon>
+                            </div>
+                          </styled.div>
+                          <InteractiveList
+                            autoFocus={true}
+                            autoPosition={true}
+                            customWrapper={[Function]}
+                            data={
+                              Array [
+                                "1",
+                              ]
+                            }
+                            eventTypes={
+                              Array [
+                                "mousedown",
+                                "touchstart",
+                              ]
+                            }
+                            excludeScrollbar={false}
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            open={false}
+                            outsideClickIgnoreClass="ignore-react-onclickoutside"
+                            preventDefault={false}
+                            showTick={true}
+                            stopPropagation={false}
+                            value="1"
+                          >
+                            <InteractiveListInt
+                              autoFocus={true}
+                              autoPosition={true}
+                              customWrapper={[Function]}
+                              data={
+                                Array [
+                                  "1",
+                                ]
+                              }
+                              disableOnClickOutside={[Function]}
+                              enableOnClickOutside={[Function]}
+                              eventTypes={
+                                Array [
+                                  "mousedown",
+                                  "touchstart",
+                                ]
+                              }
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              open={false}
+                              outsideClickIgnoreClass="ignore-react-onclickoutside"
+                              preventDefault={false}
+                              showTick={true}
+                              stopPropagation={false}
+                              value="1"
+                            >
+                              <styled.div
+                                autoFocus={true}
+                                autoPosition={true}
+                                disableOnClickOutside={[Function]}
+                                enableOnClickOutside={[Function]}
+                                eventTypes={
+                                  Array [
+                                    "mousedown",
+                                    "touchstart",
+                                  ]
+                                }
+                                innerRef={[Function]}
+                                onBlur={[Function]}
+                                onKeyDown={[Function]}
+                                onMouseDown={[Function]}
+                                onMouseOver={[Function]}
+                                outsideClickIgnoreClass="ignore-react-onclickoutside"
+                                preventDefault={false}
+                                showTick={true}
+                                stopPropagation={false}
+                                value="1"
+                              >
+                                <div
+                                  autoFocus={true}
+                                  className="sc-htoDjs fJTDDB"
+                                  onBlur={[Function]}
+                                  onKeyDown={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseOver={[Function]}
+                                  value="1"
+                                >
+                                  <CustomWrapper
+                                    border={1}
+                                    direction={0}
+                                    flyout={true}
+                                    open={false}
+                                  >
+                                    <styled.div
+                                      border={1}
+                                      direction={0}
+                                      flyout={true}
+                                      open={false}
+                                    >
+                                      <div
+                                        className="sc-kgoBCf fpdFNr"
+                                        direction={0}
+                                        open={false}
+                                      />
+                                    </styled.div>
+                                  </CustomWrapper>
+                                </div>
+                              </styled.div>
+                            </InteractiveListInt>
+                          </InteractiveList>
+                        </div>
+                      </styled.div>
+                    </SelectButton>
+                    <styled.button
+                      disabled={true}
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <button
+                        className="sc-jKJlTe ggPkQB"
+                        disabled={true}
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <Icon
+                          name="KeyboardArrowRight"
+                        >
+                          <styled.i>
+                            <i
+                              className="sc-bwzfXH eBXlKd"
+                            >
+                              <KeyboardArrowRight
+                                height="1em"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": undefined,
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="1em"
+                              >
+                                <svg
+                                  height="1em"
+                                  style={
+                                    Object {
+                                      "fill": "currentColor",
+                                      "stroke": undefined,
+                                    }
+                                  }
+                                  viewBox="0 0 24 24"
+                                  width="1em"
+                                >
+                                  <path
+                                    d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                  />
+                                </svg>
+                              </KeyboardArrowRight>
+                            </i>
+                          </styled.i>
+                        </Icon>
+                      </button>
+                    </styled.button>
+                  </div>
+                </styled.div>
+              </Component>
+            </div>
+          </styled.div>
+        </PaginationBar>
+      </div>
+    </styled.div>
+  </Component>
+</Pagination>
+`;
+
+exports[`<Pagination /> should be able to use an in-built host 1`] = `
+<Pagination
+  host="ul"
+>
+  <Component
+    content={
+      Array [
+        <li>
+          First
+        </li>,
+        <li>
+          Second
+        </li>,
+      ]
+    }
+    controls={
+      <PaginationBar
+        availableSizes={Array []}
+        items={2}
+        onPageChanged={[Function]}
+        onSizeChanged={[Function]}
+        selectedPage={0}
+        size={20}
+      />
+    }
+    host="ul"
+  >
+    <styled.div>
+      <div
+        className="sc-hMqMXs cJbBkc"
+      >
+        <ul>
+          <li>
+            First
+          </li>
+          <li>
+            Second
+          </li>
+        </ul>
+        <PaginationBar
+          availableSizes={Array []}
+          items={2}
+          onPageChanged={[Function]}
+          onSizeChanged={[Function]}
+          selectedPage={0}
+          size={20}
+        >
+          <styled.div>
+            <div
+              className="sc-eNQAEJ eBTFJE"
+            >
+              <Component
+                changeToNext={[Function]}
+                changeToPrevious={[Function]}
+                changeToSelect={[Function]}
+                current={0}
+                pages={
+                  Array [
+                    "1",
+                  ]
+                }
+                total={1}
+              >
+                <styled.div>
+                  <div
+                    className="sc-ckVGcZ griOHA"
+                  >
+                    <Container>
+                      <styled.div
+                        align="center"
+                      >
+                        <div
+                          className="sc-dxgOiQ frZHhL"
+                        >
+                          1 of 1 pages
+                        </div>
+                      </styled.div>
+                    </Container>
+                    <styled.button
+                      disabled={true}
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <button
+                        className="sc-jKJlTe ggPkQB"
+                        disabled={true}
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <Icon
+                          name="KeyboardArrowLeft"
+                        >
+                          <styled.i>
+                            <i
+                              className="sc-bwzfXH eBXlKd"
+                            >
+                              <KeyboardArrowLeft
+                                height="1em"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": undefined,
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="1em"
+                              >
+                                <svg
+                                  height="1em"
+                                  style={
+                                    Object {
+                                      "fill": "currentColor",
+                                      "stroke": undefined,
+                                    }
+                                  }
+                                  viewBox="0 0 24 24"
+                                  width="1em"
+                                >
+                                  <path
+                                    d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"
+                                  />
+                                </svg>
+                              </KeyboardArrowLeft>
+                            </i>
+                          </styled.i>
+                        </Icon>
+                      </button>
+                    </styled.button>
+                    <SelectButton
+                      data={
+                        Array [
+                          "1",
+                        ]
+                      }
+                      onChange={[Function]}
+                      value="1"
+                    >
+                      <styled.div>
+                        <div
+                          className="sc-kAzzGY dyRsxz"
+                        >
+                          <styled.div
+                            onMouseDown={[Function]}
+                          >
+                            <div
+                              className="sc-chPdSV irvcZR"
+                              onMouseDown={[Function]}
+                            >
+                              1
+                              <Icon
+                                name="ArrowDropDown"
+                                size={1.5}
+                              >
+                                <styled.i>
+                                  <i
+                                    className="sc-bwzfXH eBXlKd"
+                                  >
+                                    <ArrowDropDown
+                                      height="1.5em"
+                                      style={
+                                        Object {
+                                          "fill": "currentColor",
+                                          "stroke": undefined,
+                                        }
+                                      }
+                                      viewBox="0 0 24 24"
+                                      width="1.5em"
+                                    >
+                                      <svg
+                                        height="1.5em"
+                                        style={
+                                          Object {
+                                            "fill": "currentColor",
+                                            "stroke": undefined,
+                                          }
+                                        }
+                                        viewBox="0 0 24 24"
+                                        width="1.5em"
+                                      >
+                                        <path
+                                          d="M7 10l5 5 5-5z"
+                                        />
+                                      </svg>
+                                    </ArrowDropDown>
+                                  </i>
+                                </styled.i>
+                              </Icon>
+                            </div>
+                          </styled.div>
+                          <InteractiveList
+                            autoFocus={true}
+                            autoPosition={true}
+                            customWrapper={[Function]}
+                            data={
+                              Array [
+                                "1",
+                              ]
+                            }
+                            eventTypes={
+                              Array [
+                                "mousedown",
+                                "touchstart",
+                              ]
+                            }
+                            excludeScrollbar={false}
+                            onBlur={[Function]}
+                            onChange={[Function]}
+                            open={false}
+                            outsideClickIgnoreClass="ignore-react-onclickoutside"
+                            preventDefault={false}
+                            showTick={true}
+                            stopPropagation={false}
+                            value="1"
+                          >
+                            <InteractiveListInt
+                              autoFocus={true}
+                              autoPosition={true}
+                              customWrapper={[Function]}
+                              data={
+                                Array [
+                                  "1",
+                                ]
+                              }
+                              disableOnClickOutside={[Function]}
+                              enableOnClickOutside={[Function]}
+                              eventTypes={
+                                Array [
+                                  "mousedown",
+                                  "touchstart",
+                                ]
+                              }
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              open={false}
+                              outsideClickIgnoreClass="ignore-react-onclickoutside"
+                              preventDefault={false}
+                              showTick={true}
+                              stopPropagation={false}
+                              value="1"
+                            >
+                              <styled.div
+                                autoFocus={true}
+                                autoPosition={true}
+                                disableOnClickOutside={[Function]}
+                                enableOnClickOutside={[Function]}
+                                eventTypes={
+                                  Array [
+                                    "mousedown",
+                                    "touchstart",
+                                  ]
+                                }
+                                innerRef={[Function]}
+                                onBlur={[Function]}
+                                onKeyDown={[Function]}
+                                onMouseDown={[Function]}
+                                onMouseOver={[Function]}
+                                outsideClickIgnoreClass="ignore-react-onclickoutside"
+                                preventDefault={false}
+                                showTick={true}
+                                stopPropagation={false}
+                                value="1"
+                              >
+                                <div
+                                  autoFocus={true}
+                                  className="sc-htoDjs fJTDDB"
+                                  onBlur={[Function]}
+                                  onKeyDown={[Function]}
+                                  onMouseDown={[Function]}
+                                  onMouseOver={[Function]}
+                                  value="1"
+                                >
+                                  <CustomWrapper
+                                    border={1}
+                                    direction={0}
+                                    flyout={true}
+                                    open={false}
+                                  >
+                                    <styled.div
+                                      border={1}
+                                      direction={0}
+                                      flyout={true}
+                                      open={false}
+                                    >
+                                      <div
+                                        className="sc-kgoBCf fpdFNr"
+                                        direction={0}
+                                        open={false}
+                                      />
+                                    </styled.div>
+                                  </CustomWrapper>
+                                </div>
+                              </styled.div>
+                            </InteractiveListInt>
+                          </InteractiveList>
+                        </div>
+                      </styled.div>
+                    </SelectButton>
+                    <styled.button
+                      disabled={true}
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <button
+                        className="sc-jKJlTe ggPkQB"
+                        disabled={true}
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <Icon
+                          name="KeyboardArrowRight"
+                        >
+                          <styled.i>
+                            <i
+                              className="sc-bwzfXH eBXlKd"
+                            >
+                              <KeyboardArrowRight
+                                height="1em"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": undefined,
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="1em"
+                              >
+                                <svg
+                                  height="1em"
+                                  style={
+                                    Object {
+                                      "fill": "currentColor",
+                                      "stroke": undefined,
+                                    }
+                                  }
+                                  viewBox="0 0 24 24"
+                                  width="1em"
+                                >
+                                  <path
+                                    d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                  />
+                                </svg>
+                              </KeyboardArrowRight>
+                            </i>
+                          </styled.i>
+                        </Icon>
+                      </button>
+                    </styled.button>
+                  </div>
+                </styled.div>
+              </Component>
+            </div>
+          </styled.div>
+        </PaginationBar>
+      </div>
+    </styled.div>
+  </Component>
+</Pagination>
+`;
+
+exports[`<Pagination /> should render empty default <Pagination /> element 1`] = `
+<Component
+  controls={
+    <PaginationBar
+      availableSizes={Array []}
+      items={0}
+      onPageChanged={[Function]}
+      onSizeChanged={[Function]}
+      selectedPage={0}
+      size={20}
+    />
+  }
+/>
+`;

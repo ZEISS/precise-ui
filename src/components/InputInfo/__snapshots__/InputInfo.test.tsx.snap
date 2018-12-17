@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputInfo /> should be shown with the withValidator hoc if not changed 1`] = `
+<Response
+  info="Required input"
+>
+  <TextField
+    info="Required input"
+    onChange={[Function]}
+  >
+    <TextFieldInt
+      info="Required input"
+      onChange={[Function]}
+    >
+      <styled.div>
+        <div
+          className="sc-kGXeez bqtLVu"
+        >
+          <Styled(StackPanel)>
+            <StackPanel
+              className="sc-kpOJdX ieBFuD"
+            >
+              <styled.div
+                className="sc-kpOJdX ieBFuD"
+                dir="row"
+                wrapping="nowrap"
+              >
+                <div
+                  className="sc-kpOJdX ieBFuD sc-bwzfXH fyOvof"
+                  dir="row"
+                >
+                  <styled.div
+                    border={1}
+                    focused={false}
+                    hasValue={false}
+                  >
+                    <div
+                      className="sc-cSHVUG fGfMCz"
+                    >
+                      <Component
+                        error={false}
+                        focused={false}
+                        hasValue={false}
+                        multiline={false}
+                      >
+                        <styled.div>
+                          <div
+                            className="sc-VigVT glTrhf"
+                          >
+                            <styled.input
+                              innerRef={[Function]}
+                              labelShown={false}
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onFocus={[Function]}
+                              value=""
+                            >
+                              <input
+                                className="sc-jzJRlG fRylCY"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onFocus={[Function]}
+                                value=""
+                              />
+                            </styled.input>
+                          </div>
+                        </styled.div>
+                      </Component>
+                      <Component
+                        hasValue={false}
+                        onClear={[Function]}
+                      />
+                    </div>
+                  </styled.div>
+                </div>
+              </styled.div>
+            </StackPanel>
+          </Styled(StackPanel)>
+          <InputInfo>
+            <styled.div>
+              <div
+                className="sc-bdVaJa gclncZ"
+              >
+                Required input
+              </div>
+            </styled.div>
+          </InputInfo>
+        </div>
+      </styled.div>
+    </TextFieldInt>
+  </TextField>
+</Response>
+`;
+
+exports[`<InputInfo /> should not be shown with the withValidator hoc if changed 1`] = `
+<Response
+  info="Required input"
+>
+  <TextField
+    info="Required input"
+    onChange={[Function]}
+  >
+    <TextFieldInt
+      info="Required input"
+      onChange={[Function]}
+    >
+      <styled.div>
+        <div
+          className="sc-kGXeez bqtLVu"
+        >
+          <Styled(StackPanel)>
+            <StackPanel
+              className="sc-kpOJdX ieBFuD"
+            >
+              <styled.div
+                className="sc-kpOJdX ieBFuD"
+                dir="row"
+                wrapping="nowrap"
+              >
+                <div
+                  className="sc-kpOJdX ieBFuD sc-bwzfXH fyOvof"
+                  dir="row"
+                >
+                  <styled.div
+                    border={1}
+                    focused={false}
+                    hasValue={false}
+                  >
+                    <div
+                      className="sc-cSHVUG fGfMCz"
+                    >
+                      <Component
+                        error={false}
+                        focused={false}
+                        hasValue={false}
+                        multiline={false}
+                      >
+                        <styled.div>
+                          <div
+                            className="sc-VigVT glTrhf"
+                          >
+                            <styled.input
+                              innerRef={[Function]}
+                              labelShown={false}
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onFocus={[Function]}
+                              value=""
+                            >
+                              <input
+                                className="sc-jzJRlG fRylCY"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onFocus={[Function]}
+                                value=""
+                              />
+                            </styled.input>
+                          </div>
+                        </styled.div>
+                      </Component>
+                      <Component
+                        hasValue={false}
+                        onClear={[Function]}
+                      />
+                    </div>
+                  </styled.div>
+                </div>
+              </styled.div>
+            </StackPanel>
+          </Styled(StackPanel)>
+          <InputInfo>
+            <styled.div>
+              <div
+                className="sc-bdVaJa gclncZ"
+              >
+                Required input
+              </div>
+            </styled.div>
+          </InputInfo>
+        </div>
+      </styled.div>
+    </TextFieldInt>
+  </TextField>
+</Response>
+`;
+
+exports[`<InputInfo /> should not render an <InputInfo> from direct API without any children 1`] = `""`;
+
+exports[`<InputInfo /> should not render an <InputInfo> from jsx 1`] = `""`;
+
+exports[`<InputInfo /> should render <InputInfo> that has an error message 1`] = `
+<styled.div>
+  I am wrong
+</styled.div>
+`;

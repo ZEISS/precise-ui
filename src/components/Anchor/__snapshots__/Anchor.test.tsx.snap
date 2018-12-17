@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Anchor /> should render an <Anchor> component with href 1`] = `
+<a
+  href="foo"
+  onClick={[Function]}
+>
+  Text
+</a>
+`;
+
+exports[`<Anchor /> should render an <Anchor> component with onClick 1`] = `
+<a
+  href="#"
+  onClick={[Function]}
+>
+  Text
+</a>
+`;
+
+exports[`<Anchor /> should render an <Anchor> component with to 1`] = `
+<a
+  href="foo"
+  onClick={[Function]}
+>
+  Text
+</a>
+`;
+
+exports[`<Anchor /> should render an <Anchor> component with to and href 1`] = `
+<a
+  href="bar"
+  onClick={[Function]}
+>
+  Text
+</a>
+`;

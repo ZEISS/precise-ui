@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepIndicator /> should render a step indicator with three elements currently at the second 1`] = `
+<styled.ol>
+  <styled.li
+    className=""
+    key="0"
+  >
+    <styled.div>
+      One
+    </styled.div>
+  </styled.li>
+  <styled.li
+    className="step-active"
+    key="1"
+  >
+    <styled.div>
+      Two
+    </styled.div>
+  </styled.li>
+  <styled.li
+    className=""
+    key="2"
+  >
+    <styled.div>
+      Three
+    </styled.div>
+  </styled.li>
+</styled.ol>
+`;
+
+exports[`<StepIndicator /> should render a step indicator with two elements 1`] = `
+<styled.ol>
+  <styled.li
+    className=""
+    key="0"
+  >
+    <styled.div>
+      One
+    </styled.div>
+  </styled.li>
+  <styled.li
+    className=""
+    key="1"
+  >
+    <styled.div>
+      Two
+    </styled.div>
+  </styled.li>
+</styled.ol>
+`;
+
+exports[`<StepIndicator /> should render a step indicator with two elements currently at the first 1`] = `
+<styled.ol>
+  <styled.li
+    className="step-active"
+    key="0"
+  >
+    <styled.div>
+      One
+    </styled.div>
+  </styled.li>
+  <styled.li
+    className=""
+    key="1"
+  >
+    <styled.div>
+      Twee
+    </styled.div>
+  </styled.li>
+</styled.ol>
+`;
+
+exports[`<StepIndicator /> should render an empty step indicator 1`] = `<styled.ol />`;

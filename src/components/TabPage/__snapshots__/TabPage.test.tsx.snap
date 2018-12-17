@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabPage /> should render a header as a component 1`] = `
+<TabPage
+  header={
+    <div>
+      Header
+    </div>
+  }
+>
+  <div>
+    Content of the tab
+  </div>
+</TabPage>
+`;

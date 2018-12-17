@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchField /> should render a standard search field 1`] = `
+<Autocomplete
+  icon={
+    <Icon
+      color="rgba(114,114,114,1)"
+      name="Search"
+      size="22px"
+    />
+  }
+  onChange={[Function]}
+/>
+`;

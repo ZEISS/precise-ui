@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItem /> should not present a border 1`] = `
+<styled.li
+  border={false}
+/>
+`;

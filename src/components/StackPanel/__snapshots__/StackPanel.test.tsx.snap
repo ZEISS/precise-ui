@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StackPanel /> should render the StackPanel bottom to top 1`] = `
+<StackPanel
+  direction="bottom"
+>
+  <styled.div
+    dir="column-reverse"
+    wrapping="nowrap"
+  >
+    <div
+      className="sc-bdVaJa iRwuO"
+      dir="column-reverse"
+    >
+      <StackItem>
+        <styled.div>
+          <div
+            className="sc-bwzfXH bmilDA"
+          >
+            First
+          </div>
+        </styled.div>
+      </StackItem>
+      <StackItem>
+        <styled.div>
+          <div
+            className="sc-bwzfXH bmilDA"
+          >
+            Second
+          </div>
+        </styled.div>
+      </StackItem>
+    </div>
+  </styled.div>
+</StackPanel>
+`;
+
+exports[`<StackPanel /> should render the StackPanel right to left 1`] = `
+<StackPanel
+  direction="right"
+>
+  <styled.div
+    dir="row-reverse"
+    wrapping="nowrap"
+  >
+    <div
+      className="sc-bdVaJa CIrhF"
+      dir="row-reverse"
+    >
+      <StackItem>
+        <styled.div>
+          <div
+            className="sc-bwzfXH bmilDA"
+          >
+            First
+          </div>
+        </styled.div>
+      </StackItem>
+      <StackItem>
+        <styled.div>
+          <div
+            className="sc-bwzfXH bmilDA"
+          >
+            Second
+          </div>
+        </styled.div>
+      </StackItem>
+    </div>
+  </styled.div>
+</StackPanel>
+`;
+
+exports[`<StackPanel /> should render the StackPanel top to bottom with explicit heights 1`] = `
+<StackPanel
+  direction="top"
+  style={
+    Object {
+      "height": "400px",
+    }
+  }
+>
+  <styled.div
+    dir="column"
+    style={
+      Object {
+        "height": "400px",
+      }
+    }
+    wrapping="nowrap"
+  >
+    <div
+      className="sc-bdVaJa bbJGId"
+      dir="column"
+      style={
+        Object {
+          "height": "400px",
+        }
+      }
+    >
+      <StackItem
+        height="20%"
+      >
+        <styled.div
+          height="20%"
+        >
+          <div
+            className="sc-bwzfXH hqUuzP"
+            height="20%"
+          >
+            First
+          </div>
+        </styled.div>
+      </StackItem>
+      <StackItem
+        height="60%"
+      >
+        <styled.div
+          height="60%"
+        >
+          <div
+            className="sc-bwzfXH dBuYpR"
+            height="60%"
+          >
+            Second
+          </div>
+        </styled.div>
+      </StackItem>
+      <StackItem
+        height="20%"
+      >
+        <styled.div
+          height="20%"
+        >
+          <div
+            className="sc-bwzfXH hqUuzP"
+            height="20%"
+          >
+            Third
+          </div>
+        </styled.div>
+      </StackItem>
+    </div>
+  </styled.div>
+</StackPanel>
+`;
+
+exports[`<StackPanel /> should render the StackPanel with explicit widths and wrapping 1`] = `
+<StackPanel
+  wrap={true}
+>
+  <styled.div
+    dir="row"
+    wrapping="wrap"
+  >
+    <div
+      className="sc-bdVaJa iYzFoh"
+      dir="row"
+    >
+      <StackItem
+        width="440px"
+      >
+        <styled.div
+          width="440px"
+        >
+          <div
+            className="sc-bwzfXH dmWoAt"
+            width="440px"
+          >
+            First
+          </div>
+        </styled.div>
+      </StackItem>
+      <StackItem
+        width="300px"
+      >
+        <styled.div
+          width="300px"
+        >
+          <div
+            className="sc-bwzfXH ffJzaL"
+            width="300px"
+          >
+            Second
+          </div>
+        </styled.div>
+      </StackItem>
+      <StackItem
+        width="40%"
+      >
+        <styled.div
+          width="40%"
+        >
+          <div
+            className="sc-bwzfXH dHGcix"
+            width="40%"
+          >
+            Third
+          </div>
+        </styled.div>
+      </StackItem>
+    </div>
+  </styled.div>
+</StackPanel>
+`;
+
+exports[`<StackPanel /> should render the StackPanel with explicit withs and no wrapping 1`] = `
+<StackPanel>
+  <styled.div
+    dir="row"
+    wrapping="nowrap"
+  >
+    <div
+      className="sc-bdVaJa jfORAu"
+      dir="row"
+    >
+      <StackItem
+        width="100px"
+      >
+        <styled.div
+          width="100px"
+        >
+          <div
+            className="sc-bwzfXH blInJE"
+            width="100px"
+          >
+            First
+          </div>
+        </styled.div>
+      </StackItem>
+      <StackItem
+        width="100px"
+      >
+        <styled.div
+          width="100px"
+        >
+          <div
+            className="sc-bwzfXH blInJE"
+            width="100px"
+          >
+            Second
+          </div>
+        </styled.div>
+      </StackItem>
+    </div>
+  </styled.div>
+</StackPanel>
+`;
+
+exports[`<StackPanel /> should render the StackPanel with three items 1`] = `
+<StackPanel>
+  <styled.div
+    dir="row"
+    wrapping="nowrap"
+  >
+    <div
+      className="sc-bdVaJa jfORAu"
+      dir="row"
+    >
+      <StackItem>
+        <styled.div>
+          <div
+            className="sc-bwzfXH bmilDA"
+          >
+            First
+          </div>
+        </styled.div>
+      </StackItem>
+      <StackItem>
+        <styled.div>
+          <div
+            className="sc-bwzfXH bmilDA"
+          >
+            Second
+          </div>
+        </styled.div>
+      </StackItem>
+      <StackItem>
+        <styled.div>
+          <div
+            className="sc-bwzfXH bmilDA"
+          >
+            Third
+          </div>
+        </styled.div>
+      </StackItem>
+    </div>
+  </styled.div>
+</StackPanel>
+`;
+
+exports[`<StackPanel /> should render the default StackPanel 1`] = `
+<StackPanel>
+  <styled.div
+    dir="row"
+    wrapping="nowrap"
+  >
+    <div
+      className="sc-bdVaJa jfORAu"
+      dir="row"
+    />
+  </styled.div>
+</StackPanel>
+`;
