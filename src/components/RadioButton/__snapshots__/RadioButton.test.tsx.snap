@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioButton /> should render the controlled RadioButton with a label 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;
+
+exports[`<RadioButton /> should render the disabled, uncontrolled RadioButton 1`] = `
+<ContextConsumer>
+  <Component />
+</ContextConsumer>
+`;

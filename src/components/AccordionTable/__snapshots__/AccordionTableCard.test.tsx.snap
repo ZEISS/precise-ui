@@ -1,0 +1,492 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionTableCard /> should render a <AccordionTable> component with no data and placeholder set 1`] = `
+<Styled(List)
+  borderless={true}
+>
+  <Styled(ListItem)
+    key="0"
+  >
+    <styled.div>
+      No data
+    </styled.div>
+  </Styled(ListItem)>
+</Styled(List)>
+`;
+
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with data and selectedIndex set 1`] = `
+<Styled(List)
+  borderless={true}
+>
+  <Styled(ListItem)
+    key="0"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              tag
+            </styled.div>
+            <styled.div>
+              A
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              value
+            </styled.div>
+            <styled.div>
+              Alpha
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              team
+            </styled.div>
+            <styled.div>
+              Alpha team
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    >
+      <div>
+        Test details renderer
+      </div>
+    </AccordionCard>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="1"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              tag
+            </styled.div>
+            <styled.div>
+              B
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              value
+            </styled.div>
+            <styled.div>
+              Bravo
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              team
+            </styled.div>
+            <styled.div>
+              Bravo team
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={true}
+    >
+      <div>
+        Test details renderer
+      </div>
+    </AccordionCard>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="2"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              tag
+            </styled.div>
+            <styled.div>
+              C
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              value
+            </styled.div>
+            <styled.div>
+              Charlie
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              team
+            </styled.div>
+            <styled.div>
+              Charlie team
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    >
+      <div>
+        Test details renderer
+      </div>
+    </AccordionCard>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="3"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              tag
+            </styled.div>
+            <styled.div>
+              D
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              value
+            </styled.div>
+            <styled.div>
+              Delta
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              team
+            </styled.div>
+            <styled.div>
+              Delta team
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    >
+      <div>
+        Test details renderer
+      </div>
+    </AccordionCard>
+  </Styled(ListItem)>
+</Styled(List)>
+`;
+
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with data set 1`] = `
+<Styled(List)
+  borderless={true}
+>
+  <Styled(ListItem)
+    key="0"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              tag
+            </styled.div>
+            <styled.div>
+              C
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              value
+            </styled.div>
+            <styled.div>
+              Charlie
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              team
+            </styled.div>
+            <styled.div>
+              Charlie team
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    >
+      <div>
+        Test details renderer
+      </div>
+    </AccordionCard>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="1"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              tag
+            </styled.div>
+            <styled.div>
+              D
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              value
+            </styled.div>
+            <styled.div>
+              Delta
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              team
+            </styled.div>
+            <styled.div>
+              Delta team
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    >
+      <div>
+        Test details renderer
+      </div>
+    </AccordionCard>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="2"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              tag
+            </styled.div>
+            <styled.div>
+              E
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              value
+            </styled.div>
+            <styled.div>
+              Echo
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              team
+            </styled.div>
+            <styled.div>
+              Echo team
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    >
+      <div>
+        Test details renderer
+      </div>
+    </AccordionCard>
+  </Styled(ListItem)>
+</Styled(List)>
+`;
+
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with right columns 1`] = `
+<Styled(List)
+  borderless={true}
+>
+  <Styled(ListItem)
+    key="0"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              C
+            </styled.div>
+            <styled.div>
+              5
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    >
+      <div />
+    </AccordionCard>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="1"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              C
+            </styled.div>
+            <styled.div>
+              10
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    >
+      <div />
+    </AccordionCard>
+  </Styled(ListItem)>
+</Styled(List)>
+`;
+
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with sorted data 1`] = `
+<Styled(List)
+  borderless={true}
+>
+  <Styled(ListItem)
+    key="0"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              c
+            </styled.div>
+            <styled.div>
+              15
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    >
+      <div />
+    </AccordionCard>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="1"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              c
+            </styled.div>
+            <styled.div>
+              10
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    >
+      <div />
+    </AccordionCard>
+  </Styled(ListItem)>
+</Styled(List)>
+`;
+
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with wrong columns 1`] = `
+<Styled(List)
+  borderless={true}
+>
+  <Styled(ListItem)
+    key="0"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              A
+            </styled.div>
+            <styled.div>
+              
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              B
+            </styled.div>
+            <styled.div>
+              
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    >
+      <div />
+    </AccordionCard>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="1"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <styled.div>
+            <styled.div>
+              A
+            </styled.div>
+            <styled.div>
+              
+            </styled.div>
+          </styled.div>,
+          <styled.div>
+            <styled.div>
+              B
+            </styled.div>
+            <styled.div>
+              
+            </styled.div>
+          </styled.div>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    >
+      <div />
+    </AccordionCard>
+  </Styled(ListItem)>
+</Styled(List)>
+`;
+
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component without data and custom placeholder 1`] = `
+<Styled(List)
+  borderless={true}
+>
+  <Styled(ListItem)
+    key="0"
+  >
+    <styled.div>
+      No data
+    </styled.div>
+  </Styled(ListItem)>
+</Styled(List)>
+`;

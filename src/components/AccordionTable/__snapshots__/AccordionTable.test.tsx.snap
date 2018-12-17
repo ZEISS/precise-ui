@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionTable /> should render a <AccordionTable> component with data and selectedIndex set 1`] = `
+<ModeProvider
+  data={
+    Array [
+      Object {
+        "tag": "A",
+        "team": "Alpha team",
+        "value": "Alpha",
+      },
+      Object {
+        "tag": "B",
+        "team": "Bravo team",
+        "value": "Bravo",
+      },
+      Object {
+        "tag": "C",
+        "team": "Charlie team",
+        "value": "Charlie",
+      },
+      Object {
+        "tag": "D",
+        "team": "Delta team",
+        "value": "Delta",
+      },
+    ]
+  }
+  detailsRenderer={[Function]}
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  mode="table"
+  selectedIndex={1}
+/>
+`;
+
+exports[`<AccordionTable /> should render a <AccordionTable> component with data set 1`] = `
+<ModeProvider
+  data={
+    Array [
+      Object {
+        "tag": "C",
+        "team": "Charlie team",
+        "value": "Charlie",
+      },
+      Object {
+        "tag": "D",
+        "team": "Delta team",
+        "value": "Delta",
+      },
+      Object {
+        "tag": "E",
+        "team": "Echo team",
+        "value": "Echo",
+      },
+    ]
+  }
+  detailsRenderer={[Function]}
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  mode="table"
+/>
+`;
+
+exports[`<AccordionTable /> should render a <AccordionTable> component with mode set 1`] = `
+<ModeProvider
+  data={Array []}
+  detailsRenderer={[Function]}
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  mode="table"
+/>
+`;
+
+exports[`<AccordionTable /> should render a <AccordionTable> component with no data and placeholder set 1`] = `
+<ModeProvider
+  data={Array []}
+  detailsRenderer={[Function]}
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  mode="table"
+  placeholder="No data"
+/>
+`;
+
+exports[`<AccordionTable /> should render a <AccordionTable> component with right columns 1`] = `
+<ModeProvider
+  columns={
+    Object {
+      "c": "C",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "c": 5,
+      },
+      Object {
+        "c": 10,
+      },
+    ]
+  }
+  detailsRenderer={[Function]}
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  mode="table"
+/>
+`;
+
+exports[`<AccordionTable /> should render a <AccordionTable> component with sorted data 1`] = `
+<ModeProvider
+  data={
+    Array [
+      Object {
+        "c": 15,
+      },
+      Object {
+        "c": 10,
+      },
+    ]
+  }
+  detailsRenderer={[Function]}
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  mode="table"
+  sortBy="c"
+/>
+`;
+
+exports[`<AccordionTable /> should render a <AccordionTable> component with wrong columns 1`] = `
+<ModeProvider
+  columns={
+    Object {
+      "a": "A",
+      "b": "B",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "c": 5,
+      },
+      Object {
+        "c": 10,
+      },
+    ]
+  }
+  detailsRenderer={[Function]}
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  mode="table"
+/>
+`;
+
+exports[`<AccordionTable /> should render a <AccordionTable> component without data and custom placeholder 1`] = `
+<ModeProvider
+  data={Array []}
+  detailsRenderer={[Function]}
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  mode="table"
+  placeholder="No data"
+/>
+`;
+
+exports[`<AccordionTable /> should render a <AccordionTable> component without headers 1`] = `
+<ModeProvider
+  data={
+    Array [
+      Object {
+        "c": 15,
+      },
+      Object {
+        "c": 10,
+      },
+    ]
+  }
+  detailsRenderer={[Function]}
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  mode="table"
+  noHeader={true}
+/>
+`;

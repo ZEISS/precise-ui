@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several children 1`] = `
+<Breadcrumbs>
+  <styled.div>
+    <div
+      className="sc-ckVGcZ jFsIxQ"
+    >
+      <span
+        key="0"
+      >
+        <Breadcrumb
+          title="First"
+        >
+          <styled.span>
+            <span
+              className="sc-bwzfXH TpIwH"
+            >
+              First
+            </span>
+          </styled.span>
+        </Breadcrumb>
+      </span>
+      <span
+        key="1"
+      >
+        <styled.span>
+          <span
+            className="sc-jKJlTe bxATnl"
+          />
+        </styled.span>
+      </span>
+      <span
+        key="2"
+      >
+        <Breadcrumb
+          title="Second"
+        >
+          <styled.span>
+            <span
+              className="sc-bwzfXH TpIwH"
+            >
+              Second
+            </span>
+          </styled.span>
+        </Breadcrumb>
+      </span>
+      <span
+        key="3"
+      >
+        <styled.span>
+          <span
+            className="sc-jKJlTe bxATnl"
+          />
+        </styled.span>
+      </span>
+      <span
+        key="4"
+      >
+        <Breadcrumb
+          title="Third"
+        >
+          <styled.span>
+            <span
+              className="sc-bwzfXH TpIwH"
+            >
+              Third
+            </span>
+          </styled.span>
+        </Breadcrumb>
+      </span>
+      <span
+        key="5"
+      >
+        <styled.span>
+          <span
+            className="sc-jKJlTe bxATnl"
+          />
+        </styled.span>
+      </span>
+      <span
+        key="6"
+      >
+        <Breadcrumb
+          title="Last"
+        >
+          <styled.span>
+            <span
+              className="sc-bwzfXH TpIwH"
+            >
+              Last
+            </span>
+          </styled.span>
+        </Breadcrumb>
+      </span>
+    </div>
+  </styled.div>
+</Breadcrumbs>
+`;
+
+exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several children and size() set 1`] = `
+<styled.div>
+  <span
+    key="0"
+  >
+    <Breadcrumb
+      title="First"
+      to="/1"
+    />
+  </span>
+  <span
+    key="1"
+  >
+    <styled.span />
+  </span>
+  <span
+    key="2"
+  >
+    <OnClickOutside(BreadcrumbPlaceholderInt)
+      eventTypes={
+        Array [
+          "mousedown",
+          "touchstart",
+        ]
+      }
+      excludeScrollbar={false}
+      group={
+        Array [
+          <Breadcrumb
+            title="Second"
+            to="/2"
+          />,
+          <Breadcrumb
+            title="Third"
+            to="/3"
+          />,
+          <Breadcrumb
+            title="Fourth"
+            to="/4"
+          />,
+        ]
+      }
+      outsideClickIgnoreClass="ignore-react-onclickoutside"
+      preventDefault={false}
+      stopPropagation={false}
+    />
+  </span>
+  <span
+    key="3"
+  >
+    <styled.span />
+  </span>
+  <span
+    key="4"
+  >
+    <Breadcrumb
+      title="Fifth"
+      to="/5"
+    />
+  </span>
+</styled.div>
+`;
+
+exports[`<Breadcrumbs /> should render an basic <Breadcrumbs> component 1`] = `
+<styled.div>
+  <span
+    key="0"
+  >
+    <Breadcrumb
+      title="Title"
+    />
+  </span>
+</styled.div>
+`;

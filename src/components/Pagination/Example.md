@@ -1,0 +1,50 @@
+Using the `Pagination` component on some arbitrary children.
+
+```jsx
+const { Pagination } = require('precise-ui');
+
+<Pagination size={2}>
+  <div>First</div>
+  <div>Second</div>
+  <div>Third</div>
+  <div>Fourth</div>
+  <div>Fifth</div>
+</Pagination>
+```
+
+The `host` prop can be used to define the rendering in greater detail.
+
+```jsx
+const { Pagination } = require('precise-ui');
+
+<Pagination size={5} host="ul">
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+  <li>Fourth</li>
+  <li>Fifth</li>
+  <li>Sixth</li>
+  <li>Seventh</li>
+</Pagination>
+```
+
+The combination of table component and pagination is particularly promising, especially in the scenario of many rows.
+
+```jsx
+const { Pagination, Table } = require('precise-ui');
+const data = Array.apply(null, { length: 250 }).map(() => ({ X: Math.random(), Y: Math.random() }));
+const paginate = ({ table, rows }) => <Pagination host={table} size={20}>{rows}</Pagination>;
+
+<Table data={data} indexed bodyRenderer={paginate} />
+```
+
+When providing the size property as an array, additional `items per page` pagination control will appear with the option to choose one of the provided sizes.
+
+```jsx
+const { Pagination } = require('precise-ui');
+const data = Array.apply(null, { length: 250 }).map((a, i) => <div key={i}>Item {i}</div>);
+
+<Pagination size={[20, 50, 100]} host="ul">
+  {data}
+</Pagination>
+```

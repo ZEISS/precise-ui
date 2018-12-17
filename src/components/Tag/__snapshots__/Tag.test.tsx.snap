@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> should render a <Tag> with a info type if explicitly given 1`] = `
+<Tag
+  type="info"
+>
+  <styled.span
+    theme={
+      Object {
+        "tagBackground": "rgba(201,239,148,1)",
+        "tagColor": "rgba(47,101,20,1)",
+      }
+    }
+  >
+    <span
+      className="sc-bdVaJa gwEHIr"
+    >
+      foo
+    </span>
+  </styled.span>
+</Tag>
+`;
+
+exports[`<Tag /> should render a <Tag> with a primary type if nothing given 1`] = `
+<Tag>
+  <styled.span
+    theme={
+      Object {
+        "tagBackground": "rgba(193,230,254,1)",
+        "tagColor": "rgba(52,93,127,1)",
+      }
+    }
+  >
+    <span
+      className="sc-bdVaJa dnRjIz"
+    >
+      my-nice-tag
+    </span>
+  </styled.span>
+</Tag>
+`;
+
+exports[`<Tag /> should render a <Tag> with a primary type if something wrong given 1`] = `
+<Tag
+  type="bar"
+>
+  <styled.span
+    theme={
+      Object {
+        "tagBackground": "rgba(193,230,254,1)",
+        "tagColor": "rgba(52,93,127,1)",
+      }
+    }
+  >
+    <span
+      className="sc-bdVaJa dnRjIz"
+    >
+      foo
+    </span>
+  </styled.span>
+</Tag>
+`;

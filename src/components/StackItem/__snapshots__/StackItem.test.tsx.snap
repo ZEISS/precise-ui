@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StackItem /> should render the StackItem with height and width declaration 1`] = `
+<StackItem
+  height="15px"
+  width="40%"
+>
+  <styled.div
+    height="15px"
+    width="40%"
+  >
+    <div
+      className="sc-bdVaJa dLpqhe"
+      height="15px"
+      width="40%"
+    >
+      Content
+    </div>
+  </styled.div>
+</StackItem>
+`;
+
+exports[`<StackItem /> should render the StackItem with no filling 1`] = `
+<StackItem
+  nofill={true}
+>
+  <styled.div
+    nofill={true}
+  >
+    <div
+      className="sc-bdVaJa ciHdvC"
+    />
+  </styled.div>
+</StackItem>
+`;
+
+exports[`<StackItem /> should render the StackItem with some content 1`] = `
+<StackItem>
+  <styled.div>
+    <div
+      className="sc-bdVaJa eIfyAv"
+    >
+      Item
+    </div>
+  </styled.div>
+</StackItem>
+`;
+
+exports[`<StackItem /> should render the StackItem with width declaration 1`] = `
+<StackItem
+  width="20px"
+>
+  <styled.div
+    width="20px"
+  >
+    <div
+      className="sc-bdVaJa cBvbun"
+      width="20px"
+    />
+  </styled.div>
+</StackItem>
+`;
+
+exports[`<StackItem /> should render the default StackItem 1`] = `
+<StackItem>
+  <styled.div>
+    <div
+      className="sc-bdVaJa eIfyAv"
+    />
+  </styled.div>
+</StackItem>
+`;

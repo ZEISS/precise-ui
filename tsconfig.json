@@ -1,33 +1,33 @@
 {
-    "compilerOptions": {
-      "outDir": "dist",
-      "sourceMap": false,
-      "noImplicitAny": true,
-      "allowUnreachableCode": false,
-      "alwaysStrict": true,
-      "strictNullChecks": true,
-      "noUnusedParameters": true,
-      "noImplicitReturns": true,
-      "module": "commonjs",
-      "target": "es5",
-      "moduleResolution": "node",
-      "emitDecoratorMetadata": true,
-      "experimentalDecorators": true,
-      "lib": [
-        "es2015",
-        "dom"
-      ],
-      "jsx": "react",
-      "suppressImplicitAnyIndexErrors": true,
-      "allowSyntheticDefaultImports": false
-    },
-    "include": [
-      "./src/**/*"
+  "compilerOptions": {
+    "outDir": "dist",
+    "sourceMap": false,
+    "noImplicitAny": true,
+    "allowUnreachableCode": false,
+    "alwaysStrict": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "module": "commonjs",
+    "target": "es5",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2015",
+      "dom"
     ],
-    "exclude": [
-      "node_modules",
-      "src/**/*.test.tsx",
-      "src/**/*.test.ts"
-    ]
-  }
-  
+    "jsx": "react",
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": false
+  },
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/**/*.test.tsx",
+    "src/**/*.test.ts"
+  ]
+}

@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconLink /> should render a <IconLink> with some content component 1`] = `
+<Styled(Anchor)
+  display="inline-block"
+  href="foo"
+>
+  <Styled(Icon)
+    iconOnly={false}
+    name="Favorite"
+    size="22px"
+  />
+  <styled.span>
+    <div>
+      Content
+    </div>
+  </styled.span>
+</Styled(Anchor)>
+`;
+
+exports[`<IconLink /> should render a disabled <IconLink> with some content 1`] = `
+<Styled(Anchor)
+  disabled={true}
+  display="inline-block"
+>
+  <Styled(Icon)
+    disabled={true}
+    iconOnly={false}
+    name="Favorite"
+    size="22px"
+  />
+  <styled.span>
+    Content
+  </styled.span>
+</Styled(Anchor)>
+`;

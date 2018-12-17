@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ActionLink /> should render a <ActionLink> with some content component 1`] = `
+<Styled(Anchor)
+  href="foo"
+>
+  <div>
+    Content
+  </div>
+</Styled(Anchor)>
+`;
+
+exports[`<ActionLink /> should render an active <ActionLink> with some content 1`] = `
+<Styled(Anchor)
+  active={true}
+>
+  Content
+</Styled(Anchor)>
+`;
+
+exports[`<ActionLink /> should render an active disabled <ActionLink> with some content 1`] = `
+<Styled(Anchor)
+  active={true}
+  disabled={true}
+>
+  Content
+</Styled(Anchor)>
+`;

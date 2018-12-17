@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionTab /> should render a component as a content 1`] = `
+<div>
+  <div>
+    Content
+  </div>
+</div>
+`;
+
+exports[`<AccordionTab /> should render a header as a component 1`] = `
+<AccordionTab
+  header={
+    <div>
+      Header
+    </div>
+  }
+>
+  <div>
+    Content of the tab
+  </div>
+</AccordionTab>
+`;

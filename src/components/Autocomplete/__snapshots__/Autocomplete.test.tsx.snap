@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Autocomplete /> should render <Autocomplete> component 1`] = `
+<AutocompleteInt
+  defaultValue="five"
+  suggestions={
+    Array [
+      "one",
+      "two",
+      "three",
+    ]
+  }
+/>
+`;
