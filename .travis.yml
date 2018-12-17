@@ -9,17 +9,16 @@ script:
   - npm run test
   - npm run build
 before_deploy:
-  - >
+  - >   
+    if [ "$TRAVIS_BRANCH" != "master" ]; then
+      sed -e "s/\(\"version\":\\s\+\"\([0-9]\+\.\?\)\+\)/\1-pre.$TRAVIS_BUILD_NUMBER/" package.json
+    fi
+    
     if ! [ "$BEFORE_DEPLOY_RUN" ]; then
       export BEFORE_DEPLOY_RUN=1;
-
-      if [ "$TRAVIS_BRANCH" == "master" ]; then
-        git config --local user.name "$git_user";
-        git config --local user.email "$git_email";
-        git tag "$(node -p 'require(`./package.json`).version')";
-      else
-        sed -e "s/\(\"version\":\\s\+\"\([0-9]\+\.\?\)\+\)/\1-pre.$TRAVIS_BUILD_NUMBER/" package.json
-      fi
+      git config --local user.name "$git_user";
+      git config --local user.email "$git_email";
+      git tag "$(node -p 'require(`./package.json`).version')";
     fi
 deploy:
   - provider: npm
