@@ -58,7 +58,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
-      'preciuse-ui': path.resolve('./src'),
+      'precise-ui': path.resolve('./src'),
     },
   },
 
