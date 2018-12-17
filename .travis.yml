@@ -11,9 +11,8 @@ script:
 before_deploy:
   - >   
     if [ "$TRAVIS_BRANCH" != "master" ]; then
-      sed -e "s/\(\"version\":\\s\+\"\([0-9]\+\.\?\)\+\)/\1-pre.$TRAVIS_BUILD_NUMBER/" package.json
+      sed -i -e "s/\(\"version\":\\s\+\"\([0-9]\+\.\?\)\+\)/\1-pre.$TRAVIS_BUILD_NUMBER/" package.json
     fi
-    
     if ! [ "$BEFORE_DEPLOY_RUN" ]; then
       export BEFORE_DEPLOY_RUN=1;
       git config --local user.name "$git_user";
