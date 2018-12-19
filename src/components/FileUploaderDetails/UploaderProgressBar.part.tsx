@@ -1,10 +1,8 @@
 import * as React from 'react';
-
 import { Icon, IconName } from '../Icon';
 import { ProgressStatus, TranslationLabels } from './FileUploaderDetails.types.part';
 import { defaultLabels, iconNames } from './helpers';
 import styled, { reStyled } from '../../utils/styled';
-
 import { ActionIconContainer } from './ActionIconContainer.part';
 import { ActionLink } from '../ActionLink';
 import { ProgressBar } from '../ProgressBar';
