@@ -22,8 +22,8 @@ function getEntrySources(sources = []) {
 }
 
 function getFileName() {
-  const name = develop ? 'dev' : 'prod';
-  return `pharos.${name}.js`;
+  const name = develop ? 'dev' : 'min';
+  return `precise-ui.${name}.js`;
 }
 
 function getExternals(libs = []) {
@@ -43,7 +43,7 @@ module.exports = {
   output: {
     path: dist,
     filename: getFileName(),
-    library: 'pharos',
+    library: 'precise',
     libraryTarget: 'umd',
     publicPath: '/',
   },
@@ -61,7 +61,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
-      '@zeiss/pharos': path.resolve('./src'),
+      'precise-ui': path.resolve('./src'),
     },
   },
 
