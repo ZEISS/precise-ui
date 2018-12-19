@@ -1,5 +1,7 @@
 import * as React from 'react';
+
 import styled, { keyframes, themed } from '../../utils/styled';
+
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
 import { remCalc } from '../../utils/remCalc';
@@ -65,7 +67,7 @@ const SpinningContainer = styled.div`
   visibility: ${(props: { hidden?: boolean }) => (props.hidden ? 'hidden' : 'visible')};
 `;
 
-interface SpinningLabelProps {
+export interface SpinningLabelProps {
   size?: string;
 }
 
