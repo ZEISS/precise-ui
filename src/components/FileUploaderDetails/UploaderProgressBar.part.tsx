@@ -1,13 +1,13 @@
 import * as React from 'react';
-import styled, { reStyled } from '../../utils/styled';
-import { distance } from '../../distance';
-import { ActionLink } from '../ActionLink';
 import { Icon, IconName } from '../Icon';
-import { ProgressBar } from '../ProgressBar';
-import { ActionIconContainer } from './ActionIconContainer.part';
-import { StatusIcon } from './StatusIcon.part';
 import { ProgressStatus, TranslationLabels } from './FileUploaderDetails.types.part';
 import { defaultLabels, iconNames } from './helpers';
+import styled, { reStyled } from '../../utils/styled';
+import { ActionIconContainer } from './ActionIconContainer.part';
+import { ActionLink } from '../ActionLink';
+import { ProgressBar } from '../ProgressBar';
+import { StatusIcon } from './StatusIcon.part';
+import { distance } from '../../distance';
 
 const ProgressBarWrapper = reStyled.div(
   ({ theme }) => `
@@ -48,7 +48,7 @@ const ActionGroup = styled.div`
   align-items: center;
 `;
 
-interface StatusBarProps {
+export interface StatusBarProps {
   status: ProgressStatus;
   iconName: IconName;
   count: number;
