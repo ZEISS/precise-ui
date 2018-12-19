@@ -50,7 +50,7 @@ const sizeMapping = {
   },
 };
 
-interface StyledHeadlineProps {
+export interface StyledHeadlineProps {
   size: HeadlineSize;
   level: number;
   theme?: any;

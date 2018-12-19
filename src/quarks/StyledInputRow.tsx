@@ -1,8 +1,10 @@
 import * as React from 'react';
+
 import styled, { themed } from '../utils/styled';
-import { remCalc } from '../utils/remCalc';
+
 import { distance } from '../distance';
 import { purpleRed } from '../colors';
+import { remCalc } from '../utils/remCalc';
 
 const TextFieldBoxWithLabelWrapper = styled.div`
   flex-grow: 1;
@@ -17,7 +19,7 @@ const TextFieldLabel = styled.label`
   height: 100%;
 `;
 
-interface TextFieldLabelProps {
+export interface TextFieldLabelProps {
   active: boolean;
   filled: boolean;
   error: boolean;

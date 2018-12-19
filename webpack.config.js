@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const createInnerJsxTransformer = require('typescript-plugin-inner-jsx').default;
 const env = process.env.NODE_ENV || 'development';
 const develop = env === 'development';
 const test = env === 'test';
@@ -9,6 +10,8 @@ const port = process.env.PORT || 9000;
 
 const dist = path.join(__dirname, 'dist', 'umd');
 const src = path.join(__dirname, 'src');
+
+const innerJsxTransformer = createInnerJsxTransformer();
 
 function getEntrySources(sources = []) {
   if (develop) {
@@ -19,8 +22,8 @@ function getEntrySources(sources = []) {
 }
 
 function getFileName() {
-  const name = develop ? 'dev' : 'min';
-  return `precise-ui.${name}.js`;
+  const name = develop ? 'dev' : 'prod';
+  return `pharos.${name}.js`;
 }
 
 function getExternals(libs = []) {
@@ -40,9 +43,9 @@ module.exports = {
   output: {
     path: dist,
     filename: getFileName(),
-    library: 'precise',
+    library: 'pharos',
     libraryTarget: 'umd',
-    publicPath: '/'
+    publicPath: '/',
   },
 
   externals: getExternals(),
@@ -58,14 +61,21 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
-      'precise-ui': path.resolve('./src'),
+      '@zeiss/pharos': path.resolve('./src'),
     },
   },
 
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)?$/,
+        test: /\.tsx$/,
+        loader: 'awesome-typescript-loader',
+        options: {
+          getCustomTransformers: () => ({ before: [innerJsxTransformer] }),
+        },
+      },
+      {
+        test: /\.ts$/,
         loader: 'awesome-typescript-loader',
       },
       {
