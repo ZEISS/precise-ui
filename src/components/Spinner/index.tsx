@@ -65,7 +65,7 @@ const SpinningContainer = styled.div`
   visibility: ${(props: { hidden?: boolean }) => (props.hidden ? 'hidden' : 'visible')};
 `;
 
-interface SpinningLabelProps {
+export interface SpinningLabelProps {
   size?: string;
 }
 

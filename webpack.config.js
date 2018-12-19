@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const createInnerJsxTransformer = require('typescript-plugin-inner-jsx').default;
 const env = process.env.NODE_ENV || 'development';
 const develop = env === 'development';
 const test = env === 'test';
@@ -9,6 +10,8 @@ const port = process.env.PORT || 9000;
 
 const dist = path.join(__dirname, 'dist', 'umd');
 const src = path.join(__dirname, 'src');
+
+const innerJsxTransformer = createInnerJsxTransformer();
 
 function getEntrySources(sources = []) {
   if (develop) {
@@ -42,7 +45,7 @@ module.exports = {
     filename: getFileName(),
     library: 'precise',
     libraryTarget: 'umd',
-    publicPath: '/'
+    publicPath: '/',
   },
 
   externals: getExternals(),
@@ -65,7 +68,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)?$/,
+        test: /\.tsx$/,
+        loader: 'awesome-typescript-loader',
+        options: {
+          getCustomTransformers: () => ({ before: [innerJsxTransformer] }),
+        },
+      },
+      {
+        test: /\.ts$/,
         loader: 'awesome-typescript-loader',
       },
       {
