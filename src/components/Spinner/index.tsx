@@ -1,7 +1,5 @@
 import * as React from 'react';
-
 import styled, { keyframes, themed } from '../../utils/styled';
-
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
 import { remCalc } from '../../utils/remCalc';
