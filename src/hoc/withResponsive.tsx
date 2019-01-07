@@ -92,10 +92,8 @@ export function withResponsive<
         dimensions: this.state,
       };
 
-      return React.createElement(Component, {
-        ...this.props,
-        ...instertedProps,
-      });
+      const props = { ...this.props, ...instertedProps } as any;
+      return <Component {...props} />;
     }
   }
 
