@@ -92,11 +92,11 @@ export function withResponsiveMode<Modes>(getMode: GetModeType<Modes>) {
 
       render() {
         const { mode } = this.state;
-
-        return React.createElement(Component, {
+        const props = {
           ...(mode ? { mode } : {}),
           ...this.props,
-        });
+        } as any;
+        return <Component {...props} />;
       }
     }
 
