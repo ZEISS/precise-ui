@@ -9,10 +9,12 @@ export interface FormContextProps {
 export function withFormContext<T extends InputProps<any>>(
   Component: React.ComponentType<T & FormContextProps>,
 ): React.SFC<T> {
-  return (props: T) =>
+  const WithFormContext: React.SFC<T> = props =>
     props.name ? (
       <FormContext.Consumer>{ctx => <Component form={ctx} {...props} />}</FormContext.Consumer>
     ) : (
       <Component {...props} />
     );
+
+  return WithFormContext;
 }
