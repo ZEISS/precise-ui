@@ -27,7 +27,7 @@ export interface RatingProps extends InputProps<number> {
   /**
    * @ignore
    */
-  children: void;
+  children?: void;
 }
 
 export interface RatingState {
