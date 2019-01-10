@@ -24,7 +24,7 @@ const Indicator = styled<IndicatorProps, 'div'>('div')`
   )};
   border-radius: 50%;
   background: ${themed(props =>
-    props.disabled ? props.theme.ui3 : props.active ? props.theme.indicatorKnobActiveBackground : props.theme.text2,
+    props.disabled ? props.theme.ui3 : props.active ? props.theme.ui0 : props.theme.text2,
   )};
   transform: translate(-50%, -50%);
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};

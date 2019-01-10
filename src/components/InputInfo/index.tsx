@@ -12,7 +12,7 @@ export interface InputInfoProps extends StandardProps {
 }
 
 const StyledInfo = styled<InputInfoProps, 'div'>('div')`
-  color: ${themed(props => props.theme.inputInfo)};
+  color: ${themed(props => props.theme.text2)};
   font-size: ${remCalc('12px')};
   line-height: 14px;
   padding: ${distance.xsmall} 0;
