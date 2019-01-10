@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter, Redirect, Switch, Route } from 'react-router-dom';
-import { styled, distance, transparentize, colors } from '../../src';
+import { styled, distance, transparentize, colors, themes } from '../../src';
+import { ThemeProvider } from '../../src/utils/styled';
 // @ts-ignore
 import Ribbon from 'react-styleguidist/lib/rsg-components/Ribbon';
 // @ts-ignore
@@ -61,28 +62,30 @@ const ScrollToTop: React.SFC = () => {
 
 const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ title, version, hasSidebar, children, toc }) => {
   return (
-    <BrowserRouter>
-      <Container>
-        <Ribbon />
-        <Route component={ScrollToTop} />
-        {hasSidebar && (
-          <TocColumn>
-            <Info>
-              <Logo />
-              <Title>{title}</Title>
-              <Version>{version}</Version>
-            </Info>
-            {toc}
-          </TocColumn>
-        )}
-        <ContentColumn>
-          <Switch>
-            <Redirect exact from="/" to="/basics" />
-            <Route render={() => children} />
-          </Switch>
-        </ContentColumn>
-      </Container>
-    </BrowserRouter>
+    <ThemeProvider theme={themes.light}>
+      <BrowserRouter>
+        <Container>
+          <Ribbon />
+          <Route component={ScrollToTop} />
+          {hasSidebar && (
+            <TocColumn>
+              <Info>
+                <Logo />
+                <Title>{title}</Title>
+                <Version>{version}</Version>
+              </Info>
+              {toc}
+            </TocColumn>
+          )}
+          <ContentColumn>
+            <Switch>
+              <Redirect exact from="/" to="/basics" />
+              <Route render={() => children} />
+            </Switch>
+          </ContentColumn>
+        </Container>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 };
 
