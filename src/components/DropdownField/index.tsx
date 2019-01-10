@@ -143,6 +143,10 @@ const StyledLabel = styled.div`
   padding-left: ${distance.medium};
 `;
 
+const DropdownPopup = styled(WindowPopup)`
+  border: 2em solid transparent;
+`;
+
 // tslint:disable-next-line
 const NotOpenComponent = null;
 
@@ -155,9 +159,9 @@ const getMobileWrapper = (label?: React.ReactChild) => ({
   ...props
 }: InteractiveListWrapperProps & { children?: React.ReactNode }) =>
   props.open ? (
-    <WindowPopup onClick={onClick} label={label}>
+    <DropdownPopup onClick={onClick} label={label}>
       {children}
-    </WindowPopup>
+    </DropdownPopup>
   ) : (
     NotOpenComponent
   );
