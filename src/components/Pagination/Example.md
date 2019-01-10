@@ -28,6 +28,40 @@ const { Pagination } = require('precise-ui');
 </Pagination>
 ```
 
+The following example shows that changing the number of elements (e.g., by filtering) still caps the page.
+
+```jsx
+const { SearchField, Pagination } = require('precise-ui');
+
+class Foo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      size: 10,
+    };
+  }
+  render() {
+    const { size } = this.state;
+    const elements = [];
+
+    for (let i = 0; i < size; i++) {
+      elements.push(<li key={i}>{i}</li>);
+    }
+
+    return (
+      <>
+        <SearchField defaultValue={size} onSearch={e => this.setState({ size: +e.query || 0 })} />
+        <Pagination size={5} host="ul">
+          {elements}
+        </Pagination>
+      </>
+    );
+  }
+}
+
+<Foo />
+```
+
 The combination of table component and pagination is particularly promising, especially in the scenario of many rows.
 
 ```jsx
