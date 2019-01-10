@@ -42,6 +42,10 @@ module.exports = {
           name: 'Types',
           content: path.resolve(__dirname, 'docs/basics/types.md'),
         },
+        {
+          name: 'Pattern Library',
+          content: path.resolve(__dirname, 'docs/basics/pattern.md'),
+        },
       ],
       sectionDepth: 0,
     },
