@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { SelectButtonChangeEvent } from '../SelectButton';
 import { StandardProps } from '../../common';
 import { PaginationBar, PaginationBarSizeChangedEvent, PaginationBarPageChangedEvent } from '../PaginationBar';
 import { PaginationLayout } from './PaginationLayout.part';
@@ -136,12 +135,32 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
     });
   };
 
-  render() {
-    const { children, host, size: sizeProp, itemsInfo, pagesInfo, label, render } = this.props;
+  private getDim(count: number) {
     const { current, size: sizeState } = this.state;
     const min = current * sizeState;
-    const max = min + sizeState;
+
+    if (min < count) {
+      return {
+        current,
+        min,
+        max: min + sizeState,
+        sizeState,
+      };
+    } else {
+      const previous = ~~((count - 1) / sizeState);
+      return {
+        current: previous,
+        min: previous * sizeState,
+        max: (previous + 1) * sizeState,
+        sizeState,
+      };
+    }
+  }
+
+  render() {
+    const { children, host, size: sizeProp, itemsInfo, pagesInfo, label, render } = this.props;
     const count = React.Children.count(children);
+    const { current, min, max, sizeState } = this.getDim(count);
     const content =
       count < sizeState
         ? children
