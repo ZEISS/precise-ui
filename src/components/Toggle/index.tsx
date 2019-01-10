@@ -68,7 +68,7 @@ const ToggleBox = styled<ToggleBoxProps, 'div'>('div')`
   height: ${distance.medium};
   border-radius: ${distance.small};
   position: relative;
-  background: ${themed(props => (props.checked ? props.theme.toggleCheckedBackground : props.theme.toggleBackground))};
+  background: ${themed(props => props.theme.ui4)};
   transition: all ${transitionDuration} ${transitionEase};
 `;
 
