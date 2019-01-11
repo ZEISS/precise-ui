@@ -27,7 +27,7 @@ const { Form, Button, TextField } = require('precise-ui');
 Like the input fields the `form` can be also controlled and managed. The managed version already gives us an easy way to observe changes:
 
 ```jsx
-const { Form, Button, Dropdown, TextField } = require('precise-ui');
+const { Form, Button, DropdownField, TextField } = require('precise-ui');
 
 <Form onSubmit={e => alert(JSON.stringify(e.data))} defaultValue={{ first: 'Your', last: 'Name' }} onChange={e => console.log(e)}>
   <div>
@@ -46,7 +46,7 @@ const { Form, Button, Dropdown, TextField } = require('precise-ui');
     What do you like?
   </div>
   <div>
-    <Dropdown name="taste" data={["apples", "oranges", "bananas"]} />
+    <DropdownField name="taste" data={["apples", "oranges", "bananas"]} />
   </div>
   <div>
     <Button>Submit</Button>
@@ -57,7 +57,7 @@ const { Form, Button, Dropdown, TextField } = require('precise-ui');
 In controlled mode we can also prevent certain changes etc.
 
 ```jsx
-const { Form, Button, Checkbox, RadioButton, RadioButtonGroup, Dropdown, FileSelect, ColorPicker, Toggle, Slider } = require('precise-ui');
+const { Form, Button, Checkbox, RadioButton, RadioButtonGroup, DropdownField, FileSelect, ColorPicker, Toggle, Slider } = require('precise-ui');
 
 class MyForm extends React.Component {
   constructor(props) {
@@ -102,7 +102,7 @@ class MyForm extends React.Component {
           </RadioButtonGroup>
         </div>
         <div>
-          <Dropdown data={['one', 'two']} name="test" />
+          <DropdownField data={['one', 'two']} name="test" />
         </div>
         <div>
           <Toggle name="zoo">Another toggle</Toggle>

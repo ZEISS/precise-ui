@@ -28,14 +28,50 @@ export const lightGray = 'rgba(178,178,178,1)';
 export const disabledBlue = 'rgba(203,228,245,1)';
 export const indigo = 'rgba(20,30,140,1)';
 export const azur = 'rgba(5,94,210,1)';
+export const azur1 = '#9bbeed';
+export const azur2 = '#699ee4';
+export const azur3 = '#377edb';
+export const azur4 = '#044ba8';
+export const azur5 = '#03387e';
+export const azur6 = '#022554';
 export const skyBlue = 'rgba(106,176,226,1)';
+export const skyBlue1 = '#c3dff3';
+export const skyBlue2 = '#a5cfed';
+export const skyBlue3 = '#87bfe7';
+export const skyBlue4 = '#548cb4';
+export const skyBlue5 = '#3f6987';
+export const skyBlue6 = '#2a465a';
 export const green = 'rgba(60,138,46,1)';
+export const green1 = '#b1d0ab';
+export const green2 = '#8ab881';
+export const green3 = '#63a157';
+export const green4 = '#306e24';
+export const green5 = '#24521b';
+export const green6 = '#183712';
 export const greenNeon = 'rgba(225,255,50,1)';
 export const lightGreen = 'rgba(217,233,6,1)';
 export const brightLemon = 'rgba(254,203,0,1)';
 export const orange = 'rgba(236,101,0,1)';
+export const orange1 = '#f7c199';
+export const orange2 = '#f3a266';
+export const orange3 = '#ef8333';
+export const orange4 = '#bc5000';
+export const orange5 = '#8d3c00';
+export const orange6 = '#5e5800';
 export const orangeNeon = 'rgba(255,26,0,1)';
+export const red1 = '#ffa399';
+export const red2 = '#ff7566';
+export const red3 = '#ff4733';
+export const red4 = '#cc1400';
+export const red5 = '#990f00';
+export const red6 = '#660a00';
 export const purpleRed = 'rgba(167,2,64,1)';
+export const purpleRed1 = '#edccd9';
+export const purpleRed2 = '#d381a0';
+export const purpleRed3 = '#b93566';
+export const purpleRed4 = '#96023a';
+export const purpleRed5 = '#75012d';
+export const purpleRed6 = '#43011a';
 export const midnight = 'rgba(0,80,123,1)';
 export const ocean = 'rgba(0,102,156,1)';
 export const all = {
@@ -69,159 +105,50 @@ export const all = {
   disabledBlue,
   indigo,
   azur,
+  azur1,
+  azur2,
+  azur3,
+  azur4,
+  azur5,
+  azur6,
   skyBlue,
+  skyBlue1,
+  skyBlue2,
+  skyBlue3,
+  skyBlue4,
+  skyBlue5,
+  skyBlue6,
   green,
+  green1,
+  green2,
+  green3,
+  green4,
+  green5,
+  green6,
   greenNeon,
   lightGreen,
   brightLemon,
   orange,
+  orange1,
+  orange2,
+  orange3,
+  orange4,
+  orange5,
+  orange6,
   orangeNeon,
+  red1,
+  red2,
+  red3,
+  red4,
+  red5,
+  red6,
   purpleRed,
+  purpleRed1,
+  purpleRed2,
+  purpleRed3,
+  purpleRed4,
+  purpleRed5,
+  purpleRed6,
   midnight,
   ocean,
-};
-
-// UI Colors
-/**
- * @deprecated access through the theme
- */
-export const ui0 = cyan;
-/**
- * @deprecated access through the theme
- */
-export const ui1 = white;
-/**
- * @deprecated access through the theme
- */
-export const ui2 = whiterSmoke;
-/**
- * @deprecated access through the theme
- */
-export const ui3 = whiteSmoke;
-/**
- * @deprecated access through the theme
- */
-export const ui4 = lighterGray;
-/**
- * @deprecated access through the theme
- */
-export const ui5 = tuna;
-/**
- * @deprecated access through the theme
- */
-export const ui6 = transparent;
-/**
- * @deprecated
- */
-export const ui = {
-  ui0,
-  ui1,
-  ui2,
-  ui3,
-  ui4,
-  ui5,
-  ui6,
-};
-
-// Text colors
-/**
- * @deprecated access through the theme
- */
-export const text0 = cyan;
-/**
- * @deprecated access through the theme
- */
-export const text1 = eclipse;
-/**
- * @deprecated access through the theme
- */
-export const text2 = charcoal;
-/**
- * @deprecated access through the theme
- */
-export const text3 = pinkSwan;
-/**
- * @deprecated access through the theme
- */
-export const text4 = white;
-/**
- * @deprecated access
- */
-export const text = {
-  text0,
-  text1,
-  text2,
-  text3,
-  text4,
-};
-
-/**
- * @deprecated
- */
-export const palette = {
-  light: {
-    primary: ui0,
-    secondary: ui4,
-    textDisabled: text3,
-    foggy: ui2,
-    error: purpleRed,
-  },
-  dark: {
-    primary: ui2,
-    secondary: ui4,
-    textDisabled: text3,
-    foggy: ui2,
-    error: orangeNeon,
-  },
-};
-
-/**
- * @deprecated
- */
-export const deprecated = {
-  black,
-  steel,
-  teal,
-  blue,
-  darkGray,
-  dark,
-  cyan,
-  grey1,
-  grey2,
-  grey3,
-  grey4,
-  grey5,
-  grey6,
-  grey6m,
-  grey7,
-  white,
-  brightBlue,
-  lightGray,
-  disabledBlue,
-};
-
-/**
- * @deprecated
- */
-export const support = {
-  skyBlue,
-  pacificBlue,
-  ocean,
-  midnight,
-  indigo,
-  azur,
-  green,
-  greenNeon,
-  lightGreen,
-  brightLemon,
-  orange,
-  orangeNeon,
-  purpleRed,
-  whiterSmoke,
-  whiteSmoke,
-  lighterGray,
-  pinkSwan,
-  tuna,
-  charcoal,
-  eclipse,
 };

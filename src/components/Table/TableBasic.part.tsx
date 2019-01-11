@@ -92,6 +92,7 @@ const StyledTableHeader = styled<TableHeaderProps, 'th'>('th')`
 
 const HeaderLabel = styled.div`
   font-size: 0;
+  white-space: nowrap;
 
   > span {
     display: inline-block;
@@ -254,20 +255,21 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
         row: -1,
       });
     } else if (this.isSortable(key)) {
-      const nextSorting: SortingObject | undefined =
-        column > -1
-          ? {
-              columnKey: key,
-              order:
-                this.state.sorting && this.state.sorting.order === 'ascending' && this.state.sorting.columnKey === key
-                  ? 'descending'
-                  : 'ascending',
-            }
-          : undefined;
+      const { sorting } = this.state;
+      const isAscending = sorting && sorting.order === 'descending' && sorting.columnKey === key;
 
-      this.setState({
-        sorting: nextSorting,
-      });
+      if (!isAscending && column !== -1) {
+        this.setState({
+          sorting: {
+            columnKey: key,
+            order: sorting && sorting.columnKey === key ? 'descending' : 'ascending',
+          },
+        });
+      } else {
+        this.setState({
+          sorting: undefined,
+        });
+      }
     }
   }
 
@@ -305,7 +307,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     const { indexed, theme } = this.props;
     const columns = this.getColumns();
     const { sorting } = this.state;
-    const sortDir = sorting && sorting.order === 'descending' ? 'ArrowDropUp' : 'ArrowDropDown';
+    const sortDir = sorting && sorting.order === 'descending' ? 'ArrowDropDown' : 'ArrowDropUp';
     const sortColumn = sorting ? sorting.columnKey : undefined;
 
     return (

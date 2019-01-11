@@ -4,10 +4,10 @@ import { KeyCodes } from '../../utils/keyCodes';
 import { showInputInfo } from '../../utils/input';
 import { remCalc } from '../../utils/remCalc';
 import { LabeledInputProps, InputChangeEvent, ScreenSize } from '../../common';
-import { ui4, ui5 } from '../../colors';
 import { InputIcon } from '../InputIcon';
 import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
 import { distance } from '../../distance';
+import { light } from '../../themes';
 import { Icon } from '../Icon';
 import { Responsive } from '../Responsive';
 import {
@@ -143,6 +143,10 @@ const StyledLabel = styled.div`
   padding-left: ${distance.medium};
 `;
 
+const DropdownPopup = styled(WindowPopup)`
+  border: 2em solid transparent;
+`;
+
 // tslint:disable-next-line
 const NotOpenComponent = null;
 
@@ -155,9 +159,9 @@ const getMobileWrapper = (label?: React.ReactChild) => ({
   ...props
 }: InteractiveListWrapperProps & { children?: React.ReactNode }) =>
   props.open ? (
-    <WindowPopup onClick={onClick} label={label}>
+    <DropdownPopup onClose={onClick} label={label}>
       {children}
-    </WindowPopup>
+    </DropdownPopup>
   ) : (
     NotOpenComponent
   );
@@ -365,19 +369,15 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
     const open = openState && !disabled;
     const mobile = screenSize === 'small';
     const wrapper = mobile ? getMobileWrapper(<StyledLabel>{this.props.label}</StyledLabel>) : StandardWrapper;
-    // TODO further discussion needed; imho adds confusion and bugs
-    // const interactiveListData = data.map((listItem, index) =>
-    //   multiple || value.indexOf(index) === -1 ? listItem : undefined,
-    // );
 
     return (
       <InteractiveList
         theme={theme}
         data={data}
-        onClick={this.toggle}
         multiple={multiple}
         open={open}
         onChange={this.handleChange}
+        onClick={mobile ? this.toggle : undefined}
         onBlur={mobile ? undefined : this.hide}
         onKeyDown={mobile ? this.control : undefined}
         indices={value}
@@ -413,6 +413,7 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
     const hasValue = !!value.length;
     const border = getTextFieldBorderType(borderless, !!error, open);
     const items = value.map(i => data[i]);
+    const th = theme || light;
 
     if (value.length > maxSelectedShown) {
       const rest = 1 + value.length - maxSelectedShown;
@@ -430,7 +431,11 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
             </StyledInputRow>
             <InputIcon disabled={disabled} theme={theme} error={error} hasValue={hasValue} />
             <StyledIconContainer>
-              <Icon name={open ? 'KeyboardArrowUp' : 'KeyboardArrowDown'} color={disabled ? ui4 : ui5} size="22px" />
+              <Icon
+                name={open ? 'KeyboardArrowUp' : 'KeyboardArrowDown'}
+                color={disabled ? th.ui4 : th.ui5}
+                size="22px"
+              />
             </StyledIconContainer>
           </StyledInputBox>
         </DropdownSelect>

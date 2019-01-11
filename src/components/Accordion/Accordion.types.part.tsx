@@ -1,6 +1,5 @@
 import { StandardProps } from '../../common';
 import { ModeProviderProps } from '../../hoc/withResponsiveMode';
-import { RefProps } from '../../hoc/withResponsive';
 
 export type AccordionMode = 'card' | 'accordion';
 
@@ -37,7 +36,7 @@ export interface AccordionCardRendererEvent {
   open: boolean;
 }
 
-export interface AccordionProps extends StandardProps, ModeProviderProps<AccordionMode>, RefProps {
+export interface AccordionProps extends StandardProps, ModeProviderProps<AccordionMode> {
   /**
    * The currently selected index - used in the controlled mode.
    * This has precedence over defaultSelectedIndex

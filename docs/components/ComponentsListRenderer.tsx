@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ActionLink, Expander, styled, distance, css, colors, Icon } from '../../src';
+import { ActionLink, Expander, styled, distance, css, colors, Icon, ActionLinkProps } from '../../src';
 
 interface ComponentDefinition {
   hasExamples: boolean;
@@ -35,21 +35,24 @@ interface ComponentsListRendererState {
   cachedPath: string;
 }
 
-interface MenuItemProps {
+interface MenuItemProps extends ActionLinkProps {
   active: boolean;
 }
 
 const NavItems = styled.div``;
 
-const MenuItem = styled<MenuItemProps, 'div'>('div')`
+const MenuItem = styled(ActionLink)`
   position: relative;
+  display: block;
   display: flex;
   align-items: center;
   height: 50px;
   padding: 0 ${distance.medium};
-  ${({ active }) => (active ? ActiveMenuItem : '')}
+  ${({ active }: MenuItemProps) => (active ? ActiveMenuItem : '')}
   border-bottom: 1px solid #eeefee;
   justify-content: space-between;
+  font-weight: 500;
+  color: ${colors.eclipse};
 `;
 
 const ActiveMenuItem = css`
@@ -75,6 +78,7 @@ const ActiveSubMenuItem = css`
 
 const SubMenuItem = MenuItem.extend`
   padding: 0 ${distance.large};
+  font-weight: 400;
   ${({ active }) => (active ? ActiveSubMenuItem : '')}
 `;
 
@@ -90,11 +94,6 @@ interface StyledIconProps {
 const StyledIcon = styled(Icon)`
   transform: rotate(${({ active }: StyledIconProps) => (active ? '0deg' : '180deg')});
   transition: 0.5s ease-in-out;
-`;
-
-const StyledActionLink = styled(ActionLink)`
-  font-weight: ${({ nested }: { nested?: boolean }) => (nested ? 400 : 500)};
-  color: ${colors.eclipse};
 `;
 
 function isMatch(slug: string) {
@@ -155,11 +154,9 @@ export default class ComponentsListRenderer extends React.Component<
           .filter(item => item.visibleName)
           .map(item =>
             item.components.length > 0 ? (
-              <>
-                <MenuItem active={item.slug === active} key={item.slug}>
-                  <MenuWithIcon>
-                    <StyledActionLink onClick={() => this.changeActive(item.slug)}>{item.visibleName}</StyledActionLink>
-                  </MenuWithIcon>
+              <React.Fragment key={item.slug}>
+                <MenuItem active={item.slug === active} onClick={() => this.changeActive(item.slug)}>
+                  <MenuWithIcon>{item.visibleName}</MenuWithIcon>
                   <StyledIcon name="KeyboardArrowDown" active={item.slug !== active} />
                 </MenuItem>
                 <Expander timeout={500} expand={item.slug === active}>
@@ -167,19 +164,20 @@ export default class ComponentsListRenderer extends React.Component<
                     {item.components.map(component => {
                       component.parent = item.slug;
                       return (
-                        <SubMenuItem active={isMatch(`/${item.slug}/${component.slug}`)} key={component.slug}>
-                          <StyledActionLink nested to={`/${item.slug}/${component.slug}`}>
-                            {component.visibleName}
-                          </StyledActionLink>
+                        <SubMenuItem
+                          active={isMatch(`/${item.slug}/${component.slug}`)}
+                          key={component.slug}
+                          to={`/${item.slug}/${component.slug}`}>
+                          {component.visibleName}
                         </SubMenuItem>
                       );
                     })}
                   </SubMenuContainer>
                 </Expander>
-              </>
+              </React.Fragment>
             ) : (
-              <MenuItem active={item.slug === active} key={item.slug}>
-                <StyledActionLink to={`/${item.slug}`}>{item.visibleName}</StyledActionLink>
+              <MenuItem key={item.slug} active={item.slug === active} to={`/${item.slug}`}>
+                {item.visibleName}
               </MenuItem>
             ),
           )}

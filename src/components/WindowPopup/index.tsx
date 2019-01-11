@@ -36,7 +36,7 @@ export class WindowPopup extends React.Component<WindowPopupProps> {
       <Blocker {...props}>
         <StyledMobileDropdownWrapper theme={props.theme} tabIndex={0}>
           <StyledLabel>{label}</StyledLabel>
-          <CloseButton onClick={props.onClick} />
+          <CloseButton onClick={props.onClose} />
           <StyledMobileWrapper>{children}</StyledMobileWrapper>
         </StyledMobileDropdownWrapper>
       </Blocker>

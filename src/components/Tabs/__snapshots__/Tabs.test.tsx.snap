@@ -4,433 +4,346 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
 <Tabs
   defaultIndex={2}
 >
-  <Responsive
-    screenSize="large"
+  <TabControl
+    defaultIndex={2}
+    render={[Function]}
   >
-    <styled.div
-      defaultIndex={2}
-    >
-      <div
-        className="sc-kpOJdX kAzjOl"
-      >
-        <styled.ul>
-          <ul
-            className="sc-dxgOiQ eRUkis"
-          >
-            <styled.li
-              active={false}
-              key="head-0"
-              onClick={[Function]}
-            >
-              <li
-                className="sc-ckVGcZ cNdjVM"
-                onClick={[Function]}
-              >
-                First
-              </li>
-            </styled.li>
-            <styled.li
-              active={false}
-              key="head-1"
-              onClick={[Function]}
-            >
-              <li
-                className="sc-ckVGcZ cNdjVM"
-                onClick={[Function]}
-              >
-                Second
-              </li>
-            </styled.li>
-            <styled.li
-              active={true}
-              key="head-2"
-              onClick={[Function]}
-            >
-              <li
-                className="sc-ckVGcZ hecMVx"
-                onClick={[Function]}
-              >
-                Third
-              </li>
-            </styled.li>
-            <styled.li
-              active={false}
-              key="head-3"
-              onClick={[Function]}
-            >
-              <li
-                className="sc-ckVGcZ cNdjVM"
-                onClick={[Function]}
-              >
-                Last
-              </li>
-            </styled.li>
-          </ul>
-        </styled.ul>
-        <styled.div>
-          <div
-            className="sc-eNQAEJ fAbPPh"
-          >
-            <styled.div
-              active={false}
-              key="item-0"
-            >
-              <div
-                className="sc-jKJlTe bCCWTb"
-              >
-                <TabPage
-                  header="First"
-                >
-                  <div>
-                    First content.
-                  </div>
-                </TabPage>
-              </div>
-            </styled.div>
-            <styled.div
-              active={false}
-              key="item-1"
-            >
-              <div
-                className="sc-jKJlTe bCCWTb"
-              >
-                <TabPage
-                  header="Second"
-                >
-                  <div>
-                    Second content.
-                  </div>
-                </TabPage>
-              </div>
-            </styled.div>
-            <styled.div
-              active={true}
-              key="item-2"
-            >
-              <div
-                className="sc-jKJlTe jkAcqB"
-              >
-                <TabPage
-                  header="Third"
-                >
-                  <div>
-                    Third content.
-                  </div>
-                </TabPage>
-              </div>
-            </styled.div>
-            <styled.div
-              active={false}
-              key="item-3"
-            >
-              <div
-                className="sc-jKJlTe bCCWTb"
-              >
-                <TabPage
-                  header="Last"
-                >
-                  <div>
-                    Final content.
-                  </div>
-                </TabPage>
-              </div>
-            </styled.div>
-          </div>
-        </styled.div>
-      </div>
-    </styled.div>
-  </Responsive>
-  <Responsive
-    screenSize="smallAndMedium"
-  >
-    <SlideDownTabs
-      data={
+    <Responsive
+      items={
         Array [
           Object {
-            "content": "First",
-            "key": "0",
-            "type": "item",
+            "active": false,
+            "element": <TabPage
+              header="First"
+            >
+              First content.
+            </TabPage>,
+            "onSelect": [Function],
           },
           Object {
-            "content": "Second",
-            "key": "1",
-            "type": "item",
+            "active": false,
+            "element": <TabPage
+              header="Second"
+            >
+              Second content.
+            </TabPage>,
+            "onSelect": [Function],
           },
           Object {
-            "content": "Third",
-            "key": "2",
-            "type": "item",
+            "active": true,
+            "element": <TabPage
+              header="Third"
+            >
+              Third content.
+            </TabPage>,
+            "onSelect": [Function],
           },
           Object {
-            "content": "Last",
-            "key": "3",
-            "type": "item",
+            "active": false,
+            "element": <TabPage
+              header="Last"
+            >
+              Final content.
+            </TabPage>,
+            "onSelect": [Function],
           },
         ]
       }
-      onChange={[Function]}
-      selectedIndex={2}
     >
-      <styled.div
-        open={false}
+      <ModeProvider
+        dimensions={
+          Object {
+            "angle": 0,
+            "height": 768,
+            "width": 1024,
+          }
+        }
+        innerRef={[Function]}
+        items={
+          Array [
+            Object {
+              "active": false,
+              "element": <TabPage
+                header="First"
+              >
+                First content.
+              </TabPage>,
+              "onSelect": [Function],
+            },
+            Object {
+              "active": false,
+              "element": <TabPage
+                header="Second"
+              >
+                Second content.
+              </TabPage>,
+              "onSelect": [Function],
+            },
+            Object {
+              "active": true,
+              "element": <TabPage
+                header="Third"
+              >
+                Third content.
+              </TabPage>,
+              "onSelect": [Function],
+            },
+            Object {
+              "active": false,
+              "element": <TabPage
+                header="Last"
+              >
+                Final content.
+              </TabPage>,
+              "onSelect": [Function],
+            },
+          ]
+        }
       >
-        <div
-          className="sc-kAzzGY jmKrQq"
-          open={false}
+        <TabInt
+          dimensions={
+            Object {
+              "angle": 0,
+              "height": 768,
+              "width": 1024,
+            }
+          }
+          innerRef={[Function]}
+          items={
+            Array [
+              Object {
+                "active": false,
+                "element": <TabPage
+                  header="First"
+                >
+                  First content.
+                </TabPage>,
+                "onSelect": [Function],
+              },
+              Object {
+                "active": false,
+                "element": <TabPage
+                  header="Second"
+                >
+                  Second content.
+                </TabPage>,
+                "onSelect": [Function],
+              },
+              Object {
+                "active": true,
+                "element": <TabPage
+                  header="Third"
+                >
+                  Third content.
+                </TabPage>,
+                "onSelect": [Function],
+              },
+              Object {
+                "active": false,
+                "element": <TabPage
+                  header="Last"
+                >
+                  Final content.
+                </TabPage>,
+                "onSelect": [Function],
+              },
+            ]
+          }
+          mode="tab"
         >
-          <styled.div
-            onMouseDown={[Function]}
-          >
-            <div
-              className="sc-kGXeez HgUaa"
-              onMouseDown={[Function]}
-            >
-              <styled.span>
-                <span
-                  className="sc-kgoBCf fMRBuh"
-                >
-                  Third
-                </span>
-              </styled.span>
-              <styled.div>
-                <div
-                  className="sc-chPdSV iiXUuK"
-                >
-                  <Icon
-                    color="rgba(0,139,208,1)"
-                    name="KeyboardArrowDown"
-                    size="24px"
-                  >
-                    <styled.i>
-                      <i
-                        className="sc-bwzfXH eBXlKd"
-                      >
-                        <KeyboardArrowDown
-                          height="24px"
-                          style={
-                            Object {
-                              "fill": "rgba(0,139,208,1)",
-                              "stroke": undefined,
-                            }
-                          }
-                          viewBox="0 0 24 24"
-                          width="24px"
-                        >
-                          <svg
-                            height="24px"
-                            style={
-                              Object {
-                                "fill": "rgba(0,139,208,1)",
-                                "stroke": undefined,
-                              }
-                            }
-                            viewBox="0 0 24 24"
-                            width="24px"
-                          >
-                            <path
-                              d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"
-                            />
-                          </svg>
-                        </KeyboardArrowDown>
-                      </i>
-                    </styled.i>
-                  </Icon>
-                </div>
-              </styled.div>
-            </div>
-          </styled.div>
-          <InteractiveList
-            autoFocus={true}
-            customWrapper={[Function]}
-            data={
-              Array [
-                Object {
-                  "content": "First",
-                  "key": "0",
-                  "type": "item",
-                },
-                Object {
-                  "content": "Second",
-                  "key": "1",
-                  "type": "item",
-                },
-                undefined,
-                Object {
-                  "content": "Last",
-                  "key": "3",
-                  "type": "item",
-                },
-              ]
-            }
-            eventTypes={
-              Array [
-                "mousedown",
-                "touchstart",
-              ]
-            }
-            excludeScrollbar={false}
-            onBlur={[Function]}
-            onChange={[Function]}
-            open={false}
-            outsideClickIgnoreClass="ignore-react-onclickoutside"
-            preventDefault={false}
-            stopPropagation={false}
-          >
-            <InteractiveListInt
-              autoFocus={true}
-              customWrapper={[Function]}
+          <div>
+            <TabPanel
               data={
                 Array [
                   Object {
-                    "content": "First",
-                    "key": "0",
-                    "type": "item",
+                    "active": false,
+                    "element": <TabPage
+                      header="First"
+                    >
+                      First content.
+                    </TabPage>,
+                    "onSelect": [Function],
                   },
                   Object {
-                    "content": "Second",
-                    "key": "1",
-                    "type": "item",
+                    "active": false,
+                    "element": <TabPage
+                      header="Second"
+                    >
+                      Second content.
+                    </TabPage>,
+                    "onSelect": [Function],
                   },
-                  undefined,
                   Object {
-                    "content": "Last",
-                    "key": "3",
-                    "type": "item",
+                    "active": true,
+                    "element": <TabPage
+                      header="Third"
+                    >
+                      Third content.
+                    </TabPage>,
+                    "onSelect": [Function],
+                  },
+                  Object {
+                    "active": false,
+                    "element": <TabPage
+                      header="Last"
+                    >
+                      Final content.
+                    </TabPage>,
+                    "onSelect": [Function],
                   },
                 ]
               }
-              disableOnClickOutside={[Function]}
-              enableOnClickOutside={[Function]}
-              eventTypes={
-                Array [
-                  "mousedown",
-                  "touchstart",
-                ]
+              dimensions={
+                Object {
+                  "angle": 0,
+                  "height": 768,
+                  "width": 1024,
+                }
               }
-              onBlur={[Function]}
-              onChange={[Function]}
-              open={false}
-              outsideClickIgnoreClass="ignore-react-onclickoutside"
-              preventDefault={false}
-              stopPropagation={false}
             >
               <styled.div
-                autoFocus={true}
-                disableOnClickOutside={[Function]}
-                enableOnClickOutside={[Function]}
-                eventTypes={
-                  Array [
-                    "mousedown",
-                    "touchstart",
-                  ]
+                dimensions={
+                  Object {
+                    "angle": 0,
+                    "height": 768,
+                    "width": 1024,
+                  }
                 }
-                innerRef={[Function]}
-                onBlur={[Function]}
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onMouseOver={[Function]}
-                outsideClickIgnoreClass="ignore-react-onclickoutside"
-                preventDefault={false}
-                stopPropagation={false}
               >
                 <div
-                  autoFocus={true}
-                  className="sc-htoDjs fJTDDB"
-                  onBlur={[Function]}
-                  onKeyDown={[Function]}
-                  onMouseDown={[Function]}
-                  onMouseOver={[Function]}
+                  className="sc-bdVaJa bDWFJH"
                 >
-                  <CustomWrapper
-                    border={1}
-                    direction={0}
-                    flyout={true}
-                    open={false}
-                  >
+                  <styled.ul>
+                    <ul
+                      className="sc-bwzfXH kqITuJ"
+                    >
+                      <styled.li
+                        active={false}
+                        key="head-0"
+                        onClick={[Function]}
+                      >
+                        <li
+                          className="sc-bxivhb dswZLu"
+                          onClick={[Function]}
+                        >
+                          First
+                        </li>
+                      </styled.li>
+                      <styled.li
+                        active={false}
+                        key="head-1"
+                        onClick={[Function]}
+                      >
+                        <li
+                          className="sc-bxivhb dswZLu"
+                          onClick={[Function]}
+                        >
+                          Second
+                        </li>
+                      </styled.li>
+                      <styled.li
+                        active={true}
+                        key="head-2"
+                        onClick={[Function]}
+                      >
+                        <li
+                          className="sc-bxivhb fCMGKn"
+                          onClick={[Function]}
+                        >
+                          Third
+                        </li>
+                      </styled.li>
+                      <styled.li
+                        active={false}
+                        key="head-3"
+                        onClick={[Function]}
+                      >
+                        <li
+                          className="sc-bxivhb dswZLu"
+                          onClick={[Function]}
+                        >
+                          Last
+                        </li>
+                      </styled.li>
+                    </ul>
+                  </styled.ul>
+                  <styled.div>
                     <div
-                      border={1}
-                      direction={0}
-                      flyout={true}
-                      open={false}
-                    />
-                  </CustomWrapper>
+                      className="sc-htpNat KtFsv"
+                    >
+                      <styled.div
+                        active={false}
+                        key="item-0"
+                      >
+                        <div
+                          className="sc-ifAKCX jYugZ"
+                        >
+                          <TabPage
+                            header="First"
+                          >
+                            <div>
+                              First content.
+                            </div>
+                          </TabPage>
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        active={false}
+                        key="item-1"
+                      >
+                        <div
+                          className="sc-ifAKCX jYugZ"
+                        >
+                          <TabPage
+                            header="Second"
+                          >
+                            <div>
+                              Second content.
+                            </div>
+                          </TabPage>
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        active={true}
+                        key="item-2"
+                      >
+                        <div
+                          className="sc-ifAKCX cpuQTc"
+                        >
+                          <TabPage
+                            header="Third"
+                          >
+                            <div>
+                              Third content.
+                            </div>
+                          </TabPage>
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        active={false}
+                        key="item-3"
+                      >
+                        <div
+                          className="sc-ifAKCX jYugZ"
+                        >
+                          <TabPage
+                            header="Last"
+                          >
+                            <div>
+                              Final content.
+                            </div>
+                          </TabPage>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
                 </div>
               </styled.div>
-            </InteractiveListInt>
-          </InteractiveList>
-        </div>
-      </styled.div>
-    </SlideDownTabs>
-    <styled.div>
-      <div
-        className="sc-eNQAEJ fAbPPh"
-      >
-        <styled.div
-          active={false}
-          key="item-0"
-        >
-          <div
-            className="sc-jKJlTe bCCWTb"
-          >
-            <TabPage
-              header="First"
-            >
-              <div>
-                First content.
-              </div>
-            </TabPage>
+            </TabPanel>
           </div>
-        </styled.div>
-        <styled.div
-          active={false}
-          key="item-1"
-        >
-          <div
-            className="sc-jKJlTe bCCWTb"
-          >
-            <TabPage
-              header="Second"
-            >
-              <div>
-                Second content.
-              </div>
-            </TabPage>
-          </div>
-        </styled.div>
-        <styled.div
-          active={true}
-          key="item-2"
-        >
-          <div
-            className="sc-jKJlTe jkAcqB"
-          >
-            <TabPage
-              header="Third"
-            >
-              <div>
-                Third content.
-              </div>
-            </TabPage>
-          </div>
-        </styled.div>
-        <styled.div
-          active={false}
-          key="item-3"
-        >
-          <div
-            className="sc-jKJlTe bCCWTb"
-          >
-            <TabPage
-              header="Last"
-            >
-              <div>
-                Final content.
-              </div>
-            </TabPage>
-          </div>
-        </styled.div>
-      </div>
-    </styled.div>
-  </Responsive>
+        </TabInt>
+      </ModeProvider>
+    </Responsive>
+  </TabControl>
 </Tabs>
 `;

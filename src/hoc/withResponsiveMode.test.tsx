@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { mount, ElementClass } from 'enzyme';
+import { mount } from 'enzyme';
 import { withResponsiveMode, ModeProviderProps } from './withResponsiveMode';
 import { RefProps } from './withResponsive';
 

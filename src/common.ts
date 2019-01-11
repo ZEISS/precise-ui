@@ -252,10 +252,6 @@ export interface PreciseFullTheme extends PreciseThemeColors {
    */
   inputError: string;
   /**
-   * Color of an input info.
-   */
-  inputInfo: string;
-  /**
    * Colors to be used cyclically.
    */
   colorCycle: Array<string>;
@@ -296,14 +292,6 @@ export interface PreciseFullTheme extends PreciseThemeColors {
    */
   badgeBackground: string;
   /**
-   * The background of the Toggle.
-   */
-  toggleBackground: string;
-  /**
-   * The background of the checked Toggle.
-   */
-  toggleCheckedBackground: string;
-  /**
    * The background of the Toggle Head.
    */
   toggleHeadBackground: string;
@@ -323,10 +311,6 @@ export interface PreciseFullTheme extends PreciseThemeColors {
    * Font color of disabled action link.
    */
   actionLinkDisabledText: string;
-  /**
-   * Background color of active indicator knob.
-   */
-  indicatorKnobActiveBackground: string;
   /**
    * Color of not specified notification,
    */

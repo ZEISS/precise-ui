@@ -18,6 +18,8 @@ module.exports = {
     'ic_border_clear_24px.svg',
     'ic_check_24px.svg',
     'ic_check_box_24px.svg',
+    'ic_shield_check_24px.svg',
+    'ic_shield_key_24px.svg',
     'ic_check_box_outline_blank_24px.svg',
     'ic_check_circle_24px.svg',
     'ic_confirmation_number_24px.svg',

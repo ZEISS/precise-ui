@@ -130,7 +130,7 @@ const SliderBar = styled<SliderBarProps>(({ orientation: _0 = 'vertical', ...res
         ? props.theme.ui3
         : props.active
         ? transparentize(ocean, 0.25)
-        : transparentize(props.theme.toggleBackground, 0.25),
+        : transparentize(props.theme.ui4, 0.25),
     )};
     transition: background ${transitionDuration} ${transitionEase};
   }
