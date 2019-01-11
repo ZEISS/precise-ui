@@ -93,8 +93,8 @@ export function withResponsiveMode<Modes>(getMode: GetModeType<Modes>) {
       render() {
         const { mode } = this.state;
         const props = {
-          ...(mode ? { mode } : {}),
           ...this.props,
+          mode,
         } as any;
         return <Component {...props} />;
       }
