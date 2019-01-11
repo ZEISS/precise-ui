@@ -6,6 +6,7 @@
   "typings": "dist/es6",
   "scripts": {
     "start": "styleguidist server",
+    "serve": "pushstate-server styleguide 6060",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --project tsconfig.json",
     "test:unit": "cross-env NODE_ENV=test jest src",
     "test:watch": "npm run test:unit -- --watch",
