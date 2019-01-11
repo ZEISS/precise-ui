@@ -159,7 +159,7 @@ const getMobileWrapper = (label?: React.ReactChild) => ({
   ...props
 }: InteractiveListWrapperProps & { children?: React.ReactNode }) =>
   props.open ? (
-    <DropdownPopup onClick={onClick} label={label}>
+    <DropdownPopup onClose={onClick} label={label}>
       {children}
     </DropdownPopup>
   ) : (
@@ -369,19 +369,15 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
     const open = openState && !disabled;
     const mobile = screenSize === 'small';
     const wrapper = mobile ? getMobileWrapper(<StyledLabel>{this.props.label}</StyledLabel>) : StandardWrapper;
-    // TODO further discussion needed; imho adds confusion and bugs
-    // const interactiveListData = data.map((listItem, index) =>
-    //   multiple || value.indexOf(index) === -1 ? listItem : undefined,
-    // );
 
     return (
       <InteractiveList
         theme={theme}
         data={data}
-        onClick={this.toggle}
         multiple={multiple}
         open={open}
         onChange={this.handleChange}
+        onClick={mobile ? this.toggle : undefined}
         onBlur={mobile ? undefined : this.hide}
         onKeyDown={mobile ? this.control : undefined}
         indices={value}

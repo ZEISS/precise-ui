@@ -7,9 +7,9 @@ import { dark } from '../../colors';
 
 export interface BlockerProps extends StandardProps {
   /**
-   * Event emitted when clicked on the background.
+   * Event emitted when the user wants to remove the blocker.
    */
-  onClick?(): void;
+  onClose?(e: React.SyntheticEvent<HTMLElement>): void;
 }
 
 const FixedContainer = styled.div`
@@ -96,11 +96,11 @@ export class Blocker extends React.Component<BlockerProps> {
     }
   };
 
-  private notifyClose() {
-    const { onClick } = this.props;
+  private notifyClose(e: React.SyntheticEvent<HTMLElement>) {
+    const { onClose } = this.props;
 
-    if (typeof onClick === 'function') {
-      onClick();
+    if (typeof onClose === 'function') {
+      onClose(e);
     }
   }
 
@@ -108,18 +108,18 @@ export class Blocker extends React.Component<BlockerProps> {
     e.stopPropagation();
 
     if (e.target === e.currentTarget) {
-      this.notifyClose();
+      this.notifyClose(e);
     }
   };
 
   private onKeyPress = (e: React.KeyboardEvent<HTMLElement>) => {
     if (e.keyCode === KeyCodes.escape) {
-      this.notifyClose();
+      this.notifyClose(e);
     }
   };
 
   render() {
-    const { children, onClick, ...props } = this.props;
+    const { children, onClose, ...props } = this.props;
 
     return (
       <>
