@@ -103,7 +103,7 @@ export interface InteractiveListProps extends StandardProps {
   /**
    * Event transported from the wrapper in case of a click somewhere inside.
    */
-  onClick?(): void;
+  onClick?(e: React.MouseEvent<HTMLElement>): void;
 }
 
 export interface InteractiveListState {
@@ -130,5 +130,5 @@ export interface InteractiveListWrapperProps {
   flyout: boolean;
   border: InteractiveListBorderType;
   direction: InteractiveListDirection;
-  onClick?(): void;
+  onClick?(e: React.MouseEvent<HTMLElement>): void;
 }

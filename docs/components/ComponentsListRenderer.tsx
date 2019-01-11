@@ -154,8 +154,8 @@ export default class ComponentsListRenderer extends React.Component<
           .filter(item => item.visibleName)
           .map(item =>
             item.components.length > 0 ? (
-              <>
-                <MenuItem active={item.slug === active} key={item.slug} onClick={() => this.changeActive(item.slug)}>
+              <React.Fragment key={item.slug}>
+                <MenuItem active={item.slug === active} onClick={() => this.changeActive(item.slug)}>
                   <MenuWithIcon>{item.visibleName}</MenuWithIcon>
                   <StyledIcon name="KeyboardArrowDown" active={item.slug !== active} />
                 </MenuItem>
@@ -174,9 +174,9 @@ export default class ComponentsListRenderer extends React.Component<
                     })}
                   </SubMenuContainer>
                 </Expander>
-              </>
+              </React.Fragment>
             ) : (
-              <MenuItem active={item.slug === active} key={item.slug} to={`/${item.slug}`}>
+              <MenuItem key={item.slug} active={item.slug === active} to={`/${item.slug}`}>
                 {item.visibleName}
               </MenuItem>
             ),

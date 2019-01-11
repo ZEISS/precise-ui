@@ -5,7 +5,6 @@ import { Headline } from '../Headline';
 import { TextStyles } from '../../textStyles';
 import { white, cyan, dark, grey6 } from '../../colors';
 import { remCalc } from '../../utils/remCalc';
-import { KeyCodes } from '../../utils/keyCodes';
 import { Blocker } from '../Blocker';
 import { CloseButton } from '../CloseButton';
 import { distance } from '../../distance';
@@ -130,7 +129,7 @@ export class Modal extends React.PureComponent<ModalProps> {
 
     return (
       open && (
-        <Blocker onClick={this.closeBackground}>
+        <Blocker onClose={this.closeBackground}>
           <StyledModal tabIndex={0} {...rest}>
             <ModalContent minHeight={minHeight}>
               {children}

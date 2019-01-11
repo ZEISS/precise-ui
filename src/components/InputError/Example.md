@@ -31,9 +31,9 @@ const MySlider = withValidator(withValidator(Slider, ({ value }) => value < 10 &
 This way we can ensure that certain conditions are always met.
 
 ```jsx
-const { Dropdown, withValidator } = require('precise-ui');
+const { DropdownField, withValidator } = require('precise-ui');
 
-const TwoElementDropdown = withValidator(Dropdown, ({ value }) => value.length !== 2 && 'You need to choose two');
+const TwoElementDropdown = withValidator(DropdownField, ({ value }) => value.length !== 2 && 'You need to choose two');
 
 <TwoElementDropdown multiple data={[ 'iOS', 'Android', 'FireOS', 'Windows Phone', 'Firefox OS' ]} />
 ```
