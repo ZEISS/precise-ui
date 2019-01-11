@@ -21,6 +21,8 @@ A complete opinionated React component library with minimal dependencies powered
 
 Precise UI is released using the MIT license. For more information see the [license file](LICENSE).
 
+We are using some icons from [Material UI Icons](https://github.com/mui-org/material-ui/tree/master/packages/material-ui-icons). Their code and design is covered by the respective license of [Material UI](https://github.com/mui-org/material-ui) (MIT).
+
 ## Issues
 
 When creating a new Issue, please use one of the provided templates:
