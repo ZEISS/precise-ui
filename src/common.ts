@@ -157,6 +157,10 @@ export type PreciseThemeColors = {
    */
   ui6: string;
   /**
+   * Theme color UI/.
+   */
+  ui7: string;
+  /**
    * Theme color TEXT0.
    */
   text0: string;
@@ -387,6 +391,10 @@ export interface PreciseFullTheme extends PreciseThemeColors {
    * Specific AccordionCard theme settings.
    */
   accordionCard: AccordionCardStyling;
+  /**
+   * Support color
+   */
+  support1: string;
 }
 
 export type PreciseTheme = { [T in keyof PreciseFullTheme]?: Partial<PreciseFullTheme[T]> };

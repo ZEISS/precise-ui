@@ -96,6 +96,7 @@ export const light: PreciseFullTheme = {
   ui4: colors.lighterGray,
   ui5: colors.tuna,
   ui6: colors.transparent,
+  ui7: colors.grey4,
   text0: colors.cyan,
   text1: colors.eclipse,
   text2: colors.charcoal,
@@ -150,6 +151,7 @@ export const light: PreciseFullTheme = {
   notificationTextFontSize: remCalc('16px'),
   notificationTextLineHeight: `22px`,
   notificationIconMarginRight: distance.medium,
+  support1: colors.midnight,
 };
 
 // TODO: theme needs to be reconsidered and probably removed

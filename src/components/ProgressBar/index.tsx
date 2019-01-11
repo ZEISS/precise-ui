@@ -102,7 +102,7 @@ const ProgressStop = stopCreator`
   position: absolute;
   width: ${distance.small};
   height: ${distance.small};
-  background: ${({ active }) => (active ? midnight : grey4)};
+  background: ${themed(props => (props.active ? props.theme.support1 : props.theme.ui7))};
   top: 50%;
   transform: translateY(-50%);
 `;
