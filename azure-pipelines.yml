@@ -18,11 +18,5 @@ steps:
     npm install
     npm run test
     npm run build:demo
-    docker build -f Dockerfile -t $(dockerId)/$(imageName) .
+    docker build -f Dockerfile -t $(imageName) .
   displayName: 'Build Kitchensink'
-
-- script: |
-    docker build -t $(dockerId).azurecr.io/$(imageName) .
-    docker login -u $(dockerId) -p $(pswd) $(dockerId).azurecr.io
-    docker push $(dockerId).azurecr.io/$(imageName)
-  displayName: 'Deploy Kitchensink'
