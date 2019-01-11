@@ -1,6 +1,4 @@
-![Precise UI Logo](docs/assets/precise-logo.svg)
-
-# Precise UI
+# <img src="docs/assets/precise-logo.svg" width="240">
 
 [![Build Status](https://travis-ci.org/ZEISS/precise-ui.svg?branch=master)](https://travis-ci.org/ZEISS/precise-ui)
 [![NPM](https://img.shields.io/npm/v/precise-ui.svg)](https://www.npmjs.com/package/precise-ui)
