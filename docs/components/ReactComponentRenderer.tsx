@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Route } from 'react-router-dom';
-import { Tabs, TabPage, styled, Headline, distance, TabsChangeEvent } from '../../src';
+import { Tabs, TabPage, styled, Headline, distance, TabChangeEvent } from '../../src';
 // @ts-ignore
 import Pathline from 'react-styleguidist/lib/rsg-components/Pathline';
 
@@ -45,7 +44,7 @@ class SingleReactComponent extends React.Component<ReactComponentRendererProps, 
     };
   }
 
-  private changeTab = (e: TabsChangeEvent) => {
+  private changeTab = (e: TabChangeEvent) => {
     localStorage.setItem('selectedIndex', e.selectedIndex.toString());
 
     this.setState({
