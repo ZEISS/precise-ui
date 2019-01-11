@@ -151,57 +151,48 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
           }
           mode="tab"
         >
-          <TabPanel
-            data={
-              Array [
-                Object {
-                  "active": false,
-                  "element": <TabPage
-                    header="First"
-                  >
-                    First content.
-                  </TabPage>,
-                  "onSelect": [Function],
-                },
-                Object {
-                  "active": false,
-                  "element": <TabPage
-                    header="Second"
-                  >
-                    Second content.
-                  </TabPage>,
-                  "onSelect": [Function],
-                },
-                Object {
-                  "active": true,
-                  "element": <TabPage
-                    header="Third"
-                  >
-                    Third content.
-                  </TabPage>,
-                  "onSelect": [Function],
-                },
-                Object {
-                  "active": false,
-                  "element": <TabPage
-                    header="Last"
-                  >
-                    Final content.
-                  </TabPage>,
-                  "onSelect": [Function],
-                },
-              ]
-            }
-            dimensions={
-              Object {
-                "angle": 0,
-                "height": 768,
-                "width": 1024,
+          <div>
+            <TabPanel
+              data={
+                Array [
+                  Object {
+                    "active": false,
+                    "element": <TabPage
+                      header="First"
+                    >
+                      First content.
+                    </TabPage>,
+                    "onSelect": [Function],
+                  },
+                  Object {
+                    "active": false,
+                    "element": <TabPage
+                      header="Second"
+                    >
+                      Second content.
+                    </TabPage>,
+                    "onSelect": [Function],
+                  },
+                  Object {
+                    "active": true,
+                    "element": <TabPage
+                      header="Third"
+                    >
+                      Third content.
+                    </TabPage>,
+                    "onSelect": [Function],
+                  },
+                  Object {
+                    "active": false,
+                    "element": <TabPage
+                      header="Last"
+                    >
+                      Final content.
+                    </TabPage>,
+                    "onSelect": [Function],
+                  },
+                ]
               }
-            }
-            innerRef={[Function]}
-          >
-            <styled.div
               dimensions={
                 Object {
                   "angle": 0,
@@ -209,138 +200,147 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                   "width": 1024,
                 }
               }
-              innerRef={[Function]}
             >
-              <div
-                className="sc-bdVaJa bDWFJH"
+              <styled.div
+                dimensions={
+                  Object {
+                    "angle": 0,
+                    "height": 768,
+                    "width": 1024,
+                  }
+                }
               >
-                <styled.ul>
-                  <ul
-                    className="sc-bwzfXH kqITuJ"
-                  >
-                    <styled.li
-                      active={false}
-                      key="head-0"
-                      onClick={[Function]}
+                <div
+                  className="sc-bdVaJa bDWFJH"
+                >
+                  <styled.ul>
+                    <ul
+                      className="sc-bwzfXH kqITuJ"
                     >
-                      <li
-                        className="sc-bxivhb dswZLu"
+                      <styled.li
+                        active={false}
+                        key="head-0"
                         onClick={[Function]}
                       >
-                        First
-                      </li>
-                    </styled.li>
-                    <styled.li
-                      active={false}
-                      key="head-1"
-                      onClick={[Function]}
-                    >
-                      <li
-                        className="sc-bxivhb dswZLu"
+                        <li
+                          className="sc-bxivhb dswZLu"
+                          onClick={[Function]}
+                        >
+                          First
+                        </li>
+                      </styled.li>
+                      <styled.li
+                        active={false}
+                        key="head-1"
                         onClick={[Function]}
                       >
-                        Second
-                      </li>
-                    </styled.li>
-                    <styled.li
-                      active={true}
-                      key="head-2"
-                      onClick={[Function]}
-                    >
-                      <li
-                        className="sc-bxivhb fCMGKn"
+                        <li
+                          className="sc-bxivhb dswZLu"
+                          onClick={[Function]}
+                        >
+                          Second
+                        </li>
+                      </styled.li>
+                      <styled.li
+                        active={true}
+                        key="head-2"
                         onClick={[Function]}
                       >
-                        Third
-                      </li>
-                    </styled.li>
-                    <styled.li
-                      active={false}
-                      key="head-3"
-                      onClick={[Function]}
-                    >
-                      <li
-                        className="sc-bxivhb dswZLu"
+                        <li
+                          className="sc-bxivhb fCMGKn"
+                          onClick={[Function]}
+                        >
+                          Third
+                        </li>
+                      </styled.li>
+                      <styled.li
+                        active={false}
+                        key="head-3"
                         onClick={[Function]}
                       >
-                        Last
-                      </li>
-                    </styled.li>
-                  </ul>
-                </styled.ul>
-                <styled.div>
-                  <div
-                    className="sc-htpNat KtFsv"
-                  >
-                    <styled.div
-                      active={false}
-                      key="item-0"
-                    >
-                      <div
-                        className="sc-ifAKCX jYugZ"
-                      >
-                        <TabPage
-                          header="First"
+                        <li
+                          className="sc-bxivhb dswZLu"
+                          onClick={[Function]}
                         >
-                          <div>
-                            First content.
-                          </div>
-                        </TabPage>
-                      </div>
-                    </styled.div>
-                    <styled.div
-                      active={false}
-                      key="item-1"
+                          Last
+                        </li>
+                      </styled.li>
+                    </ul>
+                  </styled.ul>
+                  <styled.div>
+                    <div
+                      className="sc-htpNat KtFsv"
                     >
-                      <div
-                        className="sc-ifAKCX jYugZ"
+                      <styled.div
+                        active={false}
+                        key="item-0"
                       >
-                        <TabPage
-                          header="Second"
+                        <div
+                          className="sc-ifAKCX jYugZ"
                         >
-                          <div>
-                            Second content.
-                          </div>
-                        </TabPage>
-                      </div>
-                    </styled.div>
-                    <styled.div
-                      active={true}
-                      key="item-2"
-                    >
-                      <div
-                        className="sc-ifAKCX cpuQTc"
+                          <TabPage
+                            header="First"
+                          >
+                            <div>
+                              First content.
+                            </div>
+                          </TabPage>
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        active={false}
+                        key="item-1"
                       >
-                        <TabPage
-                          header="Third"
+                        <div
+                          className="sc-ifAKCX jYugZ"
                         >
-                          <div>
-                            Third content.
-                          </div>
-                        </TabPage>
-                      </div>
-                    </styled.div>
-                    <styled.div
-                      active={false}
-                      key="item-3"
-                    >
-                      <div
-                        className="sc-ifAKCX jYugZ"
+                          <TabPage
+                            header="Second"
+                          >
+                            <div>
+                              Second content.
+                            </div>
+                          </TabPage>
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        active={true}
+                        key="item-2"
                       >
-                        <TabPage
-                          header="Last"
+                        <div
+                          className="sc-ifAKCX cpuQTc"
                         >
-                          <div>
-                            Final content.
-                          </div>
-                        </TabPage>
-                      </div>
-                    </styled.div>
-                  </div>
-                </styled.div>
-              </div>
-            </styled.div>
-          </TabPanel>
+                          <TabPage
+                            header="Third"
+                          >
+                            <div>
+                              Third content.
+                            </div>
+                          </TabPage>
+                        </div>
+                      </styled.div>
+                      <styled.div
+                        active={false}
+                        key="item-3"
+                      >
+                        <div
+                          className="sc-ifAKCX jYugZ"
+                        >
+                          <TabPage
+                            header="Last"
+                          >
+                            <div>
+                              Final content.
+                            </div>
+                          </TabPage>
+                        </div>
+                      </styled.div>
+                    </div>
+                  </styled.div>
+                </div>
+              </styled.div>
+            </TabPanel>
+          </div>
         </TabInt>
       </ModeProvider>
     </Responsive>
