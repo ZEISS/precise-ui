@@ -304,6 +304,10 @@ export interface PreciseFullTheme extends PreciseThemeColors {
    */
   actionLinkHoverBackground: string;
   /**
+   * Background color of focused action link.
+   */
+  actionLinkFocusBackground: string;
+  /**
    * Font color of disabled action link.
    */
   actionLinkDisabledText: string;

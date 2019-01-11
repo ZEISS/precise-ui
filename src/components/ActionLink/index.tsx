@@ -22,6 +22,10 @@ const PseudoLinkStyle = css`
   &:hover {
     color: ${themed(props => props.theme.actionLinkHoverBackground)};
   }
+  &:focus {
+    color: ${themed(props => props.theme.actionLinkFocusBackground)};
+    outline: none;
+  }
 `;
 
 const StyledActionLink = styled(Anchor)`
