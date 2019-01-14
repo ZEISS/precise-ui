@@ -96,6 +96,7 @@ export const light: PreciseFullTheme = {
   ui4: colors.lighterGray,
   ui5: colors.tuna,
   ui6: colors.transparent,
+  ui7: colors.midnight,
   text0: colors.cyan,
   text1: colors.eclipse,
   text2: colors.charcoal,
