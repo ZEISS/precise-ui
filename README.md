@@ -26,8 +26,6 @@ npm i precise-ui
 
 or alternatively, using yarn
 
-## License
-
 ```sh
 yarn add precise-ui
 ```
