@@ -31,7 +31,32 @@ module.exports = {
   usageMode: 'expand',
   sections: [
     {
-      name: 'Basics',
+      name: 'Getting Started',
+      sectionDepth: 0,
+      content: path.resolve(__dirname, './docs/introduction/index.md'),
+      sections: [
+        {
+          name: 'Installation',
+          content: path.resolve(__dirname, 'docs/introduction/installation.md'),
+        },
+        {
+          name: 'Usage',
+          content: path.resolve(__dirname, 'docs/introduction/usage.md'),
+        },
+        {
+          name: 'Support',
+          content: path.resolve(__dirname, 'docs/introduction/support.md'),
+        },
+      ],
+    },
+    {
+      name: 'Components',
+      sectionDepth: 1,
+      components: path.resolve(__dirname, 'src/components/**/*.tsx'),
+    },
+    {
+      name: 'Styleguide',
+      sectionDepth: 1,
       content: path.resolve(__dirname, './docs/basics/index.md'),
       sections: [
         {
@@ -39,20 +64,14 @@ module.exports = {
           content: path.resolve(__dirname, 'docs/basics/colors.md'),
         },
         {
-          name: 'Types',
-          content: path.resolve(__dirname, 'docs/basics/types.md'),
-        },
-        {
           name: 'Pattern Library',
           content: path.resolve(__dirname, 'docs/basics/pattern.md'),
         },
+        {
+          name: 'Types',
+          content: path.resolve(__dirname, 'docs/basics/types.md'),
+        },
       ],
-      sectionDepth: 0,
-    },
-    {
-      name: 'Components',
-      sectionDepth: 1,
-      components: path.resolve(__dirname, 'src/components/**/*.tsx'),
     },
   ],
   template: {

@@ -105,7 +105,7 @@ const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ title, version
                 )}
                 <ContentColumn>
                   <Switch>
-                    <Redirect exact from="/" to="/basics" />
+                    <Redirect exact from="/" to="/getting-started" />
                     <Route render={() => children} />
                   </Switch>
                 </ContentColumn>
@@ -122,7 +122,7 @@ const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ title, version
                 </HeadLine>
                 <MobileContent>
                   <Switch>
-                    <Redirect exact from="/" to="/basics" />
+                    <Redirect exact from="/" to="/getting-started" />
                     <Route render={() => children} />
                   </Switch>
                 </MobileContent>
