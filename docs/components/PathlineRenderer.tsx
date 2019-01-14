@@ -6,7 +6,7 @@ interface PathlineRendererProps {
 }
 
 const StyledIconLink = styled(IconLink)`
-  font-size: 0.8em;
+  display: flex;
   font-family: Consolas, 'Liberation Mono', Menlo, monospace;
 `;
 
