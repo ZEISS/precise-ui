@@ -1,6 +1,7 @@
 import { remCalc } from './utils/remCalc';
 
 export const distancePx = {
+  xxsmall: 2,
   xsmall: 4,
   small: 8,
   medium: 16,

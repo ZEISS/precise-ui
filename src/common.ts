@@ -157,6 +157,10 @@ export type PreciseThemeColors = {
    */
   ui6: string;
   /**
+   * Theme color UI6.
+   */
+  ui7: string;
+  /**
    * Theme color TEXT0.
    */
   text0: string;
