@@ -6,7 +6,7 @@ import {
   InteractiveListWrapperProps,
   InteractiveListItemObject,
 } from '../InteractiveList';
-import { cyan } from '../../colors';
+import { cyan, transparent } from '../../colors';
 import { Icon } from '../Icon';
 import { TextStylings } from '../../textStyles';
 
@@ -18,7 +18,7 @@ const StyledWrapper = styled.div`
   box-shadow: none;
   margin: 0 0 ${(props: StyledWrapperProps) => (props.open ? '10px' : '0')} 0;
   padding: 0;
-  border: 1px solid ${themed(({ theme, open }) => (open ? theme.fill : theme.ui6))};
+  border: 1px solid ${themed(({ theme, open }) => (open ? theme.fill : transparent))};
 `;
 
 const MenuCaret = styled.div`

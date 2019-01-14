@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled, { themed, css } from '../../utils/styled';
 import { Anchor, AnchorProps } from '../Anchor';
-import * as colors from '../../colors';
 
 export interface ActionLinkProps extends AnchorProps {
   /**
@@ -21,10 +20,10 @@ export interface StyledActionLink {
 
 const PseudoLinkStyle = css`
   &:hover {
-    color: ${themed(props => props.theme.actionLinkHoverBackground)};
+    color: ${themed(props => props.theme.ui6)};
   }
   &:focus {
-    color: ${colors.midnight};
+    color: ${themed(props => props.theme.ui7)};
     outline: none;
   }
 `;
@@ -32,7 +31,7 @@ const PseudoLinkStyle = css`
 const StyledActionLink = styled(Anchor)`
   font-weight: 500;
   text-decoration: none;
-  color: ${themed(props => (props.disabled ? props.theme.actionLinkDisabledText : props.theme.fill))};
+  color: ${themed(props => (props.disabled ? props.theme.text3 : props.theme.fill))};
   display: ${(props: StyledActionLink) => (props.block ? 'block' : 'inline-block')};
   cursor: ${(props: StyledActionLink) => (props.disabled ? 'default' : 'pointer')};
   ${(props: StyledActionLink) => (!props.disabled ? PseudoLinkStyle : '')};
