@@ -68,3 +68,11 @@ const { ProgressBar } = require('precise-ui');
 
 <ProgressBar value={30} stops={[25, 50, 75]} />
 ```
+
+ProgressBar component also provides an alternative for the infinite spinning bar.
+
+```jsx
+const { ProgressBar } = require('precise-ui');
+
+<ProgressBar animate="spinning" type="secondary" />
+```
