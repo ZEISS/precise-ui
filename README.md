@@ -10,23 +10,27 @@
 
 A complete opinionated React component library with minimal dependencies powered ZEISS.
 
+See [https://precise-ui.io](precise-ui.io) for our kitchen sink (i.e., demo page illustrating all the components incl. their documentation).
+
 ## Getting Started
 
 (tbd)
 
+## Issues
+
+When creating a new issue, please use one of the provided templates:
+
+- [Bug Report](https://github.com/ZEISS/precise-ui/issues/new?template=bugs.md)
+- [Feature Proposal](https://github.com/ZEISS/precise-ui/issues/new?template=features.md)
+
 ## Development
 
 (tbd)
+
+Make sure that you've read the [contribution guide](.github/CONTRIBUTING.md) before actually contributing. If you feel uncertain whether you should contribute or not maybe our [code of conduct](CODE_OF_CONDUCT.md) can help you.
 
 ## License
 
 Precise UI is released using the MIT license. For more information see the [license file](LICENSE).
 
 We are using some icons from [Material UI Icons](https://github.com/mui-org/material-ui/tree/master/packages/material-ui-icons). Their code and design is covered by the respective license of [Material UI](https://github.com/mui-org/material-ui) (MIT).
-
-## Issues
-
-When creating a new Issue, please use one of the provided templates:
-
-- [Bug Report](https://github.com/ZEISS/precise-ui/issues/new?template=bugs.md)
-- [Feature Proposal](https://github.com/ZEISS/precise-ui/issues/new?template=features.md)
