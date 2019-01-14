@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled, { themed, css } from '../../utils/styled';
 import { Anchor, AnchorProps } from '../Anchor';
+import * as colors from '../../colors';
 
 export interface ActionLinkProps extends AnchorProps {
   /**
@@ -23,7 +24,7 @@ const PseudoLinkStyle = css`
     color: ${themed(props => props.theme.actionLinkHoverBackground)};
   }
   &:focus {
-    color: ${themed(props => props.theme.actionLinkFocusBackground)};
+    color: ${colors.midnight};
     outline: none;
   }
 `;

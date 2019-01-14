@@ -126,7 +126,6 @@ export const light: PreciseFullTheme = {
   accordionPadding: `${distance.medium}`,
   accordionContentPadding: `${distance.small} ${distance.medium} ${distance.xlarge} ${remCalc('50px')}`,
   actionLinkHoverBackground: colors.ocean,
-  actionLinkFocusBackground: colors.midnight,
   actionLinkDisabledText: colors.pinkSwan,
   fontFamily: 'inherit',
   tableBorder: `1px solid ${colors.lighterGray}`,
