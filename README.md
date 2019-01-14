@@ -10,6 +10,8 @@
 
 A complete opinionated React component library with minimal dependencies powered ZEISS.
 
+See [https://precise-ui.io](precise-ui.io) for our kitchen sink (i.e., demo page illustrating all the components incl. their documentation).
+
 ## Getting Started
 
 Precise UI can be easily integrated in your frontend project by using npm or yarn. To start using it, please follow the instructions below:
@@ -23,6 +25,8 @@ npm i precise-ui
 ```
 
 or alternatively, using yarn
+
+## License
 
 ```sh
 yarn add precise-ui
@@ -50,7 +54,7 @@ You can see a list of all available components on our [website](https://precise-
 
 Everyone is welcome to make any contribution on Precise UI. However, before you start, make sure you read our [Contribution](/.github/CONTRIBUTING.md) instructions. 
 
-Also, it is important to read our [Code of Conduct](/CODE_OF_CONDUCT.md) to know how to behave when communicating with other contributors and also how you should expect to be treated.
+If you feel uncertain whether you should contribute or not maybe our [code of conduct](CODE_OF_CONDUCT.md) can help you.
 
 ## Issues & Support
 

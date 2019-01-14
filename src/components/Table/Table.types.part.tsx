@@ -1,6 +1,5 @@
-import { StandardProps, PreciseTheme } from '../../common';
+import { StandardProps, RefProps, PreciseTheme } from '../../common';
 import { ModeProviderProps } from '../../hoc/withResponsiveMode';
-import { RefProps } from '../../hoc/withResponsive';
 
 export type TableMode = 'card' | 'table';
 

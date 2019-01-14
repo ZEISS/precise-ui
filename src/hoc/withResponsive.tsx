@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { RefProps } from '../common';
 
 export interface ResponsiveComponentProps extends RefProps {
   /**
@@ -22,17 +23,19 @@ export interface ResponsiveComponentState {
   angle: number;
 }
 
-export interface RefProps {
-  innerRef?(node: HTMLElement | null): void;
-}
-
-export function withResponsive<
-  ComponentType extends React.ComponentType<ResponsiveComponentProps & { [key: string]: any }>
->(Component: ComponentType): ComponentType {
-  class Responsive extends React.Component<ResponsiveComponentProps, ResponsiveComponentState> {
+/**
+ * Wraps the component in a responsive construct that is sensitive to the size changes of its
+ * container.
+ * @param Component The component to be sensitive to its container dimensions.
+ * @returns A component that can use the `dimensions` prop.
+ */
+export function withResponsive<TProps extends ResponsiveComponentProps>(
+  Component: React.ComponentType<TProps>,
+): React.ComponentClass<TProps> {
+  return class Responsive extends React.Component<TProps, ResponsiveComponentState> {
     node: HTMLElement | null;
 
-    constructor(props: ResponsiveComponentProps) {
+    constructor(props: TProps) {
       super(props);
       const screenWithOrientaion = screen as {
         orientation?: {
@@ -92,10 +95,8 @@ export function withResponsive<
         dimensions: this.state,
       };
 
-      const props = { ...this.props, ...instertedProps } as any;
+      const props = { ...this.props, ...instertedProps };
       return <Component {...props} />;
     }
-  }
-
-  return Responsive as any;
+  };
 }
