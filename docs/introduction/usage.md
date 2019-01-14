@@ -1,7 +1,7 @@
 ### Use Cases
 In this section use cases and examples will be described to provide you a better understanding if Precise UI is the right library for your Project.
 
-##### Cases where Precise UI should be used.
+#### Cases where Precise UI should be used.
 
 If your application consists on any of these cases below, Precise UI is highly recommended as your main UI library.
 
@@ -13,7 +13,7 @@ If your application consists on any of these cases below, Precise UI is highly r
    
 4. *Internal Tools*: it is also a great library to use to develop complex internal tools that usually do not have dedicated designers but need a simple and consistent UI, nevertheless.
 
-##### Cases where I should NOT use Precise UI
+#### Cases where I should NOT use Precise UI
 
 Nevertheless, there are always some cases where this library is probably not the best option and it is best to avoiding using it.
 
