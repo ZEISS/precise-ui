@@ -486,6 +486,14 @@ export interface TextInputProps extends LabeledInputProps<string> {
   icon?: React.ReactChild;
 }
 
+export interface RefProps {
+  /**
+   * Callback to be used to get the referenced DOM node.
+   * @param node The node that is used.
+   */
+  innerRef?(node: HTMLElement | null): void;
+}
+
 export type ScreenSize = 'small' | 'smallAndMedium' | 'medium' | 'mediumAndLarge' | 'large';
 
 // Helper type operators
