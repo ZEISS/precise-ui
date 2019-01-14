@@ -6,6 +6,7 @@
   "typings": "dist/es6",
   "scripts": {
     "start": "styleguidist server",
+    "serve": "pushstate-server styleguide 6060",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --project tsconfig.json",
     "test:unit": "cross-env NODE_ENV=test jest src",
     "test:watch": "npm run test:unit -- --watch",
@@ -82,6 +83,7 @@
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
     "styled-components": "^2.2.3",
+    "svg-react-loader": "^0.4.6",
     "ts-jest": "^23.10.5",
     "ts-node": "^7.0.1",
     "tslint": "^5.12.0",

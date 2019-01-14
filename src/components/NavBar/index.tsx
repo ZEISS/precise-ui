@@ -199,8 +199,6 @@ const MobileHeader: React.SFC<MobileHeaderProps> = ({ entries, onToggle, open })
  * A simple navigation bar that is responsive by nature.
  */
 export class NavBar extends React.Component<NavBarProps, NavBarState> {
-  private node?: HTMLElement;
-
   constructor(props: NavBarProps) {
     super(props);
 
@@ -226,39 +224,6 @@ export class NavBar extends React.Component<NavBarProps, NavBarState> {
     }
   }
 
-  componentDidMount() {
-    if (!this.state.controlledMode) {
-      window.addEventListener('resize', this.onSizeChanged);
-      this.onSizeChanged();
-    }
-  }
-
-  componentWillUnmount() {
-    if (!this.state.controlledMode) {
-      window.removeEventListener('resize', this.onSizeChanged);
-    }
-  }
-
-  private onSizeChanged = () => {
-    const node = this.node;
-
-    if (node && node.offsetParent !== null) {
-      const { width } = node.getBoundingClientRect();
-      const { mode } = this.state;
-      const isFull = isFullMode(width);
-
-      if (mode !== 'full' && isFull) {
-        this.setState({
-          mode: 'full',
-        });
-      } else if (mode !== 'hamburger' && !isFull) {
-        this.setState({
-          mode: 'hamburger',
-        });
-      }
-    }
-  };
-
   private toggle = () => {
     const { onToggle } = this.props;
     const { open, controlledOpen } = this.state;
@@ -279,10 +244,6 @@ export class NavBar extends React.Component<NavBarProps, NavBarState> {
   render() {
     const { logo, hidden, items, mode: _0, children, ...rest } = this.props;
     const { mode, open } = this.state;
-
-    if (!mode) {
-      setTimeout(this.onSizeChanged, 0);
-    }
 
     return (
       <StyledNavBar {...rest}>

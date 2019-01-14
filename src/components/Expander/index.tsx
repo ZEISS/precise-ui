@@ -41,14 +41,12 @@ const defaultCollapsedHeight = '0px';
  * A functional expander component for expanding / collapsing content.
  */
 export class Expander extends React.Component<ExpanderProps, ExpanderState> {
-  private wrapperRef: React.RefObject<HTMLDivElement>;
+  private wrapperRef = React.createRef<HTMLDivElement>();
   private rootContainer: HTMLDivElement | null;
   private timer: any;
 
   constructor(props: ExpanderProps) {
     super(props);
-
-    this.wrapperRef = React.createRef();
 
     this.state = {
       status: 'unmounted',

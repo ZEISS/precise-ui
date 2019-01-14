@@ -31,12 +31,12 @@ interface ComponentsListRendererProps {
 }
 
 interface ComponentsListRendererState {
-  active?: string;
+  selected?: string;
   cachedPath: string;
 }
 
 interface MenuItemProps extends ActionLinkProps {
-  active: boolean;
+  selected: boolean;
 }
 
 const NavItems = styled.div``;
@@ -48,7 +48,7 @@ const MenuItem = styled(ActionLink)`
   align-items: center;
   height: 50px;
   padding: 0 ${distance.medium};
-  ${({ active }: MenuItemProps) => (active ? ActiveMenuItem : '')}
+  ${({ selected }: MenuItemProps) => (selected ? ActiveMenuItem : '')}
   border-bottom: 1px solid #eeefee;
   justify-content: space-between;
   font-weight: 500;
@@ -79,7 +79,7 @@ const ActiveSubMenuItem = css`
 const SubMenuItem = MenuItem.extend`
   padding: 0 ${distance.large};
   font-weight: 400;
-  ${({ active }) => (active ? ActiveSubMenuItem : '')}
+  ${({ selected }) => (selected ? ActiveSubMenuItem : '')}
 `;
 
 const MenuWithIcon = styled.div`
@@ -88,11 +88,11 @@ const MenuWithIcon = styled.div`
 `;
 
 interface StyledIconProps {
-  active: boolean;
+  selected: boolean;
 }
 
 const StyledIcon = styled(Icon)`
-  transform: rotate(${({ active }: StyledIconProps) => (active ? '0deg' : '180deg')});
+  transform: rotate(${({ selected }: StyledIconProps) => (selected ? '0deg' : '180deg')});
   transition: 0.5s ease-in-out;
 `;
 
@@ -113,7 +113,7 @@ export default class ComponentsListRenderer extends React.Component<
     super(props);
     const { items } = props;
     this.state = {
-      active: items.reduce((acc, cur) => {
+      selected: items.reduce((acc, cur) => {
         if (isMatch(`/${cur.slug}`)) {
           acc = cur.slug;
         }
@@ -129,7 +129,7 @@ export default class ComponentsListRenderer extends React.Component<
     if (path !== prevState.cachedPath) {
       return {
         cachedPath: path,
-        active: path.replace(/^\/([^\/]*).*$/, '$1'),
+        selected: path.replace(/^\/([^\/]*).*$/, '$1'),
       };
     }
     // tslint:disable-next-line
@@ -137,16 +137,16 @@ export default class ComponentsListRenderer extends React.Component<
   }
 
   private changeActive = (slug: string) => {
-    const { active: slugState } = this.state;
+    const { selected: slugState } = this.state;
 
     this.setState({
-      active: slugState !== slug ? slug : '',
+      selected: slugState !== slug ? slug : '',
     });
   };
 
   render() {
     const { items } = this.props;
-    const { active } = this.state;
+    const { selected } = this.state;
 
     return (
       <NavItems>
@@ -155,17 +155,17 @@ export default class ComponentsListRenderer extends React.Component<
           .map(item =>
             item.components.length > 0 ? (
               <React.Fragment key={item.slug}>
-                <MenuItem active={item.slug === active} onClick={() => this.changeActive(item.slug)}>
+                <MenuItem selected={item.slug === selected} onClick={() => this.changeActive(item.slug)}>
                   <MenuWithIcon>{item.visibleName}</MenuWithIcon>
-                  <StyledIcon name="KeyboardArrowDown" active={item.slug !== active} />
+                  <StyledIcon name="KeyboardArrowDown" selected={item.slug !== selected} />
                 </MenuItem>
-                <Expander timeout={500} expand={item.slug === active}>
+                <Expander timeout={500} expand={item.slug === selected}>
                   <SubMenuContainer>
                     {item.components.map(component => {
                       component.parent = item.slug;
                       return (
                         <SubMenuItem
-                          active={isMatch(`/${item.slug}/${component.slug}`)}
+                          selected={isMatch(`/${item.slug}/${component.slug}`)}
                           key={component.slug}
                           to={`/${item.slug}/${component.slug}`}>
                           {component.visibleName}
@@ -176,7 +176,7 @@ export default class ComponentsListRenderer extends React.Component<
                 </Expander>
               </React.Fragment>
             ) : (
-              <MenuItem key={item.slug} active={item.slug === active} to={`/${item.slug}`}>
+              <MenuItem key={item.slug} selected={item.slug === selected} to={`/${item.slug}`}>
                 {item.visibleName}
               </MenuItem>
             ),

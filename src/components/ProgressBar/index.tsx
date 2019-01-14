@@ -4,6 +4,11 @@ import { StandardProps } from '../../common';
 import { remCalc } from '../../utils/remCalc';
 import { distance } from '../../distance';
 
+/**
+ * ProgressBar type.
+ */
+export type ProgressBarType = 'primary' | 'secondary';
+
 export interface ProgressBarProps extends StandardProps {
   /**
    * @ignore
@@ -41,11 +46,22 @@ export interface ProgressBarProps extends StandardProps {
    * The optional description to be displayed.
    */
   description?: string;
+  /**
+   * Sets the progress bar type. By default primary.
+   * @default primary
+   */
+  type?: ProgressBarType;
 }
 
 interface StopProps {
   active: boolean;
 }
+
+export interface ProgressContainerProps {
+  type: ProgressBarType;
+}
+
+const spinningWidth = 50;
 
 const stopCreator: StyledFunction<StopProps & React.HTMLProps<HTMLInputElement>> = styled.div;
 
@@ -53,25 +69,23 @@ const ProgressContainer = styled.div`
   color: ${themed(props => props.theme.text)};
 `;
 
-const ProgressRail = styled.div`
-  border-radius: 4px;
+const ProgressRail = styled<ProgressContainerProps, 'div'>('div')`
   position: relative;
   border: 0;
-  background: ${themed(props => props.theme.textDisabled)};
-  height: 8px;
+  background: ${themed(props => props.theme.ui4)};
+  height: ${({ type }: ProgressContainerProps) => (type === 'secondary' ? distance.xsmall : distance.xxsmall)};
 `;
 
-const ProgressTitle = styled.h2`
-  font-size: ${remCalc('24px')};
-  font-weight: 200;
-  margin: 0 0 ${distance.small} 0;
+const ProgressTitle = styled.div`
+  font-size: ${remCalc('16px')};
+  margin: 0 0 ${distance.medium};
   padding: 0;
   display: block;
 `;
 
 const ProgressDescription = styled.div`
-  margin: 10px 0 0 0;
-  font-size: ${remCalc('12px')};
+  margin: ${distance.small} 0 0;
+  font-size: ${remCalc('14px')};
 `;
 
 const ProgressIndicator = styled.div`
@@ -83,29 +97,36 @@ const ProgressIndicator = styled.div`
 `;
 
 const ProgressStop = stopCreator`
-  border-radius: 12px;
+  border-radius: ${distance.small};
   position: absolute;
-  width: 12px;
-  height: 12px;
-  top: -4px;
-  background: ${themed(props => (props.active ? props.theme.fill : props.theme.textDisabled))};
-  border: 2px solid ${themed(props => props.theme.background)};
-  transform: translate(-50%, 0);
+  width: ${distance.small};
+  height: ${distance.small};
+  background: ${themed(props => (props.active ? props.theme.ui7 : props.theme.text2))};
+  top: 50%;
+  transform: translateY(-50%);
 `;
 
 const SpinningAnimation = keyframes`
   from {
-    width: 0;
+    left: -${spinningWidth}%;
   }
   to {
-    width: 100%;
+    left: 100%;
   }
 `;
 
+const MaskContainer = styled.div`
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+`;
+
 const ProgressAnimation = styled.div`
-  height: 8px;
-  border-radius: 4px;
-  animation: ${SpinningAnimation} 3s infinite;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: -${spinningWidth}%;
+  animation: ${SpinningAnimation} 2s linear infinite;
 `;
 
 function getPercent(current: number, minimum: number, maximum: number) {
@@ -115,7 +136,11 @@ function getPercent(current: number, minimum: number, maximum: number) {
 }
 
 function spinning(child: React.ReactChild) {
-  return <ProgressAnimation>{child}</ProgressAnimation>;
+  return (
+    <MaskContainer>
+      <ProgressAnimation>{child}</ProgressAnimation>
+    </MaskContainer>
+  );
 }
 
 /**
@@ -124,14 +149,16 @@ function spinning(child: React.ReactChild) {
 export const ProgressBar: React.SFC<ProgressBarProps> = ({
   minimum = 0,
   maximum = 100,
-  value = 0,
+  value: propValue,
   title,
   description,
   animate,
   stops = [],
-  ...props
+  type = 'primary' as 'primary',
+  theme,
+  ...rest
 }) => {
-  const { theme } = props;
+  const value = (animate === 'spinning' ? spinningWidth : propValue) || 0;
   const width = getPercent(value, minimum, maximum);
   const transition = animate ? 'width 200ms' : 'none';
   const indicator = <ProgressIndicator style={{ width, transition }} theme={theme} />;
@@ -139,7 +166,7 @@ export const ProgressBar: React.SFC<ProgressBarProps> = ({
   return (
     <ProgressContainer theme={theme}>
       {!!title && <ProgressTitle theme={theme}>{title}</ProgressTitle>}
-      <ProgressRail {...props}>
+      <ProgressRail type={type} theme={theme} {...rest}>
         {animate === 'spinning' ? spinning(indicator) : indicator}
         {stops.map((stop, index) => (
           <ProgressStop
