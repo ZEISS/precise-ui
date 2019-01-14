@@ -14,20 +14,54 @@ See [https://precise-ui.io](precise-ui.io) for our kitchen sink (i.e., demo page
 
 ## Getting Started
 
-(tbd)
+Precise UI can be easily integrated in your frontend project by using npm or yarn. To start using it, please follow the instructions below:
 
-## Issues
+### Installation
+   
+1. Firstly, you have to install it:
 
-When creating a new issue, please use one of the provided templates:
+```sh
+npm i precise-ui
+```
+
+or alternatively, using yarn
+
+```sh
+yarn add precise-ui
+```
+
+2. Then, make sure that you have also all peer dependencies installed:
+
+```sh
+npm i react styled-components
+```
+
+### Usage
+
+Everything ready, now you can start importing precise-ui componenets.
+
+```jsx
+import { TextField } from 'precise-ui';
+
+<TextField label="Label" />
+```
+
+You can see a list of all available components on our [website](https://precise-ui.io/).
+
+## Contributing
+
+Everyone is welcome to make any contribution on Precise UI. However, before you start, make sure you read our [Contribution](/.github/CONTRIBUTING.md) instructions. 
+
+If you feel uncertain whether you should contribute or not maybe our [code of conduct](CODE_OF_CONDUCT.md) can help you.
+
+## Issues & Support
+
+If you have any usage and general questions, you are welcome to ask a question on **Stack Overflow** using the tag `precise-ui`, and you will receive help as soon as possible.
+
+Also, when creating a new Issue here, please use one of the provided templates:
 
 - [Bug Report](https://github.com/ZEISS/precise-ui/issues/new?template=bugs.md)
 - [Feature Proposal](https://github.com/ZEISS/precise-ui/issues/new?template=features.md)
-
-## Development
-
-(tbd)
-
-Make sure that you've read the [contribution guide](.github/CONTRIBUTING.md) before actually contributing. If you feel uncertain whether you should contribute or not maybe our [code of conduct](CODE_OF_CONDUCT.md) can help you.
 
 ## License
 

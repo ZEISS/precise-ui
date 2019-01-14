@@ -1,6 +1,6 @@
-The following colors are available.
-
 ### Theme Colors
+
+The following colors are available.
 
 ```jsx
 const { colors, themes: { light }, clipboardCopy, notify, Notifications, invertColor, MetroInfoTile, StackPanel, StackPanelDirection } = require('precise-ui');
