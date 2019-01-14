@@ -3,7 +3,6 @@ import styled, { themed, StyledFunction, keyframes } from '../../utils/styled';
 import { StandardProps } from '../../common';
 import { remCalc } from '../../utils/remCalc';
 import { distance } from '../../distance';
-import { grey4 } from '../../colors';
 
 /**
  * ProgressBar type.
@@ -102,7 +101,7 @@ const ProgressStop = stopCreator`
   position: absolute;
   width: ${distance.small};
   height: ${distance.small};
-  background: ${themed(props => (props.active ? props.theme.ui7 : grey4))};
+  background: ${themed(props => (props.active ? props.theme.ui7 : props.theme.text2))};
   top: 50%;
   transform: translateY(-50%);
 `;
