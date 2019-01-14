@@ -12,21 +12,55 @@ A complete opinionated React component library with minimal dependencies powered
 
 ## Getting Started
 
-(tbd)
+Precise UI can be easily integrated in your frontend project by using npm or yarn. To start using it, please follow the instructions below:
 
-## Development
+### Installation
+   
+```sh
+npm i precise-ui
+```
 
-(tbd)
+or alternatively, using yarn
+
+```sh
+yarn add precise-ui
+```
+
+Make sure that you have all peer dependencies installed, e.g., via
+
+```sh
+npm i react styled-components
+```
+
+### Usage
+
+Everything ready, now you can start importing precise-ui componenets.
+
+```jsx
+import { TextField } from 'precise-ui';
+
+<TextField label="Label" />
+```
+
+You can see a list of all available components on our [website](https://precise-ui.io/).
+
+## Contributing
+
+Everyone is welcome to make any contribution on Precise UI. However, before you start, make sure you read our [Contribution](/.github/CONTRIBUTING.md) instructions. 
+
+Also, it is important to read our [Code of Conduct](/CODE_OF_CONDUCT.md) to know how to behave when communicating with other contributors and also how you should expect to be treated.
+
+## Issues & Support
+
+If you have any usage and general questions, you are welcome to ask a question on **Stack Overflow** using the tag `precise-ui`, and you will receive help as soon as possible.
+
+Also, when creating a new Issue here, please use one of the provided templates:
+
+- [Bug Report](https://github.com/ZEISS/precise-ui/issues/new?template=bugs.md)
+- [Feature Proposal](https://github.com/ZEISS/precise-ui/issues/new?template=features.md)
 
 ## License
 
 Precise UI is released using the MIT license. For more information see the [license file](LICENSE).
 
 We are using some icons from [Material UI Icons](https://github.com/mui-org/material-ui/tree/master/packages/material-ui-icons). Their code and design is covered by the respective license of [Material UI](https://github.com/mui-org/material-ui) (MIT).
-
-## Issues
-
-When creating a new Issue, please use one of the provided templates:
-
-- [Bug Report](https://github.com/ZEISS/precise-ui/issues/new?template=bugs.md)
-- [Feature Proposal](https://github.com/ZEISS/precise-ui/issues/new?template=features.md)
