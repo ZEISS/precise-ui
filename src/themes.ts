@@ -146,17 +146,3 @@ export const light: PreciseFullTheme = {
   notificationTextLineHeight: `22px`,
   notificationIconMarginRight: distance.medium,
 };
-
-// TODO: theme needs to be reconsidered and probably removed
-/**
- * @deprecated
- */
-export const dark: PreciseFullTheme = {
-  ...light,
-  text: colors.white,
-  background: colors.black,
-  primary: colors.whiterSmoke,
-  secondary: colors.lighterGray,
-  textDisabled: colors.pinkSwan,
-  inputDisabled: colors.whiterSmoke,
-};
