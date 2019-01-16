@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AccordionTableCard /> should render a <AccordionTable> component with no data and placeholder set 1`] = `
-<table>
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -9,11 +9,11 @@ exports[`<AccordionTableCard /> should render a <AccordionTable> component with 
       No data
     </styled.div>
   </Styled(ListItem)>
-</table>
+</AccordionTableCardHost>
 `;
 
 exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with data and selectedIndex set 1`] = `
-<table>
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -162,11 +162,11 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       opened={false}
     />
   </Styled(ListItem)>
-</table>
+</AccordionTableCardHost>
 `;
 
 exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with data set 1`] = `
-<table>
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -275,11 +275,11 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       opened={false}
     />
   </Styled(ListItem)>
-</table>
+</AccordionTableCardHost>
 `;
 
 exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with right columns 1`] = `
-<table>
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -320,11 +320,11 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       opened={false}
     />
   </Styled(ListItem)>
-</table>
+</AccordionTableCardHost>
 `;
 
 exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with sorted data 1`] = `
-<table>
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -365,11 +365,11 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       opened={false}
     />
   </Styled(ListItem)>
-</table>
+</AccordionTableCardHost>
 `;
 
 exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with wrong columns 1`] = `
-<table>
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -426,11 +426,11 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       opened={false}
     />
   </Styled(ListItem)>
-</table>
+</AccordionTableCardHost>
 `;
 
 exports[`<AccordionTableCard /> should render a <AccordionTableCard> component without data and custom placeholder 1`] = `
-<table>
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -438,5 +438,5 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       No data
     </styled.div>
   </Styled(ListItem)>
-</table>
+</AccordionTableCardHost>
 `;
