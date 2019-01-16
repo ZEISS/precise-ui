@@ -4,7 +4,7 @@ import styled, { themed, css, reStyled } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { sortObjectList } from '../../utils/sort';
 import { distance } from '../../distance';
-import { RefProps } from '../../hoc/withResponsive';
+import { RefProps } from '../../common';
 import {
   TableCellEvent,
   TableRowEvent,

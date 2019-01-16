@@ -6,6 +6,14 @@ const { ActionLink } = require('precise-ui');
 <ActionLink href="#🍕">Click me</ActionLink>
 ```
 
+This is a disabled action link:
+
+```jsx
+const { ActionLink } = require('precise-ui');
+
+<ActionLink disabled href="#🍕">Click me</ActionLink>
+```
+
 Custom interaction after clicking the link.
 
 ```jsx

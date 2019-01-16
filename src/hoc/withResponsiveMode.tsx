@@ -1,105 +1,99 @@
 import * as React from 'react';
 import { withResponsive, ResponsiveComponentProps } from './withResponsive';
 
-export interface GetModeType<Modes> {
-  (width?: number): Modes;
+export interface GetModeType<TModes> {
+  (width?: number): TModes;
 }
 
-export interface ModeTypeEvent<Modes> {
-  mode: Modes;
+export interface ModeChangedEvent<TModes> {
+  mode: TModes;
 }
 
-export interface ModeProviderProps<Modes> extends ResponsiveComponentProps {
-  mode?: Modes;
-  onModeChange?(e: ModeTypeEvent<Modes>): void;
+export interface ModeProviderProps<TModes> extends ResponsiveComponentProps {
+  mode?: TModes;
+  onModeChange?(e: ModeChangedEvent<TModes>): void;
 }
 
-export interface ModeProviderState<Modes> {
+export interface ModeProviderState<TModes> {
   controlled: boolean;
-  mode: Modes;
+  mode: TModes;
 }
 
-const getWidth = (dimensions?: { width: number }) => (dimensions !== undefined ? dimensions.width : undefined);
+/**
+ * Provides `mode` prop (if it's not passed manually) to the component depending on
+ * the container width. When mode switches, HOC calls `onModeChange` prop if it is
+ * defined.
+ * @param getMode The function to determine the mode from the given width.
+ * @returns A constructor function to wrap a component with the `mode` prop determined
+ * by the getMode function.
+ */
+export function withResponsiveMode<TModes>(getMode: GetModeType<TModes>) {
+  return <TProps extends ModeProviderProps<TModes>>(
+    Component: React.ComponentType<TProps>,
+  ): React.ComponentClass<TProps> => {
+    return withResponsive(
+      class ModeProvider extends React.Component<TProps, ModeProviderState<TModes>> {
+        constructor(props: TProps) {
+          super(props);
 
-/*
-  Provides `mode` prop (if it's not passed manually) to the component depending on the container width.
-  When mode switches, HOC calls `onModeChange` prop if it is defined.
+          this.state = {
+            controlled: props.mode !== undefined,
+            mode: props.mode || getMode(props.dimensions && props.dimensions.width),
+          };
+        }
 
-  Usage:
+        static getDerivedStateFromProps(props: TProps, state: ModeProviderState<TModes>) {
+          const change = props.onModeChange;
 
-  export const Table = withResponsiveMode<'table' | 'default' | 'card'>(
-    width => (!width || width > breakpoints.medium ? 'default' : 'card'),
-  )(TableInt);
-*/
+          if (state.controlled) {
+            const mode = props.mode || getMode();
 
-export function withResponsiveMode<Modes>(getMode: GetModeType<Modes>) {
-  return <ComponentType extends React.ComponentType<ModeProviderProps<Modes>>>(
-    Component: ComponentType,
-  ): ComponentType => {
-    class ModeProvider extends React.Component<ModeProviderProps<Modes>, ModeProviderState<Modes>> {
-      constructor(props: ModeProviderProps<Modes>) {
-        super(props);
+            if (state.mode !== mode) {
+              if (typeof change === 'function') {
+                change({ mode });
+              }
 
-        this.state = {
-          controlled: props.mode !== undefined,
-          mode: props.mode || getMode(getWidth(props.dimensions)),
-        };
-      }
-
-      static getDerivedStateFromProps(props: ModeProviderProps<Modes>, state: ModeProviderState<Modes>) {
-        const change = props.onModeChange;
-
-        if (state.controlled) {
-          const mode = props.mode || getMode();
-
-          if (state.mode !== mode) {
-            if (typeof change === 'function') {
-              change({ mode });
+              return {
+                mode,
+              };
             }
+          } else {
+            const { dimensions } = props;
+            const { mode } = state;
+            const nextMode = getMode(dimensions && dimensions.width);
 
-            return {
-              mode,
-            };
+            if (mode !== nextMode) {
+              if (typeof change === 'function') {
+                change({ mode: nextMode });
+              }
+
+              return {
+                mode: nextMode,
+              };
+            }
           }
-        } else {
-          const { dimensions } = props;
-          const { mode } = state;
-          const width = getWidth(dimensions);
-          const nextMode = getMode(width);
 
-          if (mode !== nextMode) {
-            if (typeof change === 'function') {
-              change({ mode: nextMode });
-            }
+          return {};
+        }
 
-            return {
-              mode: nextMode,
-            };
+        componentDidMount() {
+          const { mode } = this.state;
+          const { onModeChange } = this.props;
+
+          if (typeof onModeChange === 'function' && mode) {
+            onModeChange({ mode });
           }
         }
 
-        return {};
-      }
-
-      componentDidMount() {
-        const { mode } = this.state;
-        const { onModeChange } = this.props;
-
-        if (typeof onModeChange === 'function' && mode) {
-          onModeChange({ mode });
+        render() {
+          const { mode } = this.state;
+          const props = {
+            ...this.props,
+            mode,
+          };
+          return <Component {...props} />;
         }
-      }
-
-      render() {
-        const { mode } = this.state;
-        const props = {
-          ...this.props,
-          mode,
-        } as any;
-        return <Component {...props} />;
-      }
-    }
-
-    return withResponsive(ModeProvider) as any;
+      },
+    );
   };
 }

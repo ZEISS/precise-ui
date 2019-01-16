@@ -12,7 +12,7 @@ import { Checkbox } from '../Checkbox';
 import { remCalc } from '../../utils';
 import { distance } from '../../distance';
 import { KeyCodes } from '../../utils/keyCodes';
-import { pacificBlue } from '../../colors';
+import { pacificBlue, transparent } from '../../colors';
 import { Icon } from '../Icon';
 
 interface ListItemProps {
@@ -38,7 +38,7 @@ const InteractiveListContainer = styled.div`
 `;
 
 const ListWrapper = reStyled<InteractiveListWrapperProps, 'ul'>('ul')(
-  ({ open, flyout, border, direction, theme: { ui6, ui4 } }) => `
+  ({ open, flyout, border, direction, theme: { ui4 } }) => `
   display: ${open || !flyout ? 'block' : 'none'};
   list-style: none;
   width: 100%;
@@ -48,9 +48,9 @@ const ListWrapper = reStyled<InteractiveListWrapperProps, 'ul'>('ul')(
   box-shadow: none;
   margin: 0;
   padding: 0;
-  background: ${ui6};
+  background: ${transparent};
   border: 1px solid
-    ${border === InteractiveListBorderType.none ? ui6 : ui4};
+    ${border === InteractiveListBorderType.none ? transparent : ui4};
   ${flyout ? (direction === InteractiveListDirection.normal ? 'border-top: none' : 'border-bottom: none') : ''};
   max-height: ${flyout ? '50vh' : '100%'};
   overflow-y: auto;
@@ -59,8 +59,8 @@ const ListWrapper = reStyled<InteractiveListWrapperProps, 'ul'>('ul')(
 );
 
 const ListItem = reStyled.li<ListItemProps>(
-  ({ hovered, theme: { ui3, ui6, text2 } }) => `
-  background: ${hovered ? ui3 : ui6};
+  ({ hovered, theme: { ui3, text2 } }) => `
+  background: ${hovered ? ui3 : transparent};
   color: ${text2};
   list-style: none;
   box-sizing: border-box;
