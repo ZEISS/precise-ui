@@ -1,13 +1,14 @@
 import * as React from 'react';
 import styled from '../../utils/styled';
-import { List } from '../List';
-import { ListItem } from '../ListItem';
 import { remCalc } from '../../utils/remCalc';
-import { AccordionTableProps, AccordionTableCardRendererEvent } from './AccordionTable.types.part';
 import { normalizeIndex, toggleIndex, hasIndex } from './helpers/indexHelper';
-import { distance } from '../../distance';
+import { AccordionTableProps, AccordionTableCardRendererEvent } from './AccordionTable.types.part';
 import { defaultCellRenderer } from '../Table/TableBasic.part';
+import { defaultBodyRenderer } from '../Table/TableCard.part';
 import { AccordionCard } from '../AccordionCard';
+import { ListItem } from '../ListItem';
+import { List } from '../List';
+import { distance } from '../../distance';
 
 export interface AccordionTableCardState {
   /**
@@ -18,11 +19,6 @@ export interface AccordionTableCardState {
    * Determines if the accordion table component is controlled from the outside or not.
    */
   controlled: boolean;
-}
-
-interface ActiveProps {
-  open: boolean;
-  onClick?(e: React.MouseEvent): void;
 }
 
 const PropContainer = styled.div`
@@ -102,29 +98,8 @@ export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T
     }
   }
 
-  private renderItems() {
-    const { data = [], columns, placeholder, theme, cardRenderer, cardBodyRenderer } = this.props;
-    const keys = Object.keys(columns || data[0] || {});
-    const renderer = cardRenderer ? cardRenderer : this.renderItem;
-    let result = [];
-    if (data.length === 0) {
-      if (placeholder) {
-        result.push(
-          <StyledListItem theme={theme} key={0}>
-            <PlaceholderContainer theme={theme}>{placeholder}</PlaceholderContainer>
-          </StyledListItem>,
-        );
-      }
-    } else {
-      result = data.map((item, index) =>
-        renderer({ item, index, open: hasIndex(this.state.selectedIndexes, index), keys }),
-      );
-    }
-    return cardBodyRenderer ? cardBodyRenderer({ rows: result }) : result;
-  }
-
   private renderItem = ({ item, index, open, keys }: AccordionTableCardRendererEvent<T>) => {
-    const { detailsRenderer, theme, openLabel, closeLabel } = this.props;
+    const { detailsRenderer, theme } = this.props;
     return (
       <StyledListItem theme={theme} key={index}>
         <AccordionCard
@@ -132,7 +107,7 @@ export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T
           header={this.renderItemProps(item, keys, index)}
           opened={open}
           onActionClick={() => this.handleClick(index, item)}>
-          {detailsRenderer({ data: item, index })}
+          {open && detailsRenderer && detailsRenderer({ data: item, index })}
         </AccordionCard>
       </StyledListItem>
     );
@@ -140,12 +115,13 @@ export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T
 
   private getHeader(key: string) {
     const { columns } = this.props;
+
     if (columns) {
       const column = columns[key];
       return typeof column === 'string' ? column : column.header;
-    } else {
-      return key;
     }
+
+    return key;
   }
 
   private renderItemProps(item: T, keys: Array<string>, row: number) {
@@ -171,6 +147,32 @@ export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T
   }
 
   render() {
-    return <StyledList borderless>{this.renderItems()}</StyledList>;
+    const {
+      data = [],
+      columns,
+      placeholder,
+      theme,
+      cardRenderer = this.renderItem,
+      bodyRenderer = defaultBodyRenderer,
+    } = this.props;
+    const keys = Object.keys(columns || data[0] || {});
+    const rows =
+      data.length === 0
+        ? placeholder
+          ? [
+              <StyledListItem theme={theme} key={0}>
+                <PlaceholderContainer theme={theme}>{placeholder}</PlaceholderContainer>
+              </StyledListItem>,
+            ]
+          : []
+        : data.map((item, index) =>
+            cardRenderer({ item, index, open: hasIndex(this.state.selectedIndexes, index), keys }),
+          );
+
+    return bodyRenderer({
+      rows,
+      mode: 'card',
+      table: ({ children }) => <StyledList borderless>{children}</StyledList>,
+    });
   }
 }

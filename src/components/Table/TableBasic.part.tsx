@@ -10,13 +10,12 @@ import {
   TableRowEvent,
   TableBodyRenderEvent,
   TableProps,
-  SortingObject,
-  SortingString,
+  TableSorting,
   Column,
 } from './Table.types.part';
 
 export interface TableBasicState {
-  sorting?: SortingObject;
+  sorting?: TableSorting;
   controlledSorting: boolean;
 }
 
@@ -187,7 +186,7 @@ function defaultBodyRenderer(e: TableBodyRenderEvent) {
   return <TableBody>{e.rows}</TableBody>;
 }
 
-function normalizeSortBy(sortBy?: SortingObject | SortingString): SortingObject | undefined {
+function normalizeSortBy(sortBy?: TableSorting | string): TableSorting | undefined {
   if (!sortBy) {
     return undefined;
   }
@@ -508,6 +507,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
         </StyledTable>
       ),
       rows,
+      mode: 'table',
     });
   }
 }

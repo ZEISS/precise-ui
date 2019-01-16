@@ -3,7 +3,7 @@ import styled, { reStyled } from '../../utils/styled';
 import { List } from '../List';
 import { ListItem } from '../ListItem';
 import { remCalc } from '../../utils/remCalc';
-import { TableProps, TableCardRendererEvent } from './Table.types.part';
+import { TableProps, TableCardRendererEvent, TableBodyRenderEvent } from './Table.types.part';
 import { defaultCellRenderer } from './TableBasic.part';
 import { distance } from '../../distance';
 
@@ -52,28 +52,14 @@ const StyledListItem = styled(ListItem)`
   }
 `;
 
+export function defaultBodyRenderer(e: TableBodyRenderEvent) {
+  const CardBody = e.table;
+  return <CardBody>{e.rows}</CardBody>;
+}
+
 export class TableCard<T> extends React.Component<TableProps<T>> {
   constructor(props: TableProps<T>) {
     super(props);
-  }
-
-  private renderItems() {
-    const { data = [], columns, placeholder, theme, cardRenderer, cardBodyRenderer } = this.props;
-    const keys = Object.keys(columns || data[0] || {});
-    const renderer = cardRenderer ? cardRenderer : this.renderItem;
-    let result = [];
-    if (data.length === 0) {
-      if (placeholder) {
-        result.push(
-          <StyledListItem theme={theme} key={0}>
-            <PlaceholderContainer theme={theme}>{placeholder}</PlaceholderContainer>
-          </StyledListItem>,
-        );
-      }
-    } else {
-      result = data.map((item, index) => renderer({ item, index, keys }));
-    }
-    return cardBodyRenderer ? cardBodyRenderer({ rows: result }) : result;
   }
 
   private renderItem = ({ item, index, keys }: TableCardRendererEvent<T>) => {
@@ -130,6 +116,30 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
   }
 
   render() {
-    return <List borderless>{this.renderItems()}</List>;
+    const {
+      data = [],
+      columns,
+      placeholder,
+      theme,
+      cardRenderer = this.renderItem,
+      bodyRenderer = defaultBodyRenderer,
+    } = this.props;
+    const keys = Object.keys(columns || data[0] || {});
+    const rows =
+      data.length === 0
+        ? placeholder
+          ? [
+              <StyledListItem theme={theme} key={0}>
+                <PlaceholderContainer theme={theme}>{placeholder}</PlaceholderContainer>
+              </StyledListItem>,
+            ]
+          : []
+        : data.map((item, index) => cardRenderer({ item, index, keys }));
+
+    return bodyRenderer({
+      table: ({ children }) => <List borderless>{children}</List>,
+      rows,
+      mode: 'card',
+    });
   }
 }
