@@ -60,19 +60,24 @@ export function withResponsive<TProps extends ResponsiveComponentProps>(
       window.removeEventListener('orientationchange', this.orientationChanged);
     }
 
-    sizeChanged = () => {
-      let width;
-      let height;
-
+    getDimension() {
       if (this.node) {
         const boundingClientRect = this.node.getBoundingClientRect();
-        width = boundingClientRect.width;
-        height = boundingClientRect.height;
+        return {
+          width: boundingClientRect.width,
+          height: boundingClientRect.height,
+        };
       } else {
         const { innerWidth, innerHeight } = window;
-        width = innerWidth;
-        height = innerHeight;
+        return {
+          width: innerWidth,
+          height: innerHeight,
+        };
       }
+    }
+
+    sizeChanged = () => {
+      const { width, height } = this.getDimension();
 
       if (width !== this.state.width || height !== this.state.height) {
         this.setState({
@@ -90,12 +95,12 @@ export function withResponsive<TProps extends ResponsiveComponentProps>(
     setNode = (node: HTMLElement | null) => (this.node = node);
 
     render() {
-      const instertedProps: ResponsiveComponentProps = {
+      const additionalProps: ResponsiveComponentProps = {
         innerRef: this.setNode,
         dimensions: this.state,
       };
 
-      const props = { ...this.props, ...instertedProps };
+      const props = { ...this.props, ...additionalProps };
       return <Component {...props} />;
     }
   };
