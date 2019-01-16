@@ -1,10 +1,13 @@
 import * as React from 'react';
 import styled from '../../utils/styled';
+import { setLabels, getPropLabel } from '../../utils/labels';
 import { ItemControls } from './ItemControlsView.part';
 import { PageControls } from './PageControls.part';
 import { SelectButtonChangeEvent } from '../SelectButton';
 
-const defaultItemsPerPageLabel = 'Items per page:';
+setLabels({
+  itemsPerPage: 'Items per page:',
+});
 
 function defaultItemsInfo(start: number, end: number, total: number) {
   return `${start} - ${end} of ${total}`;
@@ -128,17 +131,17 @@ export class PaginationBar extends React.Component<PaginationBarProps> {
       items,
       onSizeChanged,
       onPageChanged,
-      itemsPerPageLabel = defaultItemsPerPageLabel,
+      ...props
     } = this.props;
     const pages = getPages(size, items);
     const currentItem = selectedPage * size;
     const nextItem = currentItem + size;
 
     return (
-      <ControlsContainer>
+      <ControlsContainer {...props}>
         {Array.isArray(availableSizes) && availableSizes.length > 0 && (
           <ItemControls
-            label={itemsPerPageLabel}
+            label={getPropLabel(props, 'itemsPerPageLabel')}
             data={availableSizes.map(size => size.toString())}
             value={`${size}`}
             onChange={this.sizeChanged}>

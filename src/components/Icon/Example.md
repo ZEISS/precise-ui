@@ -17,9 +17,9 @@ const { Icon } = require('precise-ui');
 The `Icon` actually scales with the font (if not being told otherwise). Additionally, by default it uses the color of the font.
 
 ```jsx
-const { Icon, themes } = require('precise-ui');
+const { Icon, colors } = require('precise-ui');
 
-<div style={{ background: 'black', padding: '1em', color: themes.dark.text, fontSize: '2em' }}>
+<div style={{ background: 'black', padding: '1em', color: colors.white, fontSize: '2em' }}>
   Please <Icon name="Check" /> me
 </div>
 ```

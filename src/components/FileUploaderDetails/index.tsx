@@ -8,7 +8,6 @@ import {
   FileProgress,
   FileUploadActions,
   FileUploaderDetailsEvent,
-  TranslationLabels,
 } from './FileUploaderDetails.types.part';
 import { UploaderProgressBar } from './UploaderProgressBar.part';
 import { UploaderProgressDetails } from './UploaderProgressDetails.part';
@@ -24,23 +23,83 @@ export interface FileUploaderDetailsProps {
   /**
    * Event emitted when files to upload are selected.
    */
-  onUpload(event: FileUploaderDetailsEvent<FileItem>): void;
+  onUpload(e: FileUploaderDetailsEvent<FileItem>): void;
   /**
    * Event emitted when file upload has been canceled.
    */
-  onCancel?(event: FileUploaderDetailsEvent<FileProgress>): void;
+  onCancel?(e: FileUploaderDetailsEvent<FileProgress>): void;
   /**
    * Event emitted when file upload should be deleted.
    */
-  onDelete?(event: FileUploaderDetailsEvent<FileProgress>): void;
+  onDelete?(e: FileUploaderDetailsEvent<FileProgress>): void;
   /**
    * Event emitted when total progress overlay is closed.
    */
   onClose?(): void;
   /**
-   * Object with translations. By default standard labels are used.
+   * Optionally sets the label for the cancel all button.
    */
-  labels?: Partial<TranslationLabels>;
+  cancelAllLabel?: string;
+  /**
+   * Optionally sets the label for the file column.
+   */
+  tableHeaderFileLabel?: string;
+  /**
+   * Optionally sets the label for the status column.
+   */
+  tableHeaderStatusLabel?: string;
+  /**
+   * Optionally sets the labe for the title of the progress details modal.
+   */
+  uploadModalTitleLabel?: string;
+  /**
+   * Optionally sets the label for showing multiple files in progress.
+   */
+  itemPluralLabel?: string;
+  /**
+   * Optionally sets the label for showing a single files in progress.
+   */
+  itemSingularLabel?: string;
+  /**
+   * Optionally sets the label for scanning.
+   */
+  uploadScanningLabel?: string;
+  /**
+   * Optionally sets the label for standard progress.
+   */
+  uploadProgressLabel?: string;
+  /**
+   * Optionally sets the label for a successful upload.
+   */
+  uploadSuccessLabel?: string;
+  /**
+   * Optionally sets the label for an upload error.
+   */
+  uploadErrorLabel?: string;
+  /**
+   * Optionally sets the label for the view details button.
+   */
+  viewDetailsLabel?: string;
+  /**
+   * Optionally sets the status for canceled in the table.
+   */
+  canceledTableUploadLabel?: string;
+  /**
+   * Optionally sets the status for scanning in the table.
+   */
+  scanningTableUploadLabel?: string;
+  /**
+   * Optionally sets the status for progress in the table.
+   */
+  progressTableUploadLabel?: string;
+  /**
+   * Optionally sets the status for success in the table.
+   */
+  successTableUploadLabel?: string;
+  /**
+   * Optionally sets the status for error in the table.
+   */
+  errorTableUploadLabel?: string;
 }
 
 export interface FileUploaderDetailsState {
@@ -179,7 +238,7 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
   };
 
   render() {
-    const { labels } = this.props;
+    const { events, onCancel, onClose, onDelete, onUpload, ...props } = this.props;
     const { showDetails, showUploader, files } = this.state;
     const inprogressFiles = files.filter(item => !(item.canceled || item.error)).map(item => item.progress);
     const errorFiles = files.filter(item => item.canceled || item.error);
@@ -192,9 +251,9 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
       show && (
         <>
           <UploaderProgressDetails
+            {...props}
             open={showDetails}
             files={files}
-            labels={labels}
             onCancel={this.onCancel}
             onDelete={this.onDelete}
             onHide={this.hideDetails}
@@ -203,7 +262,7 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
           {!showDetails && (
             <StyledUploaderHost>
               <UploaderProgressBar
-                labels={labels}
+                {...props}
                 scanning={scanning}
                 progressValue={totalProgress}
                 inProgress={inprogressFiles.length}

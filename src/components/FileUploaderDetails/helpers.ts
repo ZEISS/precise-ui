@@ -1,5 +1,6 @@
 import { IconName } from '../Icon';
-import { FileProgress, ProgressStatus, TranslationLabels } from './FileUploaderDetails.types.part';
+import { FileProgress, ProgressStatus } from './FileUploaderDetails.types.part';
+import { setLabels } from '../../utils/labels';
 
 export function mergeData(newData: Array<FileProgress>, currentData: Array<FileProgress>): Array<FileProgress> {
   const all = {};
@@ -27,7 +28,7 @@ export const iconNames: { [x: string]: IconName } = {
   success: 'CheckCircle',
 };
 
-export const defaultLabels: TranslationLabels = {
+setLabels({
   tableHeaderFile: 'File',
   tableHeaderStatus: 'Status',
   errorTableUpload: 'Upload failed',
@@ -44,7 +45,7 @@ export const defaultLabels: TranslationLabels = {
   itemPlural: 'Files',
   itemSingular: 'File',
   cancelAll: 'Cancel all Uploads',
-};
+});
 
 export function getStatus(file: FileProgress): ProgressStatus {
   if (file.error) {

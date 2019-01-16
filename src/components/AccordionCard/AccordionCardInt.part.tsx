@@ -3,14 +3,20 @@ import styled, { reStyled, StyledComponentClass } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { distance } from '../../distance';
 import { StandardProps, PreciseTheme } from '../../common';
+import { setLabels, getPropLabel } from '../../utils/labels';
+
+setLabels({
+  open: 'Open Details',
+  close: 'Close Details',
+});
+
+const animationDuration = '0.3s';
+const animationFunction = 'cubic-bezier(0, 0, 0.25, 1)';
 
 export interface ActiveProps {
   open: boolean;
   onClick?(e: React.MouseEvent): void;
 }
-
-const animationDuration = '0.3s';
-const animationFunction = 'cubic-bezier(0, 0, 0.25, 1)';
 
 const StyledContainer = reStyled<ActiveProps, 'div'>('div')(
   ({
@@ -84,12 +90,13 @@ export interface AccordionCardProps extends StandardProps {
    */
   opened?: boolean;
   /**
-   * Custom loacalization can be provided.
+   * The label for opening details.
    */
-  localization?: {
-    open?: string;
-    close?: string;
-  };
+  openLabel?: string;
+  /**
+   * The label for closing details.
+   */
+  closeLabel?: string;
   /**
    * Custom render for card action button.
    */
@@ -104,11 +111,6 @@ export interface AccordionCardState {
   opened: boolean;
   controlled: boolean;
 }
-
-const defaultLocalization = {
-  open: 'Open Details',
-  close: 'Close Details',
-};
 
 export class AccordionCard extends React.Component<AccordionCardProps, AccordionCardState> {
   constructor(props: AccordionCardProps) {
@@ -133,41 +135,36 @@ export class AccordionCard extends React.Component<AccordionCardProps, Accordion
     }
   };
 
-  private renderDefaultAction = () => {
+  private renderDefaultAction = (_: RenderActionEvent) => {
     const { theme } = this.props;
-    const localization = { ...defaultLocalization, ...this.props.localization };
     const { opened } = this.state;
 
     return (
       <StyledActionContainer theme={theme} onClick={this.handleClick} open={opened}>
-        {opened ? localization.close : localization.open}
+        {getPropLabel(this.props, opened ? 'closeLabel' : 'openLabel')}
       </StyledActionContainer>
     );
   };
 
-  private renderAction = () => {
-    const { renderAction } = this.props;
+  private renderActions() {
+    const { renderAction = this.renderDefaultAction } = this.props;
     const { opened } = this.state;
-
-    if (typeof renderAction === 'function') {
-      return renderAction({ opened });
-    }
-
-    return this.renderDefaultAction();
-  };
+    return renderAction({ opened });
+  }
 
   render() {
     const { theme, children, header, ...props } = this.props;
     const { opened } = this.state;
+
     return (
       <StyledContainer {...props} theme={theme} open={opened}>
         <StyledHeaderContainer theme={theme} open={opened}>
           {header}
         </StyledHeaderContainer>
-
-        <StyledDetailsContainerAnimator open={opened}>{children}</StyledDetailsContainerAnimator>
-
-        {this.renderAction()}
+        <StyledDetailsContainerAnimator theme={theme} open={opened}>
+          {children}
+        </StyledDetailsContainerAnimator>
+        {this.renderActions()}
       </StyledContainer>
     );
   }

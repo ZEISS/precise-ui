@@ -21,7 +21,7 @@ export interface PromptProps {
  * from a screen with a form.
  */
 export class Prompt extends React.Component<PromptProps> {
-  private unblock?: () => void;
+  private unblock?(): void;
 
   static contextTypes = {
     // tslint:disable-next-line
