@@ -99,7 +99,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                         >
                           <styled.i>
                             <i
-                              className="sc-bwzfXH eBXlKd"
+                              className="sc-bdVaJa cIqOZO"
                             >
                               <KeyboardArrowLeft
                                 height="1em"
@@ -160,7 +160,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                               >
                                 <styled.i>
                                   <i
-                                    className="sc-bwzfXH eBXlKd"
+                                    className="sc-bdVaJa cIqOZO"
                                   >
                                     <ArrowDropDown
                                       height="1.5em"
@@ -318,7 +318,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                         >
                           <styled.i>
                             <i
-                              className="sc-bwzfXH eBXlKd"
+                              className="sc-bdVaJa cIqOZO"
                             >
                               <KeyboardArrowRight
                                 height="1em"
@@ -458,7 +458,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                         >
                           <styled.i>
                             <i
-                              className="sc-bwzfXH eBXlKd"
+                              className="sc-bdVaJa cIqOZO"
                             >
                               <KeyboardArrowLeft
                                 height="1em"
@@ -519,7 +519,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                               >
                                 <styled.i>
                                   <i
-                                    className="sc-bwzfXH eBXlKd"
+                                    className="sc-bdVaJa cIqOZO"
                                   >
                                     <ArrowDropDown
                                       height="1.5em"
@@ -677,7 +677,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                         >
                           <styled.i>
                             <i
-                              className="sc-bwzfXH eBXlKd"
+                              className="sc-bdVaJa cIqOZO"
                             >
                               <KeyboardArrowRight
                                 height="1em"
