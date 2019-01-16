@@ -77,6 +77,8 @@ module.exports = {
     'ic_label_24px.svg',
     'ic_account_balance_24px.svg',
     'ic_widgets_24px.svg',
+    'ic_more_horiz_24px.svg',
+    'ic_more_vert_24px.svg',
   ],
   out: 'src/components/Icon',
 };
