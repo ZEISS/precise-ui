@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '../../utils/styled';
-import { distance } from '../../distance';
+import { UploadProgressDetailsLabels, UploaderProgressBarLabels } from '../../utils/labels';
 import { EventManager, eventManagers } from '../../utils/eventManager';
 import {
   FileBase,
@@ -12,10 +12,11 @@ import {
 import { UploaderProgressBar } from './UploaderProgressBar.part';
 import { UploaderProgressDetails } from './UploaderProgressDetails.part';
 import { mergeData } from './helpers';
+import { distance } from '../../distance';
 
 export { FileUploadActions, FileItem, FileProgress, FileBase, FileUploaderDetailsEvent };
 
-export interface FileUploaderDetailsProps {
+export interface FileUploaderDetailsProps extends UploadProgressDetailsLabels, UploaderProgressBarLabels {
   /**
    * Sets the event manager to use. By default a standard event manager is used.
    */
@@ -36,70 +37,6 @@ export interface FileUploaderDetailsProps {
    * Event emitted when total progress overlay is closed.
    */
   onClose?(): void;
-  /**
-   * Optionally sets the label for the cancel all button.
-   */
-  cancelAllLabel?: string;
-  /**
-   * Optionally sets the label for the file column.
-   */
-  tableHeaderFileLabel?: string;
-  /**
-   * Optionally sets the label for the status column.
-   */
-  tableHeaderStatusLabel?: string;
-  /**
-   * Optionally sets the labe for the title of the progress details modal.
-   */
-  uploadModalTitleLabel?: string;
-  /**
-   * Optionally sets the label for showing multiple files in progress.
-   */
-  itemPluralLabel?: string;
-  /**
-   * Optionally sets the label for showing a single files in progress.
-   */
-  itemSingularLabel?: string;
-  /**
-   * Optionally sets the label for scanning.
-   */
-  uploadScanningLabel?: string;
-  /**
-   * Optionally sets the label for standard progress.
-   */
-  uploadProgressLabel?: string;
-  /**
-   * Optionally sets the label for a successful upload.
-   */
-  uploadSuccessLabel?: string;
-  /**
-   * Optionally sets the label for an upload error.
-   */
-  uploadErrorLabel?: string;
-  /**
-   * Optionally sets the label for the view details button.
-   */
-  viewDetailsLabel?: string;
-  /**
-   * Optionally sets the status for canceled in the table.
-   */
-  canceledTableUploadLabel?: string;
-  /**
-   * Optionally sets the status for scanning in the table.
-   */
-  scanningTableUploadLabel?: string;
-  /**
-   * Optionally sets the status for progress in the table.
-   */
-  progressTableUploadLabel?: string;
-  /**
-   * Optionally sets the status for success in the table.
-   */
-  successTableUploadLabel?: string;
-  /**
-   * Optionally sets the status for error in the table.
-   */
-  errorTableUploadLabel?: string;
 }
 
 export interface FileUploaderDetailsState {

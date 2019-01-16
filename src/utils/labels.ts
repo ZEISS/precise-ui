@@ -1,15 +1,105 @@
-export interface Labels {
+interface Labels {
   [key: string]: string;
 }
 
+export interface UploadProgressDetailsLabels {
+  /**
+   * Optionally sets the label for the cancel all button.
+   */
+  cancelAllLabel?: string;
+  /**
+   * Optionally sets the label for the file column.
+   */
+  tableHeaderFileLabel?: string;
+  /**
+   * Optionally sets the label for the status column.
+   */
+  tableHeaderStatusLabel?: string;
+  /**
+   * Optionally sets the labe for the title of the progress details modal.
+   */
+  uploadModalTitleLabel?: string;
+  /**
+   * Optionally sets the status for canceled in the table.
+   */
+  canceledTableUploadLabel?: string;
+  /**
+   * Optionally sets the status for scanning in the table.
+   */
+  scanningTableUploadLabel?: string;
+  /**
+   * Optionally sets the status for progress in the table.
+   */
+  progressTableUploadLabel?: string;
+  /**
+   * Optionally sets the status for success in the table.
+   */
+  successTableUploadLabel?: string;
+  /**
+   * Optionally sets the status for error in the table.
+   */
+  errorTableUploadLabel?: string;
+}
+
+export interface UploaderProgressBarLabels {
+  /**
+   * Optionally sets the label for showing multiple files in progress.
+   */
+  itemPluralLabel?: string;
+  /**
+   * Optionally sets the label for showing a single files in progress.
+   */
+  itemSingularLabel?: string;
+  /**
+   * Optionally sets the label for scanning.
+   */
+  uploadScanningLabel?: string;
+  /**
+   * Optionally sets the label for standard progress.
+   */
+  uploadProgressLabel?: string;
+  /**
+   * Optionally sets the label for a successful upload.
+   */
+  uploadSuccessLabel?: string;
+  /**
+   * Optionally sets the label for an upload error.
+   */
+  uploadErrorLabel?: string;
+  /**
+   * Optionally sets the label for the view details button.
+   */
+  viewDetailsLabel?: string;
+}
+
+export interface PaginationBarLabels {
+  /**
+   * The items per page label.
+   * @default 'Items per page:'
+   */
+  itemsPerPageLabel?: string;
+}
+
+export interface AccordionCardLabels {
+  /**
+   * The label for opening details.
+   */
+  openLabel?: string;
+  /**
+   * The label for closing details.
+   */
+  closeLabel?: string;
+}
+
+export type LabelOverwrite = UploadProgressDetailsLabels &
+  UploaderProgressBarLabels &
+  PaginationBarLabels &
+  AccordionCardLabels;
+
 const defaultLabels: Labels = {};
 
-export function setLabels(labels: Labels) {
-  for (const key of Object.keys(labels)) {
-    const value = labels[key];
-    defaultLabels[key] = value;
-    defaultLabels[key + 'Label'] = value;
-  }
+export function setLabels(labels: LabelOverwrite) {
+  Object.assign(defaultLabels, labels);
 }
 
 export function getLabel(key: string) {

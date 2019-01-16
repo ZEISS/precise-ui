@@ -1,12 +1,12 @@
 import * as React from 'react';
 import styled from '../../utils/styled';
-import { setLabels, getPropLabel } from '../../utils/labels';
+import { setLabels, getPropLabel, PaginationBarLabels } from '../../utils/labels';
 import { ItemControls } from './ItemControlsView.part';
 import { PageControls } from './PageControls.part';
 import { SelectButtonChangeEvent } from '../SelectButton';
 
 setLabels({
-  itemsPerPage: 'Items per page:',
+  itemsPerPageLabel: 'Items per page:',
 });
 
 function defaultItemsInfo(start: number, end: number, total: number) {
@@ -44,7 +44,7 @@ export interface PaginationBarPageChangedEvent {
   page: number;
 }
 
-export interface PaginationBarProps {
+export interface PaginationBarProps extends PaginationBarLabels {
   /**
    * The available maximum numbers of entries per page to choose from, if any.
    */
@@ -71,11 +71,6 @@ export interface PaginationBarProps {
    * @default '{start} - {end} of {total}'
    */
   itemsInfo?(start: number, end: number, total: number): React.ReactChild;
-  /**
-   * The items per page label.
-   * @default 'Items per page:'
-   */
-  itemsPerPageLabel?: string;
   /**
    * Event fired when the size per page has been changed.
    */

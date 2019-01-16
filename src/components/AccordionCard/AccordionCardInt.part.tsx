@@ -3,11 +3,11 @@ import styled, { reStyled, StyledComponentClass } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { distance } from '../../distance';
 import { StandardProps, PreciseTheme } from '../../common';
-import { setLabels, getPropLabel } from '../../utils/labels';
+import { setLabels, getPropLabel, AccordionCardLabels } from '../../utils/labels';
 
 setLabels({
-  open: 'Open Details',
-  close: 'Close Details',
+  openLabel: 'Open Details',
+  closeLabel: 'Close Details',
 });
 
 const animationDuration = '0.3s';
@@ -76,7 +76,7 @@ export interface ActionClickEvent {
   opened: boolean;
 }
 
-export interface AccordionCardProps extends StandardProps {
+export interface AccordionCardProps extends StandardProps, AccordionCardLabels {
   /**
    * Displays card header.
    */
@@ -89,14 +89,6 @@ export interface AccordionCardProps extends StandardProps {
    * Determines if details are open for the card.
    */
   opened?: boolean;
-  /**
-   * The label for opening details.
-   */
-  openLabel?: string;
-  /**
-   * The label for closing details.
-   */
-  closeLabel?: string;
   /**
    * Custom render for card action button.
    */
