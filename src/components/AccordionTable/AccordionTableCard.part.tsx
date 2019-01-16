@@ -56,6 +56,12 @@ const StyledListItem = styled(ListItem)`
   }
 `;
 
+interface AccordionTableCardHostProps {
+  borderless: boolean;
+}
+
+const AccordionTableCardHost: React.SFC<AccordionTableCardHostProps> = props => <StyledList {...props} />;
+
 export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T>, AccordionTableCardState> {
   constructor(props: AccordionTableProps<T>) {
     super(props);
@@ -154,6 +160,7 @@ export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T
       theme,
       cardRenderer = this.renderItem,
       bodyRenderer = defaultBodyRenderer,
+      ...props
     } = this.props;
     const keys = Object.keys(columns || data[0] || {});
     const rows =
@@ -172,7 +179,12 @@ export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T
     return bodyRenderer({
       rows,
       mode: 'card',
-      table: ({ children }) => <StyledList borderless>{children}</StyledList>,
+      props: {
+        theme,
+        borderless: true,
+        ...props,
+      },
+      table: AccordionTableCardHost,
     });
   }
 }

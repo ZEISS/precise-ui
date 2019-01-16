@@ -64,6 +64,10 @@ export interface TableBodyRenderEvent {
    */
   table: React.StatelessComponent;
   /**
+   * The properties that would be handled by the host.
+   */
+  props: any;
+  /**
    * The rows of the table to be rendered.
    */
   rows: React.ReactNode;

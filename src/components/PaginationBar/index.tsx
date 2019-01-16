@@ -133,7 +133,7 @@ export class PaginationBar extends React.Component<PaginationBarProps> {
     const nextItem = currentItem + size;
 
     return (
-      <ControlsContainer {...props}>
+      <ControlsContainer>
         {Array.isArray(availableSizes) && availableSizes.length > 0 && (
           <ItemControls
             label={getPropLabel(props, 'itemsPerPageLabel')}

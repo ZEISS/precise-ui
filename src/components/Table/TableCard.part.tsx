@@ -57,6 +57,12 @@ export function defaultBodyRenderer(e: TableBodyRenderEvent) {
   return <CardBody>{e.rows}</CardBody>;
 }
 
+interface TableCardHostProps {
+  borderless: boolean;
+}
+
+const TableCardHost: React.SFC<TableCardHostProps> = props => <List {...props} />;
+
 export class TableCard<T> extends React.Component<TableProps<T>> {
   constructor(props: TableProps<T>) {
     super(props);
@@ -123,6 +129,7 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
       theme,
       cardRenderer = this.renderItem,
       bodyRenderer = defaultBodyRenderer,
+      ...props
     } = this.props;
     const keys = Object.keys(columns || data[0] || {});
     const rows =
@@ -137,7 +144,12 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
         : data.map((item, index) => cardRenderer({ item, index, keys }));
 
     return bodyRenderer({
-      table: ({ children }) => <List borderless>{children}</List>,
+      table: TableCardHost,
+      props: {
+        theme,
+        borderless: true,
+        ...props,
+      },
       rows,
       mode: 'card',
     });
