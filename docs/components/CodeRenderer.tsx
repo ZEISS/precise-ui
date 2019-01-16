@@ -8,7 +8,7 @@ const CodeBox = styled.code`
   font-size: inherit;
   color: inherit;
   background: transparent;
-  white-space: inherit;
+  white-space: pre-wrap;
 `;
 
 const CodeRenderer: React.SFC<CodeRendererProps> = ({ children }) => {

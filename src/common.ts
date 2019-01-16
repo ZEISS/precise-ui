@@ -157,7 +157,7 @@ export type PreciseThemeColors = {
    */
   ui6: string;
   /**
-   * Theme color UI6.
+   * Theme color UI7.
    */
   ui7: string;
   /**
@@ -303,14 +303,6 @@ export interface PreciseFullTheme extends PreciseThemeColors {
    * Breakpoint values for the responsive design.
    */
   breakpoints: Breakpoints;
-  /**
-   * Background color of hovered action link.
-   */
-  actionLinkHoverBackground: string;
-  /**
-   * Font color of disabled action link.
-   */
-  actionLinkDisabledText: string;
   /**
    * Color of not specified notification,
    */
@@ -488,6 +480,14 @@ export interface TextInputProps extends LabeledInputProps<string> {
    * clearable is given.
    */
   icon?: React.ReactChild;
+}
+
+export interface RefProps {
+  /**
+   * Callback to be used to get the referenced DOM node.
+   * @param node The node that is used.
+   */
+  innerRef?(node: HTMLElement | null): void;
 }
 
 export type ScreenSize = 'small' | 'smallAndMedium' | 'medium' | 'mediumAndLarge' | 'large';

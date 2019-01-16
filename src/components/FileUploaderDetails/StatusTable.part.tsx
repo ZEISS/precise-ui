@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled, { reStyled, themed } from '../../utils/styled';
 import { Icon } from '../Icon';
 import { ProgressBar } from '../ProgressBar';
-import { Table, TableCellEvent, TableRowEvent } from '../Table';
+import { Table, TableCellEvent, TableRowEvent, TableProps } from '../Table';
 import { ActionIconContainer } from './ActionIconContainer.part';
 import { FileProgress, FileUploaderDetailsEvent, TranslationLabels } from './FileUploaderDetails.types.part';
 import { StatusIcon } from './StatusIcon.part';

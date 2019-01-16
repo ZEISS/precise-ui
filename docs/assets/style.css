@@ -111,3 +111,7 @@ html, body {
     opacity: 0;
   }
 }
+
+p > img {
+  max-width: 100%;
+}

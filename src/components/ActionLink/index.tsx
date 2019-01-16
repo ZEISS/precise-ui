@@ -20,14 +20,18 @@ export interface StyledActionLink {
 
 const PseudoLinkStyle = css`
   &:hover {
-    color: ${themed(props => props.theme.actionLinkHoverBackground)};
+    color: ${themed(props => props.theme.ui6)};
+  }
+  &:focus {
+    color: ${themed(props => props.theme.ui7)};
+    outline: none;
   }
 `;
 
 const StyledActionLink = styled(Anchor)`
-  font-weight: bold;
+  font-weight: 500;
   text-decoration: none;
-  color: ${themed(props => (props.disabled ? props.theme.actionLinkDisabledText : props.theme.fill))};
+  color: ${themed(props => (props.disabled ? props.theme.text3 : props.theme.fill))};
   display: ${(props: StyledActionLink) => (props.block ? 'block' : 'inline-block')};
   cursor: ${(props: StyledActionLink) => (props.disabled ? 'default' : 'pointer')};
   ${(props: StyledActionLink) => (!props.disabled ? PseudoLinkStyle : '')};

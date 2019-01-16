@@ -21,13 +21,13 @@ describe('<InputInfo />', () => {
   });
 
   it('should be shown with the withValidator hoc if not changed', () => {
-    const RequiredTextField = withValidator(TextField, ({ value }) => !value && 'Input is required');
+    const RequiredTextField = withValidator(({ value }) => !value && 'Input is required')(TextField);
     const wrapper = enzyme.mount(<RequiredTextField info="Required input" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should not be shown with the withValidator hoc if changed', () => {
-    const RequiredTextField = withValidator(TextField, ({ value }) => !value && 'Input is required');
+    const RequiredTextField = withValidator(({ value }) => !value && 'Input is required')(TextField);
     const wrapper = enzyme.mount(<RequiredTextField info="Required input" />);
     (wrapper.instance() as any).validate({
       value: '',

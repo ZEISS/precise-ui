@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter, Redirect, Switch, Route } from 'react-router-dom';
 import { styled, distance, transparentize, colors, themes, Responsive } from '../../src';
+import { MobileMenu } from './MobileMenu';
 import { ThemeProvider } from '../../src/utils/styled';
 // @ts-ignore
 import Ribbon from 'react-styleguidist/lib/rsg-components/Ribbon';
@@ -32,6 +33,7 @@ const TocColumn = styled.div`
 `;
 
 const HeadLine = styled.div`
+  position: relative;
   padding-top: ${distance.medium};
   display: flex;
   height: 85px;
@@ -57,6 +59,7 @@ const ContentColumn = styled.div`
 
 const Info = styled.div`
   padding: ${distance.medium};
+  margin-bottom: ${distance.medium};
 `;
 
 const Title = styled.div`
@@ -65,7 +68,7 @@ const Title = styled.div`
 `;
 
 const Version = styled.div`
-  margin-bottom: ${distance.medium};
+  color: ${colors.grey3};
 `;
 
 interface StyleGuideRendererProps {
@@ -105,24 +108,25 @@ const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ title, version
                 )}
                 <ContentColumn>
                   <Switch>
-                    <Redirect exact from="/" to="/basics" />
+                    <Redirect exact from="/" to="/getting-started" />
                     <Route render={() => children} />
                   </Switch>
                 </ContentColumn>
               </DesktopContainer>
             ) : (
               <MobileContainer>
-                <Ribbon />
                 <Route component={ScrollToTop} />
                 <HeadLine>
+                  <MobileMenu toc={toc} />
                   <LogoSpace>
                     <Logo />
                   </LogoSpace>
-                  <span>{version}</span>
+                  <Version>{version}</Version>
                 </HeadLine>
+                <Ribbon />
                 <MobileContent>
                   <Switch>
-                    <Redirect exact from="/" to="/basics" />
+                    <Redirect exact from="/" to="/getting-started" />
                     <Route render={() => children} />
                   </Switch>
                 </MobileContent>

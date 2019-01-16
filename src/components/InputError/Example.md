@@ -3,7 +3,7 @@ The `InputError` is implicitly used in many components. We can either explicitly
 ```jsx
 const { TextField, withValidator } = require('precise-ui');
 
-const RequiredTextField = withValidator(TextField, ({ value }) => !value && 'Input is required');
+const RequiredTextField = withValidator(({ value }) => !value && 'Input is required')(TextField);
 
 <RequiredTextField />
 ```
@@ -13,7 +13,7 @@ Of course, validators may be chained. The following snippet displays an error fo
 ```jsx
 const { Toggle, withValidator } = require('precise-ui');
 
-const MyToggle = withValidator(withValidator(Toggle, ({ value }) => !value && "You need to agree"), ({ value }) => value && "You agreed");
+const MyToggle = withValidator(({ value }) => (!value && "You need to agree") || (value && "You agreed"))(Toggle);
 
 <MyToggle>Agree</MyToggle>
 ```
@@ -23,7 +23,7 @@ All input components (e.g., the `Slider`) can be decorated with a validator.
 ```jsx
 const { Slider, withValidator } = require('precise-ui');
 
-const MySlider = withValidator(withValidator(Slider, ({ value }) => value < 10 && "You need to have at least 10"), ({ value }) => value > 90 && "You need to have at most 90");
+const MySlider = withValidator(({ value }) => (value < 10 && "You need to have at least 10") || (value > 90 && "You need to have at most 90"))(Slider);
 
 <MySlider minimum={0} maximum={100} defaultValue={50}>Agree</MySlider>
 ```
@@ -33,7 +33,7 @@ This way we can ensure that certain conditions are always met.
 ```jsx
 const { DropdownField, withValidator } = require('precise-ui');
 
-const TwoElementDropdown = withValidator(DropdownField, ({ value }) => value.length !== 2 && 'You need to choose two');
+const TwoElementDropdown = withValidator(({ value }) => value.length !== 2 && 'You need to choose two')(DropdownField);
 
 <TwoElementDropdown multiple data={[ 'iOS', 'Android', 'FireOS', 'Windows Phone', 'Firefox OS' ]} />
 ```
@@ -43,7 +43,7 @@ Enforcing some password rules.
 ```jsx
 const { PasswordField, withValidator } = require('precise-ui');
 
-const RuledPasswordField = withValidator(PasswordField, ({ value }) => !/(?=.{6,})(?=.*?[A-Z]).*?[a-z].*/.test(value) && 'You need at least 6 characters, one upper case and a lower case.');
+const RuledPasswordField = withValidator(({ value }) => !/(?=.{6,})(?=.*?[A-Z]).*?[a-z].*/.test(value) && 'You need at least 6 characters, one upper case and a lower case.')(PasswordField);
 
 <RuledPasswordField />
 ```
