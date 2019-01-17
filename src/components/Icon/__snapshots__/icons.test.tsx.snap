@@ -810,6 +810,42 @@ exports[`Generated icons should render Menu icon 1`] = `
 </Menu>
 `;
 
+exports[`Generated icons should render MoreHoriz icon 1`] = `
+<MoreHoriz
+  height="12"
+  viewBox="0 0 24 24"
+  width="12"
+>
+  <svg
+    height="12"
+    viewBox="0 0 24 24"
+    width="12"
+  >
+    <path
+      d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+    />
+  </svg>
+</MoreHoriz>
+`;
+
+exports[`Generated icons should render MoreVert icon 1`] = `
+<MoreVert
+  height="12"
+  viewBox="0 0 24 24"
+  width="12"
+>
+  <svg
+    height="12"
+    viewBox="0 0 24 24"
+    width="12"
+  >
+    <path
+      d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+    />
+  </svg>
+</MoreVert>
+`;
+
 exports[`Generated icons should render Notifications icon 1`] = `
 <Notifications
   height="12"
