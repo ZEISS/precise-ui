@@ -73,18 +73,6 @@ const StyledIcon = styled<StyledArrowProps>(StyledIconInt)`
   transform: ${({ isRotated }) => `rotate(${isRotated ? 90 : 0}deg)`};
 `;
 
-function pickCell(key: string, cells: React.ReactNode) {
-  if (cells && Array.isArray(cells)) {
-    return cells.find(cell => isReactElement(cell) && cell.key === key);
-  }
-
-  return undefined;
-}
-
-function isReactElement(cell: React.ReactNode): cell is React.ReactElement<any> {
-  return !!cell && typeof cell === 'object' && 'key' in cell;
-}
-
 export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<T>, AccordionTableBasicState> {
   static defaultProps = {
     multiple: false,
@@ -183,7 +171,7 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
       const cols = {
         '': {
           header: '',
-          width: remCalc('60px'),
+          width: remCalc('50px'),
           sortable: false,
         },
       };
