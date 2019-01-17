@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, keyframes } from '../../src';
+import { reStyled, keyframes } from '../../src';
 
 interface RibbonRendererProps {
   url: string;
@@ -18,7 +18,8 @@ const GitHubCatAnimation = keyframes`
   }
 `;
 
-const GitHubCat = styled.a`
+const GitHubCat = reStyled.a<React.AnchorHTMLAttributes<HTMLAnchorElement>>(
+  ({ theme }) => `
   &:hover .octo-arm {
     animation: ${GitHubCatAnimation} 560ms ease-in-out;
   }
@@ -34,14 +35,15 @@ const GitHubCat = styled.a`
   }
 
   svg {
-    fill: #70b7fd;
+    fill: ${theme.ui0};
     color: #fff;
     position: absolute;
     top: 0;
     border: 0;
     right: 0;
   }
-`;
+`,
+);
 
 const RibbonRenderer: React.SFC<RibbonRendererProps> = ({ url, text }) => {
   return (

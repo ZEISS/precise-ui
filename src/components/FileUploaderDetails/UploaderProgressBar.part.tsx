@@ -1,13 +1,14 @@
 import * as React from 'react';
-import { Icon, IconName } from '../Icon';
-import { ProgressStatus, TranslationLabels } from './FileUploaderDetails.types.part';
-import { defaultLabels, iconNames } from './helpers';
 import styled, { reStyled } from '../../utils/styled';
+import { Icon, IconName } from '../Icon';
+import { ProgressStatus } from './FileUploaderDetails.types.part';
+import { iconNames } from './helpers';
 import { ActionIconContainer } from './ActionIconContainer.part';
 import { ActionLink } from '../ActionLink';
 import { ProgressBar } from '../ProgressBar';
 import { StatusIcon } from './StatusIcon.part';
 import { distance } from '../../distance';
+import { getPropLabel } from '../../utils/labels';
 
 const ProgressBarWrapper = reStyled.div(
   ({ theme }) => `
@@ -53,20 +54,19 @@ export interface StatusBarProps {
   iconName: IconName;
   count: number;
   title: string;
-  labels: Partial<TranslationLabels>;
+  itemPluralLabel?: string;
+  itemSingularLabel?: string;
 }
 
 const StatusLabel = styled.span`
   padding-left: ${distance.medium};
 `;
 
-function StatusBar({ status, count, iconName, title, labels }: StatusBarProps) {
+function StatusBar({ status, count, iconName, title, ...props }: StatusBarProps) {
   return (
     <StyledStatusBar>
       <StatusIcon name={iconName} type={status} />
-      {`${count} ${
-        count > 1 ? labels.itemPlural || defaultLabels.itemPlural : labels.itemSingular || defaultLabels.itemSingular
-      }`}
+      {`${count} ${count > 1 ? getPropLabel(props, 'itemPluralLabel') : getPropLabel(props, 'itemSingularLabel')}`}
       <StatusLabel>{title}</StatusLabel>
     </StyledStatusBar>
   );
@@ -81,10 +81,6 @@ export interface UploaderProgressBarProps {
    * Determines if scanning is currently in progress.
    */
   scanning: boolean;
-  /**
-   * Object with translations. By default standard labels are used.
-   */
-  labels?: Partial<TranslationLabels>;
   /**
    * Event emitted when the status should be closed fully.
    */
@@ -105,17 +101,45 @@ export interface UploaderProgressBarProps {
    * Number of files that have failed.
    */
   errors: number;
+  /**
+   * Optionally sets the label for showing multiple files in progress.
+   */
+  itemPluralLabel?: string;
+  /**
+   * Optionally sets the label for showing a single files in progress.
+   */
+  itemSingularLabel?: string;
+  /**
+   * Optionally sets the label for scanning.
+   */
+  uploadScanningLabel?: string;
+  /**
+   * Optionally sets the label for standard progress.
+   */
+  uploadProgressLabel?: string;
+  /**
+   * Optionally sets the label for a successful upload.
+   */
+  uploadSuccessLabel?: string;
+  /**
+   * Optionally sets the label for an upload error.
+   */
+  uploadErrorLabel?: string;
+  /**
+   * Optionally sets the label for the view details button.
+   */
+  viewDetailsLabel?: string;
 }
 
 export const UploaderProgressBar: React.SFC<UploaderProgressBarProps> = ({
   total,
-  labels = defaultLabels,
   onClose,
   onShow,
   progressValue,
   inProgress,
   scanning,
   errors,
+  ...props
 }) => {
   const completed = progressValue >= 100;
 
@@ -126,42 +150,42 @@ export const UploaderProgressBar: React.SFC<UploaderProgressBarProps> = ({
           {!completed || scanning ? (
             inProgress > 0 && (
               <StatusBar
+                {...props}
                 count={total}
                 iconName={iconNames.progress}
                 title={
                   completed && scanning
-                    ? labels.uploadScanning || defaultLabels.uploadScanning
-                    : labels.uploadProgress || defaultLabels.uploadProgress
+                    ? getPropLabel(props, 'uploadScanningLabel')
+                    : getPropLabel(props, 'uploadProgressLabel')
                 }
                 status={completed && scanning ? 'scanning' : 'progress'}
-                labels={labels}
               />
             )
           ) : (
             <>
               {inProgress > 0 && (
                 <StatusBar
+                  {...props}
                   count={inProgress}
                   iconName={iconNames.success}
-                  title={labels.uploadSuccess || defaultLabels.uploadSuccess}
+                  title={getPropLabel(props, 'uploadSuccessLabel')}
                   status="success"
-                  labels={labels}
                 />
               )}
               {errors > 0 && (
                 <StatusBar
+                  {...props}
                   count={errors}
                   iconName={iconNames.error}
-                  title={labels.uploadError || defaultLabels.uploadError}
+                  title={getPropLabel(props, 'uploadErrorLabel')}
                   status="error"
-                  labels={labels}
                 />
               )}
             </>
           )}
         </StatusBarGroup>
         <ActionGroup>
-          <ActionLink onClick={onShow}>{labels.viewDetails || defaultLabels.viewDetails}</ActionLink>
+          <ActionLink onClick={onShow}>{getPropLabel(props, 'viewDetailsLabel')}</ActionLink>
           {completed && !scanning && (
             <ActionIconContainer onClick={onClose}>
               <Icon name="Close" />

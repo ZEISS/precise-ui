@@ -57,19 +57,30 @@ module.exports = {
     {
       name: 'Styleguide',
       sectionDepth: 1,
-      content: path.resolve(__dirname, './docs/basics/index.md'),
+      content: path.resolve(__dirname, './docs/styleguide/index.md'),
       sections: [
         {
           name: 'Colors',
-          content: path.resolve(__dirname, 'docs/basics/colors.md'),
+          content: path.resolve(__dirname, 'docs/styleguide/colors.md'),
         },
         {
           name: 'Pattern Library',
-          content: path.resolve(__dirname, 'docs/basics/pattern.md'),
+          content: path.resolve(__dirname, 'docs/styleguide/pattern.md'),
         },
         {
           name: 'Types',
-          content: path.resolve(__dirname, 'docs/basics/types.md'),
+          content: path.resolve(__dirname, 'docs/styleguide/types.md'),
+        },
+      ],
+    },
+    {
+      name: 'Theme',
+      sectionDepth: 1,
+      content: path.resolve(__dirname, './docs/theme/index.md'),
+      sections: [
+        {
+          name: 'Colors',
+          content: path.resolve(__dirname, 'docs/theme/colors.md'),
         },
       ],
     },

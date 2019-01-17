@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '../../utils/styled';
-import { distance } from '../../distance';
+import { UploadProgressDetailsLabels, UploaderProgressBarLabels } from '../../utils/labels';
 import { EventManager, eventManagers } from '../../utils/eventManager';
 import {
   FileBase,
@@ -8,15 +8,15 @@ import {
   FileProgress,
   FileUploadActions,
   FileUploaderDetailsEvent,
-  TranslationLabels,
 } from './FileUploaderDetails.types.part';
 import { UploaderProgressBar } from './UploaderProgressBar.part';
 import { UploaderProgressDetails } from './UploaderProgressDetails.part';
 import { mergeData } from './helpers';
+import { distance } from '../../distance';
 
 export { FileUploadActions, FileItem, FileProgress, FileBase, FileUploaderDetailsEvent };
 
-export interface FileUploaderDetailsProps {
+export interface FileUploaderDetailsProps extends UploadProgressDetailsLabels, UploaderProgressBarLabels {
   /**
    * Sets the event manager to use. By default a standard event manager is used.
    */
@@ -24,23 +24,19 @@ export interface FileUploaderDetailsProps {
   /**
    * Event emitted when files to upload are selected.
    */
-  onUpload(event: FileUploaderDetailsEvent<FileItem>): void;
+  onUpload(e: FileUploaderDetailsEvent<FileItem>): void;
   /**
    * Event emitted when file upload has been canceled.
    */
-  onCancel?(event: FileUploaderDetailsEvent<FileProgress>): void;
+  onCancel?(e: FileUploaderDetailsEvent<FileProgress>): void;
   /**
    * Event emitted when file upload should be deleted.
    */
-  onDelete?(event: FileUploaderDetailsEvent<FileProgress>): void;
+  onDelete?(e: FileUploaderDetailsEvent<FileProgress>): void;
   /**
    * Event emitted when total progress overlay is closed.
    */
   onClose?(): void;
-  /**
-   * Object with translations. By default standard labels are used.
-   */
-  labels?: Partial<TranslationLabels>;
 }
 
 export interface FileUploaderDetailsState {
@@ -179,7 +175,7 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
   };
 
   render() {
-    const { labels } = this.props;
+    const { events, onCancel, onClose, onDelete, onUpload, ...props } = this.props;
     const { showDetails, showUploader, files } = this.state;
     const inprogressFiles = files.filter(item => !(item.canceled || item.error)).map(item => item.progress);
     const errorFiles = files.filter(item => item.canceled || item.error);
@@ -192,9 +188,9 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
       show && (
         <>
           <UploaderProgressDetails
+            {...props}
             open={showDetails}
             files={files}
-            labels={labels}
             onCancel={this.onCancel}
             onDelete={this.onDelete}
             onHide={this.hideDetails}
@@ -203,7 +199,7 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
           {!showDetails && (
             <StyledUploaderHost>
               <UploaderProgressBar
-                labels={labels}
+                {...props}
                 scanning={scanning}
                 progressValue={totalProgress}
                 inProgress={inprogressFiles.length}

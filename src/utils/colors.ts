@@ -118,9 +118,14 @@ export function parseColor(color: string): RGBAColor {
   };
 }
 
+export function serializeColor(c: RGBAColor): string {
+  return `rgba(${c.r}, ${c.g}, ${c.b}, ${c.a})`;
+}
+
 export function transparentize(color: string, alpha: number): string {
   const c = parseColor(color);
-  return `rgba(${c.r}, ${c.g}, ${c.b}, ${alpha})`;
+  c.a = alpha;
+  return serializeColor(c);
 }
 
 export function invertColor(color: string, blackWhite = false) {

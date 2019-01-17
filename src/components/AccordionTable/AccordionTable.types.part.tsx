@@ -56,7 +56,7 @@ export interface AccordionTableProps<T> extends TableProps<T> {
   /**
    * Custom card renderer for component for `AccordionTableMode.card` mode.
    */
-  cardRenderer?: (e: AccordionTableCardRendererEvent<T>) => React.ReactChild;
+  cardRenderer?(e: AccordionTableCardRendererEvent<T>): React.ReactChild;
   /**
    * Label for button 'Open' in card view.
    */

@@ -2,8 +2,8 @@ import * as React from 'react';
 import * as enzyme from 'enzyme';
 import { Autocomplete } from './';
 import { InteractiveList } from '../InteractiveList';
+import { KeyCodes } from '../../utils/keyCodes';
 import 'jest-styled-components';
-import { KeyCodes } from '../../utils';
 
 describe('<Autocomplete />', () => {
   it('should render <Autocomplete> component', () => {

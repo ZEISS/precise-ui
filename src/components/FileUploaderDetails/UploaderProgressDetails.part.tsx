@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled from '../../utils/styled';
+import { getPropLabel, UploadProgressDetailsLabels } from '../../utils/labels';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from '../Modal';
-import { FileProgress, FileUploaderDetailsEvent, TranslationLabels } from './FileUploaderDetails.types.part';
+import { FileProgress, FileUploaderDetailsEvent } from './FileUploaderDetails.types.part';
 import { StatusTable } from './StatusTable.part';
-import { defaultLabels } from './helpers';
 import { IconLink } from '../IconLink';
 
 const StyledModalBody = styled(ModalBody)`
@@ -15,27 +15,23 @@ const StyledModal = styled(Modal)`
   max-width: 600px;
 `;
 
-export interface UploaderProgressDetailsProps {
+export interface UploaderProgressDetailsProps extends UploadProgressDetailsLabels {
   /**
    * Determines if the details are shown or not.
    */
-  open: boolean;
+  open?: boolean;
   /**
    * Uploading files with progress value.
    */
   files: Array<FileProgress>;
   /**
-   * Object with translations. By default standard labels are used.
-   */
-  labels?: Partial<TranslationLabels>;
-  /**
    * Event emitted when upload canceled for individual or all files.
    */
-  onCancel(event: FileUploaderDetailsEvent<FileProgress>): void;
+  onCancel(e: FileUploaderDetailsEvent<FileProgress>): void;
   /**
    * Event emitted when upload deleted for individual or all files.
    */
-  onDelete(event: FileUploaderDetailsEvent<FileProgress>): void;
+  onDelete(e: FileUploaderDetailsEvent<FileProgress>): void;
   /**
    * Event emitted when details should be hidden.
    */
@@ -56,19 +52,19 @@ export class UploaderProgressDetails extends React.Component<UploaderProgressDet
   };
 
   render() {
-    const { open, files, labels = defaultLabels, onCancel, onDelete, onHide, progressValue } = this.props;
+    const { open, files, onCancel, onDelete, onHide, progressValue, ...props } = this.props;
     const completed = progressValue >= 100;
 
     return (
-      <StyledModal open={open} onClose={onHide}>
-        <ModalHeader title={labels.uploadModalTitle || defaultLabels.uploadModalTitle} />
+      <StyledModal open={open} onClose={onHide} {...props}>
+        <ModalHeader title={getPropLabel(props, 'uploadModalTitleLabel')} />
         <StyledModalBody>
-          <StatusTable labels={labels} files={files} onCancel={onCancel} onDelete={onDelete} />
+          <StatusTable {...props} onCancel={onCancel} onDelete={onDelete} files={files} />
         </StyledModalBody>
         {!completed && (
           <ModalFooter>
             <IconLink onClick={this.cancelAll} icon="Close">
-              {labels.cancelAll || defaultLabels.cancelAll}
+              {getPropLabel(props, 'cancelAllLabel')}
             </IconLink>
           </ModalFooter>
         )}

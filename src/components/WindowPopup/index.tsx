@@ -1,8 +1,9 @@
 import * as React from 'react';
+import styled, { themed } from '../../utils/styled';
+import { remCalc } from '../../utils/remCalc';
 import { StandardProps } from '../../common';
 import { Blocker, BlockerProps } from '../Blocker';
 import { CloseButton } from '../CloseButton';
-import { styled, themed, remCalc } from '../../utils';
 import { distance } from '../../distance';
 
 const StyledMobileDropdownWrapper = styled.div`

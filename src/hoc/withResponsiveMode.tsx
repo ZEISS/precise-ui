@@ -35,7 +35,6 @@ export function withResponsiveMode<TModes>(getMode: GetModeType<TModes>) {
       class ModeProvider extends React.Component<TProps, ModeProviderState<TModes>> {
         constructor(props: TProps) {
           super(props);
-
           this.state = {
             controlled: props.mode !== undefined,
             mode: props.mode || getMode(props.dimensions && props.dimensions.width),

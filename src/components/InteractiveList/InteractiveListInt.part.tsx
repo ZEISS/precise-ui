@@ -8,12 +8,12 @@ import {
   InteractiveListProps,
   InteractiveListState,
 } from './InteractiveList.types.part';
+import { Icon } from '../Icon';
 import { Checkbox } from '../Checkbox';
-import { remCalc } from '../../utils';
-import { distance } from '../../distance';
+import { remCalc } from '../../utils/remCalc';
 import { KeyCodes } from '../../utils/keyCodes';
 import { pacificBlue, transparent } from '../../colors';
-import { Icon } from '../Icon';
+import { distance } from '../../distance';
 
 interface ListItemProps {
   selected: boolean;

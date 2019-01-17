@@ -64,9 +64,17 @@ export interface TableBodyRenderEvent {
    */
   table: React.StatelessComponent;
   /**
+   * The properties that would be handled by the host.
+   */
+  props: any;
+  /**
    * The rows of the table to be rendered.
    */
   rows: React.ReactNode;
+  /**
+   * Gets the used table mode.
+   */
+  mode: TableMode;
 }
 
 /**
@@ -118,15 +126,11 @@ export interface TableProps<T> extends StandardProps, ModeProviderProps<TableMod
   /**
    * Custom card renderer for component for `AccordionTableMode.card` mode.
    */
-  cardRenderer?: (e: TableCardRendererEvent<T>) => React.ReactNode;
+  cardRenderer?(e: TableCardRendererEvent<T>): React.ReactNode;
   /**
-   * Optionally provides a custom way for rendering the table body.
+   * Optionally provides a custom way for rendering the table or card body.
    */
   bodyRenderer?(e: TableBodyRenderEvent): React.ReactNode;
-  /**
-   * Optionally provides a custom way for rendering the cards list body.
-   */
-  cardBodyRenderer?(e: TableCardBodyRenderEvent): React.ReactNode;
   /**
    * Optionally provides a custom way for rendering a cell.
    */
@@ -165,7 +169,7 @@ export interface TableProps<T> extends StandardProps, ModeProviderProps<TableMod
    * - for ascending order: "columnName"
    * - for descending order "-columnName"
    */
-  sortBy?: SortingObject | SortingString;
+  sortBy?: TableSorting | string;
   /**
    * @ignore
    */
@@ -179,29 +183,39 @@ export interface TableProps<T> extends StandardProps, ModeProviderProps<TableMod
 }
 
 export interface Column {
+  /**
+   * The header to display for the column.
+   */
   header: React.ReactChild;
+  /**
+   * The optional footer to display for the column.
+   */
   footer?: React.ReactChild;
+  /**
+   * Determines if the column should be sortable.
+   */
   sortable?: boolean;
+  /**
+   * Determines if the column should be hidden.
+   */
   hidden?: boolean;
+  /**
+   * Sets the width of the column explicitly.
+   */
   width?: string;
 }
 
-export interface SortingObject {
+export interface TableSorting {
   /**
    * The key of column by which should the table be sorted
    */
   columnKey: string;
   /**
-   * Sort order
-   * @default ASC
+   * Sort order, if any. If not given then default sorting will be applied.
+   * @default 'ascending'
    */
   order?: 'ascending' | 'descending';
 }
-
-/**
- * @deprecated Use object for defining sorting parameters
- */
-export type SortingString = string;
 
 export interface TableHeadRenderEvent<T> {
   columns: TableProps<T>['columns'];

@@ -56,7 +56,7 @@ export interface FileUploaderProps {
   /**
    * Event emitted when file upload changes.
    */
-  onChange?(event: FileUploaderChangeEvent): void;
+  onChange?(e: FileUploaderChangeEvent): void;
   /**
    * Optionally uses an explicit upload data connector.
    */

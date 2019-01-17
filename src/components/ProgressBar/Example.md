@@ -51,16 +51,6 @@ const { ProgressBar } = require('precise-ui');
 <ProgressBar value={75} title="Updating" description="Please wait while we prepare your system. It will be worth the wait!" />
 ```
 
-The dark theme is also fully supported.
-
-```jsx
-const { ProgressBar, themes, colors } = require('precise-ui');
-
-<div style={{ background: colors.black, padding: '20px' }}>
-  <ProgressBar value={30} title="My Progress" theme={themes.dark} />
-</div>
-```
-
 We can insert some stop points to indicate important milestones in the progress.
 
 ```jsx

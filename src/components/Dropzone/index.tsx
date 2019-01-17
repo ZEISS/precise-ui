@@ -177,8 +177,8 @@ class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, Drop
     }
   };
 
-  private onDragOver = (event: React.DragEvent) => {
-    event.preventDefault();
+  private onDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
   };
 
   private onDragEnter = () => {

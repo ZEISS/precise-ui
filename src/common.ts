@@ -409,7 +409,7 @@ export interface InputProps<T> extends StandardProps {
   /**
    * Event emitted once the value changes due to user input.
    */
-  onChange?(event: InputChangeEvent<T>): void;
+  onChange?(e: InputChangeEvent<T>): void;
   /**
    * Event triggered once the input gets focused.
    */
