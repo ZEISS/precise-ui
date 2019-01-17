@@ -62,7 +62,13 @@ export interface SlideDownTabsState {
   isOpen: boolean;
 }
 
-const CustomWrapper: React.SFC<InteractiveListWrapperProps> = props => <div {...props} />;
+const CustomWrapper: React.SFC<InteractiveListWrapperProps> = ({
+  flyout: _0,
+  border: _1,
+  direction: _2,
+  open: _3,
+  ...props
+}) => <div {...props} />;
 
 export class SlideDownTabs extends React.Component<SlideDownTabsProps, SlideDownTabsState> {
   constructor(props: SlideDownTabsProps) {
@@ -95,7 +101,7 @@ export class SlideDownTabs extends React.Component<SlideDownTabsProps, SlideDown
 
     return (
       <StyledWrapper open={isOpen}>
-        <SelectedMenu onMouseDown={this.toggle}>
+        <SelectedMenu onMouseDown={this.toggle} className="ignore-react-onclickoutside">
           <MenuTitle>{data[selectedIndex].content}</MenuTitle>
           <MenuCaret>
             <Icon name={isOpen ? 'KeyboardArrowUp' : 'KeyboardArrowDown'} size="24px" color={cyan} />

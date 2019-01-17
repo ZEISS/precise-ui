@@ -4,7 +4,7 @@ import { List } from '../List';
 import { ListItem } from '../ListItem';
 import { remCalc } from '../../utils/remCalc';
 import { TableProps, TableCardRendererEvent, TableBodyRenderEvent } from './Table.types.part';
-import { defaultCellRenderer } from './TableBasic.part';
+import { defaultCellRenderer } from './TableShared.part';
 import { distance } from '../../distance';
 
 const Container = reStyled.div(
@@ -73,7 +73,7 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
     return (
       <StyledListItem theme={theme} key={index}>
         <Container theme={theme}>
-          <ContentContainer theme={theme}>{this.renderItemProps(item, keys)}</ContentContainer>
+          <ContentContainer theme={theme}>{this.renderItemProps(item, index, keys)}</ContentContainer>
         </Container>
       </StyledListItem>
     );
@@ -81,44 +81,43 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
 
   private getHeader(key: string) {
     const { columns } = this.props;
+
     if (columns) {
       const column = columns[key];
       return typeof column === 'string' ? column : column.header;
-    } else {
-      return key;
     }
+
+    return key;
   }
 
-  private renderItemProps(item: T, keys: Array<string>) {
-    const { columns } = this.props;
+  private renderItemProps(item: T, rowIndex: number, keys: Array<string>) {
+    const { columns, cellRenderer = defaultCellRenderer } = this.props;
 
     return keys
-      .filter(key => {
+      .map((key, colIndex) => {
         const column = columns ? columns[key] : key;
-        if (typeof column !== 'string' && column.hidden) {
-          return false;
+
+        if (typeof column === 'string' || !column.hidden) {
+          const propKey = this.getHeader(key);
+          const value = cellRenderer({
+            column: colIndex,
+            row: rowIndex,
+            key,
+            value: item[key],
+            data: item,
+          });
+
+          return (
+            <PropContainer key={colIndex}>
+              <PropName>{propKey}</PropName>
+              <PropValue>{value}</PropValue>
+            </PropContainer>
+          );
         }
-        return true;
+
+        return undefined;
       })
-      .map((key, index) => this.renderItemProp(this.getHeader(key), item[key], index));
-  }
-
-  private renderItemProp(propKey: React.ReactChild, propValue: any, index: number) {
-    const { cellRenderer } = this.props;
-    const propValueRenderer = typeof cellRenderer === 'function' ? cellRenderer : defaultCellRenderer;
-    const value = propValueRenderer({
-      column: 0,
-      row: 0,
-      key: propKey.toString(),
-      value: propValue,
-    });
-
-    return (
-      <PropContainer key={index}>
-        <PropName>{propKey}</PropName>
-        <PropValue>{value}</PropValue>
-      </PropContainer>
-    );
+      .filter(m => !!m);
   }
 
   render() {

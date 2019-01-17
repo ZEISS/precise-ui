@@ -44,6 +44,10 @@ module.exports = {
           content: path.resolve(__dirname, 'docs/introduction/usage.md'),
         },
         {
+          name: 'Components',
+          content: path.resolve(__dirname, 'docs/introduction/components.md'),
+        },
+        {
           name: 'Support',
           content: path.resolve(__dirname, 'docs/introduction/support.md'),
         },

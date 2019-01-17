@@ -3,7 +3,7 @@ import styled from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { normalizeIndex, toggleIndex, hasIndex } from './helpers/indexHelper';
 import { AccordionTableProps, AccordionTableCardRendererEvent } from './AccordionTable.types.part';
-import { defaultCellRenderer } from '../Table/TableBasic.part';
+import { defaultCellRenderer } from '../Table/TableShared.part';
 import { defaultBodyRenderer } from '../Table/TableCard.part';
 import { AccordionCard } from '../AccordionCard';
 import { ListItem } from '../ListItem';

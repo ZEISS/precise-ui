@@ -4,15 +4,9 @@ import styled, { themed, css, reStyled } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { sortObjectList } from '../../utils/sort';
 import { distance } from '../../distance';
-import { RefProps, PreciseTheme, StandardProps } from '../../common';
-import {
-  TableCellEvent,
-  TableRowEvent,
-  TableBodyRenderEvent,
-  TableProps,
-  TableSorting,
-  Column,
-} from './Table.types.part';
+import { RefProps, StandardProps } from '../../common';
+import { TableRowEvent, TableBodyRenderEvent, TableProps, TableSorting, Column } from './Table.types.part';
+import { defaultCellRenderer } from './TableShared.part';
 
 export interface TableBasicState {
   sorting?: TableSorting;
@@ -166,22 +160,6 @@ const StyledTableCell = styled.td`
 const StyledPlaceholderCell = StyledTableCell.extend`
   text-align: center;
 `;
-
-export function defaultCellRenderer<T>({ value }: TableCellEvent<T>): React.ReactChild {
-  switch (typeof value) {
-    case 'boolean':
-    case 'number':
-    case 'string':
-      return value.toString();
-    case 'object':
-      if (value) {
-        return value.toString();
-      }
-      break;
-  }
-
-  return '';
-}
 
 function defaultRowKeyGetter<T>({ key }: TableRowEvent<T>) {
   return key;
@@ -377,16 +355,15 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
   }
 
   private renderCells(keys: Array<string>, rowIndex: number) {
-    const { data, cellRenderer, indexed, theme } = this.props;
+    const { data, cellRenderer = defaultCellRenderer, indexed, theme } = this.props;
     const columns = this.getColumns();
-    const cellRender = typeof cellRenderer === 'function' ? cellRenderer : defaultCellRenderer;
     const cells = keys.map((key, cell) => {
       const column = columns[key];
       const hidden = typeof column !== 'string' && column.hidden;
 
       if (!hidden) {
         const row = data[rowIndex];
-        const value = cellRender({
+        const value = cellRenderer({
           column: cell,
           key,
           data: row,

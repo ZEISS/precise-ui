@@ -1,9 +1,18 @@
 import * as React from 'react';
-import { styled, Headline, Icon, IconName, Button, BodyText, StackPanel, StackItem } from '../../src';
+import { styled, Headline, Icon, IconName, Button, BodyText, StackPanel, StackItem, colors } from '../../src';
 
 const HeadIcon = styled(Icon)`
   vertical-align: text-bottom;
   margin-right: 0.5em;
+`;
+
+const Footer = styled.div`
+  text-align: center;
+  font-size: 0.8em;
+
+  i {
+    vertical-align: middle;
+  }
 `;
 
 const LogoImage = styled.img`
@@ -100,7 +109,7 @@ export const HomePage: React.SFC = () => (
     <InfoContainer>
       <Head icon="Widgets" title="Prerequisites" />
       <BodyText>
-        Precise UI has been created for React 16 with styled components. You will need to have these two dependencies
+        Precise UI has been created for React 16 with styled-components 2. You will need to have these two dependencies
         installed.
       </BodyText>
       <CodeBlock>
@@ -114,8 +123,8 @@ export const HomePage: React.SFC = () => (
     <InfoContainer>
       <Head icon="FileDownload" title="Installation" />
       <BodyText>
-        Install Precise UI directly via npm. There is no need for setting up some CSS as Precise UI is using styled
-        components.
+        Install Precise UI directly via npm. There is no need for setting up some CSS as Precise UI is using
+        styled-components.
       </BodyText>
       <CodeBlock>
         <code>{installation}</code>
@@ -124,8 +133,8 @@ export const HomePage: React.SFC = () => (
     <InfoContainer>
       <Head icon="Favorite" title="Usage" />
       <BodyText>
-        Precise UI components just work out of the box. They play well with any other React components. Due to styled
-        components the styling is isolated and will not conflict with any existing stylesheets in your app.
+        Precise UI components just work out of the box. They play well with any other React components. Due to
+        styled-components the styling is isolated and will not conflict with any existing stylesheets in your app.
       </BodyText>
       <CodeBlock>
         <code>{usageExample}</code>
@@ -154,5 +163,8 @@ export const HomePage: React.SFC = () => (
       <Head icon="Public" title="License" />
       <BodyText>Released under the MIT license. For details see our GitHub repository.</BodyText>
     </InfoContainer>
+    <Footer>
+      Made with <Icon name="Favorite" color={colors.purpleRed} size={1.5} /> in Munich.
+    </Footer>
   </div>
 );

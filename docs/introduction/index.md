@@ -7,14 +7,12 @@ Precise UI gives you a UI component library fully based on **React**. This means
 ### Features
 
 - There are more than **75** components currently available in this library and even more are being implemented. Make sure you check the [Components](/components/accordion) section for a better overview.
-
 - It is written in **TypeScript**.
-
 - You can build fully responsive applications with it.
 
 ### Browser Support
 
 It fully supports **IE9+, Chrome, Firefox and Safari**.
 
-> Note: IE support still requires Polyfills.
+**Important** IE (and older versions of some browsers) support still requires some polyfills. Furthermore, the resulting bundle should be ES5 compatible.
 

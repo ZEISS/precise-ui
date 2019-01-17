@@ -20,10 +20,14 @@ export interface OverflowButtonState {
   items: Array<InteractiveListItem>;
 }
 
-const CustomWrapper: React.SFC<InteractiveListWrapperProps> = props => {
-  const { children, ...rest } = props;
-  return <div {...rest}>{children}</div>;
-};
+const CustomWrapper: React.SFC<InteractiveListWrapperProps> = ({
+  open: _0,
+  flyout: _1,
+  border: _2,
+  direction: _3,
+  ...props
+}) => <div {...props} />;
+CustomWrapper.displayName = 'CustomWrapper';
 
 function getItems(group: Array<React.ReactChild>): Array<InteractiveListItem> {
   return group.map((item, index) => ({

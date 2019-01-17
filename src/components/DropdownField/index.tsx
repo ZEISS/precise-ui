@@ -122,7 +122,12 @@ const SingleDropdownItem = styled.span`
   color: ${themed(props => props.theme.text)};
 `;
 
-const StyledStandardWrapper = styled<InteractiveListWrapperProps, 'ul'>('ul')`
+interface StyledStandardWrapperProps {
+  direction: InteractiveListDirection;
+  border: InteractiveListBorderType;
+}
+
+const StyledStandardWrapper = styled<StyledStandardWrapperProps, 'ul'>('ul')`
   list-style: none;
   width: 100%;
   position: absolute;
@@ -155,15 +160,16 @@ const DropdownPopup = styled(WindowPopup)`
 // tslint:disable-next-line
 const NotOpenComponent = null;
 
-const StandardWrapper: React.SFC<InteractiveListWrapperProps> = props =>
-  props.open ? <StyledStandardWrapper {...props} /> : NotOpenComponent;
+const StandardWrapper: React.SFC<InteractiveListWrapperProps> = ({ flyout: _0, open, ...props }) =>
+  open ? <StyledStandardWrapper {...props} /> : NotOpenComponent;
+StandardWrapper.displayName = 'StandardWrapper';
 
 const getMobileWrapper = (label?: React.ReactChild) => ({
   onClick,
   children,
-  ...props
+  open,
 }: InteractiveListWrapperProps & { children?: React.ReactNode }) =>
-  props.open ? (
+  open ? (
     <DropdownPopup onClose={onClick} label={label}>
       {children}
     </DropdownPopup>

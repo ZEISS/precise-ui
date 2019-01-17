@@ -2,12 +2,12 @@ import * as React from 'react';
 import styled, { reStyled } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { Table, TableRowEvent, TableCellEvent } from '../Table';
+import { defaultCellRenderer } from '../Table/TableShared.part';
 import { Icon, IconProps } from '../Icon';
+import { AccordionTableRow } from '../AccordionTableRow';
 import { AccordionTableProps } from './AccordionTable.types.part';
 import { normalizeIndex, toggleIndex, hasIndex } from './helpers/indexHelper';
 import { distance } from '../../distance';
-import { AccordionTableRow } from '../AccordionTableRow';
-import { defaultCellRenderer } from '../Table/TableBasic.part';
 
 export interface AccordionTableBasicState {
   /**
