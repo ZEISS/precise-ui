@@ -22,7 +22,7 @@ interface AppState {
 
 declare global {
   interface Window {
-    setContext<K extends keyof AppState>(state: Pick<AppState, K>): void;
+    setContext?<K extends keyof AppState>(state: Pick<AppState, K>): void;
     context: AppState;
   }
 }
