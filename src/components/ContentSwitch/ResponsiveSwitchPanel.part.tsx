@@ -1,22 +1,11 @@
 import * as React from 'react';
 import { TabControlItem } from '../TabControl';
-import { StandardProps } from '../../common';
-import { withResponsive, ResponsiveComponentProps } from '../../hoc/withResponsive';
+import { withResponsive } from '../../hoc/withResponsive';
 import { TabPageProps } from '../TabPage';
 import { Container, Headers, Header, Content, ContentItem, OverflowItems } from './ContentSwitch.part';
+import { ContentSwitchProps } from './ContentSwitchTypes.part';
 import { OverflowButton } from '../OverflowButton';
 import { Icon } from '../Icon';
-
-export type ContentSwitchOrientation = 'vertical' | 'horizontal';
-
-export interface ContentSwitchProps extends StandardProps, ResponsiveComponentProps {
-  items: Array<TabControlItem>;
-  children?: void;
-  /**
-   * @default vertical
-   */
-  orientation?: ContentSwitchOrientation;
-}
 
 export interface ContentSwitchState {
   overflowItems: Array<TabControlItem>;
@@ -178,4 +167,4 @@ class ContentSwitchInt extends React.Component<ContentSwitchProps, ContentSwitch
   }
 }
 
-export const ResponsiveContentSwitch = withResponsive(ContentSwitchInt);
+export const ResponsiveSwitchPanel = withResponsive(ContentSwitchInt);

@@ -99,6 +99,7 @@ const StyledTableHeader = styled<TableHeaderProps, 'th'>('th')`
   text-align: left;
   border-bottom: 1px solid ${themed(({ theme }) => theme.ui5)};
   cursor: ${({ sortable }: TableHeaderProps) => (sortable ? 'pointer' : 'default')};
+  box-sizing: border-box;
   ${({ width }) => (width && `width: ${width}`) || ''};
 `;
 

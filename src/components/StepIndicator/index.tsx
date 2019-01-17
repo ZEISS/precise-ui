@@ -4,7 +4,7 @@ import { StepIndicatorProps, StepIndicatorMode } from './StepIndicator.types.par
 import { withResponsiveMode, ModeProviderState } from '../../hoc/withResponsiveMode';
 import { breakpoints } from '../../themes';
 
-export { StepIndicatorMode, StepIndicatorProps } from './StepIndicator.types.part';
+export { StepIndicatorMode, StepIndicatorProps };
 export { StepIndicatorStep } from './StepIndicatorStep.part';
 
 export const StepIndicator = withResponsiveMode<StepIndicatorMode>(width =>

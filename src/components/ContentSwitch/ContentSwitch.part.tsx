@@ -1,21 +1,10 @@
 import styled, { css, themed } from '../../utils/styled';
-import { StandardProps } from '../../common';
 import { white } from '../../colors';
 import { distance } from '../../distance';
-import { TextStylings } from '../../textStyles';
 import { remCalc } from '../../utils/remCalc';
-import { ContentSwitchOrientation } from './ResponsiveContentSwitchPanel';
+import { HeadersProps, TabHeaderProps } from './ContentSwitchTypes.part';
 
 export const Container = styled.div``;
-
-export interface HeadersProps {
-  orientation: ContentSwitchOrientation;
-}
-
-export interface TabHeaderProps extends StandardProps {
-  orientation?: ContentSwitchOrientation;
-  active?: boolean;
-}
 
 const HorizontalHeaders = css`
   display: flex;
