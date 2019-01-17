@@ -440,4 +440,3 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
-  

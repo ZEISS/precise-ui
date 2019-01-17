@@ -140,7 +140,11 @@ function getChosen(selected: string | Array<string>, multiple?: boolean) {
   }
 }
 
-function getIndices(data: Array<InteractiveListItem | undefined>, selected: string | Array<string>, multiple?: boolean) {
+function getIndices(
+  data: Array<InteractiveListItem | undefined>,
+  selected: string | Array<string>,
+  multiple?: boolean,
+) {
   const chosen = getChosen(selected, multiple);
   const indices: Array<number> = [];
 
