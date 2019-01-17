@@ -102,7 +102,7 @@ export const DesktopLayout: React.SFC<LayoutProps> = ({ hasSidebar, title, toc, 
     {hasSidebar && (
       <TocColumn>
         <Info>
-          {logo}
+          <LogoLink to="/">{logo}</LogoLink>
           <Title>{title}</Title>
           <Version>{version}</Version>
         </Info>

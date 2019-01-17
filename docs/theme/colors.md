@@ -5,7 +5,10 @@ The following colors are available. Feel free to change them.
 ```jsx
 const {
   colors,
+  clipboardCopy,
+  notify,
   themes,
+  Notifications,
   Table,
   TextField,
   Flyout,
@@ -18,6 +21,18 @@ const isSupport = m => /^support[A-Z][a-z]+/.test(m);
 
 const ColorTile = ({ color }) => (
   <MetroInfoTile
+    onClick={() => {
+      clipboardCopy(color);
+      notify({
+        content: `Copied ${color} to clipboard!`,
+        options: {
+          autoClose: 1000,
+          position: 'top-right',
+          title: 'Done',
+          type: 'info',
+        },
+      });
+    }}
     theme={{
       metroInfoTile: {
         background: color,
@@ -101,5 +116,8 @@ class ThemeColorChanger extends React.Component {
   }
 }
 
-<ThemeColorChanger />
+<>
+  <Notifications />
+  <ThemeColorChanger />
+</>
 ```
