@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
-import { grey4 } from '../../colors';
 import { StepIndicatorProps } from './StepIndicator.types.part';
 
 const StyledProgressHost = styled.ol`
@@ -47,14 +46,14 @@ const StyledProgressStep = styled.li`
     font-weight: 500;
 
     ~ li {
-      color: ${grey4};
+      color: ${themed(({ theme }) => theme.text2)};
 
       &:before {
-        background-color: ${grey4};
+        background-color: ${themed(({ theme }) => theme.text2)};
       }
 
       &:after {
-        background-color: ${grey4};
+        background-color: ${themed(({ theme }) => theme.text2)};
       }
     }
 

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
-import { grey4 } from '../../colors';
 import { StepIndicatorProps, StepIndicatorStepProps } from './StepIndicator.types.part';
 import { distance } from '../../distance';
 
@@ -45,19 +44,19 @@ const StyledProgressStep = styled.li`
     font-weight: 500;
 
     ~ li {
-      color: ${grey4};
+      color: ${themed(({ theme }) => theme.text2)};
 
       &:before {
-        background-color: ${grey4};
+        background-color: ${themed(({ theme }) => theme.text2)};
       }
 
       &:after {
-        background-color: ${grey4};
+        background-color: ${themed(({ theme }) => theme.text2)};
       }
     }
 
     &:after {
-      background-color: ${grey4};
+      background-color: ${themed(({ theme }) => theme.text2)};
     }
 
     &:before {
@@ -76,7 +75,26 @@ const StyledProgressContent = styled.div`
   min-height: 100px;
 `;
 
-export const StepIndicatorVertical: React.SFC<StepIndicatorProps> = ({ current, children }) => {
+const ListItemNumber = styled.div`
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: ${themed(({ theme }) => theme.ui1)};
+  border: 2px solid ${themed(({ theme }) => theme.text1)};
+  box-sizing: border-box;
+  text-align: center;
+
+  .step-active ~ li & {
+    border-color: ${themed(({ theme }) => theme.text2)};
+  }
+`;
+
+export const StepIndicatorVertical: React.SFC<StepIndicatorProps> = ({ current, numbered, children }) => {
   const items: Array<React.ReactChild> = [];
 
   React.Children.forEach(children, (element: React.ReactElement<StepIndicatorStepProps>, i) => {
@@ -85,6 +103,7 @@ export const StepIndicatorVertical: React.SFC<StepIndicatorProps> = ({ current, 
 
       items.push(
         <StyledProgressStep key={i} className={i === current ? 'step-active' : ''}>
+          {numbered && <ListItemNumber>{i + 1}</ListItemNumber>}
           <StyledProgressText>{header}</StyledProgressText>
           <StyledProgressContent>{children}</StyledProgressContent>
         </StyledProgressStep>,

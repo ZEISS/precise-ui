@@ -30,3 +30,18 @@ const { StepIndicator, StepIndicatorStep } = require('precise-ui');
   </StepIndicatorStep>
 </StepIndicator>
 ```
+
+We can also add `numbered` to a vertical step indicator to make our steps numbered
+
+```jsx
+const { StepIndicator, StepIndicatorStep } = require('precise-ui');
+
+<StepIndicator mode='vertical' numbered current={1}>
+  <StepIndicatorStep header="First">
+  </StepIndicatorStep>
+  <StepIndicatorStep header="Second">
+  </StepIndicatorStep>
+  <StepIndicatorStep header="Third">
+  </StepIndicatorStep>
+</StepIndicator>
+```
