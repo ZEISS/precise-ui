@@ -118,6 +118,10 @@ const StyledNotifications = styled.div`
   ${(props: any) => (props.position !== 'relative' ? AbsoluteContainer : '')};
 `;
 
+interface NotificationClose {
+  (): void;
+}
+
 /**
  * The host element for arbitrary notifications. Use as a singleton only.
  */
@@ -161,7 +165,7 @@ export class Notifications extends React.Component<NotificationsProps, Notificat
     });
   }
 
-  private getNotificationContent(content: NotificationContent, onClose?: () => void) {
+  private getNotificationContent(content: NotificationContent, onClose?: NotificationClose) {
     if (React.isValidElement(content)) {
       return React.cloneElement(content, { onClose } as NotificationProps);
     } else if (typeof content === 'function') {
@@ -192,7 +196,6 @@ export class Notifications extends React.Component<NotificationsProps, Notificat
       title: options.title || capitalizeFirst(options.type || ''),
       actionRenderer: options.actionRenderer,
       autoClose: typeof options.autoClose === 'number' ? options.autoClose : autoClose,
-      toast: options.toast || false,
     };
 
     this.collection.push({

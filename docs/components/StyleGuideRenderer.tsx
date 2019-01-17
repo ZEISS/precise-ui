@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { BrowserRouter, Redirect, Switch, Route } from 'react-router-dom';
-import { styled, distance, transparentize, colors, themes, Responsive } from '../../src';
+import { BrowserRouter, Switch, Route, Link, RouteComponentProps } from 'react-router-dom';
+import { styled, distance, transparentize, colors, themes, Responsive, ThemeProvider, PreciseTheme } from '../../src';
 import { MobileMenu } from './MobileMenu';
-import { ThemeProvider } from '../../src/utils/styled';
+import { HomePage } from './HomePage';
 // @ts-ignore
 import Ribbon from 'react-styleguidist/lib/rsg-components/Ribbon';
 // @ts-ignore
@@ -11,9 +11,7 @@ import Logo from 'react-styleguidist/lib/rsg-components/Logo';
 const tocColumnWidth = 200;
 
 const DesktopContainer = styled.div`
-  display: flex;
   width: 100%;
-  align-items: stretch;
   position: relative;
 `;
 
@@ -40,6 +38,13 @@ const HeadLine = styled.div`
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
+`;
+
+const LogoLink = styled(Link)`
+  h1 {
+    cursor: pointer;
+    display: block;
+  }
 `;
 
 const LogoSpace = styled.div`
@@ -80,16 +85,59 @@ interface StyleGuideRendererProps {
   hasSidebar: boolean;
 }
 
-const ScrollToTop: React.SFC = () => {
-  window.scrollTo(0, 0);
-  //tslint:disable-next-line
-  return null;
-};
+class ScrollToTop extends React.Component<RouteComponentProps> {
+  componentWillReceiveProps(nextProps: RouteComponentProps) {
+    if (this.props.location.pathname !== nextProps.location.pathname) {
+      window.scrollTo(0, 0);
+    }
+  }
 
-const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ title, version, hasSidebar, children, toc }) => {
-  return (
-    <ThemeProvider theme={themes.light}>
-      <BrowserRouter>
+  render() {
+    return false;
+  }
+}
+
+declare global {
+  interface Window {
+    setContext: any;
+    context: any;
+  }
+}
+
+class App extends React.Component<StyleGuideRendererProps> {
+  state = {
+    theme: themes.light,
+  };
+
+  componentDidMount() {
+    window.setContext = (ctx: any) =>
+      this.setState(ctx, () => {
+        window.context = this.state;
+      });
+    window.context = this.state;
+  }
+
+  componentWillUnmount() {
+    window.setContext = undefined;
+  }
+
+  render() {
+    const { title, version, hasSidebar, children, toc } = this.props;
+    const { theme } = this.state;
+
+    const routes = (
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route render={() => children} />
+      </Switch>
+    );
+    const logo = (
+      <LogoLink to="/">
+        <Logo />
+      </LogoLink>
+    );
+    return (
+      <ThemeProvider theme={theme}>
         <Responsive
           render={size =>
             size !== 'small' ? (
@@ -99,44 +147,38 @@ const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ title, version
                 {hasSidebar && (
                   <TocColumn>
                     <Info>
-                      <Logo />
+                      {logo}
                       <Title>{title}</Title>
                       <Version>{version}</Version>
                     </Info>
                     {toc}
                   </TocColumn>
                 )}
-                <ContentColumn>
-                  <Switch>
-                    <Redirect exact from="/" to="/getting-started" />
-                    <Route render={() => children} />
-                  </Switch>
-                </ContentColumn>
+                <ContentColumn>{routes}</ContentColumn>
               </DesktopContainer>
             ) : (
               <MobileContainer>
                 <Route component={ScrollToTop} />
                 <HeadLine>
                   <MobileMenu toc={toc} />
-                  <LogoSpace>
-                    <Logo />
-                  </LogoSpace>
+                  <LogoSpace>{logo}</LogoSpace>
                   <Version>{version}</Version>
                 </HeadLine>
                 <Ribbon />
-                <MobileContent>
-                  <Switch>
-                    <Redirect exact from="/" to="/getting-started" />
-                    <Route render={() => children} />
-                  </Switch>
-                </MobileContent>
+                <MobileContent>{routes}</MobileContent>
               </MobileContainer>
             )
           }
         />
-      </BrowserRouter>
-    </ThemeProvider>
-  );
-};
+      </ThemeProvider>
+    );
+  }
+}
+
+const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = props => (
+  <BrowserRouter>
+    <App {...props} />
+  </BrowserRouter>
+);
 
 export default StyleGuideRenderer;

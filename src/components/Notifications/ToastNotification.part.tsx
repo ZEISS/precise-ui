@@ -114,7 +114,7 @@ export class ToastNotification extends React.Component<ToastNotificationProps, T
 
   render() {
     const { closing } = this.state;
-    const { autoClose: _0, events: _1, id: _2, toast: _3, onClose: _4, position, ...other } = this.props;
+    const { autoClose: _0, events: _1, id: _2, onClose: _4, position, ...other } = this.props;
 
     const toastTheme = {
       notificationPadding: `${distance.small} ${distance.small} ${distance.medium}`,

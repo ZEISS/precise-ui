@@ -5,17 +5,11 @@ import { TableCard } from './TableCard.part';
 
 export class TableInt<T> extends React.PureComponent<TableProps<T>> {
   render() {
-    const { children: _0, mode, cardRenderer, cardBodyRenderer, innerRef, ...props } = this.props;
+    const { mode, innerRef, ...props } = this.props;
 
     return (
       <div ref={innerRef}>
-        {mode === 'table' ? (
-          <TableBasic {...props} />
-        ) : mode === 'card' ? (
-          <TableCard cardRenderer={cardRenderer} cardBodyRenderer={cardBodyRenderer} {...props} />
-        ) : (
-          false
-        )}
+        {mode === 'table' ? <TableBasic {...props} /> : mode === 'card' ? <TableCard {...props} /> : false}
       </div>
     );
   }

@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AccordionTableCard /> should render a <AccordionTable> component with no data and placeholder set 1`] = `
-<Styled(List)
-  borderless={true}
->
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -11,13 +9,11 @@ exports[`<AccordionTableCard /> should render a <AccordionTable> component with 
       No data
     </styled.div>
   </Styled(ListItem)>
-</Styled(List)>
+</AccordionTableCardHost>
 `;
 
 exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with data and selectedIndex set 1`] = `
-<Styled(List)
-  borderless={true}
->
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -52,11 +48,7 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       }
       onActionClick={[Function]}
       opened={false}
-    >
-      <div>
-        Test details renderer
-      </div>
-    </AccordionCard>
+    />
   </Styled(ListItem)>
   <Styled(ListItem)
     key="1"
@@ -132,11 +124,7 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       }
       onActionClick={[Function]}
       opened={false}
-    >
-      <div>
-        Test details renderer
-      </div>
-    </AccordionCard>
+    />
   </Styled(ListItem)>
   <Styled(ListItem)
     key="3"
@@ -172,19 +160,13 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       }
       onActionClick={[Function]}
       opened={false}
-    >
-      <div>
-        Test details renderer
-      </div>
-    </AccordionCard>
+    />
   </Styled(ListItem)>
-</Styled(List)>
+</AccordionTableCardHost>
 `;
 
 exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with data set 1`] = `
-<Styled(List)
-  borderless={true}
->
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -219,11 +201,7 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       }
       onActionClick={[Function]}
       opened={false}
-    >
-      <div>
-        Test details renderer
-      </div>
-    </AccordionCard>
+    />
   </Styled(ListItem)>
   <Styled(ListItem)
     key="1"
@@ -259,11 +237,7 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       }
       onActionClick={[Function]}
       opened={false}
-    >
-      <div>
-        Test details renderer
-      </div>
-    </AccordionCard>
+    />
   </Styled(ListItem)>
   <Styled(ListItem)
     key="2"
@@ -299,19 +273,13 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       }
       onActionClick={[Function]}
       opened={false}
-    >
-      <div>
-        Test details renderer
-      </div>
-    </AccordionCard>
+    />
   </Styled(ListItem)>
-</Styled(List)>
+</AccordionTableCardHost>
 `;
 
 exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with right columns 1`] = `
-<Styled(List)
-  borderless={true}
->
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -330,9 +298,7 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       }
       onActionClick={[Function]}
       opened={false}
-    >
-      <div />
-    </AccordionCard>
+    />
   </Styled(ListItem)>
   <Styled(ListItem)
     key="1"
@@ -352,17 +318,13 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       }
       onActionClick={[Function]}
       opened={false}
-    >
-      <div />
-    </AccordionCard>
+    />
   </Styled(ListItem)>
-</Styled(List)>
+</AccordionTableCardHost>
 `;
 
 exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with sorted data 1`] = `
-<Styled(List)
-  borderless={true}
->
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -381,9 +343,7 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       }
       onActionClick={[Function]}
       opened={false}
-    >
-      <div />
-    </AccordionCard>
+    />
   </Styled(ListItem)>
   <Styled(ListItem)
     key="1"
@@ -403,17 +363,13 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       }
       onActionClick={[Function]}
       opened={false}
-    >
-      <div />
-    </AccordionCard>
+    />
   </Styled(ListItem)>
-</Styled(List)>
+</AccordionTableCardHost>
 `;
 
 exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with wrong columns 1`] = `
-<Styled(List)
-  borderless={true}
->
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -440,9 +396,7 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       }
       onActionClick={[Function]}
       opened={false}
-    >
-      <div />
-    </AccordionCard>
+    />
   </Styled(ListItem)>
   <Styled(ListItem)
     key="1"
@@ -470,17 +424,13 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       }
       onActionClick={[Function]}
       opened={false}
-    >
-      <div />
-    </AccordionCard>
+    />
   </Styled(ListItem)>
-</Styled(List)>
+</AccordionTableCardHost>
 `;
 
 exports[`<AccordionTableCard /> should render a <AccordionTableCard> component without data and custom placeholder 1`] = `
-<Styled(List)
-  borderless={true}
->
+<AccordionTableCardHost>
   <Styled(ListItem)
     key="0"
   >
@@ -488,5 +438,5 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
       No data
     </styled.div>
   </Styled(ListItem)>
-</Styled(List)>
+</AccordionTableCardHost>
 `;

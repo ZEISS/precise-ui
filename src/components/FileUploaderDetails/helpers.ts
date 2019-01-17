@@ -1,5 +1,6 @@
 import { IconName } from '../Icon';
-import { FileProgress, ProgressStatus, TranslationLabels } from './FileUploaderDetails.types.part';
+import { FileProgress, ProgressStatus } from './FileUploaderDetails.types.part';
+import { setLabels } from '../../utils/labels';
 
 export function mergeData(newData: Array<FileProgress>, currentData: Array<FileProgress>): Array<FileProgress> {
   const all = {};
@@ -27,24 +28,24 @@ export const iconNames: { [x: string]: IconName } = {
   success: 'CheckCircle',
 };
 
-export const defaultLabels: TranslationLabels = {
-  tableHeaderFile: 'File',
-  tableHeaderStatus: 'Status',
-  errorTableUpload: 'Upload failed',
-  canceledTableUpload: 'Upload canceled',
-  progressTableUpload: 'Uploading...',
-  successTableUpload: 'Upload successful',
-  scanningTableUpload: 'Scanning for viruses...',
-  uploadModalTitle: 'Upload Details',
-  uploadProgress: 'Uploading...',
-  uploadSuccess: 'Upload successful',
-  uploadError: 'Upload not successful',
-  uploadScanning: 'Scanning for viruses',
-  viewDetails: 'View Details',
-  itemPlural: 'Files',
-  itemSingular: 'File',
-  cancelAll: 'Cancel all Uploads',
-};
+setLabels({
+  tableHeaderFileLabel: 'File',
+  tableHeaderStatusLabel: 'Status',
+  errorTableUploadLabel: 'Upload failed',
+  canceledTableUploadLabel: 'Upload canceled',
+  progressTableUploadLabel: 'Uploading...',
+  successTableUploadLabel: 'Upload successful',
+  scanningTableUploadLabel: 'Scanning for viruses...',
+  uploadModalTitleLabel: 'Upload Details',
+  uploadProgressLabel: 'Uploading...',
+  uploadSuccessLabel: 'Upload successful',
+  uploadErrorLabel: 'Upload not successful',
+  uploadScanningLabel: 'Scanning for viruses',
+  viewDetailsLabel: 'View Details',
+  itemPluralLabel: 'Files',
+  itemSingularLabel: 'File',
+  cancelAllLabel: 'Cancel all uploads',
+});
 
 export function getStatus(file: FileProgress): ProgressStatus {
   if (file.error) {

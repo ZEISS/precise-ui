@@ -4,19 +4,18 @@ import styled, { themed, css, reStyled } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { sortObjectList } from '../../utils/sort';
 import { distance } from '../../distance';
-import { RefProps } from '../../common';
+import { RefProps, PreciseTheme, StandardProps } from '../../common';
 import {
   TableCellEvent,
   TableRowEvent,
   TableBodyRenderEvent,
   TableProps,
-  SortingObject,
-  SortingString,
+  TableSorting,
   Column,
 } from './Table.types.part';
 
 export interface TableBasicState {
-  sorting?: SortingObject;
+  sorting?: TableSorting;
   controlledSorting: boolean;
 }
 
@@ -56,6 +55,19 @@ const StyledTable = reStyled.table<StyledTableProps>(
 );
 
 const StyledTableBody = styled.tbody``;
+
+interface TableHostProps extends StandardProps {
+  head: React.ReactNode;
+  foot: React.ReactNode;
+}
+
+const TableHost: React.SFC<TableHostProps> = ({ head, foot, theme, children, ...props }) => (
+  <StyledTable theme={theme} {...props}>
+    {head}
+    <StyledTableBody theme={theme}>{children}</StyledTableBody>
+    {foot}
+  </StyledTable>
+);
 
 const HiddenCell = styled.td`
   display: none;
@@ -184,10 +196,10 @@ function defaultRowRenderer<T>({ theme, cells, index }: TableRowEvent<T>) {
 
 function defaultBodyRenderer(e: TableBodyRenderEvent) {
   const TableBody = e.table;
-  return <TableBody>{e.rows}</TableBody>;
+  return <TableBody {...e.props}>{e.rows}</TableBody>;
 }
 
-function normalizeSortBy(sortBy?: SortingObject | SortingString): SortingObject | undefined {
+function normalizeSortBy(sortBy?: TableSorting | string): TableSorting | undefined {
   if (!sortBy) {
     return undefined;
   }
@@ -493,21 +505,23 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     } = this.props;
     const columns = this.getColumns();
     const keys = Object.keys(columns);
-    const showFooter = !!keys.filter(key => {
-      const col = columns[key];
-      return typeof col === 'object' && !!col.footer && !col.hidden;
-    }).length;
+    const showFooter =
+      keys.filter(key => {
+        const col = columns[key];
+        return typeof col === 'object' && !!col.footer && !col.hidden;
+      }).length > 0;
     const rows = this.renderRows(keys);
 
     return bodyRenderer({
-      table: ({ children }) => (
-        <StyledTable theme={theme} {...props}>
-          {!noHeader && this.renderHead(keys)}
-          <StyledTableBody theme={theme}>{children}</StyledTableBody>
-          {showFooter && this.renderFoot(keys)}
-        </StyledTable>
-      ),
+      table: TableHost,
+      props: {
+        theme,
+        head: !noHeader && this.renderHead(keys),
+        foot: showFooter && this.renderFoot(keys),
+        ...props,
+      },
       rows,
+      mode: 'table',
     });
   }
 }

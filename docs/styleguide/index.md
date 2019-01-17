@@ -1,4 +1,6 @@
-## Idea and Motivation
+## Styleguide
+
+### Idea and Motivation
 
 The basic idea of a pattern library is to provide the basis for consistent UI development.
 
