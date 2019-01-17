@@ -140,12 +140,13 @@ function getChosen(selected: string | Array<string>, multiple?: boolean) {
   }
 }
 
-function getIndices(data: Array<InteractiveListItem>, selected: string | Array<string>, multiple?: boolean) {
+function getIndices(data: Array<InteractiveListItem | undefined>, selected: string | Array<string>, multiple?: boolean) {
   const chosen = getChosen(selected, multiple);
   const indices: Array<number> = [];
 
   for (let i = 0; i < data.length; i++) {
     const item = data[i];
+
     if (!item) {
       continue;
     }
@@ -176,7 +177,6 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
   private readonly selects: Array<() => void> = [];
   private readonly elements: Array<HTMLElement> = [];
   private interactiveList: HTMLElement;
-  private allowBlur = true;
 
   constructor(props: InteractiveListProps) {
     super(props);
@@ -190,9 +190,17 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
   }
 
   handleClickOutside = () => {
-    this.setState({
-      selected: undefined,
-    });
+    const { open, onBlur } = this.props;
+
+    if (open) {
+      if (typeof onBlur === 'function') {
+        onBlur();
+      }
+
+      this.setState({
+        selected: undefined,
+      });
+    }
   };
 
   componentWillReceiveProps(nextProps: InteractiveListProps) {
@@ -344,10 +352,6 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
   };
 
   private createSingleItem = (item: InteractiveListItem, index: number) => {
-    if (!item) {
-      return;
-    }
-
     let key = '';
     let content: React.ReactChild;
 
@@ -363,10 +367,6 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
   };
 
   private createMultipleItem = (item: InteractiveListItem, index: number) => {
-    if (!item) {
-      return;
-    }
-
     const { value } = this.state;
     let key = '';
     let content: React.ReactChild;
@@ -464,28 +464,6 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
     );
   }
 
-  private handleBlur = (e: React.FocusEvent<HTMLDivElement>) => {
-    if (this.allowBlur) {
-      const { onBlur } = this.props;
-
-      if (typeof onBlur === 'function') {
-        onBlur();
-      }
-    } else {
-      this.allowBlur = true;
-      e.preventDefault();
-    }
-  };
-
-  private disableBlur = () => {
-    this.allowBlur = false;
-  };
-
-  private handleMouseOver = () => {
-    this.allowBlur = true;
-    this.interactiveList.focus();
-  };
-
   private select(index: number) {
     const { disabled } = this.props;
 
@@ -495,6 +473,10 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       });
     }
   }
+
+  private setNode = (ref: HTMLElement) => {
+    this.interactiveList = ref;
+  };
 
   render() {
     const {
@@ -520,20 +502,16 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
 
     return (
       <InteractiveListContainer
-        innerRef={(ref: HTMLElement) => (this.interactiveList = ref)}
+        innerRef={this.setNode}
         {...(open ? { tabIndex: 0 } : undefined)}
         onKeyDown={this.control}
-        onMouseDown={this.disableBlur}
-        onBlur={this.handleBlur}
-        onMouseOver={this.handleMouseOver}
         {...props}>
         <Wrapper open={open} flyout={flyout} border={border} direction={this.state.direction} onClick={onClick}>
           {(open || !flyout) &&
             data.map((item, index) => {
               if (!item) {
                 return;
-              }
-              if (typeof item !== 'string') {
+              } else if (typeof item !== 'string') {
                 switch (item.type) {
                   case 'divider':
                     return <ListDivider key={item.key} />;

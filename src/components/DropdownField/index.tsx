@@ -6,6 +6,7 @@ import { remCalc } from '../../utils/remCalc';
 import { LabeledInputProps, InputChangeEvent, ScreenSize } from '../../common';
 import { InputIcon } from '../InputIcon';
 import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
+import { transparent } from '../../colors';
 import { distance } from '../../distance';
 import { light } from '../../themes';
 import { Icon } from '../Icon';
@@ -93,6 +94,10 @@ interface DropDownOptionsTextProps {
   labelShown: boolean;
   disabled?: boolean;
 }
+
+const DropdownInputBox = styled(StyledInputBox)`
+  border: 1px solid ${themed(({ focused, theme: { ui4 } }) => (focused ? ui4 : transparent))};
+`;
 
 const DropdownOptionText = styled.div`
   padding: ${(props: DropDownOptionsTextProps) =>
@@ -365,8 +370,7 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
 
   private renderList = (screenSize?: ScreenSize) => {
     const { data = [], theme, disabled, multiple } = this.props;
-    const { open: openState, value } = this.state;
-    const open = openState && !disabled;
+    const { open, value } = this.state;
     const mobile = screenSize === 'small';
     const wrapper = mobile ? getMobileWrapper(<StyledLabel>{this.props.label}</StyledLabel>) : StandardWrapper;
 
@@ -375,7 +379,7 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
         theme={theme}
         data={data}
         multiple={multiple}
-        open={open}
+        open={open && !disabled}
         onChange={this.handleChange}
         onClick={mobile ? this.toggle : undefined}
         onBlur={mobile ? undefined : this.hide}
@@ -422,8 +426,12 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
 
     return (
       <DropdownContainer {...other}>
-        <DropdownSelect onMouseDown={this.handleMouseDown} tabIndex={0} onKeyDown={this.control}>
-          <StyledInputBox disabled={disabled} hasValue={hasValue} border={border} focused={open} theme={theme}>
+        <DropdownSelect
+          onMouseDown={this.handleMouseDown}
+          tabIndex={0}
+          onKeyDown={this.control}
+          className="ignore-react-onclickoutside">
+          <DropdownInputBox disabled={disabled} hasValue={hasValue} border={border} focused={open} theme={theme}>
             <StyledInputRow label={label} placeholder={placeholder} error={!!error} focused={open} hasValue={hasValue}>
               <DropdownOptionText labelShown={label !== undefined} disabled={disabled}>
                 {hasValue || label ? items.map(item => getContent(item, theme)) : placeholder}
@@ -437,7 +445,7 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
                 size="22px"
               />
             </StyledIconContainer>
-          </StyledInputBox>
+          </DropdownInputBox>
         </DropdownSelect>
         <Responsive render={this.renderList} />
         {showInputInfo(error, info)}

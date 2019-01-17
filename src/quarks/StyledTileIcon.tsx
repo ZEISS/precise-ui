@@ -7,7 +7,7 @@ export interface StyledTileIconProps {
   src?: string;
 }
 
-export const StyledTileIcon: React.ComponentType<StyledTileIconProps> = styled.img`
+export const StyledTileIcon: React.ComponentClass<StyledTileIconProps> = styled.img`
   vertical-align: middle;
   border: none;
   max-width: ${(props: StyledTileIconProps) => props.width};

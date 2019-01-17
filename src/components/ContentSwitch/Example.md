@@ -40,7 +40,7 @@ const { ContentSwitch, TabPage } = require('precise-ui');
 </ContentSwitch>
 ```
 
-ContentSwitch component is also responsive. As show in the example below, switch buttons which are overflowing the available space, are moved into the Flyout. 
+ContentSwitch component is also responsive. As show in the example below, switch buttons which are overflowing the available space, are moved into the Flyout.
 
 ```jsx
 const { ContentSwitch, TabPage } = require('precise-ui');
@@ -49,7 +49,7 @@ const pages = [];
 
 for (var i = 0; i < 20; i++) {
     pages.push(
-      <TabPage header={`Item ${i}`}>
+      <TabPage header={`Item ${i}`} key={i}>
         Content of the page {i}
       </TabPage>
     );

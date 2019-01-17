@@ -91,7 +91,7 @@ class OverflowButtonInt extends React.Component<OverflowButtonProps, OverflowBut
         }
         {...flyoutProps}
         open={open}>
-        <div onClick={this.toggleGroup}>{toggleButton ? toggleButton : '...'}</div>
+        <div onClick={this.toggleGroup}>{toggleButton || '...'}</div>
       </Flyout>
     );
   }

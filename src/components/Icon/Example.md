@@ -75,7 +75,7 @@ Custom SVG Icons can be registered as well.
 
 To be able to register icons and extend type definitions in Typescript, interface `AdditionalIconNames` with registered icon names should be provided in global scope for interface augmentation. Example shown below
 
-```js static
+```ts
 declare global {
   interface AdditionalIconNames {
     Foo: string;
