@@ -3,7 +3,7 @@ import { StandardProps } from '../../common';
 import { white } from '../../colors';
 import { distance } from '../../distance';
 import { TextStylings } from '../../textStyles';
-import { remCalc } from '../../utils';
+import { remCalc } from '../../utils/remCalc';
 import { ContentSwitchOrientation } from './ResponsiveContentSwitchPanel';
 
 export const Container = styled.div``;
@@ -55,17 +55,15 @@ const InactiveTab = css`
 export const Header = styled<TabHeaderProps, 'li'>('li')`
   padding: ${({ orientation }) => (orientation === 'vertical' ? remCalc(['8px', '48px']) : remCalc(['8px', '16px']))};
   position: relative;
-  z-index: 1;
   margin: 0;
   list-style: none;
   cursor: pointer;
-  overflow: visible;
-  text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: ${TextStylings.delta.fontSize};
   box-sizing: border-box;
   ${props => (props.active ? ActiveTab : InactiveTab)};
   border: 1px solid ${themed(props => props.theme.ui4)};
+  font-size: ${remCalc('16px')};
+  line-height: ${remCalc('20px')};
 `;
 
 export interface TabItemProps {
@@ -74,4 +72,8 @@ export interface TabItemProps {
 
 export const ContentItem = styled.div`
   ${(props: TabItemProps) => (props.active ? '' : 'display: none;')};
+`;
+
+export const OverflowItems = styled.div`
+  white-space: nowrap;
 `;

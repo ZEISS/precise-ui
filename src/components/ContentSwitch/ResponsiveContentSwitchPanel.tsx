@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { TabControlItem } from '../TabControl';
 import { StandardProps } from '../../common';
-import { withResponsive, ResponsiveComponentProps } from '../../hoc';
+import { withResponsive, ResponsiveComponentProps } from '../../hoc/withResponsive';
 import { TabPageProps } from '../TabPage';
-import { Container, Headers, Header, Content, ContentItem } from './ContentSwitch.part';
+import { Container, Headers, Header, Content, ContentItem, OverflowItems } from './ContentSwitch.part';
 import { OverflowButton } from '../OverflowButton';
 import { Icon } from '../Icon';
 
@@ -24,7 +24,7 @@ export interface ContentSwitchState {
 }
 
 const defaultOrientation = 'horizontal';
-const overflowButtonWidth = 80;
+const overflowButtonWidth = 50;
 
 class ContentSwitchInt extends React.Component<ContentSwitchProps, ContentSwitchState> {
   private headerNodesWidth: Array<number> = [];
@@ -93,6 +93,11 @@ class ContentSwitchInt extends React.Component<ContentSwitchProps, ContentSwitch
           items,
           overflowItems,
         });
+      } else {
+        this.setState({
+          items: stateItems,
+          overflowItems: [],
+        });
       }
     }
   }
@@ -144,7 +149,9 @@ class ContentSwitchInt extends React.Component<ContentSwitchProps, ContentSwitch
         <OverflowButton
           key={'overflowButton'}
           group={overflowItems.map(({ element, onSelect }) => (
-            <div onClick={onSelect}>{element && (element as React.ReactElement<TabPageProps>).props.header}</div>
+            <OverflowItems onClick={onSelect}>
+              {element && (element as React.ReactElement<TabPageProps>).props.header}
+            </OverflowItems>
           ))}
           toggleButton={
             <Header>

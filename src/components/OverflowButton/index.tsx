@@ -11,8 +11,8 @@ import { Flyout, FlyoutProps } from '../Flyout';
 export interface OverflowButtonProps {
   group: Array<React.ReactChild>;
   toggleButton?: React.ReactNode;
-  flyoutProps?: FlyoutProps;
-  interactiveListProps?: InteractiveListProps;
+  flyoutProps?: Partial<FlyoutProps>;
+  interactiveListProps?: Partial<InteractiveListProps>;
 }
 
 export interface OverflowButtonState {
