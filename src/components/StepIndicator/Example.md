@@ -1,3 +1,5 @@
+**Elementary**
+
 The `StepIndicator` is a simple component to create a simple step indicator for multi-step forms or processes.
 
 Simply put down some steps in the `steps` prop to tell the component what steps to render.
@@ -5,43 +7,62 @@ Simply put down some steps in the `steps` prop to tell the component what steps 
 ```jsx
 const { StepIndicator } = require('precise-ui');
 
-<StepIndicator steps={["1. First", "2. Second"]} current={0} />
+<StepIndicator steps={['1. First', '2. Second']} />
 ```
 
-The currently active step can be set using the `current` prop.
+**Current Step**
 
-```jsx
-const { StepIndicator } = require('precise-ui');
-
-<StepIndicator steps={["1. First", "2. Second", "Third", "Fourth", "Fifth"]} current={1} />
-```
-
-We can change to vertical mode as well
+The currently active step can be set using the `current` prop. Furthermore, if we do not only want headers but also content we can use children with the `StepIndicatorStep` component instead.
 
 ```jsx
 const { StepIndicator, StepIndicatorStep } = require('precise-ui');
 
-<StepIndicator mode='vertical' current={1}>
-  <StepIndicatorStep header="1. First">
-  </StepIndicatorStep>
+<StepIndicator current={1}>
+  <StepIndicatorStep header="1. First" />
   <StepIndicatorStep header="2. Second">
+    Second step content.
+  </StepIndicatorStep>
+  <StepIndicatorStep header="Third">
+    Third step content.
+  </StepIndicatorStep>
+  <StepIndicatorStep header="Fourth" />
+  <StepIndicatorStep header="Fifth" />
+</StepIndicator>
+```
+
+**Vertical Mode**
+
+We can change to the vertical mode explicitly as well.
+
+```jsx
+const { StepIndicator, StepIndicatorStep } = require('precise-ui');
+
+<StepIndicator mode="vertical" current={1}>
+  <StepIndicatorStep header="1. First" />
+  <StepIndicatorStep header="2. Second">
+    Second step content.
   </StepIndicatorStep>
   <StepIndicatorStep header="3. Third">
+    Third step content.
   </StepIndicatorStep>
 </StepIndicator>
 ```
 
-We can also add `numbered` to a vertical step indicator to make our steps numbered
+**Numbered Bullets**
+
+We can also set `numbered` to a vertical step indicator to make our steps numbered.
 
 ```jsx
 const { StepIndicator, StepIndicatorStep } = require('precise-ui');
 
-<StepIndicator mode='vertical' numbered current={1}>
+<StepIndicator mode="vertical" numbered current={1}>
   <StepIndicatorStep header="First">
+    Content of the first step.<br/>
+    Another row.
   </StepIndicatorStep>
   <StepIndicatorStep header="Second">
+    Current row content.
   </StepIndicatorStep>
-  <StepIndicatorStep header="Third">
-  </StepIndicatorStep>
+  <StepIndicatorStep header="Third" />
 </StepIndicator>
 ```

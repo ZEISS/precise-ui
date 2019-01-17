@@ -6,7 +6,7 @@ export type StepIndicatorMode = 'horizontal' | 'vertical';
 export interface StepIndicatorProps extends StandardProps, ModeProviderProps<StepIndicatorMode>, RefProps {
   /**
    * The current step to show as active. Zero based.
-   * @default -1
+   * @default 0
    */
   current?: number;
   /**
@@ -15,9 +15,9 @@ export interface StepIndicatorProps extends StandardProps, ModeProviderProps<Ste
    */
   numbered?: boolean;
   /**
-   * The steps to render.
+   * The step headers to render, if any. Alternatively, just use children.
    */
-  steps: Array<React.ReactChild>;
+  steps?: Array<React.ReactChild>;
 }
 
 export interface StepIndicatorStepProps extends StandardProps {

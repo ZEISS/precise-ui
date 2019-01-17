@@ -1,13 +1,12 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
 import { StepIndicatorProps, StepIndicatorStepProps } from './StepIndicator.types.part';
+import { ListItemNumber } from './StepIndicatorShared.part';
 import { distance } from '../../distance';
+import { PreciseTheme } from '../../common';
 
-const StyledProgressHost = styled.ol`
-  width: 100%;
-  display: block;
-  padding: 0;
-  margin: 0;
+const StyledProgressContent = styled.div`
+  min-height: ${distance.xxxlarge};
 `;
 
 const StyledProgressStep = styled.li`
@@ -20,10 +19,10 @@ const StyledProgressStep = styled.li`
     content: '';
     display: block;
     border-radius: 50%;
-    width: 8px;
-    height: 8px;
+    width: ${distance.small};
+    height: ${distance.small};
     position: absolute;
-    top: 0;
+    top: ${distance.small};
     left: ${distance.small};
     z-index: 1;
     background-color: ${themed(({ theme }) => theme.text1)};
@@ -32,7 +31,7 @@ const StyledProgressStep = styled.li`
   &:not(:last-child):after {
     content: '';
     position: absolute;
-    top: 0;
+    top: ${distance.small};
     left: 11px;
     width: 2px;
     height: 100%;
@@ -63,6 +62,7 @@ const StyledProgressStep = styled.li`
       background-color: ${themed(({ theme }) => theme.ui1)};
       border: 0.5em solid ${themed(({ theme }) => theme.text1)};
       left: 0;
+      top: 0;
     }
   }
 `;
@@ -71,45 +71,60 @@ const StyledProgressText = styled.div`
   display: block;
 `;
 
-const StyledProgressContent = styled.div`
-  min-height: 100px;
-`;
-
-const ListItemNumber = styled.div`
+const StyledProgressHost = styled.ol`
+  width: 100%;
   display: block;
-  border-radius: 50%;
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  background: ${themed(({ theme }) => theme.ui1)};
-  border: 2px solid ${themed(({ theme }) => theme.text1)};
-  box-sizing: border-box;
-  text-align: center;
+  padding: 0;
+  margin: 0;
 
-  .step-active ~ li & {
-    border-color: ${themed(({ theme }) => theme.text2)};
+  & ${StyledProgressStep}:last-of-type ${StyledProgressContent} {
+    min-height: auto;
   }
 `;
 
-export const StepIndicatorVertical: React.SFC<StepIndicatorProps> = ({ current, numbered, children }) => {
+function createStep(
+  header: React.ReactNode,
+  content: React.ReactNode,
+  i: number,
+  active: boolean,
+  numbered?: boolean,
+  theme?: PreciseTheme,
+) {
+  return (
+    <StyledProgressStep theme={theme} key={i} className={active ? 'step-active' : ''}>
+      {numbered && <ListItemNumber theme={theme}>{i + 1}</ListItemNumber>}
+      <StyledProgressText theme={theme}>{header}</StyledProgressText>
+      <StyledProgressContent>{content}</StyledProgressContent>
+    </StyledProgressStep>
+  );
+}
+
+function getHeaders(steps: Array<React.ReactNode>, current: number, numbered?: boolean, theme?: PreciseTheme) {
+  return steps.map((step, i) => createStep(step, undefined, i, i === current, numbered, theme));
+}
+
+function getContent(children: React.ReactNode, current: number, numbered?: boolean, theme?: PreciseTheme) {
   const items: Array<React.ReactChild> = [];
 
   React.Children.forEach(children, (element: React.ReactElement<StepIndicatorStepProps>, i) => {
     if (element && React.isValidElement(element)) {
       const { header, children } = element.props;
-
-      items.push(
-        <StyledProgressStep key={i} className={i === current ? 'step-active' : ''}>
-          {numbered && <ListItemNumber>{i + 1}</ListItemNumber>}
-          <StyledProgressText>{header}</StyledProgressText>
-          <StyledProgressContent>{children}</StyledProgressContent>
-        </StyledProgressStep>,
-      );
+      items.push(createStep(header, children, i, i === current, numbered, theme));
     }
   });
+
+  return items;
+}
+
+export const StepIndicatorVertical: React.SFC<StepIndicatorProps> = ({
+  theme,
+  steps,
+  current = 0,
+  numbered,
+  children,
+}) => {
+  const items =
+    steps !== undefined ? getHeaders(steps, current, numbered, theme) : getContent(children, current, numbered, theme);
 
   return <StyledProgressHost>{items}</StyledProgressHost>;
 };

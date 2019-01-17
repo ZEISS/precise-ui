@@ -5,14 +5,14 @@ import { StepIndicatorVertical } from './StepIndicatorVertical.part';
 
 export class StepIndicatorInt extends React.PureComponent<StepIndicatorProps> {
   render() {
-    const { children, mode, innerRef, ...props } = this.props;
+    const { mode, innerRef, ...props } = this.props;
 
     return (
       <div ref={innerRef}>
         {mode === 'horizontal' ? (
           <StepIndicatorHorizontal {...props} />
         ) : mode === 'vertical' ? (
-          <StepIndicatorVertical children={children} {...props} />
+          <StepIndicatorVertical {...props} />
         ) : (
           false
         )}
