@@ -8,6 +8,16 @@ describe('<StepIndicator />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render an empty horizontal step indicator component', () => {
+    const wrapper = enzyme.shallow(<StepIndicator mode="horizontal" steps={[]} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render an empty vertical step indicator component', () => {
+    const wrapper = enzyme.shallow(<StepIndicator mode="vertical" steps={[]} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render a step indicator with two elements', () => {
     const wrapper = enzyme.shallow(<StepIndicator steps={['One', 'Two']} />);
     expect(wrapper).toMatchSnapshot();
