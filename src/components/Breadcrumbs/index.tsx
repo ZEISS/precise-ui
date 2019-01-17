@@ -3,11 +3,9 @@ import styled, { themed } from '../../utils/styled';
 import { Breadcrumb } from '../Breadcrumb';
 import { dark } from '../../colors';
 import { remCalc } from '../../utils/remCalc';
-import { InteractiveList, InteractiveListItem, InteractiveListWrapperProps } from '../InteractiveList';
 import { StandardProps } from '../../common';
-import { Flyout } from '../Flyout';
 import { distance } from '../../distance';
-import onClickOutside, { AdditionalProps } from 'react-onclickoutside';
+import { OverflowButton } from '../OverflowButton';
 
 const BreadcrumbContainer = styled.div`
   font-size: ${remCalc('14px')};
@@ -35,93 +33,9 @@ export interface BreadcrumbsProps extends StandardProps {
   children?: React.ReactNode;
 }
 
-interface BreadcrumbPlaceholderProps {
-  group: Array<React.ReactChild>;
-}
-
-interface BreadcrumbPlaceholderState {
-  open: boolean;
-  items: Array<InteractiveListItem>;
-}
-
-const CustomWrapper: React.SFC<InteractiveListWrapperProps> = props => {
-  const { children, ...rest } = props;
-  return <div {...rest}>{children}</div>;
-};
-
-function getItems(group: Array<React.ReactChild>): Array<InteractiveListItem> {
-  return group.map((item, index) => ({
-    content: item,
-    key: index.toString(),
-  }));
-}
-
-class BreadcrumbPlaceholderInt extends React.Component<BreadcrumbPlaceholderProps, BreadcrumbPlaceholderState> {
-  constructor(props: BreadcrumbPlaceholderProps) {
-    super(props);
-    this.state = {
-      open: false,
-      items: getItems(props.group),
-    };
-  }
-
-  handleClickOutside = () => {
-    this.state.open &&
-      this.setState({
-        open: false,
-      });
-  };
-
-  componentWillReceiveProps(nextProps: BreadcrumbPlaceholderProps) {
-    this.setState({
-      items: getItems(nextProps.group),
-    });
-  }
-
-  private toggleGroup = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const { open } = this.state;
-
-    this.setState({
-      open: !open,
-    });
-
-    e.preventDefault();
-  };
-
-  private closeList = () => {
-    this.setState({
-      open: false,
-    });
-  };
-
-  render() {
-    const { open, items } = this.state;
-    return (
-      <Flyout
-        content={
-          <InteractiveList
-            open={open}
-            autoFocus
-            data={items}
-            onBlur={this.closeList}
-            onChange={this.closeList}
-            customWrapper={CustomWrapper}
-          />
-        }
-        open={open}>
-        <Breadcrumb title="..." onClick={this.toggleGroup} />
-      </Flyout>
-    );
-  }
-}
-
-const BreadcrumbPlaceholder: React.ComponentClass<BreadcrumbPlaceholderProps & AdditionalProps> = onClickOutside(
-  BreadcrumbPlaceholderInt,
-);
-
 function collapse(items: Array<React.ReactChild>, target: number, size: number) {
   const group = items.splice(target, 1 + items.length - size, '');
-  items[target] = <BreadcrumbPlaceholder group={group} />;
+  items[target] = <OverflowButton group={group} toggleButton={<Breadcrumb title="..." href="#" />} />;
 }
 
 function insertSeparators(items: Array<React.ReactChild>) {

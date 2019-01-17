@@ -350,6 +350,18 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render MoreHoriz icon', () => {
+    const Component = icons.MoreHoriz;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render MoreVert icon', () => {
+    const Component = icons.MoreVert;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render ConfirmationNumber icon', () => {
     const Component = icons.ConfirmationNumber;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -428,3 +440,4 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
+  
