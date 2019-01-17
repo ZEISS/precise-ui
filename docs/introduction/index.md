@@ -1,10 +1,10 @@
-## Welcome
+## Getting Started
 
 ### Precise UI React Component Library
 
-Precise UI gives you a UI component library fully based on **React**. This means that everything, not only the components, but also the styling and assets are fully provided as JavaScript modules. These modules use the React library for rendering. 
+Precise UI gives you a UI component library fully based on **React**. This means that everything, not only the components, but also the styling and assets are fully provided as JavaScript modules. These modules use the React library for rendering.
 
-### Features 
+### Features
 
 - There are more than **75** components currently available in this library and even more are being implemented. Make sure you check the [Components](/components/accordion) section for a better overview.
 
@@ -14,7 +14,7 @@ Precise UI gives you a UI component library fully based on **React**. This means
 
 ### Browser Support
 
-It fully supports **IE9+, Chrome, Firefox and Safari**. 
+It fully supports **IE9+, Chrome, Firefox and Safari**.
 
 > Note: IE support still requires Polyfills.
 

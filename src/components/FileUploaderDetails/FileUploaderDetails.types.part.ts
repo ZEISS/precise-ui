@@ -55,25 +55,6 @@ export interface FileProgress extends FileBase {
   scanning: boolean;
 }
 
-export interface TranslationLabels {
-  tableHeaderFile: string;
-  tableHeaderStatus: string;
-  canceledTableUpload: string;
-  scanningTableUpload: string;
-  progressTableUpload: string;
-  successTableUpload: string;
-  errorTableUpload: string;
-  uploadModalTitle: string;
-  uploadProgress: string;
-  uploadSuccess: string;
-  uploadScanning: string;
-  uploadError: string;
-  viewDetails: string;
-  itemSingular: string;
-  itemPlural: string;
-  cancelAll: string;
-}
-
 export type ProgressStatus = 'progress' | 'scanning' | 'error' | 'success' | 'canceled';
 
 export const FileUploadActions = {

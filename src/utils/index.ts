@@ -12,4 +12,5 @@ export * from './eventManager';
 export * from './displayTo';
 export * from './keyCodes';
 export * from './text';
-export { default as styled, css, keyframes, injectGlobal, withTheme, themed, reStyled } from './styled';
+export * from './labels';
+export { default as styled, css, keyframes, injectGlobal, withTheme, themed, reStyled, ThemeProvider } from './styled';

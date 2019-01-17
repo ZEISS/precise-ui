@@ -1,10 +1,13 @@
 import * as React from 'react';
 import styled from '../../utils/styled';
+import { setLabels, getPropLabel, PaginationBarLabels } from '../../utils/labels';
 import { ItemControls } from './ItemControlsView.part';
 import { PageControls } from './PageControls.part';
 import { SelectButtonChangeEvent } from '../SelectButton';
 
-const defaultItemsPerPageLabel = 'Items per page:';
+setLabels({
+  itemsPerPageLabel: 'Items per page:',
+});
 
 function defaultItemsInfo(start: number, end: number, total: number) {
   return `${start} - ${end} of ${total}`;
@@ -41,7 +44,7 @@ export interface PaginationBarPageChangedEvent {
   page: number;
 }
 
-export interface PaginationBarProps {
+export interface PaginationBarProps extends PaginationBarLabels {
   /**
    * The available maximum numbers of entries per page to choose from, if any.
    */
@@ -68,11 +71,6 @@ export interface PaginationBarProps {
    * @default '{start} - {end} of {total}'
    */
   itemsInfo?(start: number, end: number, total: number): React.ReactChild;
-  /**
-   * The items per page label.
-   * @default 'Items per page:'
-   */
-  itemsPerPageLabel?: string;
   /**
    * Event fired when the size per page has been changed.
    */
@@ -128,7 +126,7 @@ export class PaginationBar extends React.Component<PaginationBarProps> {
       items,
       onSizeChanged,
       onPageChanged,
-      itemsPerPageLabel = defaultItemsPerPageLabel,
+      ...props
     } = this.props;
     const pages = getPages(size, items);
     const currentItem = selectedPage * size;
@@ -138,7 +136,7 @@ export class PaginationBar extends React.Component<PaginationBarProps> {
       <ControlsContainer>
         {Array.isArray(availableSizes) && availableSizes.length > 0 && (
           <ItemControls
-            label={itemsPerPageLabel}
+            label={getPropLabel(props, 'itemsPerPageLabel')}
             data={availableSizes.map(size => size.toString())}
             value={`${size}`}
             onChange={this.sizeChanged}>

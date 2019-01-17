@@ -34,10 +34,6 @@ export interface NotificationOption {
    * Optionally sets the event manager to use.
    */
   events?: EventManager;
-  /**
-   * @deprecated Shows the notification as a toast message.
-   */
-  toast?: boolean;
 }
 
 export interface NotificationProps {
