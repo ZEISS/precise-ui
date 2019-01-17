@@ -10,6 +10,7 @@ import { distance } from '../../distance';
 import { light } from '../../themes';
 import { Icon } from '../Icon';
 import { Responsive } from '../Responsive';
+import { WindowPopup } from '../WindowPopup';
 import {
   InteractiveList,
   InteractiveListChangeEvent,
@@ -24,7 +25,6 @@ import {
   StyledTagItem,
   StyledIconContainer,
 } from '../../quarks';
-import { WindowPopup } from '../WindowPopup';
 
 export interface DropdownFieldToggleEvent {
   state: 'open' | 'close';
