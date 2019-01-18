@@ -50,7 +50,7 @@ const { StepIndicator, StepIndicatorStep } = require('precise-ui');
 
 **Numbered Bullets**
 
-We can also set `numbered` to a vertical step indicator to make our steps numbered.
+We can also set `numbered` to a step indicator to make our steps numbered.
 
 ```jsx
 const { StepIndicator, StepIndicatorStep } = require('precise-ui');
@@ -61,7 +61,7 @@ const { StepIndicator, StepIndicatorStep } = require('precise-ui');
     Another row.
   </StepIndicatorStep>
   <StepIndicatorStep header="Second">
-    Current row content.
+    Current step content.
   </StepIndicatorStep>
   <StepIndicatorStep header="Third" />
 </StepIndicator>
