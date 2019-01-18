@@ -164,7 +164,7 @@ export class SelectButton extends React.PureComponent<SelectButtonProps, SelectB
 
     return (
       <RootWrapper {...props}>
-        <ButtonWrapper onMouseDown={this.handleMouseDown}>
+        <ButtonWrapper onMouseDown={this.handleMouseDown} className="ignore-react-onclickoutside">
           {value}
           <Icon name="ArrowDropDown" size={1.5} />
         </ButtonWrapper>

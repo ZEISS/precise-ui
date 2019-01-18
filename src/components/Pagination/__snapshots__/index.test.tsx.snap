@@ -147,10 +147,11 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                           className="sc-kAzzGY dyRsxz"
                         >
                           <styled.div
+                            className="ignore-react-onclickoutside"
                             onMouseDown={[Function]}
                           >
                             <div
-                              className="sc-chPdSV irvcZR"
+                              className="ignore-react-onclickoutside sc-chPdSV irvcZR"
                               onMouseDown={[Function]}
                             >
                               1
@@ -257,10 +258,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                   ]
                                 }
                                 innerRef={[Function]}
-                                onBlur={[Function]}
                                 onKeyDown={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseOver={[Function]}
                                 outsideClickIgnoreClass="ignore-react-onclickoutside"
                                 preventDefault={false}
                                 showTick={true}
@@ -270,10 +268,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                 <div
                                   autoFocus={true}
                                   className="sc-htoDjs fJTDDB"
-                                  onBlur={[Function]}
                                   onKeyDown={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseOver={[Function]}
                                   value="1"
                                 >
                                   <CustomWrapper
@@ -506,10 +501,11 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                           className="sc-kAzzGY dyRsxz"
                         >
                           <styled.div
+                            className="ignore-react-onclickoutside"
                             onMouseDown={[Function]}
                           >
                             <div
-                              className="sc-chPdSV irvcZR"
+                              className="ignore-react-onclickoutside sc-chPdSV irvcZR"
                               onMouseDown={[Function]}
                             >
                               1
@@ -616,10 +612,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                   ]
                                 }
                                 innerRef={[Function]}
-                                onBlur={[Function]}
                                 onKeyDown={[Function]}
-                                onMouseDown={[Function]}
-                                onMouseOver={[Function]}
                                 outsideClickIgnoreClass="ignore-react-onclickoutside"
                                 preventDefault={false}
                                 showTick={true}
@@ -629,10 +622,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                 <div
                                   autoFocus={true}
                                   className="sc-htoDjs fJTDDB"
-                                  onBlur={[Function]}
                                   onKeyDown={[Function]}
-                                  onMouseDown={[Function]}
-                                  onMouseOver={[Function]}
                                   value="1"
                                 >
                                   <CustomWrapper

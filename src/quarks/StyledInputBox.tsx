@@ -29,7 +29,7 @@ export interface StyledInputBoxProps {
   theme?: PreciseTheme;
 }
 
-export const StyledInputBox: React.ComponentType<StyledInputBoxProps> = reStyled<StyledInputBoxProps, 'div'>('div')(
+export const StyledInputBox: React.ComponentClass<StyledInputBoxProps> = reStyled<StyledInputBoxProps, 'div'>('div')(
   ({ border, disabled, focused, hasValue, theme: { ui0, ui2, ui3, ui5 } }) => `
   box-sizing: border-box;
   box-shadow: none;

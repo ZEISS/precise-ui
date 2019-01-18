@@ -44,6 +44,10 @@ module.exports = {
           content: path.resolve(__dirname, 'docs/introduction/usage.md'),
         },
         {
+          name: 'Components',
+          content: path.resolve(__dirname, 'docs/introduction/components.md'),
+        },
+        {
           name: 'Support',
           content: path.resolve(__dirname, 'docs/introduction/support.md'),
         },
@@ -123,7 +127,7 @@ module.exports = {
   styles: {
     Logo: {
       logo: {
-        backgroundImage: 'url(precise-logo.svg)',
+        backgroundImage: 'url(logo.svg)',
         backgroundRepeat: 'no-repeat',
         paddingTop: '85px',
         backgroundPosition: 'center 0',

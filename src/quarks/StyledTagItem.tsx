@@ -7,7 +7,7 @@ export interface StyledTagItemProps {
   theme?: PreciseTheme;
 }
 
-export const StyledTagItem: React.ComponentType<StyledTagItemProps> = styled.span`
+export const StyledTagItem: React.ComponentClass<StyledTagItemProps> = styled.span`
   margin: 0 ${distance.small} 0 0;
   padding: ${distance.xsmall} ${distance.small};
   background-color: ${themed(props => props.theme.ui4)};

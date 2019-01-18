@@ -7,7 +7,7 @@ export interface StyledFileListProps {
   theme?: PreciseTheme;
 }
 
-export const StyledFileList: React.ComponentType<StyledFileListProps> = styled.ul`
+export const StyledFileList: React.ComponentClass<StyledFileListProps> = styled.ul`
   list-style: none;
   margin: ${distance.large} 0 0 0;
   padding: 0;

@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as enzyme from 'enzyme';
 import { InputError } from './';
 import { TextField } from '../TextField';
-import { withValidator } from '../../hoc/withValidator';
+import { withValidation } from '../../hoc/withValidation';
 
 describe('<InputError />', () => {
   it('should render <InputError> that has an error message', () => {
@@ -20,14 +20,14 @@ describe('<InputError />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should not be shown with the withValidator hoc if not changed', () => {
-    const RequiredTextField = withValidator(({ value }) => !value && 'Input is required')(TextField);
+  it('should not be shown with the withValidation hoc if not changed', () => {
+    const RequiredTextField = withValidation(({ value }) => !value && 'Input is required')(TextField);
     const wrapper = enzyme.mount(<RequiredTextField />);
     expect(wrapper.state('error')).toEqual(undefined);
   });
 
-  it('should be shown with the withValidator hoc if changed', () => {
-    const RequiredTextField = withValidator(({ value }) => !value && 'Input is required')(TextField);
+  it('should be shown with the withValidation hoc if changed', () => {
+    const RequiredTextField = withValidation(({ value }) => !value && 'Input is required')(TextField);
     const wrapper = enzyme.mount(<RequiredTextField />);
     (wrapper.instance() as any).validate({
       value: '',

@@ -23,9 +23,9 @@ export interface ValidatorState {
 /**
  * Provides automatic validation for a wrapped component.
  * @param validate The validation function.
- * @returns A constructor function taking a component to be wrapped with the validator.
+ * @returns A constructor function taking a component to be wrapped with the validation.
  */
-export function withValidator<TEventArgs>(validate: (e: TEventArgs) => React.ReactChild | undefined) {
+export function withValidation<TEventArgs>(validate: (e: TEventArgs) => React.ReactChild | undefined) {
   return <TProps extends BaseInputProps<TEventArgs>>(
     Component: React.ComponentType<TProps>,
   ): React.ComponentType<TProps & ValidatorProps> => {

@@ -86,3 +86,4 @@ export * from './FileUploaderDetails';
 export * from './AccordionCard';
 export * from './WindowPopup';
 export * from './Expander';
+export * from './ContentSwitch';

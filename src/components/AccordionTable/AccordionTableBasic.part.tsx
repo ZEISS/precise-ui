@@ -2,12 +2,12 @@ import * as React from 'react';
 import styled, { reStyled } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { Table, TableRowEvent, TableCellEvent } from '../Table';
+import { defaultCellRenderer } from '../Table/TableShared.part';
 import { Icon, IconProps } from '../Icon';
+import { AccordionTableRow } from '../AccordionTableRow';
 import { AccordionTableProps } from './AccordionTable.types.part';
 import { normalizeIndex, toggleIndex, hasIndex } from './helpers/indexHelper';
 import { distance } from '../../distance';
-import { AccordionTableRow } from '../AccordionTableRow';
-import { defaultCellRenderer } from '../Table/TableBasic.part';
 
 export interface AccordionTableBasicState {
   /**
@@ -72,18 +72,6 @@ const StyledIcon = styled<StyledArrowProps>(StyledIconInt)`
   transition: transform ${animationDuration} ${animationFunction};
   transform: ${({ isRotated }) => `rotate(${isRotated ? 90 : 0}deg)`};
 `;
-
-function pickCell(key: string, cells: React.ReactNode) {
-  if (cells && Array.isArray(cells)) {
-    return cells.find(cell => isReactElement(cell) && cell.key === key);
-  }
-
-  return undefined;
-}
-
-function isReactElement(cell: React.ReactNode): cell is React.ReactElement<any> {
-  return !!cell && typeof cell === 'object' && 'key' in cell;
-}
 
 export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<T>, AccordionTableBasicState> {
   static defaultProps = {
@@ -183,7 +171,7 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
       const cols = {
         '': {
           header: '',
-          width: remCalc('60px'),
+          width: remCalc('50px'),
           sortable: false,
         },
       };

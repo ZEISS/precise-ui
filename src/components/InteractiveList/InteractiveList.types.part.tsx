@@ -7,7 +7,7 @@ export interface InteractiveListItemObject {
   type?: 'item' | 'divider' | 'header';
 }
 
-export type InteractiveListItem = InteractiveListItemObject | string | undefined;
+export type InteractiveListItem = InteractiveListItemObject | string;
 
 export interface InteractiveListChangeEvent {
   /**

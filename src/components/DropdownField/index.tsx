@@ -6,10 +6,12 @@ import { remCalc } from '../../utils/remCalc';
 import { LabeledInputProps, InputChangeEvent, ScreenSize } from '../../common';
 import { InputIcon } from '../InputIcon';
 import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
+import { transparent } from '../../colors';
 import { distance } from '../../distance';
 import { light } from '../../themes';
 import { Icon } from '../Icon';
 import { Responsive } from '../Responsive';
+import { WindowPopup } from '../WindowPopup';
 import {
   InteractiveList,
   InteractiveListChangeEvent,
@@ -24,7 +26,6 @@ import {
   StyledTagItem,
   StyledIconContainer,
 } from '../../quarks';
-import { WindowPopup } from '../WindowPopup';
 
 export interface DropdownFieldToggleEvent {
   state: 'open' | 'close';
@@ -94,6 +95,10 @@ interface DropDownOptionsTextProps {
   disabled?: boolean;
 }
 
+const DropdownInputBox = styled(StyledInputBox)`
+  border: 1px solid ${themed(({ focused, theme: { ui4 } }) => (focused ? ui4 : transparent))};
+`;
+
 const DropdownOptionText = styled.div`
   padding: ${(props: DropDownOptionsTextProps) =>
     !props.labelShown ? `${distance.medium}` : `${distance.large} ${distance.medium} ${distance.small}`};
@@ -117,7 +122,12 @@ const SingleDropdownItem = styled.span`
   color: ${themed(props => props.theme.text)};
 `;
 
-const StyledStandardWrapper = styled<InteractiveListWrapperProps, 'ul'>('ul')`
+interface StyledStandardWrapperProps {
+  direction: InteractiveListDirection;
+  border: InteractiveListBorderType;
+}
+
+const StyledStandardWrapper = styled<StyledStandardWrapperProps, 'ul'>('ul')`
   list-style: none;
   width: 100%;
   position: absolute;
@@ -150,15 +160,16 @@ const DropdownPopup = styled(WindowPopup)`
 // tslint:disable-next-line
 const NotOpenComponent = null;
 
-const StandardWrapper: React.SFC<InteractiveListWrapperProps> = props =>
-  props.open ? <StyledStandardWrapper {...props} /> : NotOpenComponent;
+const StandardWrapper: React.SFC<InteractiveListWrapperProps> = ({ flyout: _0, open, ...props }) =>
+  open ? <StyledStandardWrapper {...props} /> : NotOpenComponent;
+StandardWrapper.displayName = 'StandardWrapper';
 
 const getMobileWrapper = (label?: React.ReactChild) => ({
   onClick,
   children,
-  ...props
+  open,
 }: InteractiveListWrapperProps & { children?: React.ReactNode }) =>
-  props.open ? (
+  open ? (
     <DropdownPopup onClose={onClick} label={label}>
       {children}
     </DropdownPopup>
@@ -365,8 +376,7 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
 
   private renderList = (screenSize?: ScreenSize) => {
     const { data = [], theme, disabled, multiple } = this.props;
-    const { open: openState, value } = this.state;
-    const open = openState && !disabled;
+    const { open, value } = this.state;
     const mobile = screenSize === 'small';
     const wrapper = mobile ? getMobileWrapper(<StyledLabel>{this.props.label}</StyledLabel>) : StandardWrapper;
 
@@ -375,7 +385,7 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
         theme={theme}
         data={data}
         multiple={multiple}
-        open={open}
+        open={open && !disabled}
         onChange={this.handleChange}
         onClick={mobile ? this.toggle : undefined}
         onBlur={mobile ? undefined : this.hide}
@@ -422,8 +432,12 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
 
     return (
       <DropdownContainer {...other}>
-        <DropdownSelect onMouseDown={this.handleMouseDown} tabIndex={0} onKeyDown={this.control}>
-          <StyledInputBox disabled={disabled} hasValue={hasValue} border={border} focused={open} theme={theme}>
+        <DropdownSelect
+          onMouseDown={this.handleMouseDown}
+          tabIndex={0}
+          onKeyDown={this.control}
+          className="ignore-react-onclickoutside">
+          <DropdownInputBox disabled={disabled} hasValue={hasValue} border={border} focused={open} theme={theme}>
             <StyledInputRow label={label} placeholder={placeholder} error={!!error} focused={open} hasValue={hasValue}>
               <DropdownOptionText labelShown={label !== undefined} disabled={disabled}>
                 {hasValue || label ? items.map(item => getContent(item, theme)) : placeholder}
@@ -437,7 +451,7 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
                 size="22px"
               />
             </StyledIconContainer>
-          </StyledInputBox>
+          </DropdownInputBox>
         </DropdownSelect>
         <Responsive render={this.renderList} />
         {showInputInfo(error, info)}

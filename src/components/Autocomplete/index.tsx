@@ -58,7 +58,11 @@ const AutocompleteWrapper = styled.div`
   position: relative;
 `;
 
-const StyledAutosuggestWrapper = reStyled.ul<InteractiveListWrapperProps>(
+interface StyledAutosuggestWrapperProps {
+  direction: InteractiveListDirection;
+}
+
+const StyledAutosuggestWrapper = reStyled.ul<StyledAutosuggestWrapperProps>(
   ({ direction, theme: { background, ui4 } }) => `
   list-style: none;
   width: 100%;
@@ -88,9 +92,11 @@ function defaultSuggestionRenderer<T>(suggestion: T): AutosuggestItem {
   };
 }
 
-const AutosuggestWrapper: React.SFC<InteractiveListWrapperProps> = props =>
-  // tslint:disable-next-line
-  props.open ? <StyledAutosuggestWrapper {...props} /> : null;
+// tslint:disable-next-line
+const NotOpenComponent = null;
+
+const AutosuggestWrapper: React.SFC<InteractiveListWrapperProps> = ({ border: _0, flyout: _1, open, ...props }) =>
+  open ? <StyledAutosuggestWrapper {...props} /> : NotOpenComponent;
 AutosuggestWrapper.displayName = 'AutosuggestWrapper';
 
 class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormContextProps, AutocompleteState> {
