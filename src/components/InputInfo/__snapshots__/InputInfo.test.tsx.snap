@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<InputInfo /> should be shown with the withValidator hoc if not changed 1`] = `
+exports[`<InputInfo /> should be shown with the withValidation hoc if not changed 1`] = `
 <Validator
   info="Required input"
 >
@@ -92,7 +92,7 @@ exports[`<InputInfo /> should be shown with the withValidator hoc if not changed
 </Validator>
 `;
 
-exports[`<InputInfo /> should not be shown with the withValidator hoc if changed 1`] = `
+exports[`<InputInfo /> should not be shown with the withValidation hoc if changed 1`] = `
 <Validator
   info="Required input"
 >
