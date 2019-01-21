@@ -404,15 +404,15 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     const cols = keys.length + (indexed ? 1 : 0);
 
     if (indices.length === 0) {
-      return (
-        placeholder && (
-          <StyledTableRow theme={theme}>
-            <StyledPlaceholderCell colSpan={cols} theme={theme}>
-              {placeholder}
-            </StyledPlaceholderCell>
-          </StyledTableRow>
-        )
-      );
+      return placeholder
+        ? [
+            <StyledTableRow theme={theme}>
+              <StyledPlaceholderCell colSpan={cols} theme={theme}>
+                {placeholder}
+              </StyledPlaceholderCell>
+            </StyledTableRow>,
+          ]
+        : [];
     } else {
       return indices.map(index => {
         const cells = this.renderCells(keys, index);

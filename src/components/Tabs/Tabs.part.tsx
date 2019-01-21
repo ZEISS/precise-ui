@@ -30,6 +30,11 @@ class TabInt extends React.PureComponent<TabIntProps> {
     );
   }
 }
-export const ResponsiveTabs = withResponsiveMode<'tab' | 'dropdown'>(width =>
+
+export interface ResponsiveTabsType extends React.SFC<TabIntProps> {
+  (props: TabIntProps & { children?: React.ReactNode }, context?: any): JSX.Element;
+}
+
+export const ResponsiveTabs: ResponsiveTabsType = withResponsiveMode<'tab' | 'dropdown'>(width =>
   !width || width > breakpoints.medium ? 'tab' : 'dropdown',
-)(TabInt);
+)(TabInt) as any;

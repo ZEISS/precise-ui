@@ -79,7 +79,7 @@ export function withResponsiveMode<TModes>(getMode: GetModeType<TModes>) {
           const { mode } = this.state;
           const { onModeChange } = this.props;
 
-          if (typeof onModeChange === 'function' && mode) {
+          if (mode && typeof onModeChange === 'function') {
             onModeChange({ mode });
           }
         }

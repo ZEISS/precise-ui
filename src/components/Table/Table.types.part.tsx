@@ -70,7 +70,7 @@ export interface TableBodyRenderEvent {
   /**
    * The rows of the table to be rendered.
    */
-  rows: React.ReactNode;
+  rows: Array<React.ReactNode>;
   /**
    * Gets the used table mode.
    */
