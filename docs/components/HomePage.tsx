@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { styled, Headline, Icon, IconName, Button, BodyText, StackPanel, StackItem, colors } from '../../src';
+// @ts-ignore
+import Markdown from 'react-styleguidist/lib/rsg-components/Markdown';
 
 const HeadIcon = styled(Icon)`
   vertical-align: text-bottom;
@@ -68,11 +70,16 @@ const Head: React.SFC<HeadProps> = ({ icon, title }) => (
   </Headline>
 );
 
-const installation = `npm i precise-ui`;
+function codeBlock(language: string, block: string) {
+  return `${cb}${language}\n${block.replace(/</g, '&lt;').replace(/>/g, '&gt;')}\n${cb}`;
+}
 
-const dependencies = `npm i react@16 styled-components@2`;
-
-const usageExample = `import * as React from 'react';
+const cb = '```';
+const installation = codeBlock('sh', 'npm i precise-ui');
+const dependencies = codeBlock('sh', 'npm i react@16 styled-components@2');
+const usageExample = codeBlock(
+  'ts',
+  `import * as React from 'react';
 import { Rating, TextField } from 'precise-ui';
 
 const App = props => (
@@ -82,22 +89,8 @@ const App = props => (
     <p>Tell us why what we can do better!</p>
     <TextField multiline />
   </div>
-);`;
-
-const CodeBlock = styled.pre`
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
-  font-size: 13px;
-  line-height: 1.5;
-  color: #333;
-  white-space: pre;
-  background-color: #f5f5f5;
-  padding: 8px 16px;
-  border: 1px #e8e8e8 solid;
-  border-radius: 3px;
-  margin-top: 0;
-  margin-bottom: 16px;
-`;
+);`,
+);
 
 export const HomePage: React.SFC = () => (
   <div>
@@ -112,9 +105,7 @@ export const HomePage: React.SFC = () => (
         Precise UI has been created for React 16 with styled-components 2. You will need to have these two dependencies
         installed.
       </BodyText>
-      <CodeBlock>
-        <code>{dependencies}</code>
-      </CodeBlock>
+      <Markdown text={dependencies} />
       <BodyText>
         Precise UI works best with TypeScript, but can be used with ordinary JavaScript as well. Our package comes with
         a ready-to-use UMD bundle, an ES5, and a more modern ES6 version. We recommend using the ES6 version (default).
@@ -126,9 +117,7 @@ export const HomePage: React.SFC = () => (
         Install Precise UI directly via npm. There is no need for setting up some CSS as Precise UI is using
         styled-components.
       </BodyText>
-      <CodeBlock>
-        <code>{installation}</code>
-      </CodeBlock>
+      <Markdown text={installation} />
     </InfoContainer>
     <InfoContainer>
       <Head icon="Favorite" title="Usage" />
@@ -136,9 +125,7 @@ export const HomePage: React.SFC = () => (
         Precise UI components just work out of the box. They play well with any other React components. Due to
         styled-components the styling is isolated and will not conflict with any existing stylesheets in your app.
       </BodyText>
-      <CodeBlock>
-        <code>{usageExample}</code>
-      </CodeBlock>
+      <Markdown text={usageExample} />
     </InfoContainer>
     <InfoContainer>
       <Head icon="HelpOutline" title="FAQ" />
