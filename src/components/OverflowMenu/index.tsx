@@ -8,14 +8,26 @@ import {
 } from '../InteractiveList';
 import { Flyout, FlyoutProps } from '../Flyout';
 
-export interface OverflowButtonProps {
-  group: Array<React.ReactChild>;
-  toggleButton?: React.ReactNode;
+export interface OverflowMenuProps {
+  /**
+   * The items to display in the menu.
+   */
+  items: Array<React.ReactChild>;
+  /**
+   * The button to display for opening the menu.
+   */
+  button?: React.ReactNode;
+  /**
+   * The properties to pass on to the flyout.
+   */
   flyoutProps?: Partial<FlyoutProps>;
-  interactiveListProps?: Partial<InteractiveListProps>;
+  /**
+   * The properties to pass on the interactive list.
+   */
+  listProps?: Partial<InteractiveListProps>;
 }
 
-export interface OverflowButtonState {
+export interface OverflowMenuState {
   open: boolean;
   items: Array<InteractiveListItem>;
 }
@@ -36,13 +48,13 @@ function getItems(group: Array<React.ReactChild>): Array<InteractiveListItem> {
   }));
 }
 
-class OverflowButtonInt extends React.Component<OverflowButtonProps, OverflowButtonState> {
-  constructor(props: OverflowButtonProps) {
+class OverflowMenuInt extends React.Component<OverflowMenuProps, OverflowMenuState> {
+  constructor(props: OverflowMenuProps) {
     super(props);
 
     this.state = {
       open: false,
-      items: getItems(props.group),
+      items: getItems(props.items),
     };
   }
 
@@ -53,9 +65,9 @@ class OverflowButtonInt extends React.Component<OverflowButtonProps, OverflowBut
       });
   };
 
-  componentWillReceiveProps(nextProps: OverflowButtonProps) {
+  componentWillReceiveProps(nextProps: OverflowMenuProps) {
     this.setState({
-      items: getItems(nextProps.group),
+      items: getItems(nextProps.items),
     });
   }
 
@@ -77,7 +89,7 @@ class OverflowButtonInt extends React.Component<OverflowButtonProps, OverflowBut
 
   render() {
     const { open, items } = this.state;
-    const { toggleButton, flyoutProps, interactiveListProps } = this.props;
+    const { button: toggleButton, flyoutProps, listProps: interactiveListProps } = this.props;
 
     return (
       <Flyout
@@ -101,6 +113,4 @@ class OverflowButtonInt extends React.Component<OverflowButtonProps, OverflowBut
   }
 }
 
-export const OverflowButton: React.ComponentClass<AdditionalProps & OverflowButtonProps> = onClickOutside(
-  OverflowButtonInt,
-);
+export const OverflowMenu: React.ComponentClass<AdditionalProps & OverflowMenuProps> = onClickOutside(OverflowMenuInt);

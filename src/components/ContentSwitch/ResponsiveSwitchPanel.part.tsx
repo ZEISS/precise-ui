@@ -4,7 +4,7 @@ import { withResponsive } from '../../hoc/withResponsive';
 import { TabPageProps } from '../TabPage';
 import { Container, Headers, Header, Content, ContentItem, OverflowItems } from './ContentSwitch.part';
 import { ContentSwitchProps } from './ContentSwitchTypes.part';
-import { OverflowButton } from '../OverflowButton';
+import { OverflowMenu } from '../OverflowMenu';
 import { Icon } from '../Icon';
 
 export interface ContentSwitchState {
@@ -135,14 +135,14 @@ class ContentSwitchInt extends React.Component<ContentSwitchProps, ContentSwitch
 
     overflowItems.length &&
       headers.push(
-        <OverflowButton
-          key={'overflowButton'}
-          group={overflowItems.map(({ element, onSelect }) => (
+        <OverflowMenu
+          key="overflowButton"
+          items={overflowItems.map(({ element, onSelect }) => (
             <OverflowItems onClick={onSelect}>
               {element && (element as React.ReactElement<TabPageProps>).props.header}
             </OverflowItems>
           ))}
-          toggleButton={
+          button={
             <Header>
               <Icon name="MoreVert" />
             </Header>

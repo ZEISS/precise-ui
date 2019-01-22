@@ -5,7 +5,7 @@ import { dark } from '../../colors';
 import { remCalc } from '../../utils/remCalc';
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
-import { OverflowButton } from '../OverflowButton';
+import { OverflowMenu } from '../OverflowMenu';
 
 const BreadcrumbContainer = styled.div`
   font-size: ${remCalc('14px')};
@@ -34,8 +34,12 @@ export interface BreadcrumbsProps extends StandardProps {
 }
 
 function collapse(items: Array<React.ReactChild>, target: number, size: number) {
-  const group = items.splice(target, 1 + items.length - size, '');
-  items[target] = <OverflowButton group={group} toggleButton={<Breadcrumb title="..." href="#" />} />;
+  items[target] = (
+    <OverflowMenu
+      items={items.splice(target, 1 + items.length - size, '')}
+      button={<Breadcrumb title="..." href="#" />}
+    />
+  );
 }
 
 function insertSeparators(items: Array<React.ReactChild>) {

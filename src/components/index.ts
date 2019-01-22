@@ -51,6 +51,7 @@ export * from './Modal';
 export * from './NavBar';
 export * from './Notification';
 export * from './Notifications';
+export * from './OverflowMenu';
 export * from './PageHead';
 export * from './Pagination';
 export * from './PaginationBar';
