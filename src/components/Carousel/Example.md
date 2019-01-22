@@ -1,11 +1,11 @@
 **Elementary**
 
-Example of the basic `Swiper` component usage. To specify children pages for Swiper use any kind of components.
+Example of the basic `Carousel` component usage. To specify children pages for a carousel use any kind of components.
 
 ```jsx
-const { Swiper } = require('precise-ui');
+const { Carousel } = require('precise-ui');
 
-<Swiper infinite>
+<Carousel infinite>
   <div style={{ height: '150px', width: '100%', backgroundColor: '#f3a', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
     First page
   </div>
@@ -15,7 +15,7 @@ const { Swiper } = require('precise-ui');
   <div style={{ height: '150px', width: '450px', backgroundColor: '#1f2', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
     Third page
   </div>
-</Swiper>
+</Carousel>
 ```
 
 **Controlled Mode**
@@ -23,9 +23,9 @@ const { Swiper } = require('precise-ui');
 An example with controlled mode and page open by default. In this mode component behavior is controlled by code exclusively.
 
 ```jsx
-const { Swiper } = require('precise-ui');
+const { Carousel } = require('precise-ui');
 
-<Swiper selectedIndex={1}>
+<Carousel selectedIndex={1}>
   <div>
     First page
   </div>
@@ -35,7 +35,7 @@ const { Swiper } = require('precise-ui');
   <div>
     Third page
   </div>
-</Swiper>
+</Carousel>
 ```
 
 **Presentation Options**
@@ -43,9 +43,9 @@ const { Swiper } = require('precise-ui');
 Example with arrows by using the `arrows` option. Furthermore, the `infinite` option removes the natural boundaries.
 
 ```jsx
-const { Swiper } = require('precise-ui');
+const { Carousel } = require('precise-ui');
 
-<Swiper arrows infinite>
+<Carousel arrows infinite>
   <div style={{ height: '150px', width: '100%', backgroundColor: '#f3a', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
     First page
   </div>
@@ -55,5 +55,5 @@ const { Swiper } = require('precise-ui');
   <div style={{ height: '150px', width: '450px', backgroundColor: '#1f2', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
     Third page
   </div>
-</Swiper>
+</Carousel>
 ```

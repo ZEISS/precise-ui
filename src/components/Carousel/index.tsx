@@ -1,13 +1,13 @@
 import * as React from 'react';
 import styled, { css } from '../../utils/styled';
-import { StandardProps } from '../../common';
 import { KeyCodes } from '../../utils/keyCodes';
 import { remCalc } from '../../utils/remCalc';
 import { InteractiveSurface, InteractiveSurfaceChangeEvent } from '../InteractiveSurface';
 import { Icon } from '../Icon';
+import { StandardProps } from '../../common';
 import { distance } from '../../distance';
 
-export interface SwiperChangeEvent {
+export interface CarouselChangeEvent {
   /**
    * The previously selected page index.
    */
@@ -18,7 +18,7 @@ export interface SwiperChangeEvent {
   selectedIndex: number;
 }
 
-export interface SwiperStopEvent {
+export interface CarouselStopEvent {
   /**
    * The reason for stopping the autoplay mode.
    */
@@ -29,7 +29,7 @@ export interface SwiperStopEvent {
   resume(): void;
 }
 
-export interface SwiperProps extends StandardProps {
+export interface CarouselProps extends StandardProps {
   /**
    * The default page index - only set for use in automatic mode.
    */
@@ -41,9 +41,9 @@ export interface SwiperProps extends StandardProps {
   /**
    * Notification callback if the selected page index should change.
    */
-  onPageChange?(e: SwiperChangeEvent): void;
+  onPageChange?(e: CarouselChangeEvent): void;
   /**
-   * The children, usually passed as a collection of SwiperPage elements.
+   * The children, usually passed as a collection of elements.
    */
   children?: React.ReactNode;
   /**
@@ -60,9 +60,9 @@ export interface SwiperProps extends StandardProps {
    */
   arrows?: boolean;
   /**
-   * Event emitted once the swiper autoplay stops.
+   * Event emitted once the Carousel autoplay stops.
    */
-  onStop?(e: SwiperStopEvent): void;
+  onStop?(e: CarouselStopEvent): void;
   /**
    * Activate the autoplay mode, potentially with the time per slide
    * in milliseconds. By default 3000.
@@ -70,7 +70,7 @@ export interface SwiperProps extends StandardProps {
    */
   autoplay?: boolean | number;
   /**
-   * Whether the Swiper can loop without stopping.
+   * Whether the Carousel can loop without stopping.
    * @default false
    */
   infinite?: boolean;
@@ -86,7 +86,7 @@ export interface Point {
   y: number;
 }
 
-export interface SwiperState {
+export interface CarouselState {
   /**
    * The currently selected page index.
    */
@@ -207,16 +207,15 @@ function calcLeftShiftPercent(selectedIndex: number) {
 const defaultAutoPlayTime = 3000;
 
 /**
- * The Swiper component displays a toggling list of content. To define single page
- * within Swiper component use SwiperPage. Page can be changed using bullet controls or
- * swiping gestures.
+ * The Carousel component displays a toggling list of content. Page can be changed using bullet
+ * controls or swiping gestures.
  */
-export class Swiper extends React.PureComponent<SwiperProps, SwiperState> {
+export class Carousel extends React.PureComponent<CarouselProps, CarouselState> {
   private selects: Array<() => void> = [];
   private pagesContainer: HTMLDivElement;
   private autoPlayTimeout: any;
 
-  constructor(props: SwiperProps) {
+  constructor(props: CarouselProps) {
     super(props);
     this.state = {
       selectedIndex: props.selectedIndex || props.defaultIndex || 0,
@@ -225,7 +224,7 @@ export class Swiper extends React.PureComponent<SwiperProps, SwiperState> {
     };
   }
 
-  componentWillReceiveProps(nextProps: SwiperProps) {
+  componentWillReceiveProps(nextProps: CarouselProps) {
     const { selectedIndex } = nextProps;
     const { controlled } = this.state;
 
