@@ -1,3 +1,5 @@
+**Elementary**
+
 The `GradientContainer` is a component which fades out text on overflow if the text is bigger than allowed.
 
 ```jsx

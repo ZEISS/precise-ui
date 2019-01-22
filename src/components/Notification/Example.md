@@ -1,3 +1,5 @@
+**Elementary**
+
 The notification component can be used to just render a notification without much ceremony.
 
 ```jsx
@@ -17,6 +19,8 @@ const { Notification, NotificationType } = require('precise-ui');
   Just a text.
 </Notification>
 ```
+
+**Notification Types**
 
 The are several types of notifications: `none`, `info`, `success`, `error`, `warning` for different possible purposes:
 
@@ -46,6 +50,16 @@ const { Notification, NotificationType } = require('precise-ui');
 </div>
 ```
 
+Also, `onClose` handler could be attached to every notification.
+
+```jsx
+<Notification type="warning" actionRenderer={() => <ActionLink onClick={() => alert('Action confirmed')}>Yes</ActionLink>} onClose={() => alert("Notification closed")}>
+  Confirm action?
+</Notification>
+```
+
+**Presentation Options**
+
 A custom action renderer could be assigned to the notification.
 
 ```jsx
@@ -68,12 +82,4 @@ const { Notification, NotificationType, ActionLink, Button } = require('precise-
     Pretty long text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
   </Notification>
 </div>
-```
-
-Also, `onClose` handler could be attached to every notifation.
-
-```jsx
-<Notification type="warning" actionRenderer={() => <ActionLink onClick={() => alert('Action confirmed')}>Yes</ActionLink>} onClose={() => alert("Notification closed")}>
-  Confirm action?
-</Notification>
 ```

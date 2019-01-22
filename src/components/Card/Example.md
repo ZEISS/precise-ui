@@ -1,9 +1,10 @@
+**Elementary**
+
 Basic usage of the Card defaults the layout property to `[0, ..., 0]`, meaning that the child elements want be resized, and the card orientation is set to be vertical.
 
 ```jsx
 const { Card, CardBody, Image, Button } = require('precise-ui');
 
-<div>
 <Card>
   <Image src="https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg" alt="image" />
   <CardBody>
@@ -14,8 +15,9 @@ const { Card, CardBody, Image, Button } = require('precise-ui');
     <Button>Click me</Button>
   </CardBody>
 </Card>
-</div>
 ```
+
+**Layout**
 
 Cards could be layed-out vertically by setting the `orientation="vertical"`, which is default behaviour, and horizontally  `orientation="horizontal"`.
 
@@ -31,7 +33,7 @@ const { Card, CardBody, Image, Headline} = require('precise-ui');
 </Card>
 ```
 
-When using `Sticky` component inside the `Card`, the layout property for that component will not want be taken into calculation, since it's absolutely position.
+When using `Sticky` component inside the `Card`, the layout property for that component will not want be taken into calculation, since it's absolutely positioned.
 
 ```jsx
 const { Card, CardBody, Sticky, Image, Headline, Button} = require('precise-ui');

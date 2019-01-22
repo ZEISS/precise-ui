@@ -1,3 +1,5 @@
+**Elementary**
+
 The following example shows some of the possible variations of the indicator knob.
 
 ```jsx
@@ -49,3 +51,5 @@ const style = { position: 'relative', height: '30px' };
   </tbody>
 </table>
 ```
+
+The indicator knob is just a simple styled block that contains some styling options.

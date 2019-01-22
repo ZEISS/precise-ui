@@ -1,3 +1,5 @@
+**Elementary**
+
 The `SelectButton` provides a simple way to have a simple combination representing the intersection between `Button` and `Dropdown`.
 
 ```jsx

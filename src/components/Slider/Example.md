@@ -1,3 +1,5 @@
+**Elementary**
+
 The `SliderChangeEvent` contains properties such as `current`, `selected`, `index` (the 0-based slider knob that was modified), and `type`. The latter is available to distinguish between `single` (1-knob) and `multi` (*n*-knobs).
 
 Standard usage of a slider component.
@@ -8,7 +10,7 @@ const { Slider } = require('precise-ui');
 <Slider />
 ```
 
-The Slider can have a tooltip showing the value
+The Slider can have a tooltip showing the value.
 
 ```jsx
 const { Slider } = require('precise-ui');
@@ -16,13 +18,15 @@ const { Slider } = require('precise-ui');
 <Slider defaultValue={[5]} minimum={0} maximum={10} showTooltip />
 ```
 
-The Slider could be disabled as well.
+The Slider could be disabled as well using the `disabled` prop. This is the same as on on every input field.
 
 ```jsx
 const { Slider } = require('precise-ui');
 
 <Slider disabled defaultValue={[5]} minimum={0} maximum={10} />
 ```
+
+**Controlled Mode**
 
 The slider supports two modes: controlled and managed. Setting the `value` will trigger the controlled mode.
 
@@ -54,7 +58,11 @@ class MySlider extends React.Component {
 <MySlider />
 ```
 
+**Multiple Values**
+
 The slider also supports multiple values. Just use an array as (initial) input. By default, the differnt values are not allowed to cross each other. A margin can be used to determine the spacing.
+
+**Boundaries**
 
 ```jsx
 const { Slider } = require('precise-ui');
@@ -69,6 +77,8 @@ const { Slider } = require('precise-ui');
 
 <Slider defaultValue={[1, 9]} minimum={0} maximum={10} margin={1} step={0.5} />
 ```
+
+**Vertical Mode**
 
 The slider could also be shown with vertical orientation. Note the height of the slider depends on the outer container - like the width of the horizontal slider.
 

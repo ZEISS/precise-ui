@@ -1,3 +1,5 @@
+**Elementary**
+
 The `Tag` component is quite simple. It is just a little block that has a type and a content. By default the *primary* type is used.
 
 ```jsx

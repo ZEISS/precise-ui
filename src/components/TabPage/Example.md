@@ -1,3 +1,5 @@
+**Elementary**
+
 Using the tabs component with a single tab given in form of a `TabPage` element. The content is directly rendered, i.e., we could also have some more complex structure inside.
 
 ```jsx

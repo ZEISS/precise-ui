@@ -1,3 +1,5 @@
+**Elementary**
+
 By default, the checkbox is displayed without any label.
 
 ```jsx
@@ -6,20 +8,14 @@ const { Checkbox } = require('precise-ui');
 <Checkbox />
 ```
 
-Labels are just described by the checkbox's children. Setting the `value` prop (either to true or false) will switch to controlled mode.
+Checkbox with some arbitrary prop, e.g., `data-eid`, provided.
 
 ```jsx
 const { Checkbox } = require('precise-ui');
 
-<Checkbox value>Controlled checkbox</Checkbox>
-```
-
-With long labels
-
-```jsx
-const { Checkbox } = require('precise-ui');
-
-<Checkbox>This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text.</Checkbox>
+<>
+  <Checkbox data-eid="checkbox" />
+</>
 ```
 
 Inline List of checkboxes
@@ -39,12 +35,34 @@ const itemStyle = {
 </>
 ```
 
+**Controlled Mode**
+
+Labels are just described by the checkbox's children. Setting the `value` prop (either to true or false) will switch to controlled mode.
+
+```jsx
+const { Checkbox } = require('precise-ui');
+
+<Checkbox value>Controlled checkbox</Checkbox>
+```
+
+**Managed Mode**
+
 If we want to supply a default value without switching into controlled mode we use the `defaultValue` prop. The checkbox will scale with the used font size.
 
 ```jsx
 const { Checkbox } = require('precise-ui');
 
 <Checkbox defaultValue style={{ fontSize: '2em' }}>Scaled checkbox</Checkbox>
+```
+
+**Decoration Options**
+
+With very long labels the component just wraps as expected.
+
+```jsx
+const { Checkbox } = require('precise-ui');
+
+<Checkbox>This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text.</Checkbox>
 ```
 
 We are not constraint by simple text for the label's content. Any component will be accepted.
@@ -67,16 +85,6 @@ const { Checkbox } = require('precise-ui');
 <>
   <Checkbox disabled>Disabled</Checkbox>
   <Checkbox value disabled>Selected Disabled</Checkbox>
-</>
-```
-
-Checkbox with `data-eid` prop provided.
-
-```jsx
-const { Checkbox } = require('precise-ui');
-
-<>
-  <Checkbox data-eid="checkbox" />
 </>
 ```
 

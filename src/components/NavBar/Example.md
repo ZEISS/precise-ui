@@ -1,3 +1,5 @@
+**Elementary**
+
 The navigation bar can be used in layouts as follows:
 
 ```jsx
@@ -22,6 +24,8 @@ const navItems = [
 ```
 
 Ideally, it leaves some freedom for creativity while taking away some of the management. In order to be fully useful a proper navigation items array needs to be supplied.
+
+**Hamburger Mode**
 
 The `hamburger` mode is a light variant of the menu. The other one is called `full`, as it should usually be shown on full screen desktop pages. In this mode we have `pin` and `lead` entries. The former being on the right side, the latter on the left side next to the menu.
 

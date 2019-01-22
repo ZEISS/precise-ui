@@ -1,3 +1,5 @@
+**Elementary**
+
 Using a regular dropdown with some options.
 
 ```jsx
@@ -18,6 +20,8 @@ const items = [
 <DropdownField data={items} defaultValue="Value 1" label="Select item"/>
 ```
 
+**Decoration Options**
+
 The given items can also be more than just values. We can provide complex objects that contain further information such as an optional item type (e.g., `divider`, `header`) or some fixed content.
 
 ```jsx
@@ -33,6 +37,21 @@ const items = [
 
 <DropdownField data={items} defaultValue="Value1" />
 ```
+
+Errors can also be shown, like for other input components.
+
+```jsx
+const { DropdownField } = require('precise-ui');
+const items = [
+  "Apple",
+  "Orange",
+  "Banana",
+];
+
+<DropdownField data={items} label="With Label" error="Only fruits here" />
+```
+
+**Multi Select**
 
 Likewise, we can have a multi-select dropdown. The placeholder can be used to display a message shown when no value is currently selected.
 
@@ -53,18 +72,7 @@ const items = [
 <DropdownField data={items} multiple label="With Label" placeholder="You need to select a value" />
 ```
 
-Errors can also be shown, like for other input components.
-
-```jsx
-const { DropdownField } = require('precise-ui');
-const items = [
-  "Apple",
-  "Orange",
-  "Banana",
-];
-
-<DropdownField data={items} label="With Label" error="Only fruits here" />
-```
+**Controlled Mode**
 
 The `Dropdown` can also be used in a controlled way.
 

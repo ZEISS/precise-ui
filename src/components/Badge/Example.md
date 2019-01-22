@@ -1,3 +1,5 @@
+**Elementary**
+
 The `Badge` component is a rather simple component for displaying simple number-based pieces of information in a highlighting manner.
 
 ```jsx
@@ -5,6 +7,8 @@ const { Badge } = require('precise-ui');
 
 <Badge>12</Badge>
 ```
+
+**With Avatar**
 
 Such badges can also play nicely together with the `Avatar` if set to `fill` mode.
 

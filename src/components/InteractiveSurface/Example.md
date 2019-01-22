@@ -1,3 +1,5 @@
+**Elementary**
+
 The interactive surface is sensitive to both, touch and mouse events. It reports the x and y coordinates on clicks / drags.
 
 ```jsx

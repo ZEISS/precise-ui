@@ -1,3 +1,5 @@
+**Elementary**
+
 Example of the basic `Swiper` component usage. To specify children pages for Swiper use any kind of components.
 
 ```jsx
@@ -15,6 +17,8 @@ const { Swiper } = require('precise-ui');
   </div>
 </Swiper>
 ```
+
+**Controlled Mode**
 
 An example with controlled mode and page open by default. In this mode component behavior is controlled by code exclusively.
 
@@ -34,7 +38,9 @@ const { Swiper } = require('precise-ui');
 </Swiper>
 ```
 
-Example with arrows
+**Presentation Options**
+
+Example with arrows by using the `arrows` option. Furthermore, the `infinite` option removes the natural boundaries.
 
 ```jsx
 const { Swiper } = require('precise-ui');

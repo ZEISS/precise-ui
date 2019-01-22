@@ -1,3 +1,5 @@
+**Elementary**
+
 Default Container behaviour is fluid, with 100% occupation of its parent's width.
 
 ```jsx
@@ -12,6 +14,8 @@ const style = { background: 'gray', padding: '5px', margin: '5px' };
   </StackPanel>
 </Container>
 ```
+
+**Appareance Options**
 
 By defining container's maximum width, container stops being fluid and becomes defined with the maximum available width. By default, the container is centered.
 

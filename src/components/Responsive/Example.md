@@ -1,3 +1,5 @@
+**Elementary**
+
 The `Responsive` component is a simple component the gives us the ability to react to screen changes in a declarative way.
 
 ```jsx
@@ -31,8 +33,9 @@ const { Responsive } = require('precise-ui');
 </>;
 ```
 
-Utils also exports `displayTo[screenSize]` function for styled components.
-Where the screen size is 'small' | 'smallAndMedium' | 'medium' | 'mediumAndLarge' | 'large'
+**Utility Functions**
+
+Utils also exports `displayTo[screenSize]` function for styled components. Where the screen size is `small | smallAndMedium | medium | mediumAndLarge | large`.
 
 ```jsx
 const styled = require('styled-components').default;

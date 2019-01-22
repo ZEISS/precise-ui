@@ -1,3 +1,5 @@
+**Elementary**
+
 Sticky component enables positioning absolute elements. The default sticking position is bottom left.
 
 ```jsx

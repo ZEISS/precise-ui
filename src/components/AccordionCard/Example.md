@@ -1,3 +1,5 @@
+**Elementary**
+
 Using the `AccordionCard` component. Renders card which is expandable by clicking action button.
 
 ```jsx
@@ -14,6 +16,8 @@ const { AccordionCard } = require('precise-ui');
   </div>
 </AccordionCard>;
 ```
+
+**Controlled Mode**
 
 `AccordionCard` in controlled mode with custom action renderer.
 

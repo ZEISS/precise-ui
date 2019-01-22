@@ -1,3 +1,5 @@
+**Elementary**
+
 The radio group allows using fancy radio tiles for selections. Essentially, it is a `RadioButtonGroup` with a different styling.
 
 ```jsx

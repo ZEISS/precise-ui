@@ -1,3 +1,5 @@
+**Elementary**
+
 A simple anchor button.
 
 ```jsx
@@ -13,6 +15,8 @@ const { Button } = require('precise-ui');
 
 <Button onClick={() => alert('Hi')}>Click me</Button>
 ```
+
+**Button Styles**
 
 There are two types of buttons with their own color themes: `primary` (default) and `secondary`.
 

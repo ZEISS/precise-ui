@@ -1,3 +1,5 @@
+**Elementary**
+
 The `PaginationBar` component represents a visual pagination bar. It requires full implementation of the pagination functionality from the caller.
 
 ```jsx

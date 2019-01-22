@@ -1,3 +1,5 @@
+**Elementary**
+
 Various versions of the text field. By default, we get a plain text field that is managed and enabled. No placeholder is shown. The width of the text field is the width of the parent container.
 
 ```jsx
@@ -5,6 +7,8 @@ const { TextField } = require('precise-ui');
 
 <TextField />
 ```
+
+**Decoration**
 
 The `label` prop is used to determine what text should be shown as a label.
 
@@ -38,6 +42,8 @@ const { TextField } = require('precise-ui');
 <TextField clearable placeholder="Enter something ..."/>
 ```
 
+**Controlled Mode**
+
 The controlled mode is triggered via the `value` prop.
 
 ```jsx
@@ -53,6 +59,8 @@ const { TextField } = require('precise-ui');
 
 <TextField value="With value" placeholder="With value" clearable onClear={() => alert('Clear Pressed')}/>
 ```
+
+This enables us to also fully utilize a controlled mode. Note, that not only the `onClear` is fired when clearing, but also the `onChange` as we want to change to a new value.
 
 ```jsx
 const { TextField } = require('precise-ui');
@@ -85,6 +93,8 @@ const { TextField } = require('precise-ui');
 
 <TextField defaultValue="With value" placeholder="With default value"/>
 ```
+
+**Decoration Options**
 
 The text field can be decorated with several options, e.g., adding a `prefix` or `suffix`.
 
@@ -127,6 +137,8 @@ class MyInputForm extends React.Component {
 
 <MyInputForm />
 ```
+
+**Multiline Input**
 
 Finally, multi-line input is also supported. Once we go into multi-line mode the `prefix` and `suffix` props are no longer supported. By default, the multi-line input is not resizable. This can be changed, however, with the `resizable` prop.
 

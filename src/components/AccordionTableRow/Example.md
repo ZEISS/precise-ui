@@ -1,3 +1,5 @@
+**Elementary**
+
 Renders single row for the `AccordionTable`.
 
 ```jsx

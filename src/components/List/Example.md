@@ -1,3 +1,5 @@
+**Elementary**
+
 List component could be created using prebuilt `ListItem`.
 
 ```jsx
@@ -19,6 +21,8 @@ const { List, ListItem } = require('precise-ui');
   <ListItem>Cras justo odio</ListItem>
 </List>
 ```
+
+**Presentation Options**
 
 It is also possible to control the list child elements. For example, it's possible to set active list element, by passing the index that needs to be active, and the component will add `active` prop on the given item. Furthermore, the text color is changed accordingly.
 
@@ -60,6 +64,8 @@ const { List, ListItem, Button } = require('precise-ui');
   <ListItem><Button href="#">In ad laboris officia velit proident duis duis.</Button></ListItem>
 </List>
 ```
+
+**Expanding Lists**
 
 List can be also use together with `Expander`, for example, building menu navigation.
 
@@ -112,7 +118,7 @@ class App extends React.Component {
         <StyledList>
           {listItems.map(({ key, icon }, index) => {
             return (
-              key === 'third' ? 
+              key === 'third' ?
               <>
                 <StyledListItem onClick={() => this.changeActive(index)}>
                   <IconLink icon={icon}>{key}</IconLink>

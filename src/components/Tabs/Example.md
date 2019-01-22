@@ -1,3 +1,5 @@
+**Elementary**
+
 Simple tab control.
 
 ```jsx
@@ -47,6 +49,10 @@ Using the tab control to not present the last tab. This is possible since the Ta
 
 The latter is automatically active if no value for `selectedIndex` was  (initially) passed. It cannot be changed during the lifetime. If we want to start with a different tab than the first one, we should then use the `defaultIndex` prop. In controlled mode we are therefore required to use the `onTabChange` callback. This way we can react to data changes and apply them to the underlying model.
 
+**Controlled Mode**
+
+Let's see the controlled mode in action.
+
 ```jsx
 const { Tabs, TabPage } = require('precise-ui');
 
@@ -66,8 +72,9 @@ class MyTabComponent extends React.Component {
 
   render() {
     return (
-      <Tabs selectedIndex={this.state.index}
-            onTabChange={this.changeTab}>
+      <Tabs
+        selectedIndex={this.state.index}
+        onTabChange={this.changeTab}>
         <TabPage header="First">
           First content.
         </TabPage>

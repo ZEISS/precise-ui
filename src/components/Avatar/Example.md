@@ -1,3 +1,5 @@
+**Elementary**
+
 A simple Avatar component using the user's image.
 
 ```jsx
@@ -28,6 +30,8 @@ const image = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAMAAADQmBK
 </table>
 ```
 
+**Default Display**
+
 Without a proper image the initials should be used.
 
 ```jsx
@@ -56,6 +60,8 @@ const { Avatar } = require('precise-ui');
   </tbody>
 </table>
 ```
+
+**Badge Display**
 
 Displaying a badge to indicate some status.
 

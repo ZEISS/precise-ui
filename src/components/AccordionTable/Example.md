@@ -1,3 +1,5 @@
+**Elementary**
+
 Using the `AccordionTable` component. The following example also demonstrates usage of custom `cellRenderer` which allows specifying custom cell content.
 
 ```jsx
@@ -21,18 +23,20 @@ function cellRenderer({key, value}) {
 }
 
 <AccordionTable
-indexed={true}
-data={[
-  {tag: 'A', value: 'Alpha', team: 'Alpha team'},
-  {tag: 'B', value: 'Bravo', team: 'Bravo team'},
-  {tag: 'C', value: 'Charlie', team: 'Charlie team'},
-  {tag: 'E', value: 'Echo', team: 'Echo team'},
-]}
-cellRenderer={cellRenderer}
-detailsRenderer={getContent} />
+  indexed
+  data={[
+    {tag: 'A', value: 'Alpha', team: 'Alpha team'},
+    {tag: 'B', value: 'Bravo', team: 'Bravo team'},
+    {tag: 'C', value: 'Charlie', team: 'Charlie team'},
+    {tag: 'E', value: 'Echo', team: 'Echo team'},
+  ]}
+  cellRenderer={cellRenderer}
+  detailsRenderer={getContent} />
 ```
 
-Using the `AccordionTable` component with paging.
+**Pagination**
+
+Using the `AccordionTable` component with paging for desktop machines. Here, we also want to use a different rendering at mobile - not using the standard pagination, but rather an infinite list.
 
 ```jsx
 const { AccordionTable, Pagination, distance } = require('precise-ui');
@@ -71,16 +75,26 @@ function updateMode(e) {
 }
 
 function renderBody(e) {
+  return e.mode === 'table' ? renderTableBody(e) : renderCardBody(e);
+};
+
+function renderTableBody(e) {
   return (
-    <Pagination host={e.table} size={5}>
+    <Pagination host={e.table} size={5} {...e.props}>
       {e.rows}
     </Pagination>
   );
-};
+}
 
 function renderCardBody(e) {
   return (
-    <InfiniteScroll loadItems={(offset) => setState({offset})} data={e.rows.slice(0, state.offset + 10)} containerHeight={500} button/>
+    <InfiniteScroll
+      loadItems={(offset) => setState({offset})}
+      host={e.table}
+      hasMore={state.offset < e.rows.length}
+      data={e.rows.slice(0, state.offset + 10)}
+      containerHeight={500}
+      button />
   );
 };
 
@@ -91,12 +105,14 @@ function renderCardBody(e) {
   bodyRenderer={renderBody}
   openLabel="Expand"
   closeLabel="Collapse"
-  cardBodyRenderer={renderCardBody}
   onModeChange={updateMode}
   multiple />
 ```
 
+**Controlled Mode**
+
 Using the `AccordionTable` with custom `rowRenderer` in controlled mode.
+
 ```jsx
 const { AccordionTable, AccordionTableRow, colors } = require('precise-ui');
 const { default: styled } = require('styled-components');
@@ -167,8 +183,9 @@ class ControlledAccordionTable extends React.Component {
 }
 
 <ControlledAccordionTable />
-
 ```
+
+**Decoration Options**
 
 Condensed `AccordionTable` with smaller spacings.
 
@@ -187,13 +204,13 @@ function getContent({index, data}) {
 }
 
 <AccordionTable
-indexed={true}
-data={[
-  {tag: 'A', value: 'Alpha', team: 'Alpha team'},
-  {tag: 'B', value: 'Bravo', team: 'Bravo team'},
-]}
-detailsRenderer={getContent}
-condensed />
+  indexed
+  data={[
+    {tag: 'A', value: 'Alpha', team: 'Alpha team'},
+    {tag: 'B', value: 'Bravo', team: 'Bravo team'},
+  ]}
+  detailsRenderer={getContent}
+  condensed />
 ```
 
 Borderless condensed `AccordionTable` with smaller spacings.
@@ -213,12 +230,12 @@ function getContent({index, data}) {
 }
 
 <AccordionTable
-indexed={true}
-data={[
-  {tag: 'A', value: 'Alpha', team: 'Alpha team'},
-  {tag: 'B', value: 'Bravo', team: 'Bravo team'},
-]}
-detailsRenderer={getContent}
-condensed
-borderless />
+  indexed
+  data={[
+    {tag: 'A', value: 'Alpha', team: 'Alpha team'},
+    {tag: 'B', value: 'Bravo', team: 'Bravo team'},
+  ]}
+  detailsRenderer={getContent}
+  condensed
+  borderless />
 ```

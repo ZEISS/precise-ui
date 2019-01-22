@@ -1,17 +1,19 @@
+**Elementary**
+
 Most basic usage of Interactive list requires to specify data and whether the list is open or closed. The list is placed in absolutely positioned wrapper.
 
 ```jsx
 const { InteractiveList } = require('precise-ui');
 
-<InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} flyout={false} />
+<InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} />
 ```
 
-You can show a tick for the selected item
+You can show a tick for the selected item by using the `showTick` options.
 
 ```jsx
 const { InteractiveList } = require('precise-ui');
 
-<InteractiveList data={['Item 1', 'Item 2']} flyout={false} showTick />
+<InteractiveList data={['Item 1', 'Item 2']} showTick />
 ```
 
 Condensed list with smaller spacings
@@ -19,7 +21,7 @@ Condensed list with smaller spacings
 ```jsx
 const { InteractiveList } = require('precise-ui');
 
-<InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} flyout={false} condensed />
+<InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} condensed />
 ```
 
 It's possible to select multiple elements, by adding checkboxes
@@ -27,7 +29,7 @@ It's possible to select multiple elements, by adding checkboxes
 ```jsx
 const { InteractiveList } = require('precise-ui');
 
-<InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} flyout={false} multiple />
+<InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} multiple />
 ```
 
 You can add dividers
@@ -42,8 +44,10 @@ const data = ['1', '2',
   key: '2',
   content: 'Test Header',
 }];
-<InteractiveList data={data} flyout={false} />
+<InteractiveList data={data} />
 ```
+
+**Custom Wrapper**
 
 It's also possible to override the default wrapper by providing custom wrapper, where one could possibly build custom styled wrapper for the list.
 
@@ -63,6 +67,8 @@ const CustomWrapper = function (props) {
 
 <InteractiveList data={['Value 1', 'Value 2', 'Value 3']} open customWrapper={CustomWrapper} />
 ```
+
+**Controlled Mode**
 
 Here is an example of using a controlling version of the interactive list together with another component.
 
@@ -135,7 +141,9 @@ class CustomComponent extends React.Component {
 <CustomComponent />
 ```
 
-Links are automatically displayed correctly:
+**Content Presentation**
+
+Using links in the interactive list is possible (e.g., for building up menus).
 
 ```jsx
 const { InteractiveList } = require('precise-ui');
@@ -150,5 +158,5 @@ const data = [
   },
 ];
 
-<InteractiveList data={data} flyout={false} />
+<InteractiveList data={data}  />
 ```

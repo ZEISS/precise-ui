@@ -1,3 +1,5 @@
+**Elementary**
+
 The radio tile allows using a fancy box that is similar to the `MetroInfoTile` instead of a plain radio input box.
 
 ```jsx

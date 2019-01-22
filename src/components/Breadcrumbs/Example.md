@@ -1,3 +1,5 @@
+**Elementary**
+
 Straight forward `Breadcrumb` navigation bar.
 
 ```jsx
@@ -9,6 +11,8 @@ const { Breadcrumbs, Breadcrumb } = require('precise-ui');
   <Breadcrumb title="Breadcrumb 3" href="#foo" />
 </Breadcrumbs>
 ```
+
+**Overflow**
 
 Once a certain size (by default 5) is reached a part of the elements is collapsed.
 

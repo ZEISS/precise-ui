@@ -1,4 +1,6 @@
-Creates a popup with a full window size.
+**Full Window Size**
+
+Creates a popup with a full window size. This is ideal on mobile or to completely hide what's underneath.
 
 ```jsx
 const { WindowPopup, Button } = require('precise-ui');

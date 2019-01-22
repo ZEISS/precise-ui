@@ -1,3 +1,5 @@
+**Elementary**
+
 The `MetroInfoTile` can be used to have a flat info tile much looking like the metro tiles in e.g., Windows 8/10.
 
 ```jsx

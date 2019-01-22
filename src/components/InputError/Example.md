@@ -1,3 +1,5 @@
+**withValidation Helper**
+
 The `InputError` is implicitly used in many components. We can either explicitly make a validation and set the `error` prop on the respective input component, or use the `withValidation` higher-order component. This allows us to use the following shortcut:
 
 ```jsx

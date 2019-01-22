@@ -1,3 +1,5 @@
+**Elementary**
+
 `FileUploader` component can be added anywhere in your application and can be used together with `FileUploaderDetails` component.
 
 The component sends events on file selection to start upload and receives events on success, error, and progress events. All these events are available via the `onChange` event. Moreover, it is possible to then be notified only about events from particular files.
@@ -20,6 +22,8 @@ function onChange({ files }) {
 </FileUploader>
 ```
 
+**Events**
+
 `FileUploader` can accept custom event object in case of several instances of `FileUploaderDetails` were created. For more details see `FileUploaderDetails` component example.
 
 ```jsx
@@ -30,6 +34,8 @@ const myEventManager = new SimpleEventManager();
   Add Files
 </FileUploader>
 ```
+
+**Global Upload State**
 
 Even better, the `FileUploader` allows to be used decoupled from the React tree. By using an explicit `UploadData` instance we can make it happen. Compare the two versions.
 

@@ -1,3 +1,5 @@
+**Elementary**
+
 The `DateField` component provides an easy way for selecting a date. As all inputs it can be used in a controlled and managed mode.
 
 ```jsx
@@ -5,6 +7,8 @@ const { DateField } = require('precise-ui');
 
 <DateField onChange={(e) => console.log(e)} />
 ```
+
+**Customization**
 
 Abbreviations may be given to support localization and customization.
 
@@ -17,6 +21,8 @@ const { DateField } = require('precise-ui');
   months={['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D']}
   weekDays={['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So']}  />
 ```
+
+**Controlled Mode**
 
 The calendar open state can be controlled by using the `open` prop.
 

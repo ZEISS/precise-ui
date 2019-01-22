@@ -1,3 +1,5 @@
+**Elementary**
+
 Basic usage of TagBuilder component. When *Comma*, *Semicolon*, *Space* or *Enter* key is pressed, current text is added as a tag to TagBuilder. Tags could be removed by pressing on tag close button or by hitting *Backspace* or *Delete* key. Navigation between tags could be done via *Left*, *Right*, *Home*, *End* buttons.
 
 ```jsx
@@ -5,6 +7,8 @@ const { TagBuilder } = require('precise-ui');
 
 <TagBuilder />
 ```
+
+**Controlled Mode**
 
 When the `value` prop set manually, component switches to controlled mode. In this mode the component is controlled via the parent only.
 
@@ -22,18 +26,6 @@ const { TagBuilder, Form } = require('precise-ui');
 <Form defaultValue={{tags: ['these', 'values', 'are', 'from', 'form']}}>
   <TagBuilder name="tags" />
 </Form>
-```
-
-Example of using of `defaultValue`. With `defaultValue` set component hold non-controlled mode. Additionally, this example demonstrates the usage of different colors via its `theme`.
-
-```jsx
-const { TagBuilder } = require('precise-ui');
-const theme = { tagBackground: 'lightgreen', tagColor: 'blue', iconColor: 'red', iconBackground: 'yellow' };
-
-<TagBuilder
-  theme={theme}
-  defaultValue={['this', 'is', 'default', 'value']}
-/>
 ```
 
 The component supports standard input events like `onChange`, `onFocus` and `onBlur` are supported. The following example illustrates `info` prop usage.
@@ -57,6 +49,20 @@ const { TagBuilder } = require('precise-ui');
 <TagBuilder
   shouldFinishTag={e => e.key === 'a' || e.key === 'b'}
   error='Tag is finished only when "a" or "b" keys are pressed'
+/>
+```
+
+**Tag Presentation**
+
+The following is an example of using of `defaultValue`. With `defaultValue` set component hold non-controlled mode. Additionally, this example demonstrates the usage of different colors via its `theme`.
+
+```jsx
+const { TagBuilder } = require('precise-ui');
+const theme = { tagBackground: 'lightgreen', tagColor: 'blue', iconColor: 'red', iconBackground: 'yellow' };
+
+<TagBuilder
+  theme={theme}
+  defaultValue={['this', 'is', 'default', 'value']}
 />
 ```
 

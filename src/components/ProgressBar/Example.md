@@ -1,3 +1,5 @@
+**Elementary**
+
 Simple 50% progress bar.
 
 ```jsx
@@ -5,6 +7,8 @@ const { ProgressBar } = require('precise-ui');
 
 <ProgressBar value={50} />
 ```
+
+**Animations**
 
 Enabling the animation effect to have smoother transitions when changing the value.
 
@@ -42,6 +46,8 @@ class AnimationProgressBar extends React.Component {
 
 <AnimationProgressBar />
 ```
+
+**Decoration Options**
 
 Optionally, a title and a description may be applied.
 

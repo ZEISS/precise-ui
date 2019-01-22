@@ -1,3 +1,5 @@
+**Elementary**
+
 The `Rating` component provides the ability to gather ratings from user in a common way. By default 5 hearts are displayed to signal the rating from 1 to 5.
 
 ```jsx
@@ -13,6 +15,8 @@ const { Rating } = require('precise-ui');
 
 <Rating levels={10} icon="CheckCircle" />
 ```
+
+**Controlled Mode**
 
 Or we can transform the `Rating` into a standard "like" Button.
 

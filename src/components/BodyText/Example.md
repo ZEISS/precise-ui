@@ -1,3 +1,5 @@
+**Elementary**
+
 Simplest `BodyText` example:
 
 ```jsx

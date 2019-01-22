@@ -1,3 +1,5 @@
+**Elementary**
+
 Just presenting some data without any customization for headers. Since neither the columns nor the sorting is determined the component is in automatic mode where sorting is set intrinsically.
 
 ```jsx
@@ -19,6 +21,8 @@ const data = [{
 <Table data={data} />
 ```
 
+**Column Options**
+
 Simple tabular view using a straight forward mapping of fields to headers.
 
 ```jsx
@@ -36,44 +40,6 @@ const columns = {
 };
 
 <Table data={data} columns={columns} />
-```
-
-Condensed table with smaller spacings
-
-```jsx
-const { Table } = require('precise-ui');
-const data = [{
-  name: 'First Entry',
-  age: 21,
-}, {
-  name: 'Second Entry',
-  age: 22,
-}];
-const columns = {
-  name: 'Name',
-  age: 'Age',
-};
-
-<Table data={data} columns={columns} condensed />
-```
-
-Borderless Condensed table
-
-```jsx
-const { Table } = require('precise-ui');
-const data = [{
-  name: 'First Entry',
-  age: 21,
-}, {
-  name: 'Second Entry',
-  age: 22,
-}];
-const columns = {
-  name: 'Name',
-  age: 'Age',
-};
-
-<Table data={data} columns={columns} condensed borderless />
 ```
 
 Shuffling the column order to change the appearance.
@@ -117,7 +83,9 @@ const columns = {
 <Table data={data} columns={columns} />
 ```
 
-Adding an optional index and no-data message. Sorting by age.
+**Styling Options**
+
+Condensed table with smaller spacings via the `condensed` option.
 
 ```jsx
 const { Table } = require('precise-ui');
@@ -126,45 +94,33 @@ const data = [{
   age: 21,
 }, {
   name: 'Second Entry',
-  age: 16,
-}, {
-  name: 'Third Entry',
-  age: 18,
-}, {
-  name: 'Last Entry',
-  age: 25,
+  age: 22,
 }];
-const columns = {
-  name: 'Name',
-  age: {
-    header: 'Age',
-  },
-};
-
-<Table
-  data={data}
-  columns={columns}
-  indexed
-  placeholder="No data available"
-  sortBy="age" />
-```
-
-Displaying no data.
-
-```jsx
-const { Table } = require('precise-ui');
-const data = [];
 const columns = {
   name: 'Name',
   age: 'Age',
 };
 
-<Table
-  data={data}
-  columns={columns}
-  indexed
-  placeholder="No data available"
-  sortBy="age" />
+<Table data={data} columns={columns} condensed />
+```
+
+Borderless condensed table by also specifying the `borderless` option.
+
+```jsx
+const { Table } = require('precise-ui');
+const data = [{
+  name: 'First Entry',
+  age: 21,
+}, {
+  name: 'Second Entry',
+  age: 22,
+}];
+const columns = {
+  name: 'Name',
+  age: 'Age',
+};
+
+<Table data={data} columns={columns} condensed borderless />
 ```
 
 Overriding the default renderer to display the custom objects.
@@ -304,6 +260,39 @@ function render(e) {
   sortBy="age" />
 ```
 
+With a custom header renderer.
+
+```jsx
+const { Table, colors } = require('precise-ui');
+const data = [{
+  name: 'A',
+  age: 21,
+}, {
+  name: 'B',
+  age: 12,
+}, {
+  name: 'C',
+  age: 25,
+}, {
+  name: 'D',
+  age: 15,
+}];
+
+const renderHead = columns => (
+  <thead style={{ background: colors.grey6, border: '2px solid black' }}>
+    <tr>
+      {Object.keys(columns).map(column => (
+        <th key={column}>{column}</th>
+      ))}
+    </tr>
+  </thead>
+);
+
+<Table data={data} headRenderer={renderHead} />;
+```
+
+**Dynamic Data and Sorting**
+
 Using the `Table` component with dynamic data is also possible. Here we should add a custom function for deriving the row key.
 
 ```jsx
@@ -347,33 +336,52 @@ class DynamicTable extends React.Component {
 <DynamicTable />
 ```
 
-With a custom header renderer.
+Adding an optional index and no-data message. Sorting by age.
 
 ```jsx
-const { Table, colors } = require('precise-ui');
+const { Table } = require('precise-ui');
 const data = [{
-  name: 'A',
+  name: 'First Entry',
   age: 21,
 }, {
-  name: 'B',
-  age: 12,
+  name: 'Second Entry',
+  age: 16,
 }, {
-  name: 'C',
+  name: 'Third Entry',
+  age: 18,
+}, {
+  name: 'Last Entry',
   age: 25,
-}, {
-  name: 'D',
-  age: 15,
 }];
+const columns = {
+  name: 'Name',
+  age: {
+    header: 'Age',
+  },
+};
 
-const renderHead = columns => (
-  <thead style={{ background: colors.grey6, border: '2px solid black' }}>
-    <tr>
-      {Object.keys(columns).map(column => (
-        <th key={column}>{column}</th>
-      ))}
-    </tr>
-  </thead>
-);
-<Table data={data} headRenderer={renderHead} />;
+<Table
+  data={data}
+  columns={columns}
+  indexed
+  placeholder="No data available"
+  sortBy="age" />
+```
 
+Displaying no data.
+
+```jsx
+const { Table } = require('precise-ui');
+const data = [];
+const columns = {
+  name: 'Name',
+  age: 'Age',
+};
+
+<Table
+  data={data}
+  columns={columns}
+  indexed
+  placeholder="No data available"
+  sortBy="age" />
 ```

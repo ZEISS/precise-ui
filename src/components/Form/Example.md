@@ -1,3 +1,5 @@
+**Elementary**
+
 The `Form` is a simple form container that gives us an easy abstraction over controlling single form fields.
 
 ```jsx
@@ -23,6 +25,8 @@ const { Form, Button, TextField } = require('precise-ui');
 ```
 
 **Important**: Imagine how much boilerplate code the above component takes away, including correct handling of the enter key and other subtle things.
+
+**Managed Mode**
 
 Like the input fields the `form` can be also controlled and managed. The managed version already gives us an easy way to observe changes:
 
@@ -53,6 +57,8 @@ const { Form, Button, DropdownField, TextField } = require('precise-ui');
   </div>
 </Form>
 ```
+
+**Controlled Mode**
 
 In controlled mode we can also prevent certain changes etc.
 

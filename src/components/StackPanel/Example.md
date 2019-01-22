@@ -1,3 +1,5 @@
+**Elementary**
+
 Using the stack panel with the default options.
 
 ```jsx
@@ -10,6 +12,8 @@ const style = { background: 'gray', padding: '5px', margin: '5px' };
   <StackItem style={style}>Third</StackItem>
 </StackPanel>
 ```
+
+**Presentational Options**
 
 The widths of the boxes can be varied with an optional wrapping option to prevent some overflow. Note that the given layout is already responsive by nature.
 

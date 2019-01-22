@@ -1,3 +1,5 @@
+**Elementary**
+
 A simple navigation example.
 
 ```jsx

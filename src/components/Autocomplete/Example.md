@@ -1,4 +1,16 @@
-The autocomplete component renders a textfield with an interactive list.
+**Elementary**
+
+The autocomplete can be used in a very simple, non-interactive fashion.
+
+```jsx
+const { Autocomplete } = require('precise-ui');
+
+<Autocomplete suggestions={['one', 'two', 'three']} defaultValue="five" />
+```
+
+**Dynamic Suggestions**
+
+The autocomplete component renders a textfield with an interactive list. The suggestions can be computed when the input changes.
 
 ```jsx
 const { Autocomplete, Button } = require('precise-ui');
@@ -151,12 +163,3 @@ class App extends React.Component {
 
 <App />
 ```
-
-The autocomplete also can be used in a very simple, non-interactive fashion.
-
-```jsx
-const { Autocomplete } = require('precise-ui');
-
-<Autocomplete suggestions={['one', 'two', 'three']} defaultValue="five" />
-```
-

@@ -1,3 +1,5 @@
+**Elementary**
+
 Standard usage of a `FileUploaderDetails` component.
 
 ```jsx

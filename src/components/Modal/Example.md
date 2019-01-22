@@ -1,3 +1,5 @@
+**Elementary**
+
 Passive modal example with optional label and mandatory title.
 
 ```jsx
@@ -90,8 +92,9 @@ class ModalConsumer extends React.Component {
 }
 
 <ModalConsumer />
-
 ```
+
+**Button Options**
 
 A simple confirmation modal can also be displayed.
 
@@ -139,7 +142,9 @@ class ModalConsumer extends React.Component {
 <ModalConsumer />
 ```
 
-Modal with custom content
+**Custom Display**
+
+Modal with custom content for displaying, e.g., some tutorial screens.
 
 ```jsx
 const { Modal, ModalBody, ModalHeader, ModalFooter, Swiper, Button, Icon } = require('precise-ui');
@@ -227,6 +232,8 @@ class ModalConsumer extends React.Component {
 
 <ModalConsumer />
 ```
+
+**Form**
 
 The modal is compatible with the `Form` component.
 

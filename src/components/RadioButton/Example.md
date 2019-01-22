@@ -1,3 +1,5 @@
+**Elementary**
+
 By default, the radio button is displayed without any label. Radio button could be selected, but can't be deselected, opposite to checkbox.
 
 ```jsx
@@ -6,15 +8,17 @@ const { RadioButton } = require('precise-ui');
 <RadioButton />
 ```
 
-Labels are just described by the radio button's children. Setting the `selected` prop (either to true or false) will switch to controlled mode.
+**Controlled Mode**
+
+Labels are just described by the radio button's children. Setting the `value` prop (either to true or false) will switch to controlled mode.
 
 ```jsx
 const { RadioButton } = require('precise-ui');
 
-<RadioButton selected>Controlled radio button</RadioButton>
+<RadioButton value>Controlled radio button</RadioButton>
 ```
 
-With long labels
+The radio button also works With long labels. Here, we wrap naturally and align to start of the label.
 
 ```jsx
 const { RadioButton } = require('precise-ui');
@@ -22,13 +26,15 @@ const { RadioButton } = require('precise-ui');
 <RadioButton>This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text.</RadioButton>
 ```
 
-To supply a default value without switching into controlled mode `defaultSelected` property is used. The radio button will scale with the used font size.
+To supply a default value without switching into controlled mode `defaultValue` property is used. The radio button will scale with the used font size.
 
 ```jsx
 const { RadioButton } = require('precise-ui');
 
-<RadioButton defaultSelected style={{ fontSize: '2em' }}>Scaled radio button</RadioButton>
+<RadioButton defaultValue style={{ fontSize: '2em' }}>Scaled radio button</RadioButton>
 ```
+
+**Decoration Options**
 
 It is possible to use any kind of component inside of the radio button to create complex labels.
 

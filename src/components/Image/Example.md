@@ -1,3 +1,5 @@
+**Elementary**
+
 Standard usage of a Image component. By default `Image` is fluid, occupying 100% of it's parent.
 
 ```jsx
@@ -5,6 +7,16 @@ const { Image } = require('precise-ui');
 
 <Image src="https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg" alt="image" />
 ```
+
+There is also a default error component, which is used if we do not provide a custom one.
+
+```jsx
+const { Image } = require('precise-ui');
+
+<Image preload src="https://static.pexels.com/photos/248797/pexels-photo-248797" alt="image" />
+```
+
+**Preloading**
 
 Image component also has built in pre-loading functionality, and uses the `Spinner` component to indicate pre-loading state.
 
@@ -30,12 +42,4 @@ const { Image } = require('precise-ui');
 const error = <div style={{ color: '#00ff00' }}>Image failed to load....</div>;
 
 <Image preload error={error} src="https://static.pexels.com/photos/248797/pexels-photo-248797" alt="image" />
-```
-
-There is also a default error component, which is used if we do not provide a custom one.
-
-```jsx
-const { Image } = require('precise-ui');
-
-<Image preload src="https://static.pexels.com/photos/248797/pexels-photo-248797" alt="image" />
 ```

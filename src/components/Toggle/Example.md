@@ -1,3 +1,5 @@
+**Elementary**
+
 Standard usage of a `Toggle` component.
 
 ```jsx
@@ -13,6 +15,8 @@ const { Toggle } = require('precise-ui');
 
 <Toggle disabled defaultValue={true} label="Toggle Label">On</Toggle>
 ```
+
+**Controlled Mode**
 
 The component supports two modes - managed and controlled. By default, the managed mode is selected. When we supply a `value` initially we create the component in controlled mode.
 

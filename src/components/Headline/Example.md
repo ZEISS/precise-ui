@@ -1,3 +1,5 @@
+**Elementary**
+
 Simplest example of `Headline` component will render the default h3 tag.
 
 ```jsx
@@ -5,6 +7,8 @@ const { Headline } = require('precise-ui');
 
 <Headline>h3 headline</Headline>
 ```
+
+**Semantics**
 
 Component is supporting levels from 1-5, setting the `level` property will set the corresponding html tag:
 
@@ -14,7 +18,20 @@ const { Headline } = require('precise-ui');
 <Headline level={2}>h2 headline</Headline>
 ```
 
-Headlines are available in 2 different sizes, small and medium, which could be used, for ex. in responsive layouts:
+Headline could also be used as subheader by passing subheader flag.
+
+```jsx
+const { Headline } = require('precise-ui');
+
+<div>
+  <Headline>Adipisicing dolore ut sit dolor.</Headline>
+  <Headline level={4} subheader>Commodo nulla officia</Headline>
+</div>
+```
+
+**Presentation Options**
+
+Headlines are available in two different sizes, small and medium, which could be used, for ex. in responsive layouts:
 
 ```jsx
 const { Headline }= require('precise-ui');
@@ -47,16 +64,5 @@ const { Headline, TextStyles } = require('precise-ui');
   <Headline textStyle={TextStyles.alpha}>h3 headline</Headline>
   <Headline textStyle={TextStyles.beta}>h4 headline</Headline>
   <Headline textStyle={TextStyles.gamma}>h5 headline</Headline>
-</div>
-```
-
-Headline could also be used as subheader by passing subheader flag.
-
-```jsx
-const { Headline } = require('precise-ui');
-
-<div>
-  <Headline>Adipisicing dolore ut sit dolor.</Headline>
-  <Headline level={4} subheader>Commodo nulla officia</Headline>
 </div>
 ```

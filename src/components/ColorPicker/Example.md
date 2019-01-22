@@ -1,3 +1,5 @@
+**Elementary**
+
 Using the Color Picker directly without any options.
 
 ```jsx
@@ -5,6 +7,8 @@ const { ColorPicker } = require('precise-ui');
 
 <ColorPicker />
 ```
+
+**Decoration Options**
 
 Setting the initial color of the picker. Also hiding the wheel bar.
 
@@ -21,6 +25,8 @@ const { ColorPicker } = require('precise-ui');
 
 <ColorPicker defaultValue="#FFFF00" height="300px" allowOpacity />
 ```
+
+**Controlled Mode**
 
 Controlling the picked color of the component. In this example we put a constraint on the opacity of the color, which has to be between 30 and 80 percent.
 
@@ -51,6 +57,8 @@ class MyColorPicker extends React.Component {
 
 <MyColorPicker />
 ```
+
+**Combined Usage**
 
 Using the contained color information to display some useful information about the selected value.
 

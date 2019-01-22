@@ -1,10 +1,14 @@
-A public icon.
+**Elementary**
+
+A "public" icon.
 
 ```jsx
 const { Icon } = require('precise-ui');
 
 <Icon name="Public" />
 ```
+
+**Appareance Options**
 
 The person symbol colored in red.
 
@@ -52,24 +56,7 @@ const { indigo, orangeNeon, green, brightLemon, purpleRed, teal } = colors;
 </table>
 ```
 
-All available icons.
-
-```jsx
-const { Icon, IconNames } = require('precise-ui');
-const names = IconNames.slice(0).sort();
-
-<div style={{ columnWidth: '180px' }}>
-  {
-    names.map(name => (
-      <div key={name}>
-        <Icon name={name} />
-        {' '}
-        <span>{name}</span>
-      </div>
-    ))
-  }
-</div>
-```
+**Custom Icons**
 
 Custom SVG Icons can be registered as well.
 
@@ -136,4 +123,25 @@ registerIcons({
 <Icon name="Yammer" size={3} color={purpleRed} />
 <Icon name="ThumbsUp" size={2} color={teal}  />
 </>
+```
+
+**Reference**
+
+All available icons.
+
+```jsx
+const { Icon, IconNames } = require('precise-ui');
+const names = IconNames.slice(0).sort();
+
+<div style={{ columnWidth: '180px' }}>
+  {
+    names.map(name => (
+      <div key={name}>
+        <Icon name={name} />
+        {' '}
+        <span>{name}</span>
+      </div>
+    ))
+  }
+</div>
 ```

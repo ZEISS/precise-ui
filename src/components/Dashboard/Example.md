@@ -1,3 +1,5 @@
+**Elementary**
+
 Using a dashboard with three tiles.
 
 ```jsx
@@ -21,6 +23,8 @@ const tiles = [
   <div style={style}>Fourth</div>
 </Dashboard>
 ```
+
+**Decoration Options**
 
 The dashboard can also be used in a more static way using the `disabled` prop.
 
@@ -154,8 +158,9 @@ class App extends React.Component {
 }
 
 <App />
-
 ```
+
+**Drag and Drop**
 
 The `Dashboard` tiles can also be dragged during operation without interferring with normal operations. Let's consider the following case where we want to display "Clicked" in the console only if we don't drag.
 

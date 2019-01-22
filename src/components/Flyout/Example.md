@@ -1,3 +1,5 @@
+**Elementary**
+
 We can use the (default) auto placement to just show a simple flyout on its ideal position. The component supports two modes - managed and controlled. By default, the managed mode is selected.
 
 ```jsx
@@ -7,6 +9,8 @@ const { Flyout } = require('precise-ui');
   Wrapped element
 </Flyout>
 ```
+
+**Controlled Mode**
 
 Flyout different placements example in controlled mode. The controlled mode is triggered by explicitly setting the `open` prop.
 
@@ -76,6 +80,8 @@ class RandomFlyout extends React.Component {
 <RandomFlyout />
 ```
 
+**Interactive List**
+
 Example of `InteractiveList` component usage together with flyout.
 
 ```jsx
@@ -104,7 +110,7 @@ class ListFlyout extends React.Component {
       <div>
         <Flyout open={open}
           content={
-            <InteractiveList customWrapper={CustomWrapper} data={['Option option 1', 'Option 2', 'Option 3']} open border />
+            <InteractiveList flyout customWrapper={CustomWrapper} data={['Option option 1', 'Option 2', 'Option 3']} open border />
           }
           position="right-top">
           <Button onClick={this.change}>
@@ -119,6 +125,8 @@ class ListFlyout extends React.Component {
 
 <ListFlyout />
 ```
+
+Likewise the next example.
 
 ```jsx
 const { Flyout, Button, Avatar, InteractiveList } = require('precise-ui');
@@ -146,7 +154,7 @@ class ListFlyout extends React.Component {
       <div>
         <Flyout open={open}
           content={
-            <InteractiveList customWrapper={CustomWrapper} data={['Option option 1', 'Option 2', 'Option 3']} open border />
+            <InteractiveList flyout customWrapper={CustomWrapper} data={['Option option 1', 'Option 2', 'Option 3']} open border />
           }
           position="right-top">
           <Avatar onClick={this.change} initials="R" description="Sample" size="x-small" />
@@ -160,9 +168,11 @@ class ListFlyout extends React.Component {
 <ListFlyout />
 ```
 
-`Flyout` playground.
-```jsx
+**Playground**
 
+A little playground for the various options.
+
+```jsx
 const { Flyout, RadioButton, StackPanel, StackItem } = require('precise-ui');
 
 const positions = [
@@ -307,4 +317,3 @@ class LongExample extends React.Component {
 
 <LongExample />;
 ```
-

@@ -1,3 +1,5 @@
+**Elementary**
+
 A very simple 2x2 grid with some content. The placement is determined automatically.
 
 ```jsx
@@ -10,6 +12,8 @@ const { Grid } = require('precise-ui');
   <div>D</div>
 </Grid>
 ```
+
+**Positioning**
 
 We may place some of these on new positions, thus overriding the default placement. The component will look for remaining spots to do the placement.
 
@@ -37,6 +41,23 @@ const { Grid } = require('precise-ui');
   <div>E</div>
 </Grid>
 ```
+
+The grid layout is not constraint to uniform grids - we can define the available space freely. Here we use some fixed units (pixels and ems) along the fractional unit (`fr`).
+
+```jsx
+const { Grid } = require('precise-ui');
+
+<div style={{ height: '200px' }}>
+  <Grid rows={['100px', '1fr', '50px']} columns={['10em', '1fr']}>
+    <div column={0} row={0} colSpan={2}>Header</div>
+    <div column={0} row={1}>Menu</div>
+    <div column={1} row={1}>Content</div>
+    <div column={0} row={2} colSpan={2}>Footer</div>
+  </Grid>
+</div>
+```
+
+**Layouts**
 
 Grid layouts are great for general layouts. Consider the following structure with explicit row and column placement.
 
@@ -69,21 +90,6 @@ const Cell = (props) => (
   <Cell>5</Cell>
   <Cell>6</Cell>
 </Grid>
-```
-
-The grid layout is not constraint to uniform grids - we can define the available space freely. Here we use some fixed units (pixels and ems) along the fractional unit (`fr`).
-
-```jsx
-const { Grid } = require('precise-ui');
-
-<div style={{ height: '200px' }}>
-  <Grid rows={['100px', '1fr', '50px']} columns={['10em', '1fr']}>
-    <div column={0} row={0} colSpan={2}>Header</div>
-    <div column={0} row={1}>Menu</div>
-    <div column={1} row={1}>Content</div>
-    <div column={0} row={2} colSpan={2}>Footer</div>
-  </Grid>
-</div>
 ```
 
 The grid layout works also together with the responsive HOC. The responsive HOC always takes the size of the parent container and is thus more flexible than CSS media queries, which are bound to the viewport size.

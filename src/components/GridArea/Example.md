@@ -1,3 +1,5 @@
+**Elementary**
+
 The grid area provides a TypeScript friendly way of defining grid cell content. It fills the available cell space.
 
 ```jsx
