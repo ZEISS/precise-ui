@@ -39,6 +39,10 @@ export interface InfiniteScrollProps {
    */
   useWindow?: boolean;
   /**
+   * The optional host element to be used.
+   */
+  host?: string | React.ComponentClass | React.StatelessComponent;
+  /**
    * This prop receives data that is displayed in this component.
    */
   data: React.ReactNodeArray;
@@ -89,23 +93,29 @@ export class InfiniteScroll extends React.Component<InfiniteScrollProps, Infinit
 
   componentDidMount() {
     const { isButtonMode } = this.state;
-    const { useWindow } = this.props;
 
-    if (!isButtonMode && useWindow) {
-      window.addEventListener('scroll', this.handleOnScroll);
-    } else if (!isButtonMode && this.node && !useWindow) {
-      this.node.addEventListener('scroll', this.handleOnScroll);
+    if (!isButtonMode) {
+      const { useWindow } = this.props;
+
+      if (useWindow) {
+        window.addEventListener('scroll', this.handleOnScroll);
+      } else if (this.node && !useWindow) {
+        this.node.addEventListener('scroll', this.handleOnScroll);
+      }
     }
   }
 
   componentWillUnmount() {
     const { isButtonMode } = this.state;
-    const { useWindow } = this.props;
 
-    if (!isButtonMode && useWindow) {
-      window.removeEventListener('scroll', this.handleOnScroll);
-    } else if (!isButtonMode && this.node && !useWindow) {
-      this.node.removeEventListener('scroll', this.handleOnScroll);
+    if (!isButtonMode) {
+      const { useWindow } = this.props;
+
+      if (useWindow) {
+        window.removeEventListener('scroll', this.handleOnScroll);
+      } else if (this.node && !useWindow) {
+        this.node.removeEventListener('scroll', this.handleOnScroll);
+      }
     }
   }
 
@@ -175,10 +185,12 @@ export class InfiniteScroll extends React.Component<InfiniteScrollProps, Infinit
   };
 
   render() {
+    const { host: Host = 'div', data, containerHeight } = this.props;
     const { isButtonMode, isLoading } = this.state;
+
     return (
-      <Container innerRef={this.setContainer} height={this.props.containerHeight}>
-        <div>{this.props.data}</div>
+      <Container innerRef={this.setContainer} height={containerHeight}>
+        <Host>{data}</Host>
         <Footer>
           {isLoading && <Spinner size="x-small" />}
           {isButtonMode && this.renderButton()}

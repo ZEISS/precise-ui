@@ -14,11 +14,11 @@ export interface PaginationProps {
   content: React.ReactNode;
 }
 
-export const PaginationLayout: React.SFC<PaginationProps> = ({ host = 'div', controls, content }) => {
+export const PaginationLayout: React.SFC<PaginationProps> = ({ host = 'div', controls, content, ...props }) => {
   const Content = host;
   return (
     <RootContainer>
-      <Content>{content}</Content>
+      <Content {...props}>{content}</Content>
       {controls}
     </RootContainer>
   );
