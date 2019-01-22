@@ -128,6 +128,18 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render ThumbDown icon', () => {
+    const Component = icons.ThumbDown;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render ThumbUp icon', () => {
+    const Component = icons.ThumbUp;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Update icon', () => {
     const Component = icons.Update;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -440,3 +452,4 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
+  

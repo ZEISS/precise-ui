@@ -79,6 +79,8 @@ module.exports = {
     'ic_widgets_24px.svg',
     'ic_more_horiz_24px.svg',
     'ic_more_vert_24px.svg',
+    'ic_thumb_up_24px.svg',
+    'ic_thumb_down_24px.svg',
   ],
   out: 'src/components/Icon',
 };
