@@ -160,7 +160,7 @@ const DropdownPopup = styled(WindowPopup)`
 // tslint:disable-next-line
 const NotOpenComponent = null;
 
-const StandardWrapper: React.SFC<InteractiveListWrapperProps> = ({ flyout: _0, open, ...props }) =>
+const StandardWrapper: React.SFC<InteractiveListWrapperProps> = ({ open, ...props }) =>
   open ? <StyledStandardWrapper {...props} /> : NotOpenComponent;
 StandardWrapper.displayName = 'StandardWrapper';
 

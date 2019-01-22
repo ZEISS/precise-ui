@@ -62,13 +62,9 @@ export interface SlideDownTabsState {
   isOpen: boolean;
 }
 
-const CustomWrapper: React.SFC<InteractiveListWrapperProps> = ({
-  flyout: _0,
-  border: _1,
-  direction: _2,
-  open: _3,
-  ...props
-}) => <div {...props} />;
+const CustomWrapper: React.SFC<InteractiveListWrapperProps> = ({ border: _0, direction: _1, open: _2, ...props }) => (
+  <div {...props} />
+);
 
 export class SlideDownTabs extends React.Component<SlideDownTabsProps, SlideDownTabsState> {
   constructor(props: SlideDownTabsProps) {

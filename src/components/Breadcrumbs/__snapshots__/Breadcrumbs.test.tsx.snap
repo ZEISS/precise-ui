@@ -117,6 +117,12 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
     key="2"
   >
     <OnClickOutside(OverflowMenuInt)
+      button={
+        <Breadcrumb
+          href="#"
+          title="..."
+        />
+      }
       eventTypes={
         Array [
           "mousedown",
@@ -124,7 +130,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
         ]
       }
       excludeScrollbar={false}
-      group={
+      items={
         Array [
           <Breadcrumb
             title="Second"
@@ -143,12 +149,6 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
       outsideClickIgnoreClass="ignore-react-onclickoutside"
       preventDefault={false}
       stopPropagation={false}
-      toggleButton={
-        <Breadcrumb
-          href="#"
-          title="..."
-        />
-      }
     />
   </span>
   <span

@@ -71,25 +71,26 @@ const Head: React.SFC<HeadProps> = ({ icon, title }) => (
 );
 
 function codeBlock(language: string, block: string) {
-  return `${cb}${language}\n${block.replace(/</g, '&lt;').replace(/>/g, '&gt;')}\n${cb}`;
+  return `${cb}${language}\n${block}\n${cb}`;
 }
 
 const cb = '```';
+// edit via https://codepen.io/anon/pen/GzRYXd
 const installation = codeBlock('sh', 'npm i precise-ui');
 const dependencies = codeBlock('sh', 'npm i react@16 styled-components@2');
 const usageExample = codeBlock(
-  'ts',
-  `import * as React from 'react';
-import { Rating, TextField } from 'precise-ui';
+  'jsx',
+  `<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+<span class="hljs-keyword">import</span> { Rating, TextField } <span class="hljs-keyword">from</span> <span class="hljs-string">'precise-ui'</span>;
 
-const App = props => (
-  <div>
-    <p>How do you like Precise UI?</p>
-    <Rating />
-    <p>Tell us why what we can do better!</p>
-    <TextField multiline />
-  </div>
-);`,
+<span class="hljs-keyword">const</span> App = <span class="hljs-function"><span class="hljs-params">props</span> =&gt;</span> (
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>How do you like Precise UI?<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Rating</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Tell us why what we can do better!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">TextField</span> <span class="hljs-attr">multiline</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+);</span>`,
 );
 
 export const HomePage: React.SFC = () => (
@@ -133,6 +134,14 @@ export const HomePage: React.SFC = () => (
       <Answer>
         Please go to our repository hosted on GitHub (follow the ribbon in the upper right corner). We use GitHub issues
         to organize our work on Precise UI. Every reported bug will be investigated and properly handled.
+      </Answer>
+      <Question>How is this different to, e.g., Bootstrap?</Question>
+      <Answer>
+        Bootstrap is a great framework for CSS with some loosely related JavaScript. It has been brought into instantly
+        usable components for React in multiple implementation (e.g., Reactstrap). Nevertheless, Bootstrap is mostly
+        concerned about smaller building blocks and leaves bigger components to the user. Furthermore, it does not
+        contain additional helpers to make React development simpler / more direct. Precise UI tries to be focused on
+        bringing larger (more opionionated and productivity-focused) components to life.
       </Answer>
     </InfoContainer>
     <InfoContainer>

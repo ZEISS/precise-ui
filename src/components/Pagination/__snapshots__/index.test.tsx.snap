@@ -274,13 +274,11 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                   <CustomWrapper
                                     border={1}
                                     direction={0}
-                                    flyout={true}
                                     open={false}
                                   >
                                     <styled.div
                                       border={1}
                                       direction={0}
-                                      flyout={true}
                                       open={false}
                                     >
                                       <div
@@ -628,13 +626,11 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                   <CustomWrapper
                                     border={1}
                                     direction={0}
-                                    flyout={true}
                                     open={false}
                                   >
                                     <styled.div
                                       border={1}
                                       direction={0}
-                                      flyout={true}
                                       open={false}
                                     >
                                       <div

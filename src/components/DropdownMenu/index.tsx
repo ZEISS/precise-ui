@@ -187,7 +187,6 @@ class DropdownMenuInt extends React.PureComponent<DropdownMenuProps, DropdownMen
           content={
             <StyledInteractiveList
               borderless
-              flyout={false}
               open={open}
               data={items}
               autoFocus

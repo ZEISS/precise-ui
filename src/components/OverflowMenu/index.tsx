@@ -32,13 +32,9 @@ export interface OverflowMenuState {
   items: Array<InteractiveListItem>;
 }
 
-const CustomWrapper: React.SFC<InteractiveListWrapperProps> = ({
-  open: _0,
-  flyout: _1,
-  border: _2,
-  direction: _3,
-  ...props
-}) => <div {...props} />;
+const CustomWrapper: React.SFC<InteractiveListWrapperProps> = ({ open: _0, border: _1, direction: _2, ...props }) => (
+  <div {...props} />
+);
 CustomWrapper.displayName = 'CustomWrapper';
 
 function getItems(group: Array<React.ReactChild>): Array<InteractiveListItem> {

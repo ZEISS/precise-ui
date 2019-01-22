@@ -38,21 +38,20 @@ const InteractiveListContainer = styled.div`
 `;
 
 const ListWrapper = reStyled<InteractiveListWrapperProps, 'ul'>('ul')(
-  ({ open, flyout, border, direction, theme: { ui4 } }) => `
-  display: ${open || !flyout ? 'block' : 'none'};
+  ({ open, border, direction, theme: { ui4 } }) => `
+  display: ${open ? 'block' : 'none'};
   list-style: none;
   width: 100%;
-  position: ${flyout ? 'absolute' : 'relative'};
+  position: relative;
   transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
   box-sizing: border-box;
   box-shadow: none;
   margin: 0;
   padding: 0;
   background: ${transparent};
-  border: 1px solid
-    ${border === InteractiveListBorderType.none ? transparent : ui4};
-  ${flyout ? (direction === InteractiveListDirection.normal ? 'border-top: none' : 'border-bottom: none') : ''};
-  max-height: ${flyout ? '50vh' : '100%'};
+  border: 1px solid ${border === InteractiveListBorderType.none ? transparent : ui4};
+  ${direction === InteractiveListDirection.normal ? 'border-top: none' : 'border-bottom: none'};
+  max-height: 100%;
   overflow-y: auto;
   z-index: 100;
 `,
@@ -208,7 +207,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
   };
 
   componentWillReceiveProps(nextProps: InteractiveListProps) {
-    const { flyout = true, open, autoPosition, focus } = this.props;
+    const { open, autoPosition, focus } = this.props;
 
     if (this.state.controlled) {
       const { indices, value, data = [], multiple } = nextProps;
@@ -219,7 +218,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
     }
 
     if (nextProps.focus !== focus && nextProps.focus) {
-      if (flyout && open && nextProps.open) {
+      if (open && nextProps.open) {
         this.interactiveList.focus();
         this.setState({
           selected: 0,
@@ -227,7 +226,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       }
     }
 
-    if (autoPosition && flyout && !open && nextProps.open) {
+    if (autoPosition && !open && nextProps.open) {
       const windowHeight = window.innerHeight;
       const { top } = this.interactiveList.getBoundingClientRect();
 
@@ -244,9 +243,9 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
   }
 
   componentDidUpdate() {
-    const { flyout = true, open, autoFocus } = this.props;
+    const { open, autoFocus } = this.props;
 
-    if (flyout && open && autoFocus) {
+    if (open && autoFocus) {
       this.interactiveList.focus();
     }
   }
@@ -454,7 +453,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
         }}>
         <ListItemInnerContainer>
           <ListItemContent>
-            <ContentWrapper condensed={condensed} showTick={showTick}>
+            <ContentWrapper condensed={condensed} showTick={isSelected && showTick}>
               {content}
             </ContentWrapper>
           </ListItemContent>
@@ -496,7 +495,6 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       open = false,
       onBlur,
       customWrapper,
-      flyout = true,
       onClick,
       ...props
     } = this.props;
@@ -510,21 +508,23 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
         {...(open ? { tabIndex: 0 } : undefined)}
         onKeyDown={this.control}
         {...props}>
-        <Wrapper open={open} flyout={flyout} border={border} direction={this.state.direction} onClick={onClick}>
-          {(open || !flyout) &&
+        <Wrapper open={open} border={border} direction={this.state.direction} onClick={onClick}>
+          {open &&
             data.map((item, index) => {
-              if (!item) {
-                return;
-              } else if (typeof item !== 'string') {
-                switch (item.type) {
-                  case 'divider':
-                    return <ListDivider key={item.key} />;
-                  case 'header':
-                    return <ListHeader key={item.key}>{item.content || item.key}</ListHeader>;
+              if (item) {
+                if (typeof item !== 'string') {
+                  switch (item.type) {
+                    case 'divider':
+                      return <ListDivider key={item.key} />;
+                    case 'header':
+                      return <ListHeader key={item.key}>{item.content || item.key}</ListHeader>;
+                  }
                 }
+
+                return createItem(item, index);
               }
 
-              return createItem(item, index);
+              return undefined;
             })}
         </Wrapper>
       </InteractiveListContainer>

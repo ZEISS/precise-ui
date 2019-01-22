@@ -95,7 +95,7 @@ function defaultSuggestionRenderer<T>(suggestion: T): AutosuggestItem {
 // tslint:disable-next-line
 const NotOpenComponent = null;
 
-const AutosuggestWrapper: React.SFC<InteractiveListWrapperProps> = ({ border: _0, flyout: _1, open, ...props }) =>
+const AutosuggestWrapper: React.SFC<InteractiveListWrapperProps> = ({ border: _0, open, ...props }) =>
   open ? <StyledAutosuggestWrapper {...props} /> : NotOpenComponent;
 AutosuggestWrapper.displayName = 'AutosuggestWrapper';
 

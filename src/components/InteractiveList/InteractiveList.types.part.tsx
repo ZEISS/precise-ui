@@ -127,7 +127,6 @@ export enum InteractiveListDirection {
 
 export interface InteractiveListWrapperProps {
   open: boolean;
-  flyout: boolean;
   border: InteractiveListBorderType;
   direction: InteractiveListDirection;
   onClick?(e: React.MouseEvent<HTMLElement>): void;
