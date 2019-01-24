@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TableCellEvent, TableRowEvent, TableBodyRenderEvent } from './Table.types.part';
+import { TableCellEvent, TableRowEvent, TableBodyRenderEvent, Column, TableColumns } from './Table.types.part';
 import styled, { themed, reStyled } from '../../utils/styled';
 
 export const StyledTableHead = styled.thead`
@@ -64,4 +64,17 @@ export function defaultRowRenderer<T>({ theme, cells, index }: TableRowEvent<T>)
 export function defaultBodyRenderer(e: TableBodyRenderEvent) {
   const TableBody = e.table;
   return <TableBody {...e.props}>{e.rows}</TableBody>;
+}
+
+export function getColumns<T>(data: Array<T>, columns?: TableColumns) {
+  return (
+    columns ||
+    Object.keys(data[0] || {}).reduce<{ [key: string]: Column }>((columns, key) => {
+      columns[key] = {
+        header: key,
+        sortable: true,
+      };
+      return columns;
+    }, {})
+  );
 }

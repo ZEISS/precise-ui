@@ -34,8 +34,8 @@ function getComparer(type: string, reverse: boolean) {
   return reverse ? compareStringReverse : compareStringNormal;
 }
 
-function sorter<T extends {}>(result: Array<number>, data: Array<T>, key: keyof T, reverse = false) {
-  const values = data.map(item => item[key]);
+function sorter<T extends {}>(indices: Array<number>, items: Array<T>, key: keyof T, reverse = false) {
+  const values = items.map(item => item[key]);
   const n = values.length;
 
   if (n > 1) {
@@ -44,12 +44,12 @@ function sorter<T extends {}>(result: Array<number>, data: Array<T>, key: keyof 
 
     for (let i = 1; i < n; i++) {
       for (let j = 0; j < i; j++) {
-        const ij = result[j];
-        const ii = result[i];
+        const ij = indices[j];
+        const ii = indices[i];
 
         if (comparer(values[ii], values[ij])) {
-          result[i] = ij;
-          result[j] = ii;
+          indices[i] = ij;
+          indices[j] = ii;
         }
       }
     }
@@ -57,19 +57,19 @@ function sorter<T extends {}>(result: Array<number>, data: Array<T>, key: keyof 
 }
 
 export function sortObjectList<T extends {}>(
-  data: Array<T>,
-  groupBy?: keyof T,
+  items: Array<T>,
   sortBy?: keyof T,
   order: 'ascending' | 'descending' = 'ascending',
+  groupBy?: keyof T,
 ) {
-  const result = data.map((_, index) => index);
+  const result = items.map((_, index) => index);
 
   if (sortBy) {
-    sorter(result, data, sortBy, order === 'descending');
+    sorter(result, items, sortBy, order === 'descending');
   }
 
-  if (groupBy) {
-    sorter(result, data, groupBy);
+  if (groupBy && groupBy !== sortBy) {
+    sorter(result, items, groupBy);
   }
 
   return result;

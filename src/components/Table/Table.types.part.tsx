@@ -44,7 +44,7 @@ export interface TableRowEvent<T> {
   /**
    * Cells group to be rendered.
    */
-  cells: React.ReactNode;
+  cells: Array<React.ReactNode>;
   /**
    * The associated data row, if any.
    */
@@ -93,6 +93,10 @@ export interface TableCardRendererEvent<T> {
    * List of data item keys.
    */
   keys: Array<string>;
+}
+
+export interface TableColumns {
+  [key: string]: string | Column;
 }
 
 export interface TableCardBodyRenderEvent {
@@ -181,9 +185,7 @@ export interface TableProps<T> extends StandardProps, ModeProviderProps<TableMod
   /**
    * The columns being considered by the component.
    */
-  columns?: {
-    [key: string]: string | Column;
-  };
+  columns?: TableColumns;
 }
 
 export interface Column {

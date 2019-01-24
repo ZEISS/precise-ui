@@ -217,7 +217,6 @@ Borderless condensed `AccordionTable` with smaller spacings.
 
 ```jsx
 const { AccordionTable } = require('precise-ui');
-
 const style = { width: '200px', margin: '0 auto', textAlign: 'center' };
 
 function getContent({index, data}) {
@@ -246,19 +245,30 @@ We can use the `groupBy` to introduce an additional level.
 
 ```jsx
 const { AccordionTable } = require('precise-ui');
+const style = { width: '200px', margin: '0 auto', textAlign: 'center' };
+
+function getContent({index, data}) {
+  return (
+    <div style={style}>
+      Details for row #
+      <b>{index}</b>
+    </div>
+  );
+}
 
 <AccordionTable
   groupBy="tag"
+  detailsRenderer={getContent}
   data={[
     {tag: 'A', value: 'Alpha1', team: 'Alpha team'},
-    {tag: 'A', value: 'Alpha2', team: 'Alpha team'},
     {tag: 'A', value: 'Alpha3', team: 'Alpha team'},
-    {tag: 'A', value: 'Alpha4', team: 'Alpha team'},
-    {tag: 'B', value: 'Bravo1', team: 'Bravo team'},
     {tag: 'B', value: 'Bravo2', team: 'Bravo team'},
+    {tag: 'A', value: 'Alpha2', team: 'Alpha team'},
     {tag: 'B', value: 'Bravo3', team: 'Bravo team'},
     {tag: 'C', value: 'Charlie1', team: 'Charlie team'},
     {tag: 'E', value: 'Echo1', team: 'Echo team'},
+    {tag: 'A', value: 'Alpha4', team: 'Alpha team'},
+    {tag: 'B', value: 'Bravo1', team: 'Bravo team'},
     {tag: 'E', value: 'Echo2', team: 'Echo team'},
   ]} />
 ```
