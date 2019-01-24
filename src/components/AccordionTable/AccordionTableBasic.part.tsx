@@ -122,18 +122,18 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
 
   private handleClick(target: number, data: T) {
     const { onChange, multiple } = this.props;
-    const { controlledIndex: controlled, selectedIndex: selectedIndexes } = this.state;
-    const nextIndexes = toggleIndex(selectedIndexes, target, multiple);
+    const { controlledIndex, selectedIndex } = this.state;
+    const nextIndexes = toggleIndex(selectedIndex, target, multiple);
 
     if (typeof onChange === 'function') {
       onChange({
         selectedIndex: multiple ? nextIndexes : nextIndexes[0] !== undefined ? nextIndexes[0] : -1,
-        previousIndex: multiple ? selectedIndexes : selectedIndexes[0] !== undefined ? selectedIndexes[0] : -1,
+        previousIndex: multiple ? selectedIndex : selectedIndex[0] !== undefined ? selectedIndex[0] : -1,
         data,
       });
     }
 
-    if (!controlled) {
+    if (!controlledIndex) {
       this.setState({
         selectedIndex: nextIndexes,
       });
@@ -189,11 +189,11 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
 
   private rowRenderer = ({ cells, index, data, key }: TableRowEvent<T>) => {
     const { detailsRenderer, rowRenderer, theme, arrowToggle, groupBy } = this.props;
-    const { selectedIndex: selectedIndexes, expandedGroups: openGroups } = this.state;
-    const active = hasIndex(selectedIndexes, index);
+    const { selectedIndex, expandedGroups } = this.state;
+    const active = hasIndex(selectedIndex, index);
     const count = React.Children.count(cells);
     const col = groupBy && data[groupBy];
-    const open = !col || openGroups.indexOf(col) !== -1;
+    const open = !col || expandedGroups.indexOf(col) !== -1;
     const renderData = { cells, index, data, active, key };
 
     return (
