@@ -36,6 +36,7 @@ function getComparer(type: string, reverse: boolean) {
 
 export function sortObjectList<T extends {}>(
   data: Array<T>,
+  groupBy?: keyof T,
   sortBy?: keyof T,
   order: 'ascending' | 'descending' = 'ascending',
 ) {

@@ -5,17 +5,21 @@ import { remCalc } from '../../utils/remCalc';
 import { sortObjectList } from '../../utils/sort';
 import { distance } from '../../distance';
 import { RefProps, StandardProps } from '../../common';
-import { TableRowEvent, TableBodyRenderEvent, TableProps, TableSorting, Column } from './Table.types.part';
-import { defaultCellRenderer } from './TableShared.part';
+import { TableRowEvent, TableProps, TableSorting, Column } from './Table.types.part';
+import {
+  defaultCellRenderer,
+  StyledTableHead,
+  StyledTableHeaderRow,
+  StyledTableHeader,
+  defaultRowRenderer,
+  StyledTableRow,
+  StyledTableFoot,
+  defaultBodyRenderer,
+} from './TableShared.part';
 
 export interface TableBasicState {
   sorting?: TableSorting;
   controlledSorting: boolean;
-}
-
-interface TableHeaderProps {
-  sortable?: boolean;
-  width?: string;
 }
 
 interface StyledTableProps {
@@ -65,36 +69,6 @@ const TableHost: React.SFC<TableHostProps> = ({ head, foot, theme, children, ...
 
 const HiddenCell = styled.td`
   display: none;
-`;
-
-const StyledTableHead = styled.thead`
-  color: ${themed(({ theme }) => theme.text || theme.text1)};
-  font-weight: bold;
-`;
-
-const StyledTableFoot = styled.tfoot`
-  font-size: 0.8em;
-`;
-
-const StyledTableHeaderRow = styled.tr``;
-
-const StyledTableRow = reStyled.tr(
-  ({ theme: { ui3, ui4, text1 } }) => `
-  border-bottom: 1px solid ${ui4};
-  color: ${text1};
-
-  &:hover {
-    background: ${ui3};
-  }
-`,
-);
-
-const StyledTableHeader = styled<TableHeaderProps, 'th'>('th')`
-  text-align: left;
-  border-bottom: 1px solid ${themed(({ theme }) => theme.ui5)};
-  cursor: ${({ sortable }: TableHeaderProps) => (sortable ? 'pointer' : 'default')};
-  box-sizing: border-box;
-  ${({ width }) => (width && `width: ${width}`) || ''};
 `;
 
 const HeaderLabel = styled.div`
@@ -165,19 +139,6 @@ function defaultRowKeyGetter<T>({ key }: TableRowEvent<T>) {
   return key;
 }
 
-function defaultRowRenderer<T>({ theme, cells, index }: TableRowEvent<T>) {
-  return (
-    <StyledTableRow key={index} theme={theme}>
-      {cells}
-    </StyledTableRow>
-  );
-}
-
-function defaultBodyRenderer(e: TableBodyRenderEvent) {
-  const TableBody = e.table;
-  return <TableBody {...e.props}>{e.rows}</TableBody>;
-}
-
 function normalizeSortBy(sortBy?: TableSorting | string): TableSorting | undefined {
   if (!sortBy) {
     return undefined;
@@ -213,6 +174,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
 
   static getDerivedStateFromProps(props: TableProps<any>, state: TableBasicState) {
     const controlledSorting = props.sortBy !== undefined || state.controlledSorting;
+
     if (controlledSorting) {
       return {
         sorting: normalizeSortBy(props.sortBy),
@@ -224,8 +186,10 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     return null;
   }
 
-  private getIndices = memoize((data, sorting) =>
-    sorting ? sortObjectList(data, sorting.columnKey, sorting.order) : sortObjectList(data),
+  private getIndices = memoize((data: Array<T>, grouping?: keyof T, sorting?: TableSorting) =>
+    sorting
+      ? sortObjectList(data, grouping, sorting.columnKey as keyof T, sorting.order)
+      : sortObjectList(data, grouping),
   );
 
   private isSortable(key: string) {
@@ -394,13 +358,14 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
   private renderRows(keys: Array<string>) {
     const {
       data,
+      groupBy,
       indexed,
       placeholder,
       rowRenderer = defaultRowRenderer,
       getRowKey = defaultRowKeyGetter,
       theme,
     } = this.props;
-    const indices = this.getIndices(data, this.state.sorting);
+    const indices = this.getIndices(data, groupBy, this.state.sorting);
     const cols = keys.length + (indexed ? 1 : 0);
 
     if (indices.length === 0) {
@@ -479,6 +444,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
       onHeaderClick: _6,
       placeholder: _7,
       columns: _8,
+      groupBy: _9,
       ...props
     } = this.props;
     const columns = this.getColumns();

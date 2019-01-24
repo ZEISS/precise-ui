@@ -196,6 +196,7 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
 
   render() {
     const { detailsRenderer: _0, columns: _1, indexed: _2, ...props } = this.props;
+
     return (
       <StyledTable
         {...props}

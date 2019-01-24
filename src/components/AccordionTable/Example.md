@@ -239,3 +239,26 @@ function getContent({index, data}) {
   condensed
   borderless />
 ```
+
+**Grouping**
+
+We can use the `groupBy` to introduce an additional level.
+
+```jsx
+const { AccordionTable } = require('precise-ui');
+
+<AccordionTable
+  groupBy="tag"
+  data={[
+    {tag: 'A', value: 'Alpha1', team: 'Alpha team'},
+    {tag: 'A', value: 'Alpha2', team: 'Alpha team'},
+    {tag: 'A', value: 'Alpha3', team: 'Alpha team'},
+    {tag: 'A', value: 'Alpha4', team: 'Alpha team'},
+    {tag: 'B', value: 'Bravo1', team: 'Bravo team'},
+    {tag: 'B', value: 'Bravo2', team: 'Bravo team'},
+    {tag: 'B', value: 'Bravo3', team: 'Bravo team'},
+    {tag: 'C', value: 'Charlie1', team: 'Charlie team'},
+    {tag: 'E', value: 'Echo1', team: 'Echo team'},
+    {tag: 'E', value: 'Echo2', team: 'Echo team'},
+  ]} />
+```

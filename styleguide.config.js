@@ -44,7 +44,7 @@ module.exports = {
           content: path.resolve(__dirname, 'docs/introduction/usage.md'),
         },
         {
-          name: 'Components',
+          name: 'Available Components',
           content: path.resolve(__dirname, 'docs/introduction/components.md'),
         },
         {

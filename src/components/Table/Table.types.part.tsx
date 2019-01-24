@@ -171,6 +171,10 @@ export interface TableProps<T> extends StandardProps, ModeProviderProps<TableMod
    */
   sortBy?: TableSorting | string;
   /**
+   * Optionally specifies the key of the column to use for grouping.
+   */
+  groupBy?: keyof T;
+  /**
    * @ignore
    */
   children?: void;

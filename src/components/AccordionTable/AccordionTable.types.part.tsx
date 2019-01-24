@@ -66,7 +66,7 @@ export interface AccordionTableProps<T> extends TableProps<T> {
    */
   closeLabel?: string;
   /**
-   * This Boolean attribute indicates that multiple rows can be expanded.
+   * This attribute indicates that multiple rows can be expanded.
    * If it is not specified, then only one row can be expanded at a time.
    * Default value is `false`.
    */
