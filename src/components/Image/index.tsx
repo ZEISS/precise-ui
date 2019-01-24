@@ -63,7 +63,7 @@ const StyledImage = styled.img`
 
 const StyledError = styled.span`
   background: ${themed(props => props.theme.inputError)};
-  color: ${themed(props => props.theme.textSecondary)};
+  color: ${themed(props => props.theme.text7)};
   font-family: inherit;
 `;
 

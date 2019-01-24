@@ -31,7 +31,7 @@ const PseudoLinkStyle = css`
 const StyledActionLink = styled(Anchor)`
   font-weight: 500;
   text-decoration: none;
-  color: ${themed(props => (props.disabled ? props.theme.text3 : props.theme.fill))};
+  color: ${themed(props => (props.disabled ? props.theme.text3 : props.theme.ui0))};
   display: ${(props: StyledActionLink) => (props.block ? 'block' : 'inline-block')};
   cursor: ${(props: StyledActionLink) => (props.disabled ? 'default' : 'pointer')};
   ${(props: StyledActionLink) => (!props.disabled ? PseudoLinkStyle : '')};

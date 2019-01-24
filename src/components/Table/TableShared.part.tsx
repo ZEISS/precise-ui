@@ -3,7 +3,7 @@ import { TableCellEvent, TableRowEvent, TableBodyRenderEvent } from './Table.typ
 import styled, { themed, reStyled } from '../../utils/styled';
 
 export const StyledTableHead = styled.thead`
-  color: ${themed(({ theme }) => theme.text || theme.text1)};
+  color: ${themed(({ theme }) => theme.text6 || theme.text1)};
   font-weight: bold;
 `;
 

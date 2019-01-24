@@ -161,6 +161,10 @@ export type PreciseThemeColors = {
    */
   ui7: string;
   /**
+   * Theme color UI8.
+   */
+  ui8: string;
+  /**
    * Theme color TEXT0.
    */
   text0: string;
@@ -184,25 +188,17 @@ export type PreciseThemeColors = {
    * Theme color TEXT5.
    */
   text5: string;
+  /**
+   * Theme color TEXT6, which is the color of ordinary text.
+   */
+  text6: string;
+  /**
+   * Theme color TEXT7.
+   */
+  text7: string;
 };
 
 export interface PreciseFullTheme extends PreciseThemeColors {
-  /**
-   * Color of ordinary text.
-   */
-  text: string;
-  /**
-   * Secondary color of ordinary text.
-   */
-  textSecondary: string;
-  /**
-   * Fill color of ordinary component.
-   */
-  fill: string;
-  /**
-   * Secondary fill color of ordinary component.
-   */
-  fillSecondary: string;
   /**
    * Padding for accordion items header.
    */
@@ -215,10 +211,6 @@ export interface PreciseFullTheme extends PreciseThemeColors {
    * Accordion bottom border definition.
    */
   accordionLine: string;
-  /**
-   * Color of the application background.
-   */
-  background: string;
   /**
    * Colors of the primary button.
    */

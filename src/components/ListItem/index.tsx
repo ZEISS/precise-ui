@@ -27,8 +27,8 @@ const Bordered = css`
 `;
 
 const StyledListItem = styled<ListItemProps, 'li'>('li')`
-  background-color: ${themed(props => props.theme.background)};
-  color: ${themed(props => (props.active ? props.theme.primary : props.theme.text))};
+  background-color: ${themed(props => props.theme.ui1)};
+  color: ${themed(props => (props.active ? props.theme.primary : props.theme.text6))};
   ${props => (props.border ? Bordered : '')};
   margin-bottom: -1px;
   padding: ${props => (props.disablePadding ? '0' : remCalc(['12', '20']))};

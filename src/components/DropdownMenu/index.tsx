@@ -85,7 +85,7 @@ const StyledInteractiveList = styled(InteractiveList)`
   white-space: nowrap;
 
   ul {
-    background: ${themed(props => props.theme.background)};
+    background: ${themed(props => props.theme.ui1)};
   }
 `;
 

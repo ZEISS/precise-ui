@@ -37,7 +37,7 @@ const StyledTable = reStyled.table<StyledTableProps>(
     table-layout: ${theme.tableLayout};
     border-collapse: collapse;
     width: 100%;
-    color: ${theme.text};
+    color: ${theme.text6};
     border: ${borderless ? 'none' : theme.tableBorder};
     font-size: ${remCalc('14px')};
 

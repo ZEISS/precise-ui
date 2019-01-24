@@ -15,7 +15,7 @@ export const TabHeaders = styled.ul`
 export const TabContent = styled.div``;
 
 const ActiveTab = css`
-  color: ${themed(props => props.theme.text)};
+  color: ${themed(props => props.theme.text6)};
   font-weight: 500;
   border-color: ${dark};
 `;

@@ -63,14 +63,14 @@ interface StyledAutosuggestWrapperProps {
 }
 
 const StyledAutosuggestWrapper = reStyled.ul<StyledAutosuggestWrapperProps>(
-  ({ direction, theme: { background, ui4 } }) => `
+  ({ direction, theme: { ui1, ui4 } }) => `
   list-style: none;
   width: 100%;
   box-sizing: border-box;
   box-shadow: none;
   margin: 0;
   padding: 0;
-  background: ${background};
+  background: ${ui1};
   border: 1px solid ${ui4};
   ${
     direction === InteractiveListDirection.normal ? 'border-top-color: transparent' : 'border-bottom-color: transparent'
