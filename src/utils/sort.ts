@@ -34,6 +34,28 @@ function getComparer(type: string, reverse: boolean) {
   return reverse ? compareStringReverse : compareStringNormal;
 }
 
+function sorter<T extends {}>(result: Array<number>, data: Array<T>, key: keyof T, reverse = false) {
+  const values = data.map(item => item[key]);
+  const n = values.length;
+
+  if (n > 1) {
+    const type = typeof values[0];
+    const comparer = getComparer(type, reverse);
+
+    for (let i = 1; i < n; i++) {
+      for (let j = 0; j < i; j++) {
+        const ij = result[j];
+        const ii = result[i];
+
+        if (comparer(values[ii], values[ij])) {
+          result[i] = ij;
+          result[j] = ii;
+        }
+      }
+    }
+  }
+}
+
 export function sortObjectList<T extends {}>(
   data: Array<T>,
   groupBy?: keyof T,
@@ -43,26 +65,11 @@ export function sortObjectList<T extends {}>(
   const result = data.map((_, index) => index);
 
   if (sortBy) {
-    const rev = order === 'descending';
-    const values = data.map(item => item[sortBy]);
-    const n = values.length;
+    sorter(result, data, sortBy, order === 'descending');
+  }
 
-    if (n > 1) {
-      const type = typeof values[0];
-      const comparer = getComparer(type, rev);
-
-      for (let i = 1; i < n; i++) {
-        for (let j = 0; j < i; j++) {
-          const ij = result[j];
-          const ii = result[i];
-
-          if (comparer(values[ii], values[ij])) {
-            result[i] = ij;
-            result[j] = ii;
-          }
-        }
-      }
-    }
+  if (groupBy) {
+    sorter(result, data, groupBy);
   }
 
   return result;
