@@ -74,7 +74,7 @@ const AvatarContent = styled<SizeProp, 'div'>('div')`
   border: 0;
   perspective: 1px;
 
-  color: ${themed(props => props.theme.textSecondary)};
+  color: ${themed(props => props.theme.text7)};
   border-radius: 50%;
   overflow: hidden;
 
@@ -131,8 +131,8 @@ const AvatarBadge = styled<SizeProp, 'div'>('div')`
   position: absolute;
   overflow: hidden;
   border-radius: 50%;
-  border: solid 2px ${themed(props => props.theme.background)};
-  color: ${themed(props => props.theme.textSecondary)};
+  border: solid 2px ${themed(props => props.theme.ui1)};
+  color: ${themed(props => props.theme.text7)};
   bottom: -2px;
   right: -2px;
 

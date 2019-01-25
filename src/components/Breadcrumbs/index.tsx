@@ -9,7 +9,7 @@ import { OverflowMenu } from '../OverflowMenu';
 
 const BreadcrumbContainer = styled.div`
   font-size: ${remCalc('14px')};
-  color: ${themed(props => props.theme.fillSecondary)};
+  color: ${themed(props => props.theme.ui8)};
 `;
 
 const BreadcrumbSeparator = styled.span`

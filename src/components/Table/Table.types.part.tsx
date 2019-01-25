@@ -1,10 +1,10 @@
-import { StandardProps, RefProps, PreciseTheme } from '../../common';
+import { StandardProps, RefProps } from '../../common';
 import { ModeProviderProps } from '../../hoc/withResponsiveMode';
 
 export type TableMode = 'card' | 'table';
 
 /**
- * Custom cell renderer for event.
+ * Arguments for any cell events.
  */
 export interface TableCellEvent<T> {
   /**
@@ -30,13 +30,23 @@ export interface TableCellEvent<T> {
 }
 
 /**
+ * Arguments for custom cell rendering events.
+ */
+export interface TableCellRenderEvent<T> extends TableCellEvent<T> {
+  /**
+   * The sorting order, if any.
+   */
+  sorting?: false | 'ascending' | 'descending';
+  /**
+   * Function to return the default representation.
+   */
+  render(e: TableCellRenderEvent<T>): React.ReactNode;
+}
+
+/**
  * Custom row renderer for event.
  */
 export interface TableRowEvent<T> {
-  /**
-   * Theme object used for the component.
-   */
-  theme?: PreciseTheme;
   /**
    * The index of the row that is rendered.
    */
@@ -44,7 +54,7 @@ export interface TableRowEvent<T> {
   /**
    * Cells group to be rendered.
    */
-  cells: React.ReactNode;
+  cells: Array<React.ReactNode>;
   /**
    * The associated data row, if any.
    */
@@ -53,6 +63,10 @@ export interface TableRowEvent<T> {
    * The key used for the given row.
    */
   key: string;
+  /**
+   * Arbitrary state object.
+   */
+  state: any;
 }
 
 /**
@@ -95,6 +109,10 @@ export interface TableCardRendererEvent<T> {
   keys: Array<string>;
 }
 
+export interface TableColumns {
+  [key: string]: string | Column;
+}
+
 export interface TableCardBodyRenderEvent {
   /**
    * The rows of the Card list to be rendered.
@@ -134,7 +152,7 @@ export interface TableProps<T> extends StandardProps, ModeProviderProps<TableMod
   /**
    * Optionally provides a custom way for rendering a cell.
    */
-  cellRenderer?(e: TableCellEvent<T>): React.ReactNode;
+  cellRenderer?(e: TableCellRenderEvent<T>): React.ReactNode;
   /**
    * Optionally provides a custom way for rendering a row.
    */
@@ -142,7 +160,19 @@ export interface TableProps<T> extends StandardProps, ModeProviderProps<TableMod
   /**
    * Optionally provides a custom way for rendering a table header.
    */
-  headRenderer?(e: TableHeadRenderEvent<T>): React.ReactNode;
+  headRenderer?(e: TableSectionRenderEvent<T>): React.ReactNode;
+  /**
+   * Optionally provides a custom way for rendering a header cell.
+   */
+  headerCellRenderer?(e: TableCellRenderEvent<T>): React.ReactNode;
+  /**
+   * Optionally provides a custom way for rendering a table footer.
+   */
+  footRenderer?(e: TableSectionRenderEvent<T>): React.ReactNode;
+  /**
+   * Optionally provides a custom way for rendering a footer cell.
+   */
+  footerCellRenderer?(e: TableCellRenderEvent<T>): React.ReactNode;
   /**
    * Handler that is being called when a header cell has been clicked.
    */
@@ -171,15 +201,17 @@ export interface TableProps<T> extends StandardProps, ModeProviderProps<TableMod
    */
   sortBy?: TableSorting | string;
   /**
+   * Optionally specifies the key of the column to use for grouping.
+   */
+  groupBy?: keyof T;
+  /**
    * @ignore
    */
   children?: void;
   /**
    * The columns being considered by the component.
    */
-  columns?: {
-    [key: string]: string | Column;
-  };
+  columns?: TableColumns;
 }
 
 export interface Column {
@@ -217,7 +249,25 @@ export interface TableSorting {
   order?: 'ascending' | 'descending';
 }
 
-export interface TableHeadRenderEvent<T> {
-  columns: TableProps<T>['columns'];
-  sortBy: TableProps<T>['sortBy'];
+export interface TableSectionRenderEvent<T> {
+  /**
+   * The columns used by the table.
+   */
+  columns: TableColumns;
+  /**
+   * The currently used sorting.
+   */
+  sortBy: TableSorting | undefined;
+  /**
+   * The currently defined grouping.
+   */
+  groupBy: keyof T | undefined;
+  /**
+   * The column keys.
+   */
+  keys: Array<string>;
+  /**
+   * The data to render in the table's body.
+   */
+  data: Array<T>;
 }

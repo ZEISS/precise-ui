@@ -70,7 +70,7 @@ export interface SpinningLabelProps {
 }
 
 const SpinningLabel = styled<SpinningLabelProps, 'label'>('label')`
-  color: ${themed(props => props.theme.text)};
+  color: ${themed(props => props.theme.text6)};
   display: ${props => (strToSize(props.size) >= 20 ? 'block' : 'inline-block')};
   margin: ${distance.xsmall};
   color: ${themed(props => props.theme.textDisabled)};

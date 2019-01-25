@@ -135,19 +135,20 @@ export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T
   }
 
   private renderItemProp(propKey: React.ReactChild, propValue: any, index: number, row: number) {
-    const { cellRenderer } = this.props;
-    const propValueRenderer = typeof cellRenderer === 'function' ? cellRenderer : defaultCellRenderer;
-    const value = propValueRenderer({
-      row,
-      column: index,
-      key: propKey.toString(),
-      value: propValue,
-    });
+    const { cellRenderer = defaultCellRenderer } = this.props;
 
     return (
       <PropContainer key={index}>
         <PropName>{propKey}</PropName>
-        <PropValue>{value}</PropValue>
+        <PropValue>
+          {cellRenderer({
+            row,
+            column: index,
+            key: propKey.toString(),
+            value: propValue,
+            render: defaultCellRenderer,
+          })}
+        </PropValue>
       </PropContainer>
     );
   }

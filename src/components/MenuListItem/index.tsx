@@ -14,7 +14,7 @@ export interface MenuListItemProps extends StandardProps {
    */
   children?: React.ReactNode;
   /**
-   * Making a row more condensed
+   * Making a row more condensed.
    */
   condensed?: boolean;
 }
@@ -25,7 +25,7 @@ const ActiveStyle = css`
     content: '';
     width: 4px;
     height: 100%;
-    background: ${cyan};
+    background: ${themed(({ theme }) => theme.ui0)};
     left: 0;
   }
 `;
@@ -34,7 +34,7 @@ const StyledMenuListItem = styled<MenuListItemProps, 'li'>('li')`
   display: flex;
   position: relative;
   align-items: center;
-  color: ${themed(props => props.theme.text)};
+  color: ${themed(props => props.theme.text6)};
   text-decoration: none;
   height: ${({ condensed }) => (condensed ? distance.xlarge : distance.xxlarge)};
   padding: 0 0 0 ${distance.large};

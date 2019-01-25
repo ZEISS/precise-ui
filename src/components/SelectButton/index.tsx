@@ -88,6 +88,16 @@ const CustomWrapper: React.SFC<InteractiveListWrapperProps> = props => {
   return <StyledCustomWrapper {...props} />;
 };
 
+function renderValue(data: Array<string | InteractiveListItem>, value: string) {
+  for (const item of data) {
+    if (typeof item !== 'string' && item.key === value) {
+      return item.content || value;
+    }
+  }
+
+  return value;
+}
+
 /**
  * Represents a select button, which is a kind of dropdown button.
  */
@@ -159,13 +169,13 @@ export class SelectButton extends React.PureComponent<SelectButtonProps, SelectB
   };
 
   render() {
-    const { data, onChange: _0, value: _1, ...props } = this.props;
+    const { data = [], onChange: _0, value: _1, ...props } = this.props;
     const { open, value } = this.state;
 
     return (
       <RootWrapper {...props}>
         <ButtonWrapper onMouseDown={this.handleMouseDown} className="ignore-react-onclickoutside">
-          {value}
+          {renderValue(data, value)}
           <Icon name="ArrowDropDown" size={1.5} />
         </ButtonWrapper>
         <InteractiveList

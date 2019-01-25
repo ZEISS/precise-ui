@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { themes, Responsive, ThemeProvider, PreciseTheme } from '../../src';
+import { themes, Responsive, ThemeProvider } from '../../src';
 import { HomePage } from './HomePage';
 import { MobileLayout, DesktopLayout } from './Layout';
 // @ts-ignore
 import Ribbon from 'react-styleguidist/lib/rsg-components/Ribbon';
 // @ts-ignore
 import Logo from 'react-styleguidist/lib/rsg-components/Logo';
+import { AppState } from './context';
 
 interface StyleGuideRendererProps {
   title: string;
@@ -14,17 +15,6 @@ interface StyleGuideRendererProps {
   homepageUrl: string;
   toc: React.ReactNode;
   hasSidebar: boolean;
-}
-
-interface AppState {
-  theme: PreciseTheme;
-}
-
-declare global {
-  interface Window {
-    setContext?<K extends keyof AppState>(state: Pick<AppState, K>): void;
-    context: AppState;
-  }
 }
 
 class App extends React.Component<StyleGuideRendererProps, AppState> {

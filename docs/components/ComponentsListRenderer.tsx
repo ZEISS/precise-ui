@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ActionLink, Expander, styled, distance, css, colors, Icon, ActionLinkProps } from '../../src';
+import { ActionLink, Expander, styled, distance, Icon, ActionLinkProps, themed } from '../../src';
 
 interface ComponentDefinition {
   hasExamples: boolean;
@@ -41,45 +41,49 @@ interface MenuItemProps extends ActionLinkProps {
 
 const NavItems = styled.div``;
 
-const MenuItem = styled(ActionLink)`
+const MenuItem = styled<MenuItemProps>(ActionLink)`
   position: relative;
   display: block;
   display: flex;
   align-items: center;
   height: 50px;
   padding: 0 ${distance.medium};
-  ${({ selected }: MenuItemProps) => (selected ? ActiveMenuItem : '')}
+  ${themed(({ selected, theme }) =>
+    selected
+      ? `
+  color: ${theme.text2};
+  background: ${theme.ui2};
+`
+      : '',
+  )}
   border-bottom: 1px solid #eeefee;
   justify-content: space-between;
   font-weight: 500;
-  color: ${colors.eclipse};
-`;
-
-const ActiveMenuItem = css`
-  background: ${colors.whiterSmoke};
+  color: ${themed(({ theme }) => theme.text1)};
 `;
 
 const SubMenuContainer = styled.div`
   > div {
-    background: ${colors.whiterSmoke};
-  }
-`;
-
-const ActiveSubMenuItem = css`
-  &:after {
-    position: absolute;
-    left: 0;
-    content: '';
-    width: 4px;
-    height: 100%;
-    background: ${colors.cyan};
+    background: ${themed(({ theme }) => theme.ui2)};
   }
 `;
 
 const SubMenuItem = MenuItem.extend`
   padding: 0 ${distance.large};
   font-weight: 400;
-  ${({ selected }) => (selected ? ActiveSubMenuItem : '')}
+  ${themed(({ selected, theme }) =>
+    selected
+      ? `
+  &:after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 4px;
+    height: 100%;
+    background: ${theme.ui0};
+  }`
+      : '',
+  )}
 `;
 
 const MenuWithIcon = styled.div`

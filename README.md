@@ -105,11 +105,11 @@ npm version --new-version 1.2.3
 
 We do not use default exports. Instead, every export should be named properly. For components, the name of the export equals the name of its file or folder.
 
+**Folders**
+
 Every exposed main component has to be placed in its own folder below `components`. Components placed in `*.part.tsx` files are considered internal components only created for providing some (necessary) internal structure.
 
 Every exposed design helper component has to be placed in a file in the `quarks` folder. Design helpers do start with a `Styled` prefix, just like plain styled components should be.
-
-While *stateless* components should be created as a `const`, *statefull* components should be created as a `class`. In the former case only an interface with the component's name suffixed with `Props` should be created (to declare the typings of the props). In the latter case an additional interface with the component's name suffixed with `State` should be created, too. This interface carries the type information for the internal state of the component.
 
 Any higher-order component (HOC) should be located in the `hoc` folder. The naming convention is to expose the HOC with a `with` prefix.
 
@@ -117,9 +117,21 @@ The context related components are located in the `contexts` folder.
 
 Plain functional utilities have to be placed in the `utils` folder. Even though for convenience all contents of utils are exported, their modules should be referenced directly from any components. The utilities have to be pretty much self-sustained, i.e., referencing back components is forbidden.
 
+**Namings**
+
+While *stateless* components should be created as a `const`, *statefull* components should be created as a `class`. In the former case only an interface with the component's name suffixed with `Props` should be created (to declare the typings of the props). In the latter case an additional interface with the component's name suffixed with `State` should be created, too. This interface carries the type information for the internal state of the component.
+
 Input field components should always be suffixed with `Field`. Their props should extend the `InputProps` interface.
 
 Event props should be prefixed with `on` and they should have a single argument only. This argument must be an object that follows an interface, which has an adequate name for the event, usually consisting of the component's name, the event type, and being suffixed with `Event`, e.g., for `onChange` of a `TextField` we have `TextFieldChangeEvent`.
+
+We have a variety of different component classes. We should be able to easily distinguish between the different classes of components by looking at the suffix of a component. We have:
+
+- `*Control`, stateful functional components
+- `*Panel`, layout to be used
+- `*Field`, an input field
+
+Exceptions to this convention can occur due to various reasons (historical, aesthetic, ...), but should always be reasoned and discussed properly.
 
 #### Code Formatting
 

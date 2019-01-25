@@ -1,23 +1,20 @@
 import * as React from 'react';
 import styled, { reStyled } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
-import { Table, TableRowEvent, TableCellEvent } from '../Table';
+import { Table, TableRowEvent } from '../Table';
 import { defaultCellRenderer } from '../Table/TableShared.part';
 import { Icon, IconProps } from '../Icon';
 import { AccordionTableRow } from '../AccordionTableRow';
-import { AccordionTableProps } from './AccordionTable.types.part';
+import { AccordionTableProps, AccordionGroupRenderEvent } from './AccordionTable.types.part';
 import { normalizeIndex, toggleIndex, hasIndex } from './helpers/indexHelper';
 import { distance } from '../../distance';
+import { TableCellRenderEvent } from '../Table/Table.types.part';
 
 export interface AccordionTableBasicState {
-  /**
-   * Currently selected rows indices.
-   */
-  selectedIndexes: Array<number>;
-  /**
-   * Determines if the accordion table component is controlled from the outside or not.
-   */
-  controlled: boolean;
+  selectedIndex: Array<number>;
+  expandedGroups: Array<any>;
+  controlledIndex: boolean;
+  controlledGroups: boolean;
 }
 
 interface AccordionTableItemProps {
@@ -52,10 +49,14 @@ const StyledCollapseAnimator = styled<AccordionTableItemProps, 'div'>('div')`
   opacity: ${({ active }) => (active ? '1' : '0')};
 `;
 
-const StyledTableCell = styled.td``;
-const StyledDetailsContainer = styled(StyledTableCell)`
+const GroupTableCell = styled.td`
+  font-weight: bold;
+  padding-left: 0.5em !important;
+`;
+
+const StyledDetailsContainer = styled.td`
   /*
-    AccordionTable is a Table abstracrion.
+    AccordionTable is a Table abstraction.
     Table has default paddings for it's cells.
     Expanded AccordionTable row is a container and should not have any paddings.
   */
@@ -73,6 +74,18 @@ const StyledIcon = styled<StyledArrowProps>(StyledIconInt)`
   transform: ${({ isRotated }) => `rotate(${isRotated ? 90 : 0}deg)`};
 `;
 
+function defaultGroupRenderer<T>(e: AccordionGroupRenderEvent<T>): React.ReactChild {
+  return (
+    <>
+      {e.group} ({e.items.length})
+    </>
+  );
+}
+
+function getGroupItems<T>(data: Array<T>, groupBy?: keyof T, group?: any) {
+  return groupBy ? data.filter(m => m[groupBy] === group) : [];
+}
+
 export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<T>, AccordionTableBasicState> {
   static defaultProps = {
     multiple: false,
@@ -80,19 +93,27 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
 
   constructor(props: AccordionTableProps<T>) {
     super(props);
+    const controlledDetails = props.selectedIndex !== undefined;
+    const controlledGroups = Array.isArray(props.expandedGroups);
 
     this.state = {
-      selectedIndexes: normalizeIndex(props.selectedIndex),
-      controlled: props.selectedIndex !== undefined,
+      selectedIndex: normalizeIndex(props.selectedIndex),
+      controlledIndex: controlledDetails,
+      controlledGroups: controlledGroups,
+      expandedGroups: controlledGroups ? props.expandedGroups || [] : [],
     };
   }
 
   static getDerivedStateFromProps(props: AccordionTableProps<any>, state: AccordionTableBasicState) {
-    const { selectedIndex } = props;
+    const { selectedIndex, expandedGroups } = props;
+    const newIndex = state.controlledIndex && selectedIndex !== undefined;
+    const newGroups = state.controlledGroups && expandedGroups !== undefined;
 
-    if (state.controlled && selectedIndex !== undefined) {
+    if (newIndex || newGroups) {
       return {
-        selectedIndexes: normalizeIndex(selectedIndex),
+        ...state,
+        selectedIndex: newIndex ? normalizeIndex(selectedIndex) : state.selectedIndex,
+        expandedGroups: newGroups ? expandedGroups : state.expandedGroups,
       };
     }
 
@@ -101,61 +122,117 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
 
   private handleClick(target: number, data: T) {
     const { onChange, multiple } = this.props;
-    const { controlled, selectedIndexes } = this.state;
-    const nextIndexes = toggleIndex(selectedIndexes, target, multiple);
+    const { controlledIndex, selectedIndex } = this.state;
+    const nextIndexes = toggleIndex(selectedIndex, target, multiple);
 
     if (typeof onChange === 'function') {
       onChange({
         selectedIndex: multiple ? nextIndexes : nextIndexes[0] !== undefined ? nextIndexes[0] : -1,
-        previousIndex: multiple ? selectedIndexes : selectedIndexes[0] !== undefined ? selectedIndexes[0] : -1,
+        previousIndex: multiple ? selectedIndex : selectedIndex[0] !== undefined ? selectedIndex[0] : -1,
         data,
       });
     }
 
-    if (!controlled) {
+    if (!controlledIndex) {
       this.setState({
-        selectedIndexes: nextIndexes,
+        selectedIndex: nextIndexes,
       });
     }
   }
 
-  private rowRenderer = ({ cells, index, data, key }: TableRowEvent<T>) => {
-    const { detailsRenderer, rowRenderer, theme, arrowToggle } = this.props;
+  private toggleGroup(group: any) {
+    const { data, onToggleGroup, groupBy } = this.props;
+    const { expandedGroups, controlledGroups } = this.state;
+
+    if (typeof onToggleGroup === 'function') {
+      onToggleGroup({
+        group,
+        type: 'expand',
+        items: getGroupItems(data, groupBy, group),
+      });
+    }
+
+    if (!controlledGroups) {
+      if (expandedGroups.indexOf(group) !== -1) {
+        this.setState({
+          expandedGroups: expandedGroups.filter(m => m !== group),
+        });
+      } else {
+        this.setState({
+          expandedGroups: [...expandedGroups, group],
+        });
+      }
+    }
+  }
+
+  private groupRenderer(group: any, count: number, expanded: boolean) {
+    const { theme, groupRenderer = defaultGroupRenderer, data, groupBy } = this.props;
+    const items = getGroupItems(data, groupBy, group);
+
+    return (
+      <>
+        <AccordionTableRow clickable onClick={() => this.toggleGroup(group)} theme={theme}>
+          <GroupTableCell>
+            <StyledIcon isRotated={expanded} name="KeyboardArrowRight" />
+          </GroupTableCell>
+          <GroupTableCell colSpan={count - 1}>{groupRenderer({ expanded, group, items })}</GroupTableCell>
+        </AccordionTableRow>
+        <StyledTableRowCollapse />
+      </>
+    );
+  }
+
+  private rowRenderer = ({ cells, index, data, key, state }: TableRowEvent<T>) => {
+    const { detailsRenderer, rowRenderer, theme, arrowToggle, groupBy } = this.props;
+    const { selectedIndex, expandedGroups } = this.state;
+    const { groupedRows = [] } = state;
+    const active = hasIndex(selectedIndex, index);
     const count = React.Children.count(cells);
-    const active = hasIndex(this.state.selectedIndexes, index);
-    const renderData = { cells, index, data, active, key };
+    const col = groupBy && data[groupBy];
+    const open = !col || expandedGroups.indexOf(col) !== -1;
+    const renderData = { cells, index, data, active, key, state };
+    const isNewGroup = col && groupedRows.indexOf(col) === -1;
+
+    if (isNewGroup) {
+      state.groupedRows = [...groupedRows, col];
+    }
 
     return (
       <React.Fragment key={key}>
-        {(rowRenderer && rowRenderer(renderData)) || (
-          <AccordionTableRow
-            active={active}
-            clickable={!arrowToggle}
-            onClick={() => this.handleClick(index, data)}
-            theme={theme}>
-            {cells}
-          </AccordionTableRow>
+        {isNewGroup && this.groupRenderer(col, count, open)}
+        {open && (
+          <>
+            {(rowRenderer && rowRenderer(renderData)) || (
+              <AccordionTableRow
+                active={active}
+                clickable={!arrowToggle}
+                onClick={() => this.handleClick(index, data)}
+                theme={theme}>
+                {cells}
+              </AccordionTableRow>
+            )}
+            <StyledTableRowCollapse active={active}>
+              <StyledDetailsContainer colSpan={count}>
+                <StyledCollapseAnimator active={active}>
+                  {active && detailsRenderer && detailsRenderer({ index, data })}
+                </StyledCollapseAnimator>
+              </StyledDetailsContainer>
+            </StyledTableRowCollapse>
+          </>
         )}
-        <StyledTableRowCollapse active={active}>
-          <StyledDetailsContainer colSpan={count}>
-            <StyledCollapseAnimator active={active}>
-              {active && detailsRenderer && detailsRenderer({ index, data })}
-            </StyledCollapseAnimator>
-          </StyledDetailsContainer>
-        </StyledTableRowCollapse>
       </React.Fragment>
     );
   };
 
-  private cellRenderer = (e: TableCellEvent<T>) => {
-    const { row: rowIndex, data } = e;
+  private cellRenderer = (e: TableCellRenderEvent<T>) => {
+    const { row, data } = e;
+
     if (e.column === 0) {
-      const active = hasIndex(this.state.selectedIndexes, rowIndex);
       return (
         <StyledIcon
-          isRotated={active}
+          isRotated={hasIndex(this.state.selectedIndex, row)}
           name="KeyboardArrowRight"
-          onClick={() => data && this.handleClick(rowIndex, data)}
+          onClick={() => data && this.handleClick(row, data)}
         />
       );
     }
@@ -195,7 +272,19 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
   }
 
   render() {
-    const { detailsRenderer: _0, columns: _1, indexed: _2, ...props } = this.props;
+    const {
+      detailsRenderer: _0,
+      columns: _1,
+      indexed: _2,
+      groupRenderer: _3,
+      expandedGroups: _4,
+      onToggleGroup: _5,
+      openLabel: _6,
+      closeLabel: _7,
+      multiple: _8,
+      ...props
+    } = this.props;
+
     return (
       <StyledTable
         {...props}

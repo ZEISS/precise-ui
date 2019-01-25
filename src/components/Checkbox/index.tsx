@@ -182,7 +182,7 @@ class CheckboxInt extends React.PureComponent<CheckboxProps & FormContextProps, 
         <RealCheckbox type="checkbox" defaultChecked={value} />
         <FlexContainer>
           <CheckboxBox {...boxProps}>
-            <Icon name="Check" color={theme ? theme.background : light.background} size={1.0625} />
+            <Icon name="Check" color={theme ? theme.ui1 : light.ui1} size={1.0625} />
           </CheckboxBox>
           {children && (
             <Label attached theme={theme}>

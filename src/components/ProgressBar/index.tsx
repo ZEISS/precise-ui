@@ -66,7 +66,7 @@ const spinningWidth = 50;
 const stopCreator: StyledFunction<StopProps & React.HTMLProps<HTMLInputElement>> = styled.div;
 
 const ProgressContainer = styled.div`
-  color: ${themed(props => props.theme.text)};
+  color: ${themed(props => props.theme.text6)};
 `;
 
 const ProgressRail = styled<ProgressContainerProps, 'div'>('div')`
@@ -91,7 +91,7 @@ const ProgressDescription = styled.div`
 const ProgressIndicator = styled.div`
   border-radius: inherit;
   border: 0;
-  background: ${themed(props => props.theme.fill)};
+  background: ${themed(props => props.theme.ui0)};
   height: 100%;
   width: 0;
 `;

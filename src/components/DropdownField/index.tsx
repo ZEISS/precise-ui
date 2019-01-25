@@ -119,7 +119,7 @@ const SingleDropdownItem = styled.span`
   display: inline-block;
   line-height: normal;
   border: 0;
-  color: ${themed(props => props.theme.text)};
+  color: ${themed(props => props.theme.text6)};
 `;
 
 interface StyledStandardWrapperProps {
@@ -136,9 +136,9 @@ const StyledStandardWrapper = styled<StyledStandardWrapperProps, 'ul'>('ul')`
   box-shadow: none;
   margin: 0;
   padding: 0;
-  background: ${themed(props => props.theme.background)};
+  background: ${themed(props => props.theme.ui1)};
   border: 1px solid
-    ${themed(({ border, theme: { fill, ui4 } }) => (border === InteractiveListBorderType.none ? fill : ui4))};
+    ${themed(({ border, theme: { ui0, ui4 } }) => (border === InteractiveListBorderType.none ? ui0 : ui4))};
   max-height: 50vh;
   ${props =>
     props.direction === InteractiveListDirection.normal

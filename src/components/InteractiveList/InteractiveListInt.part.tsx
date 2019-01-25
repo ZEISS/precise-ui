@@ -29,7 +29,6 @@ interface ListItemContentProps {
 
 interface ListItemIconProps {
   condensed: boolean;
-  padding: boolean;
 }
 
 const InteractiveListContainer = styled.div`
@@ -105,8 +104,7 @@ const ListItemContentComponentPadding = styled<ListItemContentProps, 'div'>('div
 `;
 
 const ListItemIconPadding = styled<ListItemIconProps, 'div'>('div')`
-  padding: ${props =>
-    props.padding ? (props.condensed ? `${distance.small} ${distance.medium}` : distance.medium) : '0'};
+  padding: 0 ${distance.medium};
 
   i {
     display: block;
@@ -417,8 +415,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
     const isHovered = !disabled && selected === index;
     const isSelected = value.indexOf(index) >= 0;
     const selects = this.selects;
-    const isContentString = typeof content === 'string';
-    const ContentWrapper = isContentString ? ListItemContentPadding : ListItemContentComponentPadding;
+    const ContentWrapper = typeof content === 'string' ? ListItemContentPadding : ListItemContentComponentPadding;
 
     if (selects[index] === undefined) {
       selects[index] = () => this.select(index);
@@ -458,7 +455,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
             </ContentWrapper>
           </ListItemContent>
           {isSelected && !multiple && showTick && (
-            <ListItemIconPadding condensed={condensed} padding={isContentString}>
+            <ListItemIconPadding condensed={condensed}>
               <Icon name="Check" color={pacificBlue} size={1.375} />
             </ListItemIconPadding>
           )}

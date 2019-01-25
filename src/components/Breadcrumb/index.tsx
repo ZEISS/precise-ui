@@ -16,7 +16,7 @@ export interface BreadcrumbProps extends AnchorProps {
 
 const StyledLink = styled(Anchor)`
   text-decoration: none;
-  color: ${themed(props => props.theme.fill)};
+  color: ${themed(props => props.theme.ui0)};
   display: inline-block;
   font-size: inherit;
   white-space: nowrap;

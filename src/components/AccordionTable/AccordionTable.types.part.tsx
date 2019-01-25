@@ -10,6 +10,21 @@ export interface AccordionTableCardRendererEvent<T> extends TableCardRendererEve
   open: boolean;
 }
 
+export interface AccordionGroupRenderEvent<T> {
+  /**
+   * Determines if the group is currently expanded.
+   */
+  expanded: boolean;
+  /**
+   * The associated group.
+   */
+  group: any;
+  /**
+   * The entries of the group.
+   */
+  items: Array<T>;
+}
+
 export interface AccordionDetailsRenderEvent<T> {
   /**
    * The index of the row to render details for.
@@ -19,6 +34,21 @@ export interface AccordionDetailsRenderEvent<T> {
    * The associated data entry to render the details for.
    */
   data: T;
+}
+
+export interface AccordionGroupToggleEvent<T> {
+  /**
+   * The associated group.
+   */
+  group: any;
+  /**
+   * The type of the group toggle.
+   */
+  type: 'expand' | 'collapse';
+  /**
+   * The entries of the group.
+   */
+  items: Array<T>;
 }
 
 export interface AccordionTableChangeEvent<T> {
@@ -58,6 +88,10 @@ export interface AccordionTableProps<T> extends TableProps<T> {
    */
   cardRenderer?(e: AccordionTableCardRendererEvent<T>): React.ReactChild;
   /**
+   * Custom group renderer for the group header.
+   */
+  groupRenderer?(e: AccordionGroupRenderEvent<T>): React.ReactChild;
+  /**
    * Label for button 'Open' in card view.
    */
   openLabel?: string;
@@ -66,11 +100,21 @@ export interface AccordionTableProps<T> extends TableProps<T> {
    */
   closeLabel?: string;
   /**
-   * This Boolean attribute indicates that multiple rows can be expanded.
+   * This attribute indicates that multiple rows can be expanded.
    * If it is not specified, then only one row can be expanded at a time.
    * Default value is `false`.
    */
   multiple?: boolean;
+  /**
+   * The values of the groups to expand. If set the component enters the
+   * controlled mode for groups expansion, otherwise the component remains
+   * in managed mode.
+   */
+  expandedGroups?: Array<any>;
+  /**
+   * Notification callback if a group is expanded or collapsed.
+   */
+  onToggleGroup?(e: AccordionGroupToggleEvent<T>): void;
 }
 
 export interface AccordionTableRowEvent<T> extends TableRowEvent<T> {

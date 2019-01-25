@@ -11,19 +11,19 @@ describe('<AccordionTableBasic />', () => {
 
   it('should not be controlled without props', () => {
     const wrapper = enzyme.shallow(<AccordionTableBasic data={[]} detailsRenderer={() => <div />} />);
-    expect(wrapper.state('controlled')).toBeFalsy();
+    expect(wrapper.state('controlledIndex')).toBeFalsy();
   });
 
   it('should be controlled with selectedIndex', () => {
     const wrapper = enzyme.shallow(<AccordionTableBasic selectedIndex={0} data={[]} detailsRenderer={() => <div />} />);
-    expect(wrapper.state('controlled')).toBeTruthy();
+    expect(wrapper.state('controlledIndex')).toBeTruthy();
   });
 
   it('should not be controlled with onChange', () => {
     const wrapper = enzyme.shallow(
       <AccordionTableBasic onChange={() => {}} data={[]} detailsRenderer={() => <div />} />,
     );
-    expect(wrapper.state('controlled')).toBeFalsy();
+    expect(wrapper.state('controlledIndex')).toBeFalsy();
   });
 
   it('should render a <AccordionTableBasic> component with right columns', () => {

@@ -385,3 +385,35 @@ const columns = {
   placeholder="No data available"
   sortBy="age" />
 ```
+
+**Grouping**
+
+Grouping works similar to sorting. If we sorting and grouping is done by the same key, then sorting has preference.
+
+```jsx
+const { Table } = require('precise-ui');
+const data = [{
+  name: 'A',
+  age: 21,
+},{
+  name: 'A',
+  age: 22,
+},{
+  name: 'A',
+  age: 29,
+},{
+  name: 'A',
+  age: 11,
+}, {
+  name: 'B',
+  age: 12,
+}, {
+  name: 'C',
+  age: 25,
+}, {
+  name: 'D',
+  age: 15,
+}];
+
+<Table data={data} groupBy="name" />
+```

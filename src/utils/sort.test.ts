@@ -127,4 +127,51 @@ describe('data sorting', () => {
     );
     expect(result).toEqual([2, 0, 3, 1]);
   });
+
+  it('should also work when grouping is active', () => {
+    const result = sortObjectList(
+      [
+        {
+          name: 'A',
+          age: 21,
+        },
+        {
+          name: 'A',
+          age: 22,
+        },
+        {
+          name: 'A',
+          age: 29,
+        },
+        {
+          name: 'A',
+          age: 11,
+        },
+        {
+          name: 'B',
+          age: 12,
+        },
+        {
+          name: 'C',
+          age: 22,
+        },
+        {
+          name: 'C',
+          age: 25,
+        },
+        {
+          name: 'D',
+          age: 15,
+        },
+        {
+          name: 'D',
+          age: 14,
+        },
+      ],
+      'age',
+      'descending',
+      'name',
+    );
+    expect(result).toEqual([2, 1, 0, 3, 4, 6, 5, 7, 8]);
+  });
 });
