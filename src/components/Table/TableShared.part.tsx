@@ -1,6 +1,69 @@
 import * as React from 'react';
-import { TableCellEvent, TableRowEvent, TableBodyRenderEvent, Column, TableColumns } from './Table.types.part';
-import styled, { themed, reStyled } from '../../utils/styled';
+import { TableRowEvent, TableBodyRenderEvent, Column, TableColumns, TableCellRenderEvent } from './Table.types.part';
+import styled, { themed, reStyled, css } from '../../utils/styled';
+import { remCalc } from '../../utils/remCalc';
+import { distance } from '../../distance';
+
+const HeaderLabel = styled.div`
+  font-size: 0;
+  white-space: nowrap;
+
+  > span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: ${remCalc('14px')};
+  }
+`;
+
+const WithArrowUp = css`
+  &:after {
+    border-top: 4px solid ${themed(({ theme }) => theme.ui5)};
+  }
+`;
+
+const WithArrowDown = css`
+  &:before {
+    border-bottom: 4px solid ${themed(({ theme }) => theme.ui5)};
+  }
+`;
+
+interface SortIconProps {
+  currentDirection?: 'ArrowDropDown' | 'ArrowDropUp' | false;
+  sortable?: boolean;
+}
+
+const SortIcon = styled<SortIconProps, 'span'>('span')`
+  position: relative;
+  margin-left: ${distance.xsmall};
+  width: 18px;
+  height: 18px;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    pointer-events: none;
+    margin: 0 auto;
+  }
+  &:before {
+    top: 50%;
+    margin-top: -5px;
+    border-bottom: 4px solid ${themed(({ theme }) => theme.ui4)};
+  }
+  &:after {
+    bottom: 50%;
+    margin-bottom: -7px;
+    border-top: 4px solid ${themed(({ theme }) => theme.ui4)};
+  }
+  ${({ currentDirection }) =>
+    currentDirection ? (currentDirection === 'ArrowDropDown' ? WithArrowUp : WithArrowDown) : ''};
+`;
 
 export const StyledTableHead = styled.thead`
   color: ${themed(({ theme }) => theme.text6 || theme.text1)};
@@ -37,7 +100,22 @@ export const StyledTableHeader = styled<TableHeaderProps, 'th'>('th')`
   ${({ width }) => (width && `width: ${width}`) || ''};
 `;
 
-export function defaultCellRenderer<T>({ value }: TableCellEvent<T>): React.ReactNode {
+export function defaultHeaderCellRenderer<T>({ value, sorting, column }: TableCellRenderEvent<T>): React.ReactNode {
+  if (column !== -1) {
+    return (
+      <HeaderLabel>
+        <span>{value}</span>
+        {sorting !== false && (
+          <SortIcon currentDirection={sorting && (sorting === 'descending' ? 'ArrowDropDown' : 'ArrowDropUp')} />
+        )}
+      </HeaderLabel>
+    );
+  }
+
+  return value;
+}
+
+export function defaultCellRenderer<T>({ value }: TableCellRenderEvent<T>): React.ReactNode {
   switch (typeof value) {
     case 'boolean':
     case 'number':
@@ -51,14 +129,6 @@ export function defaultCellRenderer<T>({ value }: TableCellEvent<T>): React.Reac
   }
 
   return '';
-}
-
-export function defaultRowRenderer<T>({ theme, cells, index }: TableRowEvent<T>) {
-  return (
-    <StyledTableRow key={index} theme={theme}>
-      {cells}
-    </StyledTableRow>
-  );
 }
 
 export function defaultBodyRenderer(e: TableBodyRenderEvent) {

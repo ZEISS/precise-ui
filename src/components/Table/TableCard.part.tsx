@@ -105,6 +105,7 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
             key,
             value: item[key],
             data: item,
+            render: defaultCellRenderer,
           });
 
           return (

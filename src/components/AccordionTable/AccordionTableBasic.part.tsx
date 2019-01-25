@@ -1,13 +1,14 @@
 import * as React from 'react';
 import styled, { reStyled } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
-import { Table, TableRowEvent, TableCellEvent } from '../Table';
+import { Table, TableRowEvent } from '../Table';
 import { defaultCellRenderer } from '../Table/TableShared.part';
 import { Icon, IconProps } from '../Icon';
 import { AccordionTableRow } from '../AccordionTableRow';
 import { AccordionTableProps, AccordionGroupRenderEvent } from './AccordionTable.types.part';
 import { normalizeIndex, toggleIndex, hasIndex } from './helpers/indexHelper';
 import { distance } from '../../distance';
+import { TableCellRenderEvent } from '../Table/Table.types.part';
 
 export interface AccordionTableBasicState {
   selectedIndex: Array<number>;
@@ -89,7 +90,6 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
   static defaultProps = {
     multiple: false,
   };
-  private groupedRows: Array<any>;
 
   constructor(props: AccordionTableProps<T>) {
     super(props);
@@ -166,39 +166,40 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
   }
 
   private groupRenderer(group: any, count: number, expanded: boolean) {
-    if (this.groupedRows.indexOf(group) === -1) {
-      const { theme, groupRenderer = defaultGroupRenderer, data, groupBy } = this.props;
-      const items = getGroupItems(data, groupBy, group);
-      this.groupedRows.push(group);
+    const { theme, groupRenderer = defaultGroupRenderer, data, groupBy } = this.props;
+    const items = getGroupItems(data, groupBy, group);
 
-      return (
-        <>
-          <AccordionTableRow clickable onClick={() => this.toggleGroup(group)} theme={theme}>
-            <GroupTableCell>
-              <StyledIcon isRotated={expanded} name="KeyboardArrowRight" />
-            </GroupTableCell>
-            <GroupTableCell colSpan={count - 1}>{groupRenderer({ expanded, group, items })}</GroupTableCell>
-          </AccordionTableRow>
-          <StyledTableRowCollapse />
-        </>
-      );
-    }
-
-    return undefined;
+    return (
+      <>
+        <AccordionTableRow clickable onClick={() => this.toggleGroup(group)} theme={theme}>
+          <GroupTableCell>
+            <StyledIcon isRotated={expanded} name="KeyboardArrowRight" />
+          </GroupTableCell>
+          <GroupTableCell colSpan={count - 1}>{groupRenderer({ expanded, group, items })}</GroupTableCell>
+        </AccordionTableRow>
+        <StyledTableRowCollapse />
+      </>
+    );
   }
 
-  private rowRenderer = ({ cells, index, data, key }: TableRowEvent<T>) => {
+  private rowRenderer = ({ cells, index, data, key, state }: TableRowEvent<T>) => {
     const { detailsRenderer, rowRenderer, theme, arrowToggle, groupBy } = this.props;
     const { selectedIndex, expandedGroups } = this.state;
+    const { groupedRows = [] } = state;
     const active = hasIndex(selectedIndex, index);
     const count = React.Children.count(cells);
     const col = groupBy && data[groupBy];
     const open = !col || expandedGroups.indexOf(col) !== -1;
-    const renderData = { cells, index, data, active, key };
+    const renderData = { cells, index, data, active, key, state };
+    const isNewGroup = col && groupedRows.indexOf(col) === -1;
+
+    if (isNewGroup) {
+      state.groupedRows = [...groupedRows, col];
+    }
 
     return (
       <React.Fragment key={key}>
-        {col && this.groupRenderer(col, count, open)}
+        {isNewGroup && this.groupRenderer(col, count, open)}
         {open && (
           <>
             {(rowRenderer && rowRenderer(renderData)) || (
@@ -223,7 +224,7 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
     );
   };
 
-  private cellRenderer = (e: TableCellEvent<T>) => {
+  private cellRenderer = (e: TableCellRenderEvent<T>) => {
     const { row, data } = e;
 
     if (e.column === 0) {
@@ -283,7 +284,6 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
       multiple: _8,
       ...props
     } = this.props;
-    this.groupedRows = [];
 
     return (
       <StyledTable

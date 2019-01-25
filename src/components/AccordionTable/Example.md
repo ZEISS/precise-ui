@@ -272,3 +272,92 @@ function getContent({index, data}) {
     {tag: 'E', value: 'Echo2', team: 'Echo team'},
   ]} />
 ```
+
+Custom rendering of the column headers can give us additional functionality combined with the `groupBy`.
+
+```jsx
+const { AccordionTable, RadioButton, TextField } = require('precise-ui');
+const style = { width: '200px', margin: '0 auto', textAlign: 'center' };
+
+function getContent({index, data}) {
+  return (
+    <div style={style}>
+      Details for row #
+      <b>{index}</b>
+    </div>
+  );
+}
+
+class GroupTable extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      groupBy: 'tag',
+      groupNames: {},
+    };
+  }
+
+  render() {
+    const { groupBy, groupNames } = this.state;
+
+    return (
+      <AccordionTable
+        groupBy={groupBy}
+        groupRenderer={e => {
+          const grp = groupNames[e.group];
+          return (
+            <TextField
+              value={grp !== undefined ? grp : e.group}
+              onChange={
+                ({ value }) => this.setState({
+                  groupNames: {
+                    ...this.state.groupNames,
+                    [e.group]: value,
+                  },
+                })
+              } />
+          );
+        }}
+        detailsRenderer={getContent}
+        headerCellRenderer={e => {
+          const cell = e.render(e);
+          return e.column > 0 ? (
+            <RadioButton
+              value={groupBy === e.key}
+              onChange={() => this.setState({ groupBy: e.key })}>
+              {cell}
+            </RadioButton>
+          ) : cell;
+        }}
+        columns={{
+          tag: {
+            header: 'Tag',
+            sortable: false,
+          },
+          value: {
+            header: 'Value',
+            sortable: true,
+          },
+          team: {
+            header: 'Team',
+            sortable: true,
+          },
+        }}
+        data={[
+          {tag: 'A', value: 'Alpha1', team: 'Alpha team'},
+          {tag: 'A', value: 'Alpha3', team: 'Alpha team'},
+          {tag: 'B', value: 'Bravo2', team: 'Bravo team'},
+          {tag: 'A', value: 'Alpha2', team: 'Alpha team'},
+          {tag: 'B', value: 'Bravo3', team: 'Bravo team'},
+          {tag: 'C', value: 'Charlie1', team: 'Charlie team'},
+          {tag: 'E', value: 'Echo1', team: 'Echo team'},
+          {tag: 'A', value: 'Alpha4', team: 'Alpha team'},
+          {tag: 'B', value: 'Bravo1', team: 'Bravo team'},
+          {tag: 'E', value: 'Echo2', team: 'Echo team'},
+        ]} />
+    );
+  }
+}
+
+<GroupTable />
+```

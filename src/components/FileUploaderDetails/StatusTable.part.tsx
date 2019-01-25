@@ -3,11 +3,12 @@ import styled, { reStyled, themed } from '../../utils/styled';
 import { getPropLabel } from '../../utils/labels';
 import { Icon } from '../Icon';
 import { ProgressBar } from '../ProgressBar';
-import { Table, TableCellEvent, TableRowEvent, TableProps } from '../Table';
+import { Table, TableCellEvent, TableRowEvent } from '../Table';
 import { ActionIconContainer } from './ActionIconContainer.part';
 import { FileProgress, FileUploaderDetailsEvent } from './FileUploaderDetails.types.part';
 import { StatusIcon } from './StatusIcon.part';
 import { getStatus, iconNames } from './helpers';
+import { StandardProps } from '../../common';
 
 const TextWrapBox = styled.div`
   display: block;
@@ -55,7 +56,7 @@ const StyledTableRow = reStyled.tr<StyledTableRowProps>(
 `,
 );
 
-export interface StatusTableProps {
+export interface StatusTableProps extends StandardProps {
   files: Array<FileProgress>;
   onCancel(e: FileUploaderDetailsEvent<FileProgress>): void;
   onDelete(e: FileUploaderDetailsEvent<FileProgress>): void;
@@ -68,25 +69,7 @@ export interface StatusTableProps {
   errorTableUploadLabel?: string;
 }
 
-function rowRenderer({ theme, cells, data }: TableRowEvent<FileProgress>) {
-  const hasProgressBar = !(data.canceled || data.error || data.progress >= 100);
-  return (
-    <React.Fragment key={data.fileId}>
-      <StyledTableRow hasProgressBar={hasProgressBar} theme={theme}>
-        {cells}
-      </StyledTableRow>
-      {hasProgressBar && (
-        <ProgressTableRow theme={theme}>
-          <ProgressTableCell colSpan={3}>
-            <StyledProgressBar value={data.progress} animate />
-          </ProgressTableCell>
-        </ProgressTableRow>
-      )}
-    </React.Fragment>
-  );
-}
-
-export const StatusTable: React.SFC<StatusTableProps> = ({ files, onCancel, onDelete, ...props }) => {
+export const StatusTable: React.SFC<StatusTableProps> = ({ theme, files, onCancel, onDelete, ...props }) => {
   const columns = {
     name: {
       header: getPropLabel(props, 'tableHeaderFileLabel'),
@@ -105,6 +88,24 @@ export const StatusTable: React.SFC<StatusTableProps> = ({ files, onCancel, onDe
     ...item,
     status: getStatus(item),
   }));
+
+  function rowRenderer({ cells, data }: TableRowEvent<FileProgress>) {
+    const hasProgressBar = !(data.canceled || data.error || data.progress >= 100);
+    return (
+      <React.Fragment key={data.fileId}>
+        <StyledTableRow hasProgressBar={hasProgressBar} theme={theme}>
+          {cells}
+        </StyledTableRow>
+        {hasProgressBar && (
+          <ProgressTableRow theme={theme}>
+            <ProgressTableCell colSpan={3}>
+              <StyledProgressBar value={data.progress} animate />
+            </ProgressTableCell>
+          </ProgressTableRow>
+        )}
+      </React.Fragment>
+    );
+  }
 
   function cellRenderer(e: TableCellEvent<FileProgress>) {
     const value = e.value;
@@ -143,6 +144,7 @@ export const StatusTable: React.SFC<StatusTableProps> = ({ files, onCancel, onDe
   return (
     <StyledTable
       data={data}
+      theme={theme}
       columns={columns}
       rowRenderer={rowRenderer}
       cellRenderer={cellRenderer}

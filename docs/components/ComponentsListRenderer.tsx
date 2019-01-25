@@ -51,6 +51,7 @@ const MenuItem = styled<MenuItemProps>(ActionLink)`
   ${themed(({ selected, theme }) =>
     selected
       ? `
+  color: ${theme.text2};
   background: ${theme.ui2};
 `
       : '',
@@ -58,7 +59,7 @@ const MenuItem = styled<MenuItemProps>(ActionLink)`
   border-bottom: 1px solid #eeefee;
   justify-content: space-between;
   font-weight: 500;
-  color: ${themed(({ theme }) => theme.text2)};
+  color: ${themed(({ theme }) => theme.text1)};
 `;
 
 const SubMenuContainer = styled.div`

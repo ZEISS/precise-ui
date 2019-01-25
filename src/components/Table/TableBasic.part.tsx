@@ -5,17 +5,17 @@ import { remCalc } from '../../utils/remCalc';
 import { sortObjectList } from '../../utils/sort';
 import { distance } from '../../distance';
 import { RefProps, StandardProps } from '../../common';
-import { TableRowEvent, TableProps, TableSorting, TableColumns } from './Table.types.part';
+import { TableRowEvent, TableProps, TableSorting, TableColumns, TableSectionRenderEvent } from './Table.types.part';
 import {
   defaultCellRenderer,
   StyledTableHead,
   StyledTableHeaderRow,
   StyledTableHeader,
-  defaultRowRenderer,
   StyledTableRow,
   StyledTableFoot,
   defaultBodyRenderer,
   getColumns,
+  defaultHeaderCellRenderer,
 } from './TableShared.part';
 
 export interface TableBasicState {
@@ -26,11 +26,6 @@ export interface TableBasicState {
 interface StyledTableProps {
   condensed?: boolean;
   borderless?: boolean;
-}
-
-interface SortIconProps {
-  currentDirection?: 'ArrowDropDown' | 'ArrowDropUp' | false;
-  sortable?: boolean;
 }
 
 const StyledTable = reStyled.table<StyledTableProps>(
@@ -70,62 +65,6 @@ const TableHost: React.SFC<TableHostProps> = ({ head, foot, theme, children, ...
 
 const HiddenCell = styled.td`
   display: none;
-`;
-
-const HeaderLabel = styled.div`
-  font-size: 0;
-  white-space: nowrap;
-
-  > span {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: ${remCalc('14px')};
-  }
-`;
-
-const WithArrowUp = css`
-  &:after {
-    border-top: 4px solid ${themed(({ theme }) => theme.ui5)};
-  }
-`;
-
-const WithArrowDown = css`
-  &:before {
-    border-bottom: 4px solid ${themed(({ theme }) => theme.ui5)};
-  }
-`;
-
-const SortIcon = styled<SortIconProps, 'span'>('span')`
-  position: relative;
-  margin-left: ${distance.xsmall};
-  width: 18px;
-  height: 18px;
-
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    pointer-events: none;
-    margin: 0 auto;
-  }
-  &:before {
-    top: 50%;
-    margin-top: -5px;
-    border-bottom: 4px solid ${themed(({ theme }) => theme.ui4)};
-  }
-  &:after {
-    bottom: 50%;
-    margin-bottom: -7px;
-    border-top: 4px solid ${themed(({ theme }) => theme.ui4)};
-  }
-  ${({ currentDirection }) =>
-    currentDirection ? (currentDirection === 'ArrowDropDown' ? WithArrowUp : WithArrowDown) : ''};
 `;
 
 const StyledTableCell = styled.td`
@@ -257,41 +196,47 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     }
   }
 
-  private defaultHeadRenderer(keys: Array<string>) {
-    const { indexed, theme, data = [], columns } = this.props;
-    const { sorting } = this.state;
-    const sortDir = sorting && sorting.order === 'descending' ? 'ArrowDropDown' : 'ArrowDropUp';
-    const sortColumn = sorting ? sorting.columnKey : undefined;
-    const cols = getColumns(data, columns);
+  private defaultHeadRenderer = ({ columns, sortBy, keys }: TableSectionRenderEvent<T>) => {
+    const { indexed, theme, headerCellRenderer = defaultHeaderCellRenderer } = this.props;
 
     return (
       <StyledTableHead theme={theme}>
         <StyledTableHeaderRow theme={theme}>
           {indexed && (
             <StyledTableHeader onClick={e => this.headerClicked(e, -1, '#')} theme={theme}>
-              #
+              {headerCellRenderer({
+                column: -1,
+                key: '',
+                row: -1,
+                value: '#',
+                render: defaultHeaderCellRenderer,
+              })}
             </StyledTableHeader>
           )}
           {keys.map((key, cell) => {
-            const column = cols[key];
+            const column = columns[key];
             const hidden = typeof column !== 'string' && column.hidden;
 
             if (!hidden) {
               const name = typeof column === 'string' ? column : column.header;
               const width = typeof column === 'string' ? undefined : column.width;
-              const direction = sortColumn === key && sortDir;
-              const isSortable = this.isSortable(key, cols);
+              const sortable = this.isSortable(key, columns);
+              const direction = sortable && sortBy && (sortBy.columnKey !== key ? undefined : sortBy.order);
               return (
                 <StyledTableHeader
-                  sortable={isSortable}
+                  sortable={sortable}
                   width={width}
                   key={key}
                   onClick={e => this.headerClicked(e, cell, key)}
                   theme={theme}>
-                  <HeaderLabel>
-                    <span>{name}</span>
-                    {isSortable && <SortIcon currentDirection={direction} />}
-                  </HeaderLabel>
+                  {headerCellRenderer({
+                    column: cell,
+                    key,
+                    row: -1,
+                    sorting: direction,
+                    value: name,
+                    render: defaultHeaderCellRenderer,
+                  })}
                 </StyledTableHeader>
               );
             }
@@ -301,20 +246,63 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
         </StyledTableHeaderRow>
       </StyledTableHead>
     );
-  }
+  };
 
-  private renderHead(keys: Array<string>) {
-    const { headRenderer, sortBy, data = [], columns } = this.props;
+  private defaultFootRenderer = ({ columns, keys, sortBy }: TableSectionRenderEvent<T>) => {
+    const { indexed, theme, footerCellRenderer = defaultCellRenderer } = this.props;
 
-    if (typeof headRenderer === 'function') {
-      return headRenderer({
-        columns: getColumns(data, columns),
-        sortBy,
-      });
-    } else {
-      return this.defaultHeadRenderer(keys);
-    }
-  }
+    return (
+      <StyledTableFoot theme={theme}>
+        <StyledTableRow theme={theme}>
+          {indexed && (
+            <StyledTableCell onClick={e => this.footerClicked(e, -1, '#')} theme={theme}>
+              {footerCellRenderer({
+                column: -1,
+                key: '',
+                row: -1,
+                value: '',
+                render: defaultCellRenderer,
+              })}
+            </StyledTableCell>
+          )}
+          {keys.map((key, i) => {
+            const column = columns[key];
+            const sortable = this.isSortable(key, columns);
+            const direction = sortable && sortBy && (sortBy.columnKey !== key ? undefined : sortBy.order);
+            const hidden = typeof column !== 'string' && column.hidden;
+
+            if (!hidden) {
+              const name = typeof column === 'string' ? undefined : column.footer;
+              return (
+                <StyledTableCell key={key} theme={theme} onClick={e => this.footerClicked(e, i, key)}>
+                  {footerCellRenderer({
+                    column: i,
+                    key,
+                    row: -1,
+                    value: name,
+                    sorting: direction,
+                    render: defaultCellRenderer,
+                  })}
+                </StyledTableCell>
+              );
+            }
+
+            return <HiddenCell key={key} />;
+          })}
+        </StyledTableRow>
+      </StyledTableFoot>
+    );
+  };
+
+  private defaultRowRenderer = ({ cells, index }: TableRowEvent<T>) => {
+    const { theme } = this.props;
+
+    return (
+      <StyledTableRow key={index} theme={theme}>
+        {cells}
+      </StyledTableRow>
+    );
+  };
 
   private renderCells(keys: Array<string>, rowIndex: number) {
     const { data = [], cellRenderer = defaultCellRenderer, indexed, theme, columns } = this.props;
@@ -325,16 +313,16 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
 
       if (!hidden) {
         const row = data[rowIndex];
-        const value = cellRenderer({
-          column: cell,
-          key,
-          data: row,
-          row: rowIndex,
-          value: row[key],
-        });
         return (
           <StyledTableCell key={key} onClick={e => this.dataClicked(e, rowIndex, cell, key)} theme={theme}>
-            {value}
+            {cellRenderer({
+              column: cell,
+              key,
+              data: row,
+              row: rowIndex,
+              value: row[key],
+              render: defaultCellRenderer,
+            })}
           </StyledTableCell>
         );
       }
@@ -359,12 +347,13 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
       groupBy,
       indexed,
       placeholder,
-      rowRenderer = defaultRowRenderer,
+      rowRenderer = this.defaultRowRenderer,
       getRowKey = defaultRowKeyGetter,
       theme,
     } = this.props;
     const indices = this.getIndices(data, groupBy, this.state.sorting);
     const cols = keys.length + (indexed ? 1 : 0);
+    const state = {};
 
     if (indices.length === 0) {
       return placeholder
@@ -379,39 +368,37 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     } else {
       return indices.map(index => {
         const cells = this.renderCells(keys, index);
-        const renderData = { theme, index, cells, data: data[index], key: index.toString() };
+        const renderData = { theme, index, cells, data: data[index], key: index.toString(), state };
         renderData.key = getRowKey(renderData);
         return rowRenderer(renderData);
       });
     }
   }
 
+  private renderHead(keys: Array<string>) {
+    const { headRenderer = this.defaultHeadRenderer, groupBy, data = [], columns } = this.props;
+    const { sorting } = this.state;
+
+    return headRenderer({
+      columns: getColumns(data, columns),
+      sortBy: sorting,
+      groupBy,
+      data,
+      keys,
+    });
+  }
+
   private renderFoot(keys: Array<string>) {
-    const { indexed, theme, columns, data = [] } = this.props;
-    const cols = getColumns(data, columns);
+    const { footRenderer = this.defaultFootRenderer, groupBy, data = [], columns } = this.props;
+    const { sorting } = this.state;
 
-    return (
-      <StyledTableFoot theme={theme}>
-        <StyledTableRow theme={theme}>
-          {indexed && <StyledTableCell theme={theme} onClick={e => this.footerClicked(e, -1, '#')} />}
-          {keys.map(key => {
-            const column = cols[key];
-            const hidden = typeof column !== 'string' && column.hidden;
-
-            if (!hidden) {
-              const name = typeof column === 'string' ? undefined : column.footer;
-              return (
-                <StyledTableCell key={key} theme={theme} onClick={e => this.footerClicked(e, -1, key)}>
-                  {name}
-                </StyledTableCell>
-              );
-            }
-
-            return <HiddenCell key={key} />;
-          })}
-        </StyledTableRow>
-      </StyledTableFoot>
-    );
+    return footRenderer({
+      columns: getColumns(data, columns),
+      sortBy: sorting,
+      groupBy,
+      data,
+      keys,
+    });
   }
 
   render() {
@@ -430,6 +417,10 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
       placeholder: _7,
       columns: _8,
       groupBy: _9,
+      headRenderer: _10,
+      footRenderer: _11,
+      headerCellRenderer: _12,
+      footerCellRenderer: _13,
       ...props
     } = this.props;
     const cols = getColumns(data, columns);
