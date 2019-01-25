@@ -43,11 +43,11 @@ const StyledProgressBar = styled(ProgressBar)`
   height: 2px;
 `;
 
-interface StyledTableRowProps {
+export interface StyledTableRowProps {
   hasProgressBar: boolean;
 }
 
-const StyledTableRow = reStyled.tr<StyledTableRowProps>(
+export const StyledTableRow = reStyled.tr<StyledTableRowProps>(
   ({ hasProgressBar, theme }) => `
   border-bottom: ${hasProgressBar ? 0 : 1}px solid ${theme.ui4};
   &:hover {
