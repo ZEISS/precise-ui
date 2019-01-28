@@ -81,6 +81,10 @@ module.exports = {
     'ic_more_vert_24px.svg',
     'ic_thumb_up_24px.svg',
     'ic_thumb_down_24px.svg',
+    'ic_print_24px.svg',
+    'ic_file_upload_24px.svg',
+    'ic_unfold_more_24px.svg',
+    'ic_unfold_less_24px.svg',
   ],
   out: 'src/components/Icon',
 };
