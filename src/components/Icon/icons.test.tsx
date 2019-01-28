@@ -98,6 +98,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render Print icon', () => {
+    const Component = icons.Print;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render QuestionAnswer icon', () => {
     const Component = icons.QuestionAnswer;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -266,6 +272,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render FileUpload icon', () => {
+    const Component = icons.FileUpload;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render KeyboardArrowDown icon', () => {
     const Component = icons.KeyboardArrowDown;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -370,6 +382,18 @@ describe('Generated icons', () => {
 
   it('should render MoreVert icon', () => {
     const Component = icons.MoreVert;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render UnfoldLess icon', () => {
+    const Component = icons.UnfoldLess;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render UnfoldMore icon', () => {
+    const Component = icons.UnfoldMore;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });

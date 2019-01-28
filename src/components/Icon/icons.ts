@@ -220,6 +220,20 @@ export const Label = <SvgIconConstructor>function(props: SvgIconProps) {
 Label.displayName = 'Label';
 Label.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Print = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z',
+    }),
+  );
+};
+
+Print.displayName = 'Print';
+Print.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const QuestionAnswer = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -574,6 +588,13 @@ export const FileDownload = <SvgIconConstructor>function(props: SvgIconProps) {
 FileDownload.displayName = 'FileDownload';
 FileDownload.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const FileUpload = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement('svg', props, React.createElement('path', { d: 'M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z' }));
+};
+
+FileUpload.displayName = 'FileUpload';
+FileUpload.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const KeyboardArrowDown = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -789,6 +810,34 @@ export const MoreVert = <SvgIconConstructor>function(props: SvgIconProps) {
 
 MoreVert.displayName = 'MoreVert';
 MoreVert.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const UnfoldLess = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M7.41 18.59L8.83 20 12 16.83 15.17 20l1.41-1.41L12 14l-4.59 4.59zm9.18-13.18L15.17 4 12 7.17 8.83 4 7.41 5.41 12 10l4.59-4.59z',
+    }),
+  );
+};
+
+UnfoldLess.displayName = 'UnfoldLess';
+UnfoldLess.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const UnfoldMore = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M12 5.83L15.17 9l1.41-1.41L12 3 7.41 7.59 8.83 9 12 5.83zm0 12.34L8.83 15l-1.41 1.41L12 21l4.59-4.59L15.17 15 12 18.17z',
+    }),
+  );
+};
+
+UnfoldMore.displayName = 'UnfoldMore';
+UnfoldMore.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const ConfirmationNumber = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
