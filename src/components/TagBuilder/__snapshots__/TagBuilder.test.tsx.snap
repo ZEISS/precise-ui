@@ -15,10 +15,12 @@ exports[`<TagBuilderInt /> should render component with empty value 1`] = `
     >
       <styled.div
         labelShown={false}
+        tagRenderer={false}
       >
         <styled.div
           key="input"
           onKeyDown={[Function]}
+          tagRenderer={false}
         >
           <styled.input
             innerRef={[Function]}
@@ -26,6 +28,7 @@ exports[`<TagBuilderInt /> should render component with empty value 1`] = `
             onChange={[Function]}
             onFocus={[Function]}
             type="text"
+            valid={true}
             value=""
           />
         </styled.div>
@@ -56,8 +59,9 @@ exports[`<TagBuilderInt /> should render component with error block and default 
     >
       <styled.div
         labelShown={false}
+        tagRenderer={false}
       >
-        <styled.span
+        <Styled(styled.span)
           key="tags0"
         >
           <styled.span>
@@ -66,8 +70,8 @@ exports[`<TagBuilderInt /> should render component with error block and default 
           <CloseIcon
             onClick={[Function]}
           />
-        </styled.span>
-        <styled.span
+        </Styled(styled.span)>
+        <Styled(styled.span)
           key="list1"
         >
           <styled.span>
@@ -76,8 +80,8 @@ exports[`<TagBuilderInt /> should render component with error block and default 
           <CloseIcon
             onClick={[Function]}
           />
-        </styled.span>
-        <styled.span
+        </Styled(styled.span)>
+        <Styled(styled.span)
           key="goes2"
         >
           <styled.span>
@@ -86,8 +90,8 @@ exports[`<TagBuilderInt /> should render component with error block and default 
           <CloseIcon
             onClick={[Function]}
           />
-        </styled.span>
-        <styled.span
+        </Styled(styled.span)>
+        <Styled(styled.span)
           key="here3"
         >
           <styled.span>
@@ -96,10 +100,11 @@ exports[`<TagBuilderInt /> should render component with error block and default 
           <CloseIcon
             onClick={[Function]}
           />
-        </styled.span>
+        </Styled(styled.span)>
         <styled.div
           key="input"
           onKeyDown={[Function]}
+          tagRenderer={false}
         >
           <styled.input
             innerRef={[Function]}
@@ -107,6 +112,7 @@ exports[`<TagBuilderInt /> should render component with error block and default 
             onChange={[Function]}
             onFocus={[Function]}
             type="text"
+            valid={true}
             value=""
           />
         </styled.div>
@@ -138,8 +144,9 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
     >
       <styled.div
         labelShown={false}
+        tagRenderer={false}
       >
-        <styled.span
+        <Styled(styled.span)
           key="tags0"
         >
           <styled.span>
@@ -148,8 +155,8 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
           <CloseIcon
             onClick={[Function]}
           />
-        </styled.span>
-        <styled.span
+        </Styled(styled.span)>
+        <Styled(styled.span)
           key="list1"
         >
           <styled.span>
@@ -158,8 +165,8 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
           <CloseIcon
             onClick={[Function]}
           />
-        </styled.span>
-        <styled.span
+        </Styled(styled.span)>
+        <Styled(styled.span)
           key="goes2"
         >
           <styled.span>
@@ -168,8 +175,8 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
           <CloseIcon
             onClick={[Function]}
           />
-        </styled.span>
-        <styled.span
+        </Styled(styled.span)>
+        <Styled(styled.span)
           key="here3"
         >
           <styled.span>
@@ -178,10 +185,11 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
           <CloseIcon
             onClick={[Function]}
           />
-        </styled.span>
+        </Styled(styled.span)>
         <styled.div
           key="input"
           onKeyDown={[Function]}
+          tagRenderer={false}
         >
           <styled.input
             innerRef={[Function]}
@@ -189,6 +197,7 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
             onChange={[Function]}
             onFocus={[Function]}
             type="text"
+            valid={true}
             value=""
           />
         </styled.div>
@@ -219,10 +228,12 @@ exports[`<TagBuilderInt /> should render the component 1`] = `
     >
       <styled.div
         labelShown={false}
+        tagRenderer={false}
       >
         <styled.div
           key="input"
           onKeyDown={[Function]}
+          tagRenderer={false}
         >
           <styled.input
             innerRef={[Function]}
@@ -230,6 +241,7 @@ exports[`<TagBuilderInt /> should render the component 1`] = `
             onChange={[Function]}
             onFocus={[Function]}
             type="text"
+            valid={true}
             value=""
           />
         </styled.div>

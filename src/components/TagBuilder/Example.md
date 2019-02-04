@@ -76,3 +76,11 @@ const tagRenderer = e => (<Button type={e.index % 2 === 0 ? "primary" : "seconda
   tagRenderer={tagRenderer}
 />
 ```
+
+TagBuilder component is also capable of handling a large amount of tags.
+
+```jsx
+const { TagBuilder } = require('precise-ui');
+
+<TagBuilder defaultValue={['Velit','irure','proident','occaecat','eu','excepteur','proident','dolor','ad','cillum','amet','consequat','in.','Reprehenderit','irure','officia','excepteur','et','laborum','proident','veniam','tempor.','Ad','quis','est','commodo','minim','sunt','incididunt','aute','amet','minim','incididunt','irure','cupidatat','officia','irure.','Dolor','adipisicing','occaecat','quis','ut','nulla','aliquip','esse']}/>
+```
