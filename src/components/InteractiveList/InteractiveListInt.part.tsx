@@ -177,7 +177,7 @@ function autoSelect(element: HTMLElement) {
 export class InteractiveListInt extends React.PureComponent<InteractiveListProps, InteractiveListState> {
   private readonly selects: Array<() => void> = [];
   private readonly elements: Array<HTMLElement> = [];
-  private interactiveList: HTMLElement;
+  private interactiveList: HTMLElement | null;
 
   constructor(props: InteractiveListProps) {
     super(props);
@@ -217,14 +217,14 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
 
     if (nextProps.focus !== focus && nextProps.focus) {
       if (open && nextProps.open) {
-        this.interactiveList.focus();
+        this.interactiveList && this.interactiveList.focus();
         this.setState({
           selected: 0,
         });
       }
     }
 
-    if (autoPosition && !open && nextProps.open) {
+    if (autoPosition && !open && nextProps.open && this.interactiveList) {
       const windowHeight = window.innerHeight;
       const { top } = this.interactiveList.getBoundingClientRect();
 
@@ -243,7 +243,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
   componentDidUpdate() {
     const { open, autoFocus } = this.props;
 
-    if (open && autoFocus) {
+    if (open && autoFocus && this.interactiveList) {
       this.interactiveList.focus();
     }
   }
@@ -474,7 +474,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
     }
   }
 
-  private setNode = (ref: HTMLElement) => {
+  private setNode = (ref: HTMLElement | null) => {
     this.interactiveList = ref;
   };
 

@@ -21,7 +21,7 @@ export interface TooltipState {
 }
 
 export class Tooltip extends React.Component<TooltipProps, TooltipState> {
-  private targetContainer: HTMLDivElement;
+  private targetContainer: HTMLDivElement | null;
 
   constructor(props: TooltipProps) {
     super(props);
@@ -63,10 +63,8 @@ export class Tooltip extends React.Component<TooltipProps, TooltipState> {
     }
   }
 
-  private setTargetRef = (el: HTMLDivElement) => {
-    if (el) {
-      this.targetContainer = el;
-    }
+  private setTargetRef = (el: HTMLDivElement | null) => {
+    this.targetContainer = el;
   };
 
   private setOpen(open: boolean) {

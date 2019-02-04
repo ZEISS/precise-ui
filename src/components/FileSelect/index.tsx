@@ -54,7 +54,7 @@ function getFiles(target: Array<File>, files: any = []) {
 }
 
 class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, FileSelectState> {
-  private fileInput: HTMLInputElement;
+  private fileInput: HTMLInputElement | null;
 
   constructor(props: FileSelectProps) {
     super(props);

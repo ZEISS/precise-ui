@@ -104,11 +104,13 @@ export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T
     }
   }
 
-  private renderItem = ({ item, index, open, keys }: AccordionTableCardRendererEvent<T>) => {
+  private renderItem = ({ item, index, open, keys, closeLabel, openLabel }: AccordionTableCardRendererEvent<T>) => {
     const { detailsRenderer, theme } = this.props;
     return (
       <StyledListItem theme={theme} key={index}>
         <AccordionCard
+          openLabel={openLabel}
+          closeLabel={closeLabel}
           theme={theme}
           header={this.renderItemProps(item, keys, index)}
           opened={open}
@@ -161,6 +163,8 @@ export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T
       theme,
       cardRenderer = this.renderItem,
       bodyRenderer = defaultBodyRenderer,
+      openLabel,
+      closeLabel,
       ...props
     } = this.props;
     const keys = Object.keys(columns || data[0] || {});
@@ -174,7 +178,14 @@ export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T
             ]
           : []
         : data.map((item, index) =>
-            cardRenderer({ item, index, open: hasIndex(this.state.selectedIndexes, index), keys }),
+            cardRenderer({
+              item,
+              index,
+              open: hasIndex(this.state.selectedIndexes, index),
+              keys,
+              openLabel,
+              closeLabel,
+            }),
           );
 
     return bodyRenderer({

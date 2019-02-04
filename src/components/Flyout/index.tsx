@@ -22,7 +22,7 @@ export interface FlyoutState {
 }
 
 class FlyoutInt extends React.Component<FlyoutProps, FlyoutState> {
-  private targetContainer: HTMLDivElement;
+  private targetContainer: HTMLDivElement | null;
 
   constructor(props: FlyoutProps) {
     super(props);
@@ -68,10 +68,8 @@ class FlyoutInt extends React.Component<FlyoutProps, FlyoutState> {
     }
   }
 
-  private setTargetRef = (el: HTMLDivElement) => {
-    if (el) {
-      this.targetContainer = el;
-    }
+  private setTargetRef = (el: HTMLDivElement | null) => {
+    this.targetContainer = el;
   };
 
   private setOpen(open: boolean) {

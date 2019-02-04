@@ -321,8 +321,14 @@ export interface FlyoutWindowState {
   children?: React.ReactNode;
 }
 
+interface ScrollPosition {
+  top: number;
+  left: number;
+}
+
 export class FlyoutWindowInt extends React.Component<FlyoutWindowProps, FlyoutWindowState> {
-  private flyoutContainer: HTMLDivElement;
+  private flyoutContainer: HTMLDivElement | null;
+  private scrollPosition: ScrollPosition = { top: 0, left: 0 };
 
   constructor(props: FlyoutWindowProps) {
     super(props);
@@ -346,18 +352,48 @@ export class FlyoutWindowInt extends React.Component<FlyoutWindowProps, FlyoutWi
   }
 
   private setFlyoutRef = (el: HTMLDivElement) => {
+    if (this.flyoutContainer) {
+      this.flyoutContainer.removeEventListener('scroll', this.onScroll);
+    }
+
     if (el) {
-      this.flyoutContainer = el;
+      el.addEventListener('scroll', this.onScroll);
+    }
+
+    this.flyoutContainer = el;
+  };
+
+  private onScroll = (e: UIEvent) => {
+    if (e.target && e.target instanceof HTMLElement) {
+      this.scrollPosition = {
+        top: e.target.scrollTop,
+        left: e.target.scrollLeft,
+      };
     }
   };
 
   componentDidMount() {
-    this.updateMeasurements();
+    if (this.flyoutContainer) {
+      this.updateMeasurements();
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.flyoutContainer) {
+      this.flyoutContainer.removeEventListener('scroll', this.onScroll);
+    }
   }
 
   componentDidUpdate() {
-    if (!this.state.flyoutRect) {
-      this.updateMeasurements();
+    if (this.flyoutContainer) {
+      if (!this.state.flyoutRect) {
+        this.updateMeasurements();
+      }
+
+      this.flyoutContainer.scrollTo({
+        top: this.scrollPosition.top,
+        left: this.scrollPosition.left,
+      });
     }
   }
 

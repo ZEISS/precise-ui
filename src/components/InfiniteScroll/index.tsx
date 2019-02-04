@@ -81,7 +81,7 @@ const DefaultButton = styled(Button)`
 `;
 
 export class InfiniteScroll extends React.Component<InfiniteScrollProps, InfiniteScrollState> {
-  private node: HTMLDivElement | undefined;
+  private node: HTMLDivElement | null;
 
   constructor(props: InfiniteScrollProps) {
     super(props);
@@ -99,8 +99,6 @@ export class InfiniteScroll extends React.Component<InfiniteScrollProps, Infinit
 
       if (useWindow) {
         window.addEventListener('scroll', this.handleOnScroll);
-      } else if (this.node && !useWindow) {
-        this.node.addEventListener('scroll', this.handleOnScroll);
       }
     }
   }
@@ -180,7 +178,17 @@ export class InfiniteScroll extends React.Component<InfiniteScrollProps, Infinit
     );
   }
 
-  private setContainer = (node: HTMLDivElement) => {
+  private setContainer = (node: HTMLDivElement | null) => {
+    this.node = node;
+
+    if (this.node) {
+      this.node.removeEventListener('scroll', this.handleOnScroll);
+    }
+
+    if (node && !this.props.useWindow) {
+      node.addEventListener('scroll', this.handleOnScroll);
+    }
+
     this.node = node;
   };
 

@@ -39,7 +39,7 @@ const StyledModalBackground = FixedContainer.extend`
  * Defines a generic content blocking overlay element, e.g., for a modal dialog.
  */
 export class Blocker extends React.Component<BlockerProps> {
-  private modalNode: HTMLDivElement | undefined;
+  private modalNode: HTMLDivElement | null;
 
   private getFocusables(): NodeListOf<Element> | undefined {
     if (this.modalNode) {
@@ -88,12 +88,13 @@ export class Blocker extends React.Component<BlockerProps> {
     this.keepFocus('last');
   };
 
-  private setElement = (node: HTMLDivElement) => {
+  private setElement = (node: HTMLDivElement | null) => {
     if (node && node !== this.modalNode) {
-      this.modalNode = node;
       const el = node.querySelector('*[tabindex]') as HTMLElement;
       (el || node).focus();
     }
+
+    this.modalNode = node;
   };
 
   private notifyClose(e: React.SyntheticEvent<HTMLElement>) {
