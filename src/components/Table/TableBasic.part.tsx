@@ -406,7 +406,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     if (indices.length === 0) {
       return placeholder
         ? [
-            <StyledTableRow theme={theme}>
+            <StyledTableRow theme={theme} key="1">
               <StyledPlaceholderCell colSpan={cols} theme={theme}>
                 {placeholder}
               </StyledPlaceholderCell>
