@@ -101,7 +101,7 @@ AutosuggestWrapper.displayName = 'AutosuggestWrapper';
 
 class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormContextProps, AutocompleteState> {
   private delayedBlur: number;
-  private _element: HTMLElement;
+  private _element: HTMLElement | null;
 
   constructor(props: AutocompleteProps<T>) {
     super(props);
@@ -156,7 +156,10 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       }
     }
 
-    this._element.focus();
+    if (this._element) {
+      this._element.focus();
+    }
+
     suggestionSelected ? this.hide() : this.show();
 
     if (typeof onChange === 'function') {
@@ -256,7 +259,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
     this.updateValue(e.value);
   };
 
-  private setNode = (node: HTMLElement) => {
+  private setNode = (node: HTMLElement | null) => {
     this._element = node;
   };
 

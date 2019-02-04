@@ -113,7 +113,7 @@ const Remove = styled.div`
 `;
 
 class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, DropzoneState> {
-  private fileInput: HTMLInputElement;
+  private fileInput: HTMLInputElement | null;
   constructor(props: DropzoneProps) {
     super(props);
     const value = props.value || props.defaultValue || [];
