@@ -354,6 +354,8 @@ export class FlyoutWindowInt extends React.Component<FlyoutWindowProps, FlyoutWi
   private setFlyoutRef = (el: HTMLDivElement) => {
     if (el) {
       this.flyoutContainer = el;
+      this.flyoutContainer.removeEventListener('scroll', this.onScroll);
+      this.flyoutContainer.addEventListener('scroll', this.onScroll);
     }
   };
 
@@ -367,7 +369,6 @@ export class FlyoutWindowInt extends React.Component<FlyoutWindowProps, FlyoutWi
   componentDidMount() {
     if (this.flyoutContainer) {
       this.updateMeasurements();
-      this.flyoutContainer.addEventListener('scroll', this.onScroll);
     }
   }
 
