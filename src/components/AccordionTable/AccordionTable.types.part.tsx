@@ -1,9 +1,10 @@
 import { TableProps, TableCardRendererEvent, TableRowEvent } from '../Table';
+import { AccordionCardLabels } from '../../utils/labels';
 
 /**
  * Custom card renderer for event.
  */
-export interface AccordionTableCardRendererEvent<T> extends TableCardRendererEvent<T> {
+export interface AccordionTableCardRendererEvent<T> extends TableCardRendererEvent<T>, AccordionCardLabels {
   /**
    * Determines if details is open for the card.
    */

@@ -111,7 +111,7 @@ const TextFieldElement = styled.div`
 `;
 
 class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, TextFieldState> {
-  private _element?: TextFieldInputNodeType;
+  private _element: TextFieldInputNodeType | null;
 
   constructor(props: TextFieldProps) {
     super(props);
@@ -187,7 +187,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
     }
   };
 
-  private setTextFieldNode = (node: TextFieldInputNodeType) => {
+  private setTextFieldNode = (node: TextFieldInputNodeType | null) => {
     this._element = node;
     const { inputRef } = this.props;
     if (typeof inputRef === 'function') {
@@ -274,7 +274,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
         />
       ) : (
         <StyledInput
-          innerRef={this.setTextFieldNode}
+          innerRef={el => this.setTextFieldNode(el as TextFieldInputNodeType)}
           theme={theme}
           disabled={disabled}
           labelShown={label !== undefined}

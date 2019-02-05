@@ -104,7 +104,7 @@ const DropdownButton = styled.div`
 `;
 
 class DropdownMenuInt extends React.PureComponent<DropdownMenuProps, DropdownMenuState> {
-  private container: HTMLDivElement;
+  private container: HTMLDivElement | null;
 
   constructor(props: DropdownMenuProps) {
     super(props);
@@ -118,9 +118,7 @@ class DropdownMenuInt extends React.PureComponent<DropdownMenuProps, DropdownMen
   };
 
   private setContainer = (el: HTMLDivElement) => {
-    if (el) {
-      this.container = el;
-    }
+    this.container = el;
   };
 
   private handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {

@@ -113,7 +113,7 @@ export interface TagBuilderState {
 }
 
 export class TagBuilderInt extends React.Component<TagBuilderProps & FormContextProps, TagBuilderState> {
-  private input: HTMLInputElement;
+  private input: HTMLInputElement | null;
 
   constructor(props: TagBuilderProps) {
     super(props);
@@ -351,7 +351,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     );
   };
 
-  private setContainer = (node: HTMLInputElement) => {
+  private setContainer = (node: HTMLInputElement | null) => {
     this.input = node;
   };
 
