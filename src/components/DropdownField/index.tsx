@@ -229,7 +229,9 @@ function getSingleContent(item: string | DropdownFieldItem, theme?: any) {
   );
 }
 
-const MultipleDropdownItem = styled(StyledTagItem as any)``;
+const MultipleDropdownItem = styled(StyledTagItem as any)`
+  margin: 0 ${distance.small} 0 0;
+`;
 
 function getMultipleContent(item: string | DropdownFieldItem, theme?: any) {
   const key = typeof item === 'string' ? item : item.key;

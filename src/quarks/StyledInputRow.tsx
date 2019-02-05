@@ -11,6 +11,7 @@ const TextFieldBoxWithLabelWrapper = styled.div`
   height: 100%;
   position: relative;
   min-width: 0;
+  margin: auto;
 `;
 
 const TextFieldLabel = styled.label`

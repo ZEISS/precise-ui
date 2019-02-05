@@ -6,7 +6,7 @@ import { KeyCodes } from '../../utils/keyCodes';
 import { lowerize } from '../../utils/text';
 import { Icon } from '../Icon';
 import { InputIcon } from '../InputIcon';
-import { transparent, dark } from '../../colors';
+import { transparent, dark, purpleRed } from '../../colors';
 import { distance } from '../../distance';
 import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
 import { TagBuilderRenderEvent, TagBuilderProps } from './TagBuilder.types.part';
@@ -27,24 +27,37 @@ const TagBuilderContainer = styled.div``;
 
 interface StyledTagsContainerProps {
   labelShown: boolean;
+  tagRenderer: boolean;
+}
+
+function getContainerPadding(props: StyledTagsContainerProps) {
+  const { tagRenderer, labelShown } = props;
+
+  if (!tagRenderer) {
+    return !labelShown
+      ? `${distance.medium} ${distance.medium} ${distance.small}`
+      : `${distance.large} ${distance.medium} 0`;
+  }
+
+  return !labelShown ? `${distance.medium}` : `${distance.large} ${distance.medium} ${distance.small}`;
 }
 
 const StyledTagsContainer = styled.div`
-  padding: ${(props: StyledTagsContainerProps) =>
-    !props.labelShown ? `${distance.medium}` : `${distance.large} ${distance.medium} ${distance.small}`};
+  padding: ${getContainerPadding};
   margin: 0;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 `;
 
 interface StyledInputProps {
   value: string;
   disabled?: boolean;
   theme: any;
+  valid?: boolean;
 }
 
 const StyledInput = styled<StyledInputProps, 'input'>('input')`
@@ -57,14 +70,23 @@ const StyledInput = styled<StyledInputProps, 'input'>('input')`
   outline-color: transparent !important;
   background: ${transparent};
   width: ${props => (props.value.length > 2 ? props.value.length * 10 + 'px' : '20px')};
-  color: ${themed(props => (props.disabled ? props.theme.textDisabled : dark))};
+  color: ${themed(({ disabled, theme, valid }) => (valid ? (disabled ? theme.textDisabled : dark) : purpleRed))};
   cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
   font-size: 1rem;
   font-family: inherit;
 `;
 
-const InputContainer = styled.div`
+const RestyledTagItem = styled(StyledTagItem)`
+  margin: 0 ${distance.small} ${distance.small} 0;
+`;
+
+interface InputContainerProps {
+  tagRenderer: boolean;
+}
+
+const InputContainer = styled<InputContainerProps, 'div'>('div')`
   display: inline;
+  padding-bottom: ${({ tagRenderer }) => (!tagRenderer ? `${distance.small}` : '0')};
 `;
 
 const StyledText = styled.span`
@@ -87,6 +109,7 @@ export interface TagBuilderState {
   focused: boolean;
   controlled: boolean;
   inputPosition?: number;
+  valid?: boolean;
 }
 
 export class TagBuilderInt extends React.Component<TagBuilderProps & FormContextProps, TagBuilderState> {
@@ -101,6 +124,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
       value: tags,
       controlled: props.value !== undefined,
       focused: false,
+      valid: true,
     };
   }
 
@@ -134,11 +158,11 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
   }
 
   private inputChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { controlled } = this.state;
+    const { controlled, value: prevTags } = this.state;
     const { value } = e.currentTarget;
 
     if (!controlled) {
-      this.setState({ inputValue: value });
+      this.setState({ inputValue: value, valid: value.length > 0 ? prevTags.indexOf(value) === -1 : true });
     }
   };
 
@@ -255,11 +279,11 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
   };
 
   private addTag(inputValue: string) {
-    const { value: prevTags } = this.state;
+    const { value: prevTags, valid } = this.state;
     const { inputPosition = prevTags.length } = this.state;
     inputValue = inputValue.trim().toLowerCase();
 
-    if (inputValue.length > 0 && prevTags.indexOf(inputValue) === -1) {
+    if (inputValue.length > 0 && valid) {
       const tags = [...prevTags];
       tags.splice(inputPosition, 0, inputValue);
       this.setState({ inputValue: '', inputPosition: inputPosition + 1 }, () => this.onChange(tags));
@@ -320,10 +344,10 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     const { theme, disabled } = this.props;
 
     return (
-      <StyledTagItem theme={theme} key={e.item + e.index}>
+      <RestyledTagItem theme={theme} key={e.item + e.index}>
         <StyledText>{e.item}</StyledText>
         {!disabled && <CloseIcon theme={theme} onClick={() => this.removeTag(e.index)} />}
-      </StyledTagItem>
+      </RestyledTagItem>
     );
   };
 
@@ -333,7 +357,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
 
   render() {
     const { tagRenderer, error, info, disabled, borderless, theme, label, placeholder } = this.props;
-    const { value, inputValue, focused } = this.state;
+    const { value, inputValue, focused, valid } = this.state;
     const { inputPosition = value.length } = this.state;
     const border = getTextFieldBorderType(borderless, !!error, focused);
     const renderer = tagRenderer || this.renderTag;
@@ -343,7 +367,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     children.splice(
       inputPosition,
       0,
-      <InputContainer key="input" onKeyDown={this.onKeyInput}>
+      <InputContainer key="input" onKeyDown={this.onKeyInput} tagRenderer={!!tagRenderer}>
         <StyledInput
           theme={theme}
           disabled={disabled}
@@ -353,6 +377,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
           onChange={this.inputChanged}
           onFocus={this.inputFocused}
           onBlur={this.inputBlurred}
+          valid={valid}
         />
       </InputContainer>,
     );
@@ -367,7 +392,9 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
             placeholder={placeholder}
             error={!!error}
             focused={focused}>
-            <StyledTagsContainer labelShown={!!label}>{children}</StyledTagsContainer>
+            <StyledTagsContainer labelShown={!!label} tagRenderer={!!tagRenderer}>
+              {children}
+            </StyledTagsContainer>
           </StyledInputRow>
           <InputIcon disabled={disabled} theme={theme} error={error} hasValue={hasValue} />
         </StyledInputBox>

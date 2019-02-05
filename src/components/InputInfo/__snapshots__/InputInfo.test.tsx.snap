@@ -35,7 +35,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                     hasValue={false}
                   >
                     <div
-                      className="sc-cSHVUG fGfMCz"
+                      className="sc-cSHVUG VvHrU"
                     >
                       <Component
                         error={false}
@@ -45,7 +45,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                       >
                         <styled.div>
                           <div
-                            className="sc-VigVT glTrhf"
+                            className="sc-VigVT bviReV"
                           >
                             <styled.input
                               innerRef={[Function]}
@@ -127,7 +127,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                     hasValue={false}
                   >
                     <div
-                      className="sc-cSHVUG fGfMCz"
+                      className="sc-cSHVUG VvHrU"
                     >
                       <Component
                         error={false}
@@ -137,7 +137,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                       >
                         <styled.div>
                           <div
-                            className="sc-VigVT glTrhf"
+                            className="sc-VigVT bviReV"
                           >
                             <styled.input
                               innerRef={[Function]}
