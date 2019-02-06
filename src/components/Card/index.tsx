@@ -21,7 +21,7 @@ export interface CardProps extends StandardProps {
   children?: React.ReactNode;
 }
 
-interface StyledCardChildProps {
+export interface StyledCardChildProps {
   grow?: number;
 }
 
