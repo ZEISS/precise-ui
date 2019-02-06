@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { InputProps } from '../common';
 import { FormContextType, FormContext } from '../contexts/FormContext';
+import { withInner } from 'typescript-plugin-inner-jsx';
 
 export interface FormContextProps {
   /**
@@ -18,10 +19,13 @@ export interface FormContextProps {
 export function withFormContext<TProps extends InputProps<any>>(
   Component: React.ComponentType<TProps & FormContextProps>,
 ): React.SFC<TProps> {
-  return props =>
-    props.name ? (
-      <FormContext.Consumer>{ctx => <Component form={ctx} {...props} />}</FormContext.Consumer>
-    ) : (
-      <Component {...props} />
-    );
+  return withInner(
+    (props: TProps) =>
+      props.name ? (
+        <FormContext.Consumer>{ctx => <Component form={ctx} {...props} />}</FormContext.Consumer>
+      ) : (
+        <Component {...props} />
+      ),
+    { Component },
+  );
 }

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { withInner } from 'typescript-plugin-inner-jsx';
 
 export interface BaseInputProps<TEventArgs> {
   /**
@@ -26,42 +27,43 @@ export interface ValidatorState {
  * @returns A constructor function taking a component to be wrapped with the validation.
  */
 export function withValidation<TEventArgs>(validate: (e: TEventArgs) => React.ReactChild | undefined) {
-  return <TProps extends BaseInputProps<TEventArgs>>(
-    Component: React.ComponentType<TProps>,
-  ): React.ComponentType<TProps & ValidatorProps> => {
-    return class Validator extends React.PureComponent<TProps & ValidatorProps, ValidatorState> {
-      constructor(props: TProps & ValidatorProps) {
-        super(props);
-        this.state = {
-          error: undefined,
-        };
-      }
+  return <TProps extends BaseInputProps<TEventArgs>>(Component: React.ComponentType<TProps>) => {
+    return withInner(
+      class Validator extends React.PureComponent<TProps & ValidatorProps, ValidatorState> {
+        constructor(props: TProps & ValidatorProps) {
+          super(props);
+          this.state = {
+            error: undefined,
+          };
+        }
 
-      validate = (e: TEventArgs) => {
-        const { onChange, onError, onSuccess } = this.props;
-        const error = validate(e);
+        validate = (e: TEventArgs) => {
+          const { onChange, onError, onSuccess } = this.props;
+          const error = validate(e);
 
-        if (error !== this.state.error) {
-          const notify = error ? onError : onSuccess;
+          if (error !== this.state.error) {
+            const notify = error ? onError : onSuccess;
 
-          this.setState({
-            error,
-          });
+            this.setState({
+              error,
+            });
 
-          if (typeof notify === 'function') {
-            notify();
+            if (typeof notify === 'function') {
+              notify();
+            }
           }
-        }
 
-        if (typeof onChange === 'function') {
-          onChange(e);
-        }
-      };
+          if (typeof onChange === 'function') {
+            onChange(e);
+          }
+        };
 
-      render() {
-        const { error } = this.state;
-        return <Component {...this.props} error={error || this.props.error} onChange={this.validate} />;
-      }
-    };
+        render() {
+          const { error } = this.state;
+          return <Component {...this.props} error={error || this.props.error} onChange={this.validate} />;
+        }
+      },
+      { Component },
+    );
   };
 }
