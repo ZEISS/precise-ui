@@ -41,7 +41,7 @@ export type ThemedStyledFactories<FullTheme, PropsTheme> = {
 export interface ThemedStyled<FullTheme, PropsTheme> extends ThemedStyledFactories<FullTheme, PropsTheme> {
   <P, TTag extends keyof JSX.IntrinsicElements>(tag: TTag): (
     interpolation: PreciseInterpolationFunc<P, FullTheme>,
-  ) => StyledComponentClass<P, PropsTheme>;
+  ) => StyledComponentClass<P & JSX.IntrinsicElements[TTag], PropsTheme>;
 
   <P, O>(component: StyledComponentClass<P, PropsTheme, O>): (
     interpolation: PreciseInterpolationFunc<P, FullTheme>,
