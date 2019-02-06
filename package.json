@@ -37,7 +37,7 @@
   "dependencies": {
     "memoize-one": "^5.0.0",
     "react-onclickoutside": "^6.7.1",
-    "typescript-plugin-inner-jsx": "^0.1.6"
+    "typescript-plugin-inner-jsx": "^0.1.7"
   },
   "peerDependencies": {
     "react": "^16.6.0",

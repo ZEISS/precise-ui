@@ -1,4 +1,5 @@
 import onClickOutside, { OnClickOutProps } from 'react-onclickoutside';
+import { withInner } from 'typescript-plugin-inner-jsx';
 
 export interface OutsideInjectedProps {
   disableOnClickOutside(): void;
@@ -28,10 +29,13 @@ export type OutsideComponentProps<P> = OutsideAdditionalProps & Pick<P, Exclude<
  * @returns The wrapped component.
  */
 export function withOutsideClick<TProps>(
-  component: React.ComponentType<TProps>,
+  Component: React.ComponentType<TProps>,
   options: OutsideClickOptions = {},
 ): React.ComponentClass<OutsideComponentProps<TProps>> {
-  return onClickOutside(component, {
-    excludeScrollbar: options.excludeScrollbar,
-  });
+  return withInner(
+    onClickOutside(Component, {
+      excludeScrollbar: options.excludeScrollbar,
+    }),
+    { Component },
+  );
 }
