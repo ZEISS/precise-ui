@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { withResponsive, ResponsiveComponentProps } from './withResponsive';
-import { withInner } from 'typescript-plugin-inner-jsx';
+import { withInner } from 'typescript-plugin-inner-jsx/withInner';
 
 export interface GetModeType<TModes> {
   (width?: number): TModes;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { withInner } from 'typescript-plugin-inner-jsx';
+import { withInner } from 'typescript-plugin-inner-jsx/withInner';
 
 export interface BaseInputProps<TEventArgs> {
   /**

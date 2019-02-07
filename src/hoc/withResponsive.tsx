@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { RefProps } from '../common';
-import { withInner } from 'typescript-plugin-inner-jsx';
+import { withInner } from 'typescript-plugin-inner-jsx/withInner';
 
 export interface ResponsiveComponentProps extends RefProps {
   /**
