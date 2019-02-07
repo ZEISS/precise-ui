@@ -1,5 +1,5 @@
 import onClickOutside, { OnClickOutProps } from 'react-onclickoutside';
-import { withInner } from 'typescript-plugin-inner-jsx';
+import { withInner } from 'typescript-plugin-inner-jsx/withInner';
 
 export interface OutsideInjectedProps {
   disableOnClickOutside(): void;
