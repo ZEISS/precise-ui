@@ -42,7 +42,7 @@ export const StyledInputBox: React.ComponentClass<StyledInputBoxProps> = reStyle
   max-height: 112px;
   border-bottom: 1px solid ${border === TextFieldBorderType.error ? purpleRed : focused ? ui0 : hasValue ? ui5 : ui3};
   cursor: ${disabled ? 'not-allowed' : 'auto'};
-  overflow-y: scroll;
+  overflow-y: auto;
 
   &:hover {
     border-bottom-color: ${disabled ? ui3 : ui0};
