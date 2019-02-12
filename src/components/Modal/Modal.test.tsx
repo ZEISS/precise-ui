@@ -2,6 +2,8 @@ import * as React from 'react';
 import * as enzyme from 'enzyme';
 import { Modal } from './';
 
+jest.useFakeTimers();
+
 describe('<Modal />', () => {
   it('should render an empty <Modal> component', () => {
     const wrapper = enzyme.shallow(<Modal>Content</Modal>);
@@ -16,6 +18,8 @@ describe('<Modal />', () => {
       </Modal>,
     );
     wrapper.find('CloseButton').simulate('click');
+    jest.runAllTimers();
+
     expect(mockCallback.mock.calls.length).toBe(1);
   });
 });
