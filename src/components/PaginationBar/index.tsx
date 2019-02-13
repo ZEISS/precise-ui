@@ -109,7 +109,7 @@ export class PaginationBar extends React.Component<PaginationBarProps> {
   private changeTo(page: number) {
     const { onPageChanged } = this.props;
 
-    if(page < 0) {
+    if (page < 0) {
       page = 0;
     }
     if (typeof onPageChanged === 'function') {
