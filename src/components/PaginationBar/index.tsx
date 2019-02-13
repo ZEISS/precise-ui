@@ -109,6 +109,9 @@ export class PaginationBar extends React.Component<PaginationBarProps> {
   private changeTo(page: number) {
     const { onPageChanged } = this.props;
 
+    if(page < 0) {
+      page = 0;
+    }
     if (typeof onPageChanged === 'function') {
       onPageChanged({
         page,
@@ -150,7 +153,7 @@ export class PaginationBar extends React.Component<PaginationBarProps> {
           changeToNext={this.changeToNext}
           changeToSelect={this.changeToSelect}
           pages={pages}>
-          {pagesInfo(selectedPage + 1, pages.length)}
+          {pagesInfo(selectedPage + 1, Math.max(pages.length, 1))}
         </PageControls>
       </ControlsContainer>
     );

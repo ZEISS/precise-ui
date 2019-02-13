@@ -128,7 +128,7 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
     const { children } = this.props;
     const { current } = this.state;
     const total = React.Children.count(children);
-    const maxPageCount = Math.ceil(total / size) - 1;
+    const maxPageCount = Math.max(Math.ceil(total / size) - 1, 0);
     this.setState({
       size,
       current: Math.min(current, maxPageCount),
