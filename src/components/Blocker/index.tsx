@@ -133,7 +133,7 @@ export class Blocker extends React.Component<BlockerProps> {
           {children}
           <FocusKeeper href="#" onFocus={this.keepFirstFocus} />
         </FixedContainer>
-        <StyledModalBackground />
+        <StyledModalBackground {...props} />
       </>
     );
   }

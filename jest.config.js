@@ -1,21 +1,11 @@
 module.exports = {
-  setupFiles: [
-    './test/setup.ts',
-  ],
+  setupFiles: ['./test/setup.ts'],
   transform: {
-    '^.+\\.(ts|tsx?)$': './node_modules/ts-jest/preprocessor.js',
+    '^.+\\.(ts|tsx?)$': 'ts-jest',
   },
-  snapshotSerializers: [
-    'enzyme-to-json/serializer',
-  ],
+  snapshotSerializers: ['enzyme-to-json/serializer'],
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
-  moduleFileExtensions: [
-    'ts',
-    'tsx',
-    'js',
-    'jsx',
-    'json',
-  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   globals: {
     'ts-jest': {
       diagnostics: false,

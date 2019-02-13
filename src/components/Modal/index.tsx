@@ -1,11 +1,11 @@
 import * as React from 'react';
-import styled from '../../utils/styled';
+import styled, { reStyled, keyframes } from '../../utils/styled';
 import { StandardProps } from '../../common';
 import { Headline } from '../Headline';
 import { TextStyles } from '../../textStyles';
 import { white, cyan, dark, grey6 } from '../../colors';
 import { remCalc } from '../../utils/remCalc';
-import { Blocker } from '../Blocker';
+import { Blocker, BlockerProps } from '../Blocker';
 import { CloseButton } from '../CloseButton';
 import { distance } from '../../distance';
 
@@ -30,10 +30,12 @@ export interface ModalProps extends StandardProps {
   onClose?(e: ModalCloseEvent): void;
   /**
    * When specified, default max-width of 500px will be overridden
+   * @deprecated Please define through styled components and ${Modal.inner.ModalContent}
    */
   width?: string;
   /**
    * Specify the minimal height for the modal container
+   * @deprecated Please define through styled components and ${Modal.inner.StyledModal}
    */
   minHeight?: string;
 }
@@ -53,33 +55,99 @@ export interface ModalHeaderProps extends StandardProps {
   label?: string;
 }
 
-const StyledModal = styled.div`
-  outline: none;
-  color: ${dark};
-  ${({ width }: { width?: string }) => (width ? `width: ${width}` : 'max-width: 500px')};
-  margin: ${distance.xlarge} auto;
-  display: flex;
-  align-items: center;
-  min-height: calc(100% - (${distance.xlarge} * 2));
+const openAnimationDuration = 300;
+const closeAnimationDuration = 200;
+const blockerAnimationDuration = 200;
 
-  @media screen and (max-width: ${({ width }: { width?: string }) => width || '500px'}) {
-    width: 100%;
-    min-height: 100%;
-    margin: 0;
-    align-items: stretch;
+const InAnimation = (startOffset: number) => keyframes`
+  from {
+    opacity: 0;
+    transform: translate(0, ${startOffset}px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
   }
 `;
 
-const ModalContent = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background: ${white};
-  box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.1);
-  border-top: 4px solid ${cyan};
-  width: 100%;
-  ${({ minHeight }: { minHeight?: string }) => (minHeight ? `min-height: ${minHeight}` : '')};
+const OutAnimation = () => keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 `;
+
+const BlockerInAnimation = () => keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+export interface ModalProps {
+  width?: string;
+}
+
+export interface StyledModalProps extends ModalProps {
+  closing: boolean;
+}
+
+const StyledModal = reStyled<StyledModalProps, 'div'>('div')(
+  ({ width, closing }) => `
+    outline: none;
+    color: ${dark};
+    ${width ? `width: ${width}` : 'max-width: 500px'};
+    margin: ${distance.xlarge} auto;
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - (${distance.xlarge} * 2));
+    animation: ${closing ? OutAnimation() : InAnimation(-72)} ${
+    closing ? closeAnimationDuration : openAnimationDuration
+  }ms cubic-bezier(0, 0, 0.25, 1);
+    animation-fill-mode: forwards;
+
+    @media screen and (max-width: ${width || '500px'}) {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      align-items: stretch;
+    }
+    `,
+);
+
+export interface StyledBlockerProps extends BlockerProps {
+  closing: boolean;
+}
+
+const StyledBlocker = reStyled<StyledBlockerProps>(({ closing, ...rest }: StyledBlockerProps) => <Blocker {...rest} />)(
+  ({ closing }) => `
+  animation: ${
+    closing ? OutAnimation() : BlockerInAnimation()
+  } ${blockerAnimationDuration}ms cubic-bezier(0, 0, 0.25, 1);
+    animation-fill-mode: forwards;
+  `,
+);
+
+export interface ModalContentProps {
+  minHeight?: string;
+}
+
+const ModalContent = reStyled.div<ModalContentProps>(
+  ({ minHeight }) => `
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: ${white};
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.1);
+    border-top: 4px solid ${cyan};
+    width: 100%;
+    ${minHeight ? `min-height: ${minHeight}` : ''};
+  `,
+);
 
 const StyledModalBody = styled.div`
   font-size: 1rem;
@@ -101,18 +169,34 @@ const StyledModalFooter = styled.div`
   text-align: right;
 `;
 
+interface ModalState {
+  closing: boolean;
+}
+
 /**
  * A simple modal dialog for requiring user interaction.
  */
-export class Modal extends React.PureComponent<ModalProps> {
+export class Modal extends React.PureComponent<ModalProps, ModalState> {
+  constructor(props: ModalProps) {
+    super(props);
+    this.state = {
+      closing: false,
+    };
+  }
+
   private closeFrom(origin: ModalCloseOrigin) {
     const { onClose } = this.props;
 
-    if (typeof onClose === 'function') {
-      onClose({
-        origin,
-      });
-    }
+    this.setState({ closing: true }, () =>
+      setTimeout(() => {
+        if (typeof onClose === 'function') {
+          onClose({
+            origin,
+          });
+        }
+        this.setState({ closing: false });
+      }, closeAnimationDuration),
+    );
   }
 
   private closeBackground = () => {
@@ -126,17 +210,18 @@ export class Modal extends React.PureComponent<ModalProps> {
   render() {
     const { children, onClose, open = false, minHeight, ...rest } = this.props;
     const canClose = typeof onClose === 'function';
+    const { closing } = this.state;
 
     return (
       open && (
-        <Blocker onClose={this.closeBackground}>
-          <StyledModal tabIndex={0} {...rest}>
+        <StyledBlocker closing={closing} onClose={this.closeBackground}>
+          <StyledModal tabIndex={0} closing={closing} {...rest}>
             <ModalContent minHeight={minHeight}>
               {children}
               {canClose && <CloseButton onClick={this.closeButton} />}
             </ModalContent>
           </StyledModal>
-        </Blocker>
+        </StyledBlocker>
       )
     );
   }
