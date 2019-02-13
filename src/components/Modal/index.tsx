@@ -29,16 +29,6 @@ export interface ModalProps extends StandardProps {
    */
   onClose?(e: ModalCloseEvent): void;
   /**
-   * Show or hide close modal button
-   * @default true
-   */
-  showCloseButton?: boolean;
-  /**
-   * Determines if modal should be closed when clicked outside or Esc pressed
-   * @default true
-   */
-  closeOnOutsideClick?: boolean;
-  /**
    * When specified, default max-width of 500px will be overridden
    * @deprecated Please define through styled components and ${Modal.inner.ModalContent}
    */
@@ -218,18 +208,17 @@ export class Modal extends React.PureComponent<ModalProps, ModalState> {
   };
 
   render() {
-    const { children, onClose, open = false, minHeight, showCloseButton, closeOnOutsideClick, ...rest } = this.props;
-    const showClose = showCloseButton === undefined || showCloseButton;
-    const closeOnOutside = closeOnOutsideClick === undefined || closeOnOutsideClick;
+    const { children, onClose, open = false, minHeight, ...rest } = this.props;
+    const canClose = typeof onClose === 'function';
     const { closing } = this.state;
 
     return (
       open && (
-        <StyledBlocker closing={closing} onClose={closeOnOutside ? this.closeBackground : undefined}>
+        <StyledBlocker closing={closing} onClose={this.closeBackground}>
           <StyledModal tabIndex={0} closing={closing} {...rest}>
             <ModalContent minHeight={minHeight}>
               {children}
-              {showClose && <CloseButton onClick={this.closeButton} />}
+              {canClose && <CloseButton onClick={this.closeButton} />}
             </ModalContent>
           </StyledModal>
         </StyledBlocker>
