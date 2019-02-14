@@ -71,7 +71,7 @@ export const PageControls: React.SFC<PageControlsProps> = ({
 }) => (
   <PageControlsStyled>
     <Container>{children}</Container>
-    <ChangePage disabled={current === 0} onClick={changeToPrevious} type="button">
+    <ChangePage disabled={current <= 0} onClick={changeToPrevious} type="button">
       <Icon name="KeyboardArrowLeft" />
     </ChangePage>
     <SelectButton data={pages} value={`${current + 1}`} onChange={changeToSelect} />
