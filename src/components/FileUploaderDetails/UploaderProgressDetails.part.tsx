@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled from '../../utils/styled';
 import { getPropLabel, UploadProgressDetailsLabels } from '../../utils/labels';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from '../Modal';
-import { FileProgress, FileUploaderDetailsEvent } from './FileUploaderDetails.types.part';
+import { FileProgress, FileUploaderDetailsEvent, Translate } from './FileUploaderDetails.types.part';
 import { StatusTable } from './StatusTable.part';
 import { IconLink } from '../IconLink';
 
@@ -15,7 +15,7 @@ const StyledModal = styled(Modal)`
   max-width: 600px;
 `;
 
-export interface UploaderProgressDetailsProps extends UploadProgressDetailsLabels {
+export interface UploaderProgressDetailsProps extends UploadProgressDetailsLabels, Translate {
   /**
    * Determines if the details are shown or not.
    */

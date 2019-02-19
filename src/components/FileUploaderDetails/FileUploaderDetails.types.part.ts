@@ -73,3 +73,9 @@ export interface FileUploaderDetailsEvent<T> {
    */
   files: Array<T>;
 }
+export interface Translate {
+  /**
+   * Optionally provide custom translate function to be used for unhandled custom error messages
+   */
+  translate?(str: string): string;
+}

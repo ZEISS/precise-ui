@@ -8,15 +8,16 @@ import {
   FileProgress,
   FileUploadActions,
   FileUploaderDetailsEvent,
+  Translate,
 } from './FileUploaderDetails.types.part';
 import { UploaderProgressBar } from './UploaderProgressBar.part';
 import { UploaderProgressDetails } from './UploaderProgressDetails.part';
 import { mergeData } from './helpers';
 import { distance } from '../../distance';
 
-export { FileUploadActions, FileItem, FileProgress, FileBase, FileUploaderDetailsEvent };
+export { FileUploadActions, FileItem, FileProgress, FileBase, FileUploaderDetailsEvent, Translate };
 
-export interface FileUploaderDetailsProps extends UploadProgressDetailsLabels, UploaderProgressBarLabels {
+export interface FileUploaderDetailsProps extends UploadProgressDetailsLabels, UploaderProgressBarLabels, Translate {
   /**
    * Sets the event manager to use. By default a standard event manager is used.
    */

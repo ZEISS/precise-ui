@@ -5,7 +5,7 @@ import { Icon } from '../Icon';
 import { ProgressBar } from '../ProgressBar';
 import { Table, TableCellEvent, TableRowEvent } from '../Table';
 import { ActionIconContainer } from './ActionIconContainer.part';
-import { FileProgress, FileUploaderDetailsEvent } from './FileUploaderDetails.types.part';
+import { FileProgress, FileUploaderDetailsEvent, Translate } from './FileUploaderDetails.types.part';
 import { StatusIcon } from './StatusIcon.part';
 import { getStatus, iconNames } from './helpers';
 import { StandardProps } from '../../common';
@@ -56,7 +56,7 @@ export const StyledTableRow = reStyled.tr<StyledTableRowProps>(
 `,
 );
 
-export interface StatusTableProps extends StandardProps {
+export interface StatusTableProps extends StandardProps, Translate {
   files: Array<FileProgress>;
   onCancel(e: FileUploaderDetailsEvent<FileProgress>): void;
   onDelete(e: FileUploaderDetailsEvent<FileProgress>): void;
@@ -69,7 +69,18 @@ export interface StatusTableProps extends StandardProps {
   errorTableUploadLabel?: string;
 }
 
-export const StatusTable: React.SFC<StatusTableProps> = ({ theme, files, onCancel, onDelete, ...props }) => {
+function defaultTranslate(error: any) {
+  return typeof error === 'string' ? error : 'Missing translation';
+}
+
+export const StatusTable: React.SFC<StatusTableProps> = ({
+  theme,
+  files,
+  onCancel,
+  onDelete,
+  translate = defaultTranslate,
+  ...props
+}) => {
   const columns = {
     name: {
       header: getPropLabel(props, 'tableHeaderFileLabel'),
@@ -133,7 +144,7 @@ export const StatusTable: React.SFC<StatusTableProps> = ({ theme, files, onCance
       return (
         <TextWrapBox>
           <StatusIcon condensed type={status} name={iconNames[value]} />
-          {error || getPropLabel(props, `${status}TableUploadLabel` as any)}
+          {(error && translate(error)) || getPropLabel(props, `${status}TableUploadLabel` as any)}
         </TextWrapBox>
       );
     }

@@ -14,6 +14,7 @@ class FileUploaderDetailsExample extends React.Component {
     this.cancelUpload = this.cancelUpload.bind(this);
     this.makeProgress = this.makeProgress.bind(this);
     this.onClose = this.onClose.bind(this);
+    this.errorShown = false;
   }
 
   uploadStart({ files: startedFiles }) {
@@ -36,7 +37,7 @@ class FileUploaderDetailsExample extends React.Component {
 
     if (file) {
       const uploaderId = file.uploaderId;
-      const timeout = (Math.floor(Math.random() * Math.floor(3)) + 1) * 1000;
+      const timeout = (Math.floor(Math.random() * 3) + 1) * 1000;
       const currentProgress = file.progress || 0;
 
       if (currentProgress < 100 && !file.canceled && !file.error) {
@@ -46,13 +47,27 @@ class FileUploaderDetailsExample extends React.Component {
         if (file.progress < 100) {
           setTimeout(() => this.makeProgress(id), timeout);
         } else {
-          this.eventManager.emit(FileUploadActions.uploadSuccess, { files: [file] });
+          if (!this.errorShown) {
+            this.errorShown = true;
+            this.eventManager.emit(FileUploadActions.uploadFailure, { files: [{...file, error: 'upload_204'}] });
+          } else {
+            this.eventManager.emit(FileUploadActions.uploadSuccess, { files: [file] });
+          }
         }
       }
 
       this.files[file.fileId] = file;
     }
   };
+
+  translate(error) {
+    switch(error) {
+      case 'upload_204':
+        return 'Localized message for error 204';
+      default:
+        return `No localization for ${error}`;
+    }
+  }
 
   onClose() {
     this.files = {};
@@ -67,6 +82,7 @@ class FileUploaderDetailsExample extends React.Component {
           onUpload={this.uploadStart}
           onCancel={this.cancelUpload}
           onClose={this.onClose}
+          translate={this.translate}
         />
         <FileUploader
           multiple
