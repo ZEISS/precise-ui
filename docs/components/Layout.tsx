@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Link, Route } from 'react-router-dom';
-import { styled, transparentize, distance, colors } from '../../src';
+import { styled, transparentize, distance, colors, reStyled } from '../../src';
 import { ScrollToTop } from './ScrollToTop';
 import { MobileMenu } from './MobileMenu';
+import { breakpoints } from '../../src/themes';
 
 const tocColumnWidth = 200;
 
@@ -52,11 +53,22 @@ const MobileContent = styled.div`
   padding-top: 0;
 `;
 
-const ContentColumn = styled.div`
-  flex: 1;
-  padding: ${distance.xxlarge} ${distance.xlarge};
-  margin-left: ${tocColumnWidth}px;
-`;
+interface ContentColumn {
+  hasSidebar: boolean;
+}
+
+const ContentColumn = reStyled<ContentColumn, 'div'>('div')(
+  ({ hasSidebar }) => `
+    flex: 1;
+    padding: ${distance.xxlarge} ${distance.xlarge};
+    ${
+      hasSidebar
+        ? `margin-left: ${tocColumnWidth}px;`
+        : `width: ${breakpoints.large}px; 
+      margin: 0 auto;`
+    }
+  `,
+);
 
 const Info = styled.div`
   padding: ${distance.medium};
@@ -110,6 +122,6 @@ export const DesktopLayout: React.SFC<LayoutProps> = ({ hasSidebar, title, toc, 
       </TocColumn>
     )}
     {ribbon}
-    <ContentColumn>{children}</ContentColumn>
+    <ContentColumn hasSidebar={hasSidebar}>{children}</ContentColumn>
   </DesktopContainer>
 );

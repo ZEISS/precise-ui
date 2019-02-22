@@ -166,7 +166,6 @@ export default class ComponentsListRenderer extends React.Component<
                 <Expander timeout={500} expand={item.slug === selected}>
                   <SubMenuContainer>
                     {item.components.map(component => {
-                      component.parent = item.slug;
                       return (
                         <SubMenuItem
                           selected={isMatch(`/${item.slug}/${component.slug}`)}
