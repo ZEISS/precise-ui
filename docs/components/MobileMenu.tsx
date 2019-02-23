@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
 import { Icon, WindowPopup, styled, distance, colors } from '../../src';
 
 const Hamburger = styled.div`
@@ -20,50 +19,27 @@ const Hamburger = styled.div`
   }
 `;
 
-export interface MobileMenuProps extends RouteComponentProps {
+export interface MobileMenuProps {
   toc?: React.ReactNode;
 }
 
-export const MobileMenu = withRouter(
-  class extends React.Component<MobileMenuProps> {
-    private unregister = () => {};
-    state = {
-      open: false,
+export const MobileMenu: React.SFC<MobileMenuProps> = ({ toc }) => {
+  const [open, setOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    const close = () => setOpen(false);
+    window.addEventListener('hashchange', close);
+    return () => {
+      window.removeEventListener('hashchange', close);
     };
+  }, []);
 
-    private toggle = () => {
-      const { open } = this.state;
-
-      this.setState({
-        open: !open,
-      });
-    };
-
-    componentDidMount() {
-      const { history } = this.props;
-      this.unregister = history.listen(() => {
-        this.setState({
-          open: false,
-        });
-      });
-    }
-
-    componentWillUnmount() {
-      this.unregister();
-    }
-
-    render() {
-      const { open } = this.state;
-      const { toc } = this.props;
-
-      return (
-        <>
-          {open && <WindowPopup onClose={this.toggle}>{toc}</WindowPopup>}
-          <Hamburger onClick={this.toggle}>
-            <Icon name="Menu" />
-          </Hamburger>
-        </>
-      );
-    }
-  },
-);
+  return (
+    <>
+      {open && <WindowPopup onClose={() => setOpen(false)}>{toc}</WindowPopup>}
+      <Hamburger onClick={() => setOpen(true)}>
+        <Icon name="Menu" />
+      </Hamburger>
+    </>
+  );
+};

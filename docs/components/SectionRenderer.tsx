@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 // @ts-ignore
 import SectionHeading from 'react-styleguidist/lib/rsg-components/SectionHeading';
 // @ts-ignore

@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { Link, Route } from 'react-router-dom';
-import { styled, transparentize, distance, colors, reStyled } from '../../src';
-import { ScrollToTop } from './ScrollToTop';
+import { styled, transparentize, distance, colors, reStyled, Anchor } from '../../src';
 import { MobileMenu } from './MobileMenu';
 import { breakpoints } from '../../src/themes';
 
@@ -37,7 +35,7 @@ const HeadLine = styled.div`
   flex-direction: row;
 `;
 
-const LogoLink = styled(Link)`
+const LogoLink = styled(Anchor)`
   h1 {
     cursor: pointer;
     display: block;
@@ -93,13 +91,12 @@ export interface LayoutProps {
   hasSidebar: boolean;
 }
 
-export const MobileLayout: React.SFC<LayoutProps> = ({ toc, logo, ribbon, version, children }) => (
+export const MobileLayout: React.SFC<LayoutProps> = ({ toc, ribbon, version, children, logo }) => (
   <MobileContainer>
-    <Route component={ScrollToTop} />
     <HeadLine>
       <MobileMenu toc={toc} />
       <LogoSpace>
-        <LogoLink to="/">{logo}</LogoLink>
+        <LogoLink href="/#/">{logo}</LogoLink>
       </LogoSpace>
       <Version>{version}</Version>
     </HeadLine>
@@ -108,13 +105,12 @@ export const MobileLayout: React.SFC<LayoutProps> = ({ toc, logo, ribbon, versio
   </MobileContainer>
 );
 
-export const DesktopLayout: React.SFC<LayoutProps> = ({ hasSidebar, title, toc, logo, ribbon, version, children }) => (
+export const DesktopLayout: React.SFC<LayoutProps> = ({ hasSidebar, title, toc, ribbon, version, children, logo }) => (
   <DesktopContainer>
-    <Route component={ScrollToTop} />
     {hasSidebar && (
       <TocColumn>
         <Info>
-          <LogoLink to="/">{logo}</LogoLink>
+          <LogoLink href="/#/">{logo}</LogoLink>
           <Title>{title}</Title>
           <Version>{version}</Version>
         </Info>

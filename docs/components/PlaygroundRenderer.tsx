@@ -40,10 +40,19 @@ const ToolbarContainer = styled(StackItem)`
   margin-top: -4px;
 `;
 
-const PlaygroundRenderer: React.SFC<PlaygroundRendererProps> = ({ preview, tabButtons, tabBody, toolbar }) => {
+const PlaygroundRenderer: React.SFC<PlaygroundRendererProps> = ({
+  preview,
+  tabButtons,
+  tabBody,
+  toolbar,
+  name,
+  previewProps,
+}) => {
   return (
     <PlaygroundBox>
-      <PreviewPanel>{preview}</PreviewPanel>
+      <PreviewPanel data-preview={name} {...previewProps}>
+        {preview}
+      </PreviewPanel>
       <CodePanel>
         <StyledStackPanel>
           <StackItem>

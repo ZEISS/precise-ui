@@ -1,6 +1,9 @@
 import * as React from 'react';
-import { Responsive } from '../../src';
+import { Responsive, themes, ThemeProvider } from '../../src';
 import { MobileLayout, DesktopLayout } from './Layout';
+import { HomePage } from './HomePage';
+import { AppState } from './context';
+
 // @ts-ignore
 import Ribbon from 'react-styleguidist/lib/rsg-components/Ribbon';
 // @ts-ignore
@@ -14,17 +17,43 @@ interface StyleGuideRendererProps {
   hasSidebar: boolean;
 }
 
-const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ children, ...props }) => (
-  <Responsive
-    render={size => {
-      const Layout = size !== 'small' ? DesktopLayout : MobileLayout;
-      return (
-        <Layout logo={<Logo />} ribbon={<Ribbon />} {...props}>
-          {children}
-        </Layout>
-      );
-    }}
-  />
-);
+function useTheme() {
+  const [state, setState] = React.useState<AppState>({ theme: themes.light });
+
+  React.useEffect(() => {
+    window.setContext = ctx => {
+      const nextState = { ...state, ...ctx };
+      setState(nextState);
+      window.context = nextState;
+    };
+
+    window.context = state;
+
+    return () => {
+      window.setContext = undefined;
+    };
+  }, []);
+
+  return state.theme;
+}
+
+const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ children, ...props }) => {
+  const theme = useTheme();
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Responsive
+        render={size => {
+          const Layout = size !== 'small' ? DesktopLayout : MobileLayout;
+          return (
+            <Layout logo={<Logo />} ribbon={<Ribbon />} {...props}>
+              {!window.location.hash ? <HomePage /> : children}
+            </Layout>
+          );
+        }}
+      />
+    </ThemeProvider>
+  );
+};
 
 export default StyleGuideRenderer;
