@@ -4,9 +4,12 @@ const path = require('path');
 
 const printSuccess = str => console.log('\x1b[32m' + str);
 const printError = str => console.error('\033[31m' + str);
+const screenshotsDir = path.join(__dirname, '..', 'styleguide-visual');
 
 if (process.argv.indexOf('-u') !== -1) {
-  approve({}).then(() => printSuccess('Updated'), err => printError(err));
+  approve({
+    dir: screenshotsDir,
+  }).then(() => printSuccess('Updated'), err => printError(err));
 } else {
   server.start(
     {
@@ -22,6 +25,7 @@ if (process.argv.indexOf('-u') !== -1) {
       test({
         url: `http://${address.address}:${address.port}/#/Components`,
         wait: 150,
+        dir: screenshotsDir,
       }).then(
         () => {
           printSuccess('Screenshots match');
