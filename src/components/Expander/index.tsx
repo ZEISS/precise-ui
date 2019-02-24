@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from '../../utils/styled';
+import styled, { reStyled } from '../../utils/styled';
 
 export interface ExpanderProps {
   /**
@@ -24,18 +24,44 @@ export interface ExpanderProps {
   unmountOnExit?: boolean;
 }
 
-export type TransitionStatus = 'unmounted' | 'mounted' | 'exited' | 'entering' | 'entered' | 'exiting';
+export type TransitionStatus = 'unmounted' | 'mounted' | 'exited' | 'entering' | 'entered' | 'exiting' | 'exitingStart';
 
 export interface ExpanderState {
   status?: TransitionStatus;
 }
 
-const ExpandingContainer = styled.div`
-  height: 0;
-  overflow: hidden;
-`;
+export interface ExpandingContainerProps {
+  expandedHeight?: number;
+  collapsedHeight?: string;
+  status?: TransitionStatus;
+  timeout: number;
+}
 
-const defaultCollapsedHeight = '0px';
+function getExpandingContainerHeight(status?: TransitionStatus, expandedHeight?: number, collapsedHeight?: string) {
+  if (!expandedHeight) {
+    return '0';
+  }
+
+  switch (status) {
+    case 'entering':
+      return `${expandedHeight}px`;
+    case 'entered':
+      return 'auto';
+    case 'exitingStart':
+      return `${expandedHeight}px`;
+    case 'exiting':
+    default:
+      return `${collapsedHeight || '0'}`;
+  }
+}
+
+const ExpandingContainer = reStyled<ExpandingContainerProps, 'div'>('div')(
+  ({ status, expandedHeight, collapsedHeight, timeout }) => `
+    overflow: hidden;
+    transition-duration: ${timeout}ms;
+    height: ${getExpandingContainerHeight(status, expandedHeight, collapsedHeight)}
+  `,
+);
 
 /**
  * A functional expander component for expanding / collapsing content.
@@ -90,15 +116,6 @@ export class Expander extends React.Component<ExpanderProps, ExpanderState> {
   }
 
   private performEnter() {
-    const { timeout } = this.props;
-    const rootRef = this.rootContainer;
-    const contentRef = this.wrapperRef.current;
-
-    if (rootRef && contentRef) {
-      rootRef.style.transitionDuration = `${timeout}ms`;
-      rootRef.style.height = `${contentRef.clientHeight}px`;
-    }
-
     this.setState(
       {
         status: 'entering',
@@ -108,20 +125,10 @@ export class Expander extends React.Component<ExpanderProps, ExpanderState> {
   }
 
   private performExit() {
-    const { timeout = 0, unmountOnExit, collapsedHeight } = this.props;
-    const rootRef = this.rootContainer;
-    const contentRef = this.wrapperRef.current;
+    const { unmountOnExit } = this.props;
 
-    if (rootRef && contentRef) {
-      rootRef.style.transitionDuration = `${timeout}ms`;
-      rootRef.style.height = collapsedHeight || defaultCollapsedHeight;
-    }
-
-    this.setState(
-      {
-        status: 'exiting',
-      },
-      () => this.setDelayedStatus(unmountOnExit ? 'unmounted' : 'exited'),
+    this.setState({ status: 'exitingStart' }, () =>
+      this.setState({ status: 'exiting' }, () => this.setDelayedStatus(unmountOnExit ? 'unmounted' : 'exited')),
     );
   }
 
@@ -148,11 +155,18 @@ export class Expander extends React.Component<ExpanderProps, ExpanderState> {
 
   render() {
     const { status } = this.state;
-    const { children, collapsedHeight = defaultCollapsedHeight } = this.props;
+    const { children, collapsedHeight, timeout = 0 } = this.props;
+    const contentRef = this.wrapperRef.current;
 
     if (status !== 'unmounted') {
       return (
-        <ExpandingContainer innerRef={this.setContainer} style={{ minHeight: collapsedHeight }}>
+        <ExpandingContainer
+          innerRef={this.setContainer}
+          expandedHeight={contentRef ? contentRef.clientHeight : undefined}
+          collapsedHeight={collapsedHeight}
+          status={status}
+          timeout={timeout}
+          style={{ minHeight: collapsedHeight }}>
           <div ref={this.wrapperRef}>{children}</div>
         </ExpandingContainer>
       );
