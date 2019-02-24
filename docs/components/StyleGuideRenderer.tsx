@@ -8,6 +8,7 @@ import { AppState } from './context';
 import Ribbon from 'react-styleguidist/lib/rsg-components/Ribbon';
 // @ts-ignore
 import Logo from 'react-styleguidist/lib/rsg-components/Logo';
+import { injectGlobal } from '../../src/utils/styled';
 
 interface StyleGuideRendererProps {
   title: string;
@@ -35,6 +36,23 @@ function useTheme() {
   }, []);
 
   return state.theme;
+}
+
+/*
+  CSS animations should be disabled to ensure that animations don't 
+  affect `react-styleguidist-visual` screenshots
+*/
+if (window.location.port === '6061') {
+  injectGlobal`
+  *, :before, :after {
+    /*CSS transitions*/
+    transition-property: none !important;
+    /*CSS transforms*/
+    transform: none !important;
+    /*CSS animations*/
+    animation: none !important;
+  }
+`;
 }
 
 const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ children, ...props }) => {
