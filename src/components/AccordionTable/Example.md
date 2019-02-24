@@ -66,7 +66,7 @@ function getContent() {
 function getData(num) {
   return (
     Array.from(new Array(num), (el, ind) =>
-      ({ key: `Key #${ind}`, val: ind*23432-7}))
+      ({ key: `Key #${ind}`, val: ind}))
   );
 }
 

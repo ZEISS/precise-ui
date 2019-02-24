@@ -11,7 +11,7 @@ const { InfiniteScroll, Button, ListItem } = require('precise-ui');
 
 function getData() {
   return Array.apply(null, { length: 50 }).map((v, index) => (
-    <ListItem key={index}> X: {3*index - 5}, Y: {27*index + 7} </ListItem>
+    <ListItem key={index}>{index}</ListItem>
   ));
 }
 

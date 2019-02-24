@@ -8,6 +8,7 @@ cache:
 script:
   - npm run test
   - npm run build
+  - npm run test:visual
 before_deploy:
   - >   
     if [ "$TRAVIS_BRANCH" != "master" ]; then

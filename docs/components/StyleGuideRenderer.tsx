@@ -8,7 +8,7 @@ import { AppState } from './context';
 import Ribbon from 'react-styleguidist/lib/rsg-components/Ribbon';
 // @ts-ignore
 import Logo from 'react-styleguidist/lib/rsg-components/Logo';
-import { injectGlobal } from '../../src/utils/styled';
+import { injectGlobal } from '../../src';
 
 interface StyleGuideRendererProps {
   title: string;

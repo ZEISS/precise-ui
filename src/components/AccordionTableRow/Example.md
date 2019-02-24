@@ -19,9 +19,7 @@ const rowRenderer = ({ cells, handleClick, active }) => (
 function getData(num) {
   return Array.from(new Array(num), (el, ind) => ({
     key: `Key #${ind}`,
-    val: (ind * 356)
-      .toString(36)
-      .substring(7),
+    val: ind,
   }));
 }
 

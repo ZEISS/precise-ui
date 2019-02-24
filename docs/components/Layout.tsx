@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { styled, transparentize, distance, colors, reStyled, Anchor } from '../../src';
 import { MobileMenu } from './MobileMenu';
-import { breakpoints } from '../../src/themes';
 
 const tocColumnWidth = 200;
 
@@ -56,13 +55,13 @@ interface ContentColumn {
 }
 
 const ContentColumn = reStyled<ContentColumn, 'div'>('div')(
-  ({ hasSidebar }) => `
+  ({ hasSidebar, theme }) => `
     flex: 1;
     padding: ${distance.xxlarge} ${distance.xlarge};
     ${
       hasSidebar
         ? `margin-left: ${tocColumnWidth}px;`
-        : `width: ${breakpoints.large}px; 
+        : `width: ${theme.breakpoints.large}px; 
       margin: 0 auto;`
     }
   `,
