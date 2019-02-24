@@ -565,18 +565,21 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                         unmountOnExit={true}
                       >
                         <styled.div
+                          expandedHeight={0}
                           innerRef={[Function]}
+                          status="entering"
                           style={
                             Object {
-                              "minHeight": "0px",
+                              "minHeight": undefined,
                             }
                           }
+                          timeout={300}
                         >
                           <div
-                            className="sc-bwzfXH kuqbRN"
+                            className="sc-bwzfXH gHSgQq"
                             style={
                               Object {
-                                "minHeight": "0px",
+                                "minHeight": undefined,
                               }
                             }
                           >
