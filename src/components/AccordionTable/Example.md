@@ -66,7 +66,7 @@ function getContent() {
 function getData(num) {
   return (
     Array.from(new Array(num), (el, ind) =>
-      ({ key: `Key #${ind}`, val: Math.random().toString(36).substring(7)}))
+      ({ key: `Key #${ind}`, val: ind*23432-7}))
   );
 }
 
@@ -137,7 +137,7 @@ const rowRenderer = ({ cells, handleClick, active }) => (
 function getData(num) {
   return Array.from(new Array(num), (el, ind) => ({
     key: `Key #${ind}`,
-    val: Math.random()
+    val: (ind*451)
       .toString(36)
       .substring(7),
   }));

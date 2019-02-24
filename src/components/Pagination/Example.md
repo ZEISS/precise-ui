@@ -85,7 +85,7 @@ The combination of table component and pagination is particularly promising, esp
 
 ```jsx
 const { Pagination, Table } = require('precise-ui');
-const data = Array.apply(null, { length: 250 }).map(() => ({ X: Math.random(), Y: Math.random() }));
+const data = Array.apply(null, { length: 250 }).map((v, i) => ({ X: i*27 - 4, Y: 103 - i*5 }));
 const paginate = ({ table, rows, props }) => <Pagination host={table} size={20} {...props}>{rows}</Pagination>;
 
 <Table data={data} indexed bodyRenderer={paginate} />

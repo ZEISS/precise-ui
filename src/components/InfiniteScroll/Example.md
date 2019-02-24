@@ -10,8 +10,8 @@ User can optionaly provide `edgeOffset` prop, to tell component to start loading
 const { InfiniteScroll, Button, ListItem } = require('precise-ui');
 
 function getData() {
-  return Array.apply(null, { length: 50 }).map((index) => (
-    <ListItem key={Math.random()}> X: {Math.random()}, Y: {Math.random()} </ListItem>
+  return Array.apply(null, { length: 50 }).map((v, index) => (
+    <ListItem key={index}> X: {3*index - 5}, Y: {27*index + 7} </ListItem>
   ));
 }
 
