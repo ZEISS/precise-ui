@@ -48,7 +48,7 @@ if (window.location.port === '6061') {
     transition-property: none !important;
     transform: none !important;
     animation: none !important;
-    font-family: "Ubunty";
+    font-family: sans-serif;
   }
 `;
 }
