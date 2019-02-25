@@ -27,7 +27,7 @@ if (process.argv.indexOf('-u') !== -1) {
 
       test({
         url: `http://${address.address}:${address.port}/#/Components`,
-        wait: 2000,
+        wait: 150,
         dir: screenshotsDir,
       }).then(
         () => {
