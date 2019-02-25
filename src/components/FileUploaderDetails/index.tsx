@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '../../utils/styled';
-import { UploadProgressDetailsLabels, UploaderProgressBarLabels } from '../../utils/labels';
+import { UploadProgressDetailsLabels, UploaderProgressBarLabels, GetLabel } from '../../utils/labels';
 import { EventManager, eventManagers } from '../../utils/eventManager';
 import {
   FileBase,
@@ -14,9 +14,9 @@ import { UploaderProgressDetails } from './UploaderProgressDetails.part';
 import { mergeData } from './helpers';
 import { distance } from '../../distance';
 
-export { FileUploadActions, FileItem, FileProgress, FileBase, FileUploaderDetailsEvent };
+export { FileUploadActions, FileItem, FileProgress, FileBase, FileUploaderDetailsEvent, GetLabel };
 
-export interface FileUploaderDetailsProps extends UploadProgressDetailsLabels, UploaderProgressBarLabels {
+export interface FileUploaderDetailsProps extends UploadProgressDetailsLabels, UploaderProgressBarLabels, GetLabel {
   /**
    * Sets the event manager to use. By default a standard event manager is used.
    */

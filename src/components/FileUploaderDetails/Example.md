@@ -54,6 +54,24 @@ class FileUploaderDetailsExample extends React.Component {
     }
   };
 
+  getLabel(info) {
+    const { type, data } = info;
+    if (type === 'error') {
+      switch(data) {
+        case 'upload_204':
+          return 'Localized message for error 204';
+        default:
+          return `No localization for ${error}`;
+      }
+    }
+    switch(data) {
+      case 'successTableUploadLabel':
+        return 'Custom success label';
+      default:
+        return ''
+    }
+  }
+
   onClose() {
     this.files = {};
   };
@@ -67,6 +85,7 @@ class FileUploaderDetailsExample extends React.Component {
           onUpload={this.uploadStart}
           onCancel={this.cancelUpload}
           onClose={this.onClose}
+          getLabel={this.getLabel}
         />
         <FileUploader
           multiple

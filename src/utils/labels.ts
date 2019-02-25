@@ -118,3 +118,26 @@ export function getPropLabel<TProps, TKey extends keyof TProps>(
 
   return value;
 }
+
+export interface LabelInfo {
+  type: 'info' | 'error';
+  data: any;
+}
+
+export interface GetLabel {
+  getLabel?(info: LabelInfo): string;
+}
+
+export function buildGetLabels<TProps extends GetLabel, TKey extends keyof TProps>(props: TProps) {
+  const { getLabel } = props;
+  return (info: ({ type: 'info' | 'error'; data: TKey & string }) | (TKey & string)) => {
+    if (typeof info === 'string') {
+      return (getLabel && getLabel({ type: 'info', data: info })) || getPropLabel(props, info) || info;
+    }
+    if (typeof info === 'object' && info.data) {
+      return (getLabel && getLabel(info)) || getPropLabel(props, info.data) || info.data;
+    }
+
+    return '';
+  };
+}

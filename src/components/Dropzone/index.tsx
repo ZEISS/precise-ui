@@ -337,6 +337,7 @@ class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, Drop
       onChange: _2,
       preview: _3,
       children,
+      onOpen: _4,
       ...props
     } = this.props;
 
