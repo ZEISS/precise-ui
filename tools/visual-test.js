@@ -6,10 +6,13 @@ const printSuccess = str => console.log('\x1b[32m' + str);
 const printError = str => console.error('\033[31m' + str);
 const screenshotsDir = path.join(__dirname, '..', 'styleguide-visual');
 
-if (process.argv.indexOf('-u') !== -1) {
+const approveScreenshots = () =>
   approve({
     dir: screenshotsDir,
-  }).then(() => printSuccess('Updated'), err => printError(err));
+  }).then(() => printSuccess('Done.'), err => printError(err));
+
+if (process.argv.indexOf('-u') !== -1) {
+  approveScreenshots();
 } else {
   server.start(
     {
@@ -24,12 +27,12 @@ if (process.argv.indexOf('-u') !== -1) {
 
       test({
         url: `http://${address.address}:${address.port}/#/Components`,
-        wait: 500,
+        wait: 2000,
         dir: screenshotsDir,
       }).then(
         () => {
-          printSuccess('Screenshots match');
-          process.exit();
+          printSuccess('Screenshots match.');
+          approveScreenshots().then(() => process.exit());
         },
         () => {
           printError('One or more new screenshots differ from their references! Run with `-- -u` to approve changes');
