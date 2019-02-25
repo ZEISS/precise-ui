@@ -3,6 +3,7 @@ if: tag IS blank
 node_js:
   - "8"
 addons:
+  chrome: stable
   apt:
     packages:
       - libnss3
