@@ -2,22 +2,13 @@ language: node_js
 if: tag IS blank
 node_js:
   - "8"
-addons:
-  chrome: stable
-  apt:
-    packages:
-      - libnss3
 cache:
   directories:
   - node_modules
-before_install:
-  - "google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &"
-  - "sysctl kernel.unprivileged_userns_clone=1"
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
 script:
   - npm run test
   - npm run build
+  - npm run build:demo
   - npm run test:visual
 before_deploy:
   - >   

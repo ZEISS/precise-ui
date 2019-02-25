@@ -45,12 +45,10 @@ function useTheme() {
 if (window.location.port === '6061') {
   injectGlobal`
   *, :before, :after {
-    /*CSS transitions*/
     transition-property: none !important;
-    /*CSS transforms*/
     transform: none !important;
-    /*CSS animations*/
     animation: none !important;
+    font-family: "Ubunty";
   }
 `;
 }
