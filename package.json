@@ -19,7 +19,8 @@
     "build": "rimraf dist && npm run build:bundle && npm run build:es5 && npm run build:es6",
     "icongen": "node tools/convert-icons.js",
     "prepush": "npm run test & npm run build",
-    "test:visual": "node tools/visual-test.js"
+    "test:visual": "docker run -it --rm -v $(pwd):/usr/src/app --cap-add=SYS_ADMIN zenika/alpine-chrome:with-puppeteer node tools/visual-test.js",
+    "test:visual-update": "node tools/visual-test.js -- -u"
   },
   "keywords": [
     "react",

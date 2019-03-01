@@ -29,13 +29,19 @@ if (process.argv.indexOf('-u') !== -1) {
         url: `http://${address.address}:${address.port}/#/Components`,
         wait: 150,
         dir: screenshotsDir,
+        launchOptions: {
+          args: ['--no-sandbox', '--disable-setuid-sandbox'],
+          executablePath: '/usr/bin/chromium-browser',
+        },
       }).then(
         () => {
           printSuccess('Screenshots match.');
           approveScreenshots().then(() => process.exit());
         },
         () => {
-          printError('One or more new screenshots differ from their references! Run with `-- -u` to approve changes');
+          printError(
+            'One or more new screenshots differ from their references! Run with `npm run test:visual-update` to approve changes',
+          );
           process.exit(1);
         },
       );
