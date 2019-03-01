@@ -39,6 +39,7 @@ if (process.argv.indexOf('-u') !== -1) {
           approveScreenshots().then(() => process.exit());
         },
         () => {
+          printError('Hint: Did you run `npm run build:demo` first?');
           printError(
             'One or more new screenshots differ from their references! Run with `npm run test:visual-update` to approve changes',
           );
