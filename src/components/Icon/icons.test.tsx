@@ -98,6 +98,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render PowerSettingsNew icon', () => {
+    const Component = icons.PowerSettingsNew;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Print icon', () => {
     const Component = icons.Print;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
