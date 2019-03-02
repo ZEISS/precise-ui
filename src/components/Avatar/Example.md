@@ -72,7 +72,7 @@ const image = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAMAAADQmBK
 class Badge extends React.Component {
   constructor() {
     this.state = {
-      mails: ~~(Math.random() * 10)
+      mails: 1
     };
     this.newMail = (e) => this.setState({
       mails: this.state.mails + 1

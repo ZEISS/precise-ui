@@ -14,7 +14,7 @@ interface SectionHeadingRendererProps {
 }
 
 const SectionHeadingRenderer: React.SFC<SectionHeadingRendererProps> = ({ children, depth }) => {
-  return <Headline level={depth + 1 as any}>{children}</Headline>;
+  return <Headline level={(depth + 1) as any}>{children}</Headline>;
 };
 
 export default SectionHeadingRenderer;

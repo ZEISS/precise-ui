@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, distance } from '../../src';
+import { styled, distance, StackPanel, StackItem } from '../../src';
 
 interface PlaygroundRendererProps {
   name: string;
@@ -29,14 +29,38 @@ const CodePanel = styled.div`
   }
 `;
 
-const PlaygroundRenderer: React.SFC<PlaygroundRendererProps> = ({ preview, tabButtons, tabBody }) => {
+const StyledStackPanel = styled(StackPanel)`
+  justify-content: space-between;
+`;
+
+const ToolbarContainer = styled(StackItem)`
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 22px;
+  margin-top: -4px;
+`;
+
+const PlaygroundRenderer: React.SFC<PlaygroundRendererProps> = ({
+  preview,
+  tabButtons,
+  tabBody,
+  toolbar,
+  name,
+  previewProps,
+}) => {
   return (
     <PlaygroundBox>
-      <PreviewPanel>{preview}</PreviewPanel>
+      <PreviewPanel data-preview={name} {...previewProps}>
+        {preview}
+      </PreviewPanel>
       <CodePanel>
-        {/*toolbar*/}
-        {tabButtons}
-        {tabBody}
+        <StyledStackPanel>
+          <StackItem>
+            {tabButtons}
+            {tabBody}
+          </StackItem>
+          <ToolbarContainer>{toolbar}</ToolbarContainer>
+        </StyledStackPanel>
       </CodePanel>
     </PlaygroundBox>
   );

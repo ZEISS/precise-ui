@@ -2,12 +2,18 @@ language: node_js
 if: tag IS blank
 node_js:
   - "8"
+services:
+  - docker
 cache:
   directories:
   - node_modules
+before_install:
+  - docker pull zenika/alpine-chrome:with-puppeteer
 script:
   - npm run test
   - npm run build
+  - npm run build:demo
+  - npm run test:visual
 before_deploy:
   - >   
     if [ "$TRAVIS_BRANCH" != "master" ]; then

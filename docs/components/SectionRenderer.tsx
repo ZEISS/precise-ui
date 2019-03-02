@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Route } from 'react-router-dom';
+
 // @ts-ignore
 import SectionHeading from 'react-styleguidist/lib/rsg-components/SectionHeading';
 // @ts-ignore
@@ -18,7 +18,7 @@ interface SectionRendererProps {
   pagePerSection: boolean;
 }
 
-const RenderSingleSection: React.SFC<SectionRendererProps> = props => {
+const SectionRenderer: React.SFC<SectionRendererProps> = props => {
   const { description, content, sections, components, depth, slug, pagePerSection } = props;
 
   return (
@@ -39,14 +39,6 @@ const RenderSingleSection: React.SFC<SectionRendererProps> = props => {
       {components}
     </section>
   );
-};
-
-const SectionRenderer: React.SFC<SectionRendererProps> = props => {
-  if (props.depth > 1) {
-    return <RenderSingleSection {...props} />;
-  }
-
-  return <Route path={`/${props.slug}`} render={() => <RenderSingleSection {...props} />} />;
 };
 
 export default SectionRenderer;

@@ -1,13 +1,14 @@
 import * as React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { themes, Responsive, ThemeProvider } from '../../src';
-import { HomePage } from './HomePage';
+import { Responsive, themes, ThemeProvider } from '../../src';
 import { MobileLayout, DesktopLayout } from './Layout';
+import { HomePage } from './HomePage';
+import { AppState } from './context';
+
 // @ts-ignore
 import Ribbon from 'react-styleguidist/lib/rsg-components/Ribbon';
 // @ts-ignore
 import Logo from 'react-styleguidist/lib/rsg-components/Logo';
-import { AppState } from './context';
+import { injectGlobal } from '../../src';
 
 interface StyleGuideRendererProps {
   title: string;
@@ -17,52 +18,58 @@ interface StyleGuideRendererProps {
   hasSidebar: boolean;
 }
 
-class App extends React.Component<StyleGuideRendererProps, AppState> {
-  state = {
-    theme: themes.light,
-  };
+function useTheme() {
+  const [state, setState] = React.useState<AppState>({ theme: themes.light });
 
-  componentDidMount() {
+  React.useEffect(() => {
     window.setContext = ctx => {
-      this.setState(ctx, () => {
-        window.context = this.state;
-      });
+      const nextState = { ...state, ...ctx };
+      setState(nextState);
+      window.context = nextState;
     };
-    window.context = this.state;
-  }
 
-  componentWillUnmount() {
-    window.setContext = undefined;
-  }
+    window.context = state;
 
-  render() {
-    const { children, ...props } = this.props;
-    const { theme } = this.state;
+    return () => {
+      window.setContext = undefined;
+    };
+  }, []);
 
-    return (
-      <ThemeProvider theme={theme}>
-        <Responsive
-          render={size => {
-            const Layout = size !== 'small' ? DesktopLayout : MobileLayout;
-            return (
-              <Layout logo={<Logo />} ribbon={<Ribbon />} {...props}>
-                <Switch>
-                  <Route exact path="/" component={HomePage} />
-                  <Route render={() => children} />
-                </Switch>
-              </Layout>
-            );
-          }}
-        />
-      </ThemeProvider>
-    );
-  }
+  return state.theme;
 }
 
-const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = props => (
-  <BrowserRouter>
-    <App {...props} />
-  </BrowserRouter>
-);
+/*
+  CSS animations should be disabled to ensure that animations don't 
+  affect `react-styleguidist-visual` screenshots
+*/
+if (window.location.port === '6061') {
+  injectGlobal`
+  *, :before, :after {
+    transition-property: none !important;
+    transform: none !important;
+    animation: none !important;
+    font-family: sans-serif;
+  }
+`;
+}
+
+const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ children, ...props }) => {
+  const theme = useTheme();
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Responsive
+        render={size => {
+          const Layout = size !== 'small' ? DesktopLayout : MobileLayout;
+          return (
+            <Layout logo={<Logo />} ribbon={<Ribbon />} {...props}>
+              {!window.location.hash ? <HomePage /> : children}
+            </Layout>
+          );
+        }}
+      />
+    </ThemeProvider>
+  );
+};
 
 export default StyleGuideRenderer;

@@ -374,6 +374,18 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render Fullscreen icon', () => {
+    const Component = icons.Fullscreen;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render FullscreenExit icon', () => {
+    const Component = icons.FullscreenExit;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Menu icon', () => {
     const Component = icons.Menu;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);

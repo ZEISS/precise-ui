@@ -17,7 +17,7 @@ module.exports = {
   propsParser: rdts.withDefaultConfig().parse,
   assetsDir: path.resolve(__dirname, 'docs', 'assets'),
   skipComponentsWithoutExample: true,
-  pagePerSection: false,
+  pagePerSection: true,
   compilerConfig: {
     transforms: {
       dangerousTaggedTemplateString: true,
@@ -55,12 +55,12 @@ module.exports = {
     },
     {
       name: 'Components',
-      sectionDepth: 1,
+      sectionDepth: 0,
       components: path.resolve(__dirname, 'src/components/**/*.tsx'),
     },
     {
       name: 'Styleguide',
-      sectionDepth: 1,
+      sectionDepth: 0,
       content: path.resolve(__dirname, './docs/styleguide/index.md'),
       sections: [
         {
@@ -79,7 +79,7 @@ module.exports = {
     },
     {
       name: 'Theme',
-      sectionDepth: 1,
+      sectionDepth: 0,
       content: path.resolve(__dirname, './docs/theme/index.md'),
       sections: [
         {

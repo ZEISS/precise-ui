@@ -302,8 +302,8 @@ class DynamicTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: 'v'.repeat(10).split('').map(m => ({
-        value: `${m}${~~(Math.random() * 20)}`,
+      data: 'v'.repeat(10).split('').map((m,i) => ({
+        value: `${m}${i}`,
       })),
       columns: {
         value: "Value",
