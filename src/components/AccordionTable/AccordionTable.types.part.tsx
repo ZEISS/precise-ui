@@ -67,7 +67,7 @@ export interface AccordionTableChangeEvent<T> {
   data: T;
 }
 
-export interface AccordionTableProps<T> extends TableProps<T> {
+export interface AccordionTableProps<T> extends TableProps<T>, AccordionCardLabels {
   /**
    * The currently selected index - used in the controlled mode.
    */
@@ -92,14 +92,6 @@ export interface AccordionTableProps<T> extends TableProps<T> {
    * Custom group renderer for the group header.
    */
   groupRenderer?(e: AccordionGroupRenderEvent<T>): React.ReactChild;
-  /**
-   * Label for button 'Open' in card view.
-   */
-  openLabel?: string;
-  /**
-   * Label for button 'Close' in card view.
-   */
-  closeLabel?: string;
   /**
    * This attribute indicates that multiple rows can be expanded.
    * If it is not specified, then only one row can be expanded at a time.

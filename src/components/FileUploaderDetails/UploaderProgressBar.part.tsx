@@ -8,7 +8,7 @@ import { ActionLink } from '../ActionLink';
 import { ProgressBar } from '../ProgressBar';
 import { StatusIcon } from './StatusIcon.part';
 import { distance } from '../../distance';
-import { getPropLabel } from '../../utils/labels';
+import { getPropLabel, UploaderProgressBarLabels, ComponentLabel } from '../../utils/labels';
 
 const ProgressBarWrapper = reStyled.div(
   ({ theme }) => `
@@ -54,8 +54,8 @@ export interface StatusBarProps {
   iconName: IconName;
   count: number;
   title: string;
-  itemPluralLabel?: string;
-  itemSingularLabel?: string;
+  itemPluralLabel?: ComponentLabel;
+  itemSingularLabel?: ComponentLabel;
 }
 
 const StatusLabel = styled.span`
@@ -72,7 +72,7 @@ function StatusBar({ status, count, iconName, title, ...props }: StatusBarProps)
   );
 }
 
-export interface UploaderProgressBarProps {
+export interface UploaderProgressBarProps extends UploaderProgressBarLabels {
   /**
    * The total progress from 0 to 100.
    */
@@ -101,34 +101,6 @@ export interface UploaderProgressBarProps {
    * Number of files that have failed.
    */
   errors: number;
-  /**
-   * Optionally sets the label for showing multiple files in progress.
-   */
-  itemPluralLabel?: string;
-  /**
-   * Optionally sets the label for showing a single files in progress.
-   */
-  itemSingularLabel?: string;
-  /**
-   * Optionally sets the label for scanning.
-   */
-  uploadScanningLabel?: string;
-  /**
-   * Optionally sets the label for standard progress.
-   */
-  uploadProgressLabel?: string;
-  /**
-   * Optionally sets the label for a successful upload.
-   */
-  uploadSuccessLabel?: string;
-  /**
-   * Optionally sets the label for an upload error.
-   */
-  uploadErrorLabel?: string;
-  /**
-   * Optionally sets the label for the view details button.
-   */
-  viewDetailsLabel?: string;
 }
 
 export const UploaderProgressBar: React.SFC<UploaderProgressBarProps> = ({

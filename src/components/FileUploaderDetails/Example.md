@@ -54,6 +54,15 @@ class FileUploaderDetailsExample extends React.Component {
     }
   };
 
+  getErrorLabel(error) {
+    switch(error) {
+      case 'upload_204':
+        return 'Localized message for error 204';
+      default:
+        return `No localization for`;
+    }
+  }
+
   onClose() {
     this.files = {};
   };
@@ -67,6 +76,7 @@ class FileUploaderDetailsExample extends React.Component {
           onUpload={this.uploadStart}
           onCancel={this.cancelUpload}
           onClose={this.onClose}
+          errorTableUploadLabel={this.getErrorLabel}
         />
         <FileUploader
           multiple

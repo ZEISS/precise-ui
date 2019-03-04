@@ -1,5 +1,6 @@
 import { StandardProps } from '../../common';
 import { ModeProviderProps } from '../../hoc/withResponsiveMode';
+import { AccordionCardLabels } from '../../utils/labels';
 
 export type AccordionMode = 'card' | 'accordion';
 
@@ -36,7 +37,7 @@ export interface AccordionCardRendererEvent {
   open: boolean;
 }
 
-export interface AccordionProps extends StandardProps, ModeProviderProps<AccordionMode> {
+export interface AccordionProps extends StandardProps, ModeProviderProps<AccordionMode>, AccordionCardLabels {
   /**
    * The currently selected index - used in the controlled mode.
    * This has precedence over defaultSelectedIndex
@@ -54,14 +55,6 @@ export interface AccordionProps extends StandardProps, ModeProviderProps<Accordi
    * The children, usually passed as a collection of AccordionTab elements.
    */
   children?: React.ReactNode;
-  /**
-   * Label for button 'Open' in card view.
-   */
-  openLabel?: string;
-  /**
-   * Label for button 'Close' in card view.
-   */
-  closeLabel?: string;
   /**
    * This Boolean attribute indicates that multiple items can be expanded.
    * If it is not specified, then only one item can be expanded at a time.
