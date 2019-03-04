@@ -7,60 +7,29 @@ import {
   StyledFunction,
   ThemedStyledProps,
   InterpolationFunction,
-  StyledComponentClass,
 } from 'styled-components';
 import { light } from './../themes';
-import { PreciseTheme, PreciseFullTheme, Omit, Component } from '../common';
+import { PreciseTheme, PreciseFullTheme, Omit } from '../common';
 
 const {
   default: styled,
   css,
   keyframes,
-  injectGlobal,
+  createGlobalStyle,
+  withTheme,
   ThemeProvider,
+  ThemeConsumer,
+  ThemeContext,
+  isStyledComponent,
+  ServerStyleSheet,
+  StyleSheetManager,
 } = styledComponents as ThemedStyledComponentsModule<PreciseTheme>;
 
 export type WithOptionalTheme<P extends { theme?: T }, T> = Omit<P, 'theme'> & { theme?: T };
 
-export interface WithTheme {
-  <P extends { theme?: PreciseTheme }>(component: Component<P>): React.ComponentClass<
-    WithOptionalTheme<P, PreciseTheme>
-  >;
-}
-
 export type PreciseInterpolationFunc<Props, Theme> = InterpolationFunction<
   ThemedStyledProps<WithOptionalTheme<Props, Theme>, Theme>
 >;
-
-export type ThemedStyledFactories<FullTheme, PropsTheme> = {
-  [TTag in keyof JSX.IntrinsicElements]: <P>(
-    interpolation: PreciseInterpolationFunc<P, FullTheme>,
-  ) => StyledComponentClass<P, PropsTheme>
-};
-
-export interface ThemedStyled<FullTheme, PropsTheme> extends ThemedStyledFactories<FullTheme, PropsTheme> {
-  <P, TTag extends keyof JSX.IntrinsicElements>(tag: TTag): (
-    interpolation: PreciseInterpolationFunc<P, FullTheme>,
-  ) => StyledComponentClass<P & JSX.IntrinsicElements[TTag], PropsTheme>;
-
-  <P, O>(component: StyledComponentClass<P, PropsTheme, O>): (
-    interpolation: PreciseInterpolationFunc<P, FullTheme>,
-  ) => StyledComponentClass<P, PropsTheme, O>;
-
-  <P extends { theme: PropsTheme }>(component: React.ComponentClass<P>): (
-    interpolation: PreciseInterpolationFunc<P, FullTheme>,
-  ) => StyledComponentClass<P, PropsTheme>;
-
-  <P>(component: React.ComponentClass<P>): (
-    interpolation: PreciseInterpolationFunc<P, FullTheme>,
-  ) => StyledComponentClass<P, PropsTheme>;
-
-  <P extends { [prop: string]: any; theme?: PropsTheme }>(component: React.StatelessComponent<P>): (
-    interpolation: PreciseInterpolationFunc<P, FullTheme>,
-  ) => StyledComponentClass<P, PropsTheme>;
-}
-
-export const withTheme = styledComponents.withTheme as WithTheme;
 
 /*
   Helper function which insures that theme is always available in the interpolation callback.
@@ -99,7 +68,8 @@ export const themed = <Props>(interpolation: PreciseInterpolationFunc<Props, Pre
     `,
   );
 */
-export const reStyled = <ThemedStyled<PreciseFullTheme, PreciseTheme>>function(component: any) {
+
+export const reStyled = function(component: any) {
   return (interpolation: any) => styled(component)`
     ${themed(interpolation)};
   `;
@@ -109,5 +79,18 @@ for (const domElement of Object.keys(styled)) {
   reStyled[domElement] = reStyled(domElement as keyof JSX.IntrinsicElements);
 }
 
-export { css, keyframes, injectGlobal, ThemeProvider, ThemedCssFunction, StyledFunction, StyledComponentClass };
+export {
+  css,
+  keyframes,
+  createGlobalStyle,
+  withTheme,
+  ThemeProvider,
+  ThemeConsumer,
+  ThemeContext,
+  isStyledComponent,
+  ServerStyleSheet,
+  StyleSheetManager,
+  ThemedCssFunction,
+};
+
 export default styled;

@@ -54,7 +54,7 @@ const AccordionItem = styled.li`
   }
 `;
 
-const AccordionItemHeaderContainer = styled<AccordionItemProps, 'div'>('div')`
+const AccordionItemHeaderContainer = styled('div')<AccordionItemProps>`
   transition: background-color ${animationDuration} ${animationFunction};
   background-color: ${themed(props => (props.active ? props.theme.ui2 : props.theme.ui1))};
 `;
@@ -66,11 +66,11 @@ const AccordionItemHeader = styled.div`
   padding: ${themed(({ theme }) => theme.accordionPadding)};
 `;
 
-const StyledIcon = styled(Icon)`
+const StyledIcon = styled(Icon)<StyledArrowProps>`
   font-size: ${remCalc('18px')};
   margin-right: ${distance.medium};
   transition: transform 0.2s ${animationFunction};
-  transform: ${({ isRotated }: StyledArrowProps) => `rotate(${isRotated ? 90 : 0}deg)`};
+  transform: ${({ isRotated }) => `rotate(${isRotated ? 90 : 0}deg)`};
 `;
 
 const AccordionItemContent = styled.div`

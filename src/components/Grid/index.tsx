@@ -106,16 +106,16 @@ function computeIeRows(rows: Array<string>, spacing: [string, string]) {
   return rows.join(' ');
 }
 
-const BasicGridLayout = styled.div`
+const BasicGridLayout = styled.div<GridLayoutProps>`
   height: 100%;
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: ${(props: GridLayoutProps) => props.columns.join(' ')};
-  grid-template-columns: ${(props: GridLayoutProps) => props.columns.join(' ')};
-  -ms-grid-rows: ${(props: GridLayoutProps) => computeIeRows(props.rows, props.spacing)};
-  grid-template-rows: ${(props: GridLayoutProps) => props.rows.join(' ')};
-  grid-gap: ${(props: GridLayoutProps) => props.spacing.join(' ')};
+  -ms-grid-columns: ${props => props.columns.join(' ')};
+  grid-template-columns: ${props => props.columns.join(' ')};
+  -ms-grid-rows: ${props => computeIeRows(props.rows, props.spacing)};
+  grid-template-rows: ${props => props.rows.join(' ')};
+  grid-gap: ${props => props.spacing.join(' ')};
 `;
 
 const GridLayout = styled(BasicGridLayout)`
@@ -139,13 +139,13 @@ interface GridCellProps {
   cf: number;
 }
 
-const GridCell = styled.div`
-  -ms-grid-row: ${(props: GridCellProps) => props.ri + 1};
-  -ms-grid-row-span: ${(props: GridCellProps) => props.rf - props.ri};
-  grid-row: ${(props: GridCellProps) => props.ri + 1} / span ${(props: GridCellProps) => props.rf - props.ri};
-  -ms-grid-column: ${(props: GridCellProps) => props.ci + 1};
-  -ms-grid-column-span: ${(props: GridCellProps) => props.cf - props.ci};
-  grid-column: ${(props: GridCellProps) => props.ci + 1} / span ${(props: GridCellProps) => props.cf - props.ci};
+const GridCell = styled.div<GridCellProps>`
+  -ms-grid-row: ${props => props.ri + 1};
+  -ms-grid-row-span: ${props => props.rf - props.ri};
+  grid-row: ${props => props.ri + 1} / span ${props => props.rf - props.ri};
+  -ms-grid-column: ${props => props.ci + 1};
+  -ms-grid-column-span: ${props => props.cf - props.ci};
+  grid-column: ${props => props.ci + 1} / span ${props => props.cf - props.ci};
   max-width: 100%;
 `;
 
@@ -299,7 +299,7 @@ export class Grid extends React.PureComponent<GridProps, GridState> {
     }
 
     return (
-      <StyledGridWrapper innerRef={innerRef}>
+      <StyledGridWrapper ref={innerRef}>
         {!!unused.length && (
           <ShadowGrid rows={layout.rows} columns={layout.columns} spacing={selectedSpacing}>
             {unused}

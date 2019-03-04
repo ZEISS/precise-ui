@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled } from '../../utils/styled';
+import styled from '../../utils/styled';
 
 export interface ExpanderProps {
   /**
@@ -55,7 +55,7 @@ function getExpandingContainerHeight(status?: TransitionStatus, expandedHeight?:
   }
 }
 
-const ExpandingContainer = reStyled<ExpandingContainerProps, 'div'>('div')(
+const ExpandingContainer = styled('div')<ExpandingContainerProps>(
   ({ status, expandedHeight, collapsedHeight, timeout }) => `
     overflow: hidden;
     transition-duration: ${timeout}ms;
@@ -161,7 +161,7 @@ export class Expander extends React.Component<ExpanderProps, ExpanderState> {
     if (status !== 'unmounted') {
       return (
         <ExpandingContainer
-          innerRef={this.setContainer}
+          ref={this.setContainer}
           expandedHeight={contentRef ? contentRef.clientHeight : undefined}
           collapsedHeight={collapsedHeight}
           status={status}

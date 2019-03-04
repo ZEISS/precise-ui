@@ -25,7 +25,7 @@ export interface TextFieldLabelProps {
   multiline: boolean;
 }
 
-const TextFieldLabelText = styled<TextFieldLabelProps, 'span'>('span')`
+const TextFieldLabelText = styled('span')<TextFieldLabelProps>`
   display: block;
   font-size: ${remCalc('12px')};
   line-height: ${remCalc('16px')};

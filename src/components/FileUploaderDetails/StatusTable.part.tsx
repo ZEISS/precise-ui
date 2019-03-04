@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled, themed } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { getPropLabel, StatusTableLabels } from '../../utils/labels';
 import { Icon } from '../Icon';
 import { ProgressBar } from '../ProgressBar';
@@ -21,14 +21,16 @@ const StyledTable = styled(Table)`
   table-layout: fixed;
 `;
 
-const ProgressTableRow = reStyled.tr(
-  ({ theme }) => `
-  border-bottom: 1px solid ${theme.ui4};
-  padding: 0;
-  &:hover {
-    background: ${theme.ui3};
-  }
-`,
+const ProgressTableRow = styled.tr(
+  themed(
+    ({ theme }) => css`
+      border-bottom: 1px solid ${theme.ui4};
+      padding: 0;
+      &:hover {
+        background: ${theme.ui3};
+      }
+    `,
+  ),
 );
 
 const ProgressTableCell = styled.td`
@@ -47,13 +49,15 @@ export interface StyledTableRowProps {
   hasProgressBar: boolean;
 }
 
-export const StyledTableRow = reStyled.tr<StyledTableRowProps>(
-  ({ hasProgressBar, theme }) => `
-  border-bottom: ${hasProgressBar ? 0 : 1}px solid ${theme.ui4};
-  &:hover {
-    background: ${theme.ui4};
-  }
-`,
+export const StyledTableRow = styled.tr<StyledTableRowProps>(
+  themed(
+    ({ hasProgressBar, theme }) => css`
+      border-bottom: ${hasProgressBar ? 0 : 1}px solid ${theme.ui4};
+      &:hover {
+        background: ${theme.ui4};
+      }
+    `,
+  ),
 );
 
 export interface StatusTableProps extends StandardProps, StatusTableLabels {

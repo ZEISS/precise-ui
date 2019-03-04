@@ -89,9 +89,9 @@ const StyledInteractiveList = styled(InteractiveList)`
   }
 `;
 
-const DropdownButton = styled.div`
-  color: ${(props: DropdownButtonProps) => (props.open ? colors.cyan : colors.grey2)};
-  font-size: ${({ menuSize }: DropdownButtonProps) => (menuSize === 'small' ? '14px' : '16px')};
+const DropdownButton = styled.div<DropdownButtonProps>`
+  color: ${props => (props.open ? colors.cyan : colors.grey2)};
+  font-size: ${({ menuSize }) => (menuSize === 'small' ? '14px' : '16px')};
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -178,7 +178,7 @@ class DropdownMenuInt extends React.PureComponent<DropdownMenuProps, DropdownMen
     const { open } = this.state;
 
     return (
-      <RootContainer innerRef={this.setContainer}>
+      <RootContainer ref={this.setContainer}>
         <Flyout
           open={open}
           noGutter

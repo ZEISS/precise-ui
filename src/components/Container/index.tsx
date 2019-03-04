@@ -45,10 +45,10 @@ const FluidContainer = css`
   width: 100%;
 `;
 
-const FixedWidthContainer = css`
+const FixedWidthContainer = css<FixedWidthContainerProps>`
   position: relative;
-  ${(props: FixedWidthContainerProps) => getAlignMargin(props.align)};
-  max-width: ${(props: FixedWidthContainerProps) => props.maxWidth}px;
+  ${props => getAlignMargin(props.align)};
+  max-width: ${props => props.maxWidth}px;
   padding: 0 ${distance.medium};
 `;
 
@@ -66,5 +66,5 @@ export const Container: React.SFC<ContainerProps> = ({
   maxWidth = undefined,
   innerRef,
   ...rest
-}) => <StyledContainer align={align} maxWidth={maxWidth} innerRef={innerRef} {...rest} />;
+}) => <StyledContainer align={align} maxWidth={maxWidth} ref={innerRef} {...rest} />;
 Container.displayName = 'Container';

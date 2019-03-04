@@ -124,11 +124,11 @@ const EnabledCalendarCell = css`
   }
 `;
 
-const CalendarCell = styled.button`
+const CalendarCell = styled.button<StyledCalendarCell>`
   ${CommonCalendarCell};
   background: ${themed(({ theme }) => theme.ui2)};
   font-size: 1rem;
-  ${({ disabled }: StyledCalendarCell) => (disabled ? DisabledCalendarCell : EnabledCalendarCell)};
+  ${({ disabled }) => (disabled ? DisabledCalendarCell : EnabledCalendarCell)};
 `;
 
 const WeekHeaderCell = styled.div`

@@ -28,8 +28,8 @@ const BlockLabel = css`
   display: block;
 `;
 
-const Styledlabel = styled.label`
-  ${(props: LabelProps) => (props.attached ? AttachedLabel : BlockLabel)};
+const Styledlabel = styled.label<LabelProps>`
+  ${props => (props.attached ? AttachedLabel : BlockLabel)};
 `;
 
 /**

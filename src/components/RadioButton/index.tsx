@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled, themed } from '../../utils/styled';
+import styled, { themed } from '../../utils/styled';
 import { Label } from '../Label';
 import { StandardProps } from '../../common';
 import { InputError } from '../InputError';
@@ -65,7 +65,7 @@ interface RadioButtonCircleProps {
   theme: any;
 }
 
-const RadioButtonContainer = styled<RadioButtonContainerProps, 'div'>('div')`
+const RadioButtonContainer = styled('div')<RadioButtonContainerProps>`
   position: relative;
   display: inline-block;
   opacity: ${props => (props.disabled ? '0.5' : '1.0')};
@@ -76,7 +76,7 @@ const RadioButtonContainer = styled<RadioButtonContainerProps, 'div'>('div')`
   }
 `;
 
-const RadioButtonCircle = reStyled.div(
+const RadioButtonCircle = styled.div(
   ({ theme: { ui0, ui5 } }) => `
   outline: 0;
   display: inline-block;
@@ -98,7 +98,7 @@ const RadioButtonCircle = reStyled.div(
 `,
 );
 
-const SelectMark = styled<RadioButtonCircleProps, 'div'>('div')`
+const SelectMark = styled('div')<RadioButtonCircleProps>`
   width: 0.5em;
   height: 0.5em;
   border-radius: 50%;

@@ -60,7 +60,7 @@ interface StyledInputProps {
   valid?: boolean;
 }
 
-const StyledInput = styled<StyledInputProps, 'input'>('input')`
+const StyledInput = styled('input')<StyledInputProps>`
   box-sizing: content-box;
   box-shadow: none;
   border: none;
@@ -84,7 +84,7 @@ interface InputContainerProps {
   tagRenderer: boolean;
 }
 
-const InputContainer = styled<InputContainerProps, 'div'>('div')`
+const InputContainer = styled('div')<InputContainerProps>`
   display: inline;
   padding-bottom: ${({ tagRenderer }) => (!tagRenderer ? `${distance.small}` : '0')};
 `;
@@ -371,7 +371,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
         <StyledInput
           theme={theme}
           disabled={disabled}
-          innerRef={this.setContainer}
+          ref={this.setContainer}
           type="text"
           value={inputValue}
           onChange={this.inputChanged}

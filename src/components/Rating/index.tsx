@@ -65,12 +65,12 @@ const SetAnimation = keyframes`
   }
 `;
 
-const RatingElement = styled.span`
+const RatingElement = styled.span<RatingElementProps>`
   display: inline-block;
-  cursor: ${(props: RatingElementProps) => (props.disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
 
   & + & {
-    padding-left: ${(props: RatingElementProps) => (props.size === 'medium' ? distance.small : distance.xsmall)};
+    padding-left: ${props => (props.size === 'medium' ? distance.small : distance.xsmall)};
   }
 `;
 

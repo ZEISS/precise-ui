@@ -102,7 +102,7 @@ export class Tooltip extends React.Component<TooltipProps, TooltipState> {
 
     return (
       <TooltipContainer
-        innerRef={this.setTargetRef}
+        ref={this.setTargetRef}
         onFocus={this.onMouseOver}
         onBlur={this.onMouseOut}
         onMouseOver={this.onMouseOver}

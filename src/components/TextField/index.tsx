@@ -69,7 +69,7 @@ const TextFieldWrapper = styled(StackPanel)`
   display: flex;
 `;
 
-const TextFieldArea = styled<TextFieldAreaProps, 'textarea'>('textarea')`
+const TextFieldArea = styled('textarea')<TextFieldAreaProps>`
   color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text2))};
   border-radius: 0;
   font-size: ${remCalc('16px')};
@@ -258,7 +258,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
     const input =
       rows !== undefined || multiline ? (
         <TextFieldArea
-          innerRef={this.setTextFieldNode}
+          ref={this.setTextFieldNode}
           onInput={this.changeHeight}
           border={border}
           rows={rows}
@@ -274,7 +274,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
         />
       ) : (
         <StyledInput
-          innerRef={el => this.setTextFieldNode(el as TextFieldInputNodeType)}
+          ref={el => this.setTextFieldNode(el as TextFieldInputNodeType)}
           theme={theme}
           disabled={disabled}
           labelShown={label !== undefined}

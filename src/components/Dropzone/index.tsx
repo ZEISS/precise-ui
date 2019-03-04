@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { showInputInfo } from '../../utils/input';
 import { FileImagePreview, StyledFileImagePreview, StyledFileItem, StyledFileList } from '../../quarks';
 import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
@@ -55,27 +55,28 @@ interface StyledDropzoneProps extends React.HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
 }
 
-const StyledDropzone = reStyled.div<StyledDropzoneProps>(
-  ({ disabled, active, theme }) => `
-  width: 100%;
-  height: 100%;
-  min-height: 150px;
-  margin: 0 auto;
-  padding: ${distance.medium};
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: ${disabled ? theme.textDisabled : theme.text3};
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  background-color: ${disabled ? theme.ui3 : active ? theme.ui2 : theme.ui1};
-  border: 1px
-    ${disabled ? `solid ${theme.ui1}` : `dashed ${active ? theme.ui0 : theme.ui4}`};
-  cursor: ${disabled ? 'no-drop' : 'pointer'};
-  box-sizing: border-box;
-`,
+const StyledDropzone = styled.div<StyledDropzoneProps>(
+  themed(
+    ({ disabled, active, theme }) => css`
+      width: 100%;
+      height: 100%;
+      min-height: 150px;
+      margin: 0 auto;
+      padding: ${distance.medium};
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      color: ${disabled ? theme.textDisabled : theme.text3};
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-color: ${disabled ? theme.ui3 : active ? theme.ui2 : theme.ui1};
+      border: 1px ${disabled ? `solid ${theme.ui1}` : `dashed ${active ? theme.ui0 : theme.ui4}`};
+      cursor: ${disabled ? 'no-drop' : 'pointer'};
+      box-sizing: border-box;
+    `,
+  ),
 );
 
 const DropzoneLabel = styled.div`
@@ -98,9 +99,9 @@ interface StyledActionProps {
   disabled?: boolean;
 }
 
-const StyledAction = styled.div`
+const StyledAction = styled.div<StyledActionProps>`
   margin-top: ${distance.small};
-  visibility: ${(props: StyledActionProps) => (props.active || props.disabled ? 'hidden' : 'visible')};
+  visibility: ${props => (props.active || props.disabled ? 'hidden' : 'visible')};
 `;
 
 const FileInput = styled.input`
@@ -356,7 +357,7 @@ class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, Drop
               {message}
               <FileInput
                 disabled={disabled}
-                innerRef={this.setInputRef}
+                ref={this.setInputRef}
                 type="file"
                 multiple={multiple}
                 value=""

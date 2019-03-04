@@ -122,11 +122,11 @@ interface PickerSurfaceProps {
   height: string;
 }
 
-const PickerSurface = styled(InteractiveSurface)`
-  width: ${(props: PickerSurfaceProps) => props.width};
-  height: ${(props: PickerSurfaceProps) => props.height};
+const PickerSurface = styled(InteractiveSurface)<PickerSurfaceProps>`
+  width: ${props => props.width};
+  height: ${props => props.height};
   position: relative;
-  background-color: ${(props: PickerSurfaceProps) => props.color};
+  background-color: ${props => props.color};
 `;
 
 const PickerSaturation = styled.div`
@@ -185,9 +185,9 @@ interface ColorIndicatorProps {
   active: boolean;
 }
 
-const ColorIndicator = styled(IndicatorKnob)`
-  box-shadow: 0 0 20px -5px ${(props: ColorIndicatorProps) => (props.disabled ? 'transparent' : '#000')};
-  border: 2px solid ${(props: ColorIndicatorProps) => (props.disabled ? '#ccc' : props.active ? '#eee' : '#fff')};
+const ColorIndicator = styled(IndicatorKnob)<ColorIndicatorProps>`
+  box-shadow: 0 0 20px -5px ${props => (props.disabled ? 'transparent' : '#000')};
+  border: 2px solid ${props => (props.disabled ? '#ccc' : props.active ? '#eee' : '#fff')};
 `;
 
 class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextProps, ColorPickerState> {

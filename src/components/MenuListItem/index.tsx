@@ -30,7 +30,7 @@ const ActiveStyle = css`
   }
 `;
 
-const StyledMenuListItem = styled<MenuListItemProps, 'li'>('li')`
+const StyledMenuListItem = styled('li')<MenuListItemProps>`
   display: flex;
   position: relative;
   align-items: center;

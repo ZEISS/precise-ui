@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as colors from '../../colors';
-import styled, { reStyled, themed, css } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { NotificationType } from '../Notifications/types';
 import { distance } from '../../distance';
 import { StandardProps, PreciseFullTheme } from '../../common';
@@ -80,8 +80,9 @@ interface LayoutProps {
   inline: boolean;
 }
 
-const StyledNotification = reStyled.div<StyledNotificationProps>(
-  ({ closed, type, theme }) => `
+const StyledNotification = styled.div<StyledNotificationProps>(
+  themed(
+    ({ closed, type, theme }) => `
   position: relative;
   display: ${closed ? 'none' : 'flex'};
   background: #fff;
@@ -92,10 +93,12 @@ const StyledNotification = reStyled.div<StyledNotificationProps>(
   box-shadow: ${theme.notificationBoxShadow};
   border-width: ${theme.notificationBorderWidth};
 `,
+  ),
 );
 
-const StyledTitle = reStyled.div(
-  ({ theme: { notificationTitleFontSize, notificationTitleLineHeight } }) => `
+const StyledTitle = styled.div(
+  themed(
+    ({ theme: { notificationTitleFontSize, notificationTitleLineHeight } }) => `
   font-family: inherit;
   font-weight: 500;
   font-size: ${notificationTitleFontSize};
@@ -103,10 +106,12 @@ const StyledTitle = reStyled.div(
   color: #404040;
   margin-right: ${distance.small};
 `,
+  ),
 );
 
-const StyledContent = reStyled.div<LayoutProps>(
-  ({ inline, theme: { notificationTextFontSize, notificationTextLineHeight } }) => `
+const StyledContent = styled.div<LayoutProps>(
+  themed(
+    ({ inline, theme: { notificationTextFontSize, notificationTextLineHeight } }) => `
   display: ${inline ? 'inline' : 'block'};
   font-family: inherit;
   font-weight: normal;
@@ -115,10 +120,11 @@ const StyledContent = reStyled.div<LayoutProps>(
   color: #404040;
   margin-right: ${distance.small};
 `,
+  ),
 );
 
-const ActionContainer = styled.div`
-  display: ${(props: LayoutProps) => (props.inline ? 'inline' : 'block')};
+const ActionContainer = styled('div')<LayoutProps>`
+  display: ${props => (props.inline ? 'inline' : 'block')};
 `;
 
 const CloseButton = styled(IconLink)`
@@ -142,15 +148,17 @@ const LayoutInline = css`
   display: block;
 `;
 
-const ContentContainer = styled.div`
-  ${(props: LayoutProps) => (props.inline ? LayoutInline : LayoutVertical)};
+const ContentContainer = styled.div<LayoutProps>`
+  ${props => (props.inline ? LayoutInline : LayoutVertical)};
   margin-right: ${distance.medium};
 `;
 
-const IconContainer = reStyled.div(
-  ({ theme: { notificationIconMarginRight } }) => `
-  margin-right: ${notificationIconMarginRight};
-`,
+const IconContainer = styled.div(
+  themed(
+    ({ theme: { notificationIconMarginRight } }) => css`
+      margin-right: ${notificationIconMarginRight};
+    `,
+  ),
 );
 
 interface StyledIconProps extends IconProps {
@@ -159,7 +167,7 @@ interface StyledIconProps extends IconProps {
 
 const StyledIconInt: React.SFC<StyledIconProps> = ({ type: _0, ...props }) => <Icon {...props} />;
 
-const StyledIcon = styled<StyledIconProps>(StyledIconInt)`
+const StyledIcon = styled(StyledIconInt)<StyledIconProps>`
   color: ${themed(props => getNotificationColor(props.type, props.theme))};
 `;
 

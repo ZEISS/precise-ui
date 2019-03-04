@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled, keyframes } from '../../utils/styled';
+import styled, { keyframes } from '../../utils/styled';
 import { StandardProps } from '../../common';
 import { Headline } from '../Headline';
 import { TextStyles } from '../../textStyles';
@@ -96,7 +96,7 @@ export interface StyledModalProps extends ModalProps {
   closing: boolean;
 }
 
-const StyledModal = reStyled<StyledModalProps, 'div'>('div')(
+const StyledModal = styled('div')<StyledModalProps>(
   ({ width, closing }) => `
     outline: none;
     color: ${dark};
@@ -123,7 +123,7 @@ export interface StyledBlockerProps extends BlockerProps {
   closing: boolean;
 }
 
-const StyledBlocker = reStyled<StyledBlockerProps>(({ closing, ...rest }: StyledBlockerProps) => <Blocker {...rest} />)(
+const StyledBlocker = styled(Blocker)<StyledBlockerProps>(
   ({ closing }) => `
   animation: ${
     closing ? OutAnimation() : BlockerInAnimation()
@@ -136,7 +136,7 @@ export interface ModalContentProps {
   minHeight?: string;
 }
 
-const ModalContent = reStyled.div<ModalContentProps>(
+const ModalContent = styled.div<ModalContentProps>(
   ({ minHeight }) => `
     position: relative;
     display: flex;
@@ -230,7 +230,9 @@ export class Modal extends React.PureComponent<ModalProps, ModalState> {
 /**
  * Styles the body of a modal dialog.
  */
-export const ModalBody: React.SFC<StandardProps> = props => <StyledModalBody {...props} />;
+export const ModalBody: React.FC<StandardProps & { children: React.ReactNode }> = props => (
+  <StyledModalBody {...props} />
+);
 ModalBody.displayName = 'ModalBody';
 
 /**

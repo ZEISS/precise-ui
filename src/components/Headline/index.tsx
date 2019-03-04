@@ -92,7 +92,7 @@ function getStyledHeadline(level: number) {
   return Headline;
 }
 
-const HeadlineContainer = styled<StyledHeadlineProps, 'div'>('div')`
+const HeadlineContainer = styled('div')<StyledHeadlineProps>`
   padding: ${themed(props => props.theme.headingsPadding || `0 ${distance.small} 0 0`)};
   font-size: ${props => getTextStyling(props, 'fontSize')};
   font-weight: ${props => getTextStyling(props, 'fontWeight')};

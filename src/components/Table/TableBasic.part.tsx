@@ -1,6 +1,6 @@
 import * as React from 'react';
 import memoize from 'memoize-one';
-import styled, { themed, css, reStyled } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { sortObjectList } from '../../utils/sort';
 import { distance } from '../../distance';
@@ -28,24 +28,26 @@ interface StyledTableProps {
   borderless?: boolean;
 }
 
-const StyledTable = reStyled.table<StyledTableProps>(
-  ({ theme, borderless, condensed }) => `
-    table-layout: ${theme.tableLayout};
-    border-collapse: collapse;
-    width: 100%;
-    color: ${theme.text6};
-    border: ${borderless ? 'none' : theme.tableBorder};
-    font-size: ${remCalc('14px')};
+const StyledTable = styled.table<StyledTableProps>(
+  themed(
+    ({ theme, borderless, condensed }) => css`
+      table-layout: ${theme.tableLayout};
+      border-collapse: collapse;
+      width: 100%;
+      color: ${theme.text6};
+      border: ${borderless ? 'none' : theme.tableBorder};
+      font-size: ${remCalc('14px')};
 
-    > thead > tr > th,
-    > tbody > tr > td {
-      padding: ${condensed ? `${distance.small} ${distance.large}` : theme.tableHeadPadding};
+      > thead > tr > th,
+      > tbody > tr > td {
+        padding: ${condensed ? `${distance.small} ${distance.large}` : theme.tableHeadPadding};
 
-      &:not(:last-child) {
-        padding-right: 0;
+        &:not(:last-child) {
+          padding-right: 0;
+        }
       }
-    }
-  `,
+    `,
+  ),
 );
 
 const StyledTableBody = styled.tbody``;
@@ -71,7 +73,7 @@ const StyledTableCell = styled.td`
   text-align: left;
 `;
 
-const StyledPlaceholderCell = StyledTableCell.extend`
+const StyledPlaceholderCell = styled(StyledTableCell)`
   text-align: center;
 `;
 

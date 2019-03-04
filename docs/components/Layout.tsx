@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled, transparentize, distance, colors, reStyled, Anchor } from '../../src';
+import { styled, transparentize, distance, colors, Anchor, themed } from '../../src';
 import { MobileMenu } from './MobileMenu';
 
 const tocColumnWidth = 200;
@@ -54,8 +54,9 @@ interface ContentColumn {
   hasSidebar: boolean;
 }
 
-const ContentColumn = reStyled<ContentColumn, 'div'>('div')(
-  ({ hasSidebar, theme }) => `
+const ContentColumn = styled('div')<ContentColumn>(
+  themed(
+    ({ hasSidebar, theme }) => `
     flex: 1;
     padding: ${distance.xxlarge} ${distance.xlarge};
     ${
@@ -65,6 +66,7 @@ const ContentColumn = reStyled<ContentColumn, 'div'>('div')(
       margin: 0 auto;`
     }
   `,
+  ),
 );
 
 const Info = styled.div`

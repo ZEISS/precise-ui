@@ -19,7 +19,7 @@ const VerticalHeaders = css`
   text-align: center;
 `;
 
-export const Headers = styled<HeadersProps, 'ul'>('ul')`
+export const Headers = styled('ul')<HeadersProps>`
   margin: 0 0 ${distance.xsmall};
   padding: 0;
   ${({ orientation }) => (orientation === 'horizontal' ? HorizontalHeaders : VerticalHeaders)};
@@ -41,7 +41,7 @@ const InactiveTab = css`
   }
 `;
 
-export const Header = styled<TabHeaderProps, 'li'>('li')`
+export const Header = styled('li')<TabHeaderProps>`
   padding: ${({ orientation }) => (orientation === 'vertical' ? remCalc(['8px', '48px']) : remCalc(['8px', '16px']))};
   position: relative;
   margin: 0;
@@ -59,8 +59,8 @@ export interface TabItemProps {
   active?: boolean;
 }
 
-export const ContentItem = styled.div`
-  ${(props: TabItemProps) => (props.active ? '' : 'display: none;')};
+export const ContentItem = styled.div<TabItemProps>`
+  ${props => (props.active ? '' : 'display: none;')};
 `;
 
 export const OverflowItems = styled.div`

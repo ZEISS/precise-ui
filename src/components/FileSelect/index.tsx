@@ -246,13 +246,7 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
         <Button onClick={this.openFilePicker} disabled={disabled} buttonStyle="secondary" type="button">
           {children}
         </Button>
-        <FileInput
-          innerRef={this.setInputRef}
-          type="file"
-          multiple={multiple}
-          onChange={this.addFileEntries}
-          value=""
-        />
+        <FileInput ref={this.setInputRef} type="file" multiple={multiple} onChange={this.addFileEntries} value="" />
         {value && value.length > 0 && (
           <StyledFileList>
             {value.map(file => (this.props.preview ? this.renderPreview(file) : this.renderItem(file)))}

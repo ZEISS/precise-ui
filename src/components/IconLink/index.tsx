@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { themed, reStyled } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { Anchor, AnchorProps } from '../Anchor';
 import { IconName, Icon, IconProps } from '../Icon';
 import { remCalc } from '../../utils/remCalc';
@@ -27,29 +27,31 @@ export interface StyledIconProps {
   iconOnly?: boolean;
 }
 
-const StyledAnchor = reStyled<StyledAnchorProps>(Anchor)(
-  ({ display, disabled, theme: { ui0, ui4 } }) => `
-  outline: none;
-  text-decoration: none;
-  color: ${disabled ? ui4 : ui0};
-  display: ${display};
-  font-size: 0;
-  vertical-align: middle;
-  cursor: ${disabled ? 'default' : 'pointer'};
+const StyledAnchor = styled(Anchor)<StyledAnchorProps>(
+  themed(
+    ({ display, disabled, theme: { ui0, ui4 } }) => css`
+      outline: none;
+      text-decoration: none;
+      color: ${disabled ? ui4 : ui0};
+      display: ${display};
+      font-size: 0;
+      vertical-align: middle;
+      cursor: ${disabled ? 'default' : 'pointer'};
 
-  &:hover,
-  &:hover * {
-    color: ${disabled ? ui4 : ocean};
-  }
+      &:hover,
+      &:hover * {
+        color: ${disabled ? ui4 : ocean};
+      }
 
-  &:focus,
-  &:focus * {
-    color: ${disabled ? ui4 : midnight};
-  }
-`,
+      &:focus,
+      &:focus * {
+        color: ${disabled ? ui4 : midnight};
+      }
+    `,
+  ),
 );
 
-const StyledIcon = styled<StyledIconProps & IconProps>(Icon)`
+const StyledIcon = styled(Icon)<StyledIconProps & IconProps>`
   color: ${themed(({ disabled, iconOnly, theme: { ui0, ui4, ui5 } }) => (disabled ? ui4 : iconOnly ? ui5 : ui0))};
   display: inline-block;
   vertical-align: middle;

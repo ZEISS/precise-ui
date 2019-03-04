@@ -134,7 +134,7 @@ const ActiveBullet = css`
   background-color: rgba(116, 118, 120, 1);
 `;
 
-const DefaultBullet = styled.div`
+const DefaultBullet = styled.div<BulletProps>`
   height: ${remCalc('12px')};
   width: ${remCalc('12px')};
   background-color: rgba(224, 225, 221, 1);
@@ -142,7 +142,7 @@ const DefaultBullet = styled.div`
   display: inline-block;
   cursor: pointer;
   margin: ${distance.xsmall};
-  ${(props: BulletProps) => (props.active ? ActiveBullet : '')};
+  ${props => (props.active ? ActiveBullet : '')};
 `;
 
 const PageItem = styled.div`
@@ -153,11 +153,11 @@ interface PagesContainerProps extends StandardProps {
   selectedIndex: number;
 }
 
-const PagesContainer = styled.div`
+const PagesContainer = styled.div<PagesContainerProps>`
   box-sizing: border-box;
   display: flex;
   position: relative;
-  left: ${(props: PagesContainerProps) => -props.selectedIndex * 100}%;
+  left: ${props => -props.selectedIndex * 100}%;
   transition: left ${animationDuration} ${animationFunction};
 `;
 
@@ -181,10 +181,10 @@ const Arrow = styled.button`
     vertical-align: middle;
   }
 `;
-const ArrowLeft = Arrow.extend`
+const ArrowLeft = styled(Arrow)`
   left: 8px;
 `;
-const ArrowRight = Arrow.extend`
+const ArrowRight = styled(Arrow)`
   right: 8px;
 `;
 
@@ -212,7 +212,7 @@ const defaultAutoPlayTime = 3000;
  */
 export class Carousel extends React.PureComponent<CarouselProps, CarouselState> {
   private selects: Array<() => void> = [];
-  private pagesContainer: HTMLDivElement;
+  private pagesContainer: HTMLDivElement | null;
   private autoPlayTimeout: any;
 
   constructor(props: CarouselProps) {
@@ -309,16 +309,18 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
       e.release();
     }
 
-    if (e.active) {
-      if (!dragStatus.isDragging) {
-        this.setState({ dragStatus: { isDragging: true, start: { x: e.x, y: e.y } } });
-        this.setDragStyle(this.pagesContainer);
+    if (this.pagesContainer) {
+      if (e.active) {
+        if (!dragStatus.isDragging) {
+          this.setState({ dragStatus: { isDragging: true, start: { x: e.x, y: e.y } } });
+          this.setDragStyle(this.pagesContainer);
+        }
+        this.pagesContainer.style.left = `${calcLeftShiftPercent(selectedIndex) + shift * 100}%`;
+      } else {
+        this.setState({ dragStatus: { isDragging: false, start: undefined } });
+        this.resetInitialStyle(this.pagesContainer);
+        this.checkPageChange(shift);
       }
-      this.pagesContainer.style.left = `${calcLeftShiftPercent(selectedIndex) + shift * 100}%`;
-    } else {
-      this.setState({ dragStatus: { isDragging: false, start: undefined } });
-      this.resetInitialStyle(this.pagesContainer);
-      this.checkPageChange(shift);
     }
   };
 
@@ -448,7 +450,7 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
       <RootContainer {...props} onKeyDown={this.handleKeyDown} tabIndex={0}>
         <Mask>
           <InteractiveSurface theme={theme} onChange={this.dragTile} opaque>
-            <PagesContainer innerRef={node => (this.pagesContainer = node)} selectedIndex={selectedIndex}>
+            <PagesContainer ref={node => (this.pagesContainer = node)} selectedIndex={selectedIndex}>
               {items}
             </PagesContainer>
           </InteractiveSurface>

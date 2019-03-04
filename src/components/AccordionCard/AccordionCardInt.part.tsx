@@ -1,8 +1,8 @@
 import * as React from 'react';
-import styled, { reStyled, StyledComponentClass } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { distance } from '../../distance';
-import { StandardProps, PreciseTheme } from '../../common';
+import { StandardProps } from '../../common';
 import { setLabels, getPropLabel, AccordionCardLabels } from '../../utils/labels';
 
 setLabels({
@@ -18,50 +18,54 @@ export interface ActiveProps {
   onClick?(e: React.MouseEvent): void;
 }
 
-const StyledContainer = reStyled<ActiveProps, 'div'>('div')(
-  ({
-    open,
-    theme: {
-      accordionCard: { borderColor, openedBorderColor },
-      text1,
-    },
-  }) => `
-  position: relative;
-  color: ${text1};
-  font-size: ${remCalc('16px')};
-  line-height: 22px;
-  border: 1px solid ${open ? openedBorderColor : borderColor};
-`,
+const StyledContainer = styled('div')<ActiveProps>(
+  themed(
+    ({
+      open,
+      theme: {
+        accordionCard: { borderColor, openedBorderColor },
+        text1,
+      },
+    }) => `
+      position: relative;
+      color: ${text1};
+      font-size: ${remCalc('16px')};
+      line-height: 22px;
+      border: 1px solid ${open ? openedBorderColor : borderColor};
+    `,
+  ),
 );
 
-const StyledHeaderContainer = reStyled<ActiveProps, 'div'>('div')(
-  ({
-    open,
-    theme: {
-      accordionCard: { headerPadding, openedHeaderBorderColor, openedHeaderBackground, headerBackground },
-    },
-  }) => `
-  padding: ${headerPadding};
-  background: ${open ? openedHeaderBackground : headerBackground};
-  border-bottom: ${open ? `1px solid ${openedHeaderBorderColor}` : 'none'};
-`,
+const StyledHeaderContainer = styled('div')<ActiveProps>(
+  themed(
+    ({
+      open,
+      theme: {
+        accordionCard: { headerPadding, openedHeaderBorderColor, openedHeaderBackground, headerBackground },
+      },
+    }) => `
+      padding: ${headerPadding};
+      background: ${open ? openedHeaderBackground : headerBackground};
+      border-bottom: ${open ? `1px solid ${openedHeaderBorderColor}` : 'none'};
+    `,
+  ),
 );
 
-export const StyledActionContainer: StyledComponentClass<ActiveProps, PreciseTheme, ActiveProps> = reStyled.div<
-  ActiveProps
->(
-  ({ open, theme: { ui0, ui1 } }) => `
-  text-align: center;
-  padding: ${distance.small} ${distance.medium};
-  cursor: pointer;
-  background: ${open ? ui1 : ui0};
-  border: ${open ? `1px solid ${ui0}` : 'none'};
-  margin: -1px -1px -1px -1px;
-  color: ${open ? ui0 : ui1};
-`,
+export const StyledActionContainer = styled.div<ActiveProps>(
+  themed(
+    ({ open, theme: { ui0, ui1 } }) => css`
+      text-align: center;
+      padding: ${distance.small} ${distance.medium};
+      cursor: pointer;
+      background: ${open ? ui1 : ui0};
+      border: ${open ? `1px solid ${ui0}` : 'none'};
+      margin: -1px -1px -1px -1px;
+      color: ${open ? ui0 : ui1};
+    `,
+  ),
 );
 
-const StyledDetailsContainerAnimator = styled<ActiveProps, 'div'>('div')`
+const StyledDetailsContainerAnimator = styled('div')<ActiveProps>`
   transition: all ${animationDuration} ${animationFunction};
   max-height: ${({ open }) => (open ? '10000px' : '0')};
   opacity: ${({ open }) => (open ? '1' : '0')};

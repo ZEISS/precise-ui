@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { ActionLink, Expander, styled, distance, Icon, ActionLinkProps, themed, reStyled } from '../../src';
+import { ActionLink, Expander, styled, distance, Icon, ActionLinkProps } from '../../src';
 
 // @ts-ignore
 import getUrl from 'react-styleguidist/lib/utils/getUrl';
+import { themed } from '../../src/utils/styled';
 
 interface ComponentDefinition {
   hasExamples: boolean;
@@ -36,8 +37,9 @@ interface MenuItemProps extends ActionLinkProps {
 
 const NavItems = styled.div``;
 
-const MenuItem = reStyled<MenuItemProps>(ActionLink)(
-  ({ selected, theme }) => `
+const MenuItem = styled(ActionLink)<MenuItemProps>(
+  themed(
+    ({ selected, theme }) => `
   position: relative;
   display: block;
   display: flex;
@@ -57,6 +59,7 @@ const MenuItem = reStyled<MenuItemProps>(ActionLink)(
   font-weight: 500;
   color: ${theme.text1};
 `,
+  ),
 );
 
 const SubMenuContainer = styled.div`
@@ -65,7 +68,7 @@ const SubMenuContainer = styled.div`
   }
 `;
 
-const SubMenuItem = reStyled(MenuItem)(
+const SubMenuItem = styled(MenuItem)(
   ({ selected, theme }) => `
     padding: 0 ${distance.large};
     font-weight: 400;
