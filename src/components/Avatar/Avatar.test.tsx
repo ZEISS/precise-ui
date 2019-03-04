@@ -5,8 +5,8 @@ import 'jest-styled-components';
 
 describe('<Avatar />', () => {
   it('should render an empty <Avatar> component', () => {
-    const wrapper = enzyme.shallow(<Avatar />);
-    expect(wrapper.text()).toBe('<styled.div />');
+    const wrapper = enzyme.mount(<Avatar />);
+    expect(wrapper.find('div').length > 0).toBeTruthy();
   });
 
   it('should render an <Avatar> with an image', () => {

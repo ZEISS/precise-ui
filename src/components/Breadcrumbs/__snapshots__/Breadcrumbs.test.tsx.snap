@@ -3,97 +3,365 @@
 exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several children 1`] = `
 <Breadcrumbs>
   <styled.div>
-    <div
-      className="sc-ckVGcZ jFsIxQ"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-ckVGcZ",
+            "isStatic": false,
+            "lastClassName": "jFsIxQ",
+            "rules": Array [
+              "
+  font-size: ",
+              "0.875rem",
+              ";
+  color: ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-ckVGcZ",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      <span
-        key="0"
+      <div
+        className="sc-ckVGcZ jFsIxQ"
       >
-        <Breadcrumb
-          title="First"
+        <span
+          key="0"
+        >
+          <Breadcrumb
+            title="First"
+          >
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": true,
+                      "lastClassName": "TpIwH",
+                      "rules": Array [
+                        "
+  display: inline-block;
+  color: ",
+                        "rgba(64,64,64,1)",
+                        ";
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="sc-bwzfXH TpIwH"
+                >
+                  First
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Breadcrumb>
+        </span>
+        <span
+          key="1"
         >
           <styled.span>
-            <span
-              className="sc-bwzfXH TpIwH"
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-jKJlTe",
+                    "isStatic": true,
+                    "lastClassName": "bxATnl",
+                    "rules": Array [
+                      "
+  padding: 0 ",
+                      "1rem",
+                      ";
+  color: ",
+                      "rgba(64,64,64,1)",
+                      ";
+  font-size: inherit;
+  &:after {
+    content: '/';
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-jKJlTe",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              First
-            </span>
+              <span
+                className="sc-jKJlTe bxATnl"
+              />
+            </StyledComponent>
           </styled.span>
-        </Breadcrumb>
-      </span>
-      <span
-        key="1"
-      >
-        <styled.span>
-          <span
-            className="sc-jKJlTe bxATnl"
-          />
-        </styled.span>
-      </span>
-      <span
-        key="2"
-      >
-        <Breadcrumb
-          title="Second"
+        </span>
+        <span
+          key="2"
+        >
+          <Breadcrumb
+            title="Second"
+          >
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": true,
+                      "lastClassName": "TpIwH",
+                      "rules": Array [
+                        "
+  display: inline-block;
+  color: ",
+                        "rgba(64,64,64,1)",
+                        ";
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="sc-bwzfXH TpIwH"
+                >
+                  Second
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Breadcrumb>
+        </span>
+        <span
+          key="3"
         >
           <styled.span>
-            <span
-              className="sc-bwzfXH TpIwH"
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-jKJlTe",
+                    "isStatic": true,
+                    "lastClassName": "bxATnl",
+                    "rules": Array [
+                      "
+  padding: 0 ",
+                      "1rem",
+                      ";
+  color: ",
+                      "rgba(64,64,64,1)",
+                      ";
+  font-size: inherit;
+  &:after {
+    content: '/';
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-jKJlTe",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              Second
-            </span>
+              <span
+                className="sc-jKJlTe bxATnl"
+              />
+            </StyledComponent>
           </styled.span>
-        </Breadcrumb>
-      </span>
-      <span
-        key="3"
-      >
-        <styled.span>
-          <span
-            className="sc-jKJlTe bxATnl"
-          />
-        </styled.span>
-      </span>
-      <span
-        key="4"
-      >
-        <Breadcrumb
-          title="Third"
+        </span>
+        <span
+          key="4"
+        >
+          <Breadcrumb
+            title="Third"
+          >
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": true,
+                      "lastClassName": "TpIwH",
+                      "rules": Array [
+                        "
+  display: inline-block;
+  color: ",
+                        "rgba(64,64,64,1)",
+                        ";
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="sc-bwzfXH TpIwH"
+                >
+                  Third
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Breadcrumb>
+        </span>
+        <span
+          key="5"
         >
           <styled.span>
-            <span
-              className="sc-bwzfXH TpIwH"
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-jKJlTe",
+                    "isStatic": true,
+                    "lastClassName": "bxATnl",
+                    "rules": Array [
+                      "
+  padding: 0 ",
+                      "1rem",
+                      ";
+  color: ",
+                      "rgba(64,64,64,1)",
+                      ";
+  font-size: inherit;
+  &:after {
+    content: '/';
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-jKJlTe",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              Third
-            </span>
+              <span
+                className="sc-jKJlTe bxATnl"
+              />
+            </StyledComponent>
           </styled.span>
-        </Breadcrumb>
-      </span>
-      <span
-        key="5"
-      >
-        <styled.span>
-          <span
-            className="sc-jKJlTe bxATnl"
-          />
-        </styled.span>
-      </span>
-      <span
-        key="6"
-      >
-        <Breadcrumb
-          title="Last"
+        </span>
+        <span
+          key="6"
         >
-          <styled.span>
-            <span
-              className="sc-bwzfXH TpIwH"
-            >
-              Last
-            </span>
-          </styled.span>
-        </Breadcrumb>
-      </span>
-    </div>
+          <Breadcrumb
+            title="Last"
+          >
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": true,
+                      "lastClassName": "TpIwH",
+                      "rules": Array [
+                        "
+  display: inline-block;
+  color: ",
+                        "rgba(64,64,64,1)",
+                        ";
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="sc-bwzfXH TpIwH"
+                >
+                  Last
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Breadcrumb>
+        </span>
+      </div>
+    </StyledComponent>
   </styled.div>
 </Breadcrumbs>
 `;

@@ -2,7 +2,6 @@
 
 exports[`<Tooltip /> should render a tooltip over the complex component 1`] = `
 <styled.div
-  innerRef={[Function]}
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseOut={[Function]}
@@ -41,7 +40,6 @@ exports[`<Tooltip /> should render a tooltip over the complex component 1`] = `
 
 exports[`<Tooltip /> should render a tooltip over the complex content 1`] = `
 <styled.div
-  innerRef={[Function]}
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseOut={[Function]}
@@ -99,7 +97,6 @@ exports[`<Tooltip /> should render a tooltip over the complex content 1`] = `
 
 exports[`<Tooltip /> should render a tooltip with custom position (auto) 1`] = `
 <styled.div
-  innerRef={[Function]}
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseOut={[Function]}
@@ -136,7 +133,6 @@ exports[`<Tooltip /> should render a tooltip with custom position (auto) 1`] = `
 
 exports[`<Tooltip /> should render a tooltip with simple text content over the wrapped component 1`] = `
 <styled.div
-  innerRef={[Function]}
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseOut={[Function]}
@@ -173,7 +169,6 @@ exports[`<Tooltip /> should render a tooltip with simple text content over the w
 
 exports[`<Tooltip /> should render an open tooltip (controlled state) 1`] = `
 <styled.div
-  innerRef={[Function]}
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseOut={[Function]}
@@ -210,7 +205,6 @@ exports[`<Tooltip /> should render an open tooltip (controlled state) 1`] = `
 
 exports[`<Tooltip /> should render an open tooltip with custom position (left) 1`] = `
 <styled.div
-  innerRef={[Function]}
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseOut={[Function]}
@@ -248,7 +242,6 @@ exports[`<Tooltip /> should render an open tooltip with custom position (left) 1
 
 exports[`<Tooltip /> should render an open tooltip with custom position (top) 1`] = `
 <styled.div
-  innerRef={[Function]}
   onBlur={[Function]}
   onFocus={[Function]}
   onMouseOut={[Function]}

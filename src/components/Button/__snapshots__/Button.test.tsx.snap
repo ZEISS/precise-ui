@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Button /> should render a <Button> with some content component 1`] = `
-<Styled(Component)
+<Styled(Anchor)
   href="foo"
   tagName="button"
 >
@@ -10,22 +10,22 @@ exports[`<Button /> should render a <Button> with some content component 1`] = `
       Content
     </div>
   </styled.div>
-</Styled(Component)>
+</Styled(Anchor)>
 `;
 
 exports[`<Button /> should render an active <Button> with some content 1`] = `
-<Styled(Component)
+<Styled(Anchor)
   active={true}
   tagName="button"
 >
   <styled.div>
     Content
   </styled.div>
-</Styled(Component)>
+</Styled(Anchor)>
 `;
 
 exports[`<Button /> should render an active disabled <Button> with some content 1`] = `
-<Styled(Component)
+<Styled(Anchor)
   active={true}
   disabled={true}
   tagName="button"
@@ -33,5 +33,5 @@ exports[`<Button /> should render an active disabled <Button> with some content 
   <styled.div>
     Content
   </styled.div>
-</Styled(Component)>
+</Styled(Anchor)>
 `;

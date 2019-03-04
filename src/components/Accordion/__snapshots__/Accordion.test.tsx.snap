@@ -34,328 +34,1161 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
           }
         >
           <styled.div>
-            <div
-              className="sc-htpNat KtFsv"
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": true,
+                    "lastClassName": "KtFsv",
+                    "rules": Array [],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              <styled.ul>
-                <ul
-                  className="sc-bxivhb gXAmgN"
-                >
-                  <styled.li
-                    key="item-0"
+              <div
+                className="sc-htpNat KtFsv"
+              >
+                <styled.ul>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bxivhb",
+                          "isStatic": true,
+                          "lastClassName": "gXAmgN",
+                          "rules": Array [
+                            "
+  padding: 0;
+  list-style: none;
+",
+                          ],
+                        },
+                        "displayName": "styled.ul",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-bxivhb",
+                        "target": "ul",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
                   >
-                    <li
-                      className="sc-ifAKCX jjhVVq"
+                    <ul
+                      className="sc-bxivhb gXAmgN"
                     >
-                      <styled.div
-                        active={false}
+                      <styled.li
+                        key="item-0"
                       >
-                        <div
-                          className="sc-EHOje gABgLv"
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "jjhVVq",
+                                "rules": Array [
+                                  "
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  text-align: left;
+  overflow: visible;
+  border-top: ",
+                                  [Function],
+                                  ";
+  box-sizing: border-box;
+  font-size: ",
+                                  "0.875rem",
+                                  ";
+  line-height: 18px;
+  color: ",
+                                  [Function],
+                                  ";
+
+  &:last-child {
+    border-bottom: ",
+                                  [Function],
+                                  ";
+  }
+",
+                                ],
+                              },
+                              "displayName": "styled.li",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "li",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                         >
-                          <styled.div
-                            onClick={[Function]}
+                          <li
+                            className="sc-ifAKCX jjhVVq"
                           >
-                            <div
-                              className="sc-bZQynM cfpJkI"
-                              onClick={[Function]}
+                            <styled.div
+                              active={false}
                             >
-                              <Styled(Icon)
-                                isRotated={false}
-                                name="KeyboardArrowRight"
+                              <StyledComponent
+                                active={false}
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": false,
+                                      "lastClassName": "gABgLv",
+                                      "rules": Array [
+                                        "
+  transition: background-color ",
+                                        "0.3s",
+                                        " ",
+                                        "cubic-bezier(0, 0, 0.25, 1)",
+                                        ";
+  background-color: ",
+                                        [Function],
+                                        ";
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
                               >
-                                <Icon
-                                  className="sc-gzVnrw tmBcj"
-                                  isRotated={false}
-                                  name="KeyboardArrowRight"
+                                <div
+                                  className="sc-EHOje gABgLv"
                                 >
-                                  <styled.i
-                                    className="sc-gzVnrw tmBcj"
-                                    isRotated={false}
+                                  <styled.div
+                                    onClick={[Function]}
                                   >
-                                    <i
-                                      className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
-                                    >
-                                      <KeyboardArrowRight
-                                        height="1em"
-                                        style={
-                                          Object {
-                                            "fill": "currentColor",
-                                            "stroke": undefined,
-                                          }
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-bZQynM",
+                                            "isStatic": false,
+                                            "lastClassName": "cfpJkI",
+                                            "rules": Array [
+                                              "
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: ",
+                                              [Function],
+                                              ";
+",
+                                            ],
+                                          },
+                                          "displayName": "styled.div",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-bZQynM",
+                                          "target": "div",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
                                         }
-                                        viewBox="0 0 24 24"
-                                        width="1em"
+                                      }
+                                      forwardedRef={null}
+                                      onClick={[Function]}
+                                    >
+                                      <div
+                                        className="sc-bZQynM cfpJkI"
+                                        onClick={[Function]}
                                       >
-                                        <svg
-                                          height="1em"
-                                          style={
-                                            Object {
-                                              "fill": "currentColor",
-                                              "stroke": undefined,
-                                            }
-                                          }
-                                          viewBox="0 0 24 24"
-                                          width="1em"
+                                        <Styled(Icon)
+                                          isRotated={false}
+                                          name="KeyboardArrowRight"
                                         >
-                                          <path
-                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
-                                          />
-                                        </svg>
-                                      </KeyboardArrowRight>
-                                    </i>
-                                  </styled.i>
-                                </Icon>
-                              </Styled(Icon)>
-                              First
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                      <Expander
-                        expand={false}
-                        timeout={300}
-                        unmountOnExit={true}
-                      />
-                    </li>
-                  </styled.li>
-                  <styled.li
-                    key="item-1"
-                  >
-                    <li
-                      className="sc-ifAKCX jjhVVq"
-                    >
-                      <styled.div
-                        active={false}
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-gzVnrw",
+                                                  "isStatic": false,
+                                                  "lastClassName": "tmBcj",
+                                                  "rules": Array [
+                                                    "
+  font-size: ",
+                                                    "1.125rem",
+                                                    ";
+  margin-right: ",
+                                                    "1rem",
+                                                    ";
+  transition: transform 0.2s ",
+                                                    "cubic-bezier(0, 0, 0.25, 1)",
+                                                    ";
+  transform: ",
+                                                    [Function],
+                                                    ";
+",
+                                                  ],
+                                                },
+                                                "displayName": "Styled(Icon)",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-gzVnrw",
+                                                "target": [Function],
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                                Symbol(Symbol.hasInstance): [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            isRotated={false}
+                                            name="KeyboardArrowRight"
+                                          >
+                                            <Icon
+                                              className="sc-gzVnrw tmBcj"
+                                              isRotated={false}
+                                              name="KeyboardArrowRight"
+                                            >
+                                              <styled.i
+                                                className="sc-gzVnrw tmBcj"
+                                                isRotated={false}
+                                              >
+                                                <StyledComponent
+                                                  className="sc-gzVnrw tmBcj"
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-bdVaJa",
+                                                        "isStatic": true,
+                                                        "lastClassName": "cIqOZO",
+                                                        "rules": Array [
+                                                          "
+  display: inline-block;
+
+  > svg {
+    float: left;
+  }
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.i",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-bdVaJa",
+                                                      "target": "i",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  isRotated={false}
+                                                >
+                                                  <i
+                                                    className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                                  >
+                                                    <KeyboardArrowRight
+                                                      height="1em"
+                                                      style={
+                                                        Object {
+                                                          "fill": "currentColor",
+                                                          "stroke": undefined,
+                                                        }
+                                                      }
+                                                      viewBox="0 0 24 24"
+                                                      width="1em"
+                                                    >
+                                                      <svg
+                                                        height="1em"
+                                                        style={
+                                                          Object {
+                                                            "fill": "currentColor",
+                                                            "stroke": undefined,
+                                                          }
+                                                        }
+                                                        viewBox="0 0 24 24"
+                                                        width="1em"
+                                                      >
+                                                        <path
+                                                          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                                        />
+                                                      </svg>
+                                                    </KeyboardArrowRight>
+                                                  </i>
+                                                </StyledComponent>
+                                              </styled.i>
+                                            </Icon>
+                                          </StyledComponent>
+                                        </Styled(Icon)>
+                                        First
+                                      </div>
+                                    </StyledComponent>
+                                  </styled.div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                            <Expander
+                              expand={false}
+                              timeout={300}
+                              unmountOnExit={true}
+                            />
+                          </li>
+                        </StyledComponent>
+                      </styled.li>
+                      <styled.li
+                        key="item-1"
                       >
-                        <div
-                          className="sc-EHOje gABgLv"
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "jjhVVq",
+                                "rules": Array [
+                                  "
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  text-align: left;
+  overflow: visible;
+  border-top: ",
+                                  [Function],
+                                  ";
+  box-sizing: border-box;
+  font-size: ",
+                                  "0.875rem",
+                                  ";
+  line-height: 18px;
+  color: ",
+                                  [Function],
+                                  ";
+
+  &:last-child {
+    border-bottom: ",
+                                  [Function],
+                                  ";
+  }
+",
+                                ],
+                              },
+                              "displayName": "styled.li",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "li",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                         >
-                          <styled.div
-                            onClick={[Function]}
+                          <li
+                            className="sc-ifAKCX jjhVVq"
                           >
-                            <div
-                              className="sc-bZQynM cfpJkI"
-                              onClick={[Function]}
+                            <styled.div
+                              active={false}
                             >
-                              <Styled(Icon)
-                                isRotated={false}
-                                name="KeyboardArrowRight"
+                              <StyledComponent
+                                active={false}
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": false,
+                                      "lastClassName": "gABgLv",
+                                      "rules": Array [
+                                        "
+  transition: background-color ",
+                                        "0.3s",
+                                        " ",
+                                        "cubic-bezier(0, 0, 0.25, 1)",
+                                        ";
+  background-color: ",
+                                        [Function],
+                                        ";
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
                               >
-                                <Icon
-                                  className="sc-gzVnrw tmBcj"
-                                  isRotated={false}
-                                  name="KeyboardArrowRight"
+                                <div
+                                  className="sc-EHOje gABgLv"
                                 >
-                                  <styled.i
-                                    className="sc-gzVnrw tmBcj"
-                                    isRotated={false}
+                                  <styled.div
+                                    onClick={[Function]}
                                   >
-                                    <i
-                                      className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
-                                    >
-                                      <KeyboardArrowRight
-                                        height="1em"
-                                        style={
-                                          Object {
-                                            "fill": "currentColor",
-                                            "stroke": undefined,
-                                          }
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-bZQynM",
+                                            "isStatic": false,
+                                            "lastClassName": "cfpJkI",
+                                            "rules": Array [
+                                              "
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: ",
+                                              [Function],
+                                              ";
+",
+                                            ],
+                                          },
+                                          "displayName": "styled.div",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-bZQynM",
+                                          "target": "div",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
                                         }
-                                        viewBox="0 0 24 24"
-                                        width="1em"
+                                      }
+                                      forwardedRef={null}
+                                      onClick={[Function]}
+                                    >
+                                      <div
+                                        className="sc-bZQynM cfpJkI"
+                                        onClick={[Function]}
                                       >
-                                        <svg
-                                          height="1em"
-                                          style={
-                                            Object {
-                                              "fill": "currentColor",
-                                              "stroke": undefined,
-                                            }
-                                          }
-                                          viewBox="0 0 24 24"
-                                          width="1em"
+                                        <Styled(Icon)
+                                          isRotated={false}
+                                          name="KeyboardArrowRight"
                                         >
-                                          <path
-                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
-                                          />
-                                        </svg>
-                                      </KeyboardArrowRight>
-                                    </i>
-                                  </styled.i>
-                                </Icon>
-                              </Styled(Icon)>
-                              Second
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                      <Expander
-                        expand={false}
-                        timeout={300}
-                        unmountOnExit={true}
-                      />
-                    </li>
-                  </styled.li>
-                  <styled.li
-                    key="item-2"
-                  >
-                    <li
-                      className="sc-ifAKCX jjhVVq"
-                    >
-                      <styled.div
-                        active={false}
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-gzVnrw",
+                                                  "isStatic": false,
+                                                  "lastClassName": "tmBcj",
+                                                  "rules": Array [
+                                                    "
+  font-size: ",
+                                                    "1.125rem",
+                                                    ";
+  margin-right: ",
+                                                    "1rem",
+                                                    ";
+  transition: transform 0.2s ",
+                                                    "cubic-bezier(0, 0, 0.25, 1)",
+                                                    ";
+  transform: ",
+                                                    [Function],
+                                                    ";
+",
+                                                  ],
+                                                },
+                                                "displayName": "Styled(Icon)",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-gzVnrw",
+                                                "target": [Function],
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                                Symbol(Symbol.hasInstance): [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            isRotated={false}
+                                            name="KeyboardArrowRight"
+                                          >
+                                            <Icon
+                                              className="sc-gzVnrw tmBcj"
+                                              isRotated={false}
+                                              name="KeyboardArrowRight"
+                                            >
+                                              <styled.i
+                                                className="sc-gzVnrw tmBcj"
+                                                isRotated={false}
+                                              >
+                                                <StyledComponent
+                                                  className="sc-gzVnrw tmBcj"
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-bdVaJa",
+                                                        "isStatic": true,
+                                                        "lastClassName": "cIqOZO",
+                                                        "rules": Array [
+                                                          "
+  display: inline-block;
+
+  > svg {
+    float: left;
+  }
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.i",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-bdVaJa",
+                                                      "target": "i",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  isRotated={false}
+                                                >
+                                                  <i
+                                                    className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                                  >
+                                                    <KeyboardArrowRight
+                                                      height="1em"
+                                                      style={
+                                                        Object {
+                                                          "fill": "currentColor",
+                                                          "stroke": undefined,
+                                                        }
+                                                      }
+                                                      viewBox="0 0 24 24"
+                                                      width="1em"
+                                                    >
+                                                      <svg
+                                                        height="1em"
+                                                        style={
+                                                          Object {
+                                                            "fill": "currentColor",
+                                                            "stroke": undefined,
+                                                          }
+                                                        }
+                                                        viewBox="0 0 24 24"
+                                                        width="1em"
+                                                      >
+                                                        <path
+                                                          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                                        />
+                                                      </svg>
+                                                    </KeyboardArrowRight>
+                                                  </i>
+                                                </StyledComponent>
+                                              </styled.i>
+                                            </Icon>
+                                          </StyledComponent>
+                                        </Styled(Icon)>
+                                        Second
+                                      </div>
+                                    </StyledComponent>
+                                  </styled.div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                            <Expander
+                              expand={false}
+                              timeout={300}
+                              unmountOnExit={true}
+                            />
+                          </li>
+                        </StyledComponent>
+                      </styled.li>
+                      <styled.li
+                        key="item-2"
                       >
-                        <div
-                          className="sc-EHOje gABgLv"
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "jjhVVq",
+                                "rules": Array [
+                                  "
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  text-align: left;
+  overflow: visible;
+  border-top: ",
+                                  [Function],
+                                  ";
+  box-sizing: border-box;
+  font-size: ",
+                                  "0.875rem",
+                                  ";
+  line-height: 18px;
+  color: ",
+                                  [Function],
+                                  ";
+
+  &:last-child {
+    border-bottom: ",
+                                  [Function],
+                                  ";
+  }
+",
+                                ],
+                              },
+                              "displayName": "styled.li",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "li",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                         >
-                          <styled.div
-                            onClick={[Function]}
+                          <li
+                            className="sc-ifAKCX jjhVVq"
                           >
-                            <div
-                              className="sc-bZQynM cfpJkI"
-                              onClick={[Function]}
+                            <styled.div
+                              active={false}
                             >
-                              <Styled(Icon)
-                                isRotated={false}
-                                name="KeyboardArrowRight"
+                              <StyledComponent
+                                active={false}
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": false,
+                                      "lastClassName": "gABgLv",
+                                      "rules": Array [
+                                        "
+  transition: background-color ",
+                                        "0.3s",
+                                        " ",
+                                        "cubic-bezier(0, 0, 0.25, 1)",
+                                        ";
+  background-color: ",
+                                        [Function],
+                                        ";
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
                               >
-                                <Icon
-                                  className="sc-gzVnrw tmBcj"
-                                  isRotated={false}
-                                  name="KeyboardArrowRight"
+                                <div
+                                  className="sc-EHOje gABgLv"
                                 >
-                                  <styled.i
-                                    className="sc-gzVnrw tmBcj"
-                                    isRotated={false}
+                                  <styled.div
+                                    onClick={[Function]}
                                   >
-                                    <i
-                                      className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
-                                    >
-                                      <KeyboardArrowRight
-                                        height="1em"
-                                        style={
-                                          Object {
-                                            "fill": "currentColor",
-                                            "stroke": undefined,
-                                          }
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-bZQynM",
+                                            "isStatic": false,
+                                            "lastClassName": "cfpJkI",
+                                            "rules": Array [
+                                              "
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: ",
+                                              [Function],
+                                              ";
+",
+                                            ],
+                                          },
+                                          "displayName": "styled.div",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-bZQynM",
+                                          "target": "div",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
                                         }
-                                        viewBox="0 0 24 24"
-                                        width="1em"
+                                      }
+                                      forwardedRef={null}
+                                      onClick={[Function]}
+                                    >
+                                      <div
+                                        className="sc-bZQynM cfpJkI"
+                                        onClick={[Function]}
                                       >
-                                        <svg
-                                          height="1em"
-                                          style={
-                                            Object {
-                                              "fill": "currentColor",
-                                              "stroke": undefined,
-                                            }
-                                          }
-                                          viewBox="0 0 24 24"
-                                          width="1em"
+                                        <Styled(Icon)
+                                          isRotated={false}
+                                          name="KeyboardArrowRight"
                                         >
-                                          <path
-                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
-                                          />
-                                        </svg>
-                                      </KeyboardArrowRight>
-                                    </i>
-                                  </styled.i>
-                                </Icon>
-                              </Styled(Icon)>
-                              Third
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                      <Expander
-                        expand={false}
-                        timeout={300}
-                        unmountOnExit={true}
-                      />
-                    </li>
-                  </styled.li>
-                  <styled.li
-                    key="item-3"
-                  >
-                    <li
-                      className="sc-ifAKCX jjhVVq"
-                    >
-                      <styled.div
-                        active={false}
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-gzVnrw",
+                                                  "isStatic": false,
+                                                  "lastClassName": "tmBcj",
+                                                  "rules": Array [
+                                                    "
+  font-size: ",
+                                                    "1.125rem",
+                                                    ";
+  margin-right: ",
+                                                    "1rem",
+                                                    ";
+  transition: transform 0.2s ",
+                                                    "cubic-bezier(0, 0, 0.25, 1)",
+                                                    ";
+  transform: ",
+                                                    [Function],
+                                                    ";
+",
+                                                  ],
+                                                },
+                                                "displayName": "Styled(Icon)",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-gzVnrw",
+                                                "target": [Function],
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                                Symbol(Symbol.hasInstance): [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            isRotated={false}
+                                            name="KeyboardArrowRight"
+                                          >
+                                            <Icon
+                                              className="sc-gzVnrw tmBcj"
+                                              isRotated={false}
+                                              name="KeyboardArrowRight"
+                                            >
+                                              <styled.i
+                                                className="sc-gzVnrw tmBcj"
+                                                isRotated={false}
+                                              >
+                                                <StyledComponent
+                                                  className="sc-gzVnrw tmBcj"
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-bdVaJa",
+                                                        "isStatic": true,
+                                                        "lastClassName": "cIqOZO",
+                                                        "rules": Array [
+                                                          "
+  display: inline-block;
+
+  > svg {
+    float: left;
+  }
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.i",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-bdVaJa",
+                                                      "target": "i",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  isRotated={false}
+                                                >
+                                                  <i
+                                                    className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                                  >
+                                                    <KeyboardArrowRight
+                                                      height="1em"
+                                                      style={
+                                                        Object {
+                                                          "fill": "currentColor",
+                                                          "stroke": undefined,
+                                                        }
+                                                      }
+                                                      viewBox="0 0 24 24"
+                                                      width="1em"
+                                                    >
+                                                      <svg
+                                                        height="1em"
+                                                        style={
+                                                          Object {
+                                                            "fill": "currentColor",
+                                                            "stroke": undefined,
+                                                          }
+                                                        }
+                                                        viewBox="0 0 24 24"
+                                                        width="1em"
+                                                      >
+                                                        <path
+                                                          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                                        />
+                                                      </svg>
+                                                    </KeyboardArrowRight>
+                                                  </i>
+                                                </StyledComponent>
+                                              </styled.i>
+                                            </Icon>
+                                          </StyledComponent>
+                                        </Styled(Icon)>
+                                        Third
+                                      </div>
+                                    </StyledComponent>
+                                  </styled.div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                            <Expander
+                              expand={false}
+                              timeout={300}
+                              unmountOnExit={true}
+                            />
+                          </li>
+                        </StyledComponent>
+                      </styled.li>
+                      <styled.li
+                        key="item-3"
                       >
-                        <div
-                          className="sc-EHOje gABgLv"
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "jjhVVq",
+                                "rules": Array [
+                                  "
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  text-align: left;
+  overflow: visible;
+  border-top: ",
+                                  [Function],
+                                  ";
+  box-sizing: border-box;
+  font-size: ",
+                                  "0.875rem",
+                                  ";
+  line-height: 18px;
+  color: ",
+                                  [Function],
+                                  ";
+
+  &:last-child {
+    border-bottom: ",
+                                  [Function],
+                                  ";
+  }
+",
+                                ],
+                              },
+                              "displayName": "styled.li",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "li",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
                         >
-                          <styled.div
-                            onClick={[Function]}
+                          <li
+                            className="sc-ifAKCX jjhVVq"
                           >
-                            <div
-                              className="sc-bZQynM cfpJkI"
-                              onClick={[Function]}
+                            <styled.div
+                              active={false}
                             >
-                              <Styled(Icon)
-                                isRotated={false}
-                                name="KeyboardArrowRight"
+                              <StyledComponent
+                                active={false}
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": false,
+                                      "lastClassName": "gABgLv",
+                                      "rules": Array [
+                                        "
+  transition: background-color ",
+                                        "0.3s",
+                                        " ",
+                                        "cubic-bezier(0, 0, 0.25, 1)",
+                                        ";
+  background-color: ",
+                                        [Function],
+                                        ";
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
                               >
-                                <Icon
-                                  className="sc-gzVnrw tmBcj"
-                                  isRotated={false}
-                                  name="KeyboardArrowRight"
+                                <div
+                                  className="sc-EHOje gABgLv"
                                 >
-                                  <styled.i
-                                    className="sc-gzVnrw tmBcj"
-                                    isRotated={false}
+                                  <styled.div
+                                    onClick={[Function]}
                                   >
-                                    <i
-                                      className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
-                                    >
-                                      <KeyboardArrowRight
-                                        height="1em"
-                                        style={
-                                          Object {
-                                            "fill": "currentColor",
-                                            "stroke": undefined,
-                                          }
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-bZQynM",
+                                            "isStatic": false,
+                                            "lastClassName": "cfpJkI",
+                                            "rules": Array [
+                                              "
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: ",
+                                              [Function],
+                                              ";
+",
+                                            ],
+                                          },
+                                          "displayName": "styled.div",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-bZQynM",
+                                          "target": "div",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
                                         }
-                                        viewBox="0 0 24 24"
-                                        width="1em"
+                                      }
+                                      forwardedRef={null}
+                                      onClick={[Function]}
+                                    >
+                                      <div
+                                        className="sc-bZQynM cfpJkI"
+                                        onClick={[Function]}
                                       >
-                                        <svg
-                                          height="1em"
-                                          style={
-                                            Object {
-                                              "fill": "currentColor",
-                                              "stroke": undefined,
-                                            }
-                                          }
-                                          viewBox="0 0 24 24"
-                                          width="1em"
+                                        <Styled(Icon)
+                                          isRotated={false}
+                                          name="KeyboardArrowRight"
                                         >
-                                          <path
-                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
-                                          />
-                                        </svg>
-                                      </KeyboardArrowRight>
-                                    </i>
-                                  </styled.i>
-                                </Icon>
-                              </Styled(Icon)>
-                              Last
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                      <Expander
-                        expand={false}
-                        timeout={300}
-                        unmountOnExit={true}
-                      />
-                    </li>
-                  </styled.li>
-                </ul>
-              </styled.ul>
-            </div>
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-gzVnrw",
+                                                  "isStatic": false,
+                                                  "lastClassName": "tmBcj",
+                                                  "rules": Array [
+                                                    "
+  font-size: ",
+                                                    "1.125rem",
+                                                    ";
+  margin-right: ",
+                                                    "1rem",
+                                                    ";
+  transition: transform 0.2s ",
+                                                    "cubic-bezier(0, 0, 0.25, 1)",
+                                                    ";
+  transform: ",
+                                                    [Function],
+                                                    ";
+",
+                                                  ],
+                                                },
+                                                "displayName": "Styled(Icon)",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-gzVnrw",
+                                                "target": [Function],
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                                Symbol(Symbol.hasInstance): [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            isRotated={false}
+                                            name="KeyboardArrowRight"
+                                          >
+                                            <Icon
+                                              className="sc-gzVnrw tmBcj"
+                                              isRotated={false}
+                                              name="KeyboardArrowRight"
+                                            >
+                                              <styled.i
+                                                className="sc-gzVnrw tmBcj"
+                                                isRotated={false}
+                                              >
+                                                <StyledComponent
+                                                  className="sc-gzVnrw tmBcj"
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-bdVaJa",
+                                                        "isStatic": true,
+                                                        "lastClassName": "cIqOZO",
+                                                        "rules": Array [
+                                                          "
+  display: inline-block;
+
+  > svg {
+    float: left;
+  }
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.i",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-bdVaJa",
+                                                      "target": "i",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  isRotated={false}
+                                                >
+                                                  <i
+                                                    className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                                  >
+                                                    <KeyboardArrowRight
+                                                      height="1em"
+                                                      style={
+                                                        Object {
+                                                          "fill": "currentColor",
+                                                          "stroke": undefined,
+                                                        }
+                                                      }
+                                                      viewBox="0 0 24 24"
+                                                      width="1em"
+                                                    >
+                                                      <svg
+                                                        height="1em"
+                                                        style={
+                                                          Object {
+                                                            "fill": "currentColor",
+                                                            "stroke": undefined,
+                                                          }
+                                                        }
+                                                        viewBox="0 0 24 24"
+                                                        width="1em"
+                                                      >
+                                                        <path
+                                                          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                                        />
+                                                      </svg>
+                                                    </KeyboardArrowRight>
+                                                  </i>
+                                                </StyledComponent>
+                                              </styled.i>
+                                            </Icon>
+                                          </StyledComponent>
+                                        </Styled(Icon)>
+                                        Last
+                                      </div>
+                                    </StyledComponent>
+                                  </styled.div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                            <Expander
+                              expand={false}
+                              timeout={300}
+                              unmountOnExit={true}
+                            />
+                          </li>
+                        </StyledComponent>
+                      </styled.li>
+                    </ul>
+                  </StyledComponent>
+                </styled.ul>
+              </div>
+            </StyledComponent>
           </styled.div>
         </AccordionBasic>
       </div>
@@ -403,287 +1236,988 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
           selectedIndex={1}
         >
           <styled.div>
-            <div
-              className="sc-htpNat KtFsv"
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": true,
+                    "lastClassName": "KtFsv",
+                    "rules": Array [],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              <styled.ul>
-                <ul
-                  className="sc-bxivhb gXAmgN"
-                >
-                  <styled.li
-                    key="item-0"
+              <div
+                className="sc-htpNat KtFsv"
+              >
+                <styled.ul>
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bxivhb",
+                          "isStatic": true,
+                          "lastClassName": "gXAmgN",
+                          "rules": Array [
+                            "
+  padding: 0;
+  list-style: none;
+",
+                          ],
+                        },
+                        "displayName": "styled.ul",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-bxivhb",
+                        "target": "ul",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
                   >
-                    <li
-                      className="sc-ifAKCX jjhVVq"
+                    <ul
+                      className="sc-bxivhb gXAmgN"
                     >
-                      <styled.div
-                        active={false}
+                      <styled.li
+                        key="item-0"
                       >
-                        <div
-                          className="sc-EHOje gABgLv"
-                        >
-                          <styled.div
-                            onClick={[Function]}
-                          >
-                            <div
-                              className="sc-bZQynM cfpJkI"
-                              onClick={[Function]}
-                            >
-                              <Styled(Icon)
-                                isRotated={false}
-                                name="KeyboardArrowRight"
-                              >
-                                <Icon
-                                  className="sc-gzVnrw tmBcj"
-                                  isRotated={false}
-                                  name="KeyboardArrowRight"
-                                >
-                                  <styled.i
-                                    className="sc-gzVnrw tmBcj"
-                                    isRotated={false}
-                                  >
-                                    <i
-                                      className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
-                                    >
-                                      <KeyboardArrowRight
-                                        height="1em"
-                                        style={
-                                          Object {
-                                            "fill": "currentColor",
-                                            "stroke": undefined,
-                                          }
-                                        }
-                                        viewBox="0 0 24 24"
-                                        width="1em"
-                                      >
-                                        <svg
-                                          height="1em"
-                                          style={
-                                            Object {
-                                              "fill": "currentColor",
-                                              "stroke": undefined,
-                                            }
-                                          }
-                                          viewBox="0 0 24 24"
-                                          width="1em"
-                                        >
-                                          <path
-                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
-                                          />
-                                        </svg>
-                                      </KeyboardArrowRight>
-                                    </i>
-                                  </styled.i>
-                                </Icon>
-                              </Styled(Icon)>
-                              First
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                      <Expander
-                        expand={false}
-                        timeout={300}
-                        unmountOnExit={true}
-                      />
-                    </li>
-                  </styled.li>
-                  <styled.li
-                    key="item-1"
-                  >
-                    <li
-                      className="sc-ifAKCX jjhVVq"
-                    >
-                      <styled.div
-                        active={true}
-                      >
-                        <div
-                          className="sc-EHOje cMsOjn"
-                        >
-                          <styled.div
-                            onClick={[Function]}
-                          >
-                            <div
-                              className="sc-bZQynM cfpJkI"
-                              onClick={[Function]}
-                            >
-                              <Styled(Icon)
-                                isRotated={true}
-                                name="KeyboardArrowRight"
-                              >
-                                <Icon
-                                  className="sc-gzVnrw hZquvk"
-                                  isRotated={true}
-                                  name="KeyboardArrowRight"
-                                >
-                                  <styled.i
-                                    className="sc-gzVnrw hZquvk"
-                                    isRotated={true}
-                                  >
-                                    <i
-                                      className="sc-gzVnrw hZquvk sc-bdVaJa cIqOZO"
-                                    >
-                                      <KeyboardArrowRight
-                                        height="1em"
-                                        style={
-                                          Object {
-                                            "fill": "currentColor",
-                                            "stroke": undefined,
-                                          }
-                                        }
-                                        viewBox="0 0 24 24"
-                                        width="1em"
-                                      >
-                                        <svg
-                                          height="1em"
-                                          style={
-                                            Object {
-                                              "fill": "currentColor",
-                                              "stroke": undefined,
-                                            }
-                                          }
-                                          viewBox="0 0 24 24"
-                                          width="1em"
-                                        >
-                                          <path
-                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
-                                          />
-                                        </svg>
-                                      </KeyboardArrowRight>
-                                    </i>
-                                  </styled.i>
-                                </Icon>
-                              </Styled(Icon)>
-                              Second
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                      <Expander
-                        expand={true}
-                        timeout={300}
-                        unmountOnExit={true}
-                      >
-                        <styled.div
-                          expandedHeight={0}
-                          innerRef={[Function]}
-                          status="entering"
-                          style={
+                        <StyledComponent
+                          forwardedComponent={
                             Object {
-                              "minHeight": undefined,
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "jjhVVq",
+                                "rules": Array [
+                                  "
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  text-align: left;
+  overflow: visible;
+  border-top: ",
+                                  [Function],
+                                  ";
+  box-sizing: border-box;
+  font-size: ",
+                                  "0.875rem",
+                                  ";
+  line-height: 18px;
+  color: ",
+                                  [Function],
+                                  ";
+
+  &:last-child {
+    border-bottom: ",
+                                  [Function],
+                                  ";
+  }
+",
+                                ],
+                              },
+                              "displayName": "styled.li",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "li",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
                             }
                           }
-                          timeout={300}
+                          forwardedRef={null}
                         >
-                          <div
-                            className="sc-bwzfXH gHSgQq"
-                            style={
-                              Object {
-                                "minHeight": undefined,
-                              }
-                            }
+                          <li
+                            className="sc-ifAKCX jjhVVq"
                           >
-                            <div>
-                              <styled.div>
+                            <styled.div
+                              active={false}
+                            >
+                              <StyledComponent
+                                active={false}
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": false,
+                                      "lastClassName": "gABgLv",
+                                      "rules": Array [
+                                        "
+  transition: background-color ",
+                                        "0.3s",
+                                        " ",
+                                        "cubic-bezier(0, 0, 0.25, 1)",
+                                        ";
+  background-color: ",
+                                        [Function],
+                                        ";
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                              >
                                 <div
-                                  className="sc-htoDjs fpYVDN"
+                                  className="sc-EHOje gABgLv"
                                 >
-                                  <AccordionTab
-                                    header="Second"
+                                  <styled.div
+                                    onClick={[Function]}
+                                  >
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-bZQynM",
+                                            "isStatic": false,
+                                            "lastClassName": "cfpJkI",
+                                            "rules": Array [
+                                              "
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: ",
+                                              [Function],
+                                              ";
+",
+                                            ],
+                                          },
+                                          "displayName": "styled.div",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-bZQynM",
+                                          "target": "div",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      onClick={[Function]}
+                                    >
+                                      <div
+                                        className="sc-bZQynM cfpJkI"
+                                        onClick={[Function]}
+                                      >
+                                        <Styled(Icon)
+                                          isRotated={false}
+                                          name="KeyboardArrowRight"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-gzVnrw",
+                                                  "isStatic": false,
+                                                  "lastClassName": "tmBcj",
+                                                  "rules": Array [
+                                                    "
+  font-size: ",
+                                                    "1.125rem",
+                                                    ";
+  margin-right: ",
+                                                    "1rem",
+                                                    ";
+  transition: transform 0.2s ",
+                                                    "cubic-bezier(0, 0, 0.25, 1)",
+                                                    ";
+  transform: ",
+                                                    [Function],
+                                                    ";
+",
+                                                  ],
+                                                },
+                                                "displayName": "Styled(Icon)",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-gzVnrw",
+                                                "target": [Function],
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                                Symbol(Symbol.hasInstance): [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            isRotated={false}
+                                            name="KeyboardArrowRight"
+                                          >
+                                            <Icon
+                                              className="sc-gzVnrw tmBcj"
+                                              isRotated={false}
+                                              name="KeyboardArrowRight"
+                                            >
+                                              <styled.i
+                                                className="sc-gzVnrw tmBcj"
+                                                isRotated={false}
+                                              >
+                                                <StyledComponent
+                                                  className="sc-gzVnrw tmBcj"
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-bdVaJa",
+                                                        "isStatic": true,
+                                                        "lastClassName": "cIqOZO",
+                                                        "rules": Array [
+                                                          "
+  display: inline-block;
+
+  > svg {
+    float: left;
+  }
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.i",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-bdVaJa",
+                                                      "target": "i",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  isRotated={false}
+                                                >
+                                                  <i
+                                                    className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                                  >
+                                                    <KeyboardArrowRight
+                                                      height="1em"
+                                                      style={
+                                                        Object {
+                                                          "fill": "currentColor",
+                                                          "stroke": undefined,
+                                                        }
+                                                      }
+                                                      viewBox="0 0 24 24"
+                                                      width="1em"
+                                                    >
+                                                      <svg
+                                                        height="1em"
+                                                        style={
+                                                          Object {
+                                                            "fill": "currentColor",
+                                                            "stroke": undefined,
+                                                          }
+                                                        }
+                                                        viewBox="0 0 24 24"
+                                                        width="1em"
+                                                      >
+                                                        <path
+                                                          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                                        />
+                                                      </svg>
+                                                    </KeyboardArrowRight>
+                                                  </i>
+                                                </StyledComponent>
+                                              </styled.i>
+                                            </Icon>
+                                          </StyledComponent>
+                                        </Styled(Icon)>
+                                        First
+                                      </div>
+                                    </StyledComponent>
+                                  </styled.div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                            <Expander
+                              expand={false}
+                              timeout={300}
+                              unmountOnExit={true}
+                            />
+                          </li>
+                        </StyledComponent>
+                      </styled.li>
+                      <styled.li
+                        key="item-1"
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "jjhVVq",
+                                "rules": Array [
+                                  "
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  text-align: left;
+  overflow: visible;
+  border-top: ",
+                                  [Function],
+                                  ";
+  box-sizing: border-box;
+  font-size: ",
+                                  "0.875rem",
+                                  ";
+  line-height: 18px;
+  color: ",
+                                  [Function],
+                                  ";
+
+  &:last-child {
+    border-bottom: ",
+                                  [Function],
+                                  ";
+  }
+",
+                                ],
+                              },
+                              "displayName": "styled.li",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "li",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <li
+                            className="sc-ifAKCX jjhVVq"
+                          >
+                            <styled.div
+                              active={true}
+                            >
+                              <StyledComponent
+                                active={true}
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": false,
+                                      "lastClassName": "gABgLv",
+                                      "rules": Array [
+                                        "
+  transition: background-color ",
+                                        "0.3s",
+                                        " ",
+                                        "cubic-bezier(0, 0, 0.25, 1)",
+                                        ";
+  background-color: ",
+                                        [Function],
+                                        ";
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                              >
+                                <div
+                                  className="sc-EHOje cMsOjn"
+                                >
+                                  <styled.div
+                                    onClick={[Function]}
+                                  >
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-bZQynM",
+                                            "isStatic": false,
+                                            "lastClassName": "cfpJkI",
+                                            "rules": Array [
+                                              "
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: ",
+                                              [Function],
+                                              ";
+",
+                                            ],
+                                          },
+                                          "displayName": "styled.div",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-bZQynM",
+                                          "target": "div",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      onClick={[Function]}
+                                    >
+                                      <div
+                                        className="sc-bZQynM cfpJkI"
+                                        onClick={[Function]}
+                                      >
+                                        <Styled(Icon)
+                                          isRotated={true}
+                                          name="KeyboardArrowRight"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-gzVnrw",
+                                                  "isStatic": false,
+                                                  "lastClassName": "tmBcj",
+                                                  "rules": Array [
+                                                    "
+  font-size: ",
+                                                    "1.125rem",
+                                                    ";
+  margin-right: ",
+                                                    "1rem",
+                                                    ";
+  transition: transform 0.2s ",
+                                                    "cubic-bezier(0, 0, 0.25, 1)",
+                                                    ";
+  transform: ",
+                                                    [Function],
+                                                    ";
+",
+                                                  ],
+                                                },
+                                                "displayName": "Styled(Icon)",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-gzVnrw",
+                                                "target": [Function],
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                                Symbol(Symbol.hasInstance): [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            isRotated={true}
+                                            name="KeyboardArrowRight"
+                                          >
+                                            <Icon
+                                              className="sc-gzVnrw hZquvk"
+                                              isRotated={true}
+                                              name="KeyboardArrowRight"
+                                            >
+                                              <styled.i
+                                                className="sc-gzVnrw hZquvk"
+                                                isRotated={true}
+                                              >
+                                                <StyledComponent
+                                                  className="sc-gzVnrw hZquvk"
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-bdVaJa",
+                                                        "isStatic": true,
+                                                        "lastClassName": "cIqOZO",
+                                                        "rules": Array [
+                                                          "
+  display: inline-block;
+
+  > svg {
+    float: left;
+  }
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.i",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-bdVaJa",
+                                                      "target": "i",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  isRotated={true}
+                                                >
+                                                  <i
+                                                    className="sc-gzVnrw hZquvk sc-bdVaJa cIqOZO"
+                                                  >
+                                                    <KeyboardArrowRight
+                                                      height="1em"
+                                                      style={
+                                                        Object {
+                                                          "fill": "currentColor",
+                                                          "stroke": undefined,
+                                                        }
+                                                      }
+                                                      viewBox="0 0 24 24"
+                                                      width="1em"
+                                                    >
+                                                      <svg
+                                                        height="1em"
+                                                        style={
+                                                          Object {
+                                                            "fill": "currentColor",
+                                                            "stroke": undefined,
+                                                          }
+                                                        }
+                                                        viewBox="0 0 24 24"
+                                                        width="1em"
+                                                      >
+                                                        <path
+                                                          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                                        />
+                                                      </svg>
+                                                    </KeyboardArrowRight>
+                                                  </i>
+                                                </StyledComponent>
+                                              </styled.i>
+                                            </Icon>
+                                          </StyledComponent>
+                                        </Styled(Icon)>
+                                        Second
+                                      </div>
+                                    </StyledComponent>
+                                  </styled.div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                            <Expander
+                              expand={true}
+                              timeout={300}
+                              unmountOnExit={true}
+                            >
+                              <styled.div
+                                expandedHeight={0}
+                                status="entering"
+                                style={
+                                  Object {
+                                    "minHeight": undefined,
+                                  }
+                                }
+                                timeout={300}
+                              >
+                                <StyledComponent
+                                  expandedHeight={0}
+                                  forwardedComponent={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "attrs": Array [],
+                                      "componentStyle": ComponentStyle {
+                                        "componentId": "sc-bwzfXH",
+                                        "isStatic": false,
+                                        "lastClassName": "jHSKKd",
+                                        "rules": Array [
+                                          [Function],
+                                        ],
+                                      },
+                                      "displayName": "styled.div",
+                                      "foldedComponentIds": Array [],
+                                      "render": [Function],
+                                      "styledComponentId": "sc-bwzfXH",
+                                      "target": "div",
+                                      "toString": [Function],
+                                      "warnTooManyClasses": [Function],
+                                      "withComponent": [Function],
+                                    }
+                                  }
+                                  forwardedRef={[Function]}
+                                  status="entering"
+                                  style={
+                                    Object {
+                                      "minHeight": undefined,
+                                    }
+                                  }
+                                  timeout={300}
+                                >
+                                  <div
+                                    className="sc-bwzfXH jHSKKd"
+                                    style={
+                                      Object {
+                                        "minHeight": undefined,
+                                      }
+                                    }
                                   >
                                     <div>
-                                      Second content.
-                                    </div>
-                                  </AccordionTab>
-                                </div>
-                              </styled.div>
-                            </div>
-                          </div>
-                        </styled.div>
-                      </Expander>
-                    </li>
-                  </styled.li>
-                  <styled.li
-                    key="item-2"
-                  >
-                    <li
-                      className="sc-ifAKCX jjhVVq"
-                    >
-                      <styled.div
-                        active={false}
-                      >
-                        <div
-                          className="sc-EHOje gABgLv"
-                        >
-                          <styled.div
-                            onClick={[Function]}
-                          >
-                            <div
-                              className="sc-bZQynM cfpJkI"
-                              onClick={[Function]}
-                            >
-                              <Styled(Icon)
-                                isRotated={false}
-                                name="KeyboardArrowRight"
-                              >
-                                <Icon
-                                  className="sc-gzVnrw tmBcj"
-                                  isRotated={false}
-                                  name="KeyboardArrowRight"
-                                >
-                                  <styled.i
-                                    className="sc-gzVnrw tmBcj"
-                                    isRotated={false}
-                                  >
-                                    <i
-                                      className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
-                                    >
-                                      <KeyboardArrowRight
-                                        height="1em"
-                                        style={
-                                          Object {
-                                            "fill": "currentColor",
-                                            "stroke": undefined,
-                                          }
-                                        }
-                                        viewBox="0 0 24 24"
-                                        width="1em"
-                                      >
-                                        <svg
-                                          height="1em"
-                                          style={
+                                      <styled.div>
+                                        <StyledComponent
+                                          forwardedComponent={
                                             Object {
-                                              "fill": "currentColor",
-                                              "stroke": undefined,
+                                              "$$typeof": Symbol(react.forward_ref),
+                                              "attrs": Array [],
+                                              "componentStyle": ComponentStyle {
+                                                "componentId": "sc-htoDjs",
+                                                "isStatic": false,
+                                                "lastClassName": "fpYVDN",
+                                                "rules": Array [
+                                                  "
+  padding: ",
+                                                  [Function],
+                                                  ";
+",
+                                                ],
+                                              },
+                                              "displayName": "styled.div",
+                                              "foldedComponentIds": Array [],
+                                              "render": [Function],
+                                              "styledComponentId": "sc-htoDjs",
+                                              "target": "div",
+                                              "toString": [Function],
+                                              "warnTooManyClasses": [Function],
+                                              "withComponent": [Function],
                                             }
                                           }
-                                          viewBox="0 0 24 24"
-                                          width="1em"
+                                          forwardedRef={null}
                                         >
-                                          <path
-                                            d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
-                                          />
-                                        </svg>
-                                      </KeyboardArrowRight>
-                                    </i>
-                                  </styled.i>
-                                </Icon>
-                              </Styled(Icon)>
-                              Last
-                            </div>
-                          </styled.div>
-                        </div>
-                      </styled.div>
-                      <Expander
-                        expand={false}
-                        timeout={300}
-                        unmountOnExit={true}
-                      />
-                    </li>
-                  </styled.li>
-                </ul>
-              </styled.ul>
-            </div>
+                                          <div
+                                            className="sc-htoDjs fpYVDN"
+                                          >
+                                            <AccordionTab
+                                              header="Second"
+                                            >
+                                              <div>
+                                                Second content.
+                                              </div>
+                                            </AccordionTab>
+                                          </div>
+                                        </StyledComponent>
+                                      </styled.div>
+                                    </div>
+                                  </div>
+                                </StyledComponent>
+                              </styled.div>
+                            </Expander>
+                          </li>
+                        </StyledComponent>
+                      </styled.li>
+                      <styled.li
+                        key="item-2"
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-ifAKCX",
+                                "isStatic": false,
+                                "lastClassName": "jjhVVq",
+                                "rules": Array [
+                                  "
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  text-align: left;
+  overflow: visible;
+  border-top: ",
+                                  [Function],
+                                  ";
+  box-sizing: border-box;
+  font-size: ",
+                                  "0.875rem",
+                                  ";
+  line-height: 18px;
+  color: ",
+                                  [Function],
+                                  ";
+
+  &:last-child {
+    border-bottom: ",
+                                  [Function],
+                                  ";
+  }
+",
+                                ],
+                              },
+                              "displayName": "styled.li",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-ifAKCX",
+                              "target": "li",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={null}
+                        >
+                          <li
+                            className="sc-ifAKCX jjhVVq"
+                          >
+                            <styled.div
+                              active={false}
+                            >
+                              <StyledComponent
+                                active={false}
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": false,
+                                      "lastClassName": "gABgLv",
+                                      "rules": Array [
+                                        "
+  transition: background-color ",
+                                        "0.3s",
+                                        " ",
+                                        "cubic-bezier(0, 0, 0.25, 1)",
+                                        ";
+  background-color: ",
+                                        [Function],
+                                        ";
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                              >
+                                <div
+                                  className="sc-EHOje gABgLv"
+                                >
+                                  <styled.div
+                                    onClick={[Function]}
+                                  >
+                                    <StyledComponent
+                                      forwardedComponent={
+                                        Object {
+                                          "$$typeof": Symbol(react.forward_ref),
+                                          "attrs": Array [],
+                                          "componentStyle": ComponentStyle {
+                                            "componentId": "sc-bZQynM",
+                                            "isStatic": false,
+                                            "lastClassName": "cfpJkI",
+                                            "rules": Array [
+                                              "
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: ",
+                                              [Function],
+                                              ";
+",
+                                            ],
+                                          },
+                                          "displayName": "styled.div",
+                                          "foldedComponentIds": Array [],
+                                          "render": [Function],
+                                          "styledComponentId": "sc-bZQynM",
+                                          "target": "div",
+                                          "toString": [Function],
+                                          "warnTooManyClasses": [Function],
+                                          "withComponent": [Function],
+                                        }
+                                      }
+                                      forwardedRef={null}
+                                      onClick={[Function]}
+                                    >
+                                      <div
+                                        className="sc-bZQynM cfpJkI"
+                                        onClick={[Function]}
+                                      >
+                                        <Styled(Icon)
+                                          isRotated={false}
+                                          name="KeyboardArrowRight"
+                                        >
+                                          <StyledComponent
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-gzVnrw",
+                                                  "isStatic": false,
+                                                  "lastClassName": "tmBcj",
+                                                  "rules": Array [
+                                                    "
+  font-size: ",
+                                                    "1.125rem",
+                                                    ";
+  margin-right: ",
+                                                    "1rem",
+                                                    ";
+  transition: transform 0.2s ",
+                                                    "cubic-bezier(0, 0, 0.25, 1)",
+                                                    ";
+  transform: ",
+                                                    [Function],
+                                                    ";
+",
+                                                  ],
+                                                },
+                                                "displayName": "Styled(Icon)",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-gzVnrw",
+                                                "target": [Function],
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                                Symbol(Symbol.hasInstance): [Function],
+                                              }
+                                            }
+                                            forwardedRef={null}
+                                            isRotated={false}
+                                            name="KeyboardArrowRight"
+                                          >
+                                            <Icon
+                                              className="sc-gzVnrw tmBcj"
+                                              isRotated={false}
+                                              name="KeyboardArrowRight"
+                                            >
+                                              <styled.i
+                                                className="sc-gzVnrw tmBcj"
+                                                isRotated={false}
+                                              >
+                                                <StyledComponent
+                                                  className="sc-gzVnrw tmBcj"
+                                                  forwardedComponent={
+                                                    Object {
+                                                      "$$typeof": Symbol(react.forward_ref),
+                                                      "attrs": Array [],
+                                                      "componentStyle": ComponentStyle {
+                                                        "componentId": "sc-bdVaJa",
+                                                        "isStatic": true,
+                                                        "lastClassName": "cIqOZO",
+                                                        "rules": Array [
+                                                          "
+  display: inline-block;
+
+  > svg {
+    float: left;
+  }
+",
+                                                        ],
+                                                      },
+                                                      "displayName": "styled.i",
+                                                      "foldedComponentIds": Array [],
+                                                      "render": [Function],
+                                                      "styledComponentId": "sc-bdVaJa",
+                                                      "target": "i",
+                                                      "toString": [Function],
+                                                      "warnTooManyClasses": [Function],
+                                                      "withComponent": [Function],
+                                                    }
+                                                  }
+                                                  forwardedRef={null}
+                                                  isRotated={false}
+                                                >
+                                                  <i
+                                                    className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                                  >
+                                                    <KeyboardArrowRight
+                                                      height="1em"
+                                                      style={
+                                                        Object {
+                                                          "fill": "currentColor",
+                                                          "stroke": undefined,
+                                                        }
+                                                      }
+                                                      viewBox="0 0 24 24"
+                                                      width="1em"
+                                                    >
+                                                      <svg
+                                                        height="1em"
+                                                        style={
+                                                          Object {
+                                                            "fill": "currentColor",
+                                                            "stroke": undefined,
+                                                          }
+                                                        }
+                                                        viewBox="0 0 24 24"
+                                                        width="1em"
+                                                      >
+                                                        <path
+                                                          d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"
+                                                        />
+                                                      </svg>
+                                                    </KeyboardArrowRight>
+                                                  </i>
+                                                </StyledComponent>
+                                              </styled.i>
+                                            </Icon>
+                                          </StyledComponent>
+                                        </Styled(Icon)>
+                                        Last
+                                      </div>
+                                    </StyledComponent>
+                                  </styled.div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                            <Expander
+                              expand={false}
+                              timeout={300}
+                              unmountOnExit={true}
+                            />
+                          </li>
+                        </StyledComponent>
+                      </styled.li>
+                    </ul>
+                  </StyledComponent>
+                </styled.ul>
+              </div>
+            </StyledComponent>
           </styled.div>
         </AccordionBasic>
       </div>

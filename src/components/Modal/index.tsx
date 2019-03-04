@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { keyframes } from '../../utils/styled';
+import styled, { keyframes, css } from '../../utils/styled';
 import { StandardProps } from '../../common';
 import { Headline } from '../Headline';
 import { TextStyles } from '../../textStyles';
@@ -97,7 +97,7 @@ export interface StyledModalProps extends ModalProps {
 }
 
 const StyledModal = styled('div')<StyledModalProps>(
-  ({ width, closing }) => `
+  ({ width, closing }) => css`
     outline: none;
     color: ${dark};
     ${width ? `width: ${width}` : 'max-width: 500px'};
@@ -105,9 +105,8 @@ const StyledModal = styled('div')<StyledModalProps>(
     display: flex;
     align-items: center;
     min-height: calc(100% - (${distance.xlarge} * 2));
-    animation: ${closing ? OutAnimation() : InAnimation(-72)} ${
-    closing ? closeAnimationDuration : openAnimationDuration
-  }ms cubic-bezier(0, 0, 0.25, 1);
+    animation: ${closing ? OutAnimation() : InAnimation(-72)}
+      ${closing ? closeAnimationDuration : openAnimationDuration}ms cubic-bezier(0, 0, 0.25, 1);
     animation-fill-mode: forwards;
 
     @media screen and (max-width: ${width || '500px'}) {
@@ -116,7 +115,7 @@ const StyledModal = styled('div')<StyledModalProps>(
       margin: 0;
       align-items: stretch;
     }
-    `,
+  `,
 );
 
 export interface StyledBlockerProps extends BlockerProps {
@@ -124,10 +123,9 @@ export interface StyledBlockerProps extends BlockerProps {
 }
 
 const StyledBlocker = styled(Blocker)<StyledBlockerProps>(
-  ({ closing }) => `
-  animation: ${
-    closing ? OutAnimation() : BlockerInAnimation()
-  } ${blockerAnimationDuration}ms cubic-bezier(0, 0, 0.25, 1);
+  ({ closing }) => css`
+    animation: ${closing ? OutAnimation() : BlockerInAnimation()} ${blockerAnimationDuration}ms
+      cubic-bezier(0, 0, 0.25, 1);
     animation-fill-mode: forwards;
   `,
 );
