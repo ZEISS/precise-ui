@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled, { reStyled, themed } from '../../utils/styled';
-import { getPropLabel } from '../../utils/labels';
+import { getPropLabel, StatusTableLabels } from '../../utils/labels';
 import { Icon } from '../Icon';
 import { ProgressBar } from '../ProgressBar';
 import { Table, TableCellEvent, TableRowEvent } from '../Table';
@@ -56,17 +56,10 @@ export const StyledTableRow = reStyled.tr<StyledTableRowProps>(
 `,
 );
 
-export interface StatusTableProps extends StandardProps {
+export interface StatusTableProps extends StandardProps, StatusTableLabels {
   files: Array<FileProgress>;
   onCancel(e: FileUploaderDetailsEvent<FileProgress>): void;
   onDelete(e: FileUploaderDetailsEvent<FileProgress>): void;
-  tableHeaderFileLabel?: string;
-  tableHeaderStatusLabel?: string;
-  canceledTableUploadLabel?: string;
-  scanningTableUploadLabel?: string;
-  progressTableUploadLabel?: string;
-  successTableUploadLabel?: string;
-  errorTableUploadLabel?: string;
 }
 
 export const StatusTable: React.SFC<StatusTableProps> = ({ theme, files, onCancel, onDelete, ...props }) => {
@@ -133,7 +126,7 @@ export const StatusTable: React.SFC<StatusTableProps> = ({ theme, files, onCance
       return (
         <TextWrapBox>
           <StatusIcon condensed type={status} name={iconNames[value]} />
-          {error || getPropLabel(props, `${status}TableUploadLabel` as any)}
+          {getPropLabel(props, `${status}TableUploadLabel` as any, error)}
         </TextWrapBox>
       );
     }
