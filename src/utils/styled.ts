@@ -51,34 +51,6 @@ export const themed = <Props>(interpolation: PreciseInterpolationFunc<Props, Pre
   return interpolation({ theme: mergedTheme, ...rest });
 };
 
-/* Helper function which allows instead of:
-  styled<{ isActive: boolean }>(Component)`
-    color: ${themed(({ theme }) => theme.color)};
-    background: ${themed(({ theme }) => theme.background)};
-    border-color: ${themed(({ theme, isActive }) => (isActive ? theme.ui3 : theme.ui2))};
-  `;
-
-  to write:
-
-  reStyled<{ isActive: boolean }>(Component)(
-      ({ theme, isActive }) => `
-      color: ${theme.color};
-      background: ${theme.background};
-      border-color: ${isActive ? theme.ui3 : theme.ui2};
-    `,
-  );
-*/
-
-export const reStyled = function(component: any) {
-  return (interpolation: any) => styled(component)`
-    ${themed(interpolation)};
-  `;
-};
-
-for (const domElement of Object.keys(styled)) {
-  reStyled[domElement] = reStyled(domElement as keyof JSX.IntrinsicElements);
-}
-
 export {
   css,
   keyframes,

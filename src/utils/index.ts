@@ -26,9 +26,4 @@ export {
   ServerStyleSheet,
   StyleSheetManager,
   themed,
-  /**
-   * @deprecated
-   * use `styled` instead
-   */
-  reStyled,
 } from './styled';

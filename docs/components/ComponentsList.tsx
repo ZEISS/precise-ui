@@ -3,7 +3,7 @@ import { ActionLink, Expander, styled, distance, Icon, ActionLinkProps } from '.
 
 // @ts-ignore
 import getUrl from 'react-styleguidist/lib/utils/getUrl';
-import { themed } from '../../src/utils/styled';
+import { themed } from '../../src';
 
 interface ComponentDefinition {
   hasExamples: boolean;
