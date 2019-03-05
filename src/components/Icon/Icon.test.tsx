@@ -5,8 +5,8 @@ import { registerIcons, registeredIcons } from './registerIcons';
 
 describe('<Icon />', () => {
   it('should render an eye icon', () => {
-    const wrapper = enzyme.shallow(<Icon name="Visibility" />);
-    expect(wrapper.text()).toBe('<styled.i />');
+    const wrapper = enzyme.mount(<Icon name="Visibility" />);
+    expect(wrapper.find('i').length > 0).toBeTruthy();
   });
 
   it('should render nothing if wrong icon name', () => {

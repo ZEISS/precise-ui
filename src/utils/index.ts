@@ -13,4 +13,17 @@ export * from './displayTo';
 export * from './keyCodes';
 export * from './text';
 export * from './labels';
-export { default as styled, css, keyframes, injectGlobal, withTheme, themed, reStyled, ThemeProvider } from './styled';
+export {
+  default as styled,
+  css,
+  keyframes,
+  createGlobalStyle,
+  withTheme,
+  ThemeProvider,
+  ThemeConsumer,
+  ThemeContext,
+  isStyledComponent,
+  ServerStyleSheet,
+  StyleSheetManager,
+  themed,
+} from './styled';

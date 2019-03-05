@@ -22,7 +22,7 @@ export interface TagProps extends StandardProps {
   children?: React.ReactNode;
 }
 
-const StyledTag = styled<TagProps, 'span'>('span')`
+const StyledTag = styled('span')<TagProps>`
   display: inline-block;
   border-radius: 3px;
   font-size: 0.8em;

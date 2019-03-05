@@ -31,7 +31,7 @@ export interface TabHeaderProps extends StandardProps {
   active?: boolean;
 }
 
-export const TabHeader = styled<TabHeaderProps, 'li'>('li')`
+export const TabHeader = styled('li')<TabHeaderProps>`
   position: relative;
   z-index: 1;
   margin: 0;
@@ -57,6 +57,6 @@ export interface TabItemProps {
   active?: boolean;
 }
 
-export const TabItem = styled.div`
-  ${(props: TabItemProps) => (props.active ? '' : 'display: none;')};
+export const TabItem = styled.div<TabItemProps>`
+  ${props => (props.active ? '' : 'display: none;')};
 `;

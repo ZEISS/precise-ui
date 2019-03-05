@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled, themed } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { AccordionProps } from './Accordion.types.part';
 import { distance } from '../../distance';
@@ -48,40 +48,46 @@ const Container = styled.div`
   line-height: 22px;
 `;
 
-const ContentContainer = reStyled.div<ActiveProps>(
-  ({ open, theme: { ui1, ui2, ui4, ui5 } }) => `
-  font-size: ${remCalc('14px')};
-  line-height: 18px;
-  padding: ${distance.medium};
-  background: ${open ? ui2 : ui1};
-  border: 1px solid ${open ? ui5 : ui4};
-  border-bottom: ${open ? `1px solid ${ui4}` : 'none'};
-`,
+const ContentContainer = styled.div<ActiveProps>(
+  themed(
+    ({ open, theme: { ui1, ui2, ui4, ui5 } }) => css`
+      font-size: ${remCalc('14px')};
+      line-height: 18px;
+      padding: ${distance.medium};
+      background: ${open ? ui2 : ui1};
+      border: 1px solid ${open ? ui5 : ui4};
+      border-bottom: ${open ? `1px solid ${ui4}` : 'none'};
+    `,
+  ),
 );
 
-const DetailsContainerAnimator = styled<ActiveProps, 'div'>('div')`
+const DetailsContainerAnimator = styled('div')<ActiveProps>`
   transition: all ${animationDuration} ${animationFunction};
   max-height: ${({ open }) => (open ? '10000px' : '0')};
   opacity: ${({ open }) => (open ? '1' : '0')};
   overflow: hidden;
 `;
 
-const DetailsContainer = reStyled.div<ActiveProps>(
-  ({ open, theme: { ui4, ui5 } }) => `
-  border-right: 1px solid ${open ? ui5 : ui4};
-  border-left: 1px solid ${open ? ui5 : ui4};
-`,
+const DetailsContainer = styled.div<ActiveProps>(
+  themed(
+    ({ open, theme: { ui4, ui5 } }) => css`
+      border-right: 1px solid ${open ? ui5 : ui4};
+      border-left: 1px solid ${open ? ui5 : ui4};
+    `,
+  ),
 );
 
-const ActionContainer = reStyled.div<ActiveProps>(
-  ({ open, theme: { ui0, ui1 } }) => `
-  text-align: center;
-  padding: ${distance.small} ${distance.medium};
-  cursor: pointer;
-  background: ${open ? ui1 : ui0};
-  border: ${open ? `1px solid ${ui0}` : 'none'};
-  color: ${open ? ui0 : ui1};
-`,
+const ActionContainer = styled.div<ActiveProps>(
+  themed(
+    ({ open, theme: { ui0, ui1 } }) => css`
+      text-align: center;
+      padding: ${distance.small} ${distance.medium};
+      cursor: pointer;
+      background: ${open ? ui1 : ui0};
+      border: ${open ? `1px solid ${ui0}` : 'none'};
+      color: ${open ? ui0 : ui1};
+    `,
+  ),
 );
 
 export class AccordionCard extends React.Component<AccordionProps, AccordionCardState> {

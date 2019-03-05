@@ -13,10 +13,10 @@ import { TextStylings } from '../../textStyles';
 interface StyledWrapperProps {
   open: boolean;
 }
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.div<StyledWrapperProps>`
   box-sizing: border-box;
   box-shadow: none;
-  margin: 0 0 ${(props: StyledWrapperProps) => (props.open ? '10px' : '0')} 0;
+  margin: 0 0 ${props => (props.open ? '10px' : '0')} 0;
   padding: 0;
   border: 1px solid ${themed(({ theme, open }) => (open ? theme.ui0 : transparent))};
 `;
@@ -124,6 +124,6 @@ export interface TabItemProps {
   active?: boolean;
 }
 
-export const TabItem = styled.div`
-  ${(props: TabItemProps) => (props.active ? '' : 'display: none;')};
+export const TabItem = styled.div<TabItemProps>`
+  ${props => (props.active ? '' : 'display: none;')};
 `;

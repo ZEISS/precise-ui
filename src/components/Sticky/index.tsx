@@ -11,8 +11,8 @@ export interface StickyProps extends StandardProps {
   position?: 'bottom' | 'top' | 'left' | 'right';
 }
 
-const StyledSticky = styled.div`
-  ${(props: StickyProps) => `${props.position}: 0;`} position: absolute;
+const StyledSticky = styled.div<StickyProps>`
+  ${props => `${props.position}: 0;`} position: absolute;
   box-sizing: border-box;
   flex: 1 1 auto;
 `;

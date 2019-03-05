@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled, css } from '../../utils/styled';
+import styled, { css, themed } from '../../utils/styled';
 import { withResponsive, ResponsiveComponentProps } from '../../hoc/withResponsive';
 import { FlyoutPosition, BasicPosition } from './Flyout.types.part';
 import { distancePx, distance } from '../../distance';
@@ -252,68 +252,72 @@ export interface StyledFlyoutWindowProps {
   noGutter?: boolean;
 }
 
-const StyledFlyoutWindow = reStyled<StyledFlyoutWindowProps, 'div'>('div')(
-  ({ theme, size, position, noGutter }) => css`
-    position: absolute;
-    z-index: 100;
-    box-sizing: border-box;
-    box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
-    border: 1px solid ${theme.ui4};
-    background: ${theme.flyout.background};
-    color: ${theme.flyout.textColor};
-    max-width: ${theme.flyout.maxWidth};
-    max-height: ${theme.flyout.maxHeight};
-    font-size: ${theme.flyout.fontSize};
-    ${!noGutter ? `padding: ${distance.small} ${distance.medium};` : ''} box-sizing: border-box;
+const StyledFlyoutWindow = styled('div')<StyledFlyoutWindowProps>(
+  themed(
+    ({ theme, size, position, noGutter }) => css`
+      position: absolute;
+      z-index: 100;
+      box-sizing: border-box;
+      box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
+      border: 1px solid ${theme.ui4};
+      background: ${theme.flyout.background};
+      color: ${theme.flyout.textColor};
+      max-width: ${theme.flyout.maxWidth};
+      max-height: ${theme.flyout.maxHeight};
+      font-size: ${theme.flyout.fontSize};
+      ${!noGutter ? `padding: ${distance.small} ${distance.medium};` : ''} box-sizing: border-box;
 
-    ${size && size.width !== undefined ? `width: ${size.width}px` : ''};
-    ${size && size.height !== undefined ? `height: ${size.height}px` : ''};
-    ${position && position.top !== undefined ? `top: ${position.top}px` : ''};
-    ${position && position.left !== undefined ? `left: ${position.left}px` : ''};
-    ${position && position.bottom !== undefined ? `bottom: ${position.bottom}px` : ''};
-    ${position && position.right !== undefined ? `right: ${position.right}px` : ''};
-    overflow: auto;
-  `,
+      ${size && size.width !== undefined ? `width: ${size.width}px` : ''};
+      ${size && size.height !== undefined ? `height: ${size.height}px` : ''};
+      ${position && position.top !== undefined ? `top: ${position.top}px` : ''};
+      ${position && position.left !== undefined ? `left: ${position.left}px` : ''};
+      ${position && position.bottom !== undefined ? `bottom: ${position.bottom}px` : ''};
+      ${position && position.right !== undefined ? `right: ${position.right}px` : ''};
+      overflow: auto;
+    `,
+  ),
 );
 
 interface StyledFlyoutArrowProps extends Position {
   rotate?: number;
 }
 
-const StyledFlyoutArrow = reStyled<StyledFlyoutArrowProps, 'div'>('div')(
-  ({ top, left, bottom, right, rotate, theme }) => css`
-    position: absolute;
-    z-index: 101;
-    width: ${toolTipArrowSize}px;
-    height: ${toolTipArrowSize}px;
-
-    ${top !== undefined ? `top: ${top}px` : ''};
-    ${left !== undefined ? `left: ${left}px` : ''};
-    ${bottom !== undefined ? `bottom: ${bottom}px` : ''};
-    ${right !== undefined ? `right: ${right}px` : ''};
-    ${rotate !== undefined ? `transform: rotate(${rotate}deg)` : ''};
-
-    :before {
-      content: ' ';
+const StyledFlyoutArrow = styled('div')<StyledFlyoutArrowProps>(
+  themed(
+    ({ top, left, bottom, right, rotate, theme }) => css`
       position: absolute;
-      top: 0;
-      left: 0;
-      border-style: solid;
-      border-width: ${toolTipArrowSize / 2}px;
-      border-color: ${theme.ui4} transparent transparent transparent;
-    }
+      z-index: 101;
+      width: ${toolTipArrowSize}px;
+      height: ${toolTipArrowSize}px;
 
-    :after {
-      content: ' ';
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-style: solid;
-      border-width: ${toolTipArrowSize / 2 - 1}px;
-      margin-left: 1px;
-      border-color: ${theme.flyout.background} transparent transparent transparent;
-    }
-  `,
+      ${top !== undefined ? `top: ${top}px` : ''};
+      ${left !== undefined ? `left: ${left}px` : ''};
+      ${bottom !== undefined ? `bottom: ${bottom}px` : ''};
+      ${right !== undefined ? `right: ${right}px` : ''};
+      ${rotate !== undefined ? `transform: rotate(${rotate}deg)` : ''};
+
+      :before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-style: solid;
+        border-width: ${toolTipArrowSize / 2}px;
+        border-color: ${theme.ui4} transparent transparent transparent;
+      }
+
+      :after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-style: solid;
+        border-width: ${toolTipArrowSize / 2 - 1}px;
+        margin-left: 1px;
+        border-color: ${theme.flyout.background} transparent transparent transparent;
+      }
+    `,
+  ),
 );
 
 export interface FlyoutWindowState {
@@ -500,7 +504,7 @@ export class FlyoutWindowInt extends React.Component<FlyoutWindowProps, FlyoutWi
       children && (
         <>
           <StyledFlyoutArrow {...arrowPosition} theme={props.theme} />
-          <StyledFlyoutWindow {...flyoutDimensions} {...props} innerRef={this.setFlyoutRef}>
+          <StyledFlyoutWindow {...flyoutDimensions} {...props} ref={this.setFlyoutRef}>
             {children}
           </StyledFlyoutWindow>
         </>

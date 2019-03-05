@@ -54,13 +54,13 @@ export interface ButtonProps extends AnchorProps {
   icon?: IconName;
 }
 
-interface StyledButtonProps extends AnchorProps {
+export interface StyledButtonProps extends AnchorProps {
   block?: boolean;
   buttonStyle?: ButtonStyle;
   size?: ButtonSize;
 }
 
-interface IconWrapperProps extends StandardProps {}
+export interface IconWrapperProps extends StandardProps {}
 
 function getThemeSettings(theme: PreciseFullTheme, buttonStyle?: ButtonStyle) {
   switch (buttonStyle) {
@@ -130,9 +130,7 @@ const PseudoButtonStyle = (colorTheme: ButtonThemeSettings) => css`
   }
 `;
 
-const StyledButton = styled<StyledButtonProps>(
-  ({ block: _0 = false, borderless: _1 = false, buttonStyle: _2 = '', size: _3 = '', ...rest }) => <Anchor {...rest} />,
-)`
+const StyledButton = styled(Anchor)<StyledButtonProps>`
   box-sizing: border-box;
   outline: none;
   border-radius: 0;
@@ -173,7 +171,7 @@ const StyledButton = styled<StyledButtonProps>(
 
 const DefaultWrapper = styled.div``;
 
-const WithIconWrapper = styled<IconWrapperProps, 'div'>('div')`
+const WithIconWrapper = styled('div')<IconWrapperProps>`
   ${props =>
     props.theme.buttonIconPosition === 'left'
       ? `padding-left: ${distance.xlarge}`
@@ -181,7 +179,7 @@ const WithIconWrapper = styled<IconWrapperProps, 'div'>('div')`
   position: relative;
 `;
 
-const StyledIcon = styled<IconWrapperProps & IconProps>(Icon)`
+const StyledIcon = styled(Icon)<IconWrapperProps & IconProps>`
   ${props => (props.theme.buttonIconPosition === 'left' ? 'left: 0' : 'right: 0')};
   position: absolute;
   top: 50%;

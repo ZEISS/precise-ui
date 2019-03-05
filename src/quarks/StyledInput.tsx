@@ -12,7 +12,7 @@ export interface StyledInputProps extends React.InputHTMLAttributes<HTMLInputEle
   innerRef?(ref: HTMLElement): void;
 }
 
-export const StyledInput: React.ComponentClass<StyledInputProps> = styled<StyledInputProps, 'input'>('input')`
+export const StyledInput = styled('input')<StyledInputProps>`
   color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text1))};
   background: none;
   border: none;

@@ -39,7 +39,7 @@ interface ToggleBoxProps {
 const transitionDuration = '0.3s';
 const transitionEase = 'cubic-bezier(0, 0, 0.25, 1)';
 
-const ToggleContainer = styled<ToggleContainerProps, 'div'>('div')`
+const ToggleContainer = styled('div')<ToggleContainerProps>`
   position: relative;
   display: inline-block;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
@@ -61,7 +61,7 @@ const StyledInput = styled.input`
   left: 0;
 `;
 
-const ToggleBox = styled<ToggleBoxProps, 'div'>('div')`
+const ToggleBox = styled('div')<ToggleBoxProps>`
   outline: 0;
   display: block;
   width: ${distance.xxlarge};

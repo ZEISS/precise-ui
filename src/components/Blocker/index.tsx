@@ -29,7 +29,7 @@ const FocusKeeper = styled.a`
   overflow: hidden;
 `;
 
-const StyledModalBackground = FixedContainer.extend`
+const StyledModalBackground = styled(FixedContainer)`
   overflow: hidden;
   z-index: 9999;
   background: ${transparentize(dark, 0.4)};
@@ -124,11 +124,7 @@ export class Blocker extends React.Component<BlockerProps> {
 
     return (
       <>
-        <FixedContainer
-          innerRef={this.setElement}
-          onClick={this.onContainerClick}
-          onKeyDown={this.onKeyPress}
-          {...props}>
+        <FixedContainer ref={this.setElement} onClick={this.onContainerClick} onKeyDown={this.onKeyPress} {...props}>
           <FocusKeeper href="#" onFocus={this.keepLastFocus} />
           {children}
           <FocusKeeper href="#" onFocus={this.keepFirstFocus} />

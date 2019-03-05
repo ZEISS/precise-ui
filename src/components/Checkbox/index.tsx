@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { light } from '../../themes';
 import { Label } from '../Label';
 import { Icon } from '../Icon';
@@ -32,41 +32,43 @@ interface CheckboxBoxProps {
   theme: any;
 }
 
-const CheckboxContainer = styled<CheckboxContainerProps, 'div'>('div')`
+const CheckboxContainer = styled('div')<CheckboxContainerProps>`
   position: relative;
   display: inline-block;
   opacity: ${props => (props.disabled ? '0.5' : '1.0')};
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
-const CheckboxBox = reStyled<CheckboxBoxProps, 'div'>('div')(
-  ({ disabled, checked, theme: { ui0, ui1, ui4, ui5 } }) => `
-  outline: 0;
-  flex: 0 0 1.0625em;
-  height: 1.0625em;
-  position: relative;
-  background: ${checked ? ui5 : ui1};
-  transition: all 0.2s cubic-bezier(0, 0, 0.25, 1);
-  overflow: hidden;
-  border-radius: 2px;
-  border: 2px solid ${disabled ? (checked ? ui5 : ui4) : ui5};
-  box-sizing: border-box;
+const CheckboxBox = styled('div')<CheckboxBoxProps>(
+  themed(
+    ({ disabled, checked, theme: { ui0, ui1, ui4, ui5 } }) => css`
+      outline: 0;
+      flex: 0 0 1.0625em;
+      height: 1.0625em;
+      position: relative;
+      background: ${checked ? ui5 : ui1};
+      transition: all 0.2s cubic-bezier(0, 0, 0.25, 1);
+      overflow: hidden;
+      border-radius: 2px;
+      border: 2px solid ${disabled ? (checked ? ui5 : ui4) : ui5};
+      box-sizing: border-box;
 
-  &:focus {
-    outline-color: ${ui0};
-    outline-width: 2px;
-    outline-style: solid;
-  }
+      &:focus {
+        outline-color: ${ui0};
+        outline-width: 2px;
+        outline-style: solid;
+      }
 
-  > i {
-    position: relative;
-    top: -2px;
-    left: -2px;
-    transition: all 0.2s;
-    opacity: ${checked ? '1' : '0'};
-    transform: ${checked ? 'scale(1)' : 'scale(0)'};
-  }
-`,
+      > i {
+        position: relative;
+        top: -2px;
+        left: -2px;
+        transition: all 0.2s;
+        opacity: ${checked ? '1' : '0'};
+        transform: ${checked ? 'scale(1)' : 'scale(0)'};
+      }
+    `,
+  ),
 );
 
 const RealCheckbox = styled.input`

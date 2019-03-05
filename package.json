@@ -44,7 +44,7 @@
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8",
-    "styled-components": "^2.x"
+    "styled-components": "^4.x"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.15",
@@ -56,6 +56,7 @@
     "@types/react-onclickoutside": "^6.7.0",
     "@types/react-router": "^4.4.1",
     "@types/react-router-dom": "^4.3.1",
+    "@types/styled-components": "^4.1.10",
     "awesome-typescript-loader": "^5.2.1",
     "circular-dependency-plugin": "^5.0.2",
     "cross-env": "^5.0.5",
@@ -86,7 +87,7 @@
     "sass-loader": "^7.1.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
-    "styled-components": "^2.2.3",
+    "styled-components": "^4.1.3",
     "svg-react-loader": "^0.4.6",
     "ts-jest": "^23.10.5",
     "ts-node": "^7.0.1",

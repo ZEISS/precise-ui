@@ -23,7 +23,6 @@ exports[`<TagBuilderInt /> should render component with empty value 1`] = `
           tagRenderer={false}
         >
           <styled.input
-            innerRef={[Function]}
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -107,7 +106,6 @@ exports[`<TagBuilderInt /> should render component with error block and default 
           tagRenderer={false}
         >
           <styled.input
-            innerRef={[Function]}
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -192,7 +190,6 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
           tagRenderer={false}
         >
           <styled.input
-            innerRef={[Function]}
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
@@ -236,7 +233,6 @@ exports[`<TagBuilderInt /> should render the component 1`] = `
           tagRenderer={false}
         >
           <styled.input
-            innerRef={[Function]}
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}

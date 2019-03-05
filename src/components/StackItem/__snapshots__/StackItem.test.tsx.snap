@@ -9,13 +9,51 @@ exports[`<StackItem /> should render the StackItem with height and width declara
     height="15px"
     width="40%"
   >
-    <div
-      className="sc-bdVaJa dLpqhe"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "dLpqhe",
+            "rules": Array [
+              "
+  flex-grow: ",
+              [Function],
+              ";
+  min-width: ",
+              [Function],
+              ";
+  height: ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       height="15px"
       width="40%"
     >
-      Content
-    </div>
+      <div
+        className="sc-bdVaJa dLpqhe"
+        height="15px"
+        width="40%"
+      >
+        Content
+      </div>
+    </StyledComponent>
   </styled.div>
 </StackItem>
 `;
@@ -27,9 +65,46 @@ exports[`<StackItem /> should render the StackItem with no filling 1`] = `
   <styled.div
     nofill={true}
   >
-    <div
-      className="sc-bdVaJa ciHdvC"
-    />
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "ciHdvC",
+            "rules": Array [
+              "
+  flex-grow: ",
+              [Function],
+              ";
+  min-width: ",
+              [Function],
+              ";
+  height: ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      nofill={true}
+    >
+      <div
+        className="sc-bdVaJa ciHdvC"
+      />
+    </StyledComponent>
   </styled.div>
 </StackItem>
 `;
@@ -37,11 +112,47 @@ exports[`<StackItem /> should render the StackItem with no filling 1`] = `
 exports[`<StackItem /> should render the StackItem with some content 1`] = `
 <StackItem>
   <styled.div>
-    <div
-      className="sc-bdVaJa eIfyAv"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "eIfyAv",
+            "rules": Array [
+              "
+  flex-grow: ",
+              [Function],
+              ";
+  min-width: ",
+              [Function],
+              ";
+  height: ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
     >
-      Item
-    </div>
+      <div
+        className="sc-bdVaJa eIfyAv"
+      >
+        Item
+      </div>
+    </StyledComponent>
   </styled.div>
 </StackItem>
 `;
@@ -53,10 +164,47 @@ exports[`<StackItem /> should render the StackItem with width declaration 1`] = 
   <styled.div
     width="20px"
   >
-    <div
-      className="sc-bdVaJa cBvbun"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "cBvbun",
+            "rules": Array [
+              "
+  flex-grow: ",
+              [Function],
+              ";
+  min-width: ",
+              [Function],
+              ";
+  height: ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
       width="20px"
-    />
+    >
+      <div
+        className="sc-bdVaJa cBvbun"
+        width="20px"
+      />
+    </StyledComponent>
   </styled.div>
 </StackItem>
 `;
@@ -64,9 +212,45 @@ exports[`<StackItem /> should render the StackItem with width declaration 1`] = 
 exports[`<StackItem /> should render the default StackItem 1`] = `
 <StackItem>
   <styled.div>
-    <div
-      className="sc-bdVaJa eIfyAv"
-    />
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "eIfyAv",
+            "rules": Array [
+              "
+  flex-grow: ",
+              [Function],
+              ";
+  min-width: ",
+              [Function],
+              ";
+  height: ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="sc-bdVaJa eIfyAv"
+      />
+    </StyledComponent>
   </styled.div>
 </StackItem>
 `;

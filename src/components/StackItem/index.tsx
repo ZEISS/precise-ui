@@ -21,10 +21,10 @@ export interface StackItemProps extends StandardProps {
   nofill?: boolean;
 }
 
-const StackChild = styled.div`
-  flex-grow: ${(props: StackItemProps) => (props.nofill ? '0' : '1')};
-  min-width: ${(props: StackItemProps) => props.width || 'auto'};
-  height: ${(props: StackItemProps) => props.height || 'auto'};
+const StackChild = styled.div<StackItemProps>`
+  flex-grow: ${props => (props.nofill ? '0' : '1')};
+  min-width: ${props => props.width || 'auto'};
+  height: ${props => props.height || 'auto'};
 `;
 
 /**

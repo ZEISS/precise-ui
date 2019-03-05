@@ -5,7 +5,7 @@ import { Breadcrumb } from './';
 describe('<Breadcrumb />', () => {
   it('should render a basic <Breadcrumb>', () => {
     const wrapper = enzyme.shallow(<Breadcrumb title="Title" to="/test" />);
-    expect(wrapper.text()).toBe('<Styled(Anchor) />');
+    expect(wrapper.text()).toBe('Title');
   });
 
   it('should render a <Breadcrumb> with external reference', () => {

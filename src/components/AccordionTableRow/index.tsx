@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { reStyled } from '../../utils/styled';
 import { StandardProps } from '../../common';
+import styled, { themed } from '../../utils/styled';
 
 export interface AccordionTableRowProps extends StandardProps {
   /**
@@ -18,8 +18,9 @@ export interface AccordionTableRowProps extends StandardProps {
   onClick?(e: React.MouseEvent): void;
 }
 
-const StyledAccordionTableRow = reStyled.tr<AccordionTableRowProps>(
-  ({ active, clickable, theme: { ui1, ui2, ui3, ui4, ui5, text1 } }) => `
+const StyledAccordionTableRow = styled.tr<AccordionTableRowProps>(
+  themed(
+    ({ active, clickable, theme: { ui1, ui2, ui3, ui4, ui5, text1 } }) => `
     background: ${active ? ui2 : ui1};
     border: ${active ? `1px solid ${ui5}` : 'none'};
     cursor: ${clickable ? 'pointer' : 'default'};
@@ -38,6 +39,7 @@ const StyledAccordionTableRow = reStyled.tr<AccordionTableRowProps>(
       border-top: ${active ? `1px solid ${ui5}` : 'none'};
     }
   `,
+  ),
 );
 
 export const AccordionTableRow: React.SFC<AccordionTableRowProps> = ({

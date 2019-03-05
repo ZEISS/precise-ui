@@ -157,8 +157,8 @@ class ContentSwitchInt extends React.Component<ContentSwitchProps, ContentSwitch
     const { children, theme, orientation = defaultOrientation, ...rest } = this.props;
 
     return (
-      <Container theme={theme} {...rest} innerRef={this.setContainerRef}>
-        <Headers theme={theme} orientation={orientation} innerRef={this.setHeadersRef}>
+      <Container theme={theme} {...rest} ref={this.setContainerRef}>
+        <Headers theme={theme} orientation={orientation} ref={this.setHeadersRef}>
           {this.renderHeaders()}
         </Headers>
         <Content theme={theme}>{this.renderPages()}</Content>

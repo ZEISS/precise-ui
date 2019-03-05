@@ -97,7 +97,7 @@ class FlyoutInt extends React.Component<FlyoutProps, FlyoutState> {
     const { open } = this.state;
 
     return (
-      <FlyoutContainer innerRef={this.setTargetRef}>
+      <FlyoutContainer ref={this.setTargetRef}>
         <StyledTargetWrapper onClick={this.onClick}>{children}</StyledTargetWrapper>
         {!!content && targetRect && open && (
           <FlyoutWindow {...props} targetRect={targetRect}>

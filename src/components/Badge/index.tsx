@@ -22,12 +22,12 @@ const BasicBadge = styled.div`
   text-align: center;
 `;
 
-const FilledBadge = BasicBadge.extend`
+const FilledBadge = styled(BasicBadge)`
   color: ${themed(({ theme }) => theme.badgeBackground)};
   background: ${themed(({ theme }) => theme.badgeColor)};
 `;
 
-const NormalBadge = BasicBadge.extend`
+const NormalBadge = styled(BasicBadge)`
   display: inline-block;
   color: ${themed(({ theme }) => theme.badgeColor)};
   background: ${themed(({ theme }) => theme.badgeBackground)};

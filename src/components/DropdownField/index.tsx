@@ -99,8 +99,8 @@ const DropdownInputBox = styled(StyledInputBox)`
   border: 1px solid ${themed(({ focused, theme: { ui4 } }) => (focused ? ui4 : transparent))};
 `;
 
-const DropdownOptionText = styled.div`
-  padding: ${(props: DropDownOptionsTextProps) =>
+const DropdownOptionText = styled.div<DropDownOptionsTextProps>`
+  padding: ${props =>
     !props.labelShown ? `${distance.medium}` : `${distance.large} ${distance.medium} ${distance.small}`};
   margin: 0;
   width: 100%;
@@ -127,7 +127,7 @@ interface StyledStandardWrapperProps {
   border: InteractiveListBorderType;
 }
 
-const StyledStandardWrapper = styled<StyledStandardWrapperProps, 'ul'>('ul')`
+const StyledStandardWrapper = styled('ul')<StyledStandardWrapperProps>`
   list-style: none;
   width: 100%;
   position: absolute;

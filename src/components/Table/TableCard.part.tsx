@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { List } from '../List';
 import { ListItem } from '../ListItem';
 import { remCalc } from '../../utils/remCalc';
@@ -7,14 +7,16 @@ import { TableProps, TableCardRendererEvent, TableBodyRenderEvent } from './Tabl
 import { defaultCellRenderer } from './TableShared.part';
 import { distance } from '../../distance';
 
-const Container = reStyled.div(
-  ({ theme: { ui4, text1 } }) => `
-  position: relative;
-  border: 1px solid ${ui4};
-  color: ${text1};
-  font-size: ${remCalc('16px')};
-  line-height: 22px;
-`,
+const Container = styled.div(
+  themed(
+    ({ theme: { ui4, text1 } }) => css`
+      position: relative;
+      border: 1px solid ${ui4};
+      color: ${text1};
+      font-size: ${remCalc('16px')};
+      line-height: 22px;
+    `,
+  ),
 );
 
 const ContentContainer = styled.div`

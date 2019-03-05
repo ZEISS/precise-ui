@@ -25,9 +25,9 @@ const PageControlsStyled = styled.div`
   margin-left: auto;
 `;
 
-const ChangePage = styled.button`
+const ChangePage = styled.button<ChangePageProps>`
   position: relative;
-  cursor: ${(props: ChangePageProps) => (props.disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   outline: none;
   display: flex;
   background: transparent;
@@ -35,7 +35,7 @@ const ChangePage = styled.button`
   align-items: center;
   padding: ${distance.small};
   margin: 0 ${distance.small};
-  color: ${(props: ChangePageProps) => (!props.disabled ? cyan : grey1)};
+  color: ${props => (!props.disabled ? cyan : grey1)};
   font-size: 1.5rem;
   &:before,
   &:after {

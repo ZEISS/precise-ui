@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { TextField, TextFieldProps, TextFieldChangeEvent } from '../TextField';
 import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
 import {
@@ -62,26 +62,28 @@ interface StyledAutosuggestWrapperProps {
   direction: InteractiveListDirection;
 }
 
-const StyledAutosuggestWrapper = reStyled.ul<StyledAutosuggestWrapperProps>(
-  ({ direction, theme: { ui1, ui4 } }) => `
-  list-style: none;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: none;
-  margin: 0;
-  padding: 0;
-  background: ${ui1};
-  border: 1px solid ${ui4};
-  ${
-    direction === InteractiveListDirection.normal ? 'border-top-color: transparent' : 'border-bottom-color: transparent'
-  };
-  max-height: 50vh;
-  position: absolute;
-  top: ${direction === InteractiveListDirection.normal ? '0' : '-100%'};
-  transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
-  overflow-y: auto;
-  z-index: 100;
-`,
+const StyledAutosuggestWrapper = styled.ul<StyledAutosuggestWrapperProps>(
+  themed(
+    ({ direction, theme: { ui1, ui4 } }) => css`
+      list-style: none;
+      width: 100%;
+      box-sizing: border-box;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+      background: ${ui1};
+      border: 1px solid ${ui4};
+      ${direction === InteractiveListDirection.normal
+        ? 'border-top-color: transparent'
+        : 'border-bottom-color: transparent'};
+      max-height: 50vh;
+      position: absolute;
+      top: ${direction === InteractiveListDirection.normal ? '0' : '-100%'};
+      transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
+      overflow-y: auto;
+      z-index: 100;
+    `,
+  ),
 );
 
 function defaultSuggestionRenderer<T>(suggestion: T): AutosuggestItem {

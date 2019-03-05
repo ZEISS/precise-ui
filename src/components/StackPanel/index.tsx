@@ -30,16 +30,16 @@ export interface StackPanelProps extends StandardProps {
   innerRef?(instance: HTMLElement | null): void;
 }
 
-interface StackLayoutProps {
+export interface StackLayoutProps {
   wrapping: string;
   dir: string;
   theme: any;
 }
 
-const StackLayout = styled.div`
+const StackLayout = styled.div<StackLayoutProps>`
   display: flex;
-  flex-direction: ${(props: StackLayoutProps) => props.dir};
-  flex-wrap: ${(props: StackLayoutProps) => props.wrapping};
+  flex-direction: ${props => props.dir};
+  flex-wrap: ${props => props.wrapping};
   justify-content: flex-start;
 `;
 
@@ -62,6 +62,6 @@ function mapFlex(direction?: StackPanelDirection) {
 export const StackPanel: React.SFC<StackPanelProps> = ({ theme, direction, wrap, innerRef, ...props }) => {
   const wrapping = wrap ? 'wrap' : 'nowrap';
   const dir = mapFlex(direction);
-  return <StackLayout theme={theme} dir={dir} wrapping={wrapping} innerRef={innerRef} {...props} />;
+  return <StackLayout theme={theme} dir={dir} wrapping={wrapping} ref={innerRef} {...props} />;
 };
 StackPanel.displayName = 'StackPanel';

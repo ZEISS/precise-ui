@@ -28,13 +28,13 @@ const PseudoLinkStyle = css`
   }
 `;
 
-const StyledActionLink = styled(Anchor)`
+const StyledActionLink = styled(Anchor)<StyledActionLink>`
   font-weight: 500;
   text-decoration: none;
   color: ${themed(props => (props.disabled ? props.theme.text3 : props.theme.ui0))};
-  display: ${(props: StyledActionLink) => (props.block ? 'block' : 'inline-block')};
-  cursor: ${(props: StyledActionLink) => (props.disabled ? 'default' : 'pointer')};
-  ${(props: StyledActionLink) => (!props.disabled ? PseudoLinkStyle : '')};
+  display: ${props => (props.block ? 'block' : 'inline-block')};
+  cursor: ${props => (props.disabled ? 'default' : 'pointer')};
+  ${props => (!props.disabled ? PseudoLinkStyle : '')};
 `;
 
 /**

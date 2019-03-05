@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { themed, reStyled } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import {
   InteractiveListWrapperProps,
   InteractiveListDirection,
@@ -36,50 +36,54 @@ const InteractiveListContainer = styled.div`
   outline: none;
 `;
 
-const ListWrapper = reStyled<InteractiveListWrapperProps, 'ul'>('ul')(
-  ({ open, border, direction, theme: { ui4 } }) => `
-  display: ${open ? 'block' : 'none'};
-  list-style: none;
-  width: 100%;
-  position: relative;
-  transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
-  box-sizing: border-box;
-  box-shadow: none;
-  margin: 0;
-  padding: 0;
-  background: ${transparent};
-  border: 1px solid ${border === InteractiveListBorderType.none ? transparent : ui4};
-  ${direction === InteractiveListDirection.normal ? 'border-top: none' : 'border-bottom: none'};
-  max-height: 100%;
-  overflow-y: auto;
-  z-index: 100;
-`,
+const ListWrapper = styled('ul')<InteractiveListWrapperProps>(
+  themed(
+    ({ open, border, direction, theme: { ui4 } }) => css`
+      display: ${open ? 'block' : 'none'};
+      list-style: none;
+      width: 100%;
+      position: relative;
+      transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
+      box-sizing: border-box;
+      box-shadow: none;
+      margin: 0;
+      padding: 0;
+      background: ${transparent};
+      border: 1px solid ${border === InteractiveListBorderType.none ? transparent : ui4};
+      ${direction === InteractiveListDirection.normal ? 'border-top: none' : 'border-bottom: none'};
+      max-height: 100%;
+      overflow-y: auto;
+      z-index: 100;
+    `,
+  ),
 );
 
-const ListItem = reStyled.li<ListItemProps>(
-  ({ hovered, theme: { ui3, text2 } }) => `
-  background: ${hovered ? ui3 : transparent};
-  color: ${text2};
-  list-style: none;
-  box-sizing: border-box;
-  cursor: pointer;
-  display: block;
-  width: 100%;
-  height: auto;
-  font-size: ${remCalc('16px')};
-  line-height: 22px;
-  position: relative;
+const ListItem = styled.li<ListItemProps>(
+  themed(
+    ({ hovered, theme: { ui3, text2 } }) => css`
+      background: ${hovered ? ui3 : transparent};
+      color: ${text2};
+      list-style: none;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      height: auto;
+      font-size: ${remCalc('16px')};
+      line-height: 22px;
+      position: relative;
 
-  a {
-    color: inherit;
-    display: block;
-    text-decoration: none;
+      a {
+        color: inherit;
+        display: block;
+        text-decoration: none;
 
-    &:hover {
-      text-decoration: none;
-    }
-  }
-`,
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    `,
+  ),
 );
 
 const ListItemInnerContainer = styled.div`
@@ -91,19 +95,19 @@ const ListItemContent = styled.div`
   flex-grow: 1;
 `;
 
-const ListItemContentPadding = styled<ListItemContentProps, 'div'>('div')`
+const ListItemContentPadding = styled('div')<ListItemContentProps>`
   padding: ${props => (props.condensed ? `${distance.small} ${distance.medium}` : distance.medium)};
   ${props => (props.showTick ? 'padding-right: 0;' : '')};
 `;
 
-const ListItemContentComponentPadding = styled<ListItemContentProps, 'div'>('div')`
+const ListItemContentComponentPadding = styled('div')<ListItemContentProps>`
   > * {
     padding: ${props => (props.condensed ? `${distance.small} ${distance.medium}` : distance.medium)};
     ${props => (props.showTick ? 'padding-right: 0;' : '')};
   }
 `;
 
-const ListItemIconPadding = styled<ListItemIconProps, 'div'>('div')`
+const ListItemIconPadding = styled('div')<ListItemIconProps>`
   padding: 0 ${distance.medium};
 
   i {
@@ -428,7 +432,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
         onMouseMove={selects[index]}
         selected={isSelected}
         hovered={isHovered}
-        innerRef={(node: HTMLLIElement) => {
+        ref={(node: HTMLLIElement) => {
           this.elements[index] = node;
 
           if (isHovered && node) {
@@ -501,7 +505,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
 
     return (
       <InteractiveListContainer
-        innerRef={this.setNode}
+        ref={this.setNode}
         {...(open ? { tabIndex: 0 } : undefined)}
         onKeyDown={this.control}
         {...props}>

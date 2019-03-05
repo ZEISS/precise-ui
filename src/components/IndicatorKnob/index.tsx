@@ -15,7 +15,7 @@ const transitionDuration = '0.3s';
 const transitionDurationBorder = '0.2s';
 const transitionEase = 'cubic-bezier(0, 0, 0.25, 1)';
 
-const Indicator = styled<IndicatorProps, 'div'>('div')`
+const Indicator = styled('div')<IndicatorProps>`
   width: ${distance.large};
   height: ${distance.large};
   position: absolute;

@@ -28,18 +28,101 @@ exports[`<Headline /> should render h2 headline 1`] = `
     level={2}
     size="medium"
   >
-    <div
-      className="c0"
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  padding: ",
+              [Function],
+              ";
+  font-size: ",
+              [Function],
+              ";
+  font-weight: ",
+              [Function],
+              ";
+  text-transform: ",
+              [Function],
+              ";
+  font-family: ",
+              [Function],
+              ";
+  line-height: ",
+              [Function],
+              ";
+  letter-spacing: ",
+              [Function],
+              ";
+  color: ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      level={2}
       size="medium"
     >
-      <styled.h2>
-        <h2
-          className="c1"
-        >
-          h2 Headline
-        </h2>
-      </styled.h2>
-    </div>
+      <div
+        className="c0"
+        size="medium"
+      >
+        <styled.h2>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htpNat",
+                  "isStatic": true,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
+      margin: 0;
+      font-weight: inherit;
+      font-size: inherit;
+    ",
+                  ],
+                },
+                "displayName": "styled.h2",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htpNat",
+                "target": "h2",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <h2
+              className="c1"
+            >
+              h2 Headline
+            </h2>
+          </StyledComponent>
+        </styled.h2>
+      </div>
+    </StyledComponent>
   </styled.div>
 </Headline>
 `;

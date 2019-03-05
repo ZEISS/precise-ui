@@ -81,33 +81,148 @@ exports[`<Avatar /> should render an <Avatar> with initials overriding the color
     initials="FR"
     size="medium"
   >
-    <div
-      className="c0"
+    <StyledComponent
       color="red"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  position: relative;
+  overflow: hidden;
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      initials="FR"
       size="medium"
     >
-      <styled.div
+      <div
+        className="c0"
+        color="red"
         size="medium"
       >
-        <div
-          className="c1"
+        <styled.div
           size="medium"
         >
-          <styled.div
-            color="red"
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
+  border: 0;
+  perspective: 1px;
+
+  color: ",
+                    [Function],
+                    ";
+  border-radius: 50%;
+  overflow: hidden;
+
+  ",
+                    [Function],
+                    ";
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
             size="medium"
           >
             <div
-              className="c2"
-              color="red"
+              className="c1"
               size="medium"
             >
-              FR
+              <styled.div
+                color="red"
+                size="medium"
+              >
+                <StyledComponent
+                  color="red"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-htpNat",
+                        "isStatic": false,
+                        "lastClassName": "c2",
+                        "rules": Array [
+                          "
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  background-color: ",
+                          [Function],
+                          ";
+  ",
+                          [Function],
+                          ";
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-htpNat",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  size="medium"
+                >
+                  <div
+                    className="c2"
+                    color="red"
+                    size="medium"
+                  >
+                    FR
+                  </div>
+                </StyledComponent>
+              </styled.div>
             </div>
-          </styled.div>
-        </div>
-      </styled.div>
-    </div>
+          </StyledComponent>
+        </styled.div>
+      </div>
+    </StyledComponent>
   </styled.div>
 </Avatar>
 `;

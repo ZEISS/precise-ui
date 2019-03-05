@@ -4,7 +4,7 @@ import styled from '../../utils/styled';
 import { RadioButton, RadioButtonChangeEvent, RadioButtonProps } from '../RadioButton';
 import { StyledTileIcon } from '../../quarks/StyledTileIcon';
 
-const Tile = styled(RadioButton)`
+const Tile = styled(RadioButton)<{ checked: boolean }>`
   cursor: pointer;
   position: relative;
   display: inline-block;
@@ -16,10 +16,10 @@ const Tile = styled(RadioButton)`
   user-select: none;
   color: ${colors.black};
   background: ${colors.grey7};
-  ${(props: { checked: boolean }) => (props.checked ? `outline: ${colors.cyan} solid 4px;` : '')};
+  ${props => (props.checked ? `outline: ${colors.cyan} solid 4px;` : '')};
 
   &:hover {
-    ${(props: { checked: boolean }) => (!props.checked ? `outline: rgba(29, 29, 29, 0.1) solid 4px;` : '')};
+    ${props => (!props.checked ? `outline: rgba(29, 29, 29, 0.1) solid 4px;` : '')};
   }
 `;
 

@@ -49,10 +49,10 @@ export interface InteractiveSurfaceProps extends StandardProps {
   children?: React.ReactNode;
 }
 
-const Container = styled.div`
+const Container = styled.div<InteractiveSurfaceProps>`
   position: relative;
-  touch-action: ${(props: InteractiveSurfaceProps) => (props.disabled ? 'auto' : 'none')};
-  user-select: ${(props: InteractiveSurfaceProps) => (props.disabled ? 'auto' : 'none')};
+  touch-action: ${props => (props.disabled ? 'auto' : 'none')};
+  user-select: ${props => (props.disabled ? 'auto' : 'none')};
 `;
 
 /**

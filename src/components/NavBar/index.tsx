@@ -67,7 +67,7 @@ const HeaderStackPanel = styled(StackPanel)`
   flex-shrink: 0;
 `;
 
-const StyledNavBar = HeaderStackPanel.extend`
+const StyledNavBar = styled(HeaderStackPanel)`
   padding-top: ${distance.xlarge};
   margin-bottom: ${distance.xxxlarge};
   flex-wrap: wrap;
