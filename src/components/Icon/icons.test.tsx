@@ -188,6 +188,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render Web icon', () => {
+    const Component = icons.Web;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Email icon', () => {
     const Component = icons.Email;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -494,3 +500,4 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
+  
