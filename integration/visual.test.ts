@@ -1,6 +1,6 @@
 import { ElementHandle } from 'puppeteer';
 
-const componentsUrl = 'http://0.0.0.0:6061/#/Components';
+const componentsUrl = 'http://host.docker.internal:6065/#/Components';
 
 async function getPreviewInfo($preview: ElementHandle<Element>) {
   const { name, link, skip } = await page.evaluate(obj => {
