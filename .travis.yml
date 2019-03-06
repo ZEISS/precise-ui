@@ -7,8 +7,6 @@ services:
 cache:
   directories:
   - node_modules
-env:
-  - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 script:
   - npm run test
   - npm run build
