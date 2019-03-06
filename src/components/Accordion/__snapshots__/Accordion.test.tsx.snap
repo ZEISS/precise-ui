@@ -265,7 +265,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
                                                 "withComponent": [Function],
-                                                Symbol(Symbol.hasInstance): [Function],
                                               }
                                             }
                                             forwardedRef={null}
@@ -538,7 +537,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
                                                 "withComponent": [Function],
-                                                Symbol(Symbol.hasInstance): [Function],
                                               }
                                             }
                                             forwardedRef={null}
@@ -811,7 +809,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
                                                 "withComponent": [Function],
-                                                Symbol(Symbol.hasInstance): [Function],
                                               }
                                             }
                                             forwardedRef={null}
@@ -1084,7 +1081,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
                                                 "withComponent": [Function],
-                                                Symbol(Symbol.hasInstance): [Function],
                                               }
                                             }
                                             forwardedRef={null}
@@ -1467,7 +1463,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
                                                 "withComponent": [Function],
-                                                Symbol(Symbol.hasInstance): [Function],
                                               }
                                             }
                                             forwardedRef={null}
@@ -1740,7 +1735,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
                                                 "withComponent": [Function],
-                                                Symbol(Symbol.hasInstance): [Function],
                                               }
                                             }
                                             forwardedRef={null}
@@ -2113,7 +2107,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                 "toString": [Function],
                                                 "warnTooManyClasses": [Function],
                                                 "withComponent": [Function],
-                                                Symbol(Symbol.hasInstance): [Function],
                                               }
                                             }
                                             forwardedRef={null}
