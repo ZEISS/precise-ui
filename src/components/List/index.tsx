@@ -31,14 +31,14 @@ const Bulleted = css`
   padding: 0;
 `;
 
-const StyledList = styled.ul`
+const StyledList = styled.ul<ListProps>`
   flex: 1 1 auto;
   flex-direction: column;
   margin: 0;
   position: relative;
   overflow-x: hidden;
-  list-style: ${(props: ListProps) => props.bullets || 'none'};
-  ${(props: ListProps) => (props.bullets && props.bullets !== 'none' ? '' : Bulleted)};
+  list-style: ${props => props.bullets || 'none'};
+  ${props => (props.bullets && props.bullets !== 'none' ? '' : Bulleted)};
 `;
 
 /**

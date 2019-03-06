@@ -10,17 +10,17 @@ describe('<ListItem />', () => {
   });
 
   it('should be render with padding, by default', () => {
-    const wrapper = enzyme.shallow(<ListItem />);
+    const wrapper = enzyme.mount(<ListItem />);
     expect(wrapper).toHaveStyleRule('padding', '0.75rem 1.25rem');
   });
 
   it('should render component without padding', () => {
-    const wrapper = enzyme.shallow(<ListItem disablePadding />);
+    const wrapper = enzyme.mount(<ListItem disablePadding />);
     expect(wrapper).toHaveStyleRule('padding', '0');
   });
 
   it('should not present a border', () => {
-    const wrapper = enzyme.shallow(<ListItem border={false} />);
+    const wrapper = enzyme.mount(<ListItem border={false} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

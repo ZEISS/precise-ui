@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { Icon, IconName } from '../Icon';
 import { ProgressStatus } from './FileUploaderDetails.types.part';
 import { iconNames } from './helpers';
@@ -10,15 +10,17 @@ import { StatusIcon } from './StatusIcon.part';
 import { distance } from '../../distance';
 import { getPropLabel, UploaderProgressBarLabels, ComponentLabel } from '../../utils/labels';
 
-const ProgressBarWrapper = reStyled.div(
-  ({ theme }) => `
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
-  border: solid 1px ${theme.ui4};
-  background-color: ${theme.text4};
-`,
+const ProgressBarWrapper = styled.div(
+  themed(
+    ({ theme }) => css`
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
+      border: solid 1px ${theme.ui4};
+      background-color: ${theme.text4};
+    `,
+  ),
 );
 
 const StyledProgressBar = styled(ProgressBar)`

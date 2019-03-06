@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { Table, TableRowEvent } from '../Table';
 import { defaultCellRenderer } from '../Table/TableShared.part';
@@ -36,14 +36,16 @@ const StyledTable = styled(Table)`
   }
 `;
 
-const StyledTableRowCollapse = reStyled.tr<AccordionTableItemProps>(
-  ({ theme, active }) => `
-    border: ${active ? `1px solid ${theme.ui5}` : 'none'};
-    ${!active ? 'display: none;' : ''}
-  `,
+const StyledTableRowCollapse = styled.tr<AccordionTableItemProps>(
+  themed(
+    ({ theme, active }) => css`
+      border: ${active ? `1px solid ${theme.ui5}` : 'none'};
+      ${!active ? 'display: none;' : ''}
+    `,
+  ),
 );
 
-const StyledCollapseAnimator = styled<AccordionTableItemProps, 'div'>('div')`
+const StyledCollapseAnimator = styled('div')<AccordionTableItemProps>`
   transition: all ${animationDuration} ${animationFunction};
   max-height: ${({ active }) => (active ? '10000px' : '0')};
   opacity: ${({ active }) => (active ? '1' : '0')};
@@ -65,7 +67,7 @@ const StyledDetailsContainer = styled.td`
 
 const StyledIconInt: React.SFC<StyledArrowProps> = ({ isRotated: _0, ...props }) => <Icon {...props} />;
 
-const StyledIcon = styled<StyledArrowProps>(StyledIconInt)`
+const StyledIcon = styled(StyledIconInt)<StyledArrowProps>`
   display: block;
   font-size: ${remCalc('18px')};
   height: 18px;

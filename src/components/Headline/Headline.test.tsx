@@ -1,18 +1,18 @@
 import * as React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount, mount } from 'enzyme';
 import { Headline } from './';
 import { light } from '../../themes';
 import 'jest-styled-components';
 
 describe('<Headline />', () => {
   it('should render default <Headline> component', () => {
-    const wrapper = shallow(<Headline>h3 Headline</Headline>);
+    const wrapper = mount(<Headline>h3 Headline</Headline>);
     expect(wrapper).toHaveStyleRule('font-size', '3rem');
     expect(wrapper).toHaveStyleRule('color', 'inherit');
   });
 
   it('should have font-size: 1.5rem when size is small', () => {
-    const wrapper = shallow(<Headline size="small">h1 Headline</Headline>);
+    const wrapper = mount(<Headline size="small">h1 Headline</Headline>);
     expect(wrapper).toHaveStyleRule('font-size', '1.375rem');
   });
 

@@ -4,7 +4,7 @@ import { distance } from '../distance';
 
 export interface StyledIconProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export const StyledIconContainer: React.ComponentClass<StyledIconProps> = styled.div`
+export const StyledIconContainer = styled('div')<StyledIconProps>`
   padding: 0 ${distance.medium};
 
   i {

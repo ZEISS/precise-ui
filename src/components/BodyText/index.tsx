@@ -17,8 +17,8 @@ export interface BodyTextProps extends StandardProps {
   children?: React.ReactNode;
 }
 
-const StyledBodyText = styled.p`
-  text-align: ${(props: { align: TextAlign }) => props.align};
+const StyledBodyText = styled.p<{ align: TextAlign }>`
+  text-align: ${props => props.align};
   font-family: ${themed(props => props.theme.fontFamily)};
   margin-bottom: ${distance.medium};
   font-size: inherit;

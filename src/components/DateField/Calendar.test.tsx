@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { shallow, mount, ReactWrapper } from 'enzyme';
-import { DateField } from './';
+import { mount, ReactWrapper } from 'enzyme';
+import { DateFieldInt as DateField, CalendarTable, Row } from './DateFieldInt';
 
 function getCalendarTable(root: ReactWrapper): ReactWrapper {
   return root
@@ -17,7 +17,7 @@ describe('<DateField />', () => {
   let instance;
 
   beforeEach(() => {
-    wrapper = mount(shallow(<DateField />).get(0));
+    wrapper = mount(<DateField />);
     instance = wrapper.instance();
   });
 
@@ -78,15 +78,18 @@ describe('<DateField />', () => {
        * [ 0 0 0 0 - - - ]
        */
       wrapper.setState({ open: true, date: new Date(2018, 4) });
-      const firstRowButtons = getCalendarTable(wrapper)
-        .childAt(0)
+      const firstRowButtons = wrapper
+        .find(CalendarTable)
+        .find(Row)
+        .at(0)
         .find('button');
       expect(firstRowButtons.at(0).props().disabled).toBeTruthy();
 
-      const lastRowButtons = getCalendarTable(wrapper)
-        .childAt(4)
+      const lastRowButtons = wrapper
+        .find(CalendarTable)
+        .find(Row)
+        .at(4)
         .find('button');
-      expect(lastRowButtons.at(4).props().disabled).toBeTruthy();
       expect(lastRowButtons.at(5).props().disabled).toBeTruthy();
       expect(lastRowButtons.at(6).props().disabled).toBeTruthy();
     });
@@ -101,13 +104,17 @@ describe('<DateField />', () => {
        * [ 0 0 - - - - - ]
        */
       wrapper.setState({ open: true, date: new Date(2018, 6) });
-      const firstRowButtons = getCalendarTable(wrapper)
-        .childAt(0)
+      const firstRowButtons = wrapper
+        .find(CalendarTable)
+        .find(Row)
+        .at(0)
         .find('button');
       expect(firstRowButtons.at(0).props().disabled).toBeTruthy();
 
-      const lastRowButtons = getCalendarTable(wrapper)
-        .childAt(5)
+      const lastRowButtons = wrapper
+        .find(CalendarTable)
+        .find(Row)
+        .at(5)
         .find('button');
       expect(lastRowButtons.at(2).props().disabled).toBeTruthy();
       expect(lastRowButtons.at(3).props().disabled).toBeTruthy();

@@ -5,8 +5,8 @@ import 'jest-styled-components';
 
 describe('<Badge />', () => {
   it('should render an empty <Badge> component', () => {
-    const wrapper = enzyme.shallow(<Badge />);
-    expect(wrapper.text()).toBe('<styled.div />');
+    const wrapper = enzyme.mount(<Badge />);
+    expect(wrapper.find('div').length > 0).toBeTruthy();
   });
 
   it('should render a <Badge> with text', () => {

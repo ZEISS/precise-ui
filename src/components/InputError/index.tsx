@@ -11,7 +11,7 @@ export interface InputErrorProps extends StandardProps {
   children?: React.ReactNode;
 }
 
-const StyledError = styled<InputErrorProps, 'div'>('div')`
+const StyledError = styled('div')<InputErrorProps>`
   color: ${themed(props => props.theme.inputError)};
   font-size: ${remCalc('12px')};
   line-height: 14px;

@@ -26,7 +26,7 @@ const Bordered = css`
   border: 1px solid rgba(0, 0, 0, 0.125);
 `;
 
-const StyledListItem = styled<ListItemProps, 'li'>('li')`
+const StyledListItem = styled('li')<ListItemProps>`
   background-color: ${themed(props => props.theme.ui1)};
   color: ${themed(props => (props.active ? props.theme.primary : props.theme.text6))};
   ${props => (props.border ? Bordered : '')};

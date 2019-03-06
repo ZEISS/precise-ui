@@ -65,7 +65,7 @@ export interface NotificationsState {
 export interface StyledNotificationsProps {
   position?: NotificationsPosition;
   disablePointer?: boolean;
-  width: number;
+  width?: number;
 }
 
 export interface AbsoluteContainerProps {
@@ -92,30 +92,30 @@ const getNotificationPositionStyle = (pos: NotificationsPosition) => {
   return positionStyle;
 };
 
-const AbsoluteContainer = css`
+const AbsoluteContainer = css<AbsoluteContainerProps>`
   z-index: 10001;
   position: fixed;
-  ${(props: AbsoluteContainerProps) => getNotificationPositionStyle(props.position)};
-  width: ${(props: AbsoluteContainerProps) => (props.width ? props.width : defaultProps.width)}px;
+  ${props => getNotificationPositionStyle(props.position)};
+  width: ${props => (props.width ? props.width : defaultProps.width)}px;
   @media (max-width: 480px) {
     width: 100vw;
     padding: 0;
     right: 0;
     margin: 0;
     position: fixed;
-    ${(props: AbsoluteContainerProps) => (props.position.substring(0, 3) === 'top' ? 'top: 0' : 'bottom: 0')};
+    ${props => (props.position.substring(0, 3) === 'top' ? 'top: 0' : 'bottom: 0')};
   }
 `;
 
-const StyledNotifications = styled.div`
+const StyledNotifications = styled.div<StyledNotificationsProps>`
   box-sizing: border-box;
-  width: ${(props: StyledNotificationsProps) => (!props.width ? 'auto' : `${props.width}px`)};
-  ${(props: StyledNotificationsProps) => (props.disablePointer ? `pointer-events: none` : ``)};
+  width: ${props => (!props.width ? 'auto' : `${props.width}px`)};
+  ${props => (props.disablePointer ? `pointer-events: none` : ``)};
   @media (max-width: 480px) {
     padding: 0;
     margin: 0;
   }
-  ${(props: any) => (props.position !== 'relative' ? AbsoluteContainer : '')};
+  ${props => (props.position !== 'relative' ? AbsoluteContainer : '')};
 `;
 
 interface NotificationClose {
@@ -253,7 +253,7 @@ export class Notifications extends React.Component<NotificationsProps, Notificat
 
     return (
       <div>
-        {Object.keys(notificationsToRender).map(position => {
+        {Object.keys(notificationsToRender).map((position: NotificationsPosition) => {
           const disablePointer =
             notificationsToRender[position].length === 1 && notificationsToRender[position][0] === null;
 

@@ -5,7 +5,7 @@ import 'jest-styled-components';
 
 describe('<GradientContainer />', () => {
   it('should render an empty <GradientContainer> component', () => {
-    const wrapper = enzyme.shallow(<GradientContainer>Child</GradientContainer>);
-    expect(wrapper.text()).toBe('<styled.div />');
+    const wrapper = enzyme.mount(<GradientContainer>Child</GradientContainer>);
+    expect(wrapper.find('div').length > 0).toBeTruthy();
   });
 });

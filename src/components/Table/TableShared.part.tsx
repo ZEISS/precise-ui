@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { TableRowEvent, TableBodyRenderEvent, Column, TableColumns, TableCellRenderEvent } from './Table.types.part';
-import styled, { themed, reStyled, css } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { distance } from '../../distance';
 
@@ -32,7 +32,7 @@ interface SortIconProps {
   sortable?: boolean;
 }
 
-const SortIcon = styled<SortIconProps, 'span'>('span')`
+const SortIcon = styled('span')<SortIconProps>`
   position: relative;
   margin-left: ${distance.xsmall};
   width: 18px;
@@ -76,15 +76,17 @@ export const StyledTableFoot = styled.tfoot`
 
 export const StyledTableHeaderRow = styled.tr``;
 
-export const StyledTableRow = reStyled.tr(
-  ({ theme: { ui3, ui4, text1 } }) => `
-  border-bottom: 1px solid ${ui4};
-  color: ${text1};
+export const StyledTableRow = styled.tr(
+  themed(
+    ({ theme: { ui3, ui4, text1 } }) => css`
+      border-bottom: 1px solid ${ui4};
+      color: ${text1};
 
-  &:hover {
-    background: ${ui3};
-  }
-`,
+      &:hover {
+        background: ${ui3};
+      }
+    `,
+  ),
 );
 
 export interface TableHeaderProps {
@@ -92,10 +94,10 @@ export interface TableHeaderProps {
   width?: string;
 }
 
-export const StyledTableHeader = styled<TableHeaderProps, 'th'>('th')`
+export const StyledTableHeader = styled('th')<TableHeaderProps>`
   text-align: left;
   border-bottom: 1px solid ${themed(({ theme }) => theme.ui5)};
-  cursor: ${({ sortable }: TableHeaderProps) => (sortable ? 'pointer' : 'default')};
+  cursor: ${({ sortable }) => (sortable ? 'pointer' : 'default')};
   box-sizing: border-box;
   ${({ width }) => (width && `width: ${width}`) || ''};
 `;

@@ -110,9 +110,7 @@ const SliderContainer = styled.div`
   height: 100%;
 `;
 
-const SliderBar = styled<SliderBarProps>(({ orientation: _0 = 'vertical', ...rest }) => (
-  <InteractiveSurface {...rest} />
-))`
+const SliderBar = styled(InteractiveSurface)<SliderBarProps>`
   position: relative;
   padding: ${props => (props.orientation === 'vertical' ? `0 ${distance.small}` : `${distance.small} 0`)};
   height: ${props => (props.orientation === 'vertical' ? '100%' : distance.xsmall)};
@@ -144,7 +142,7 @@ const SliderBar = styled<SliderBarProps>(({ orientation: _0 = 'vertical', ...res
   }
 `;
 
-const IndicatorBar = styled<IndicatorBarProps, 'div'>('div')`
+const IndicatorBar = styled('div')<IndicatorBarProps>`
   border-radius: ${distance.small};
   background: ${themed(props =>
     props.disabled ? props.theme.ui4 : props.active ? ocean : transparentize(props.theme.ui5, 0.75),
@@ -156,7 +154,7 @@ const IndicatorBar = styled<IndicatorBarProps, 'div'>('div')`
   margin: auto;
 `;
 
-const TooltipContainer = styled<TooltipContainerProps, 'div'>('div')`
+const TooltipContainer = styled('div')<TooltipContainerProps>`
   position: absolute;
   ${props => (props.vertical ? `top: ${props.value}` : `left: ${props.value}`)};
   ${props => (props.vertical ? `left: ${distance.large}` : `top: -${distance.large}`)};

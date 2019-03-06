@@ -34,11 +34,11 @@ const StyledCard = styled(StackPanel)`
   box-sizing: border-box;
 `;
 
-const StyledCardChildWrapper = styled.div`
+const StyledCardChildWrapper = styled.div<StyledCardChildProps>`
   box-sizing: border-box;
   overflow: auto;
   transition: flex-grow 0.4s;
-  ${(props: StyledCardChildProps) =>
+  ${props =>
     props.grow
       ? `
     flex-grow: ${props.grow};

@@ -56,9 +56,9 @@ interface StyledNotificationProps {
   position?: NotificationsPosition;
 }
 
-const StyledNotification = styled(Notification)`
+const StyledNotification = styled(Notification)<StyledNotificationProps>`
   opacity: 0;
-  animation: ${(props: StyledNotificationProps) =>
+  animation: ${props =>
       props.closing
         ? OutAnimation(sideMultiplier(props.position) * offsetDistance)
         : InAnimation(sideMultiplier(props.position) * offsetDistance)}

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { reStyled, keyframes } from '../../utils/styled';
+import styled, { keyframes, css } from '../../utils/styled';
 import { StandardProps } from '../../common';
 import { Headline } from '../Headline';
 import { TextStyles } from '../../textStyles';
@@ -96,8 +96,8 @@ export interface StyledModalProps extends ModalProps {
   closing: boolean;
 }
 
-const StyledModal = reStyled<StyledModalProps, 'div'>('div')(
-  ({ width, closing }) => `
+const StyledModal = styled('div')<StyledModalProps>(
+  ({ width, closing }) => css`
     outline: none;
     color: ${dark};
     ${width ? `width: ${width}` : 'max-width: 500px'};
@@ -105,9 +105,8 @@ const StyledModal = reStyled<StyledModalProps, 'div'>('div')(
     display: flex;
     align-items: center;
     min-height: calc(100% - (${distance.xlarge} * 2));
-    animation: ${closing ? OutAnimation() : InAnimation(-72)} ${
-    closing ? closeAnimationDuration : openAnimationDuration
-  }ms cubic-bezier(0, 0, 0.25, 1);
+    animation: ${closing ? OutAnimation() : InAnimation(-72)}
+      ${closing ? closeAnimationDuration : openAnimationDuration}ms cubic-bezier(0, 0, 0.25, 1);
     animation-fill-mode: forwards;
 
     @media screen and (max-width: ${width || '500px'}) {
@@ -116,18 +115,17 @@ const StyledModal = reStyled<StyledModalProps, 'div'>('div')(
       margin: 0;
       align-items: stretch;
     }
-    `,
+  `,
 );
 
 export interface StyledBlockerProps extends BlockerProps {
   closing: boolean;
 }
 
-const StyledBlocker = reStyled<StyledBlockerProps>(({ closing, ...rest }: StyledBlockerProps) => <Blocker {...rest} />)(
-  ({ closing }) => `
-  animation: ${
-    closing ? OutAnimation() : BlockerInAnimation()
-  } ${blockerAnimationDuration}ms cubic-bezier(0, 0, 0.25, 1);
+const StyledBlocker = styled(Blocker)<StyledBlockerProps>(
+  ({ closing }) => css`
+    animation: ${closing ? OutAnimation() : BlockerInAnimation()} ${blockerAnimationDuration}ms
+      cubic-bezier(0, 0, 0.25, 1);
     animation-fill-mode: forwards;
   `,
 );
@@ -136,7 +134,7 @@ export interface ModalContentProps {
   minHeight?: string;
 }
 
-const ModalContent = reStyled.div<ModalContentProps>(
+const ModalContent = styled.div<ModalContentProps>(
   ({ minHeight }) => `
     position: relative;
     display: flex;
@@ -230,7 +228,9 @@ export class Modal extends React.PureComponent<ModalProps, ModalState> {
 /**
  * Styles the body of a modal dialog.
  */
-export const ModalBody: React.SFC<StandardProps> = props => <StyledModalBody {...props} />;
+export const ModalBody: React.FC<StandardProps & { children: React.ReactNode }> = props => (
+  <StyledModalBody {...props} />
+);
 ModalBody.displayName = 'ModalBody';
 
 /**

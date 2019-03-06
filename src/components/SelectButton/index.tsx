@@ -68,16 +68,14 @@ const ButtonWrapper = styled.div`
   cursor: pointer;
 `;
 
-const StyledCustomWrapper = styled.div`
+const StyledCustomWrapper = styled.div<InteractiveListWrapperProps>`
   position: absolute;
   border: solid 1px #dfe3e6;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   position: absolute;
   z-index: 2;
-  top: ${(props: InteractiveListWrapperProps) => (props.direction === InteractiveListDirection.normal ? 8 : -30)}px;
-  transform: translateY(
-    ${(props: InteractiveListWrapperProps) => (props.direction === InteractiveListDirection.normal ? 0 : -100)}%
-  );
+  top: ${props => (props.direction === InteractiveListDirection.normal ? 8 : -30)}px;
+  transform: translateY(${props => (props.direction === InteractiveListDirection.normal ? 0 : -100)}%);
   background: ${white};
   border: 1px solid #dfe3e6;
   max-height: 50vh;

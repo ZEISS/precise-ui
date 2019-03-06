@@ -1,13 +1,14 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
 import { IconLink } from './';
+import { Anchor } from '../Anchor';
 
 const defaultIconName = 'Favorite';
 
 describe('<IconLink />', () => {
   it('should render an empty <IconLink> component', () => {
-    const wrapper = enzyme.shallow(<IconLink icon={defaultIconName} />);
-    expect(wrapper.text()).toBe('<Styled(Anchor) />');
+    const wrapper = enzyme.mount(<IconLink icon={defaultIconName} />);
+    expect(wrapper.find(Anchor).length).toBe(1);
   });
 
   it('should render a <IconLink> component with some content', () => {

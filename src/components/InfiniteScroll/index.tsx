@@ -65,9 +65,9 @@ export interface LoaderButtonProps {
   onClick(): void;
 }
 
-const Container = styled.div`
-  height: ${({ height }: StyledContainerProps) => (height ? `${height}px` : 'auto')};
-  overflow: ${({ height }: StyledContainerProps) => (height ? 'auto' : 'visible')};
+const Container = styled.div<StyledContainerProps>`
+  height: ${({ height }) => (height ? `${height}px` : 'auto')};
+  overflow: ${({ height }) => (height ? 'auto' : 'visible')};
 `;
 
 const Footer = styled.div`
@@ -197,7 +197,7 @@ export class InfiniteScroll extends React.Component<InfiniteScrollProps, Infinit
     const { isButtonMode, isLoading } = this.state;
 
     return (
-      <Container innerRef={this.setContainer} height={containerHeight}>
+      <Container ref={this.setContainer} height={containerHeight}>
         <Host>{data}</Host>
         <Footer>
           {isLoading && <Spinner size="x-small" />}

@@ -3,7 +3,6 @@
 exports[`<InfiniteScroll /> should render <InfiniteScroll> with "Show More" button and data elements 1`] = `
 <styled.div
   height={500}
-  innerRef={[Function]}
 >
   <div>
     <div
@@ -87,7 +86,6 @@ exports[`<InfiniteScroll /> should render <InfiniteScroll> with "Show More" butt
 exports[`<InfiniteScroll /> should render <InfiniteScroll> with custom button 1`] = `
 <styled.div
   height={500}
-  innerRef={[Function]}
 >
   <div>
     <div
@@ -160,9 +158,7 @@ exports[`<InfiniteScroll /> should render <InfiniteScroll> with custom button 1`
 `;
 
 exports[`<InfiniteScroll /> should render <InfiniteScroll> without fixed height container 1`] = `
-<styled.div
-  innerRef={[Function]}
->
+<styled.div>
   <div>
     <div
       key="X0"
@@ -232,7 +228,6 @@ exports[`<InfiniteScroll /> should render <InfiniteScroll> without fixed height 
 exports[`<InfiniteScroll /> should render an empty <InfiniteScroll> 1`] = `
 <styled.div
   height={500}
-  innerRef={[Function]}
 >
   <div />
   <styled.div />

@@ -11,7 +11,7 @@ export interface InputInfoProps extends StandardProps {
   children?: React.ReactNode;
 }
 
-const StyledInfo = styled<InputInfoProps, 'div'>('div')`
+const StyledInfo = styled('div')<InputInfoProps>`
   color: ${themed(props => props.theme.text2)};
   font-size: ${remCalc('12px')};
   line-height: 14px;

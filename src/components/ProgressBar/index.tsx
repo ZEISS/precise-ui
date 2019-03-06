@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { themed, StyledFunction, keyframes } from '../../utils/styled';
+import styled, { themed, keyframes } from '../../utils/styled';
 import { StandardProps } from '../../common';
 import { remCalc } from '../../utils/remCalc';
 import { distance } from '../../distance';
@@ -53,7 +53,7 @@ export interface ProgressBarProps extends StandardProps {
   type?: ProgressBarType;
 }
 
-interface StopProps {
+export interface StopProps {
   active: boolean;
 }
 
@@ -63,17 +63,15 @@ export interface ProgressContainerProps {
 
 const spinningWidth = 50;
 
-const stopCreator: StyledFunction<StopProps & React.HTMLProps<HTMLInputElement>> = styled.div;
-
 const ProgressContainer = styled.div`
   color: ${themed(props => props.theme.text6)};
 `;
 
-const ProgressRail = styled<ProgressContainerProps, 'div'>('div')`
+const ProgressRail = styled('div')<ProgressContainerProps>`
   position: relative;
   border: 0;
   background: ${themed(props => props.theme.ui4)};
-  height: ${({ type }: ProgressContainerProps) => (type === 'secondary' ? distance.xsmall : distance.xxsmall)};
+  height: ${({ type }) => (type === 'secondary' ? distance.xsmall : distance.xxsmall)};
 `;
 
 const ProgressTitle = styled.div`
@@ -96,7 +94,7 @@ const ProgressIndicator = styled.div`
   width: 0;
 `;
 
-const ProgressStop = stopCreator`
+const ProgressStop = styled('div')<StopProps & React.HTMLProps<HTMLInputElement>>`
   border-radius: ${distance.small};
   position: absolute;
   width: ${distance.small};

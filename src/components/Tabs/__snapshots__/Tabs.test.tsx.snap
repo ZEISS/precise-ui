@@ -210,134 +210,569 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                   }
                 }
               >
-                <div
-                  className="sc-bdVaJa bDWFJH"
+                <StyledComponent
+                  dimensions={
+                    Object {
+                      "angle": 0,
+                      "height": 768,
+                      "width": 1024,
+                    }
+                  }
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-bdVaJa",
+                        "isStatic": true,
+                        "lastClassName": "bDWFJH",
+                        "rules": Array [],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-bdVaJa",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
                 >
-                  <styled.ul>
-                    <ul
-                      className="sc-bwzfXH kqITuJ"
-                    >
-                      <styled.li
-                        active={false}
-                        key="head-0"
-                        onClick={[Function]}
+                  <div
+                    className="sc-bdVaJa bDWFJH"
+                  >
+                    <styled.ul>
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bwzfXH",
+                              "isStatic": true,
+                              "lastClassName": "kqITuJ",
+                              "rules": Array [
+                                "
+  margin: 0 0 ",
+                                "0.25rem",
+                                ";
+  padding: 0;
+  display: flex;
+",
+                              ],
+                            },
+                            "displayName": "styled.ul",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bwzfXH",
+                            "target": "ul",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
                       >
-                        <li
-                          className="sc-bxivhb dswZLu"
-                          onClick={[Function]}
+                        <ul
+                          className="sc-bwzfXH kqITuJ"
                         >
-                          First
-                        </li>
-                      </styled.li>
-                      <styled.li
-                        active={false}
-                        key="head-1"
-                        onClick={[Function]}
-                      >
-                        <li
-                          className="sc-bxivhb dswZLu"
-                          onClick={[Function]}
-                        >
-                          Second
-                        </li>
-                      </styled.li>
-                      <styled.li
-                        active={true}
-                        key="head-2"
-                        onClick={[Function]}
-                      >
-                        <li
-                          className="sc-bxivhb fCMGKn"
-                          onClick={[Function]}
-                        >
-                          Third
-                        </li>
-                      </styled.li>
-                      <styled.li
-                        active={false}
-                        key="head-3"
-                        onClick={[Function]}
-                      >
-                        <li
-                          className="sc-bxivhb dswZLu"
-                          onClick={[Function]}
-                        >
-                          Last
-                        </li>
-                      </styled.li>
-                    </ul>
-                  </styled.ul>
-                  <styled.div>
-                    <div
-                      className="sc-htpNat KtFsv"
-                    >
-                      <styled.div
-                        active={false}
-                        key="item-0"
+                          <styled.li
+                            active={false}
+                            key="head-0"
+                            onClick={[Function]}
+                          >
+                            <StyledComponent
+                              active={false}
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-bxivhb",
+                                    "isStatic": false,
+                                    "lastClassName": "dswZLu",
+                                    "rules": Array [
+                                      "
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: ",
+                                      "1.4375rem",
+                                      ";
+  font-size: ",
+                                      "1.125rem",
+                                      ";
+  font-weight: 400;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+  margin-right: ",
+                                      "3rem",
+                                      ";
+  ",
+                                      [Function],
+                                      ";
+
+  &:last-child {
+    margin-right: 0;
+  }
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.li",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-bxivhb",
+                                  "target": "li",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                              onClick={[Function]}
+                            >
+                              <li
+                                className="sc-bxivhb dswZLu"
+                                onClick={[Function]}
+                              >
+                                First
+                              </li>
+                            </StyledComponent>
+                          </styled.li>
+                          <styled.li
+                            active={false}
+                            key="head-1"
+                            onClick={[Function]}
+                          >
+                            <StyledComponent
+                              active={false}
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-bxivhb",
+                                    "isStatic": false,
+                                    "lastClassName": "dswZLu",
+                                    "rules": Array [
+                                      "
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: ",
+                                      "1.4375rem",
+                                      ";
+  font-size: ",
+                                      "1.125rem",
+                                      ";
+  font-weight: 400;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+  margin-right: ",
+                                      "3rem",
+                                      ";
+  ",
+                                      [Function],
+                                      ";
+
+  &:last-child {
+    margin-right: 0;
+  }
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.li",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-bxivhb",
+                                  "target": "li",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                              onClick={[Function]}
+                            >
+                              <li
+                                className="sc-bxivhb dswZLu"
+                                onClick={[Function]}
+                              >
+                                Second
+                              </li>
+                            </StyledComponent>
+                          </styled.li>
+                          <styled.li
+                            active={true}
+                            key="head-2"
+                            onClick={[Function]}
+                          >
+                            <StyledComponent
+                              active={true}
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-bxivhb",
+                                    "isStatic": false,
+                                    "lastClassName": "dswZLu",
+                                    "rules": Array [
+                                      "
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: ",
+                                      "1.4375rem",
+                                      ";
+  font-size: ",
+                                      "1.125rem",
+                                      ";
+  font-weight: 400;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+  margin-right: ",
+                                      "3rem",
+                                      ";
+  ",
+                                      [Function],
+                                      ";
+
+  &:last-child {
+    margin-right: 0;
+  }
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.li",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-bxivhb",
+                                  "target": "li",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                              onClick={[Function]}
+                            >
+                              <li
+                                className="sc-bxivhb fCMGKn"
+                                onClick={[Function]}
+                              >
+                                Third
+                              </li>
+                            </StyledComponent>
+                          </styled.li>
+                          <styled.li
+                            active={false}
+                            key="head-3"
+                            onClick={[Function]}
+                          >
+                            <StyledComponent
+                              active={false}
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-bxivhb",
+                                    "isStatic": false,
+                                    "lastClassName": "dswZLu",
+                                    "rules": Array [
+                                      "
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: ",
+                                      "1.4375rem",
+                                      ";
+  font-size: ",
+                                      "1.125rem",
+                                      ";
+  font-weight: 400;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+  margin-right: ",
+                                      "3rem",
+                                      ";
+  ",
+                                      [Function],
+                                      ";
+
+  &:last-child {
+    margin-right: 0;
+  }
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.li",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-bxivhb",
+                                  "target": "li",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                              onClick={[Function]}
+                            >
+                              <li
+                                className="sc-bxivhb dswZLu"
+                                onClick={[Function]}
+                              >
+                                Last
+                              </li>
+                            </StyledComponent>
+                          </styled.li>
+                        </ul>
+                      </StyledComponent>
+                    </styled.ul>
+                    <styled.div>
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-htpNat",
+                              "isStatic": true,
+                              "lastClassName": "KtFsv",
+                              "rules": Array [],
+                            },
+                            "displayName": "styled.div",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-htpNat",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
                       >
                         <div
-                          className="sc-ifAKCX jYugZ"
+                          className="sc-htpNat KtFsv"
                         >
-                          <TabPage
-                            header="First"
+                          <styled.div
+                            active={false}
+                            key="item-0"
                           >
-                            <div>
-                              First content.
-                            </div>
-                          </TabPage>
-                        </div>
-                      </styled.div>
-                      <styled.div
-                        active={false}
-                        key="item-1"
-                      >
-                        <div
-                          className="sc-ifAKCX jYugZ"
-                        >
-                          <TabPage
-                            header="Second"
+                            <StyledComponent
+                              active={false}
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-ifAKCX",
+                                    "isStatic": false,
+                                    "lastClassName": "jYugZ",
+                                    "rules": Array [
+                                      "
+  ",
+                                      [Function],
+                                      ";
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.div",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-ifAKCX",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                            >
+                              <div
+                                className="sc-ifAKCX jYugZ"
+                              >
+                                <TabPage
+                                  header="First"
+                                >
+                                  <div>
+                                    First content.
+                                  </div>
+                                </TabPage>
+                              </div>
+                            </StyledComponent>
+                          </styled.div>
+                          <styled.div
+                            active={false}
+                            key="item-1"
                           >
-                            <div>
-                              Second content.
-                            </div>
-                          </TabPage>
-                        </div>
-                      </styled.div>
-                      <styled.div
-                        active={true}
-                        key="item-2"
-                      >
-                        <div
-                          className="sc-ifAKCX cpuQTc"
-                        >
-                          <TabPage
-                            header="Third"
+                            <StyledComponent
+                              active={false}
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-ifAKCX",
+                                    "isStatic": false,
+                                    "lastClassName": "jYugZ",
+                                    "rules": Array [
+                                      "
+  ",
+                                      [Function],
+                                      ";
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.div",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-ifAKCX",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                            >
+                              <div
+                                className="sc-ifAKCX jYugZ"
+                              >
+                                <TabPage
+                                  header="Second"
+                                >
+                                  <div>
+                                    Second content.
+                                  </div>
+                                </TabPage>
+                              </div>
+                            </StyledComponent>
+                          </styled.div>
+                          <styled.div
+                            active={true}
+                            key="item-2"
                           >
-                            <div>
-                              Third content.
-                            </div>
-                          </TabPage>
-                        </div>
-                      </styled.div>
-                      <styled.div
-                        active={false}
-                        key="item-3"
-                      >
-                        <div
-                          className="sc-ifAKCX jYugZ"
-                        >
-                          <TabPage
-                            header="Last"
+                            <StyledComponent
+                              active={true}
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-ifAKCX",
+                                    "isStatic": false,
+                                    "lastClassName": "jYugZ",
+                                    "rules": Array [
+                                      "
+  ",
+                                      [Function],
+                                      ";
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.div",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-ifAKCX",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                            >
+                              <div
+                                className="sc-ifAKCX cpuQTc"
+                              >
+                                <TabPage
+                                  header="Third"
+                                >
+                                  <div>
+                                    Third content.
+                                  </div>
+                                </TabPage>
+                              </div>
+                            </StyledComponent>
+                          </styled.div>
+                          <styled.div
+                            active={false}
+                            key="item-3"
                           >
-                            <div>
-                              Final content.
-                            </div>
-                          </TabPage>
+                            <StyledComponent
+                              active={false}
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-ifAKCX",
+                                    "isStatic": false,
+                                    "lastClassName": "jYugZ",
+                                    "rules": Array [
+                                      "
+  ",
+                                      [Function],
+                                      ";
+",
+                                    ],
+                                  },
+                                  "displayName": "styled.div",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-ifAKCX",
+                                  "target": "div",
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
+                                }
+                              }
+                              forwardedRef={null}
+                            >
+                              <div
+                                className="sc-ifAKCX jYugZ"
+                              >
+                                <TabPage
+                                  header="Last"
+                                >
+                                  <div>
+                                    Final content.
+                                  </div>
+                                </TabPage>
+                              </div>
+                            </StyledComponent>
+                          </styled.div>
                         </div>
-                      </styled.div>
-                    </div>
-                  </styled.div>
-                </div>
+                      </StyledComponent>
+                    </styled.div>
+                  </div>
+                </StyledComponent>
               </styled.div>
             </TabPanel>
           </div>

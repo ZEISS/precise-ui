@@ -4,8 +4,8 @@ import { ActionLink } from './';
 
 describe('<ActionLink />', () => {
   it('should render an empty <ActionLink> component', () => {
-    const wrapper = enzyme.shallow(<ActionLink />);
-    expect(wrapper.text()).toBe('<Styled(Anchor) />');
+    const wrapper = enzyme.mount(<ActionLink />);
+    expect(wrapper.find('a').length > 0).toBeTruthy();
   });
 
   it('should render a <ActionLink> component with some content', () => {
