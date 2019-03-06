@@ -98,6 +98,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render Language icon', () => {
+    const Component = icons.Language;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render PowerSettingsNew icon', () => {
     const Component = icons.PowerSettingsNew;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -184,12 +190,6 @@ describe('Generated icons', () => {
 
   it('should render Replay icon', () => {
     const Component = icons.Replay;
-    const wrapper = enzyme.mount(<Component width="12" height="12" />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should render Web icon', () => {
-    const Component = icons.Web;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
