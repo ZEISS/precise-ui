@@ -204,17 +204,17 @@ export function calcLayout(children: React.ReactNode, dim: GridDimension) {
 
   React.Children.forEach(children, (child, index) => {
     if (typeof child === 'object' && child) {
-      const { row, column } = child.props;
+      const { row, column } = (child as any).props;
 
       if (row !== undefined && column !== undefined) {
-        cells[index] = createCell(layout, child.props);
+        cells[index] = createCell(layout, (child as any).props);
       }
     }
   });
 
   React.Children.forEach(children, (child, index) => {
     if (typeof child === 'object' && child && !cells[index]) {
-      cells[index] = createCell(layout, child.props);
+      cells[index] = createCell(layout, (child as any).props);
     }
   });
 

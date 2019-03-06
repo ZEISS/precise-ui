@@ -7,12 +7,11 @@ services:
 cache:
   directories:
   - node_modules
-before_install:
-  - docker pull zenika/alpine-chrome:with-puppeteer
+env:
+  - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 script:
   - npm run test
   - npm run build
-  - npm run build:demo
   - npm run test:visual
 before_deploy:
   - >   
