@@ -5,6 +5,7 @@ const { version } = require('./package');
 const componentRoot = path.join(__dirname, 'docs/components');
 const styleguideComponents = {};
 const componentFiles = fs.readdirSync(componentRoot);
+const env = process.env.NODE_ENV;
 
 for (const componentFile of componentFiles) {
   const refName = componentFile.replace('.tsx', '');
@@ -141,4 +142,5 @@ module.exports = {
       },
     },
   },
+  styleguideDir: path.join(__dirname, `${env === 'test' ? 'integration/' : ''}styleguide`),
 };

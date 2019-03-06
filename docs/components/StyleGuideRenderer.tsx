@@ -8,7 +8,7 @@ import { AppState } from './context';
 import Ribbon from 'react-styleguidist/lib/rsg-components/Ribbon';
 // @ts-ignore
 import Logo from 'react-styleguidist/lib/rsg-components/Logo';
-import { injectGlobal } from '../../src';
+import { createGlobalStyle } from '../../src';
 
 interface StyleGuideRendererProps {
   title: string;
@@ -42,8 +42,7 @@ function useTheme() {
   CSS animations should be disabled to ensure that animations don't 
   affect `react-styleguidist-visual` screenshots
 */
-if (window.location.port === '6061') {
-  injectGlobal`
+const GlobalStyle = createGlobalStyle`
   *, :before, :after {
     transition-property: none !important;
     transform: none !important;
@@ -51,24 +50,26 @@ if (window.location.port === '6061') {
     font-family: sans-serif;
   }
 `;
-}
 
 const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ children, ...props }) => {
   const theme = useTheme();
 
   return (
-    <ThemeProvider theme={theme}>
-      <Responsive
-        render={size => {
-          const Layout = size !== 'small' ? DesktopLayout : MobileLayout;
-          return (
-            <Layout logo={<Logo />} ribbon={<Ribbon />} {...props}>
-              {!window.location.hash ? <HomePage /> : children}
-            </Layout>
-          );
-        }}
-      />
-    </ThemeProvider>
+    <>
+      {process.env.NODE_ENV === 'test' && <GlobalStyle />}
+      <ThemeProvider theme={theme}>
+        <Responsive
+          render={size => {
+            const Layout = size !== 'small' ? DesktopLayout : MobileLayout;
+            return (
+              <Layout logo={<Logo />} ribbon={<Ribbon />} {...props}>
+                {!window.location.hash ? <HomePage /> : children}
+              </Layout>
+            );
+          }}
+        />
+      </ThemeProvider>
+    </>
   );
 };
 
