@@ -198,17 +198,17 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
   private handle(suggestion: T) {
     const { getSuggestionValue, onSuggestionSelected } = this.props;
 
-    if (typeof onSuggestionSelected === 'function') {
-      onSuggestionSelected({
-        value: suggestion,
-      });
-    }
-
     if (typeof getSuggestionValue === 'function') {
       const value = getSuggestionValue(suggestion);
       this.updateValue(value, true);
     } else if (typeof suggestion === 'string') {
       this.updateValue(suggestion, true);
+    }
+
+    if (typeof onSuggestionSelected === 'function') {
+      onSuggestionSelected({
+        value: suggestion,
+      });
     }
   }
 
