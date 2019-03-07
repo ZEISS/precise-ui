@@ -56,7 +56,7 @@ const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ children, ...p
 
   return (
     <>
-      {window.location.port === '6061' && <GlobalStyle />}
+      {process.env.NODE_ENV === 'test' && <GlobalStyle />}
       <ThemeProvider theme={theme}>
         <Responsive
           render={size => {
