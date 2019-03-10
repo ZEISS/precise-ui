@@ -51,18 +51,19 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ children, ...props }) => {
+const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ children, hasSidebar, ...props }) => {
   const theme = useTheme();
+  const isTest = process.env.NODE_ENV === 'test';
 
   return (
     <>
-      {process.env.NODE_ENV === 'test' && <GlobalStyle />}
+      {isTest && <GlobalStyle />}
       <ThemeProvider theme={theme}>
         <Responsive
           render={size => {
             const Layout = size !== 'small' ? DesktopLayout : MobileLayout;
             return (
-              <Layout logo={<Logo />} ribbon={<Ribbon />} {...props}>
+              <Layout logo={<Logo />} ribbon={<Ribbon />} {...props} hasSidebar={!isTest && hasSidebar}>
                 {!window.location.hash ? <HomePage /> : children}
               </Layout>
             );
