@@ -17,6 +17,7 @@ import {
   getColumns,
   defaultHeaderCellRenderer,
 } from './TableShared.part';
+import { getFontStyle } from '../../typography';
 
 export interface TableBasicState {
   sorting?: TableSorting;
@@ -31,21 +32,22 @@ interface StyledTableProps {
 const StyledTable = styled.table<StyledTableProps>(
   themed(
     ({ theme, borderless, condensed }) => css`
-      table-layout: ${theme.tableLayout};
-      border-collapse: collapse;
-      width: 100%;
-      color: ${theme.text6};
-      border: ${borderless ? 'none' : theme.tableBorder};
-      font-size: ${remCalc('14px')};
+    ${getFontStyle({ size: 'small' })}
 
-      > thead > tr > th,
-      > tbody > tr > td {
-        padding: ${condensed ? `${distance.small} ${distance.large}` : theme.tableHeadPadding};
+    table-layout: ${theme.tableLayout};
+    border-collapse: collapse;
+    width: 100%;
+    color: ${theme.text6};
+    border: ${borderless ? 'none' : theme.tableBorder};
 
-        &:not(:last-child) {
-          padding-right: 0;
-        }
+    > thead > tr > th,
+    > tbody > tr > td {
+      padding: ${condensed ? `${distance.small} ${distance.large}` : theme.tableHeadPadding};
+
+      &:not(:last-child) {
+        padding-right: 0;
       }
+    }
     `,
   ),
 );

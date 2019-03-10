@@ -8,7 +8,7 @@ import {
 } from '../InteractiveList';
 import { cyan, transparent } from '../../colors';
 import { Icon } from '../Icon';
-import { TextStylings } from '../../textStyles';
+import { getFontStyle } from '../../typography';
 
 interface StyledWrapperProps {
   open: boolean;
@@ -29,10 +29,9 @@ const MenuCaret = styled.div`
 `;
 
 const MenuTitle = styled.span`
-  line-height: ${TextStylings.delta.lineHeight};
-  font-size: ${TextStylings.delta.fontSize};
+  ${getFontStyle({ size: 'large', weight: 'regular' })}
+
   border-bottom: 2px solid black;
-  font-weight: 400;
 `;
 
 const SelectedMenu = styled.div`

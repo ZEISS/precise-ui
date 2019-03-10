@@ -1,10 +1,11 @@
 import * as React from 'react';
 import styled from '../../utils/styled';
-import { remCalc } from '../../utils/remCalc';
 import { dark } from '../../colors';
+import { getFontStyle } from '../../typography';
 
 const RootContainer = styled.div`
-  font-size: ${remCalc('14px')};
+  ${getFontStyle({ size: 'small' })}
+  
   color: ${dark};
 `;
 

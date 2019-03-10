@@ -4,8 +4,8 @@ import { StandardProps, ButtonThemeSettings, PreciseFullTheme } from '../../comm
 import { Anchor, AnchorProps } from '../Anchor';
 import { IconName, Icon, IconProps } from '../Icon';
 import { distance } from '../../distance';
-import { remCalc } from '../../utils/remCalc';
 import { displayTo } from '../../utils/displayTo';
+import { getFontStyle } from '../../typography';
 
 /**
  * Button style name.
@@ -73,25 +73,14 @@ function getThemeSettings(theme: PreciseFullTheme, buttonStyle?: ButtonStyle) {
   }
 }
 
-function getButtonLineHeight(themeSettings: ButtonThemeSettings, size?: ButtonSize) {
+function getButtonFontStyle(_themeSettings: ButtonThemeSettings, size?: ButtonSize) {
   switch (size) {
     default:
     case 'medium':
-      return themeSettings.lineHeightMedium;
+      return getFontStyle({ size: 'medium' });
 
     case 'small':
-      return themeSettings.lineHeightSmall;
-  }
-}
-
-function getButtonFontSize(size?: ButtonSize) {
-  switch (size) {
-    default:
-    case 'medium':
-      return remCalc('16px');
-
-    case 'small':
-      return remCalc('14px');
+      return getFontStyle({ size: 'small' });
   }
 }
 
@@ -130,44 +119,47 @@ const PseudoButtonStyle = (colorTheme: ButtonThemeSettings) => css`
   }
 `;
 
-const StyledButton = styled(Anchor)<StyledButtonProps>`
-  box-sizing: border-box;
-  outline: none;
-  border-radius: 0;
-  margin: ${distance.small};
-  &:first-of-type {
-    margin-left: 0;
-  }
-  &:last-of-type {
-    margin-right: 0;
-  }
-  border: ${themed(props =>
-    props.disabled
-      ? `${getThemeSettings(props.theme, props.buttonStyle).disabledBorder}`
-      : `${getThemeSettings(props.theme, props.buttonStyle).border}`,
-  )};
-  background-color: ${themed(props =>
-    props.disabled
-      ? getThemeSettings(props.theme, props.buttonStyle).disabledBackground
-      : getThemeSettings(props.theme, props.buttonStyle).background,
-  )};
-  color: ${themed(props =>
-    props.disabled
-      ? getThemeSettings(props.theme, props.buttonStyle).disabledText
-      : getThemeSettings(props.theme, props.buttonStyle).text,
-  )};
-  font-family: ${themed(props => props.theme.fontFamily)};
-  font-size: ${props => getButtonFontSize(props.size)};
-  line-height: ${themed(props => getButtonLineHeight(getThemeSettings(props.theme, props.buttonStyle), props.size))};
-  padding: ${props => getButtonPadding(props.size)};
-  display: ${props => (props.block ? 'block' : 'inline-block')};
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
-  ${themed(props => (!props.disabled ? PseudoButtonStyle(getThemeSettings(props.theme, props.buttonStyle)) : ''))};
-  ${displayTo('smallAndMedium')`
-    width: 100%;
-    margin: ${distance.small} 0;
-  `};
-`;
+const StyledButton = styled(Anchor)<StyledButtonProps>(
+  themed(
+    props => css`
+      box-sizing: border-box;
+      outline: none;
+      border-radius: 0;
+      margin: ${distance.small};
+      &:first-of-type {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+      border: ${
+        props.disabled
+          ? `${getThemeSettings(props.theme, props.buttonStyle).disabledBorder}`
+          : `${getThemeSettings(props.theme, props.buttonStyle).border}`
+      };
+      background-color: ${
+        props.disabled
+          ? getThemeSettings(props.theme, props.buttonStyle).disabledBackground
+          : getThemeSettings(props.theme, props.buttonStyle).background
+      };
+      color: ${
+        props.disabled
+          ? getThemeSettings(props.theme, props.buttonStyle).disabledText
+          : getThemeSettings(props.theme, props.buttonStyle).text
+      };
+      font-family: ${props.theme.fontFamily};
+      ${getButtonFontStyle(getThemeSettings(props.theme, props.buttonStyle), props.size)}
+      padding: ${getButtonPadding(props.size)};
+      display: ${props.block ? 'block' : 'inline-block'};
+      cursor: ${props.disabled ? 'not-allowed' : 'pointer'};
+      ${!props.disabled ? PseudoButtonStyle(getThemeSettings(props.theme, props.buttonStyle)) : ''};
+      ${displayTo('smallAndMedium')`
+        width: 100%;
+        margin: ${distance.small} 0;
+      `};
+    `,
+  ),
+);
 
 const DefaultWrapper = styled.div``;
 

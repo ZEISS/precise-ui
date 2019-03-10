@@ -5,6 +5,7 @@ import { StandardProps } from '../../common';
 import { Blocker, BlockerProps } from '../Blocker';
 import { CloseButton } from '../CloseButton';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../typography';
 
 const StyledMobileDropdownWrapper = styled.div`
   padding: ${distance.medium};
@@ -20,9 +21,10 @@ const StyledMobileWrapper = styled.div`
 `;
 
 const StyledLabel = styled.div`
+  ${getFontStyle({ size: 'small' })}
+
   color: ${themed(({ theme }) => theme.ui0)};
   padding-bottom: ${distance.medium};
-  font-size: ${remCalc('14px')};
   min-height: ${remCalc('14px')};
 `;
 

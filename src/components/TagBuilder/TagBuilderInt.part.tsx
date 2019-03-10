@@ -11,12 +11,14 @@ import { distance } from '../../distance';
 import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
 import { TagBuilderRenderEvent, TagBuilderProps } from './TagBuilder.types.part';
 import { StyledInputRow, StyledInputBox, getTextFieldBorderType, StyledTagItem } from '../../quarks';
+import { getFontStyle } from '../../typography';
 
 const finishTagKeys = [KeyCodes.enter, KeyCodes.space, KeyCodes.comma, KeyCodes.semicolon];
 
 const StyledIcon = styled(Icon)`
+  ${getFontStyle({ size: 'small' })}
+
   cursor: pointer;
-  font-size: 13px;
   vertical-align: middle;
   color: ${themed(props => props.theme.ui5)};
   font-family: ${themed(props => props.theme.fontFamily)};
@@ -61,6 +63,7 @@ interface StyledInputProps {
 }
 
 const StyledInput = styled('input')<StyledInputProps>`
+  ${getFontStyle({ size: 'medium' })}
   box-sizing: content-box;
   box-shadow: none;
   border: none;
@@ -72,7 +75,6 @@ const StyledInput = styled('input')<StyledInputProps>`
   width: ${props => (props.value.length > 2 ? props.value.length * 10 + 'px' : '20px')};
   color: ${themed(({ disabled, theme, valid }) => (valid ? (disabled ? theme.textDisabled : dark) : purpleRed))};
   cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
-  font-size: 1rem;
   font-family: inherit;
 `;
 

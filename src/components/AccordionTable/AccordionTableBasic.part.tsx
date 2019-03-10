@@ -9,6 +9,7 @@ import { AccordionTableProps, AccordionGroupRenderEvent } from './AccordionTable
 import { normalizeIndex, toggleIndex, hasIndex } from './helpers/indexHelper';
 import { distance } from '../../distance';
 import { TableCellRenderEvent } from '../Table/Table.types.part';
+import { getFontStyle } from '../../typography';
 
 export interface AccordionTableBasicState {
   selectedIndex: Array<number>;
@@ -52,7 +53,8 @@ const StyledCollapseAnimator = styled('div')<AccordionTableItemProps>`
 `;
 
 const GroupTableCell = styled.td`
-  font-weight: bold;
+  ${getFontStyle({ weight: 'bold' })}
+
   padding-left: 0.5em !important;
 `;
 

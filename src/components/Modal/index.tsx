@@ -4,10 +4,10 @@ import { StandardProps } from '../../common';
 import { Headline } from '../Headline';
 import { TextStyles } from '../../textStyles';
 import { white, cyan, dark, grey6 } from '../../colors';
-import { remCalc } from '../../utils/remCalc';
 import { Blocker, BlockerProps } from '../Blocker';
 import { CloseButton } from '../CloseButton';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../typography';
 
 export type ModalCloseOrigin = 'button' | 'background';
 
@@ -148,10 +148,9 @@ const ModalContent = styled.div<ModalContentProps>(
 );
 
 const StyledModalBody = styled.div`
-  font-size: 1rem;
-  font-weight: normal;
+  ${getFontStyle({ size: 'medium', weight: 'regular' })}
+
   text-align: left;
-  line-height: ${remCalc('20px')};
   padding: 0 ${distance.xxlarge} ${distance.xxlarge};
   margin-bottom: auto;
 `;

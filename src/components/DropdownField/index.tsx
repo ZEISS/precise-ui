@@ -26,6 +26,7 @@ import {
   StyledTagItem,
   StyledIconContainer,
 } from '../../quarks';
+import { getFontStyle } from '../../typography';
 
 export interface DropdownFieldToggleEvent {
   state: 'open' | 'close';
@@ -100,6 +101,7 @@ const DropdownInputBox = styled(StyledInputBox)`
 `;
 
 const DropdownOptionText = styled.div<DropDownOptionsTextProps>`
+  ${getFontStyle({ size: 'medium' })}
   padding: ${props =>
     !props.labelShown ? `${distance.medium}` : `${distance.large} ${distance.medium} ${distance.small}`};
   margin: 0;
@@ -107,7 +109,6 @@ const DropdownOptionText = styled.div<DropDownOptionsTextProps>`
   height: 100%;
   box-sizing: border-box;
   color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text1))};
-  font-size: ${remCalc('16px')};
   font-family: inherit;
   text-overflow: ellipsis;
   overflow: hidden;

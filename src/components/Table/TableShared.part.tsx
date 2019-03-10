@@ -3,15 +3,17 @@ import { TableRowEvent, TableBodyRenderEvent, Column, TableColumns, TableCellRen
 import styled, { themed, css } from '../../utils/styled';
 import { remCalc } from '../../utils/remCalc';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../typography';
 
 const HeaderLabel = styled.div`
+  ${getFontStyle({ size: 'small' })}
+
   font-size: 0;
   white-space: nowrap;
 
   > span {
     display: inline-block;
     vertical-align: middle;
-    font-size: ${remCalc('14px')};
   }
 `;
 
@@ -66,12 +68,13 @@ const SortIcon = styled('span')<SortIconProps>`
 `;
 
 export const StyledTableHead = styled.thead`
+  ${getFontStyle({ weight: 'bold' })}
+  
   color: ${themed(({ theme }) => theme.text6 || theme.text1)};
-  font-weight: bold;
 `;
 
 export const StyledTableFoot = styled.tfoot`
-  font-size: 0.8em;
+  ${getFontStyle({ size: 'xSmall' })}
 `;
 
 export const StyledTableHeaderRow = styled.tr``;

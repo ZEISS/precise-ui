@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
-import { remCalc } from '../../utils/remCalc';
+import { getFontStyle } from '../../typography';
 
 export interface InputInfoProps extends StandardProps {
   /**
@@ -12,9 +12,8 @@ export interface InputInfoProps extends StandardProps {
 }
 
 const StyledInfo = styled('div')<InputInfoProps>`
+  ${getFontStyle({ size: 'xSmall' })}
   color: ${themed(props => props.theme.text2)};
-  font-size: ${remCalc('12px')};
-  line-height: 14px;
   padding: ${distance.xsmall} 0;
 `;
 

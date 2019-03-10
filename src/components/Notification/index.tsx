@@ -6,6 +6,7 @@ import { distance } from '../../distance';
 import { StandardProps, PreciseFullTheme } from '../../common';
 import { IconLink } from '../IconLink';
 import { Icon, IconProps } from '../Icon';
+import { getFontStyle } from '../../typography';
 
 export interface NotificationProps extends StandardProps {
   /**
@@ -100,7 +101,6 @@ const StyledTitle = styled.div(
   themed(
     ({ theme: { notificationTitleFontSize, notificationTitleLineHeight } }) => `
   font-family: inherit;
-  font-weight: 500;
   font-size: ${notificationTitleFontSize};
   line-height: ${notificationTitleLineHeight};
   color: #404040;
@@ -114,7 +114,6 @@ const StyledContent = styled.div<LayoutProps>(
     ({ inline, theme: { notificationTextFontSize, notificationTextLineHeight } }) => `
   display: ${inline ? 'inline' : 'block'};
   font-family: inherit;
-  font-weight: normal;
   font-size: ${notificationTextFontSize};
   line-height: ${notificationTextLineHeight};
   color: #404040;
@@ -128,6 +127,8 @@ const ActionContainer = styled('div')<LayoutProps>`
 `;
 
 const CloseButton = styled(IconLink)`
+  ${getFontStyle({ size: 'medium' })}
+
   position: absolute;
   right: ${distance.small};
   top: ${distance.small};
@@ -136,7 +137,6 @@ const CloseButton = styled(IconLink)`
   padding: 0;
   border: none;
   outline: none;
-  font-size: 1rem;
 `;
 
 const LayoutVertical = css`

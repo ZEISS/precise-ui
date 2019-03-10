@@ -2,9 +2,9 @@ import * as React from 'react';
 import styled, { themed, css } from '../../utils/styled';
 import { Anchor, AnchorProps } from '../Anchor';
 import { IconName, Icon, IconProps } from '../Icon';
-import { remCalc } from '../../utils/remCalc';
 import { ocean, midnight } from '../../colors';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../typography';
 
 export interface IconLinkProps extends AnchorProps {
   /**
@@ -58,10 +58,10 @@ const StyledIcon = styled(Icon)<StyledIconProps & IconProps>`
 `;
 
 const AnchorText = styled.span`
+  ${getFontStyle({ size: 'medium' })}
+
   display: inline-block;
   vertical-align: middle;
-  font-size: ${remCalc('16px')};
-  line-height: 22px;
   margin-left: ${distance.xsmall};
 `;
 
