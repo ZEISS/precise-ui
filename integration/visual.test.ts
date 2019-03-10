@@ -2,8 +2,8 @@ import { ElementHandle } from 'puppeteer';
 
 const componentsUrl = 'http://host.docker.internal:6065/#/Components';
 
-async function getPreviewInfo($preview: ElementHandle<Element>) {
-  const { name, link, skip } = await page.evaluate(obj => {
+function getPreviewInfo($preview: ElementHandle<Element>) {
+  return page.evaluate(obj => {
     let link: string;
     const { nextElementSibling } = obj;
     if (nextElementSibling) {
@@ -13,53 +13,52 @@ async function getPreviewInfo($preview: ElementHandle<Element>) {
       }
     }
 
+    const match = link && link.match(/[0-9]+$/);
+    const index = match ? match[0] : 0;
+    const name = obj.getAttribute('data-preview');
+
     return {
+      identifier: `${name}_${index}`,
       skip: obj.getAttribute('data-skip'),
-      name: obj.getAttribute('data-preview'),
+      name,
       link,
     };
   }, $preview);
-
-  const match = link && link.match(/[0-9]+$/);
-  const index = match ? match[0] : 0;
-
-  return {
-    boundingBox: await $preview.boundingBox(),
-    identifier: `${name}_${index}`,
-    link,
-    skip,
-  };
 }
 
 describe('Visual testing', async () => {
   beforeAll(async () => {
     await page.goto(componentsUrl, { waitUntil: 'networkidle2' });
+    const bodyHandle = await page.$('body');
+    const boundingBox = await bodyHandle.boundingBox();
+    await page.setViewport({
+      width: 741,
+      height: Math.ceil(boundingBox.height),
+    });
   });
 
   test('Snapshots', async () => {
+    const fails = [];
     const $components = await page.$$('[data-preview]');
-    const testDada = await Promise.all(await $components.map(getPreviewInfo));
+    for (const $component of $components) {
+      const { identifier, link, skip } = await getPreviewInfo($component);
+      if (skip) {
+        continue;
+      }
 
-    const result = await Promise.all(
-      testDada
-        .filter(({ skip }) => !skip)
-        .map(async ({ boundingBox, identifier, link }) => {
-          const screenshot = await page.screenshot({ clip: boundingBox });
-          try {
-            expect(screenshot).toMatchImageSnapshot({
-              customSnapshotIdentifier: identifier,
-            });
-          } catch (e) {
-            return `${e}\n/${link}`;
-          }
+      console.log(`Making screenshot of \`${identifier}\``);
+      const screenshot = await $component.screenshot();
+      try {
+        expect(screenshot).toMatchImageSnapshot({
+          customSnapshotIdentifier: identifier,
+        });
+      } catch (e) {
+        fails.push(`${e}\n/${link}`);
+      }
+    }
 
-          return;
-        }),
-    );
-
-    const errors = result.filter(error => !!error);
-    if (errors.length) {
-      throw new Error(errors.join('\n'));
+    if (fails.length) {
+      throw new Error(fails.join('\n'));
     }
   });
 });
