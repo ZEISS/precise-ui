@@ -7,4 +7,11 @@ module.exports = Object.assign({}, baseConfig, {
     command: 'npm run serve:test',
     port: 6065,
   },
+  connect: {
+    ...baseConfig.connect,
+    defaultViewport: {
+      width: 900,
+      height: 800,
+    },
+  },
 });
