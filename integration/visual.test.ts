@@ -1,4 +1,5 @@
 import { ElementHandle } from 'puppeteer';
+import console = require('console');
 
 const componentsUrl = 'http://host.docker.internal:6065/#/Components';
 
@@ -9,7 +10,7 @@ function getPreviewInfo($preview: ElementHandle<Element>) {
     if (nextElementSibling) {
       const links = nextElementSibling.getElementsByTagName('a');
       if (links[1]) {
-        link = links[1].hash;
+        link = links[1].href;
       }
     }
 
@@ -26,34 +27,34 @@ function getPreviewInfo($preview: ElementHandle<Element>) {
   }, $preview);
 }
 
+function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 describe('Visual testing', async () => {
   beforeAll(async () => {
     await page.goto(componentsUrl, { waitUntil: 'networkidle2' });
-    const bodyHandle = await page.$('body');
-    const boundingBox = await bodyHandle.boundingBox();
-    await page.setViewport({
-      width: 741,
-      height: Math.ceil(boundingBox.height),
-    });
   });
 
   test('Snapshots', async () => {
     const fails = [];
     const $components = await page.$$('[data-preview]');
-    for (const $component of $components) {
-      const { identifier, link, skip } = await getPreviewInfo($component);
-      if (skip) {
-        continue;
-      }
+    const data = (await Promise.all($components.map(getPreviewInfo))).filter(({ skip }) => !skip);
+    for (const { identifier, link } of data) {
+      await page.goto(link);
+      await wait(100);
+
+      const $component = await page.$('[data-preview]');
 
       console.log(`Making screenshot of \`${identifier}\``);
+
       const screenshot = await $component.screenshot();
       try {
         expect(screenshot).toMatchImageSnapshot({
           customSnapshotIdentifier: identifier,
         });
       } catch (e) {
-        fails.push(`${e}\n/${link}`);
+        fails.push(`${e}\n${link}`);
       }
     }
 

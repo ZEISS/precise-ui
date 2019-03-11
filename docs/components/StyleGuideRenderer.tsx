@@ -49,6 +49,10 @@ const GlobalStyle = createGlobalStyle`
     animation: none !important;
     font-family: sans-serif;
   }
+
+  body {
+    overflow: hidden;
+  }
 `;
 
 const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ children, hasSidebar, ...props }) => {
