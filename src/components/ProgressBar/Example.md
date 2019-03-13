@@ -12,7 +12,7 @@ const { ProgressBar } = require('precise-ui');
 
 Enabling the animation effect to have smoother transitions when changing the value.
 
-```jsx
+```js { "props": { "data-skip": true } }
 const { ProgressBar } = require('precise-ui');
 const stops = [0, 10, 30, 30, 30, 30, 60, 60, 70, 70, 70, 90, 90, 91, 95, 99, 100];
 

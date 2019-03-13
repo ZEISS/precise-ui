@@ -17,3 +17,5 @@ yarn.lock
 
 .nyc_output
 /styleguide
+integration/__image_snapshots__/__diff_output__
+integration/styleguide
