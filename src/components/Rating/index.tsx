@@ -34,8 +34,8 @@ export interface RatingState {
   controlled: boolean;
   value: number;
   hover: number;
-  changers: Array<(() => void)>;
-  hovers: Array<(() => void)>;
+  changers: Array<() => void>;
+  hovers: Array<() => void>;
 }
 
 const RatingContainer = styled.div`

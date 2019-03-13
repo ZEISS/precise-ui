@@ -56,7 +56,9 @@ export const Breadcrumbs: React.SFC<BreadcrumbsProps> = ({ size = 5, children, .
   const count = Math.max(size, 1);
 
   React.Children.forEach(children, child => {
-    displayElements.push(child);
+    if (child) {
+      displayElements.push(child as React.ReactChild);
+    }
   });
 
   if (displayElements.length > count) {
