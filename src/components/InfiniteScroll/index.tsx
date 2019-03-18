@@ -147,7 +147,7 @@ export class InfiniteScroll extends React.Component<InfiniteScrollProps, Infinit
       : (this.node && this.node.scrollHeight) || 0;
 
     const innerHeight = useWindow ? window.innerHeight : (this.node && this.node.clientHeight) || 0;
-    const scrolledToBottom = scrollTop + innerHeight + edgeOffset >= scrollHeight;
+    const scrolledToBottom = Math.ceil(scrollTop + innerHeight + edgeOffset) >= scrollHeight;
 
     return scrolledToBottom;
   }
