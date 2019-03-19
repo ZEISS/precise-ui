@@ -30,3 +30,31 @@ const initialState = {
   hasMore
   button={({ onClick }) => <Button onClick={onClick}>more</Button>} />
 ```
+
+With custom loading indicator.
+
+```jsx
+const { InfiniteScroll, Button, ListItem } = require('precise-ui');
+
+function getData() {
+  return Array.apply(null, { length: 50 }).map((v, index) => (
+    <ListItem key={index}>{index}</ListItem>
+  ));
+}
+
+function loadItems(offset) {
+  setTimeout(()=>setState({data: [...state.data, ...getData()]}), 1000)
+}
+
+const initialState = {
+  data: getData(),
+};
+
+<InfiniteScroll
+  loadingIndicator={<ProgressBar animate="spinning" />}
+  loadItems={loadItems}
+  data={state.data}
+  containerHeight={600}
+  hasMore
+  button={({ onClick }) => <Button onClick={onClick}>more</Button>} />
+```
