@@ -260,6 +260,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render Sort icon', () => {
+    const Component = icons.Sort;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render LocationSearching icon', () => {
     const Component = icons.LocationSearching;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
