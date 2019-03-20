@@ -89,6 +89,8 @@ module.exports = {
     'ic_fullscreen_exit_24px.svg',
     'ic_power_settings_new_24px.svg',
     'ic_language_24px.svg',
+    'ic_sort_24px.svg',
+    'ic_pageview_24px.svg',
   ],
   out: 'src/components/Icon',
 };
