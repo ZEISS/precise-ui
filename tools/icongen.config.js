@@ -90,6 +90,7 @@ module.exports = {
     'ic_power_settings_new_24px.svg',
     'ic_language_24px.svg',
     'ic_sort_24px.svg',
+    'ic_pageview_24px.svg',
   ],
   out: 'src/components/Icon',
 };
