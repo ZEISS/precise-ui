@@ -1,113 +1,111 @@
 import { remCalc } from './utils/remCalc';
+import { displayTo } from './utils/displayTo';
+import { css } from './utils/styled';
 
-export enum TextTransform {
-  none = 'none',
-  upperCase = 'uppercase',
-  lowerCase = 'lowercase',
-  capitalize = 'capitalize',
-  unset = 'unset',
-  initial = 'initial',
-  inherit = 'inherit',
+export type FontSize = 'xSmall' | 'small' | 'medium' | 'large' | 'xLarge' | 'xxLarge' | 'xxxLarge';
+export type LineHeight = FontSize;
+
+export function getFontLineHeight(size?: LineHeight) {
+  switch (size) {
+    case 'xxxLarge':
+      return css`
+        ${displayTo('large')`line-height: ${remCalc('56px')};`}
+        ${displayTo('smallAndMedium')`line-height: ${remCalc('36px')};`}
+      `;
+    case 'xxLarge':
+      return css`
+        ${displayTo('large')`line-height: ${remCalc('36px')};`}
+        ${displayTo('smallAndMedium')`line-height: ${remCalc('28px')};`}
+      `;
+    case 'xLarge':
+      return `
+        line-height: ${remCalc('28px')};
+      `;
+    case 'large':
+      return css`
+        ${displayTo('large')`line-height: ${remCalc('24px')};`}
+        ${displayTo('smallAndMedium')`line-height: ${remCalc('22px')};`}
+      `;
+    case 'medium':
+      return `line-height: ${remCalc('22px')};
+  `;
+    case 'small':
+      return `line-height: ${remCalc('18px')};
+  `;
+    case 'xSmall':
+      return `line-height: ${remCalc('14px')};
+  `;
+    default:
+      return '';
+  }
 }
 
-export enum TextStyles {
-  giga = 'giga',
-  mega = 'mega',
-  alpha = 'alpha',
-  beta = 'beta',
-  gamma = 'gamma',
-  delta = 'delta',
-  epsilon = 'epsilon',
-  zeta = 'zeta',
-  omega = 'omega',
-  caption = 'caption',
-  legal = 'legal',
-  regular = 'regular',
+export function getFontSize(size?: FontSize) {
+  switch (size) {
+    case 'xxxLarge':
+      return css`
+        ${displayTo('large')`font-size: ${remCalc('44px')};`}
+        ${displayTo('smallAndMedium')`font-size: ${remCalc('32px')};`}
+
+ 	      letter-spacing: 0.5px;
+      `;
+    case 'xxLarge':
+      return css`
+        ${displayTo('large')`font-size: ${remCalc('32px')};`}
+        ${displayTo('smallAndMedium')`font-size: ${remCalc('24px')};`}
+
+ 	      letter-spacing: 0.5px;
+      `;
+    case 'xLarge':
+      return `
+        font-size: ${remCalc('24px')};
+        letter-spacing: 0.5px;
+      `;
+    case 'large':
+      return css`
+        ${displayTo('large')`font-size: ${remCalc('19px')};`}
+        ${displayTo('smallAndMedium')`font-size: ${remCalc('16px')};`}
+      `;
+    case 'medium':
+      return `font-size: ${remCalc('16px')};
+  `;
+    case 'small':
+      return `font-size: ${remCalc('14px')};
+  `;
+    case 'xSmall':
+      return `font-size: ${remCalc('12px')};
+  `;
+    default:
+      return '';
+  }
 }
 
-export const TextStylings = {
-  [TextStyles.giga]: {
-    fontSize: remCalc('76px'),
-    lineHeight: remCalc('95px'),
-    fontWeight: 300,
-    letterSpacing: 'initial',
-    textTransform: TextTransform.none,
-  },
-  [TextStyles.mega]: {
-    fontSize: remCalc('54px'),
-    lineHeight: remCalc('68px'),
-    fontWeight: 300,
-    letterSpacing: 'initial',
-    textTransform: TextTransform.none,
-  },
-  [TextStyles.alpha]: {
-    fontSize: remCalc('48px'),
-    lineHeight: remCalc('60px'),
-    fontWeight: 300,
-    letterSpacing: '0.87px',
-    textTransform: TextTransform.none,
-  },
-  [TextStyles.beta]: {
-    fontSize: remCalc('28px'),
-    lineHeight: remCalc('35px'),
-    fontWeight: 300,
-    letterSpacing: 'initial',
-    textTransform: TextTransform.none,
-  },
-  [TextStyles.gamma]: {
-    fontSize: remCalc('22px'),
-    lineHeight: remCalc('28px'),
-    fontWeight: 700,
-    letterSpacing: 'initial',
-    textTransform: TextTransform.upperCase,
-  },
-  [TextStyles.delta]: {
-    fontSize: remCalc('18px'),
-    lineHeight: remCalc('23px'),
-    fontWeight: 500,
-    letterSpacing: 'initial',
-    textTransform: TextTransform.none,
-  },
-  [TextStyles.epsilon]: {
-    fontSize: remCalc('16px'),
-    lineHeight: remCalc('20px'),
-    fontWeight: 500,
-    letterSpacing: 'initial',
-    textTransform: TextTransform.none,
-  },
-  [TextStyles.zeta]: {
-    fontSize: remCalc('14px'),
-    lineHeight: remCalc('18px'),
-    fontWeight: 300,
-    letterSpacing: 'initial',
-    textTransform: TextTransform.none,
-  },
-  [TextStyles.omega]: {
-    fontSize: remCalc('14px'),
-    lineHeight: remCalc('18px'),
-    fontWeight: 700,
-    letterSpacing: 'initial',
-    textTransform: TextTransform.none,
-  },
-  [TextStyles.caption]: {
-    fontSize: remCalc('12px'),
-    lineHeight: remCalc('18px'),
-    fontWeight: 400,
-    letterSpacing: 'initial',
-    textTransform: TextTransform.none,
-  },
-  [TextStyles.legal]: {
-    fontSize: remCalc('11px'),
-    lineHeight: remCalc('17px'),
-    fontWeight: 400,
-    letterSpacing: 'initial',
-    textTransform: TextTransform.none,
-  },
-  [TextStyles.regular]: {
-    fontSize: remCalc('16px'),
-    lineHeight: remCalc('24px'),
-    fontWeight: 400,
-    letterSpacing: 'initial',
-    textTransform: TextTransform.none,
-  },
-};
+export type FontWeight = 'light' | 'regular' | 'medium' | 'bold';
+export function getFontWeight(type?: FontWeight) {
+  switch (type) {
+    case 'light':
+      return `font-weight: 300;`;
+    case 'regular':
+      return `font-weight: 400;`;
+    case 'medium':
+      return `font-weight: 500;`;
+    case 'bold':
+      return `font-weight: 700;`;
+    default:
+      return '';
+  }
+}
+
+export interface FontStyleProps {
+  size?: FontSize;
+  weight?: FontWeight;
+  lineHeight?: LineHeight;
+}
+
+export function getFontStyle({ size, weight, lineHeight = size }: FontStyleProps) {
+  return css`
+    ${getFontSize(size)}
+    ${getFontLineHeight(lineHeight)}
+    ${getFontWeight(weight)}
+  `;
+}

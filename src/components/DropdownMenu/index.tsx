@@ -8,6 +8,7 @@ import { StandardProps } from '../../common';
 import { KeyCodes } from '../../utils/keyCodes';
 import { distance } from '../../distance';
 import { Flyout } from '../Flyout';
+import { getFontStyle } from '../../textStyles';
 
 export interface DropdownMenuChangeEvent {
   /**
@@ -91,7 +92,7 @@ const StyledInteractiveList = styled(InteractiveList)`
 
 const DropdownButton = styled.div<DropdownButtonProps>`
   color: ${props => (props.open ? colors.cyan : colors.grey2)};
-  font-size: ${({ menuSize }) => (menuSize === 'small' ? '14px' : '16px')};
+  font-size: ${({ menuSize }) => getFontStyle({ size: menuSize === 'small' ? 'small' : 'medium' })};
   cursor: pointer;
   display: flex;
   align-items: center;

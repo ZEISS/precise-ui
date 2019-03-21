@@ -3,15 +3,17 @@ import * as colors from '../../colors';
 import styled from '../../utils/styled';
 import { distance } from '../../distance';
 import { Icon } from '../Icon';
+import { getFontStyle } from '../../textStyles';
 
 const StyledCloseButton = styled.a`
+  ${getFontStyle({ size: 'medium' })}
+
   position: absolute;
   top: ${distance.medium};
   right: ${distance.medium};
   background-color: ${colors.transparent};
   padding: 0;
   border: none;
-  font-size: 1rem;
   align-self: start;
   cursor: pointer;
   color: ${colors.black};

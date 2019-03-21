@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
 import { StackPanel } from '../StackPanel';
-import { remCalc } from '../../utils/remCalc';
 import { purpleRed } from '../../colors';
 import { InputIcon } from '../InputIcon';
 import { InputChangeEvent, TextInputProps } from '../../common';
@@ -9,6 +8,7 @@ import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
 import { showInputInfo } from '../../utils/input';
 import { distance } from '../../distance';
 import { StyledInputRow, StyledInput, TextFieldBorderType, StyledInputBox, getTextFieldBorderType } from '../../quarks';
+import { getFontSize } from '../../textStyles';
 
 export type TextFieldChangeEvent = InputChangeEvent<string>;
 
@@ -69,10 +69,10 @@ const TextFieldWrapper = styled(StackPanel)`
   display: flex;
 `;
 
-const TextFieldArea = styled('textarea')<TextFieldAreaProps>`
+const TextFieldArea = styled.textarea<TextFieldAreaProps>`
+  ${getFontSize('medium')}
   color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text2))};
   border-radius: 0;
-  font-size: ${remCalc('16px')};
   font-family: inherit;
   padding: ${props => (props.labelShown ? `${distance.large} ${distance.medium} ${distance.small}` : distance.medium)};
   box-sizing: border-box;
@@ -102,9 +102,10 @@ const TextFieldArea = styled('textarea')<TextFieldAreaProps>`
 `;
 
 const TextFieldElement = styled.div`
+  ${getFontSize('medium')}
+
   display: flex;
   align-items: center;
-  font-size: ${remCalc('16px')};
   padding: ${distance.medium};
   color: ${themed(({ theme }) => theme.text2)};
   background: ${themed(({ theme }) => theme.ui3)};

@@ -10,10 +10,10 @@ import {
 } from './InteractiveList.types.part';
 import { Icon } from '../Icon';
 import { Checkbox } from '../Checkbox';
-import { remCalc } from '../../utils/remCalc';
 import { KeyCodes } from '../../utils/keyCodes';
 import { pacificBlue, transparent } from '../../colors';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 interface ListItemProps {
   selected: boolean;
@@ -61,6 +61,8 @@ const ListWrapper = styled('ul')<InteractiveListWrapperProps>(
 const ListItem = styled.li<ListItemProps>(
   themed(
     ({ hovered, theme: { ui3, text2 } }) => css`
+      ${getFontStyle({ size: 'medium' })}
+      
       background: ${hovered ? ui3 : transparent};
       color: ${text2};
       list-style: none;
@@ -69,8 +71,6 @@ const ListItem = styled.li<ListItemProps>(
       display: block;
       width: 100%;
       height: auto;
-      font-size: ${remCalc('16px')};
-      line-height: 22px;
       position: relative;
 
       a {
@@ -122,8 +122,8 @@ const ListDivider = styled.hr`
 `;
 
 const ListHeader = styled.span`
-  font-size: ${remCalc('16px')};
-  line-height: 22px;
+  ${getFontStyle({ size: 'medium' })}
+  
   padding: ${distance.medium} ${distance.small};
   width: 100%;
   display: block;
