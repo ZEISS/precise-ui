@@ -103,9 +103,24 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "jjhVVq",
+                                "lastClassName": "flsVJf",
                                 "rules": Array [
                                   "
+  ",
+                                  "
+    ",
+                                  "font-size: 0.875rem;
+  ",
+                                  "
+    ",
+                                  "line-height: 1.125rem;
+  ",
+                                  "
+    ",
+                                  "
+  ",
+                                  "
+
   position: relative;
   z-index: 1;
   margin: 0;
@@ -115,10 +130,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                   [Function],
                                   ";
   box-sizing: border-box;
-  font-size: ",
-                                  "0.875rem",
-                                  ";
-  line-height: 18px;
   color: ",
                                   [Function],
                                   ";
@@ -144,7 +155,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX jjhVVq"
+                            className="sc-ifAKCX flsVJf"
                           >
                             <styled.div
                               active={false}
@@ -375,9 +386,24 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "jjhVVq",
+                                "lastClassName": "flsVJf",
                                 "rules": Array [
                                   "
+  ",
+                                  "
+    ",
+                                  "font-size: 0.875rem;
+  ",
+                                  "
+    ",
+                                  "line-height: 1.125rem;
+  ",
+                                  "
+    ",
+                                  "
+  ",
+                                  "
+
   position: relative;
   z-index: 1;
   margin: 0;
@@ -387,10 +413,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                   [Function],
                                   ";
   box-sizing: border-box;
-  font-size: ",
-                                  "0.875rem",
-                                  ";
-  line-height: 18px;
   color: ",
                                   [Function],
                                   ";
@@ -416,7 +438,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX jjhVVq"
+                            className="sc-ifAKCX flsVJf"
                           >
                             <styled.div
                               active={false}
@@ -647,9 +669,24 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "jjhVVq",
+                                "lastClassName": "flsVJf",
                                 "rules": Array [
                                   "
+  ",
+                                  "
+    ",
+                                  "font-size: 0.875rem;
+  ",
+                                  "
+    ",
+                                  "line-height: 1.125rem;
+  ",
+                                  "
+    ",
+                                  "
+  ",
+                                  "
+
   position: relative;
   z-index: 1;
   margin: 0;
@@ -659,10 +696,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                   [Function],
                                   ";
   box-sizing: border-box;
-  font-size: ",
-                                  "0.875rem",
-                                  ";
-  line-height: 18px;
   color: ",
                                   [Function],
                                   ";
@@ -688,7 +721,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX jjhVVq"
+                            className="sc-ifAKCX flsVJf"
                           >
                             <styled.div
                               active={false}
@@ -919,9 +952,24 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "jjhVVq",
+                                "lastClassName": "flsVJf",
                                 "rules": Array [
                                   "
+  ",
+                                  "
+    ",
+                                  "font-size: 0.875rem;
+  ",
+                                  "
+    ",
+                                  "line-height: 1.125rem;
+  ",
+                                  "
+    ",
+                                  "
+  ",
+                                  "
+
   position: relative;
   z-index: 1;
   margin: 0;
@@ -931,10 +979,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                   [Function],
                                   ";
   box-sizing: border-box;
-  font-size: ",
-                                  "0.875rem",
-                                  ";
-  line-height: 18px;
   color: ",
                                   [Function],
                                   ";
@@ -960,7 +1004,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX jjhVVq"
+                            className="sc-ifAKCX flsVJf"
                           >
                             <styled.div
                               active={false}
@@ -1301,9 +1345,24 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "jjhVVq",
+                                "lastClassName": "flsVJf",
                                 "rules": Array [
                                   "
+  ",
+                                  "
+    ",
+                                  "font-size: 0.875rem;
+  ",
+                                  "
+    ",
+                                  "line-height: 1.125rem;
+  ",
+                                  "
+    ",
+                                  "
+  ",
+                                  "
+
   position: relative;
   z-index: 1;
   margin: 0;
@@ -1313,10 +1372,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                   [Function],
                                   ";
   box-sizing: border-box;
-  font-size: ",
-                                  "0.875rem",
-                                  ";
-  line-height: 18px;
   color: ",
                                   [Function],
                                   ";
@@ -1342,7 +1397,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX jjhVVq"
+                            className="sc-ifAKCX flsVJf"
                           >
                             <styled.div
                               active={false}
@@ -1573,9 +1628,24 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "jjhVVq",
+                                "lastClassName": "flsVJf",
                                 "rules": Array [
                                   "
+  ",
+                                  "
+    ",
+                                  "font-size: 0.875rem;
+  ",
+                                  "
+    ",
+                                  "line-height: 1.125rem;
+  ",
+                                  "
+    ",
+                                  "
+  ",
+                                  "
+
   position: relative;
   z-index: 1;
   margin: 0;
@@ -1585,10 +1655,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                   [Function],
                                   ";
   box-sizing: border-box;
-  font-size: ",
-                                  "0.875rem",
-                                  ";
-  line-height: 18px;
   color: ",
                                   [Function],
                                   ";
@@ -1614,7 +1680,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX jjhVVq"
+                            className="sc-ifAKCX flsVJf"
                           >
                             <styled.div
                               active={true}
@@ -1945,9 +2011,24 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "jjhVVq",
+                                "lastClassName": "flsVJf",
                                 "rules": Array [
                                   "
+  ",
+                                  "
+    ",
+                                  "font-size: 0.875rem;
+  ",
+                                  "
+    ",
+                                  "line-height: 1.125rem;
+  ",
+                                  "
+    ",
+                                  "
+  ",
+                                  "
+
   position: relative;
   z-index: 1;
   margin: 0;
@@ -1957,10 +2038,6 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                   [Function],
                                   ";
   box-sizing: border-box;
-  font-size: ",
-                                  "0.875rem",
-                                  ";
-  line-height: 18px;
   color: ",
                                   [Function],
                                   ";
@@ -1986,7 +2063,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX jjhVVq"
+                            className="sc-ifAKCX flsVJf"
                           >
                             <styled.div
                               active={false}
