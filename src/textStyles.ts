@@ -1,6 +1,11 @@
 import { remCalc } from './utils/remCalc';
 import { displayTo } from './utils/displayTo';
 import { css } from './utils/styled';
+import {
+  HeadlineTextStylings,
+  HeadlineTextTransform,
+  HeadlineTextStyles,
+} from './components/Headline/HeadlineTextStyles';
 
 export type FontSize = 'xSmall' | 'small' | 'medium' | 'large' | 'xLarge' | 'xxLarge' | 'xxxLarge';
 export type LineHeight = FontSize;
@@ -109,3 +114,21 @@ export function getFontStyle({ size, weight, lineHeight = size }: FontStyleProps
     ${getFontWeight(weight)}
   `;
 }
+
+/**
+ * @deprecated
+ * Use `HeadlineTextStylings` for the `Headline` instead, or `getFontLineHeight`, `getFontSize`, `getFontWeight`, `getFontStyle`.
+ */
+export const TextStylings = HeadlineTextStylings;
+
+/**
+ * @deprecated
+ * Use `HeadlineTextStylings` for the `Headline` instead, or `getFontLineHeight`, `getFontSize`, `getFontWeight`, `getFontStyle`.
+ */
+
+export const TextTransform = HeadlineTextTransform;
+/**
+ * @deprecated
+ * Use `HeadlineTextStylings` for the `Headline` instead, or `getFontLineHeight`, `getFontSize`, `getFontWeight`, `getFontStyle`.
+ */
+export const TextStyles = HeadlineTextStyles;
