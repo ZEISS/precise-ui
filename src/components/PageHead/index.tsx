@@ -78,7 +78,7 @@ export const PageHead: React.SFC<PageHeadProps> = ({ title, breadcrumbs = [], he
         </HelpButton>
       )}
     </Navigation>
-    <MainHeadline textStyle={HeadlineTextStyles.alpha}>{title}</MainHeadline>
+    <MainHeadline level={1}>{title}</MainHeadline>
   </>
 );
 PageHead.displayName = 'PageHead';

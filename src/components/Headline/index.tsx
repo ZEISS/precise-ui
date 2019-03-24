@@ -1,8 +1,9 @@
 import * as React from 'react';
-import styled, { themed } from '../../utils/styled';
+import styled, { themed, css } from '../../utils/styled';
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
 import { HeadlineTextTransform, HeadlineTextStyles, HeadlineTextStylings } from './HeadlineTextStyles';
+import { getFontStyle } from '../../textStyles';
 
 export type HeadlineSize = 'small' | 'medium';
 
@@ -11,44 +12,16 @@ export interface HeadlineProps extends StandardProps {
    * Represent 5 levels of headings (1-5)
    * Default is 3
    */
-  level?: 1 | 2 | 3 | 4 | 5;
-  /**
-   * Currently supports 2 different sizes, SMALL and MEDIUM,
-   * which could be used for ex. responsive layouts
-   */
-  size?: HeadlineSize;
+  level?: 1 | 2 | 3 | 4 | 5 | 6;
   /**
    * When specified headline will have muted text color
    */
   subheader?: boolean;
   /**
-   * When specified will select provided text style
-   */
-  textStyle?: HeadlineTextStyles;
-  /**
    * The text of the headline.
    */
   children?: React.ReactNode;
 }
-
-const sizeMapping = {
-  medium: {
-    h1: HeadlineTextStyles.giga,
-    h2: HeadlineTextStyles.mega,
-    h3: HeadlineTextStyles.alpha,
-    h4: HeadlineTextStyles.beta,
-    h5: HeadlineTextStyles.gamma,
-    h6: HeadlineTextStyles.delta,
-  },
-  small: {
-    h1: HeadlineTextStyles.alpha,
-    h2: HeadlineTextStyles.beta,
-    h3: HeadlineTextStyles.gamma,
-    h4: HeadlineTextStyles.delta,
-    h5: HeadlineTextStyles.epsilon,
-    h6: HeadlineTextStyles.zeta,
-  },
-};
 
 export interface StyledHeadlineProps {
   size: HeadlineSize;
@@ -68,14 +41,26 @@ function getComponentName(level: number) {
   return `h${level >= 1 && level <= 6 ? level : 3}`;
 }
 
-function getTextStyling(props: StyledHeadlineProps, key: string): string {
-  const { size, level } = props;
-  const component = getComponentName(level);
-
-  const textStyling = props.textStyle
-    ? HeadlineTextStylings[props.textStyle]
-    : HeadlineTextStylings[sizeMapping[size][component]];
-  return textStyling[key];
+function getHeadlineStyle(level: StyledHeadlineProps['level']) {
+  switch (level) {
+    case 1:
+      return getFontStyle({ size: 'xxxLarge', weight: 'light' });
+    case 2:
+      return getFontStyle({ size: 'xxLarge' });
+    case 3:
+      return getFontStyle({ size: 'xLarge', weight: 'medium' });
+    case 4:
+      return getFontStyle({ size: 'large' });
+    case 5:
+      return css`
+        ${getFontStyle({ size: 'medium', weight: 'bold' })}
+        text-transform: 'uppercase';
+      `;
+    case 6:
+      return getFontStyle({ size: 'small', weight: 'bold' });
+    default:
+      return '';
+  }
 }
 
 function getStyledHeadline(level: number) {
@@ -83,11 +68,18 @@ function getStyledHeadline(level: number) {
   const Headline = Headlines[component];
 
   if (!Headline) {
-    const NewHeadline = styled[component]`
-      margin: 0;
-      font-weight: inherit;
-      font-size: inherit;
-    `;
+    const NewHeadline = styled(component as 'h1')<StyledHeadlineProps>(
+      themed(
+        props => css`
+          ${getHeadlineStyle(props.level)}
+
+          margin: 0;
+          padding: ${props.theme.headingsPadding || `0 ${distance.small} 0 0`};
+          font-family: ${props.theme.fontFamily || 'inherit'};
+          color: ${props.subheader ? props.theme.text5 : 'inherit'};
+        `,
+      ),
+    );
     Headlines[component] = NewHeadline;
     return NewHeadline;
   }
@@ -95,27 +87,15 @@ function getStyledHeadline(level: number) {
   return Headline;
 }
 
-const HeadlineContainer = styled('div')<StyledHeadlineProps>`
-  padding: ${themed(props => props.theme.headingsPadding || `0 ${distance.small} 0 0`)};
-  font-size: ${props => getTextStyling(props, 'fontSize')};
-  font-weight: ${props => getTextStyling(props, 'fontWeight')};
-  text-transform: ${props => getTextStyling(props, 'textTransform')};
-  font-family: ${themed(props => props.theme.fontFamily || 'inherit')};
-  line-height: ${props => getTextStyling(props, 'lineHeight')};
-  letter-spacing: ${props => getTextStyling(props, 'letterSpacing')};
-  color: ${themed(props => (props.subheader ? props.theme.text5 : 'inherit'))};
-`;
-
-const defaultSize: HeadlineSize = 'medium';
 /**
  * Headline component with styles for all headline levels.
  */
-export const Headline: React.SFC<HeadlineProps> = ({ level = 3, size = defaultSize, children, ...rest }) => {
+export const Headline: React.SFC<HeadlineProps> = ({ level = 3, children, ...rest }) => {
   const StyledHeadline = getStyledHeadline(level);
   return (
-    <HeadlineContainer level={level} size={size} {...rest}>
-      <StyledHeadline>{children}</StyledHeadline>
-    </HeadlineContainer>
+    <StyledHeadline level={level} {...rest}>
+      {children}
+    </StyledHeadline>
   );
 };
 

@@ -236,8 +236,8 @@ ModalBody.displayName = 'ModalBody';
  */
 export const ModalHeader: React.SFC<ModalHeaderProps> = ({ title, label, ...rest }) => (
   <StyledModalHeader {...rest}>
-    {label && <Headline textStyle={HeadlineTextStyles.zeta}>{label}</Headline>}
-    {title && <Headline textStyle={HeadlineTextStyles.beta}>{title}</Headline>}
+    {label && <Headline level={6}>{label}</Headline>}
+    {title && <Headline level={4}>{title}</Headline>}
   </StyledModalHeader>
 );
 ModalHeader.displayName = 'ModalHeader';

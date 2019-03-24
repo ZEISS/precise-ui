@@ -114,21 +114,3 @@ export function getFontStyle({ size, weight, lineHeight = size }: FontStyleProps
     ${getFontWeight(weight)}
   `;
 }
-
-/**
- * @deprecated
- * Use `HeadlineTextStylings` for the `Headline` instead, or `getFontLineHeight`, `getFontSize`, `getFontWeight`, `getFontStyle`.
- */
-export const TextStylings = HeadlineTextStylings;
-
-/**
- * @deprecated
- * Use `HeadlineTextStylings` for the `Headline` instead, or `getFontLineHeight`, `getFontSize`, `getFontWeight`, `getFontStyle`.
- */
-
-export const TextTransform = HeadlineTextTransform;
-/**
- * @deprecated
- * Use `HeadlineTextStylings` for the `Headline` instead, or `getFontLineHeight`, `getFontSize`, `getFontWeight`, `getFontStyle`.
- */
-export const TextStyles = HeadlineTextStyles;
