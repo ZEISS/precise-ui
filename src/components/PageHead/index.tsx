@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as colors from '../../colors';
 import styled from '../../utils/styled';
-import { Headline, HeadlineTextStyles, HeadlineTextStylings } from '../Headline';
+import { Headline } from '../Headline';
 import { Icon } from '../Icon';
 import { Breadcrumbs } from '../Breadcrumbs';
 import { Breadcrumb, BreadcrumbProps } from '../Breadcrumb';
