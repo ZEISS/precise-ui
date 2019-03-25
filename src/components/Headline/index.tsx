@@ -2,7 +2,6 @@ import * as React from 'react';
 import styled, { themed, css } from '../../utils/styled';
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
-import { HeadlineTextTransform, HeadlineTextStyles, HeadlineTextStylings } from './HeadlineTextStyles';
 import { getFontStyle } from '../../textStyles';
 
 export type HeadlineSize = 'small' | 'medium';
@@ -28,7 +27,6 @@ export interface StyledHeadlineProps {
   level: number;
   theme?: any;
   subheader?: boolean;
-  textStyle?: HeadlineTextStyles;
 }
 
 interface HeadlineCache {
@@ -98,7 +96,5 @@ export const Headline: React.SFC<HeadlineProps> = ({ level = 3, children, ...res
     </StyledHeadline>
   );
 };
-
-export { HeadlineTextTransform, HeadlineTextStyles, HeadlineTextStylings };
 
 Headline.displayName = 'Headline';
