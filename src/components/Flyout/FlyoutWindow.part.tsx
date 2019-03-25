@@ -4,6 +4,7 @@ import { withResponsive, ResponsiveComponentProps } from '../../hoc/withResponsi
 import { FlyoutPosition, BasicPosition } from './Flyout.types.part';
 import { distancePx, distance } from '../../distance';
 import { StandardProps } from '../../common';
+import { getFontStyle } from '../../textStyles';
 
 const toolTipArrowSize = 18;
 
@@ -255,6 +256,8 @@ export interface StyledFlyoutWindowProps {
 const StyledFlyoutWindow = styled('div')<StyledFlyoutWindowProps>(
   themed(
     ({ theme, size, position, noGutter }) => css`
+      ${getFontStyle({ size: 'medium' })}
+
       position: absolute;
       z-index: 100;
       box-sizing: border-box;
@@ -264,7 +267,6 @@ const StyledFlyoutWindow = styled('div')<StyledFlyoutWindowProps>(
       color: ${theme.flyout.textColor};
       max-width: ${theme.flyout.maxWidth};
       max-height: ${theme.flyout.maxHeight};
-      font-size: ${theme.flyout.fontSize};
       ${!noGutter ? `padding: ${distance.small} ${distance.medium};` : ''} box-sizing: border-box;
 
       ${size && size.width !== undefined ? `width: ${size.width}px` : ''};

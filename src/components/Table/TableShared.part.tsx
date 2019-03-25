@@ -1,17 +1,18 @@
 import * as React from 'react';
 import { TableRowEvent, TableBodyRenderEvent, Column, TableColumns, TableCellRenderEvent } from './Table.types.part';
 import styled, { themed, css } from '../../utils/styled';
-import { remCalc } from '../../utils/remCalc';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 const HeaderLabel = styled.div`
   font-size: 0;
   white-space: nowrap;
 
   > span {
+    ${getFontStyle({ size: 'small' })}
+
     display: inline-block;
     vertical-align: middle;
-    font-size: ${remCalc('14px')};
   }
 `;
 
@@ -66,12 +67,13 @@ const SortIcon = styled('span')<SortIconProps>`
 `;
 
 export const StyledTableHead = styled.thead`
+  ${getFontStyle({ weight: 'bold' })}
+  
   color: ${themed(({ theme }) => theme.text6 || theme.text1)};
-  font-weight: bold;
 `;
 
 export const StyledTableFoot = styled.tfoot`
-  font-size: 0.8em;
+  ${getFontStyle({ size: 'xSmall' })}
 `;
 
 export const StyledTableHeaderRow = styled.tr``;

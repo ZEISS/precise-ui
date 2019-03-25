@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 export interface CardBodyProps extends StandardProps {
   /**
@@ -18,9 +19,9 @@ const StyledCardBody = styled.div`
   height: 100%;
 
   p {
+    ${getFontStyle({ size: 'small' })}
+
     font-family: ${themed(props => props.theme.fontFamily || 'inherit')};
-    font-size: 14px;
-    line-height: 1.4;
     margin: 0;
   }
 `;

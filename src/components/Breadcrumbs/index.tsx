@@ -2,13 +2,14 @@ import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
 import { Breadcrumb } from '../Breadcrumb';
 import { dark } from '../../colors';
-import { remCalc } from '../../utils/remCalc';
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
 import { OverflowMenu } from '../OverflowMenu';
+import { getFontStyle } from '../../textStyles';
 
 const BreadcrumbContainer = styled.div`
-  font-size: ${remCalc('14px')};
+  ${getFontStyle({ size: 'small' })}
+  
   color: ${themed(props => props.theme.ui8)};
 `;
 

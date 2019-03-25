@@ -6,6 +6,7 @@ import { InteractiveSurface, InteractiveSurfaceChangeEvent } from '../Interactiv
 import { Icon } from '../Icon';
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 export interface CarouselChangeEvent {
   /**
@@ -168,13 +169,14 @@ const Mask = styled.div`
 `;
 
 const Arrow = styled.button`
+  ${getFontStyle({ size: 'medium' })}
+
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: transparent;
   padding: 0;
   border: none;
-  font-size: 1rem;
   align-self: start;
   cursor: pointer;
   > i {
