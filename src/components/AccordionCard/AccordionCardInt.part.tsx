@@ -1,9 +1,9 @@
 import * as React from 'react';
 import styled, { themed, css } from '../../utils/styled';
-import { remCalc } from '../../utils/remCalc';
 import { distance } from '../../distance';
 import { StandardProps } from '../../common';
 import { setLabels, getPropLabel, AccordionCardLabels } from '../../utils/labels';
+import { getFontStyle } from '../../textStyles';
 
 setLabels({
   openLabel: 'Open Details',
@@ -27,12 +27,12 @@ const StyledContainer = styled('div')<ActiveProps>(
         text1,
       },
     }) => `
-      position: relative;
-      color: ${text1};
-      font-size: ${remCalc('16px')};
-      line-height: 22px;
-      border: 1px solid ${open ? openedBorderColor : borderColor};
-    `,
+    ${getFontStyle({ size: 'medium' })}
+    
+    position: relative;
+    color: ${text1};
+    border: 1px solid ${open ? openedBorderColor : borderColor};
+  `,
   ),
 );
 

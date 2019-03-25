@@ -2,19 +2,19 @@ import * as React from 'react';
 import styled, { themed, css } from '../../utils/styled';
 import { List } from '../List';
 import { ListItem } from '../ListItem';
-import { remCalc } from '../../utils/remCalc';
 import { TableProps, TableCardRendererEvent, TableBodyRenderEvent } from './Table.types.part';
 import { defaultCellRenderer } from './TableShared.part';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 const Container = styled.div(
   themed(
     ({ theme: { ui4, text1 } }) => css`
+      ${getFontStyle({ size: 'medium' })}
+
       position: relative;
       border: 1px solid ${ui4};
       color: ${text1};
-      font-size: ${remCalc('16px')};
-      line-height: 22px;
     `,
   ),
 );
@@ -32,12 +32,11 @@ const PropContainer = styled.div`
 `;
 
 const PropName = styled.div`
-  font-size: ${remCalc('12px')};
-  line-height: 14px;
+  ${getFontStyle({ size: 'xSmall' })}
 `;
 
 const PropValue = styled.div`
-  font-weight: 500;
+  ${getFontStyle({ weight: 'medium' })}
 `;
 
 const PlaceholderContainer = styled.div`

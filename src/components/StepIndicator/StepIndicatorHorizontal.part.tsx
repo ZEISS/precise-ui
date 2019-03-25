@@ -4,6 +4,7 @@ import { StepIndicatorProps, StepIndicatorStepProps } from './StepIndicator.type
 import { ListItemNumber } from './StepIndicatorShared.part';
 import { PreciseTheme } from '../../common';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 const StyledProgressHost = styled.ol`
   width: 100%;
@@ -52,8 +53,9 @@ const StyledProgressStep = styled.li`
   }
 
   &.step-active {
+    ${getFontStyle({ weight: 'medium' })}
+    
     color: ${themed(({ theme }) => theme.text1)};
-    font-weight: 500;
 
     ~ li {
       color: ${themed(({ theme }) => theme.text2)};

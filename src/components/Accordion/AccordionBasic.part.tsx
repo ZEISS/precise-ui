@@ -7,6 +7,7 @@ import { distance } from '../../distance';
 import { AccordionProps } from './Accordion.types.part';
 import { normalizeIndex, toggleIndex, hasIndex } from '../AccordionTable/helpers/indexHelper';
 import { Expander } from '../Expander';
+import { getFontStyle } from '../../textStyles';
 
 export interface AccordionBasicState {
   /**
@@ -38,6 +39,8 @@ const AccordionItems = styled.ul`
 `;
 
 const AccordionItem = styled.li`
+  ${getFontStyle({ size: 'small' })}
+
   position: relative;
   z-index: 1;
   margin: 0;
@@ -45,8 +48,6 @@ const AccordionItem = styled.li`
   overflow: visible;
   border-top: ${themed(({ theme }) => theme.accordionLine)};
   box-sizing: border-box;
-  font-size: ${remCalc('14px')};
-  line-height: 18px;
   color: ${themed(({ theme }) => theme.text1)};
 
   &:last-child {

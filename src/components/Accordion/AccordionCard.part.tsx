@@ -1,12 +1,12 @@
 import * as React from 'react';
 import styled, { themed, css } from '../../utils/styled';
-import { remCalc } from '../../utils/remCalc';
 import { AccordionProps } from './Accordion.types.part';
 import { distance } from '../../distance';
 import { AccordionTabProps } from '../AccordionTab';
 import { List } from '../List';
 import { ListItem } from '../ListItem';
 import { normalizeIndex, toggleIndex, hasIndex } from '../AccordionTable/helpers/indexHelper';
+import { getFontStyle } from '../../textStyles';
 
 export interface AccordionCardState {
   /**
@@ -42,17 +42,17 @@ const StyledListItem = styled(ListItem)`
 `;
 
 const Container = styled.div`
+  ${getFontStyle({ size: 'medium' })}
+
   position: relative;
   color: ${themed(({ theme }) => theme.text1)};
-  font-size: ${remCalc('16px')};
-  line-height: 22px;
 `;
 
 const ContentContainer = styled.div<ActiveProps>(
   themed(
     ({ open, theme: { ui1, ui2, ui4, ui5 } }) => css`
-      font-size: ${remCalc('14px')};
-      line-height: 18px;
+      ${getFontStyle({ size: 'small' })}
+
       padding: ${distance.medium};
       background: ${open ? ui2 : ui1};
       border: 1px solid ${open ? ui5 : ui4};

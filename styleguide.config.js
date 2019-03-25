@@ -76,6 +76,10 @@ module.exports = {
           name: 'Types',
           content: path.resolve(__dirname, 'docs/styleguide/types.md'),
         },
+        {
+          name: 'Typography',
+          content: path.resolve(__dirname, 'docs/styleguide/typography.md'),
+        },
       ],
     },
     {

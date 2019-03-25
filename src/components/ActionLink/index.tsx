@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled, { themed, css } from '../../utils/styled';
 import { Anchor, AnchorProps } from '../Anchor';
+import { getFontStyle } from '../../textStyles';
 
 export interface ActionLinkProps extends AnchorProps {
   /**
@@ -29,7 +30,7 @@ const PseudoLinkStyle = css`
 `;
 
 const StyledActionLink = styled(Anchor)<StyledActionLink>`
-  font-weight: 500;
+  ${getFontStyle({ weight: 'medium' })}
   text-decoration: none;
   color: ${themed(props => (props.disabled ? props.theme.text3 : props.theme.ui0))};
   display: ${props => (props.block ? 'block' : 'inline-block')};

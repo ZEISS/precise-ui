@@ -1,11 +1,14 @@
 import * as React from 'react';
-import styled from '../../utils/styled';
+import styled, { css } from '../../utils/styled';
 import { StackPanel } from '../StackPanel';
 import { Anchor } from '../Anchor';
 import { Icon } from '../Icon';
 import { cyan, black, grey2 } from '../../colors';
 import { distance } from '../../distance';
 import { multiply } from '../../utils/multiply';
+import { getFontStyle } from '../../textStyles';
+import { displayTo } from '../../utils/displayTo';
+import { remCalc } from '../../utils/remCalc';
 
 export interface NavBarItem {
   content: React.ReactNode;
@@ -74,8 +77,10 @@ const StyledNavBar = styled(HeaderStackPanel)`
 `;
 
 const StyledMenuLink = styled.a`
+  ${getFontStyle({ size: 'xxLarge' })}
+
   position: relative;
-  font-size: 30px;
+
   cursor: pointer;
   color: ${black};
   text-decoration: none;
@@ -113,8 +118,10 @@ const StyledMenuItems = styled.ul`
 `;
 
 const StyledMenuItem = styled.li`
+  ${getFontStyle({ size: 'medium' })}
+
   margin: ${distance.small} 0;
-  font-size: 1em;
+
   text-align: right;
   & a {
     text-decoration: none;
@@ -137,12 +144,14 @@ const StyledLinks = styled.div`
 `;
 
 const StyledLead = styled.div`
-  font-size: 30px;
+  ${getFontStyle({ size: 'xxLarge' })}
+
   margin-right: ${distance.medium};
 `;
 
 const StyledPin = styled.div`
-  font-size: 30px;
+  ${getFontStyle({ size: 'xxLarge' })}
+  
   margin-left: ${distance.medium};
 `;
 

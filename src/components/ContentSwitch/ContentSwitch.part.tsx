@@ -3,6 +3,7 @@ import { white } from '../../colors';
 import { distance } from '../../distance';
 import { remCalc } from '../../utils/remCalc';
 import { HeadersProps, TabHeaderProps } from './ContentSwitchTypes.part';
+import { getFontStyle } from '../../textStyles';
 
 export const Container = styled.div``;
 
@@ -42,6 +43,7 @@ const InactiveTab = css`
 `;
 
 export const Header = styled('li')<TabHeaderProps>`
+  ${getFontStyle({ size: 'medium' })}
   padding: ${({ orientation }) => (orientation === 'vertical' ? remCalc(['8px', '48px']) : remCalc(['8px', '16px']))};
   position: relative;
   margin: 0;
@@ -51,8 +53,6 @@ export const Header = styled('li')<TabHeaderProps>`
   box-sizing: border-box;
   ${props => (props.active ? ActiveTab : InactiveTab)};
   border: 1px solid ${themed(props => props.theme.ui4)};
-  font-size: ${remCalc('16px')};
-  line-height: ${remCalc('20px')};
 `;
 
 export interface TabItemProps {

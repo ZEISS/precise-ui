@@ -292,8 +292,75 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-bxivhb",
                                     "isStatic": false,
-                                    "lastClassName": "dswZLu",
+                                    "lastClassName": "ceBXRX",
                                     "rules": Array [
+                                      "
+  ",
+                                      "
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(min-width: 980px)",
+                                      " {
+        ",
+                                      "font-size: ",
+                                      "1.1875rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(max-width: 979px)",
+                                      " {
+        ",
+                                      "font-size: ",
+                                      "1rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+      ",
+                                      "
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(min-width: 980px)",
+                                      " {
+        ",
+                                      "line-height: ",
+                                      "1.5rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(max-width: 979px)",
+                                      " {
+        ",
+                                      "line-height: ",
+                                      "1.375rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+      ",
+                                      "
+    ",
+                                      "font-weight: 400;",
+                                      "
+  ",
                                       "
   position: relative;
   z-index: 1;
@@ -303,13 +370,6 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
   overflow: visible;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: ",
-                                      "1.4375rem",
-                                      ";
-  font-size: ",
-                                      "1.125rem",
-                                      ";
-  font-weight: 400;
   box-sizing: border-box;
   border-bottom: 2px solid transparent;
   margin-right: ",
@@ -339,7 +399,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                               onClick={[Function]}
                             >
                               <li
-                                className="sc-bxivhb dswZLu"
+                                className="sc-bxivhb ceBXRX"
                                 onClick={[Function]}
                               >
                                 First
@@ -360,8 +420,75 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-bxivhb",
                                     "isStatic": false,
-                                    "lastClassName": "dswZLu",
+                                    "lastClassName": "ceBXRX",
                                     "rules": Array [
+                                      "
+  ",
+                                      "
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(min-width: 980px)",
+                                      " {
+        ",
+                                      "font-size: ",
+                                      "1.1875rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(max-width: 979px)",
+                                      " {
+        ",
+                                      "font-size: ",
+                                      "1rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+      ",
+                                      "
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(min-width: 980px)",
+                                      " {
+        ",
+                                      "line-height: ",
+                                      "1.5rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(max-width: 979px)",
+                                      " {
+        ",
+                                      "line-height: ",
+                                      "1.375rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+      ",
+                                      "
+    ",
+                                      "font-weight: 400;",
+                                      "
+  ",
                                       "
   position: relative;
   z-index: 1;
@@ -371,13 +498,6 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
   overflow: visible;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: ",
-                                      "1.4375rem",
-                                      ";
-  font-size: ",
-                                      "1.125rem",
-                                      ";
-  font-weight: 400;
   box-sizing: border-box;
   border-bottom: 2px solid transparent;
   margin-right: ",
@@ -407,7 +527,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                               onClick={[Function]}
                             >
                               <li
-                                className="sc-bxivhb dswZLu"
+                                className="sc-bxivhb ceBXRX"
                                 onClick={[Function]}
                               >
                                 Second
@@ -428,8 +548,75 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-bxivhb",
                                     "isStatic": false,
-                                    "lastClassName": "dswZLu",
+                                    "lastClassName": "ceBXRX",
                                     "rules": Array [
+                                      "
+  ",
+                                      "
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(min-width: 980px)",
+                                      " {
+        ",
+                                      "font-size: ",
+                                      "1.1875rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(max-width: 979px)",
+                                      " {
+        ",
+                                      "font-size: ",
+                                      "1rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+      ",
+                                      "
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(min-width: 980px)",
+                                      " {
+        ",
+                                      "line-height: ",
+                                      "1.5rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(max-width: 979px)",
+                                      " {
+        ",
+                                      "line-height: ",
+                                      "1.375rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+      ",
+                                      "
+    ",
+                                      "font-weight: 400;",
+                                      "
+  ",
                                       "
   position: relative;
   z-index: 1;
@@ -439,13 +626,6 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
   overflow: visible;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: ",
-                                      "1.4375rem",
-                                      ";
-  font-size: ",
-                                      "1.125rem",
-                                      ";
-  font-weight: 400;
   box-sizing: border-box;
   border-bottom: 2px solid transparent;
   margin-right: ",
@@ -475,7 +655,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                               onClick={[Function]}
                             >
                               <li
-                                className="sc-bxivhb fCMGKn"
+                                className="sc-bxivhb dzsrff"
                                 onClick={[Function]}
                               >
                                 Third
@@ -496,8 +676,75 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-bxivhb",
                                     "isStatic": false,
-                                    "lastClassName": "dswZLu",
+                                    "lastClassName": "ceBXRX",
                                     "rules": Array [
+                                      "
+  ",
+                                      "
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(min-width: 980px)",
+                                      " {
+        ",
+                                      "font-size: ",
+                                      "1.1875rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(max-width: 979px)",
+                                      " {
+        ",
+                                      "font-size: ",
+                                      "1rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+      ",
+                                      "
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(min-width: 980px)",
+                                      " {
+        ",
+                                      "line-height: ",
+                                      "1.5rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+        ",
+                                      "
+      @media ",
+                                      "(max-width: 979px)",
+                                      " {
+        ",
+                                      "line-height: ",
+                                      "1.375rem",
+                                      ";",
+                                      ";
+      }
+    ",
+                                      "
+      ",
+                                      "
+    ",
+                                      "font-weight: 400;",
+                                      "
+  ",
                                       "
   position: relative;
   z-index: 1;
@@ -507,13 +754,6 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
   overflow: visible;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: ",
-                                      "1.4375rem",
-                                      ";
-  font-size: ",
-                                      "1.125rem",
-                                      ";
-  font-weight: 400;
   box-sizing: border-box;
   border-bottom: 2px solid transparent;
   margin-right: ",
@@ -543,7 +783,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                               onClick={[Function]}
                             >
                               <li
-                                className="sc-bxivhb dswZLu"
+                                className="sc-bxivhb ceBXRX"
                                 onClick={[Function]}
                               >
                                 Last
