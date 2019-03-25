@@ -1,11 +1,6 @@
 import { remCalc } from './utils/remCalc';
 import { displayTo } from './utils/displayTo';
 import { css } from './utils/styled';
-import {
-  HeadlineTextStylings,
-  HeadlineTextTransform,
-  HeadlineTextStyles,
-} from './components/Headline/HeadlineTextStyles';
 
 export type FontSize = 'xSmall' | 'small' | 'medium' | 'large' | 'xLarge' | 'xxLarge' | 'xxxLarge';
 export type LineHeight = FontSize;
