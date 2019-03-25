@@ -216,7 +216,7 @@ class RatingInt extends React.Component<RatingProps & FormContextProps, RatingSt
             <Icon
               width={dim}
               height={dim}
-              style={{ fill: getColor(theme, disabled, i, value, hover), animation: getAnimation(i, value) }}
+              style={{ fill: getColor(theme, disabled, i, value, hover), animation: getAnimation(i, value) as any }}
             />
           </RatingElement>
         ))}
