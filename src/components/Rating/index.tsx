@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as icons from '../Icon/icons';
-import styled, { keyframes } from '../../utils/styled';
+import styled, { keyframes, css } from '../../utils/styled';
 import { IconName } from '../Icon';
 import { InputProps, PreciseTheme } from '../../common';
 import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
@@ -96,7 +96,9 @@ function getColor(theme: PreciseTheme, disabled: boolean | undefined, i: number,
 
 function getAnimation(i: number, value: number) {
   if (i + 1 === value) {
-    return `${SetAnimation} 0.5s ease-in-out`;
+    return css`
+      ${SetAnimation} 0.5s ease-in-out
+    `;
   }
 
   return 'none';
