@@ -1,12 +1,13 @@
 import * as React from 'react';
 import * as colors from '../../colors';
 import styled from '../../utils/styled';
-import { Headline, HeadlineTextStyles, HeadlineTextStylings } from '../Headline';
+import { Headline } from '../Headline';
 import { Icon } from '../Icon';
 import { Breadcrumbs } from '../Breadcrumbs';
 import { Breadcrumb, BreadcrumbProps } from '../Breadcrumb';
 import { ActionLink } from '../ActionLink';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 export interface PageHeadProps {
   /**
@@ -47,8 +48,8 @@ const Navigation = styled.div`
 `;
 
 const HelpButton = styled(ActionLink)`
-  font-size: ${HeadlineTextStylings.zeta.fontSize};
-  font-weight: ${HeadlineTextStylings.zeta.fontWeight};
+  ${getFontStyle({ size: 'xSmall', weight: 'light' })}
+
   display: flex;
   align-items: center;
   color: ${colors.dark};

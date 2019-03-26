@@ -3,26 +3,29 @@ function wait(ms) {
 }
 
 describe('Visual testing', () => {
-  test('test', () => expect(true).toBe(true));
-  for (const { identifier, link, skip, wait: waitMs } of components) {
-    const testFunction = skip ? test.skip : test;
+  test('Components available', () => expect(components && components.length > 0).toBeTruthy());
 
-    testFunction(identifier, async () => {
-      await page.goto(link);
-      if (waitMs) {
-        await wait(waitMs);
-      }
+  if (components && components.length) {
+    for (const { identifier, link, skip, wait: waitMs } of components) {
+      const testFunction = skip ? test.skip : test;
 
-      const $component = await page.$('[data-preview]');
+      testFunction(identifier, async () => {
+        await page.goto(link);
+        if (waitMs) {
+          await wait(waitMs);
+        }
 
-      const screenshot = await $component.screenshot();
-      try {
-        expect(screenshot).toMatchImageSnapshot({
-          customSnapshotIdentifier: identifier,
-        });
-      } catch (e) {
-        throw new Error(`${e}\n${link}`);
-      }
-    });
+        const $component = await page.$('[data-preview]');
+
+        const screenshot = await $component.screenshot();
+        try {
+          expect(screenshot).toMatchImageSnapshot({
+            customSnapshotIdentifier: identifier,
+          });
+        } catch (e) {
+          throw new Error(`${e}\n${link}`);
+        }
+      });
+    }
   }
 });

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { keyframes, css } from '../../utils/styled';
 import { StandardProps } from '../../common';
-import { Headline, HeadlineTextStyles } from '../Headline';
+import { Headline } from '../Headline';
 import { white, cyan, dark, grey6 } from '../../colors';
 import { Blocker, BlockerProps } from '../Blocker';
 import { CloseButton } from '../CloseButton';
