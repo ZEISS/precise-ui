@@ -396,7 +396,7 @@ export class FlyoutWindowInt extends React.Component<FlyoutWindowProps, FlyoutWi
         this.updateMeasurements();
       }
 
-      this.flyoutContainer.scrollTo({
+      this.flyoutContainer.scroll({
         top: this.scrollPosition.top,
         left: this.scrollPosition.left,
       });
