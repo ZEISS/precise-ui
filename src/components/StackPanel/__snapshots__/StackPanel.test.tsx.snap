@@ -1,0 +1,1115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StackPanel /> should render the StackPanel bottom to top 1`] = `
+<StackPanel
+  direction="bottom"
+>
+  <styled.div
+    dir="column-reverse"
+    wrapping="nowrap"
+  >
+    <StyledComponent
+      dir="column-reverse"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "iRwuO",
+            "rules": Array [
+              "
+  display: flex;
+  flex-direction: ",
+              [Function],
+              ";
+  flex-wrap: ",
+              [Function],
+              ";
+  justify-content: flex-start;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      wrapping="nowrap"
+    >
+      <div
+        className="sc-bdVaJa iRwuO"
+        dir="column-reverse"
+      >
+        <StackItem>
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "bmilDA",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-bwzfXH bmilDA"
+              >
+                First
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+        <StackItem>
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "bmilDA",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-bwzfXH bmilDA"
+              >
+                Second
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</StackPanel>
+`;
+
+exports[`<StackPanel /> should render the StackPanel right to left 1`] = `
+<StackPanel
+  direction="right"
+>
+  <styled.div
+    dir="row-reverse"
+    wrapping="nowrap"
+  >
+    <StyledComponent
+      dir="row-reverse"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "CIrhF",
+            "rules": Array [
+              "
+  display: flex;
+  flex-direction: ",
+              [Function],
+              ";
+  flex-wrap: ",
+              [Function],
+              ";
+  justify-content: flex-start;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      wrapping="nowrap"
+    >
+      <div
+        className="sc-bdVaJa CIrhF"
+        dir="row-reverse"
+      >
+        <StackItem>
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "bmilDA",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-bwzfXH bmilDA"
+              >
+                First
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+        <StackItem>
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "bmilDA",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-bwzfXH bmilDA"
+              >
+                Second
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</StackPanel>
+`;
+
+exports[`<StackPanel /> should render the StackPanel top to bottom with explicit heights 1`] = `
+<StackPanel
+  direction="top"
+  style={
+    Object {
+      "height": "400px",
+    }
+  }
+>
+  <styled.div
+    dir="column"
+    style={
+      Object {
+        "height": "400px",
+      }
+    }
+    wrapping="nowrap"
+  >
+    <StyledComponent
+      dir="column"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "bbJGId",
+            "rules": Array [
+              "
+  display: flex;
+  flex-direction: ",
+              [Function],
+              ";
+  flex-wrap: ",
+              [Function],
+              ";
+  justify-content: flex-start;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      style={
+        Object {
+          "height": "400px",
+        }
+      }
+      wrapping="nowrap"
+    >
+      <div
+        className="sc-bdVaJa bbJGId"
+        dir="column"
+        style={
+          Object {
+            "height": "400px",
+          }
+        }
+      >
+        <StackItem
+          height="20%"
+        >
+          <styled.div
+            height="20%"
+          >
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "hqUuzP",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              height="20%"
+            >
+              <div
+                className="sc-bwzfXH hqUuzP"
+                height="20%"
+              >
+                First
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+        <StackItem
+          height="60%"
+        >
+          <styled.div
+            height="60%"
+          >
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "hqUuzP",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              height="60%"
+            >
+              <div
+                className="sc-bwzfXH dBuYpR"
+                height="60%"
+              >
+                Second
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+        <StackItem
+          height="20%"
+        >
+          <styled.div
+            height="20%"
+          >
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "hqUuzP",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              height="20%"
+            >
+              <div
+                className="sc-bwzfXH hqUuzP"
+                height="20%"
+              >
+                Third
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</StackPanel>
+`;
+
+exports[`<StackPanel /> should render the StackPanel with explicit widths and wrapping 1`] = `
+<StackPanel
+  wrap={true}
+>
+  <styled.div
+    dir="row"
+    wrapping="wrap"
+  >
+    <StyledComponent
+      dir="row"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "iYzFoh",
+            "rules": Array [
+              "
+  display: flex;
+  flex-direction: ",
+              [Function],
+              ";
+  flex-wrap: ",
+              [Function],
+              ";
+  justify-content: flex-start;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      wrapping="wrap"
+    >
+      <div
+        className="sc-bdVaJa iYzFoh"
+        dir="row"
+      >
+        <StackItem
+          width="440px"
+        >
+          <styled.div
+            width="440px"
+          >
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "dHGcix",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              width="440px"
+            >
+              <div
+                className="sc-bwzfXH dmWoAt"
+                width="440px"
+              >
+                First
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+        <StackItem
+          width="300px"
+        >
+          <styled.div
+            width="300px"
+          >
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "dHGcix",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              width="300px"
+            >
+              <div
+                className="sc-bwzfXH ffJzaL"
+                width="300px"
+              >
+                Second
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+        <StackItem
+          width="40%"
+        >
+          <styled.div
+            width="40%"
+          >
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "dHGcix",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              width="40%"
+            >
+              <div
+                className="sc-bwzfXH dHGcix"
+                width="40%"
+              >
+                Third
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</StackPanel>
+`;
+
+exports[`<StackPanel /> should render the StackPanel with explicit withs and no wrapping 1`] = `
+<StackPanel>
+  <styled.div
+    dir="row"
+    wrapping="nowrap"
+  >
+    <StyledComponent
+      dir="row"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "jfORAu",
+            "rules": Array [
+              "
+  display: flex;
+  flex-direction: ",
+              [Function],
+              ";
+  flex-wrap: ",
+              [Function],
+              ";
+  justify-content: flex-start;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      wrapping="nowrap"
+    >
+      <div
+        className="sc-bdVaJa jfORAu"
+        dir="row"
+      >
+        <StackItem
+          width="100px"
+        >
+          <styled.div
+            width="100px"
+          >
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "blInJE",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              width="100px"
+            >
+              <div
+                className="sc-bwzfXH blInJE"
+                width="100px"
+              >
+                First
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+        <StackItem
+          width="100px"
+        >
+          <styled.div
+            width="100px"
+          >
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "blInJE",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              width="100px"
+            >
+              <div
+                className="sc-bwzfXH blInJE"
+                width="100px"
+              >
+                Second
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</StackPanel>
+`;
+
+exports[`<StackPanel /> should render the StackPanel with three items 1`] = `
+<StackPanel>
+  <styled.div
+    dir="row"
+    wrapping="nowrap"
+  >
+    <StyledComponent
+      dir="row"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "jfORAu",
+            "rules": Array [
+              "
+  display: flex;
+  flex-direction: ",
+              [Function],
+              ";
+  flex-wrap: ",
+              [Function],
+              ";
+  justify-content: flex-start;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      wrapping="nowrap"
+    >
+      <div
+        className="sc-bdVaJa jfORAu"
+        dir="row"
+      >
+        <StackItem>
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "bmilDA",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-bwzfXH bmilDA"
+              >
+                First
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+        <StackItem>
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "bmilDA",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-bwzfXH bmilDA"
+              >
+                Second
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+        <StackItem>
+          <styled.div>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "bmilDA",
+                    "rules": Array [
+                      "
+  flex-grow: ",
+                      [Function],
+                      ";
+  min-width: ",
+                      [Function],
+                      ";
+  height: ",
+                      [Function],
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <div
+                className="sc-bwzfXH bmilDA"
+              >
+                Third
+              </div>
+            </StyledComponent>
+          </styled.div>
+        </StackItem>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</StackPanel>
+`;
+
+exports[`<StackPanel /> should render the default StackPanel 1`] = `
+<StackPanel>
+  <styled.div
+    dir="row"
+    wrapping="nowrap"
+  >
+    <StyledComponent
+      dir="row"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "jfORAu",
+            "rules": Array [
+              "
+  display: flex;
+  flex-direction: ",
+              [Function],
+              ";
+  flex-wrap: ",
+              [Function],
+              ";
+  justify-content: flex-start;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      wrapping="nowrap"
+    >
+      <div
+        className="sc-bdVaJa jfORAu"
+        dir="row"
+      />
+    </StyledComponent>
+  </styled.div>
+</StackPanel>
+`;

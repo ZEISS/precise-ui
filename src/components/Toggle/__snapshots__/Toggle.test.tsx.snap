@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toggle /> should render <Toggle> 1`] = `<ToggleInt />`;
+
+exports[`<Toggle /> should render <Toggle> that is active 1`] = `
+<ToggleInt
+  defaultValue={true}
+/>
+`;
+
+exports[`<Toggle /> should render <Toggle> that is not active in controlled mode 1`] = `
+<ToggleInt
+  value={false}
+/>
+`;
+
+exports[`<Toggle /> should render <Toggle> with an onChange handler 1`] = `
+<ToggleInt
+  defaultValue={false}
+  onChange={[Function]}
+/>
+`;
+
+exports[`<Toggle /> should render <Toggle> with content 1`] = `
+<ToggleInt>
+  Foo
+</ToggleInt>
+`;
+
+exports[`<Toggle /> should render a disabled <Toggle> 1`] = `
+<ToggleInt
+  disabled={true}
+/>
+`;

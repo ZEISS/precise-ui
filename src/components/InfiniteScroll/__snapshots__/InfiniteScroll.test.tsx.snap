@@ -1,0 +1,235 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InfiniteScroll /> should render <InfiniteScroll> with "Show More" button and data elements 1`] = `
+<styled.div
+  height={500}
+>
+  <div>
+    <div
+      key="X0"
+    >
+      X:
+      X0
+    </div>
+    <div
+      key="X1"
+    >
+      X:
+      X1
+    </div>
+    <div
+      key="X2"
+    >
+      X:
+      X2
+    </div>
+    <div
+      key="X3"
+    >
+      X:
+      X3
+    </div>
+    <div
+      key="X4"
+    >
+      X:
+      X4
+    </div>
+    <div
+      key="X5"
+    >
+      X:
+      X5
+    </div>
+    <div
+      key="X6"
+    >
+      X:
+      X6
+    </div>
+    <div
+      key="X7"
+    >
+      X:
+      X7
+    </div>
+    <div
+      key="X8"
+    >
+      X:
+      X8
+    </div>
+    <div
+      key="X9"
+    >
+      X:
+      X9
+    </div>
+  </div>
+  <styled.div>
+    <Styled(Button)
+      buttonStyle="secondary"
+      icon="Add"
+      onClick={[Function]}
+      theme={
+        Object {
+          "buttonIconPosition": "left",
+        }
+      }
+    >
+      Show more
+    </Styled(Button)>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<InfiniteScroll /> should render <InfiniteScroll> with custom button 1`] = `
+<styled.div
+  height={500}
+>
+  <div>
+    <div
+      key="X0"
+    >
+      X:
+      X0
+    </div>
+    <div
+      key="X1"
+    >
+      X:
+      X1
+    </div>
+    <div
+      key="X2"
+    >
+      X:
+      X2
+    </div>
+    <div
+      key="X3"
+    >
+      X:
+      X3
+    </div>
+    <div
+      key="X4"
+    >
+      X:
+      X4
+    </div>
+    <div
+      key="X5"
+    >
+      X:
+      X5
+    </div>
+    <div
+      key="X6"
+    >
+      X:
+      X6
+    </div>
+    <div
+      key="X7"
+    >
+      X:
+      X7
+    </div>
+    <div
+      key="X8"
+    >
+      X:
+      X8
+    </div>
+    <div
+      key="X9"
+    >
+      X:
+      X9
+    </div>
+  </div>
+  <styled.div>
+    <button
+      onClick={[Function]}
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<InfiniteScroll /> should render <InfiniteScroll> without fixed height container 1`] = `
+<styled.div>
+  <div>
+    <div
+      key="X0"
+    >
+      X:
+      X0
+    </div>
+    <div
+      key="X1"
+    >
+      X:
+      X1
+    </div>
+    <div
+      key="X2"
+    >
+      X:
+      X2
+    </div>
+    <div
+      key="X3"
+    >
+      X:
+      X3
+    </div>
+    <div
+      key="X4"
+    >
+      X:
+      X4
+    </div>
+    <div
+      key="X5"
+    >
+      X:
+      X5
+    </div>
+    <div
+      key="X6"
+    >
+      X:
+      X6
+    </div>
+    <div
+      key="X7"
+    >
+      X:
+      X7
+    </div>
+    <div
+      key="X8"
+    >
+      X:
+      X8
+    </div>
+    <div
+      key="X9"
+    >
+      X:
+      X9
+    </div>
+  </div>
+  <styled.div />
+</styled.div>
+`;
+
+exports[`<InfiniteScroll /> should render an empty <InfiniteScroll> 1`] = `
+<styled.div
+  height={500}
+>
+  <div />
+  <styled.div />
+</styled.div>
+`;

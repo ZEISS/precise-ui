@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InputError /> should not render an <InputError> from direct API without any children 1`] = `""`;
+
+exports[`<InputError /> should not render an <InputError> from jsx 1`] = `""`;
+
+exports[`<InputError /> should render <InputError> that has an error message 1`] = `
+<styled.div>
+  I am wrong
+</styled.div>
+`;

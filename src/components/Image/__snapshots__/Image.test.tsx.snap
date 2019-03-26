@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image /> should render <Image> within wrapper component when preloaded 1`] = `
+<styled.div>
+  <Spinner />
+</styled.div>
+`;
+
+exports[`<Image /> should render <Image> without wrapper 1`] = `
+<styled.img
+  alt=""
+  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+/>
+`;
+
+exports[`<Image /> should render default error component when image fails onload 1`] = `
+<styled.div>
+  <styled.span>
+    Error loading image from 
+    http://broken-link
+    .
+  </styled.span>
+</styled.div>
+`;
+
+exports[`<Image /> should use alternative error component when one provided 1`] = `
+<styled.div>
+  <div>
+    Ooops something went wrong...
+  </div>
+</styled.div>
+`;
+
+exports[`<Image /> should use alternative preloader when one provided 1`] = `
+<styled.div>
+  <div>
+    Loading...
+  </div>
+</styled.div>
+`;

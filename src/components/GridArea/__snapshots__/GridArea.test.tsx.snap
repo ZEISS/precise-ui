@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GridArea /> should render a <GridArea> component with children 1`] = `
+<styled.div
+  onMouseDown={[Function]}
+  onTouchStartCapture={[Function]}
+>
+  <div>
+    Test1
+  </div>
+  <div>
+    Test2
+  </div>
+</styled.div>
+`;
+
+exports[`<GridArea /> should render a <GridArea> component with column and row index 1`] = `
+<styled.div
+  onMouseDown={[Function]}
+  onTouchStartCapture={[Function]}
+/>
+`;
+
+exports[`<GridArea /> should render a <GridArea> component with column and row span 1`] = `
+<styled.div
+  onMouseDown={[Function]}
+  onTouchStartCapture={[Function]}
+/>
+`;
+
+exports[`<GridArea /> should render a <GridArea> component with column and row span 2`] = `
+<styled.div
+  onMouseDown={[Function]}
+  onTouchStartCapture={[Function]}
+/>
+`;
+
+exports[`<GridArea /> should render a <GridArea> component with column index and row span including children 1`] = `
+<styled.div
+  onMouseDown={[Function]}
+  onTouchStartCapture={[Function]}
+>
+  Test
+</styled.div>
+`;
+
+exports[`<GridArea /> should render an empty <GridArea> component 1`] = `
+<styled.div
+  onMouseDown={[Function]}
+  onTouchStartCapture={[Function]}
+/>
+`;

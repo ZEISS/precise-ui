@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> should render the controlled checkbox with a label 1`] = `
+<CheckboxInt
+  value={true}
+>
+  Value
+</CheckboxInt>
+`;
+
+exports[`<Checkbox /> should render the disabled, uncontrolled checkbox 1`] = `
+<CheckboxInt
+  defaultValue={true}
+  disabled={true}
+/>
+`;

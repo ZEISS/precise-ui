@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tooltip /> should render a tooltip over the complex component 1`] = `
+<styled.div
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  <Flyout
+    content="Tooltip content"
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    excludeScrollbar={false}
+    open={true}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
+    theme={
+      Object {
+        "flyout": Object {
+          "background": "rgba(75,78,82,1)",
+          "fontSize": "0.875rem",
+          "maxWidth": "250px",
+          "textColor": "rgba(255,255,255,1)",
+        },
+      }
+    }
+  >
+    <Button>
+      Button
+    </Button>
+  </Flyout>
+</styled.div>
+`;
+
+exports[`<Tooltip /> should render a tooltip over the complex content 1`] = `
+<styled.div
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  <Flyout
+    content={
+      <div
+        style={
+          Object {
+            "width": "200px",
+          }
+        }
+      >
+        <h4
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          Header
+        </h4>
+        <span>
+          Text content
+        </span>
+      </div>
+    }
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    excludeScrollbar={false}
+    open={false}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
+    theme={
+      Object {
+        "flyout": Object {
+          "background": "rgba(75,78,82,1)",
+          "fontSize": "0.875rem",
+          "maxWidth": "250px",
+          "textColor": "rgba(255,255,255,1)",
+        },
+      }
+    }
+  >
+    Wrapped element
+  </Flyout>
+</styled.div>
+`;
+
+exports[`<Tooltip /> should render a tooltip with custom position (auto) 1`] = `
+<styled.div
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  <Flyout
+    content="Tooltip content"
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    excludeScrollbar={false}
+    open={false}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
+    theme={
+      Object {
+        "flyout": Object {
+          "background": "rgba(75,78,82,1)",
+          "fontSize": "0.875rem",
+          "maxWidth": "250px",
+          "textColor": "rgba(255,255,255,1)",
+        },
+      }
+    }
+  >
+    Wrapped element
+  </Flyout>
+</styled.div>
+`;
+
+exports[`<Tooltip /> should render a tooltip with simple text content over the wrapped component 1`] = `
+<styled.div
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  <Flyout
+    content="Tooltip content"
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    excludeScrollbar={false}
+    open={false}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
+    theme={
+      Object {
+        "flyout": Object {
+          "background": "rgba(75,78,82,1)",
+          "fontSize": "0.875rem",
+          "maxWidth": "250px",
+          "textColor": "rgba(255,255,255,1)",
+        },
+      }
+    }
+  >
+    Wrapped element
+  </Flyout>
+</styled.div>
+`;
+
+exports[`<Tooltip /> should render an open tooltip (controlled state) 1`] = `
+<styled.div
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  <Flyout
+    content="Tooltip content"
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    excludeScrollbar={false}
+    open={true}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    preventDefault={false}
+    stopPropagation={false}
+    theme={
+      Object {
+        "flyout": Object {
+          "background": "rgba(75,78,82,1)",
+          "fontSize": "0.875rem",
+          "maxWidth": "250px",
+          "textColor": "rgba(255,255,255,1)",
+        },
+      }
+    }
+  >
+    Wrapped element
+  </Flyout>
+</styled.div>
+`;
+
+exports[`<Tooltip /> should render an open tooltip with custom position (left) 1`] = `
+<styled.div
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  <Flyout
+    content="Tooltip content"
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    excludeScrollbar={false}
+    open={true}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    position="left"
+    preventDefault={false}
+    stopPropagation={false}
+    theme={
+      Object {
+        "flyout": Object {
+          "background": "rgba(75,78,82,1)",
+          "fontSize": "0.875rem",
+          "maxWidth": "250px",
+          "textColor": "rgba(255,255,255,1)",
+        },
+      }
+    }
+  >
+    Wrapped element
+  </Flyout>
+</styled.div>
+`;
+
+exports[`<Tooltip /> should render an open tooltip with custom position (top) 1`] = `
+<styled.div
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+>
+  <Flyout
+    content="Tooltip content"
+    eventTypes={
+      Array [
+        "mousedown",
+        "touchstart",
+      ]
+    }
+    excludeScrollbar={false}
+    open={true}
+    outsideClickIgnoreClass="ignore-react-onclickoutside"
+    position="top"
+    preventDefault={false}
+    stopPropagation={false}
+    theme={
+      Object {
+        "flyout": Object {
+          "background": "rgba(75,78,82,1)",
+          "fontSize": "0.875rem",
+          "maxWidth": "250px",
+          "textColor": "rgba(255,255,255,1)",
+        },
+      }
+    }
+  >
+    Wrapped element
+  </Flyout>
+</styled.div>
+`;

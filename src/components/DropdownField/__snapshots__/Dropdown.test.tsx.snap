@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownField /> should render a <DropdownField> that does not render a placeholder 1`] = `
+<DropdownFieldInt
+  data={
+    Array [
+      "1",
+      "2",
+    ]
+  }
+  multiple={true}
+  placeholder="No value selected"
+  value={
+    Array [
+      "1",
+      "2",
+    ]
+  }
+/>
+`;
+
+exports[`<DropdownField /> should render a <DropdownField> that renders a placeholder 1`] = `
+<DropdownFieldInt
+  data={
+    Array [
+      "1",
+      "2",
+    ]
+  }
+  multiple={true}
+  placeholder="No value selected"
+/>
+`;
+
+exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
+<DropdownFieldInt
+  data={
+    Array [
+      "1",
+      "2",
+    ]
+  }
+  error="You need to select a field"
+/>
+`;
+
+exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
+<DropdownFieldInt
+  data={
+    Array [
+      "1",
+      "2",
+    ]
+  }
+  error="You need to select a field"
+/>
+`;
+
+exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
+<DropdownFieldInt
+  borderless={true}
+  data={
+    Array [
+      "1",
+      "2",
+    ]
+  }
+  defaultValue="1"
+/>
+`;
+
+exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
+<DropdownFieldInt
+  data={
+    Array [
+      "1",
+      "2",
+    ]
+  }
+  defaultValue="1"
+  disabled={true}
+/>
+`;

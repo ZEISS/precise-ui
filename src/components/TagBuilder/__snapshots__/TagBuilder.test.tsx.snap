@@ -1,0 +1,251 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TagBuilderInt /> should render component with empty value 1`] = `
+<styled.div>
+  <styled.div
+    border={1}
+    focused={false}
+    hasValue={false}
+  >
+    <Component
+      error={false}
+      focused={false}
+      hasValue={false}
+      onClick={[Function]}
+    >
+      <styled.div
+        labelShown={false}
+        tagRenderer={false}
+      >
+        <styled.div
+          key="input"
+          onKeyDown={[Function]}
+          tagRenderer={false}
+        >
+          <styled.input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            type="text"
+            valid={true}
+            value=""
+          />
+        </styled.div>
+      </styled.div>
+    </Component>
+    <Component
+      hasValue={false}
+    />
+  </styled.div>
+  <InputInfo>
+    info block
+  </InputInfo>
+</styled.div>
+`;
+
+exports[`<TagBuilderInt /> should render component with error block and default value 1`] = `
+<styled.div>
+  <styled.div
+    border={3}
+    focused={false}
+    hasValue={true}
+  >
+    <Component
+      error={true}
+      focused={false}
+      hasValue={true}
+      onClick={[Function]}
+    >
+      <styled.div
+        labelShown={false}
+        tagRenderer={false}
+      >
+        <Styled(styled.span)
+          key="tags0"
+        >
+          <styled.span>
+            tags
+          </styled.span>
+          <CloseIcon
+            onClick={[Function]}
+          />
+        </Styled(styled.span)>
+        <Styled(styled.span)
+          key="list1"
+        >
+          <styled.span>
+            list
+          </styled.span>
+          <CloseIcon
+            onClick={[Function]}
+          />
+        </Styled(styled.span)>
+        <Styled(styled.span)
+          key="goes2"
+        >
+          <styled.span>
+            goes
+          </styled.span>
+          <CloseIcon
+            onClick={[Function]}
+          />
+        </Styled(styled.span)>
+        <Styled(styled.span)
+          key="here3"
+        >
+          <styled.span>
+            here
+          </styled.span>
+          <CloseIcon
+            onClick={[Function]}
+          />
+        </Styled(styled.span)>
+        <styled.div
+          key="input"
+          onKeyDown={[Function]}
+          tagRenderer={false}
+        >
+          <styled.input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            type="text"
+            valid={true}
+            value=""
+          />
+        </styled.div>
+      </styled.div>
+    </Component>
+    <Component
+      error="error block"
+      hasValue={true}
+    />
+  </styled.div>
+  <InputError>
+    error block
+  </InputError>
+</styled.div>
+`;
+
+exports[`<TagBuilderInt /> should render component with info block and value 1`] = `
+<styled.div>
+  <styled.div
+    border={1}
+    focused={false}
+    hasValue={true}
+  >
+    <Component
+      error={false}
+      focused={false}
+      hasValue={true}
+      onClick={[Function]}
+    >
+      <styled.div
+        labelShown={false}
+        tagRenderer={false}
+      >
+        <Styled(styled.span)
+          key="tags0"
+        >
+          <styled.span>
+            tags
+          </styled.span>
+          <CloseIcon
+            onClick={[Function]}
+          />
+        </Styled(styled.span)>
+        <Styled(styled.span)
+          key="list1"
+        >
+          <styled.span>
+            list
+          </styled.span>
+          <CloseIcon
+            onClick={[Function]}
+          />
+        </Styled(styled.span)>
+        <Styled(styled.span)
+          key="goes2"
+        >
+          <styled.span>
+            goes
+          </styled.span>
+          <CloseIcon
+            onClick={[Function]}
+          />
+        </Styled(styled.span)>
+        <Styled(styled.span)
+          key="here3"
+        >
+          <styled.span>
+            here
+          </styled.span>
+          <CloseIcon
+            onClick={[Function]}
+          />
+        </Styled(styled.span)>
+        <styled.div
+          key="input"
+          onKeyDown={[Function]}
+          tagRenderer={false}
+        >
+          <styled.input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            type="text"
+            valid={true}
+            value=""
+          />
+        </styled.div>
+      </styled.div>
+    </Component>
+    <Component
+      hasValue={true}
+    />
+  </styled.div>
+  <InputInfo>
+    info block
+  </InputInfo>
+</styled.div>
+`;
+
+exports[`<TagBuilderInt /> should render the component 1`] = `
+<styled.div>
+  <styled.div
+    border={1}
+    focused={false}
+    hasValue={false}
+  >
+    <Component
+      error={false}
+      focused={false}
+      hasValue={false}
+      onClick={[Function]}
+    >
+      <styled.div
+        labelShown={false}
+        tagRenderer={false}
+      >
+        <styled.div
+          key="input"
+          onKeyDown={[Function]}
+          tagRenderer={false}
+        >
+          <styled.input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            type="text"
+            valid={true}
+            value=""
+          />
+        </styled.div>
+      </styled.div>
+    </Component>
+    <Component
+      hasValue={false}
+    />
+  </styled.div>
+</styled.div>
+`;

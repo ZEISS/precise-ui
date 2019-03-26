@@ -1,0 +1,1115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Carousel /> should render a <Carousel> component with several pages 1`] = `
+<Carousel>
+  <styled.div
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": true,
+            "lastClassName": "jLPIAx",
+            "rules": Array [
+              "
+  outline: none;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      onKeyDown={[Function]}
+      tabIndex={0}
+    >
+      <div
+        className="sc-htpNat jLPIAx"
+        onKeyDown={[Function]}
+        tabIndex={0}
+      >
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-gzVnrw",
+                  "isStatic": true,
+                  "lastClassName": "ehJJBp",
+                  "rules": Array [
+                    "
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-gzVnrw",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="sc-gzVnrw ehJJBp"
+            >
+              <InteractiveSurface
+                onChange={[Function]}
+                opaque={true}
+              >
+                <styled.div
+                  onClickCapture={[Function]}
+                  onMouseDownCapture={[Function]}
+                  onTouchStartCapture={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bdVaJa",
+                          "isStatic": false,
+                          "lastClassName": "jAMQad",
+                          "rules": Array [
+                            "
+  position: relative;
+  touch-action: ",
+                            [Function],
+                            ";
+  user-select: ",
+                            [Function],
+                            ";
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-bdVaJa",
+                        "target": "div",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onClickCapture={[Function]}
+                    onMouseDownCapture={[Function]}
+                    onTouchStartCapture={[Function]}
+                  >
+                    <div
+                      className="sc-bdVaJa jAMQad"
+                      onClickCapture={[Function]}
+                      onMouseDownCapture={[Function]}
+                      onTouchStartCapture={[Function]}
+                    >
+                      <styled.div
+                        selectedIndex={0}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bZQynM",
+                                "isStatic": false,
+                                "lastClassName": "hKcHjN",
+                                "rules": Array [
+                                  "
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  left: ",
+                                  [Function],
+                                  "%;
+  transition: left ",
+                                  "0.3s",
+                                  " ",
+                                  "ease-in-out",
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bZQynM",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={[Function]}
+                          selectedIndex={0}
+                        >
+                          <div
+                            className="sc-bZQynM hKcHjN"
+                          >
+                            <styled.div
+                              key="item-0"
+                            >
+                              <StyledComponent
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": true,
+                                      "lastClassName": "cfvcOl",
+                                      "rules": Array [
+                                        "
+  min-width: 100%;
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                              >
+                                <div
+                                  className="sc-EHOje cfvcOl"
+                                >
+                                  <div>
+                                    First page.
+                                  </div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                            <styled.div
+                              key="item-1"
+                            >
+                              <StyledComponent
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": true,
+                                      "lastClassName": "cfvcOl",
+                                      "rules": Array [
+                                        "
+  min-width: 100%;
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                              >
+                                <div
+                                  className="sc-EHOje cfvcOl"
+                                >
+                                  <div>
+                                    Second page.
+                                  </div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                            <styled.div
+                              key="item-2"
+                            >
+                              <StyledComponent
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": true,
+                                      "lastClassName": "cfvcOl",
+                                      "rules": Array [
+                                        "
+  min-width: 100%;
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                              >
+                                <div
+                                  className="sc-EHOje cfvcOl"
+                                >
+                                  <div>
+                                    Third page.
+                                  </div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                            <styled.div
+                              key="item-3"
+                            >
+                              <StyledComponent
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": true,
+                                      "lastClassName": "cfvcOl",
+                                      "rules": Array [
+                                        "
+  min-width: 100%;
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                              >
+                                <div
+                                  className="sc-EHOje cfvcOl"
+                                >
+                                  <div>
+                                    Final page.
+                                  </div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                          </div>
+                        </StyledComponent>
+                      </styled.div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </InteractiveSurface>
+            </div>
+          </StyledComponent>
+        </styled.div>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": true,
+                  "lastClassName": "bcNCsA",
+                  "rules": Array [
+                    "
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="sc-bxivhb bcNCsA"
+            >
+              <styled.div
+                active={true}
+                index={0}
+                key="bullet-0"
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  active={true}
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-ifAKCX",
+                        "isStatic": false,
+                        "lastClassName": "jdKdjT",
+                        "rules": Array [
+                          "
+  height: ",
+                          "0.75rem",
+                          ";
+  width: ",
+                          "0.75rem",
+                          ";
+  background-color: rgba(224, 225, 221, 1);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin: ",
+                          "0.25rem",
+                          ";
+  ",
+                          [Function],
+                          ";
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-ifAKCX",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  index={0}
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-ifAKCX bMqJke"
+                    onClick={[Function]}
+                  />
+                </StyledComponent>
+              </styled.div>
+              <styled.div
+                active={false}
+                index={1}
+                key="bullet-1"
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  active={false}
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-ifAKCX",
+                        "isStatic": false,
+                        "lastClassName": "jdKdjT",
+                        "rules": Array [
+                          "
+  height: ",
+                          "0.75rem",
+                          ";
+  width: ",
+                          "0.75rem",
+                          ";
+  background-color: rgba(224, 225, 221, 1);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin: ",
+                          "0.25rem",
+                          ";
+  ",
+                          [Function],
+                          ";
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-ifAKCX",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  index={1}
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-ifAKCX jdKdjT"
+                    onClick={[Function]}
+                  />
+                </StyledComponent>
+              </styled.div>
+              <styled.div
+                active={false}
+                index={2}
+                key="bullet-2"
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  active={false}
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-ifAKCX",
+                        "isStatic": false,
+                        "lastClassName": "jdKdjT",
+                        "rules": Array [
+                          "
+  height: ",
+                          "0.75rem",
+                          ";
+  width: ",
+                          "0.75rem",
+                          ";
+  background-color: rgba(224, 225, 221, 1);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin: ",
+                          "0.25rem",
+                          ";
+  ",
+                          [Function],
+                          ";
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-ifAKCX",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  index={2}
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-ifAKCX jdKdjT"
+                    onClick={[Function]}
+                  />
+                </StyledComponent>
+              </styled.div>
+              <styled.div
+                active={false}
+                index={3}
+                key="bullet-3"
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  active={false}
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-ifAKCX",
+                        "isStatic": false,
+                        "lastClassName": "jdKdjT",
+                        "rules": Array [
+                          "
+  height: ",
+                          "0.75rem",
+                          ";
+  width: ",
+                          "0.75rem",
+                          ";
+  background-color: rgba(224, 225, 221, 1);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin: ",
+                          "0.25rem",
+                          ";
+  ",
+                          [Function],
+                          ";
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-ifAKCX",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  index={3}
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-ifAKCX jdKdjT"
+                    onClick={[Function]}
+                  />
+                </StyledComponent>
+              </styled.div>
+            </div>
+          </StyledComponent>
+        </styled.div>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Carousel>
+`;
+
+exports[`<Carousel /> should render a <Carousel> component with several pages in and selectedIndex 1`] = `
+<Carousel
+  selectedIndex={1}
+>
+  <styled.div
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": true,
+            "lastClassName": "jLPIAx",
+            "rules": Array [
+              "
+  outline: none;
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      onKeyDown={[Function]}
+      tabIndex={0}
+    >
+      <div
+        className="sc-htpNat jLPIAx"
+        onKeyDown={[Function]}
+        tabIndex={0}
+      >
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-gzVnrw",
+                  "isStatic": true,
+                  "lastClassName": "ehJJBp",
+                  "rules": Array [
+                    "
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-gzVnrw",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="sc-gzVnrw ehJJBp"
+            >
+              <InteractiveSurface
+                onChange={[Function]}
+                opaque={true}
+              >
+                <styled.div
+                  onClickCapture={[Function]}
+                  onMouseDownCapture={[Function]}
+                  onTouchStartCapture={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-bdVaJa",
+                          "isStatic": false,
+                          "lastClassName": "jAMQad",
+                          "rules": Array [
+                            "
+  position: relative;
+  touch-action: ",
+                            [Function],
+                            ";
+  user-select: ",
+                            [Function],
+                            ";
+",
+                          ],
+                        },
+                        "displayName": "styled.div",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-bdVaJa",
+                        "target": "div",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    onClickCapture={[Function]}
+                    onMouseDownCapture={[Function]}
+                    onTouchStartCapture={[Function]}
+                  >
+                    <div
+                      className="sc-bdVaJa jAMQad"
+                      onClickCapture={[Function]}
+                      onMouseDownCapture={[Function]}
+                      onTouchStartCapture={[Function]}
+                    >
+                      <styled.div
+                        selectedIndex={1}
+                      >
+                        <StyledComponent
+                          forwardedComponent={
+                            Object {
+                              "$$typeof": Symbol(react.forward_ref),
+                              "attrs": Array [],
+                              "componentStyle": ComponentStyle {
+                                "componentId": "sc-bZQynM",
+                                "isStatic": false,
+                                "lastClassName": "cbSLgC",
+                                "rules": Array [
+                                  "
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  left: ",
+                                  [Function],
+                                  "%;
+  transition: left ",
+                                  "0.3s",
+                                  " ",
+                                  "ease-in-out",
+                                  ";
+",
+                                ],
+                              },
+                              "displayName": "styled.div",
+                              "foldedComponentIds": Array [],
+                              "render": [Function],
+                              "styledComponentId": "sc-bZQynM",
+                              "target": "div",
+                              "toString": [Function],
+                              "warnTooManyClasses": [Function],
+                              "withComponent": [Function],
+                            }
+                          }
+                          forwardedRef={[Function]}
+                          selectedIndex={1}
+                        >
+                          <div
+                            className="sc-bZQynM cbSLgC"
+                          >
+                            <styled.div
+                              key="item-0"
+                            >
+                              <StyledComponent
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": true,
+                                      "lastClassName": "cfvcOl",
+                                      "rules": Array [
+                                        "
+  min-width: 100%;
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                              >
+                                <div
+                                  className="sc-EHOje cfvcOl"
+                                >
+                                  <div>
+                                    First page.
+                                  </div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                            <styled.div
+                              key="item-1"
+                            >
+                              <StyledComponent
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": true,
+                                      "lastClassName": "cfvcOl",
+                                      "rules": Array [
+                                        "
+  min-width: 100%;
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                              >
+                                <div
+                                  className="sc-EHOje cfvcOl"
+                                >
+                                  <div>
+                                    Second page.
+                                  </div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                            <styled.div
+                              key="item-2"
+                            >
+                              <StyledComponent
+                                forwardedComponent={
+                                  Object {
+                                    "$$typeof": Symbol(react.forward_ref),
+                                    "attrs": Array [],
+                                    "componentStyle": ComponentStyle {
+                                      "componentId": "sc-EHOje",
+                                      "isStatic": true,
+                                      "lastClassName": "cfvcOl",
+                                      "rules": Array [
+                                        "
+  min-width: 100%;
+",
+                                      ],
+                                    },
+                                    "displayName": "styled.div",
+                                    "foldedComponentIds": Array [],
+                                    "render": [Function],
+                                    "styledComponentId": "sc-EHOje",
+                                    "target": "div",
+                                    "toString": [Function],
+                                    "warnTooManyClasses": [Function],
+                                    "withComponent": [Function],
+                                  }
+                                }
+                                forwardedRef={null}
+                              >
+                                <div
+                                  className="sc-EHOje cfvcOl"
+                                >
+                                  <div>
+                                    Final page.
+                                  </div>
+                                </div>
+                              </StyledComponent>
+                            </styled.div>
+                          </div>
+                        </StyledComponent>
+                      </styled.div>
+                    </div>
+                  </StyledComponent>
+                </styled.div>
+              </InteractiveSurface>
+            </div>
+          </StyledComponent>
+        </styled.div>
+        <styled.div>
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": true,
+                  "lastClassName": "bcNCsA",
+                  "rules": Array [
+                    "
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+          >
+            <div
+              className="sc-bxivhb bcNCsA"
+            >
+              <styled.div
+                active={false}
+                index={0}
+                key="bullet-0"
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  active={false}
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-ifAKCX",
+                        "isStatic": false,
+                        "lastClassName": "jdKdjT",
+                        "rules": Array [
+                          "
+  height: ",
+                          "0.75rem",
+                          ";
+  width: ",
+                          "0.75rem",
+                          ";
+  background-color: rgba(224, 225, 221, 1);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin: ",
+                          "0.25rem",
+                          ";
+  ",
+                          [Function],
+                          ";
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-ifAKCX",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  index={0}
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-ifAKCX jdKdjT"
+                    onClick={[Function]}
+                  />
+                </StyledComponent>
+              </styled.div>
+              <styled.div
+                active={true}
+                index={1}
+                key="bullet-1"
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  active={true}
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-ifAKCX",
+                        "isStatic": false,
+                        "lastClassName": "jdKdjT",
+                        "rules": Array [
+                          "
+  height: ",
+                          "0.75rem",
+                          ";
+  width: ",
+                          "0.75rem",
+                          ";
+  background-color: rgba(224, 225, 221, 1);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin: ",
+                          "0.25rem",
+                          ";
+  ",
+                          [Function],
+                          ";
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-ifAKCX",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  index={1}
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-ifAKCX bMqJke"
+                    onClick={[Function]}
+                  />
+                </StyledComponent>
+              </styled.div>
+              <styled.div
+                active={false}
+                index={2}
+                key="bullet-2"
+                onClick={[Function]}
+              >
+                <StyledComponent
+                  active={false}
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-ifAKCX",
+                        "isStatic": false,
+                        "lastClassName": "jdKdjT",
+                        "rules": Array [
+                          "
+  height: ",
+                          "0.75rem",
+                          ";
+  width: ",
+                          "0.75rem",
+                          ";
+  background-color: rgba(224, 225, 221, 1);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin: ",
+                          "0.25rem",
+                          ";
+  ",
+                          [Function],
+                          ";
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-ifAKCX",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  index={2}
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-ifAKCX jdKdjT"
+                    onClick={[Function]}
+                  />
+                </StyledComponent>
+              </styled.div>
+            </div>
+          </StyledComponent>
+        </styled.div>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Carousel>
+`;

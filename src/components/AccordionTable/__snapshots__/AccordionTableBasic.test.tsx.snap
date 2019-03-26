@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionTableBasic /> should render a <AccordionTable> component with no data and placeholder set 1`] = `
+<Styled(Responsive)
+  cellRenderer={[Function]}
+  columns={Object {}}
+  data={Array []}
+  mode="table"
+  placeholder="No data"
+  rowRenderer={[Function]}
+/>
+`;
+
+exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component with data and selectedIndex set 1`] = `
+<Styled(Responsive)
+  cellRenderer={[Function]}
+  columns={
+    Object {
+      "": Object {
+        "header": "",
+        "sortable": false,
+        "width": "3.125rem",
+      },
+      "tag": "tag",
+      "team": "team",
+      "value": "value",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "tag": "A",
+        "team": "Alpha team",
+        "value": "Alpha",
+      },
+      Object {
+        "tag": "B",
+        "team": "Bravo team",
+        "value": "Bravo",
+      },
+      Object {
+        "tag": "C",
+        "team": "Charlie team",
+        "value": "Charlie",
+      },
+      Object {
+        "tag": "D",
+        "team": "Delta team",
+        "value": "Delta",
+      },
+    ]
+  }
+  mode="table"
+  rowRenderer={[Function]}
+  selectedIndex={1}
+/>
+`;
+
+exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component with data set 1`] = `
+<Styled(Responsive)
+  cellRenderer={[Function]}
+  columns={
+    Object {
+      "": Object {
+        "header": "",
+        "sortable": false,
+        "width": "3.125rem",
+      },
+      "tag": "tag",
+      "team": "team",
+      "value": "value",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "tag": "C",
+        "team": "Charlie team",
+        "value": "Charlie",
+      },
+      Object {
+        "tag": "D",
+        "team": "Delta team",
+        "value": "Delta",
+      },
+      Object {
+        "tag": "E",
+        "team": "Echo team",
+        "value": "Echo",
+      },
+    ]
+  }
+  mode="table"
+  rowRenderer={[Function]}
+/>
+`;
+
+exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component with right columns 1`] = `
+<Styled(Responsive)
+  cellRenderer={[Function]}
+  columns={
+    Object {
+      "": Object {
+        "header": "",
+        "sortable": false,
+        "width": "3.125rem",
+      },
+      "c": "C",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "c": 5,
+      },
+      Object {
+        "c": 10,
+      },
+    ]
+  }
+  mode="table"
+  rowRenderer={[Function]}
+/>
+`;
+
+exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component with sorted data 1`] = `
+<Styled(Responsive)
+  cellRenderer={[Function]}
+  columns={
+    Object {
+      "": Object {
+        "header": "",
+        "sortable": false,
+        "width": "3.125rem",
+      },
+      "c": "c",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "c": 15,
+      },
+      Object {
+        "c": 10,
+      },
+    ]
+  }
+  mode="table"
+  rowRenderer={[Function]}
+  sortBy="c"
+/>
+`;
+
+exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component with wrong columns 1`] = `
+<Styled(Responsive)
+  cellRenderer={[Function]}
+  columns={
+    Object {
+      "": Object {
+        "header": "",
+        "sortable": false,
+        "width": "3.125rem",
+      },
+      "a": "A",
+      "b": "B",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "c": 5,
+      },
+      Object {
+        "c": 10,
+      },
+    ]
+  }
+  mode="table"
+  rowRenderer={[Function]}
+/>
+`;
+
+exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component without data and custom placeholder 1`] = `
+<Styled(Responsive)
+  cellRenderer={[Function]}
+  columns={Object {}}
+  data={Array []}
+  mode="table"
+  placeholder="No data"
+  rowRenderer={[Function]}
+/>
+`;
+
+exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component without headers 1`] = `
+<Styled(Responsive)
+  cellRenderer={[Function]}
+  columns={
+    Object {
+      "": Object {
+        "header": "",
+        "sortable": false,
+        "width": "3.125rem",
+      },
+      "c": "c",
+    }
+  }
+  data={
+    Array [
+      Object {
+        "c": 15,
+      },
+      Object {
+        "c": 10,
+      },
+    ]
+  }
+  mode="table"
+  noHeader={true}
+  rowRenderer={[Function]}
+/>
+`;

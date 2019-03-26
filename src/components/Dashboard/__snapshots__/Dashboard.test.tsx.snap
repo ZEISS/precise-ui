@@ -1,0 +1,296 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dashboard /> should render a <Dashboard> with one tile since only a single child is given 1`] = `
+<InteractiveSurface
+  onChange={[Function]}
+>
+  <Grid
+    columns={
+      Array [
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+      ]
+    }
+    onLayout={[Function]}
+    rows="1fr"
+    spacing="10px"
+  >
+    <GridArea
+      key="1/.0"
+      onTap={[Function]}
+    >
+      <div>
+        First
+      </div>
+    </GridArea>
+  </Grid>
+</InteractiveSurface>
+`;
+
+exports[`<Dashboard /> should render a <Dashboard> with one tile since only a single tile is defined 1`] = `
+<InteractiveSurface
+  onChange={[Function]}
+>
+  <Grid
+    columns={
+      Array [
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+      ]
+    }
+    onLayout={[Function]}
+    rows="1fr"
+    spacing="10px"
+  >
+    <GridArea
+      key="1/.0"
+      onTap={[Function]}
+    >
+      <div>
+        First
+      </div>
+    </GridArea>
+  </Grid>
+</InteractiveSurface>
+`;
+
+exports[`<Dashboard /> should render a <Dashboard> with some fixed, some unfixed tiles 1`] = `
+<InteractiveSurface
+  onChange={[Function]}
+>
+  <Grid
+    columns={
+      Array [
+        "1fr",
+        "1fr",
+        "1fr",
+      ]
+    }
+    onLayout={[Function]}
+    rows={
+      Array [
+        "1fr",
+        "1fr",
+      ]
+    }
+    spacing="10px"
+  >
+    <GridArea
+      column={1}
+      key="cct/.0"
+      onTap={[Function]}
+      row={1}
+    >
+      <div>
+        CCT
+      </div>
+    </GridArea>
+    <GridArea
+      colSpan={2}
+      key="sample/.1"
+      onTap={[Function]}
+      rowSpan={1}
+    >
+      <div>
+        Sample
+      </div>
+    </GridArea>
+    <GridArea
+      column={2}
+      key="ibase-tile/.2"
+      onTap={[Function]}
+      row={1}
+    >
+      <div>
+        iBase
+      </div>
+    </GridArea>
+    <GridArea
+      column={0}
+      key="sdp-tile/.3"
+      onTap={[Function]}
+      row={0}
+    >
+      <div>
+        SDP
+      </div>
+    </GridArea>
+    <GridArea
+      key="sma/.4"
+      onTap={[Function]}
+    >
+      <div>
+        SMA
+      </div>
+    </GridArea>
+    <GridArea
+      column={1}
+      key="tssr/.5"
+      onTap={[Function]}
+      row={0}
+    >
+      <div>
+        TSSR
+      </div>
+    </GridArea>
+  </Grid>
+</InteractiveSurface>
+`;
+
+exports[`<Dashboard /> should render a <Dashboard> with spacing 1`] = `
+<InteractiveSurface
+  onChange={[Function]}
+>
+  <Grid
+    columns={
+      Array [
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+      ]
+    }
+    onLayout={[Function]}
+    rows="1fr"
+    spacing="15px"
+  >
+    <GridArea
+      key="1/.0"
+      onTap={[Function]}
+    >
+      <div>
+        First
+      </div>
+    </GridArea>
+    <GridArea
+      key="2/.1"
+      onTap={[Function]}
+    >
+      <div>
+        Second
+      </div>
+    </GridArea>
+  </Grid>
+</InteractiveSurface>
+`;
+
+exports[`<Dashboard /> should render a <Dashboard> with three tiles 1`] = `
+<InteractiveSurface
+  onChange={[Function]}
+>
+  <Grid
+    columns={
+      Array [
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+      ]
+    }
+    onLayout={[Function]}
+    rows="1fr"
+    spacing="10px"
+  >
+    <GridArea
+      key="1/.0"
+      onTap={[Function]}
+    >
+      <div>
+        First
+      </div>
+    </GridArea>
+    <GridArea
+      key="2/.1"
+      onTap={[Function]}
+    >
+      <div>
+        Second
+      </div>
+    </GridArea>
+    <GridArea
+      key="3/.2"
+      onTap={[Function]}
+    >
+      <div>
+        Third
+      </div>
+    </GridArea>
+  </Grid>
+</InteractiveSurface>
+`;
+
+exports[`<Dashboard /> should render an empty <Dashboard> 1`] = `
+<InteractiveSurface
+  onChange={[Function]}
+>
+  <Grid
+    columns={
+      Array [
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+        "1fr",
+      ]
+    }
+    onLayout={[Function]}
+    rows="1fr"
+    spacing="10px"
+  />
+</InteractiveSurface>
+`;
+
+exports[`<Dashboard /> should render an empty <Dashboard> with 2x2 layout in (200px,200px) 1`] = `
+<InteractiveSurface
+  onChange={[Function]}
+>
+  <Grid
+    columns={
+      Array [
+        "200px",
+        "200px",
+      ]
+    }
+    onLayout={[Function]}
+    rows={
+      Array [
+        "200px",
+        "200px",
+      ]
+    }
+    spacing="10px"
+  />
+</InteractiveSurface>
+`;
+
+exports[`<Dashboard /> should render an empty <Dashboard> with 3x2 layout 1`] = `
+<InteractiveSurface
+  onChange={[Function]}
+>
+  <Grid
+    columns={
+      Array [
+        "1fr",
+        "1fr",
+        "1fr",
+      ]
+    }
+    onLayout={[Function]}
+    rows={
+      Array [
+        "1fr",
+        "1fr",
+      ]
+    }
+    spacing="10px"
+  />
+</InteractiveSurface>
+`;

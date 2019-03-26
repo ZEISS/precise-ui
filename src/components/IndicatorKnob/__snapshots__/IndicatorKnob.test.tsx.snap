@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IndicatorKnob /> should render <IndicatorKnob> at the top 1`] = `
+<styled.div
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "left": "50%",
+      "top": "0%",
+    }
+  }
+/>
+`;
+
+exports[`<IndicatorKnob /> should render <IndicatorKnob> on the left 1`] = `
+<styled.div
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "left": "0%",
+      "top": "50%",
+    }
+  }
+/>
+`;
+
+exports[`<IndicatorKnob /> should render a disabled <IndicatorKnob> 1`] = `
+<styled.div
+  disabled={true}
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "left": "50%",
+      "top": "50%",
+    }
+  }
+/>
+`;
+
+exports[`<IndicatorKnob /> should render an active <IndicatorKnob> 1`] = `
+<styled.div
+  active={true}
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "left": "50%",
+      "top": "50%",
+    }
+  }
+/>
+`;
+
+exports[`<IndicatorKnob /> should render an active disabled <IndicatorKnob> 1`] = `
+<styled.div
+  active={true}
+  disabled={true}
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "left": "50%",
+      "top": "50%",
+    }
+  }
+/>
+`;
+
+exports[`<IndicatorKnob /> should render an empty <IndicatorKnob> 1`] = `
+<styled.div
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "left": "50%",
+      "top": "50%",
+    }
+  }
+/>
+`;
+
+exports[`<IndicatorKnob /> should render the <IndicatorKnob> in red 1`] = `
+<styled.div
+  style={
+    Object {
+      "backgroundColor": "red",
+      "left": "50%",
+      "top": "50%",
+    }
+  }
+/>
+`;
+
+exports[`<IndicatorKnob /> should render the <IndicatorKnob> with explicit x and y coordinates 1`] = `
+<styled.div
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "left": "100%",
+      "top": "100%",
+    }
+  }
+/>
+`;

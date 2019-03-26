@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Avatar /> should render an <Avatar> with an image 1`] = `
+<styled.div
+  size="medium"
+>
+  <styled.div
+    size="medium"
+  >
+    <styled.img
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<Avatar /> should render an <Avatar> with initials 1`] = `
+<styled.div
+  initials="FR"
+  size="medium"
+>
+  <styled.div
+    size="medium"
+  >
+    <styled.div
+      size="medium"
+    >
+      FR
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<Avatar /> should render an <Avatar> with initials overriding the color 1`] = `
+.c0 {
+  position: relative;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+}
+
+.c1 {
+  border: 0;
+  -webkit-perspective: 1px;
+  -moz-perspective: 1px;
+  -ms-perspective: 1px;
+  perspective: 1px;
+  color: rgba(255,255,255,1);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  background-color: red;
+  height: 40px;
+  width: 40px;
+  font-size: 0.875rem;
+}
+
+<Avatar
+  color="red"
+  initials="FR"
+>
+  <styled.div
+    color="red"
+    initials="FR"
+    size="medium"
+  >
+    <StyledComponent
+      color="red"
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  position: relative;
+  overflow: hidden;
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      initials="FR"
+      size="medium"
+    >
+      <div
+        className="c0"
+        color="red"
+        size="medium"
+      >
+        <styled.div
+          size="medium"
+        >
+          <StyledComponent
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bwzfXH",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "
+  border: 0;
+  perspective: 1px;
+
+  color: ",
+                    [Function],
+                    ";
+  border-radius: 50%;
+  overflow: hidden;
+
+  ",
+                    [Function],
+                    ";
+",
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bwzfXH",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            size="medium"
+          >
+            <div
+              className="c1"
+              size="medium"
+            >
+              <styled.div
+                color="red"
+                size="medium"
+              >
+                <StyledComponent
+                  color="red"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-htpNat",
+                        "isStatic": false,
+                        "lastClassName": "c2",
+                        "rules": Array [
+                          "
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  background-color: ",
+                          [Function],
+                          ";
+  ",
+                          [Function],
+                          ";
+",
+                        ],
+                      },
+                      "displayName": "styled.div",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-htpNat",
+                      "target": "div",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  size="medium"
+                >
+                  <div
+                    className="c2"
+                    color="red"
+                    size="medium"
+                  >
+                    FR
+                  </div>
+                </StyledComponent>
+              </styled.div>
+            </div>
+          </StyledComponent>
+        </styled.div>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Avatar>
+`;
+
+exports[`<Avatar /> should render have a proper title in form of the description 1`] = `
+<styled.div
+  initials="FR"
+  size="medium"
+  title="Sample"
+>
+  <styled.div
+    size="medium"
+  >
+    <styled.div
+      size="medium"
+    >
+      FR
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

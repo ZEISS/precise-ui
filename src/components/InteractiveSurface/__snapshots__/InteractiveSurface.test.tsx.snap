@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InteractiveSurface /> should react properly to an update value call 1`] = `
+<styled.div
+  onClickCapture={[Function]}
+  onMouseDownCapture={[Function]}
+  onTouchStartCapture={[Function]}
+>
+  <div>
+    Foo
+  </div>
+</styled.div>
+`;
+
+exports[`<InteractiveSurface /> should render a <InteractiveSurface> with a callback 1`] = `
+<styled.div
+  onClickCapture={[Function]}
+  onMouseDownCapture={[Function]}
+  onTouchStartCapture={[Function]}
+/>
+`;
+
+exports[`<InteractiveSurface /> should render a <InteractiveSurface> with some content 1`] = `
+<styled.div
+  onClickCapture={[Function]}
+  onMouseDownCapture={[Function]}
+  onTouchStartCapture={[Function]}
+>
+  <div>
+    Foo
+  </div>
+</styled.div>
+`;
+
+exports[`<InteractiveSurface /> should render an <InteractiveSurface> 1`] = `
+<styled.div
+  onClickCapture={[Function]}
+  onMouseDownCapture={[Function]}
+  onTouchStartCapture={[Function]}
+/>
+`;

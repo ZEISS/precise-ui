@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StepIndicator /> should render a step indicator with three elements currently at the second 1`] = `
+<ModeProvider
+  current={1}
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  steps={
+    Array [
+      "One",
+      "Two",
+      "Three",
+    ]
+  }
+/>
+`;
+
+exports[`<StepIndicator /> should render a step indicator with two elements 1`] = `
+<ModeProvider
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  steps={
+    Array [
+      "One",
+      "Two",
+    ]
+  }
+/>
+`;
+
+exports[`<StepIndicator /> should render a step indicator with two elements currently at the first 1`] = `
+<ModeProvider
+  current={0}
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  steps={
+    Array [
+      "One",
+      "Twee",
+    ]
+  }
+/>
+`;
+
+exports[`<StepIndicator /> should render an empty horizontal step indicator component 1`] = `
+<ModeProvider
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  mode="horizontal"
+  steps={Array []}
+/>
+`;
+
+exports[`<StepIndicator /> should render an empty step indicator 1`] = `
+<ModeProvider
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  steps={Array []}
+/>
+`;
+
+exports[`<StepIndicator /> should render an empty vertical step indicator component 1`] = `
+<ModeProvider
+  dimensions={
+    Object {
+      "angle": 0,
+      "height": 768,
+      "width": 1024,
+    }
+  }
+  innerRef={[Function]}
+  mode="vertical"
+  steps={Array []}
+/>
+`;

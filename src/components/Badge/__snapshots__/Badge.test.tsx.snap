@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Badge /> should render a <Badge> in full mode 1`] = `
+<Styled(styled.div)>
+  12
+</Styled(styled.div)>
+`;
+
+exports[`<Badge /> should render a <Badge> with text 1`] = `
+<Styled(styled.div)>
+  0
+</Styled(styled.div)>
+`;

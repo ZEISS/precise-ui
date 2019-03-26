@@ -1,0 +1,15 @@
+export const enum KeyCodes {
+  enter = 13,
+  space = 32,
+  escape = 27,
+  backspace = 8,
+  delete = 46,
+  end = 35,
+  home = 36,
+  left = 37,
+  up = 38,
+  right = 39,
+  down = 40,
+  comma = 188,
+  semicolon = 186,
+}

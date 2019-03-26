@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItem /> should not present a border 1`] = `
+.c0 {
+  background-color: rgba(255,255,255,1);
+  color: rgba(0,0,0,1);
+  margin-bottom: -1px;
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:last-child {
+  margin-bottom: 0;
+}
+
+<ListItem
+  border={false}
+>
+  <styled.li
+    border={false}
+  >
+    <StyledComponent
+      border={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "
+  background-color: ",
+              [Function],
+              ";
+  color: ",
+              [Function],
+              ";
+  ",
+              [Function],
+              ";
+  margin-bottom: -1px;
+  padding: ",
+              [Function],
+              ";
+  position: relative;
+  text-decoration: none;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+",
+            ],
+          },
+          "displayName": "styled.li",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "li",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <li
+        className="c0"
+      />
+    </StyledComponent>
+  </styled.li>
+</ListItem>
+`;

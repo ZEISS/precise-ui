@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render a <Button> with some content component 1`] = `
+<Styled(AnchorInt)
+  href="foo"
+  tagName="button"
+>
+  <styled.div>
+    <div>
+      Content
+    </div>
+  </styled.div>
+</Styled(AnchorInt)>
+`;
+
+exports[`<Button /> should render an active <Button> with some content 1`] = `
+<Styled(AnchorInt)
+  active={true}
+  tagName="button"
+>
+  <styled.div>
+    Content
+  </styled.div>
+</Styled(AnchorInt)>
+`;
+
+exports[`<Button /> should render an active disabled <Button> with some content 1`] = `
+<Styled(AnchorInt)
+  active={true}
+  disabled={true}
+  tagName="button"
+>
+  <styled.div>
+    Content
+  </styled.div>
+</Styled(AnchorInt)>
+`;

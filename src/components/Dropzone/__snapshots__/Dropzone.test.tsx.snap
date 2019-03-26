@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropzone /> should render a <Dropzone> with an error 1`] = `
+<DropzoneInt
+  error="You need to select a file"
+/>
+`;
+
+exports[`<Dropzone /> should render a disabled <Dropzone> 1`] = `
+<DropzoneInt
+  disabled={true}
+/>
+`;

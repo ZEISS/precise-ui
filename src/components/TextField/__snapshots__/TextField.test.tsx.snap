@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextField /> should be a auto height multiline area 1`] = `
+<TextFieldInt
+  multiline={true}
+  resizable="auto"
+  value="Hello"
+/>
+`;
+
+exports[`<TextField /> should be a disabled multiline area with 3 rows 1`] = `
+<TextFieldInt
+  disabled={true}
+  multiline={3}
+  value="Some value"
+/>
+`;
+
+exports[`<TextField /> should be a resizable multiline area 1`] = `
+<TextFieldInt
+  defaultValue="Hello"
+  multiline={true}
+  resizable={true}
+/>
+`;
+
+exports[`<TextField /> should be disabled with a (default) value 1`] = `
+<TextFieldInt
+  defaultValue="Some value"
+  disabled={true}
+/>
+`;
+
+exports[`<TextField /> should have a placeholder 1`] = `
+<TextFieldInt
+  placeholder="foo"
+/>
+`;
+
+exports[`<TextField /> should render a multiline textfield 1`] = `
+<TextFieldInt
+  multiline={true}
+/>
+`;

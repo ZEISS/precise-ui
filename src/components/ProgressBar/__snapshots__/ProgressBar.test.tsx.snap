@@ -1,0 +1,332 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressBar /> should cut the maximum at 100 percent 1`] = `
+<styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "100%",
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render empty default <ProgressBar /> element 1`] = `
+<styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "0%",
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render the <ProgressBar /> animated at 75% 1`] = `
+<styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "width 200ms",
+          "width": "75%",
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render the <ProgressBar /> with 0% with custom boundaries 1`] = `
+<styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "0%",
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render the <ProgressBar /> with 50% 1`] = `
+<styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "50%",
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render the <ProgressBar /> with 50% with custom boundaries 1`] = `
+<styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "50%",
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render the <ProgressBar /> with 100% with custom boundaries 1`] = `
+<styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "100%",
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render the <ProgressBar /> with a description 1`] = `
+<styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "0%",
+        }
+      }
+    />
+  </styled.div>
+  <styled.div>
+    Please wait until we finish the work
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render the <ProgressBar /> with a single stop 1`] = `
+<styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "0%",
+        }
+      }
+    />
+    <styled.div
+      active={false}
+      key="0-at-0.5"
+      style={
+        Object {
+          "left": "50%",
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render the <ProgressBar /> with a title 1`] = `
+<styled.div>
+  <styled.div>
+    My Progress
+  </styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "0%",
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render the <ProgressBar /> with a title, description, at 75% 1`] = `
+<styled.div>
+  <styled.div>
+    My Progress
+  </styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "75%",
+        }
+      }
+    />
+  </styled.div>
+  <styled.div>
+    My Description
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render the <ProgressBar /> with cut stops 1`] = `
+<styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "0%",
+        }
+      }
+    />
+    <styled.div
+      active={true}
+      key="0-at--10"
+      style={
+        Object {
+          "left": "0%",
+        }
+      }
+    />
+    <styled.div
+      active={true}
+      key="1-at-0"
+      style={
+        Object {
+          "left": "0%",
+        }
+      }
+    />
+    <styled.div
+      active={false}
+      key="2-at-50"
+      style={
+        Object {
+          "left": "50%",
+        }
+      }
+    />
+    <styled.div
+      active={false}
+      key="3-at-100"
+      style={
+        Object {
+          "left": "100%",
+        }
+      }
+    />
+    <styled.div
+      active={false}
+      key="4-at-110"
+      style={
+        Object {
+          "left": "100%",
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render the <ProgressBar /> with maximum and minimum 1`] = `
+<styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "0%",
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`<ProgressBar /> should render the <ProgressBar /> with maximum and minimum and some stops 1`] = `
+<styled.div>
+  <styled.div
+    type="primary"
+  >
+    <styled.div
+      style={
+        Object {
+          "transition": "none",
+          "width": "0%",
+        }
+      }
+    />
+    <styled.div
+      active={false}
+      key="0-at-30"
+      style={
+        Object {
+          "left": "10%",
+        }
+      }
+    />
+    <styled.div
+      active={false}
+      key="1-at-50"
+      style={
+        Object {
+          "left": "50%",
+        }
+      }
+    />
+    <styled.div
+      active={false}
+      key="2-at-70"
+      style={
+        Object {
+          "left": "90%",
+        }
+      }
+    />
+  </styled.div>
+</styled.div>
+`;

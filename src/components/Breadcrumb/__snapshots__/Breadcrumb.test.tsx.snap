@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumb /> should render a <Breadcrumb> with external reference 1`] = `
+<Styled(Anchor)
+  href="foo"
+  title="Title"
+>
+  Title
+</Styled(Anchor)>
+`;
+
+exports[`<Breadcrumb /> should render a <Breadcrumb> with internal reference 1`] = `
+<Styled(Anchor)
+  title="Title"
+  to="foo"
+>
+  Title
+</Styled(Anchor)>
+`;

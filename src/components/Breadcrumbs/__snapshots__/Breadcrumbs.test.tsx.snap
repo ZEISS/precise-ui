@@ -1,0 +1,460 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several children 1`] = `
+<Breadcrumbs>
+  <styled.div>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-ckVGcZ",
+            "isStatic": false,
+            "lastClassName": "huhJgh",
+            "rules": Array [
+              "
+  ",
+              "
+    ",
+              "font-size: 0.875rem;
+  ",
+              "
+    ",
+              "line-height: 1.125rem;
+  ",
+              "
+    ",
+              "
+  ",
+              "
+  
+  color: ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-ckVGcZ",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="sc-ckVGcZ huhJgh"
+      >
+        <span
+          key="0"
+        >
+          <Breadcrumb
+            title="First"
+          >
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": true,
+                      "lastClassName": "TpIwH",
+                      "rules": Array [
+                        "
+  display: inline-block;
+  color: ",
+                        "rgba(64,64,64,1)",
+                        ";
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="sc-bwzfXH TpIwH"
+                >
+                  First
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Breadcrumb>
+        </span>
+        <span
+          key="1"
+        >
+          <styled.span>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-jKJlTe",
+                    "isStatic": true,
+                    "lastClassName": "bxATnl",
+                    "rules": Array [
+                      "
+  padding: 0 ",
+                      "1rem",
+                      ";
+  color: ",
+                      "rgba(64,64,64,1)",
+                      ";
+  font-size: inherit;
+  &:after {
+    content: '/';
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-jKJlTe",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <span
+                className="sc-jKJlTe bxATnl"
+              />
+            </StyledComponent>
+          </styled.span>
+        </span>
+        <span
+          key="2"
+        >
+          <Breadcrumb
+            title="Second"
+          >
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": true,
+                      "lastClassName": "TpIwH",
+                      "rules": Array [
+                        "
+  display: inline-block;
+  color: ",
+                        "rgba(64,64,64,1)",
+                        ";
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="sc-bwzfXH TpIwH"
+                >
+                  Second
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Breadcrumb>
+        </span>
+        <span
+          key="3"
+        >
+          <styled.span>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-jKJlTe",
+                    "isStatic": true,
+                    "lastClassName": "bxATnl",
+                    "rules": Array [
+                      "
+  padding: 0 ",
+                      "1rem",
+                      ";
+  color: ",
+                      "rgba(64,64,64,1)",
+                      ";
+  font-size: inherit;
+  &:after {
+    content: '/';
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-jKJlTe",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <span
+                className="sc-jKJlTe bxATnl"
+              />
+            </StyledComponent>
+          </styled.span>
+        </span>
+        <span
+          key="4"
+        >
+          <Breadcrumb
+            title="Third"
+          >
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": true,
+                      "lastClassName": "TpIwH",
+                      "rules": Array [
+                        "
+  display: inline-block;
+  color: ",
+                        "rgba(64,64,64,1)",
+                        ";
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="sc-bwzfXH TpIwH"
+                >
+                  Third
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Breadcrumb>
+        </span>
+        <span
+          key="5"
+        >
+          <styled.span>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-jKJlTe",
+                    "isStatic": true,
+                    "lastClassName": "bxATnl",
+                    "rules": Array [
+                      "
+  padding: 0 ",
+                      "1rem",
+                      ";
+  color: ",
+                      "rgba(64,64,64,1)",
+                      ";
+  font-size: inherit;
+  &:after {
+    content: '/';
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-jKJlTe",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+            >
+              <span
+                className="sc-jKJlTe bxATnl"
+              />
+            </StyledComponent>
+          </styled.span>
+        </span>
+        <span
+          key="6"
+        >
+          <Breadcrumb
+            title="Last"
+          >
+            <styled.span>
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": true,
+                      "lastClassName": "TpIwH",
+                      "rules": Array [
+                        "
+  display: inline-block;
+  color: ",
+                        "rgba(64,64,64,1)",
+                        ";
+",
+                      ],
+                    },
+                    "displayName": "styled.span",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "span",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+              >
+                <span
+                  className="sc-bwzfXH TpIwH"
+                >
+                  Last
+                </span>
+              </StyledComponent>
+            </styled.span>
+          </Breadcrumb>
+        </span>
+      </div>
+    </StyledComponent>
+  </styled.div>
+</Breadcrumbs>
+`;
+
+exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several children and size() set 1`] = `
+<styled.div>
+  <span
+    key="0"
+  >
+    <Breadcrumb
+      title="First"
+      to="/1"
+    />
+  </span>
+  <span
+    key="1"
+  >
+    <styled.span />
+  </span>
+  <span
+    key="2"
+  >
+    <OnClickOutside(OverflowMenuInt)
+      button={
+        <Breadcrumb
+          href="#"
+          title="..."
+        />
+      }
+      eventTypes={
+        Array [
+          "mousedown",
+          "touchstart",
+        ]
+      }
+      excludeScrollbar={false}
+      items={
+        Array [
+          <Breadcrumb
+            title="Second"
+            to="/2"
+          />,
+          <Breadcrumb
+            title="Third"
+            to="/3"
+          />,
+          <Breadcrumb
+            title="Fourth"
+            to="/4"
+          />,
+        ]
+      }
+      outsideClickIgnoreClass="ignore-react-onclickoutside"
+      preventDefault={false}
+      stopPropagation={false}
+    />
+  </span>
+  <span
+    key="3"
+  >
+    <styled.span />
+  </span>
+  <span
+    key="4"
+  >
+    <Breadcrumb
+      title="Fifth"
+      to="/5"
+    />
+  </span>
+</styled.div>
+`;
+
+exports[`<Breadcrumbs /> should render an basic <Breadcrumbs> component 1`] = `
+<styled.div>
+  <span
+    key="0"
+  >
+    <Breadcrumb
+      title="Title"
+    />
+  </span>
+</styled.div>
+`;

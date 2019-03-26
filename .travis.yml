@@ -2,20 +2,28 @@ language: node_js
 if: tag IS blank
 node_js:
   - "8"
+services:
+  - docker
 cache:
   directories:
   - node_modules
+env:
+  - PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
 script:
   - npm run test
   - npm run build
+  - npm run test:visual
 before_deploy:
-  - >
+  - >   
+    if [ "$TRAVIS_BRANCH" != "master" ]; then
+      sed -i -e "s/\(\"version\":\\s\+\"\([0-9]\+\.\?\)\+\)/\1-pre.$TRAVIS_BUILD_NUMBER/" package.json;
+    fi;
     if ! [ "$BEFORE_DEPLOY_RUN" ]; then
       export BEFORE_DEPLOY_RUN=1;
       git config --local user.name "$git_user";
       git config --local user.email "$git_email";
       git tag "$(node -p 'require(`./package.json`).version')";
-    fi
+    fi;
 deploy:
   - provider: npm
     email: $auth_email
@@ -23,6 +31,13 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
+  - provider: npm
+    email: $auth_email
+    api_key: $auth_token
+    skip_cleanup: true
+    tag: next
+    on:
+      branch: develop
   - provider: releases
     api_key: $git_token
     skip_cleanup: true

@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> should render styled.div when component is passed 1`] = `
+<styled.ul>
+  <div
+    disablePadding={true}
+    key=".0"
+  >
+    Item
+  </div>
+</styled.ul>
+`;

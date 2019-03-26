@@ -1,0 +1,442 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionTableCard /> should render a <AccordionTable> component with no data and placeholder set 1`] = `
+<AccordionTableCardHost>
+  <Styled(ListItem)
+    key="0"
+  >
+    <styled.div>
+      No data
+    </styled.div>
+  </Styled(ListItem)>
+</AccordionTableCardHost>
+`;
+
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with data and selectedIndex set 1`] = `
+<AccordionTableCardHost>
+  <Styled(ListItem)
+    key="0"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              tag
+            </ForwardRef>
+            <ForwardRef>
+              A
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              value
+            </ForwardRef>
+            <ForwardRef>
+              Alpha
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              team
+            </ForwardRef>
+            <ForwardRef>
+              Alpha team
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    />
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="1"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              tag
+            </ForwardRef>
+            <ForwardRef>
+              B
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              value
+            </ForwardRef>
+            <ForwardRef>
+              Bravo
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              team
+            </ForwardRef>
+            <ForwardRef>
+              Bravo team
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={true}
+    >
+      <div>
+        Test details renderer
+      </div>
+    </AccordionCard>
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="2"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              tag
+            </ForwardRef>
+            <ForwardRef>
+              C
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              value
+            </ForwardRef>
+            <ForwardRef>
+              Charlie
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              team
+            </ForwardRef>
+            <ForwardRef>
+              Charlie team
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    />
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="3"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              tag
+            </ForwardRef>
+            <ForwardRef>
+              D
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              value
+            </ForwardRef>
+            <ForwardRef>
+              Delta
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              team
+            </ForwardRef>
+            <ForwardRef>
+              Delta team
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    />
+  </Styled(ListItem)>
+</AccordionTableCardHost>
+`;
+
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with data set 1`] = `
+<AccordionTableCardHost>
+  <Styled(ListItem)
+    key="0"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              tag
+            </ForwardRef>
+            <ForwardRef>
+              C
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              value
+            </ForwardRef>
+            <ForwardRef>
+              Charlie
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              team
+            </ForwardRef>
+            <ForwardRef>
+              Charlie team
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    />
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="1"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              tag
+            </ForwardRef>
+            <ForwardRef>
+              D
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              value
+            </ForwardRef>
+            <ForwardRef>
+              Delta
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              team
+            </ForwardRef>
+            <ForwardRef>
+              Delta team
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    />
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="2"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              tag
+            </ForwardRef>
+            <ForwardRef>
+              E
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              value
+            </ForwardRef>
+            <ForwardRef>
+              Echo
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              team
+            </ForwardRef>
+            <ForwardRef>
+              Echo team
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    />
+  </Styled(ListItem)>
+</AccordionTableCardHost>
+`;
+
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with right columns 1`] = `
+<AccordionTableCardHost>
+  <Styled(ListItem)
+    key="0"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              C
+            </ForwardRef>
+            <ForwardRef>
+              5
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    />
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="1"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              C
+            </ForwardRef>
+            <ForwardRef>
+              10
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    />
+  </Styled(ListItem)>
+</AccordionTableCardHost>
+`;
+
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with sorted data 1`] = `
+<AccordionTableCardHost>
+  <Styled(ListItem)
+    key="0"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              c
+            </ForwardRef>
+            <ForwardRef>
+              15
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    />
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="1"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              c
+            </ForwardRef>
+            <ForwardRef>
+              10
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    />
+  </Styled(ListItem)>
+</AccordionTableCardHost>
+`;
+
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component with wrong columns 1`] = `
+<AccordionTableCardHost>
+  <Styled(ListItem)
+    key="0"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              A
+            </ForwardRef>
+            <ForwardRef>
+              
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              B
+            </ForwardRef>
+            <ForwardRef>
+              
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    />
+  </Styled(ListItem)>
+  <Styled(ListItem)
+    key="1"
+  >
+    <AccordionCard
+      header={
+        Array [
+          <ForwardRef>
+            <ForwardRef>
+              A
+            </ForwardRef>
+            <ForwardRef>
+              
+            </ForwardRef>
+          </ForwardRef>,
+          <ForwardRef>
+            <ForwardRef>
+              B
+            </ForwardRef>
+            <ForwardRef>
+              
+            </ForwardRef>
+          </ForwardRef>,
+        ]
+      }
+      onActionClick={[Function]}
+      opened={false}
+    />
+  </Styled(ListItem)>
+</AccordionTableCardHost>
+`;
+
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component without data and custom placeholder 1`] = `
+<AccordionTableCardHost>
+  <Styled(ListItem)
+    key="0"
+  >
+    <styled.div>
+      No data
+    </styled.div>
+  </Styled(ListItem)>
+</AccordionTableCardHost>
+`;
