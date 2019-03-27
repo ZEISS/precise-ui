@@ -3,6 +3,7 @@ import * as colors from '../../colors';
 import styled from '../../utils/styled';
 import { RadioButton, RadioButtonChangeEvent, RadioButtonProps } from '../RadioButton';
 import { StyledTileIcon } from '../../quarks/StyledTileIcon';
+import { getFontStyle } from '../../textStyles';
 
 const Tile = styled(RadioButton)<{ checked: boolean }>`
   cursor: pointer;
@@ -24,11 +25,12 @@ const Tile = styled(RadioButton)<{ checked: boolean }>`
 `;
 
 const TileTitle = styled.span`
+  ${getFontStyle({ size: 'small', weight: 'medium' })}
+
   position: absolute;
   bottom: 8px;
   right: 8px;
-  font-size: 0.875rem;
-  font-weight: 500;
+
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

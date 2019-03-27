@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled, { themed, keyframes } from '../../utils/styled';
 import { StandardProps } from '../../common';
-import { remCalc } from '../../utils/remCalc';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 /**
  * ProgressBar type.
@@ -75,15 +75,17 @@ const ProgressRail = styled('div')<ProgressContainerProps>`
 `;
 
 const ProgressTitle = styled.div`
-  font-size: ${remCalc('16px')};
+  ${getFontStyle({ size: 'medium' })}
+
   margin: 0 0 ${distance.medium};
   padding: 0;
   display: block;
 `;
 
 const ProgressDescription = styled.div`
+  ${getFontStyle({ size: 'small' })}
+
   margin: ${distance.small} 0 0;
-  font-size: ${remCalc('14px')};
 `;
 
 const ProgressIndicator = styled.div`

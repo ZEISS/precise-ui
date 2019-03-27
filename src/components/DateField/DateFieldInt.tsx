@@ -7,6 +7,7 @@ import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
 import { remCalc } from '../../utils/remCalc';
 import { Icon } from '../Icon';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 export interface DateFieldOpenChangedEvent {
   /**
@@ -125,24 +126,27 @@ const EnabledCalendarCell = css`
 `;
 
 const CalendarCell = styled.button<StyledCalendarCell>`
+  ${getFontStyle({ size: 'medium' })}
+
   ${CommonCalendarCell};
   background: ${themed(({ theme }) => theme.ui2)};
-  font-size: 1rem;
   ${({ disabled }) => (disabled ? DisabledCalendarCell : EnabledCalendarCell)};
 `;
 
 const WeekHeaderCell = styled.div`
+  ${getFontStyle({ weight: 'bold', lineHeight: 'xLarge' })}
+
   ${CommonCalendarCell};
   border-color: transparent;
-  font-weight: bold;
-  line-height: ${remCalc('28px')};
 `;
 
 const Arrow = styled.button`
+  ${getFontStyle({ size: 'medium' })}
+
   background-color: transparent;
   padding: 0;
   border: none;
-  font-size: 1rem;
+
   align-self: start;
   cursor: pointer;
   > i {

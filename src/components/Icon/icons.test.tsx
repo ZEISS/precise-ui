@@ -98,6 +98,18 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render Language icon', () => {
+    const Component = icons.Language;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Pageview icon', () => {
+    const Component = icons.Pageview;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render PowerSettingsNew icon', () => {
     const Component = icons.PowerSettingsNew;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -250,6 +262,12 @@ describe('Generated icons', () => {
 
   it('should render Send icon', () => {
     const Component = icons.Send;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Sort icon', () => {
+    const Component = icons.Sort;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -494,3 +512,4 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
+  

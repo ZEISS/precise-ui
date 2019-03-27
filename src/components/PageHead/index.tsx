@@ -1,13 +1,13 @@
 import * as React from 'react';
 import * as colors from '../../colors';
 import styled from '../../utils/styled';
-import { TextStyles, TextStylings } from '../../textStyles';
 import { Headline } from '../Headline';
 import { Icon } from '../Icon';
 import { Breadcrumbs } from '../Breadcrumbs';
 import { Breadcrumb, BreadcrumbProps } from '../Breadcrumb';
 import { ActionLink } from '../ActionLink';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 export interface PageHeadProps {
   /**
@@ -48,8 +48,8 @@ const Navigation = styled.div`
 `;
 
 const HelpButton = styled(ActionLink)`
-  font-size: ${TextStylings.zeta.fontSize};
-  font-weight: ${TextStylings.zeta.fontWeight};
+  ${getFontStyle({ size: 'xSmall', weight: 'light' })}
+
   display: flex;
   align-items: center;
   color: ${colors.dark};
@@ -79,7 +79,7 @@ export const PageHead: React.SFC<PageHeadProps> = ({ title, breadcrumbs = [], he
         </HelpButton>
       )}
     </Navigation>
-    <MainHeadline textStyle={TextStyles.alpha}>{title}</MainHeadline>
+    <MainHeadline level={1}>{title}</MainHeadline>
   </>
 );
 PageHead.displayName = 'PageHead';

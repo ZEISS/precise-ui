@@ -36,12 +36,24 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
             "componentStyle": ComponentStyle {
               "componentId": "sc-hMqMXs",
               "isStatic": true,
-              "lastClassName": "cJbBkc",
+              "lastClassName": "bmmnLa",
               "rules": Array [
                 "
-  font-size: ",
-                "0.875rem",
-                ";
+  ",
+                "
+    ",
+                "font-size: 0.875rem;
+  ",
+                "
+    ",
+                "line-height: 1.125rem;
+  ",
+                "
+    ",
+                "
+  ",
+                "
+  
   color: ",
                 "rgba(64,64,64,1)",
                 ";
@@ -61,7 +73,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
         forwardedRef={null}
       >
         <div
-          className="sc-hMqMXs cJbBkc"
+          className="sc-hMqMXs bmmnLa"
         >
           <host>
             <ul>
@@ -220,8 +232,25 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-jKJlTe",
                                     "isStatic": false,
-                                    "lastClassName": "ggPkQB",
+                                    "lastClassName": "bKuqvi",
                                     "rules": Array [
+                                      "
+  ",
+                                      "
+    ",
+                                      "
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+      ",
+                                      "
+    ",
+                                      "
+        line-height: 1.75rem;
+      ",
+                                      "
+    ",
+                                      "
+  ",
                                       "
   position: relative;
   cursor: ",
@@ -241,7 +270,6 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
   color: ",
                                       [Function],
                                       ";
-  font-size: 1.5rem;
   &:before,
   &:after {
     content: '';
@@ -281,7 +309,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                               type="button"
                             >
                               <button
-                                className="sc-jKJlTe ggPkQB"
+                                className="sc-jKJlTe bKuqvi"
                                 disabled={true}
                                 onClick={[Function]}
                                 type="button"
@@ -727,8 +755,25 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-jKJlTe",
                                     "isStatic": false,
-                                    "lastClassName": "ggPkQB",
+                                    "lastClassName": "bKuqvi",
                                     "rules": Array [
+                                      "
+  ",
+                                      "
+    ",
+                                      "
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+      ",
+                                      "
+    ",
+                                      "
+        line-height: 1.75rem;
+      ",
+                                      "
+    ",
+                                      "
+  ",
                                       "
   position: relative;
   cursor: ",
@@ -748,7 +793,6 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
   color: ",
                                       [Function],
                                       ";
-  font-size: 1.5rem;
   &:before,
   &:after {
     content: '';
@@ -788,7 +832,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                               type="button"
                             >
                               <button
-                                className="sc-jKJlTe ggPkQB"
+                                className="sc-jKJlTe bKuqvi"
                                 disabled={true}
                                 onClick={[Function]}
                                 type="button"
@@ -916,12 +960,24 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
             "componentStyle": ComponentStyle {
               "componentId": "sc-hMqMXs",
               "isStatic": true,
-              "lastClassName": "cJbBkc",
+              "lastClassName": "bmmnLa",
               "rules": Array [
                 "
-  font-size: ",
-                "0.875rem",
-                ";
+  ",
+                "
+    ",
+                "font-size: 0.875rem;
+  ",
+                "
+    ",
+                "line-height: 1.125rem;
+  ",
+                "
+    ",
+                "
+  ",
+                "
+  
   color: ",
                 "rgba(64,64,64,1)",
                 ";
@@ -941,7 +997,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
         forwardedRef={null}
       >
         <div
-          className="sc-hMqMXs cJbBkc"
+          className="sc-hMqMXs bmmnLa"
         >
           <ul>
             <li>
@@ -1095,8 +1151,25 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-jKJlTe",
                                     "isStatic": false,
-                                    "lastClassName": "ggPkQB",
+                                    "lastClassName": "bKuqvi",
                                     "rules": Array [
+                                      "
+  ",
+                                      "
+    ",
+                                      "
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+      ",
+                                      "
+    ",
+                                      "
+        line-height: 1.75rem;
+      ",
+                                      "
+    ",
+                                      "
+  ",
                                       "
   position: relative;
   cursor: ",
@@ -1116,7 +1189,6 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
   color: ",
                                       [Function],
                                       ";
-  font-size: 1.5rem;
   &:before,
   &:after {
     content: '';
@@ -1156,7 +1228,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                               type="button"
                             >
                               <button
-                                className="sc-jKJlTe ggPkQB"
+                                className="sc-jKJlTe bKuqvi"
                                 disabled={true}
                                 onClick={[Function]}
                                 type="button"
@@ -1602,8 +1674,25 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-jKJlTe",
                                     "isStatic": false,
-                                    "lastClassName": "ggPkQB",
+                                    "lastClassName": "bKuqvi",
                                     "rules": Array [
+                                      "
+  ",
+                                      "
+    ",
+                                      "
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+      ",
+                                      "
+    ",
+                                      "
+        line-height: 1.75rem;
+      ",
+                                      "
+    ",
+                                      "
+  ",
                                       "
   position: relative;
   cursor: ",
@@ -1623,7 +1712,6 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
   color: ",
                                       [Function],
                                       ";
-  font-size: 1.5rem;
   &:before,
   &:after {
     content: '';
@@ -1663,7 +1751,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                               type="button"
                             >
                               <button
-                                className="sc-jKJlTe ggPkQB"
+                                className="sc-jKJlTe bKuqvi"
                                 disabled={true}
                                 onClick={[Function]}
                                 type="button"

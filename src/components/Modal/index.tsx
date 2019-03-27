@@ -2,12 +2,11 @@ import * as React from 'react';
 import styled, { keyframes, css } from '../../utils/styled';
 import { StandardProps } from '../../common';
 import { Headline } from '../Headline';
-import { TextStyles } from '../../textStyles';
 import { white, cyan, dark, grey6 } from '../../colors';
-import { remCalc } from '../../utils/remCalc';
 import { Blocker, BlockerProps } from '../Blocker';
 import { CloseButton } from '../CloseButton';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 export type ModalCloseOrigin = 'button' | 'background';
 
@@ -147,11 +146,16 @@ const ModalContent = styled.div<ModalContentProps>(
   `,
 );
 
+const ModalLabel = styled.span`
+  ${getFontStyle({ size: 'small' })}
+
+  padding-bottom: ${distance.small};
+`;
+
 const StyledModalBody = styled.div`
-  font-size: 1rem;
-  font-weight: normal;
+  ${getFontStyle({ size: 'medium', weight: 'regular' })}
+
   text-align: left;
-  line-height: ${remCalc('20px')};
   padding: 0 ${distance.xxlarge} ${distance.xxlarge};
   margin-bottom: auto;
 `;
@@ -238,10 +242,11 @@ ModalBody.displayName = 'ModalBody';
  */
 export const ModalHeader: React.SFC<ModalHeaderProps> = ({ title, label, ...rest }) => (
   <StyledModalHeader {...rest}>
-    {label && <Headline textStyle={TextStyles.zeta}>{label}</Headline>}
-    {title && <Headline textStyle={TextStyles.beta}>{title}</Headline>}
+    {label && <ModalLabel>{label}</ModalLabel>}
+    {title && <Headline level={2}>{title}</Headline>}
   </StyledModalHeader>
 );
+
 ModalHeader.displayName = 'ModalHeader';
 
 /**

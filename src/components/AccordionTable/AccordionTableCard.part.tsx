@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled from '../../utils/styled';
-import { remCalc } from '../../utils/remCalc';
 import { normalizeIndex, toggleIndex, hasIndex } from './helpers/indexHelper';
 import { AccordionTableProps, AccordionTableCardRendererEvent } from './AccordionTable.types.part';
 import { defaultCellRenderer } from '../Table/TableShared.part';
@@ -9,6 +8,7 @@ import { AccordionCard } from '../AccordionCard';
 import { ListItem } from '../ListItem';
 import { List } from '../List';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 export interface AccordionTableCardState {
   /**
@@ -30,12 +30,11 @@ const PropContainer = styled.div`
 `;
 
 const PropName = styled.div`
-  font-size: ${remCalc('12px')};
-  line-height: 14px;
+  ${getFontStyle({ size: 'xSmall' })}
 `;
 
 const PropValue = styled.div`
-  font-weight: 500;
+  ${getFontStyle({ weight: 'medium' })}
 `;
 
 const PlaceholderContainer = styled.div`

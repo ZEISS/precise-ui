@@ -5,7 +5,7 @@ import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
 import { showInputInfo } from '../../utils/input';
 import { distance } from '../../distance';
 import { IndicatorKnob } from '../IndicatorKnob';
-import { remCalc } from '../../utils/remCalc';
+import { getFontStyle } from '../../textStyles';
 
 export type ToggleChangeEvent = InputChangeEvent<boolean>;
 
@@ -40,12 +40,11 @@ const transitionDuration = '0.3s';
 const transitionEase = 'cubic-bezier(0, 0, 0.25, 1)';
 
 const ToggleContainer = styled('div')<ToggleContainerProps>`
+  ${getFontStyle({ size: 'medium' })}
   position: relative;
   display: inline-block;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   color: ${themed(props => props.theme.text1)};
-  font-size: ${remCalc('16px')};
-  line-height: 18px;
 `;
 
 const ToggleBoxWrapper = styled.div`

@@ -5,6 +5,7 @@ import { Icon } from '../Icon';
 import { SelectButton, SelectButtonChangeEvent } from '../SelectButton';
 import { cyan, grey1 } from '../../colors';
 import { distance } from '../../distance';
+import { getFontStyle } from '../../textStyles';
 
 export interface ChangePageProps {
   disabled: boolean;
@@ -26,6 +27,7 @@ const PageControlsStyled = styled.div`
 `;
 
 const ChangePage = styled.button<ChangePageProps>`
+  ${getFontStyle({ size: 'xLarge' })}
   position: relative;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   outline: none;
@@ -36,7 +38,6 @@ const ChangePage = styled.button<ChangePageProps>`
   padding: ${distance.small};
   margin: 0 ${distance.small};
   color: ${props => (!props.disabled ? cyan : grey1)};
-  font-size: 1.5rem;
   &:before,
   &:after {
     content: '';

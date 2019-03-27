@@ -1,14 +1,11 @@
 import * as React from 'react';
-import { remCalc } from '../utils/remCalc';
 import styled, { themed } from '../utils/styled';
 import { distance } from '../distance';
-import { TextStyles, TextStylings } from '../textStyles';
+import { getFontStyle } from '../textStyles';
 
 const FileItem = styled.li`
+  ${getFontStyle({ size: 'xSmall' })}
   background-color: ${themed(({ theme }) => theme.ui3)};
-  font-size: ${TextStylings[TextStyles.caption].fontSize};
-  line-height: ${TextStylings[TextStyles.caption].lineHeight};
-  font-weight: ${TextStylings[TextStyles.caption].fontWeight};
   padding: ${distance.small} ${distance.medium};
   margin-bottom: ${distance.xsmall};
   display: flex;
@@ -21,11 +18,6 @@ const FileItem = styled.li`
 
 const FileName = styled.span`
   flex: 1;
-`;
-
-const Remove = styled.div`
-  cursor: pointer;
-  line-height: 1;
 `;
 
 export interface StyledFileItemProps {

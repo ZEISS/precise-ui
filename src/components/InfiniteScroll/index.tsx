@@ -50,6 +50,10 @@ export interface InfiniteScrollProps {
    * This prop let's component know if there is more data to load and call loadItems function on scroll or to display the button.
    */
   hasMore: boolean;
+  /**
+   * Custom loading indicator
+   */
+  loadingIndicator?: React.ReactNode;
 }
 
 export interface InfiniteScrollState {
@@ -128,7 +132,7 @@ export class InfiniteScroll extends React.Component<InfiniteScrollProps, Infinit
   private handleOnScroll = () => {
     const scrolledToBottom = this.reachedBottom();
 
-    if (scrolledToBottom) {
+    if (scrolledToBottom && this.props.hasMore) {
       this.loadItems();
     }
   };
@@ -147,7 +151,7 @@ export class InfiniteScroll extends React.Component<InfiniteScrollProps, Infinit
       : (this.node && this.node.scrollHeight) || 0;
 
     const innerHeight = useWindow ? window.innerHeight : (this.node && this.node.clientHeight) || 0;
-    const scrolledToBottom = scrollTop + innerHeight + edgeOffset >= scrollHeight;
+    const scrolledToBottom = Math.ceil(scrollTop + innerHeight + edgeOffset) >= scrollHeight;
 
     return scrolledToBottom;
   }
@@ -193,14 +197,14 @@ export class InfiniteScroll extends React.Component<InfiniteScrollProps, Infinit
   };
 
   render() {
-    const { host: Host = 'div', data, containerHeight } = this.props;
+    const { host: Host = 'div', data, containerHeight, loadingIndicator } = this.props;
     const { isButtonMode, isLoading } = this.state;
 
     return (
       <Container ref={this.setContainer} height={containerHeight}>
         <Host>{data}</Host>
         <Footer>
-          {isLoading && <Spinner size="x-small" />}
+          {isLoading && (loadingIndicator || <Spinner size="x-small" />)}
           {isButtonMode && this.renderButton()}
         </Footer>
       </Container>
