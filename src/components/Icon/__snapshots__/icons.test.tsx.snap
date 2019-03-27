@@ -216,6 +216,24 @@ exports[`Generated icons should render Cached icon 1`] = `
 </Cached>
 `;
 
+exports[`Generated icons should render Cancel icon 1`] = `
+<Cancel
+  height="12"
+  viewBox="0 0 24 24"
+  width="12"
+>
+  <svg
+    height="12"
+    viewBox="0 0 24 24"
+    width="12"
+  >
+    <path
+      d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+    />
+  </svg>
+</Cancel>
+`;
+
 exports[`Generated icons should render Check icon 1`] = `
 <Check
   height="12"
@@ -1438,6 +1456,24 @@ exports[`Generated icons should render Update icon 1`] = `
     />
   </svg>
 </Update>
+`;
+
+exports[`Generated icons should render ViewColumn icon 1`] = `
+<ViewColumn
+  height="12"
+  viewBox="0 0 24 24"
+  width="12"
+>
+  <svg
+    height="12"
+    viewBox="0 0 24 24"
+    width="12"
+  >
+    <path
+      d="M10 18h5V5h-5v13zm-6 0h5V5H4v13zM16 5v13h5V5h-5z"
+    />
+  </svg>
+</ViewColumn>
 `;
 
 exports[`Generated icons should render Visibility icon 1`] = `
