@@ -11,7 +11,7 @@ export interface HeadlineProps extends StandardProps {
    * Represent 5 levels of headings (1-5)
    * Default is 3
    */
-  level?: 1 | 2 | 3 | 4 | 5 | 6;
+  level?: 1 | 2 | 3 | 4 | 5;
   /**
    * When specified headline will have muted text color
    */
@@ -36,7 +36,7 @@ interface HeadlineCache {
 const Headlines: HeadlineCache = {};
 
 function getComponentName(level: number) {
-  return `h${level >= 1 && level <= 6 ? level : 3}`;
+  return `h${level >= 1 && level <= 5 ? level : 3}`;
 }
 
 function getHeadlineStyle(level: StyledHeadlineProps['level']) {
@@ -44,18 +44,13 @@ function getHeadlineStyle(level: StyledHeadlineProps['level']) {
     case 1:
       return getFontStyle({ size: 'xxxLarge', weight: 'light' });
     case 2:
-      return getFontStyle({ size: 'xxLarge' });
+      return getFontStyle({ size: 'xxLarge', weight: 'light' });
     case 3:
       return getFontStyle({ size: 'xLarge', weight: 'medium' });
     case 4:
-      return getFontStyle({ size: 'large' });
+      return getFontStyle({ size: 'large', weight: 'regular' });
     case 5:
-      return css`
-        ${getFontStyle({ size: 'medium', weight: 'bold' })}
-        text-transform: 'uppercase';
-      `;
-    case 6:
-      return getFontStyle({ size: 'small', weight: 'bold' });
+      return getFontStyle({ size: 'medium', weight: 'bold' });
     default:
       return '';
   }
