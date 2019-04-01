@@ -5,6 +5,7 @@
 - `Flyout` fixed compatibility with IE11
 - `Headline` styles update
 - Updated label in `Modal`
+- Remove disabled attr from html element of `InteractiveSurface`
 
 ## 0.5.0
 
