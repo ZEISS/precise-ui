@@ -50,7 +50,7 @@ function getHeadlineStyle(level: StyledHeadlineProps['level']) {
     case 4:
       return getFontStyle({ size: 'large', weight: 'regular' });
     case 5:
-      return getFontStyle({ size: 'medium', weight: 'bold' });
+      return getFontStyle({ size: 'medium', weight: 'medium' });
     default:
       return '';
   }
