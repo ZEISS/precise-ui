@@ -2,7 +2,6 @@ import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
 import { KeyCodes } from '../../utils/keyCodes';
 import { showInputInfo } from '../../utils/input';
-import { remCalc } from '../../utils/remCalc';
 import { LabeledInputProps, InputChangeEvent, ScreenSize } from '../../common';
 import { InputIcon } from '../InputIcon';
 import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
@@ -27,6 +26,7 @@ import {
   StyledIconContainer,
 } from '../../quarks';
 import { getFontStyle } from '../../textStyles';
+import { eventManagers } from '../../utils/eventManager';
 
 export interface DropdownFieldToggleEvent {
   state: 'open' | 'close';
@@ -243,9 +243,17 @@ function getMultipleContent(item: string | DropdownFieldItem, theme?: any) {
   );
 }
 
+export const DropdownFieldAction = {
+  open: 'dropdownField/open',
+  close: 'dropdownField/close',
+};
+
 class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextProps, DropdownState> {
+  private eventManager = eventManagers[0];
+
   constructor(props: DropdownFieldProps) {
     super(props);
+
     const data = props.data || [];
     let value: string | Array<string> = [];
 
@@ -266,6 +274,9 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
     const { form } = this.props;
     const { controlled } = this.state;
 
+    this.eventManager.on(DropdownFieldAction.open, this.show);
+    this.eventManager.on(DropdownFieldAction.close, this.hide);
+
     if (!controlled && form) {
       form.subscribe(this);
     }
@@ -274,6 +285,9 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
   componentWillUnmount() {
     const { form } = this.props;
     const { controlled } = this.state;
+
+    this.eventManager.off(DropdownFieldAction.open, this.show);
+    this.eventManager.off(DropdownFieldAction.close, this.hide);
 
     if (!controlled && form) {
       form.unsubscribe(this);
@@ -292,27 +306,30 @@ class DropdownFieldInt extends React.Component<DropdownFieldProps & FormContextP
     }
   }
 
-  private show = () => {
-    if (!this.state.open) {
-      this.toggle();
-    }
-  };
+  private show = () =>
+    new Promise(resolve => {
+      this.setState({ open: true }, resolve);
+      // Emit close for other dropdown fields
+      this.eventManager.emit(DropdownFieldAction.close, this);
+    });
 
-  private hide = () => {
-    if (this.state.open) {
-      this.toggle();
-    }
-  };
+  private hide = (that?: DropdownFieldInt) =>
+    (!that || that !== this) &&
+    new Promise(resolve => {
+      this.setState({ open: false }, resolve);
+    });
 
-  private toggle = () => {
+  private toggle = async () => {
     const { onToggle, disabled } = this.props;
 
     if (!disabled) {
       const { open } = this.state;
 
-      this.setState({
-        open: !open,
-      });
+      if (open) {
+        await this.hide();
+      } else {
+        await this.show();
+      }
 
       if (typeof onToggle === 'function') {
         onToggle({
