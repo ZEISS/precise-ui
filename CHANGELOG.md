@@ -6,6 +6,9 @@
 - `Headline` styles update
 - Updated label in `Modal`
 - Added two new icons (Cancel & ViewColumn)
+- Remove disabled attribute from HTML element of `InteractiveSurface`
+- Bugfix: Close `DropdownField` if other one was opened (#44)
+- Bugfix: Fixed crash of `Rating` component (#69)
 
 ## 0.5.0
 

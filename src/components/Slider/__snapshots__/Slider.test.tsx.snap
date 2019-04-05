@@ -3505,7 +3505,6 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
               <styled.div
                 active={false}
                 className="sc-iwsKbI dCKOoc"
-                disabled={true}
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
@@ -3513,7 +3512,6 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
                 <StyledComponent
                   active={false}
                   className="sc-iwsKbI dCKOoc"
-                  disabled={true}
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -3521,7 +3519,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "dAdpme",
+                        "lastClassName": "fIcmpj",
                         "rules": Array [
                           "
   position: relative;
@@ -3550,8 +3548,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="sc-iwsKbI dCKOoc sc-bwzfXH dAdpme"
-                    disabled={true}
+                    className="sc-iwsKbI dCKOoc sc-bwzfXH fIcmpj"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}

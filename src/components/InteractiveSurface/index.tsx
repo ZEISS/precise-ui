@@ -122,7 +122,7 @@ export class InteractiveSurface extends React.Component<InteractiveSurfaceProps>
   };
 
   render() {
-    const { children, onChange: _0, opaque: _1, ...props } = this.props;
+    const { children, disabled, onChange: _0, opaque: _1, ...props } = this.props;
     return (
       <Container
         {...props}
