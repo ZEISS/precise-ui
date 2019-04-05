@@ -104,6 +104,10 @@ export interface InteractiveListProps extends StandardProps {
    * Event transported from the wrapper in case of a click somewhere inside.
    */
   onClick?(e: React.MouseEvent<HTMLElement>): void;
+  /**
+   * Event fired when clicked outside of the component
+   */
+  onClickOutside?(): void;
 }
 
 export interface InteractiveListState {

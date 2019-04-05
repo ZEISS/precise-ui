@@ -6,7 +6,9 @@
 - `Headline` styles update
 - Updated label in `Modal`
 - Remove disabled attr from html element of `InteractiveSurface`
-- Fixed crash of `Rating` component
+- Bugfix: Close `DropdownField` if other one was opened.
+- Bugfix: Fixed crash of `Rating` component
+
 
 ## 0.5.0
 

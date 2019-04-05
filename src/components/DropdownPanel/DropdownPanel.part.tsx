@@ -9,6 +9,7 @@ import {
 import { cyan, transparent } from '../../colors';
 import { Icon } from '../Icon';
 import { getFontStyle } from '../../textStyles';
+import onClickOutside from 'react-onclickoutside';
 
 interface StyledWrapperProps {
   open: boolean;
@@ -65,7 +66,7 @@ const CustomWrapper: React.SFC<InteractiveListWrapperProps> = ({ border: _0, dir
   <div {...props} />
 );
 
-export class SlideDownTabs extends React.Component<SlideDownTabsProps, SlideDownTabsState> {
+class SlideDownTabsInt extends React.Component<SlideDownTabsProps, SlideDownTabsState> {
   constructor(props: SlideDownTabsProps) {
     super(props);
     this.state = {
@@ -89,6 +90,8 @@ export class SlideDownTabs extends React.Component<SlideDownTabsProps, SlideDown
     });
   };
 
+  handleClickOutside = this.hide;
+
   render() {
     const { isOpen } = this.state;
     const { data, selectedIndex } = this.props;
@@ -96,7 +99,7 @@ export class SlideDownTabs extends React.Component<SlideDownTabsProps, SlideDown
 
     return (
       <StyledWrapper open={isOpen}>
-        <SelectedMenu onMouseDown={this.toggle} className="ignore-react-onclickoutside">
+        <SelectedMenu onMouseDown={this.toggle}>
           <MenuTitle>{data[selectedIndex].content}</MenuTitle>
           <MenuCaret>
             <Icon name={isOpen ? 'KeyboardArrowUp' : 'KeyboardArrowDown'} size="24px" color={cyan} />
@@ -109,11 +112,14 @@ export class SlideDownTabs extends React.Component<SlideDownTabsProps, SlideDown
           autoFocus
           onChange={this.onChange}
           customWrapper={CustomWrapper}
+          onClickOutside={() => {}}
         />
       </StyledWrapper>
     );
   }
 }
+
+export const SlideDownTabs = onClickOutside(SlideDownTabsInt);
 
 export const DropdownContainer = styled.div``;
 

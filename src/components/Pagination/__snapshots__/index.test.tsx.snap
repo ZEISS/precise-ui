@@ -434,11 +434,9 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                   className="sc-kAzzGY dyRsxz"
                                 >
                                   <styled.div
-                                    className="ignore-react-onclickoutside"
                                     onMouseDown={[Function]}
                                   >
                                     <StyledComponent
-                                      className="ignore-react-onclickoutside"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -472,7 +470,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                       onMouseDown={[Function]}
                                     >
                                       <div
-                                        className="ignore-react-onclickoutside sc-chPdSV irvcZR"
+                                        className="sc-chPdSV irvcZR"
                                         onMouseDown={[Function]}
                                       >
                                         1
@@ -1353,11 +1351,9 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                   className="sc-kAzzGY dyRsxz"
                                 >
                                   <styled.div
-                                    className="ignore-react-onclickoutside"
                                     onMouseDown={[Function]}
                                   >
                                     <StyledComponent
-                                      className="ignore-react-onclickoutside"
                                       forwardedComponent={
                                         Object {
                                           "$$typeof": Symbol(react.forward_ref),
@@ -1391,7 +1387,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                       onMouseDown={[Function]}
                                     >
                                       <div
-                                        className="ignore-react-onclickoutside sc-chPdSV irvcZR"
+                                        className="sc-chPdSV irvcZR"
                                         onMouseDown={[Function]}
                                       >
                                         1
