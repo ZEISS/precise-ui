@@ -302,7 +302,6 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
   };
 
   private handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
-    console.log('hello');
     this.toggle();
     e.preventDefault();
   };
