@@ -170,6 +170,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render ViewColumn icon', () => {
+    const Component = icons.ViewColumn;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Visibility icon', () => {
     const Component = icons.Visibility;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -376,6 +382,12 @@ describe('Generated icons', () => {
 
   it('should render ArrowForward icon', () => {
     const Component = icons.ArrowForward;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Cancel icon', () => {
+    const Component = icons.Cancel;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });

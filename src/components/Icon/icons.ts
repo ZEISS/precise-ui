@@ -385,6 +385,17 @@ export const Update = <SvgIconConstructor>function(props: SvgIconProps) {
 Update.displayName = 'Update';
 Update.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const ViewColumn = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', { d: 'M10 18h5V5h-5v13zm-6 0h5V5H4v13zM16 5v13h5V5h-5z' }),
+  );
+};
+
+ViewColumn.displayName = 'ViewColumn';
+ViewColumn.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Visibility = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -800,6 +811,20 @@ export const ArrowForward = <SvgIconConstructor>function(props: SvgIconProps) {
 
 ArrowForward.displayName = 'ArrowForward';
 ArrowForward.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Cancel = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z',
+    }),
+  );
+};
+
+Cancel.displayName = 'Cancel';
+Cancel.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Check = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
