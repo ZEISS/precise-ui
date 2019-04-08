@@ -11,6 +11,7 @@ import { Icon } from '../Icon';
 import { white, cyan, skyBlue } from '../../colors';
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
+import OnClickOut from 'react-onclickoutside';
 
 export interface SelectButtonChangeEvent {
   /**
@@ -96,10 +97,7 @@ function renderValue(data: Array<string | InteractiveListItem>, value: string) {
   return value;
 }
 
-/**
- * Represents a select button, which is a kind of dropdown button.
- */
-export class SelectButton extends React.PureComponent<SelectButtonProps, SelectButtonState> {
+class SelectButtonInt extends React.PureComponent<SelectButtonProps, SelectButtonState> {
   constructor(props: SelectButtonProps) {
     super(props);
     const controlled = props.value !== undefined;
@@ -166,6 +164,8 @@ export class SelectButton extends React.PureComponent<SelectButtonProps, SelectB
     });
   };
 
+  handleClickOutside = this.handleBlur;
+
   render() {
     const { data = [], onChange: _0, value: _1, ...props } = this.props;
     const { open, value } = this.state;
@@ -183,6 +183,7 @@ export class SelectButton extends React.PureComponent<SelectButtonProps, SelectB
           onChange={this.handleChange}
           customWrapper={CustomWrapper}
           value={value}
+          onClickOutside={() => {}}
           autoPosition
           autoFocus
           showTick
@@ -191,3 +192,8 @@ export class SelectButton extends React.PureComponent<SelectButtonProps, SelectB
     );
   }
 }
+
+/**
+ * Represents a select button, which is a kind of dropdown button.
+ */
+export const SelectButton = OnClickOut(SelectButtonInt);
