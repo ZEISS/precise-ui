@@ -386,145 +386,187 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                               </button>
                             </StyledComponent>
                           </styled.button>
-                          <SelectButton
+                          <OnClickOutside(SelectButtonInt)
                             data={
                               Array [
                                 "1",
                               ]
                             }
+                            eventTypes={
+                              Array [
+                                "mousedown",
+                                "touchstart",
+                              ]
+                            }
+                            excludeScrollbar={false}
                             onChange={[Function]}
+                            outsideClickIgnoreClass="ignore-react-onclickoutside"
+                            preventDefault={false}
+                            stopPropagation={false}
                             value="1"
                           >
-                            <styled.div>
-                              <StyledComponent
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-kAzzGY",
-                                      "isStatic": true,
-                                      "lastClassName": "dyRsxz",
-                                      "rules": Array [
-                                        "
+                            <SelectButtonInt
+                              data={
+                                Array [
+                                  "1",
+                                ]
+                              }
+                              disableOnClickOutside={[Function]}
+                              enableOnClickOutside={[Function]}
+                              eventTypes={
+                                Array [
+                                  "mousedown",
+                                  "touchstart",
+                                ]
+                              }
+                              onChange={[Function]}
+                              outsideClickIgnoreClass="ignore-react-onclickoutside"
+                              preventDefault={false}
+                              stopPropagation={false}
+                              value="1"
+                            >
+                              <styled.div
+                                disableOnClickOutside={[Function]}
+                                enableOnClickOutside={[Function]}
+                                eventTypes={
+                                  Array [
+                                    "mousedown",
+                                    "touchstart",
+                                  ]
+                                }
+                                outsideClickIgnoreClass="ignore-react-onclickoutside"
+                                preventDefault={false}
+                                stopPropagation={false}
+                              >
+                                <StyledComponent
+                                  disableOnClickOutside={[Function]}
+                                  enableOnClickOutside={[Function]}
+                                  eventTypes={
+                                    Array [
+                                      "mousedown",
+                                      "touchstart",
+                                    ]
+                                  }
+                                  forwardedComponent={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "attrs": Array [],
+                                      "componentStyle": ComponentStyle {
+                                        "componentId": "sc-kAzzGY",
+                                        "isStatic": true,
+                                        "lastClassName": "dyRsxz",
+                                        "rules": Array [
+                                          "
   color: ",
-                                        "rgba(0,139,208,1)",
-                                        ";
+                                          "rgba(0,139,208,1)",
+                                          ";
   &:hover {
     color: ",
-                                        "rgba(106,176,226,1)",
-                                        ";
+                                          "rgba(106,176,226,1)",
+                                          ";
   }
 ",
-                                      ],
-                                    },
-                                    "displayName": "styled.div",
-                                    "foldedComponentIds": Array [],
-                                    "render": [Function],
-                                    "styledComponentId": "sc-kAzzGY",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
+                                        ],
+                                      },
+                                      "displayName": "styled.div",
+                                      "foldedComponentIds": Array [],
+                                      "render": [Function],
+                                      "styledComponentId": "sc-kAzzGY",
+                                      "target": "div",
+                                      "toString": [Function],
+                                      "warnTooManyClasses": [Function],
+                                      "withComponent": [Function],
+                                    }
                                   }
-                                }
-                                forwardedRef={null}
-                              >
-                                <div
-                                  className="sc-kAzzGY dyRsxz"
+                                  forwardedRef={null}
+                                  outsideClickIgnoreClass="ignore-react-onclickoutside"
+                                  preventDefault={false}
+                                  stopPropagation={false}
                                 >
-                                  <styled.div
-                                    onMouseDown={[Function]}
+                                  <div
+                                    className="sc-kAzzGY dyRsxz"
                                   >
-                                    <StyledComponent
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "sc-chPdSV",
-                                            "isStatic": true,
-                                            "lastClassName": "irvcZR",
-                                            "rules": Array [
-                                              "
+                                    <styled.div
+                                      onMouseDown={[Function]}
+                                    >
+                                      <StyledComponent
+                                        forwardedComponent={
+                                          Object {
+                                            "$$typeof": Symbol(react.forward_ref),
+                                            "attrs": Array [],
+                                            "componentStyle": ComponentStyle {
+                                              "componentId": "sc-chPdSV",
+                                              "isStatic": true,
+                                              "lastClassName": "irvcZR",
+                                              "rules": Array [
+                                                "
   padding-left: ",
-                                              "0.25rem",
-                                              ";
+                                                "0.25rem",
+                                                ";
   display: flex;
   align-items: center;
   cursor: pointer;
 ",
-                                            ],
-                                          },
-                                          "displayName": "styled.div",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "sc-chPdSV",
-                                          "target": "div",
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
+                                              ],
+                                            },
+                                            "displayName": "styled.div",
+                                            "foldedComponentIds": Array [],
+                                            "render": [Function],
+                                            "styledComponentId": "sc-chPdSV",
+                                            "target": "div",
+                                            "toString": [Function],
+                                            "warnTooManyClasses": [Function],
+                                            "withComponent": [Function],
+                                          }
                                         }
-                                      }
-                                      forwardedRef={null}
-                                      onMouseDown={[Function]}
-                                    >
-                                      <div
-                                        className="sc-chPdSV irvcZR"
+                                        forwardedRef={null}
                                         onMouseDown={[Function]}
                                       >
-                                        1
-                                        <Icon
-                                          name="ArrowDropDown"
-                                          size={1.5}
+                                        <div
+                                          className="sc-chPdSV irvcZR"
+                                          onMouseDown={[Function]}
                                         >
-                                          <styled.i>
-                                            <StyledComponent
-                                              forwardedComponent={
-                                                Object {
-                                                  "$$typeof": Symbol(react.forward_ref),
-                                                  "attrs": Array [],
-                                                  "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-bdVaJa",
-                                                    "isStatic": true,
-                                                    "lastClassName": "cIqOZO",
-                                                    "rules": Array [
-                                                      "
+                                          1
+                                          <Icon
+                                            name="ArrowDropDown"
+                                            size={1.5}
+                                          >
+                                            <styled.i>
+                                              <StyledComponent
+                                                forwardedComponent={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "attrs": Array [],
+                                                    "componentStyle": ComponentStyle {
+                                                      "componentId": "sc-bdVaJa",
+                                                      "isStatic": true,
+                                                      "lastClassName": "cIqOZO",
+                                                      "rules": Array [
+                                                        "
   display: inline-block;
 
   > svg {
     float: left;
   }
 ",
-                                                    ],
-                                                  },
-                                                  "displayName": "styled.i",
-                                                  "foldedComponentIds": Array [],
-                                                  "render": [Function],
-                                                  "styledComponentId": "sc-bdVaJa",
-                                                  "target": "i",
-                                                  "toString": [Function],
-                                                  "warnTooManyClasses": [Function],
-                                                  "withComponent": [Function],
-                                                }
-                                              }
-                                              forwardedRef={null}
-                                            >
-                                              <i
-                                                className="sc-bdVaJa cIqOZO"
-                                              >
-                                                <ArrowDropDown
-                                                  height="1.5em"
-                                                  style={
-                                                    Object {
-                                                      "fill": "currentColor",
-                                                      "stroke": undefined,
-                                                    }
+                                                      ],
+                                                    },
+                                                    "displayName": "styled.i",
+                                                    "foldedComponentIds": Array [],
+                                                    "render": [Function],
+                                                    "styledComponentId": "sc-bdVaJa",
+                                                    "target": "i",
+                                                    "toString": [Function],
+                                                    "warnTooManyClasses": [Function],
+                                                    "withComponent": [Function],
                                                   }
-                                                  viewBox="0 0 24 24"
-                                                  width="1.5em"
+                                                }
+                                                forwardedRef={null}
+                                              >
+                                                <i
+                                                  className="sc-bdVaJa cIqOZO"
                                                 >
-                                                  <svg
+                                                  <ArrowDropDown
                                                     height="1.5em"
                                                     style={
                                                       Object {
@@ -535,44 +577,30 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                                     viewBox="0 0 24 24"
                                                     width="1.5em"
                                                   >
-                                                    <path
-                                                      d="M7 10l5 5 5-5z"
-                                                    />
-                                                  </svg>
-                                                </ArrowDropDown>
-                                              </i>
-                                            </StyledComponent>
-                                          </styled.i>
-                                        </Icon>
-                                      </div>
-                                    </StyledComponent>
-                                  </styled.div>
-                                  <InteractiveList
-                                    autoFocus={true}
-                                    autoPosition={true}
-                                    customWrapper={[Function]}
-                                    data={
-                                      Array [
-                                        "1",
-                                      ]
-                                    }
-                                    eventTypes={
-                                      Array [
-                                        "mousedown",
-                                        "touchstart",
-                                      ]
-                                    }
-                                    excludeScrollbar={false}
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    open={false}
-                                    outsideClickIgnoreClass="ignore-react-onclickoutside"
-                                    preventDefault={false}
-                                    showTick={true}
-                                    stopPropagation={false}
-                                    value="1"
-                                  >
-                                    <InteractiveListInt
+                                                    <svg
+                                                      height="1.5em"
+                                                      style={
+                                                        Object {
+                                                          "fill": "currentColor",
+                                                          "stroke": undefined,
+                                                        }
+                                                      }
+                                                      viewBox="0 0 24 24"
+                                                      width="1.5em"
+                                                    >
+                                                      <path
+                                                        d="M7 10l5 5 5-5z"
+                                                      />
+                                                    </svg>
+                                                  </ArrowDropDown>
+                                                </i>
+                                              </StyledComponent>
+                                            </styled.i>
+                                          </Icon>
+                                        </div>
+                                      </StyledComponent>
+                                    </styled.div>
+                                    <InteractiveList
                                       autoFocus={true}
                                       autoPosition={true}
                                       customWrapper={[Function]}
@@ -581,16 +609,16 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                           "1",
                                         ]
                                       }
-                                      disableOnClickOutside={[Function]}
-                                      enableOnClickOutside={[Function]}
                                       eventTypes={
                                         Array [
                                           "mousedown",
                                           "touchstart",
                                         ]
                                       }
+                                      excludeScrollbar={false}
                                       onBlur={[Function]}
                                       onChange={[Function]}
+                                      onClickOutside={[Function]}
                                       open={false}
                                       outsideClickIgnoreClass="ignore-react-onclickoutside"
                                       preventDefault={false}
@@ -598,9 +626,15 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                       stopPropagation={false}
                                       value="1"
                                     >
-                                      <styled.div
+                                      <InteractiveListInt
                                         autoFocus={true}
                                         autoPosition={true}
+                                        customWrapper={[Function]}
+                                        data={
+                                          Array [
+                                            "1",
+                                          ]
+                                        }
                                         disableOnClickOutside={[Function]}
                                         enableOnClickOutside={[Function]}
                                         eventTypes={
@@ -609,14 +643,17 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                             "touchstart",
                                           ]
                                         }
-                                        onKeyDown={[Function]}
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onClickOutside={[Function]}
+                                        open={false}
                                         outsideClickIgnoreClass="ignore-react-onclickoutside"
                                         preventDefault={false}
                                         showTick={true}
                                         stopPropagation={false}
                                         value="1"
                                       >
-                                        <StyledComponent
+                                        <styled.div
                                           autoFocus={true}
                                           autoPosition={true}
                                           disableOnClickOutside={[Function]}
@@ -627,32 +664,6 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                               "touchstart",
                                             ]
                                           }
-                                          forwardedComponent={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "attrs": Array [],
-                                              "componentStyle": ComponentStyle {
-                                                "componentId": "sc-htoDjs",
-                                                "isStatic": true,
-                                                "lastClassName": "fJTDDB",
-                                                "rules": Array [
-                                                  "
-  position: relative;
-  outline: none;
-",
-                                                ],
-                                              },
-                                              "displayName": "styled.div",
-                                              "foldedComponentIds": Array [],
-                                              "render": [Function],
-                                              "styledComponentId": "sc-htoDjs",
-                                              "target": "div",
-                                              "toString": [Function],
-                                              "warnTooManyClasses": [Function],
-                                              "withComponent": [Function],
-                                            }
-                                          }
-                                          forwardedRef={[Function]}
                                           onKeyDown={[Function]}
                                           outsideClickIgnoreClass="ignore-react-onclickoutside"
                                           preventDefault={false}
@@ -660,85 +671,130 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                           stopPropagation={false}
                                           value="1"
                                         >
-                                          <div
+                                          <StyledComponent
                                             autoFocus={true}
-                                            className="sc-htoDjs fJTDDB"
+                                            autoPosition={true}
+                                            disableOnClickOutside={[Function]}
+                                            enableOnClickOutside={[Function]}
+                                            eventTypes={
+                                              Array [
+                                                "mousedown",
+                                                "touchstart",
+                                              ]
+                                            }
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-htoDjs",
+                                                  "isStatic": true,
+                                                  "lastClassName": "fJTDDB",
+                                                  "rules": Array [
+                                                    "
+  position: relative;
+  outline: none;
+",
+                                                  ],
+                                                },
+                                                "displayName": "styled.div",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-htoDjs",
+                                                "target": "div",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={[Function]}
                                             onKeyDown={[Function]}
+                                            outsideClickIgnoreClass="ignore-react-onclickoutside"
+                                            preventDefault={false}
+                                            showTick={true}
+                                            stopPropagation={false}
                                             value="1"
                                           >
-                                            <CustomWrapper
-                                              border={1}
-                                              direction={0}
-                                              open={false}
+                                            <div
+                                              autoFocus={true}
+                                              className="sc-htoDjs fJTDDB"
+                                              onKeyDown={[Function]}
+                                              value="1"
                                             >
-                                              <styled.div
+                                              <CustomWrapper
                                                 border={1}
                                                 direction={0}
                                                 open={false}
                                               >
-                                                <StyledComponent
+                                                <styled.div
                                                   border={1}
                                                   direction={0}
-                                                  forwardedComponent={
-                                                    Object {
-                                                      "$$typeof": Symbol(react.forward_ref),
-                                                      "attrs": Array [],
-                                                      "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-kgoBCf",
-                                                        "isStatic": false,
-                                                        "lastClassName": "jMucZi",
-                                                        "rules": Array [
-                                                          "
+                                                  open={false}
+                                                >
+                                                  <StyledComponent
+                                                    border={1}
+                                                    direction={0}
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-kgoBCf",
+                                                          "isStatic": false,
+                                                          "lastClassName": "jMucZi",
+                                                          "rules": Array [
+                                                            "
   position: absolute;
   border: solid 1px #dfe3e6;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   position: absolute;
   z-index: 2;
   top: ",
-                                                          [Function],
-                                                          "px;
+                                                            [Function],
+                                                            "px;
   transform: translateY(",
-                                                          [Function],
-                                                          "%);
+                                                            [Function],
+                                                            "%);
   background: ",
-                                                          "rgba(255,255,255,1)",
-                                                          ";
+                                                            "rgba(255,255,255,1)",
+                                                            ";
   border: 1px solid #dfe3e6;
   max-height: 50vh;
   overflow-y: auto;
 ",
-                                                        ],
-                                                      },
-                                                      "displayName": "styled.div",
-                                                      "foldedComponentIds": Array [],
-                                                      "render": [Function],
-                                                      "styledComponentId": "sc-kgoBCf",
-                                                      "target": "div",
-                                                      "toString": [Function],
-                                                      "warnTooManyClasses": [Function],
-                                                      "withComponent": [Function],
+                                                          ],
+                                                        },
+                                                        "displayName": "styled.div",
+                                                        "foldedComponentIds": Array [],
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-kgoBCf",
+                                                        "target": "div",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
                                                     }
-                                                  }
-                                                  forwardedRef={null}
-                                                  open={false}
-                                                >
-                                                  <div
-                                                    className="sc-kgoBCf jMucZi"
-                                                    direction={0}
+                                                    forwardedRef={null}
                                                     open={false}
-                                                  />
-                                                </StyledComponent>
-                                              </styled.div>
-                                            </CustomWrapper>
-                                          </div>
-                                        </StyledComponent>
-                                      </styled.div>
-                                    </InteractiveListInt>
-                                  </InteractiveList>
-                                </div>
-                              </StyledComponent>
-                            </styled.div>
-                          </SelectButton>
+                                                  >
+                                                    <div
+                                                      className="sc-kgoBCf jMucZi"
+                                                      direction={0}
+                                                      open={false}
+                                                    />
+                                                  </StyledComponent>
+                                                </styled.div>
+                                              </CustomWrapper>
+                                            </div>
+                                          </StyledComponent>
+                                        </styled.div>
+                                      </InteractiveListInt>
+                                    </InteractiveList>
+                                  </div>
+                                </StyledComponent>
+                              </styled.div>
+                            </SelectButtonInt>
+                          </OnClickOutside(SelectButtonInt)>
                           <styled.button
                             disabled={true}
                             onClick={[Function]}
@@ -1303,145 +1359,187 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                               </button>
                             </StyledComponent>
                           </styled.button>
-                          <SelectButton
+                          <OnClickOutside(SelectButtonInt)
                             data={
                               Array [
                                 "1",
                               ]
                             }
+                            eventTypes={
+                              Array [
+                                "mousedown",
+                                "touchstart",
+                              ]
+                            }
+                            excludeScrollbar={false}
                             onChange={[Function]}
+                            outsideClickIgnoreClass="ignore-react-onclickoutside"
+                            preventDefault={false}
+                            stopPropagation={false}
                             value="1"
                           >
-                            <styled.div>
-                              <StyledComponent
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-kAzzGY",
-                                      "isStatic": true,
-                                      "lastClassName": "dyRsxz",
-                                      "rules": Array [
-                                        "
+                            <SelectButtonInt
+                              data={
+                                Array [
+                                  "1",
+                                ]
+                              }
+                              disableOnClickOutside={[Function]}
+                              enableOnClickOutside={[Function]}
+                              eventTypes={
+                                Array [
+                                  "mousedown",
+                                  "touchstart",
+                                ]
+                              }
+                              onChange={[Function]}
+                              outsideClickIgnoreClass="ignore-react-onclickoutside"
+                              preventDefault={false}
+                              stopPropagation={false}
+                              value="1"
+                            >
+                              <styled.div
+                                disableOnClickOutside={[Function]}
+                                enableOnClickOutside={[Function]}
+                                eventTypes={
+                                  Array [
+                                    "mousedown",
+                                    "touchstart",
+                                  ]
+                                }
+                                outsideClickIgnoreClass="ignore-react-onclickoutside"
+                                preventDefault={false}
+                                stopPropagation={false}
+                              >
+                                <StyledComponent
+                                  disableOnClickOutside={[Function]}
+                                  enableOnClickOutside={[Function]}
+                                  eventTypes={
+                                    Array [
+                                      "mousedown",
+                                      "touchstart",
+                                    ]
+                                  }
+                                  forwardedComponent={
+                                    Object {
+                                      "$$typeof": Symbol(react.forward_ref),
+                                      "attrs": Array [],
+                                      "componentStyle": ComponentStyle {
+                                        "componentId": "sc-kAzzGY",
+                                        "isStatic": true,
+                                        "lastClassName": "dyRsxz",
+                                        "rules": Array [
+                                          "
   color: ",
-                                        "rgba(0,139,208,1)",
-                                        ";
+                                          "rgba(0,139,208,1)",
+                                          ";
   &:hover {
     color: ",
-                                        "rgba(106,176,226,1)",
-                                        ";
+                                          "rgba(106,176,226,1)",
+                                          ";
   }
 ",
-                                      ],
-                                    },
-                                    "displayName": "styled.div",
-                                    "foldedComponentIds": Array [],
-                                    "render": [Function],
-                                    "styledComponentId": "sc-kAzzGY",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
+                                        ],
+                                      },
+                                      "displayName": "styled.div",
+                                      "foldedComponentIds": Array [],
+                                      "render": [Function],
+                                      "styledComponentId": "sc-kAzzGY",
+                                      "target": "div",
+                                      "toString": [Function],
+                                      "warnTooManyClasses": [Function],
+                                      "withComponent": [Function],
+                                    }
                                   }
-                                }
-                                forwardedRef={null}
-                              >
-                                <div
-                                  className="sc-kAzzGY dyRsxz"
+                                  forwardedRef={null}
+                                  outsideClickIgnoreClass="ignore-react-onclickoutside"
+                                  preventDefault={false}
+                                  stopPropagation={false}
                                 >
-                                  <styled.div
-                                    onMouseDown={[Function]}
+                                  <div
+                                    className="sc-kAzzGY dyRsxz"
                                   >
-                                    <StyledComponent
-                                      forwardedComponent={
-                                        Object {
-                                          "$$typeof": Symbol(react.forward_ref),
-                                          "attrs": Array [],
-                                          "componentStyle": ComponentStyle {
-                                            "componentId": "sc-chPdSV",
-                                            "isStatic": true,
-                                            "lastClassName": "irvcZR",
-                                            "rules": Array [
-                                              "
+                                    <styled.div
+                                      onMouseDown={[Function]}
+                                    >
+                                      <StyledComponent
+                                        forwardedComponent={
+                                          Object {
+                                            "$$typeof": Symbol(react.forward_ref),
+                                            "attrs": Array [],
+                                            "componentStyle": ComponentStyle {
+                                              "componentId": "sc-chPdSV",
+                                              "isStatic": true,
+                                              "lastClassName": "irvcZR",
+                                              "rules": Array [
+                                                "
   padding-left: ",
-                                              "0.25rem",
-                                              ";
+                                                "0.25rem",
+                                                ";
   display: flex;
   align-items: center;
   cursor: pointer;
 ",
-                                            ],
-                                          },
-                                          "displayName": "styled.div",
-                                          "foldedComponentIds": Array [],
-                                          "render": [Function],
-                                          "styledComponentId": "sc-chPdSV",
-                                          "target": "div",
-                                          "toString": [Function],
-                                          "warnTooManyClasses": [Function],
-                                          "withComponent": [Function],
+                                              ],
+                                            },
+                                            "displayName": "styled.div",
+                                            "foldedComponentIds": Array [],
+                                            "render": [Function],
+                                            "styledComponentId": "sc-chPdSV",
+                                            "target": "div",
+                                            "toString": [Function],
+                                            "warnTooManyClasses": [Function],
+                                            "withComponent": [Function],
+                                          }
                                         }
-                                      }
-                                      forwardedRef={null}
-                                      onMouseDown={[Function]}
-                                    >
-                                      <div
-                                        className="sc-chPdSV irvcZR"
+                                        forwardedRef={null}
                                         onMouseDown={[Function]}
                                       >
-                                        1
-                                        <Icon
-                                          name="ArrowDropDown"
-                                          size={1.5}
+                                        <div
+                                          className="sc-chPdSV irvcZR"
+                                          onMouseDown={[Function]}
                                         >
-                                          <styled.i>
-                                            <StyledComponent
-                                              forwardedComponent={
-                                                Object {
-                                                  "$$typeof": Symbol(react.forward_ref),
-                                                  "attrs": Array [],
-                                                  "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-bdVaJa",
-                                                    "isStatic": true,
-                                                    "lastClassName": "cIqOZO",
-                                                    "rules": Array [
-                                                      "
+                                          1
+                                          <Icon
+                                            name="ArrowDropDown"
+                                            size={1.5}
+                                          >
+                                            <styled.i>
+                                              <StyledComponent
+                                                forwardedComponent={
+                                                  Object {
+                                                    "$$typeof": Symbol(react.forward_ref),
+                                                    "attrs": Array [],
+                                                    "componentStyle": ComponentStyle {
+                                                      "componentId": "sc-bdVaJa",
+                                                      "isStatic": true,
+                                                      "lastClassName": "cIqOZO",
+                                                      "rules": Array [
+                                                        "
   display: inline-block;
 
   > svg {
     float: left;
   }
 ",
-                                                    ],
-                                                  },
-                                                  "displayName": "styled.i",
-                                                  "foldedComponentIds": Array [],
-                                                  "render": [Function],
-                                                  "styledComponentId": "sc-bdVaJa",
-                                                  "target": "i",
-                                                  "toString": [Function],
-                                                  "warnTooManyClasses": [Function],
-                                                  "withComponent": [Function],
-                                                }
-                                              }
-                                              forwardedRef={null}
-                                            >
-                                              <i
-                                                className="sc-bdVaJa cIqOZO"
-                                              >
-                                                <ArrowDropDown
-                                                  height="1.5em"
-                                                  style={
-                                                    Object {
-                                                      "fill": "currentColor",
-                                                      "stroke": undefined,
-                                                    }
+                                                      ],
+                                                    },
+                                                    "displayName": "styled.i",
+                                                    "foldedComponentIds": Array [],
+                                                    "render": [Function],
+                                                    "styledComponentId": "sc-bdVaJa",
+                                                    "target": "i",
+                                                    "toString": [Function],
+                                                    "warnTooManyClasses": [Function],
+                                                    "withComponent": [Function],
                                                   }
-                                                  viewBox="0 0 24 24"
-                                                  width="1.5em"
+                                                }
+                                                forwardedRef={null}
+                                              >
+                                                <i
+                                                  className="sc-bdVaJa cIqOZO"
                                                 >
-                                                  <svg
+                                                  <ArrowDropDown
                                                     height="1.5em"
                                                     style={
                                                       Object {
@@ -1452,44 +1550,30 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                                     viewBox="0 0 24 24"
                                                     width="1.5em"
                                                   >
-                                                    <path
-                                                      d="M7 10l5 5 5-5z"
-                                                    />
-                                                  </svg>
-                                                </ArrowDropDown>
-                                              </i>
-                                            </StyledComponent>
-                                          </styled.i>
-                                        </Icon>
-                                      </div>
-                                    </StyledComponent>
-                                  </styled.div>
-                                  <InteractiveList
-                                    autoFocus={true}
-                                    autoPosition={true}
-                                    customWrapper={[Function]}
-                                    data={
-                                      Array [
-                                        "1",
-                                      ]
-                                    }
-                                    eventTypes={
-                                      Array [
-                                        "mousedown",
-                                        "touchstart",
-                                      ]
-                                    }
-                                    excludeScrollbar={false}
-                                    onBlur={[Function]}
-                                    onChange={[Function]}
-                                    open={false}
-                                    outsideClickIgnoreClass="ignore-react-onclickoutside"
-                                    preventDefault={false}
-                                    showTick={true}
-                                    stopPropagation={false}
-                                    value="1"
-                                  >
-                                    <InteractiveListInt
+                                                    <svg
+                                                      height="1.5em"
+                                                      style={
+                                                        Object {
+                                                          "fill": "currentColor",
+                                                          "stroke": undefined,
+                                                        }
+                                                      }
+                                                      viewBox="0 0 24 24"
+                                                      width="1.5em"
+                                                    >
+                                                      <path
+                                                        d="M7 10l5 5 5-5z"
+                                                      />
+                                                    </svg>
+                                                  </ArrowDropDown>
+                                                </i>
+                                              </StyledComponent>
+                                            </styled.i>
+                                          </Icon>
+                                        </div>
+                                      </StyledComponent>
+                                    </styled.div>
+                                    <InteractiveList
                                       autoFocus={true}
                                       autoPosition={true}
                                       customWrapper={[Function]}
@@ -1498,16 +1582,16 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                           "1",
                                         ]
                                       }
-                                      disableOnClickOutside={[Function]}
-                                      enableOnClickOutside={[Function]}
                                       eventTypes={
                                         Array [
                                           "mousedown",
                                           "touchstart",
                                         ]
                                       }
+                                      excludeScrollbar={false}
                                       onBlur={[Function]}
                                       onChange={[Function]}
+                                      onClickOutside={[Function]}
                                       open={false}
                                       outsideClickIgnoreClass="ignore-react-onclickoutside"
                                       preventDefault={false}
@@ -1515,9 +1599,15 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                       stopPropagation={false}
                                       value="1"
                                     >
-                                      <styled.div
+                                      <InteractiveListInt
                                         autoFocus={true}
                                         autoPosition={true}
+                                        customWrapper={[Function]}
+                                        data={
+                                          Array [
+                                            "1",
+                                          ]
+                                        }
                                         disableOnClickOutside={[Function]}
                                         enableOnClickOutside={[Function]}
                                         eventTypes={
@@ -1526,14 +1616,17 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                             "touchstart",
                                           ]
                                         }
-                                        onKeyDown={[Function]}
+                                        onBlur={[Function]}
+                                        onChange={[Function]}
+                                        onClickOutside={[Function]}
+                                        open={false}
                                         outsideClickIgnoreClass="ignore-react-onclickoutside"
                                         preventDefault={false}
                                         showTick={true}
                                         stopPropagation={false}
                                         value="1"
                                       >
-                                        <StyledComponent
+                                        <styled.div
                                           autoFocus={true}
                                           autoPosition={true}
                                           disableOnClickOutside={[Function]}
@@ -1544,32 +1637,6 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                               "touchstart",
                                             ]
                                           }
-                                          forwardedComponent={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "attrs": Array [],
-                                              "componentStyle": ComponentStyle {
-                                                "componentId": "sc-htoDjs",
-                                                "isStatic": true,
-                                                "lastClassName": "fJTDDB",
-                                                "rules": Array [
-                                                  "
-  position: relative;
-  outline: none;
-",
-                                                ],
-                                              },
-                                              "displayName": "styled.div",
-                                              "foldedComponentIds": Array [],
-                                              "render": [Function],
-                                              "styledComponentId": "sc-htoDjs",
-                                              "target": "div",
-                                              "toString": [Function],
-                                              "warnTooManyClasses": [Function],
-                                              "withComponent": [Function],
-                                            }
-                                          }
-                                          forwardedRef={[Function]}
                                           onKeyDown={[Function]}
                                           outsideClickIgnoreClass="ignore-react-onclickoutside"
                                           preventDefault={false}
@@ -1577,85 +1644,130 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                           stopPropagation={false}
                                           value="1"
                                         >
-                                          <div
+                                          <StyledComponent
                                             autoFocus={true}
-                                            className="sc-htoDjs fJTDDB"
+                                            autoPosition={true}
+                                            disableOnClickOutside={[Function]}
+                                            enableOnClickOutside={[Function]}
+                                            eventTypes={
+                                              Array [
+                                                "mousedown",
+                                                "touchstart",
+                                              ]
+                                            }
+                                            forwardedComponent={
+                                              Object {
+                                                "$$typeof": Symbol(react.forward_ref),
+                                                "attrs": Array [],
+                                                "componentStyle": ComponentStyle {
+                                                  "componentId": "sc-htoDjs",
+                                                  "isStatic": true,
+                                                  "lastClassName": "fJTDDB",
+                                                  "rules": Array [
+                                                    "
+  position: relative;
+  outline: none;
+",
+                                                  ],
+                                                },
+                                                "displayName": "styled.div",
+                                                "foldedComponentIds": Array [],
+                                                "render": [Function],
+                                                "styledComponentId": "sc-htoDjs",
+                                                "target": "div",
+                                                "toString": [Function],
+                                                "warnTooManyClasses": [Function],
+                                                "withComponent": [Function],
+                                              }
+                                            }
+                                            forwardedRef={[Function]}
                                             onKeyDown={[Function]}
+                                            outsideClickIgnoreClass="ignore-react-onclickoutside"
+                                            preventDefault={false}
+                                            showTick={true}
+                                            stopPropagation={false}
                                             value="1"
                                           >
-                                            <CustomWrapper
-                                              border={1}
-                                              direction={0}
-                                              open={false}
+                                            <div
+                                              autoFocus={true}
+                                              className="sc-htoDjs fJTDDB"
+                                              onKeyDown={[Function]}
+                                              value="1"
                                             >
-                                              <styled.div
+                                              <CustomWrapper
                                                 border={1}
                                                 direction={0}
                                                 open={false}
                                               >
-                                                <StyledComponent
+                                                <styled.div
                                                   border={1}
                                                   direction={0}
-                                                  forwardedComponent={
-                                                    Object {
-                                                      "$$typeof": Symbol(react.forward_ref),
-                                                      "attrs": Array [],
-                                                      "componentStyle": ComponentStyle {
-                                                        "componentId": "sc-kgoBCf",
-                                                        "isStatic": false,
-                                                        "lastClassName": "jMucZi",
-                                                        "rules": Array [
-                                                          "
+                                                  open={false}
+                                                >
+                                                  <StyledComponent
+                                                    border={1}
+                                                    direction={0}
+                                                    forwardedComponent={
+                                                      Object {
+                                                        "$$typeof": Symbol(react.forward_ref),
+                                                        "attrs": Array [],
+                                                        "componentStyle": ComponentStyle {
+                                                          "componentId": "sc-kgoBCf",
+                                                          "isStatic": false,
+                                                          "lastClassName": "jMucZi",
+                                                          "rules": Array [
+                                                            "
   position: absolute;
   border: solid 1px #dfe3e6;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   position: absolute;
   z-index: 2;
   top: ",
-                                                          [Function],
-                                                          "px;
+                                                            [Function],
+                                                            "px;
   transform: translateY(",
-                                                          [Function],
-                                                          "%);
+                                                            [Function],
+                                                            "%);
   background: ",
-                                                          "rgba(255,255,255,1)",
-                                                          ";
+                                                            "rgba(255,255,255,1)",
+                                                            ";
   border: 1px solid #dfe3e6;
   max-height: 50vh;
   overflow-y: auto;
 ",
-                                                        ],
-                                                      },
-                                                      "displayName": "styled.div",
-                                                      "foldedComponentIds": Array [],
-                                                      "render": [Function],
-                                                      "styledComponentId": "sc-kgoBCf",
-                                                      "target": "div",
-                                                      "toString": [Function],
-                                                      "warnTooManyClasses": [Function],
-                                                      "withComponent": [Function],
+                                                          ],
+                                                        },
+                                                        "displayName": "styled.div",
+                                                        "foldedComponentIds": Array [],
+                                                        "render": [Function],
+                                                        "styledComponentId": "sc-kgoBCf",
+                                                        "target": "div",
+                                                        "toString": [Function],
+                                                        "warnTooManyClasses": [Function],
+                                                        "withComponent": [Function],
+                                                      }
                                                     }
-                                                  }
-                                                  forwardedRef={null}
-                                                  open={false}
-                                                >
-                                                  <div
-                                                    className="sc-kgoBCf jMucZi"
-                                                    direction={0}
+                                                    forwardedRef={null}
                                                     open={false}
-                                                  />
-                                                </StyledComponent>
-                                              </styled.div>
-                                            </CustomWrapper>
-                                          </div>
-                                        </StyledComponent>
-                                      </styled.div>
-                                    </InteractiveListInt>
-                                  </InteractiveList>
-                                </div>
-                              </StyledComponent>
-                            </styled.div>
-                          </SelectButton>
+                                                  >
+                                                    <div
+                                                      className="sc-kgoBCf jMucZi"
+                                                      direction={0}
+                                                      open={false}
+                                                    />
+                                                  </StyledComponent>
+                                                </styled.div>
+                                              </CustomWrapper>
+                                            </div>
+                                          </StyledComponent>
+                                        </styled.div>
+                                      </InteractiveListInt>
+                                    </InteractiveList>
+                                  </div>
+                                </StyledComponent>
+                              </styled.div>
+                            </SelectButtonInt>
+                          </OnClickOutside(SelectButtonInt)>
                           <styled.button
                             disabled={true}
                             onClick={[Function]}
