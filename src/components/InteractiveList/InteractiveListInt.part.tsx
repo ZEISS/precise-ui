@@ -194,7 +194,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
     };
   }
 
-  handleClickOutside = () => {
+  private defaultHandleClickOutside = () => {
     const { open, onBlur } = this.props;
 
     if (open) {
@@ -205,6 +205,12 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       this.setState({
         selected: undefined,
       });
+    }
+  };
+
+  handleClickOutside = () => {
+    if (this.props.open) {
+      this.props.onClickOutside ? this.props.onClickOutside() : this.defaultHandleClickOutside();
     }
   };
 
@@ -488,6 +494,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       indices: _1,
       disabled: _2,
       onKeyDown: _3,
+      onClickOutside: _4,
       data = [],
       theme,
       borderless = false,
