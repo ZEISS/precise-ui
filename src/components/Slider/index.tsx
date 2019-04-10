@@ -69,6 +69,10 @@ export interface SliderProps extends InputProps<number | Array<number>> {
    * Emitted once the slider's value changed.
    */
   onChange?(e: SliderChangeEvent): void;
+  /**
+   * Emitted once the slider's value changing done and value is ready.
+   */
+  onChangeDone?(e: SliderChangeEvent): void;
 }
 
 export interface SliderState {
@@ -260,7 +264,7 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
   }
 
   private setValue(position: number, knob: number) {
-    const { onChange, maximum = 1, minimum = 0, step = 0, disabled, form, name = '' } = this.props;
+    const { onChange, onChangeDone, maximum = 1, minimum = 0, step = 0, disabled, form, name = '' } = this.props;
 
     if (!disabled) {
       const current = this.state.value;
@@ -285,16 +289,24 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
         }
       }
 
-      this.setState({
-        active: knob,
-      });
+      const event: SliderChangeEvent = {
+        value: selected,
+        index: knob - 1,
+        type: multi ? 'multi' : 'single',
+      };
 
       if (valid && typeof onChange === 'function') {
-        onChange({
-          value: selected,
-          index: knob - 1,
-          type: multi ? 'multi' : 'single',
+        onChange(event);
+      }
+
+      if (knob !== this.state.active) {
+        this.setState({
+          active: knob,
         });
+
+        if (!knob && valid && typeof onChangeDone === 'function') {
+          onChangeDone(event);
+        }
       }
     }
   }
@@ -392,7 +404,8 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
       defaultValue: _2,
       disabled,
       onChange: _3,
-      margin: _4,
+      onChangeDone: _4,
+      margin: _5,
       step,
       minimum = 0,
       maximum = 1,
