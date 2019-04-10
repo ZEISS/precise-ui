@@ -9,6 +9,7 @@
 - Remove disabled attribute from HTML element of `InteractiveSurface`
 - Bugfix: Close `DropdownField` if other one was opened (#44)
 - Bugfix: Fixed crash of `Rating` component (#69)
+- Added `onChangeDone` event to `Slider` component
 
 ## 0.5.0
 
