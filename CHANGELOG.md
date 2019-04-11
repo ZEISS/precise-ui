@@ -5,7 +5,7 @@
 - `Flyout` fixed compatibility with IE11
 - `Headline` styles update
 - Updated label in `Modal`
-- Added two new icons (Cancel & ViewColumn)
+- Added new icons
 - Remove disabled attribute from HTML element of `InteractiveSurface`
 - Bugfix: Close `DropdownField` if other one was opened (#44)
 - Bugfix: Fixed crash of `Rating` component (#69)
