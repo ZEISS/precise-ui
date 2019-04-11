@@ -83,6 +83,7 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
     em.on(FileUploadActions.uploadFailure, this.onChange);
     em.on(FileUploadActions.showUploads, this.showDetails);
     em.on(FileUploadActions.clearUploads, this.onClear);
+    em.on(FileUploadActions.deleteUploads, this.onDelete);
     eventManagers.push(em);
   }
 
@@ -94,6 +95,7 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
     em.off(FileUploadActions.uploadFailure, this.onChange);
     em.off(FileUploadActions.showUploads, this.showDetails);
     em.off(FileUploadActions.clearUploads, this.onClear);
+    em.off(FileUploadActions.deleteUploads, this.onDelete);
     eventManagers.splice(eventManagers.lastIndexOf(em), 1);
   }
 
