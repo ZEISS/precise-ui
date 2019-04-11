@@ -49,6 +49,30 @@ export const AccountCircle = <SvgIconConstructor>function(props: SvgIconProps) {
 AccountCircle.displayName = 'AccountCircle';
 AccountCircle.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Announcement = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d: 'M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z',
+    }),
+  );
+};
+
+Announcement.displayName = 'Announcement';
+Announcement.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Bookmark = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', { d: 'M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z' }),
+  );
+};
+
+Bookmark.displayName = 'Bookmark';
+Bookmark.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Cached = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -113,6 +137,20 @@ export const Delete = <SvgIconConstructor>function(props: SvgIconProps) {
 Delete.displayName = 'Delete';
 Delete.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Description = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z',
+    }),
+  );
+};
+
+Description.displayName = 'Description';
+Description.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Done = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -123,6 +161,20 @@ export const Done = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Done.displayName = 'Done';
 Done.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Event = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z',
+    }),
+  );
+};
+
+Event.displayName = 'Event';
+Event.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Favorite = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -178,6 +230,13 @@ export const HelpOutline = <SvgIconConstructor>function(props: SvgIconProps) {
 
 HelpOutline.displayName = 'HelpOutline';
 HelpOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Home = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement('svg', props, React.createElement('path', { d: 'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z' }));
+};
+
+Home.displayName = 'Home';
+Home.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Info = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -384,6 +443,20 @@ export const Update = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Update.displayName = 'Update';
 Update.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const VerifiedUser = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z',
+    }),
+  );
+};
+
+VerifiedUser.displayName = 'VerifiedUser';
+VerifiedUser.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const ViewColumn = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -641,6 +714,20 @@ export const BorderClear = <SvgIconConstructor>function(props: SvgIconProps) {
 BorderClear.displayName = 'BorderClear';
 BorderClear.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const CreateNewFolder = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M20 6h-8l-2-2H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-1 8h-3v3h-2v-3h-3v-2h3V9h2v3h3v2z',
+    }),
+  );
+};
+
+CreateNewFolder.displayName = 'CreateNewFolder';
+CreateNewFolder.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const FileDownload = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -658,6 +745,46 @@ export const FileUpload = <SvgIconConstructor>function(props: SvgIconProps) {
 
 FileUpload.displayName = 'FileUpload';
 FileUpload.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Folder = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d: 'M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z',
+    }),
+  );
+};
+
+Folder.displayName = 'Folder';
+Folder.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const FolderOpen = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d: 'M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z',
+    }),
+  );
+};
+
+FolderOpen.displayName = 'FolderOpen';
+FolderOpen.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const FolderShared = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z',
+    }),
+  );
+};
+
+FolderShared.displayName = 'FolderShared';
+FolderShared.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const KeyboardArrowDown = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
