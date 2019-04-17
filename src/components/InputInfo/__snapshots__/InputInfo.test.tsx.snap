@@ -503,7 +503,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-jzJRlG",
                                   "isStatic": false,
-                                  "lastClassName": "bSfnqi",
+                                  "lastClassName": "gHloTz",
                                   "rules": Array [
                                     [Function],
                                   ],

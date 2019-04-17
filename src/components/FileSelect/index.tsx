@@ -35,6 +35,7 @@ export interface FileSelectProps extends InputProps<Array<File>> {
 
 export interface FileSelectState {
   value: Array<File>;
+  error?: React.ReactChild;
   controlled: boolean;
   previews: Array<FileImagePreview>;
 }
@@ -63,6 +64,7 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
       value,
       controlled: props.value !== undefined,
       previews: [],
+      error: props.error,
     };
   }
 
@@ -91,6 +93,7 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
       this.setState(() => ({
         value: e.value || [],
         previews: [],
+        error: e.error,
       }));
     }
   }
@@ -232,14 +235,13 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
       defaultValue: _1,
       disabled,
       multiple,
-      error,
       info,
       onChange: _2,
       preview: _3,
       onOpen: _4,
       ...props
     } = this.props;
-    const { value } = this.state;
+    const { value, error } = this.state;
 
     return (
       <div {...props}>

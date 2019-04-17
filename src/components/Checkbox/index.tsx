@@ -19,6 +19,7 @@ export interface CheckboxProps extends InputProps<boolean> {
 
 export interface CheckboxState {
   value: boolean;
+  error?: React.ReactChild;
   controlled: boolean;
 }
 
@@ -86,6 +87,7 @@ class CheckboxInt extends React.PureComponent<CheckboxProps & FormContextProps, 
     this.state = {
       controlled: typeof props.value !== 'undefined',
       value: props.value || props.defaultValue || false,
+      error: props.error,
     };
   }
 
@@ -93,6 +95,7 @@ class CheckboxInt extends React.PureComponent<CheckboxProps & FormContextProps, 
     if (this.state.controlled) {
       this.setState({
         value: nextProps.value || false,
+        error: nextProps.error,
       });
     }
   }
@@ -163,8 +166,8 @@ class CheckboxInt extends React.PureComponent<CheckboxProps & FormContextProps, 
   };
 
   render() {
-    const { children, disabled, theme, value: _0, defaultValue: _1, onChange: _2, info, error, ...props } = this.props;
-    const { value } = this.state;
+    const { children, disabled, theme, value: _0, defaultValue: _1, onChange: _2, info, ...props } = this.props;
+    const { value, error } = this.state;
     const containerProps = {
       ...props,
       theme,

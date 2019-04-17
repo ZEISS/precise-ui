@@ -75,6 +75,7 @@ export interface ColorPickerProps extends InputProps<FullColor | RgbaColor | str
 export interface ColorPickerState {
   controlled: boolean;
   value: FullColor;
+  error?: React.ReactChild;
   base: RgbaColor;
   active: boolean;
 }
@@ -206,6 +207,7 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
         v: hsv.v,
       },
       base,
+      error: props.error,
     };
   }
 
@@ -221,6 +223,7 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
           s: hsv.s,
           v: hsv.v,
         },
+        error: nextProps.error,
         base,
       });
     }
@@ -338,7 +341,7 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
   };
 
   render() {
-    const { value, active, base } = this.state;
+    const { value, active, base, error } = this.state;
     const {
       defaultValue: _0,
       value: _1,
@@ -347,7 +350,6 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
       hideBar,
       width = '100%',
       height = '200px',
-      error,
       info,
       ...props
     } = this.props;

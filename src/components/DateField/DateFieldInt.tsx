@@ -59,6 +59,7 @@ export interface DateFieldState {
   openControlled: boolean;
   value: string;
   date: Date;
+  error?: React.ReactChild;
 }
 
 export interface StyledCalendarCell {
@@ -230,6 +231,7 @@ export class DateFieldInt extends React.Component<DateFieldProps & FormContextPr
       open: props.open || false,
       date,
       value,
+      error: props.error,
     };
   }
 
@@ -237,6 +239,7 @@ export class DateFieldInt extends React.Component<DateFieldProps & FormContextPr
     if (this.state.valueControlled) {
       this.setState({
         value: nextProps.value || '',
+        error: nextProps.error,
       });
     }
 
@@ -558,18 +561,19 @@ export class DateFieldInt extends React.Component<DateFieldProps & FormContextPr
       weekDays,
       ...props
     } = this.props;
-    const { open, value } = this.state;
+    const { open, value, error } = this.state;
     const img = <Icon name="DateRange" color={tuna} size="22px" />;
 
     return (
       <DateFieldContainer>
         <TextField
-          value={value}
+          {...props}
           onChange={this.changeDate}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
           icon={img}
-          {...props}
+          value={value}
+          error={error}
         />
         {open && (
           <CalendarView tabIndex={0} onFocus={this.handleFocus} onBlur={this.handleBlur}>

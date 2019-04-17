@@ -197,6 +197,7 @@ function getMultipleContent(item: string | DropdownFieldItem, theme?: any) {
 
 interface DropdownState {
   value: Array<number>;
+  error?: React.ReactChild;
   open: boolean;
   controlled: boolean;
 }
@@ -218,6 +219,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
       value: getIndices(data, value, props.multiple),
       open: false,
       controlled: props.value !== undefined,
+      error: props.error,
     };
   }
 
@@ -245,6 +247,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
       const value = nextProps.value !== undefined ? nextProps.value : [];
       this.setState({
         value: getIndices(data, value, nextProps.multiple),
+        error: nextProps.error,
       });
     }
   }
@@ -374,11 +377,10 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
       disabled,
       multiple,
       info,
-      error,
       onChange,
       ...other
     } = this.props;
-    const { open: openState, value } = this.state;
+    const { open: openState, value, error } = this.state;
     const open = openState && !disabled;
     const getContent = multiple ? getMultipleContent : getSingleContent;
     const hasValue = !!value.length;
