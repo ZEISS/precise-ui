@@ -1155,8 +1155,11 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
   }
   error="You need to select a field"
 >
-  <styled.div>
+  <styled.div
+    error="You need to select a field"
+  >
     <StyledComponent
+      error="You need to select a field"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
@@ -1830,8 +1833,11 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
   }
   error="You need to select a field"
 >
-  <styled.div>
+  <styled.div
+    error="You need to select a field"
+  >
     <StyledComponent
+      error="You need to select a field"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),

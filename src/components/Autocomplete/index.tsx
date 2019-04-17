@@ -52,6 +52,7 @@ export interface AutocompleteState {
   focus: boolean;
   open: boolean;
   value: string;
+  error?: React.ReactChild;
 }
 
 const AutocompleteWrapper = styled.div`
@@ -113,6 +114,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       open: false,
       listFocus: false,
       focus: false,
+      error: props.error,
     };
   }
 
@@ -120,6 +122,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
     if (this.state.controlled) {
       this.setState({
         value: nextProps.value || '',
+        error: nextProps.error,
       });
     }
   }
@@ -279,12 +282,12 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       inputRef: _7,
       ...props
     } = this.props;
-    const { open, listFocus, value } = this.state;
+    const { open, listFocus, value, error } = this.state;
 
     return (
       <div onKeyDown={this.handleKeyDown} onFocus={this.handleFocus} onBlur={this.handleBlur}>
         <AutocompleteWrapper>
-          <TextField onChange={this.changed} clearable value={value} inputRef={this.setNode} {...props} />
+          <TextField {...props} onChange={this.changed} clearable inputRef={this.setNode} value={value} error={error} />
           {open &&
             (suggestions.length || noSuggestionsMessage ? (
               <InteractiveList

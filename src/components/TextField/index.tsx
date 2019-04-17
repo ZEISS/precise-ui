@@ -52,6 +52,7 @@ export interface TextFieldState {
   focused: boolean;
   reveal: boolean;
   value: string;
+  error?: React.ReactChild;
 }
 
 interface TextFieldAreaProps {
@@ -121,6 +122,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
       reveal: false,
       controlled: props.value !== undefined,
       value: props.value || props.defaultValue || '',
+      error: props.error,
     };
   }
 
@@ -128,6 +130,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
     if (this.state.controlled) {
       this.setState({
         value: nextProps.value || '',
+        error: nextProps.error,
       });
     }
   }
@@ -237,7 +240,6 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
       resizable = false,
       disabled,
       placeholder,
-      error,
       info,
       label,
       clearable,
@@ -252,7 +254,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
       inputRef: _6,
       ...rest
     } = this.props;
-    const { focused, value } = this.state;
+    const { focused, value, error } = this.state;
     const rows = typeof multiline === 'number' ? multiline : undefined;
     const border = getTextFieldBorderType(borderless, !!error, focused);
     const hasValue = !!value;

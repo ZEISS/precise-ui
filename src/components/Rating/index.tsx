@@ -32,6 +32,7 @@ export interface RatingProps extends InputProps<number> {
 export interface RatingState {
   controlled: boolean;
   value: number;
+  error?: React.ReactChild;
   hover: number;
   changers: Array<() => void>;
   hovers: Array<() => void>;
@@ -139,6 +140,7 @@ class RatingInt extends React.Component<RatingProps & FormContextProps, RatingSt
     this.state = {
       controlled: value !== undefined,
       value: value || defaultValue || 0,
+      error: props.error,
       hover: -1,
       changers,
       hovers,
@@ -149,6 +151,7 @@ class RatingInt extends React.Component<RatingProps & FormContextProps, RatingSt
     if (this.state.controlled) {
       this.setState({
         value: nextProps.value || 0,
+        error: nextProps.error,
       });
     }
   }

@@ -108,6 +108,7 @@ const CloseIcon: React.SFC<CloseIconProps> = ({ theme, onClick }) => (
 export interface TagBuilderState {
   inputValue: string;
   value: Array<string>;
+  error?: React.ReactChild;
   focused: boolean;
   controlled: boolean;
   inputPosition?: number;
@@ -127,6 +128,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
       controlled: props.value !== undefined,
       focused: false,
       valid: true,
+      error: props.error,
     };
   }
 
@@ -137,6 +139,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     if (controlled && value !== undefined) {
       this.setState({
         value: [...value],
+        error: nextProps.error,
       });
     }
   }
@@ -358,8 +361,8 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
   };
 
   render() {
-    const { tagRenderer, error, info, disabled, borderless, theme, label, placeholder } = this.props;
-    const { value, inputValue, focused, valid } = this.state;
+    const { tagRenderer, info, disabled, borderless, theme, label, placeholder } = this.props;
+    const { value, inputValue, focused, valid, error } = this.state;
     const { inputPosition = value.length } = this.state;
     const border = getTextFieldBorderType(borderless, !!error, focused);
     const renderer = tagRenderer || this.renderTag;

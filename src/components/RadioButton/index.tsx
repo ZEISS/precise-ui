@@ -52,6 +52,7 @@ export interface RadioButtonIntProps extends RadioButtonProps {
 
 export interface RadioButtonIntState {
   value: boolean;
+  error?: React.ReactChild;
   controlled: boolean;
 }
 
@@ -145,6 +146,7 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
     this.state = {
       controlled: props.value !== undefined,
       value: props.value || props.defaultValue || false,
+      error: props.error,
     };
   }
 
@@ -152,6 +154,7 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
     if (this.state.controlled) {
       this.setState({
         value: nextProps.value || false,
+        error: nextProps.error,
       });
     }
   }
@@ -254,10 +257,9 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
       group: _3,
       form: _4,
       name: _5,
-      error,
       ...props
     } = this.props;
-    const { value } = this.state;
+    const { value, error } = this.state;
     const containerProps = {
       ...props,
       theme,

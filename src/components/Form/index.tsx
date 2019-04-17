@@ -10,6 +10,10 @@ export interface FormSubmitEvent {
    */
   data: FormValuesData;
   /**
+   * Validation errors
+   */
+  errors?: Array<FormValidationError>;
+  /**
    * Indicates whether the data has changed from the initial state.
    */
   changed: boolean;
@@ -30,7 +34,12 @@ export interface FormValuesData {
   [name: string]: any;
 }
 
-export interface FormProps extends StandardProps {
+export interface FormValidationError {
+  field: string;
+  error: React.ReactChild;
+}
+
+export interface FormProps<FormValues> extends StandardProps {
   /**
    * Shows the given message if the user wants to navigate
    * with changes being made.
@@ -39,11 +48,15 @@ export interface FormProps extends StandardProps {
   /**
    * The value of the form to be used in controlled mode.
    */
-  value?: FormValuesData;
+  value?: FormValues;
   /**
    * The initial value of the form to be used in managed mode.
    */
-  defaultValue?: FormValuesData;
+  defaultValue?: FormValues;
+  /**
+   * Rules for validating fields values.
+   */
+  validationRules?: { [T in keyof FormValues]?: (value: any) => React.ReactChild | true };
   /**
    * Event emitted when a field of the form changed.
    */
@@ -60,11 +73,12 @@ export interface FormProps extends StandardProps {
   disabled?: boolean;
 }
 
-export interface FormState {
+export interface FormState<FormValues> {
   changed: boolean;
-  initial: FormValuesData;
+  initial: FormValues;
   controlled: boolean;
-  current: FormValuesData;
+  current: FormValues;
+  errors?: { [T in keyof FormValues]: React.ReactChild };
 }
 
 const StyledForm = styled.form`
@@ -119,32 +133,67 @@ function isChanged(initial: FormValuesData, current: FormValuesData) {
 /**
  * Represents a field aggregator that enables easily creating forms.
  */
-export class Form extends React.Component<FormProps, FormState> {
+export class Form<Values extends FormValuesData> extends React.Component<FormProps<Values>, FormState<Values>> {
   private readonly fields: Array<FormValueNotifier> = [];
   private readonly ctx: FormContextType = this.createContext();
 
-  constructor(props: FormProps) {
+  constructor(props: FormProps<Values>) {
     super(props);
     const data = props.value || props.defaultValue || {};
     this.state = {
       changed: false,
       controlled: props.value !== undefined,
-      initial: data,
-      current: data,
+      initial: data as Values,
+      current: data as Values,
     };
   }
 
-  componentWillReceiveProps(nextProps: FormProps) {
+  componentWillReceiveProps(nextProps: FormProps<Values>) {
     const { controlled, initial } = this.state;
 
     if (controlled) {
-      const { value = {} } = nextProps;
+      const { value = {} } = nextProps as Values;
       const changed = isChanged(initial, value);
       this.setValues(value, changed);
     }
   }
 
-  private setValues(current: FormValuesData, changed: boolean) {
+  private getError(name: string, value: any) {
+    const validator = this.props.validationRules && this.props.validationRules[name];
+    const validationResult = validator ? validator(value) : true;
+    const error = validationResult === true ? undefined : validationResult;
+    return error;
+  }
+
+  private setErrors(current: Values) {
+    const keys = Object.keys(current);
+    const { errors = {} } = this.state;
+    const nextErrors = { ...errors };
+
+    for (const key of keys) {
+      const value = current[key];
+      const error = this.getError(key, value);
+      if (error) {
+        nextErrors[key] = error;
+      } else {
+        delete nextErrors[key];
+      }
+
+      for (const field of this.fields) {
+        if (field.props.name === key && field.state.value !== value) {
+          field.setState({
+            error,
+          });
+        }
+      }
+    }
+
+    this.setState({
+      errors: nextErrors as FormState<Values>['errors'],
+    });
+  }
+
+  private setValues(current: Values, changed: boolean) {
     const keys = Object.keys(current);
 
     this.setState({
@@ -180,6 +229,8 @@ export class Form extends React.Component<FormProps, FormState> {
           this.setValues(proposed, changed);
         }
 
+        this.setErrors(proposed);
+
         if (typeof onChange === 'function') {
           onChange({
             changed,
@@ -188,20 +239,33 @@ export class Form extends React.Component<FormProps, FormState> {
         }
       },
       subscribe: (field: FormValueNotifier) => {
-        const { current } = this.state;
+        const { current, errors = {} } = this.state;
         const { name } = field.props;
 
         if (name) {
           this.fields.push(field);
 
+          let error;
           if (name in current) {
             const value = current[name];
+            error = this.getError(name, value);
             field.setState({
               value,
+              error,
             });
           } else {
             const value = field.state.value;
             current[name] = value;
+            error = this.getError(name, value);
+            if (error) {
+              field.setState({
+                error,
+              });
+            }
+          }
+
+          if (error) {
+            this.setState({ errors: { ...errors, [name]: error } as FormState<Values>['errors'] });
           }
         }
       },
@@ -214,7 +278,7 @@ export class Form extends React.Component<FormProps, FormState> {
 
   private submit = (e: React.FormEvent<HTMLFormElement>) => {
     const { onSubmit, disabled } = this.props;
-    const { current, changed } = this.state;
+    const { current, changed, errors } = this.state;
 
     if (!disabled && typeof onSubmit === 'function') {
       this.setState(
@@ -225,6 +289,7 @@ export class Form extends React.Component<FormProps, FormState> {
         () =>
           onSubmit({
             data: current,
+            errors: errors ? Object.keys(errors).map(field => ({ field, error: errors[field] })) : undefined,
             changed,
           }),
       );

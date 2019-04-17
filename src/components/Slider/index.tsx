@@ -77,6 +77,7 @@ export interface SliderProps extends InputProps<number | Array<number>> {
 
 export interface SliderState {
   value: number | Array<number>;
+  error?: React.ReactChild;
   active: number;
   controlled: boolean;
   vertical: boolean;
@@ -181,6 +182,7 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
       active: 0,
       controlled: typeof props.value !== 'undefined',
       hovered: false,
+      error: props.error,
     };
   }
 
@@ -209,6 +211,7 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
 
       this.setState({
         value: newValue,
+        error: nextProps.error,
       });
     }
 
@@ -412,13 +415,12 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
       color,
       theme,
       info,
-      error,
       onBlur,
       onFocus,
       showTooltip,
       ...props
     } = this.props;
-    const { value, active, vertical, hovered } = this.state;
+    const { value, active, vertical, hovered, error } = this.state;
     const values = Array.isArray(value) ? value : [value];
     const ind = values.length === 1 ? (100 * (values[0] - minimum)) / (maximum - minimum) : 0;
 
