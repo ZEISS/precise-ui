@@ -10,6 +10,10 @@ export interface FormSubmitEvent {
    */
   data: FormValuesData;
   /**
+   * Validation errors
+   */
+  errors?: Array<FormValidationError>;
+  /**
    * Indicates whether the data has changed from the initial state.
    */
   changed: boolean;
@@ -28,6 +32,11 @@ export interface FormChangeEvent {
 
 export interface FormValuesData {
   [name: string]: any;
+}
+
+export interface FormValidationError {
+  field: string;
+  error: React.ReactChild;
 }
 
 export interface FormProps<FormValues> extends StandardProps {
@@ -69,6 +78,7 @@ export interface FormState<FormValues> {
   initial: FormValues;
   controlled: boolean;
   current: FormValues;
+  errors?: { [T in keyof FormValues]: React.ReactChild };
 }
 
 const StyledForm = styled.form`
@@ -157,18 +167,30 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
 
   private setErrors(current: Values) {
     const keys = Object.keys(current);
+    const { errors = {} } = this.state;
+    const nextErrors = { ...errors };
 
     for (const key of keys) {
       const value = current[key];
+      const error = this.getError(key, value);
+      if (error) {
+        nextErrors[key] = error;
+      } else {
+        delete nextErrors[key];
+      }
 
       for (const field of this.fields) {
         if (field.props.name === key && field.state.value !== value) {
           field.setState({
-            error: this.getError(key, value),
+            error,
           });
         }
       }
     }
+
+    this.setState({
+      errors: nextErrors as FormState<Values>['errors'],
+    });
   }
 
   private setValues(current: Values, changed: boolean) {
@@ -217,27 +239,33 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
         }
       },
       subscribe: (field: FormValueNotifier) => {
-        const { current } = this.state;
+        const { current, errors = {} } = this.state;
         const { name } = field.props;
 
         if (name) {
           this.fields.push(field);
 
+          let error;
           if (name in current) {
             const value = current[name];
+            error = this.getError(name, value);
             field.setState({
               value,
-              error: this.getError(name, value),
+              error,
             });
           } else {
             const value = field.state.value;
             current[name] = value;
-            const error = this.getError(name, value);
+            error = this.getError(name, value);
             if (error) {
               field.setState({
                 error,
               });
             }
+          }
+
+          if (error) {
+            this.setState({ errors: { ...errors, [name]: error } as FormState<Values>['errors'] });
           }
         }
       },
@@ -250,7 +278,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
 
   private submit = (e: React.FormEvent<HTMLFormElement>) => {
     const { onSubmit, disabled } = this.props;
-    const { current, changed } = this.state;
+    const { current, changed, errors } = this.state;
 
     if (!disabled && typeof onSubmit === 'function') {
       this.setState(
@@ -261,6 +289,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
         () =>
           onSubmit({
             data: current,
+            errors: errors ? Object.keys(errors).map(field => ({ field, error: errors[field] })) : undefined,
             changed,
           }),
       );
