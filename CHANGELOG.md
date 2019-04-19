@@ -11,6 +11,7 @@
 - Bugfix: Fixed crash of `Rating` component (#69)
 - Added `onChangeDone` event to `Slider` component
 - Added `validationRules` for `Form`
+- Added `type` and `maxLength` properties to `InputProps` type
 
 ## 0.5.0
 
