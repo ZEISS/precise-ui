@@ -442,7 +442,7 @@ export interface InputProps<T> extends StandardProps {
   /**
    * Sets maximum lenngth of input field.
    */
-  maxLength?: string;
+  maxLength?: number;
 }
 
 export interface LabeledInputProps<T> extends InputProps<T> {
