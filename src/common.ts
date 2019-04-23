@@ -435,6 +435,14 @@ export interface InputProps<T> extends StandardProps {
    * Sets the autocomplete mode of the input.
    */
   autoComplete?: 'on' | 'off';
+  /**
+   * Sets type on the input field.
+   */
+  type?: string;
+  /**
+   * Sets maximum lenngth of input field.
+   */
+  maxLength?: number;
 }
 
 export interface LabeledInputProps<T> extends InputProps<T> {
