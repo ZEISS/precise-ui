@@ -254,7 +254,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
       inputRef: _6,
       ...rest
     } = this.props;
-    const { focused, value, error } = this.state;
+    const { focused, value, error = this.props.error } = this.state;
     const rows = typeof multiline === 'number' ? multiline : undefined;
     const border = getTextFieldBorderType(borderless, !!error, focused);
     const hasValue = !!value;

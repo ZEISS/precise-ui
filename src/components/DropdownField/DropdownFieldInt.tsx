@@ -380,7 +380,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
       onChange,
       ...other
     } = this.props;
-    const { open: openState, value, error } = this.state;
+    const { open: openState, value, error = this.props.error } = this.state;
     const open = openState && !disabled;
     const getContent = multiple ? getMultipleContent : getSingleContent;
     const hasValue = !!value.length;

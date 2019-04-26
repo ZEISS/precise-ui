@@ -561,7 +561,7 @@ export class DateFieldInt extends React.Component<DateFieldProps & FormContextPr
       weekDays,
       ...props
     } = this.props;
-    const { open, value, error } = this.state;
+    const { open, value, error = this.props.error } = this.state;
     const img = <Icon name="DateRange" color={tuna} size="22px" />;
 
     return (

@@ -420,7 +420,7 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
       showTooltip,
       ...props
     } = this.props;
-    const { value, active, vertical, hovered, error } = this.state;
+    const { value, active, vertical, hovered, error = this.props.error } = this.state;
     const values = Array.isArray(value) ? value : [value];
     const ind = values.length === 1 ? (100 * (values[0] - minimum)) / (maximum - minimum) : 0;
 

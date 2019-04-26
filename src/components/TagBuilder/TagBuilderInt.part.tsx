@@ -362,7 +362,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
 
   render() {
     const { tagRenderer, info, disabled, borderless, theme, label, placeholder } = this.props;
-    const { value, inputValue, focused, valid, error } = this.state;
+    const { value, inputValue, focused, valid, error = this.props.error } = this.state;
     const { inputPosition = value.length } = this.state;
     const border = getTextFieldBorderType(borderless, !!error, focused);
     const renderer = tagRenderer || this.renderTag;

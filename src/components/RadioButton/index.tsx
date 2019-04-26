@@ -259,7 +259,7 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
       name: _5,
       ...props
     } = this.props;
-    const { value, error } = this.state;
+    const { value, error = this.props.error } = this.state;
     const containerProps = {
       ...props,
       theme,

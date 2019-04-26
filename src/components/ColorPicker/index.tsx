@@ -341,7 +341,7 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
   };
 
   render() {
-    const { value, active, base, error } = this.state;
+    const { value, active, base, error = this.props.error } = this.state;
     const {
       defaultValue: _0,
       value: _1,
