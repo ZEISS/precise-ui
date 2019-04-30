@@ -11,6 +11,7 @@
 - Bugfix: Fixed crash of `Rating` component (#69)
 - Added `onChangeDone` event to `Slider` component
 - Added `validationRules` for `Form`
+- Fixed: missed selection state of `RadioButtonGroup` in non-controlled mode with form context.
 
 ## 0.5.0
 

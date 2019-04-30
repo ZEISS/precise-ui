@@ -182,6 +182,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
       for (const field of this.fields) {
         if (field.props.name === key && field.state.value !== value) {
           field.setState({
+            ...field.state,
             error,
           });
         }
