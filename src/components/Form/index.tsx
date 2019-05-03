@@ -180,9 +180,8 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
       }
 
       for (const field of this.fields) {
-        if (field.props.name === key && field.state.value !== value) {
+        if (field.props.name === key) {
           field.setState({
-            ...field.state,
             error,
           });
         }
@@ -252,17 +251,11 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
             error = this.getError(name, value);
             field.setState({
               value,
-              error,
             });
           } else {
             const value = field.state.value;
             current[name] = value;
             error = this.getError(name, value);
-            if (error) {
-              field.setState({
-                error,
-              });
-            }
           }
 
           if (error) {
@@ -280,6 +273,8 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
   private submit = (e: React.FormEvent<HTMLFormElement>) => {
     const { onSubmit, disabled } = this.props;
     const { current, changed, errors } = this.state;
+
+    this.setErrors(current);
 
     if (!disabled && typeof onSubmit === 'function') {
       this.setState(
