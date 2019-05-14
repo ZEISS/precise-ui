@@ -5,6 +5,7 @@ export * from './AccordionTableRow';
 export * from './ActionLink';
 export * from './Anchor';
 export * from './Autocomplete';
+export * from './AutoTagBuilder';
 export * from './Avatar';
 export * from './Badge';
 export * from './Blocker';

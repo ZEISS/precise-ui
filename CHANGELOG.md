@@ -2,6 +2,7 @@
 
 ## 0.5.1
 
+- Implement Automatic tag builder
 - `Flyout` fixed compatibility with IE11
 - `Headline` styles update
 - Updated label in `Modal`
