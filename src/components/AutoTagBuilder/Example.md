@@ -15,7 +15,7 @@ function getSuggestionKey(data) {
 
 **Dynamic Suggestions**
 
-The suggestions can be computed when the input changes.
+The suggestions can be computed when the input changes. 
 
 ```jsx
 const { AutoTagBuilder, Button } = require('precise-ui');
@@ -152,6 +152,7 @@ class App extends React.Component {
           onInputChange={(e) => this.onInputChange(e)}
           renderSuggestion={renderSuggestion}
           onChange={(e) => this.onChange(e)}
+          delay={200}
         />
         <br/>
         <Button onClick={() => this.reset()}>Reset</Button>

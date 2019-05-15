@@ -31,6 +31,11 @@ export interface AutoTagBuilderProps<T> extends LabeledInputProps<Array<T>> {
    */
   onInputChange?(query: string): void;
   /**
+   * The debounce time in milliseconds for the on input change event.
+   * @default 0
+   */
+  delay?: number;
+  /**
    * @ignore
    */
   inputRef?(instance: HTMLElement | null): void;

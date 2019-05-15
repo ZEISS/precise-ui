@@ -17,6 +17,7 @@ import { InputIcon } from '../InputIcon';
 import { showInputInfo } from '../../utils/input';
 import { AutoTagBuilderProps, AutoTagBuilderState, AutoTagBuilderAutosuggestItem } from './AutoTagBuilder.types.part';
 import { transparent, dark } from '../../colors';
+import { debounce } from '../../utils';
 
 function getContainerPadding(props: StyledTagsContainerProps) {
   const { labelShown } = props;
@@ -49,7 +50,7 @@ interface StyledAutoTagBuilderWrapperProps {
   direction: InteractiveListDirection;
 }
 
-const StyledInput = styled('input')<StyledInputProps>`
+const StyledInput = styled('input') <StyledInputProps>`
   ${getFontSize('medium')}
   box-sizing: content-box;
   box-shadow: none;
@@ -131,13 +132,17 @@ InteractiveListWrapper.displayName = 'InteractiveListWrapper';
 export class AutoTagBuilderInt<T> extends React.Component<
   AutoTagBuilderProps<T> & FormContextProps,
   AutoTagBuilderState<T>
-> {
-  private delayedBlur: number;
+  > {
+  private _delayedBlur: number;
   private _element: HTMLElement | null;
+  private _fireOnInputChange: (q: string) => void;
+  private _enableInputChange: boolean;
 
   public constructor(props: AutoTagBuilderProps<T>) {
     super(props);
-    const value = props.value || props.defaultValue || [];
+
+    const { value: nullableValue, defaultValue, onInputChange, delay = 0 } = this.props;
+    const value = nullableValue || defaultValue || [];
     const valueMap = this.mapItemArray(value);
 
     this.state = {
@@ -148,6 +153,14 @@ export class AutoTagBuilderInt<T> extends React.Component<
       focused: false,
       controlled: props.value !== undefined,
     };
+
+    if (typeof onInputChange === 'function') {
+      this._enableInputChange = true;
+
+      this._fireOnInputChange = debounce((query: string) => {
+        onInputChange(query);
+      }, delay);
+    }
   }
 
   public componentWillReceiveProps(nextProps: AutoTagBuilderProps<T>) {
@@ -317,7 +330,7 @@ export class AutoTagBuilderInt<T> extends React.Component<
   };
 
   private handleFocus = () => {
-    cancelAnimationFrame(this.delayedBlur);
+    cancelAnimationFrame(this._delayedBlur);
     this.show();
     this.setState(() => ({
       focused: true,
@@ -326,9 +339,9 @@ export class AutoTagBuilderInt<T> extends React.Component<
   };
 
   private handleBlur = () => {
-    cancelAnimationFrame(this.delayedBlur);
+    cancelAnimationFrame(this._delayedBlur);
 
-    this.delayedBlur = requestAnimationFrame(() => {
+    this._delayedBlur = requestAnimationFrame(() => {
       this.setState(
         () => ({
           focused: false,
@@ -340,13 +353,15 @@ export class AutoTagBuilderInt<T> extends React.Component<
   };
 
   private inputChangeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { onInputChange } = this.props;
 
-    if (typeof onInputChange === 'function') {
-      const newState = { ...this.state };
-      newState.inputValue = e.target.value;
-      this.setState(newState);
-      onInputChange(newState.inputValue);
+    if (this._enableInputChange) {
+      // const query = { ...this.state };
+      const query = e.target.value;
+      this.setState({
+        inputValue: query,
+      });
+
+      this._fireOnInputChange(query);
     }
   };
 
@@ -385,8 +400,8 @@ export class AutoTagBuilderInt<T> extends React.Component<
                 open
               />
             ) : (
-              undefined
-            ))}
+                undefined
+              ))}
         </InteractiveListContainer>
       </div>
     );
