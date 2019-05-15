@@ -5,7 +5,7 @@ import { InteractiveList } from '../InteractiveList';
 import { KeyCodes } from '../../utils/keyCodes';
 import 'jest-styled-components';
 
-describe('<Autocomplete />', () => {
+describe('<AutoTagBuilder />', () => {
   it('should render <AutoTagBuilder> component', () => {
     const wrapper = enzyme.shallow(<AutoTagBuilder suggestions={['one', 'two', 'three']} defaultValue={['five']} />);
     expect(wrapper).toMatchSnapshot();
