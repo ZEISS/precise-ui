@@ -50,7 +50,7 @@ interface StyledAutoTagBuilderWrapperProps {
   direction: InteractiveListDirection;
 }
 
-const StyledInput = styled('input') <StyledInputProps>`
+const StyledInput = styled('input')<StyledInputProps>`
   ${getFontSize('medium')}
   box-sizing: content-box;
   box-shadow: none;
@@ -132,7 +132,7 @@ InteractiveListWrapper.displayName = 'InteractiveListWrapper';
 export class AutoTagBuilderInt<T> extends React.Component<
   AutoTagBuilderProps<T> & FormContextProps,
   AutoTagBuilderState<T>
-  > {
+> {
   private _delayedBlur: number;
   private _element: HTMLElement | null;
   private _fireOnInputChange: (q: string) => void;
@@ -353,9 +353,7 @@ export class AutoTagBuilderInt<T> extends React.Component<
   };
 
   private inputChangeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-
     if (this._enableInputChange) {
-      // const query = { ...this.state };
       const query = e.target.value;
       this.setState({
         inputValue: query,
@@ -400,8 +398,8 @@ export class AutoTagBuilderInt<T> extends React.Component<
                 open
               />
             ) : (
-                undefined
-              ))}
+              undefined
+            ))}
         </InteractiveListContainer>
       </div>
     );
