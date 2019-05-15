@@ -23,7 +23,7 @@ function getContainerPadding(props: StyledTagsContainerProps) {
   return !labelShown ? `${distance.medium}` : `${distance.large} ${distance.medium} ${distance.small}`;
 }
 
-const AutocompleteWrapper = styled.div`
+const InteractiveListContainer = styled.div`
   position: relative;
 `;
 
@@ -124,9 +124,9 @@ const CloseIcon: React.SFC<CloseIconProps> = ({ theme, onClick }) => (
 // tslint:disable-next-line
 const NotOpenComponent = null;
 
-const AutosuggestWrapper: React.SFC<InteractiveListWrapperProps> = ({ border: _0, open, ...props }) =>
+const InteractiveListWrapper: React.SFC<InteractiveListWrapperProps> = ({ border: _0, open, ...props }) =>
   open ? <StyledAutoTagBuilderWrapper {...props} /> : NotOpenComponent;
-AutosuggestWrapper.displayName = 'AutosuggestWrapper';
+InteractiveListWrapper.displayName = 'InteractiveListWrapper';
 
 export class AutoTagBuilderInt<T> extends React.Component<
   AutoTagBuilderProps<T> & FormContextProps,
@@ -367,7 +367,7 @@ export class AutoTagBuilderInt<T> extends React.Component<
     return (
       <div onKeyDown={this.handleKeyDown} onFocus={this.handleFocus} onBlur={this.handleBlur}>
         {this.renderTagsContainer()}
-        <AutocompleteWrapper>
+        <InteractiveListContainer>
           {open &&
             !disabled &&
             (suggestions.length || noSuggestionsMessage ? (
@@ -378,7 +378,7 @@ export class AutoTagBuilderInt<T> extends React.Component<
                     : [{ key: 'default', content: noSuggestionsMessage }]
                 }
                 disabled={suggestions.length === 0}
-                customWrapper={AutosuggestWrapper}
+                customWrapper={InteractiveListWrapper}
                 focus={listFocused}
                 onChange={this.handleListChange}
                 autoPosition
@@ -387,7 +387,7 @@ export class AutoTagBuilderInt<T> extends React.Component<
             ) : (
               undefined
             ))}
-        </AutocompleteWrapper>
+        </InteractiveListContainer>
       </div>
     );
   }
