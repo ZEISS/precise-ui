@@ -98,11 +98,12 @@ const StyledText = styled.span`
 
 interface CloseIconProps {
   onClick?(): void;
+  onMouseDown?(event: React.MouseEvent): void;
   theme?: PreciseTheme;
 }
 
-const CloseIcon: React.SFC<CloseIconProps> = ({ theme, onClick }) => (
-  <StyledIcon theme={theme} name="Close" onClick={onClick} />
+const CloseIcon: React.SFC<CloseIconProps> = ({ theme, onClick, onMouseDown }) => (
+  <StyledIcon theme={theme} name="Close" onClick={onClick} onMouseDown={onMouseDown} />
 );
 
 export interface TagBuilderState {
@@ -193,52 +194,59 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
       onInput();
     }
 
-    if (!controlled) {
+    let isHandled = false;
+    const handleKeyEvent = () => {
+      e.stopPropagation();
+      e.preventDefault();
+      isHandled = true;
+    };
+
+    if (inputValue.length === 0) {
+      switch (e.keyCode) {
+        case KeyCodes.backspace:
+          this.removePrevTag();
+          handleKeyEvent();
+          break;
+
+        case KeyCodes.delete:
+          this.removeNextTag();
+          handleKeyEvent();
+          break;
+      }
+    }
+
+    if (!isHandled && !controlled) {
       if (typeof shouldFinishTag === 'function') {
         if (shouldFinishTag(e)) {
           this.addTag(inputValue);
-          e.stopPropagation();
-          e.preventDefault();
+          handleKeyEvent();
           return;
         }
       } else if (finishTagKeys.indexOf(e.keyCode) !== -1) {
         this.addTag(inputValue);
-        e.stopPropagation();
-        e.preventDefault();
+        handleKeyEvent();
       }
 
       if (inputValue.length === 0) {
         switch (e.keyCode) {
           case KeyCodes.end:
             this.inputMoveEnd();
-            e.stopPropagation();
-            e.preventDefault();
+            handleKeyEvent();
             break;
 
           case KeyCodes.home:
             this.inputMoveHome();
-            e.stopPropagation();
-            e.preventDefault();
+            handleKeyEvent();
             break;
 
           case KeyCodes.left:
             this.inputMoveLeft();
+            handleKeyEvent();
             break;
 
           case KeyCodes.right:
             this.inputMoveRight();
-            break;
-
-          case KeyCodes.backspace:
-            this.removePrevTag();
-            e.stopPropagation();
-            e.preventDefault();
-            break;
-
-          case KeyCodes.delete:
-            this.removeNextTag();
-            e.stopPropagation();
-            e.preventDefault();
+            handleKeyEvent();
             break;
         }
       }
@@ -256,8 +264,12 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     );
   };
 
-  private inputBlurred = () => {
+  private inputBlurred = (e: any) => {
     const { onBlur } = this.props;
+
+    if (e) {
+      console.log(e.activeElement);
+    }
 
     this.setState(
       {
@@ -294,7 +306,6 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
   }
 
   private setFocus = () => {
-    eval('console.log("clicked")');
     this._input && this._input.focus();
   };
 
@@ -358,13 +369,23 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     }
   }
 
+  private removeTagMouseDownHandler = (event: React.MouseEvent) => {
+    event.preventDefault();
+  };
+
   private renderTag = (e: TagBuilderRenderEvent) => {
     const { theme, disabled } = this.props;
 
     return (
       <RestyledTagItem theme={theme} key={e.item + e.index}>
         <StyledText>{e.item}</StyledText>
-        {!disabled && <CloseIcon theme={theme} onClick={() => this.removeTag(e.index)} />}
+        {!disabled && (
+          <CloseIcon
+            theme={theme}
+            onMouseDown={this.removeTagMouseDownHandler}
+            onClick={() => this.removeTag(e.index)}
+          />
+        )}
       </RestyledTagItem>
     );
   };

@@ -151,7 +151,7 @@ class App extends React.Component {
           delay={200}
         />
         <br/>
-        <Button onClick={() => this.reset()}>Reset</Button>
+        <Button onClick={() => this.resetHandler()}>Reset</Button>
       </>
     );
   }
