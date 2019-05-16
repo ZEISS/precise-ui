@@ -1,4 +1,4 @@
-import { LabeledInputProps } from '../../common';
+import { LabeledInputProps, InputChangeEvent } from '../../common';
 
 export interface AutoTagBuilderAutosuggestItem {
   key: string;
@@ -29,7 +29,7 @@ export interface AutoTagBuilderProps<T> extends LabeledInputProps<Array<T>> {
   /**
    After the input change.
    */
-  onInputChange?(query: string): void;
+  onInputChange?(event: InputChangeEvent<string>): void;
   /**
    * The debounce time in milliseconds for the on input change event.
    * @default 0
@@ -46,6 +46,7 @@ export interface AutoTagBuilderState<T> {
   focused: boolean;
   open: boolean;
   value: Map<string, T>;
+  tagValue: Array<string>;
   inputValue: string;
   controlled: boolean;
 }

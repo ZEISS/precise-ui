@@ -9,6 +9,8 @@ import {
   InteractiveListChangeEvent,
 } from '../InteractiveList';
 import { KeyCodes } from '../../utils/keyCodes';
+import { InputChangeEvent } from '../../common';
+import console = require('console');
 
 export interface AutosuggestItem {
   key: string;
@@ -17,6 +19,15 @@ export interface AutosuggestItem {
 
 export interface AutosuggestSelectEvent<T> {
   value: T;
+}
+
+export interface AutocompleteInputProps {
+  onChange(e: InputChangeEvent<string>): void;
+  clearable: boolean;
+  inputRef?(instance: HTMLElement | null): void;
+  value: string;
+  error: any;
+  [index: string]: any;
 }
 
 export interface AutocompleteProps<T> extends TextFieldProps {
@@ -40,6 +51,10 @@ export interface AutocompleteProps<T> extends TextFieldProps {
    * Gets the suggestion value.
    */
   getSuggestionValue?(item: T): string;
+  /**
+   * The renderer of input field.
+   */
+  inputRenderer?(props: AutocompleteInputProps): JSX.Element;
   /**
    * @ignore
    */
@@ -93,6 +108,10 @@ function defaultSuggestionRenderer<T>(suggestion: T): AutosuggestItem {
     content: value,
     key: value || '',
   };
+}
+
+function defaultInputRenderer(props: AutocompleteInputProps): JSX.Element {
+  return <TextField {...props} />;
 }
 
 // tslint:disable-next-line
@@ -239,6 +258,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
 
   private handleFocus = () => {
     cancelAnimationFrame(this.delayedBlur);
+    
     this.show();
     this.setState(() => ({
       focus: true,
@@ -266,6 +286,11 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
 
   private setNode = (node: HTMLElement | null) => {
     this._element = node;
+
+    const { inputRef } = this.props;
+    if (typeof inputRef === 'function') {
+      inputRef(node);
+    }
   };
 
   render() {
@@ -273,6 +298,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       suggestions = [],
       noSuggestionsMessage,
       renderSuggestion = defaultSuggestionRenderer,
+      inputRenderer = defaultInputRenderer,
       getSuggestionValue: _1,
       onChange: _2,
       children: _3,
@@ -287,7 +313,15 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
     return (
       <div onKeyDown={this.handleKeyDown} onFocus={this.handleFocus} onBlur={this.handleBlur}>
         <AutocompleteWrapper>
-          <TextField {...props} onChange={this.changed} clearable inputRef={this.setNode} value={value} error={error} />
+          {inputRenderer({
+            ...props,
+            onChange: this.changed,
+            clearable: true,
+            inputRef: this.setNode,
+            value: value,
+            error: error,
+          })}
+
           {open &&
             (suggestions.length || noSuggestionsMessage ? (
               <InteractiveList
@@ -304,8 +338,8 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
                 open
               />
             ) : (
-              undefined
-            ))}
+                undefined
+              ))}
         </AutocompleteWrapper>
       </div>
     );

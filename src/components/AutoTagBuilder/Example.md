@@ -6,11 +6,7 @@ The builder can be used with the static array of suggestions.
 const { AutoTagBuilder } = require('precise-ui');
 let suggestions =  ['one', 'two', 'tree', 'foure'];
 
-function getSuggestionKey(data) {
-  return data;
-}
-
-<AutoTagBuilder suggestions={suggestions} getSuggestionKey={getSuggestionKey} />
+<AutoTagBuilder suggestions={suggestions}/>
 ```
 
 **Dynamic Suggestions**
@@ -119,23 +115,23 @@ class App extends React.Component {
     };
   }
 
-  onInputChange(query) {
+  inputChangeHandler({value}) {
     this.setState({
-      suggestions: getSuggestions(query),
+      suggestions: getSuggestions(value),
     });
   };
 
-  onChange({value}) {
+  changeHandler({value}) {
     this.setState({
-      value
+      value,
     })
-  }
+  };
 
-  reset() {
+  resetHandler() {
     this.setState({
-      value: []
+      value: [],
     })
-  }
+  };
 
   render() {
     const { suggestions } = this.state;
@@ -149,9 +145,9 @@ class App extends React.Component {
           suggestions={suggestions}
           getSuggestionValue={getSuggestionValue}
           getSuggestionKey={getSuggestionKey}
-          onInputChange={(e) => this.onInputChange(e)}
           renderSuggestion={renderSuggestion}
-          onChange={(e) => this.onChange(e)}
+          onInputChange={(e) => this.inputChangeHandler(e)}
+          onChange={(e) => this.changeHandler(e)}
           delay={200}
         />
         <br/>

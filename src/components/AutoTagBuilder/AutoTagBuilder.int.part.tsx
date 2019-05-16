@@ -1,69 +1,16 @@
 import * as React from 'react';
 import styled, { themed, css } from '../../utils/styled';
-import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
-import {
-  InteractiveList,
-  InteractiveListWrapperProps,
-  InteractiveListDirection,
-  InteractiveListChangeEvent,
-} from '../InteractiveList';
-import { KeyCodes } from '../../utils/keyCodes';
-import { PreciseTheme } from '../../common';
-import { StyledTagItem, StyledInputBox, StyledInputRow, getTextFieldBorderType, StyledInputProps } from '../../quarks';
-import { distance } from '../../distance';
-import { Icon } from '../Icon';
-import { getFontStyle, getFontSize } from '../../textStyles';
-import { InputIcon } from '../InputIcon';
-import { showInputInfo } from '../../utils/input';
+import { FormContextProps } from '../../hoc/withFormContext';
+import { InteractiveListWrapperProps, InteractiveListDirection } from '../InteractiveList';
+import { InputChangeEvent } from '../../common';
 import { AutoTagBuilderProps, AutoTagBuilderState, AutoTagBuilderAutosuggestItem } from './AutoTagBuilder.types.part';
-import { transparent, dark } from '../../colors';
 import { debounce } from '../../utils';
-
-function getContainerPadding(props: StyledTagsContainerProps) {
-  const { labelShown } = props;
-  return !labelShown ? `${distance.medium}` : `${distance.large} ${distance.medium} ${distance.small}`;
-}
-
-const InteractiveListContainer = styled.div`
-  position: relative;
-`;
-
-const TagsInputContainer = styled.div``;
-
-interface StyledTagsContainerProps {
-  labelShown: boolean;
-  tagRenderer: boolean;
-}
-
-const StyledTagsContainer = styled.div`
-  padding: ${getContainerPadding};
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-`;
+import { TagBuilder } from '../TagBuilder';
+import { Autocomplete, AutocompleteInputProps, AutosuggestSelectEvent } from '../Autocomplete';
 
 interface StyledAutoTagBuilderWrapperProps {
   direction: InteractiveListDirection;
 }
-
-const StyledInput = styled('input')<StyledInputProps>`
-  ${getFontSize('medium')}
-  box-sizing: content-box;
-  box-shadow: none;
-  border: none;
-  border-radius: 0;
-  margin: 0;
-  outline: none;
-  outline-color: transparent !important;
-  background: ${transparent};
-  color: ${themed(({ disabled, theme }) => (disabled ? theme.textDisabled : dark))};
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
-  font-family: inherit;
-`;
 
 const StyledAutoTagBuilderWrapper = styled.ul<StyledAutoTagBuilderWrapperProps>(
   themed(
@@ -89,39 +36,6 @@ const StyledAutoTagBuilderWrapper = styled.ul<StyledAutoTagBuilderWrapperProps>(
   ),
 );
 
-const InputContainer = styled('div')`
-  display: inline;
-  padding-bottom: ${distance.small};
-`;
-
-const RestyledTagItem = styled(StyledTagItem)`
-  margin: 0 ${distance.small} ${distance.small} 0;
-`;
-
-const StyledText = styled.span`
-  display: inline-block;
-  vertical-align: middle;
-`;
-
-const StyledIcon = styled(Icon)`
-  ${getFontStyle({ size: 'small' })}
-
-  cursor: pointer;
-  vertical-align: middle;
-  color: ${themed(props => props.theme.ui5)};
-  font-family: ${themed(props => props.theme.fontFamily)};
-  margin-left: ${distance.small};
-`;
-
-interface CloseIconProps {
-  onClick?(): void;
-  theme?: PreciseTheme;
-}
-
-const CloseIcon: React.SFC<CloseIconProps> = ({ theme, onClick }) => (
-  <StyledIcon theme={theme} name="Close" onClick={onClick} />
-);
-
 // tslint:disable-next-line
 const NotOpenComponent = null;
 
@@ -133,10 +47,9 @@ export class AutoTagBuilderInt<T> extends React.Component<
   AutoTagBuilderProps<T> & FormContextProps,
   AutoTagBuilderState<T>
 > {
-  private _delayedBlur: number;
-  private _element: HTMLElement | null;
   private _fireOnInputChange: (q: string) => void;
   private _enableInputChange: boolean;
+  private _inputNode: HTMLElement | null;
 
   public constructor(props: AutoTagBuilderProps<T>) {
     super(props);
@@ -147,6 +60,7 @@ export class AutoTagBuilderInt<T> extends React.Component<
 
     this.state = {
       value: valueMap,
+      tagValue: value.map(x => this.getSuggestionValue(x)),
       inputValue: '',
       open: false,
       listFocused: false,
@@ -157,8 +71,8 @@ export class AutoTagBuilderInt<T> extends React.Component<
     if (typeof onInputChange === 'function') {
       this._enableInputChange = true;
 
-      this._fireOnInputChange = debounce((query: string) => {
-        onInputChange(query);
+      this._fireOnInputChange = debounce((value: string) => {
+        onInputChange({ value });
       }, delay);
     }
   }
@@ -168,6 +82,7 @@ export class AutoTagBuilderInt<T> extends React.Component<
       const valueMap = this.mapItemArray(nextProps.value);
       this.setState({
         value: valueMap,
+        tagValue: Array.from(valueMap.values()).map(x => this.getSuggestionValue(x)),
       });
     }
   }
@@ -190,18 +105,10 @@ export class AutoTagBuilderInt<T> extends React.Component<
     }
   }
 
-  private handleListChange = (e: InteractiveListChangeEvent) => {
-    const { suggestions = [] } = this.props;
-    const index = e.value[0];
-    const suggestion = suggestions[index];
-    this.addSuggestion(suggestion);
-  };
-
   private addSuggestion(suggestion: T) {
-    const { getSuggestionKey = (x: T) => String(x) } = this.props;
     const { value } = this.state;
 
-    const key = getSuggestionKey(suggestion);
+    const key = this.getSuggestionKey(suggestion);
 
     if (!value.has(key)) {
       const newValue = new Map(value);
@@ -210,7 +117,17 @@ export class AutoTagBuilderInt<T> extends React.Component<
     }
   }
 
-  private removeValue = (key: string) => {
+  private removeValueByIndex = (index: number) => {
+    const { value } = this.state;
+    const keys = Array.from(value.keys());
+    index = index >= 0 ? index : keys.length + index;
+
+    if (index >= 0 && index < keys.length) {
+      this.removeValueByKey(keys[index]);
+    }
+  };
+
+  private removeValueByKey = (key: string) => {
     const { value } = this.state;
     if (value.has(key)) {
       const newValue = new Map(value);
@@ -231,16 +148,28 @@ export class AutoTagBuilderInt<T> extends React.Component<
       } else {
         this.setState({
           value,
+          tagValue: Array.from(value.values()).map(x => this.getSuggestionValue(x)),
         });
       }
     }
 
-    if (this._element) {
-      this._element.focus();
-    }
+    this.changeInputValue('');
 
+    if (this._inputNode) {
+      this._inputNode.focus();
+    }
     if (typeof onChange === 'function') {
       onChange({ value: Array.from(value.values()) });
+    }
+  }
+
+  private changeInputValue(newValue: string) {
+    if (this._enableInputChange) {
+      this.setState({
+        inputValue: newValue,
+      });
+
+      this._fireOnInputChange(newValue);
     }
   }
 
@@ -273,101 +202,40 @@ export class AutoTagBuilderInt<T> extends React.Component<
     };
   }
 
-  private tagRenderer = (item: T) => {
-    const { theme, disabled } = this.props;
-    const stringValue = this.getSuggestionValue(item);
-    const key = this.getSuggestionKey(item);
+  private tagRemoveHandler = (index: number) => {
+    this.removeValueByIndex(index);
+  };
+
+  private suggestionSelectedHandler = (e: AutosuggestSelectEvent<T>) => {
+    this.addSuggestion(e.value);
+  };
+
+  private inputChangeHandler = (e: InputChangeEvent<string>) => {
+    this.changeInputValue(e.value);
+  };
+
+  private inputRefHandler = (node: HTMLElement | null): void => {
+    this._inputNode = node;
+  };
+
+  private tagBuilderRenderer = (inputProps: AutocompleteInputProps): JSX.Element => {
+    const { disabled } = this.props;
+    const { tagValue } = this.state;
+    const { onChange, value: inputValue, ...restProps } = inputProps;
 
     return (
-      <RestyledTagItem theme={theme} key={key} onMouseDown={this.tagMouseDownHandler}>
-        <StyledText>{stringValue}</StyledText>
-        {!disabled && <CloseIcon theme={theme} onClick={() => this.removeValue(key)} />}
-      </RestyledTagItem>
+      <TagBuilder
+        {...restProps}
+        value={tagValue}
+        disabled={disabled}
+        inputValue={inputValue}
+        onInputValueChange={onChange}
+        onBeforeTagRemove={this.tagRemoveHandler}
+      />
     );
   };
 
-  private tagMouseDownHandler = (e: React.MouseEvent<HTMLElement>) => {
-    e.preventDefault();
-  };
-
-  private handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
-    const { keyCode } = e;
-
-    switch (keyCode) {
-      case KeyCodes.down:
-      case KeyCodes.up:
-        e.preventDefault();
-        const { open } = this.state;
-        open &&
-          this.setState(() => ({
-            listFocused: true,
-            focused: false,
-          }));
-        break;
-    }
-  };
-
-  private show = () => {
-    const { onFocus } = this.props;
-
-    this.setState(
-      () => ({
-        open: true,
-      }),
-      onFocus,
-    );
-  };
-
-  private hide = () => {
-    const { onBlur } = this.props;
-
-    this.setState(
-      () => ({
-        open: false,
-      }),
-      onBlur,
-    );
-  };
-
-  private handleFocus = () => {
-    cancelAnimationFrame(this._delayedBlur);
-    this.show();
-    this.setState(() => ({
-      focused: true,
-      listFocused: true,
-    }));
-  };
-
-  private handleBlur = () => {
-    cancelAnimationFrame(this._delayedBlur);
-
-    this._delayedBlur = requestAnimationFrame(() => {
-      this.setState(
-        () => ({
-          focused: false,
-          listFocused: false,
-        }),
-        this.hide,
-      );
-    });
-  };
-
-  private inputChangeHandler = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    if (this._enableInputChange) {
-      const query = e.target.value;
-      this.setState({
-        inputValue: query,
-      });
-
-      this._fireOnInputChange(query);
-    }
-  };
-
-  private setContainer = (node: HTMLInputElement | null) => {
-    this._element = node;
-  };
-
-  render() {
+  public render() {
     const {
       suggestions = [],
       noSuggestionsMessage,
@@ -375,82 +243,20 @@ export class AutoTagBuilderInt<T> extends React.Component<
       renderSuggestion = (item: T) => this.defaultSuggestionRenderer(item),
     } = this.props;
 
-    const { open, listFocused } = this.state;
+    const { inputValue } = this.state;
 
     return (
-      <div onKeyDown={this.handleKeyDown} onFocus={this.handleFocus} onBlur={this.handleBlur}>
-        {this.renderTagsContainer()}
-        <InteractiveListContainer>
-          {open &&
-            !disabled &&
-            (suggestions.length || noSuggestionsMessage ? (
-              <InteractiveList
-                data={
-                  suggestions.length
-                    ? suggestions.map(renderSuggestion)
-                    : [{ key: 'default', content: noSuggestionsMessage }]
-                }
-                disabled={suggestions.length === 0}
-                customWrapper={InteractiveListWrapper}
-                focus={listFocused}
-                onChange={this.handleListChange}
-                autoPosition
-                open
-              />
-            ) : (
-              undefined
-            ))}
-        </InteractiveListContainer>
-      </div>
-    );
-  }
-
-  renderTagsContainer() {
-    const { error, info, disabled, theme, label, placeholder } = this.props;
-    const { value, inputValue, focused } = this.state;
-    const border = getTextFieldBorderType(false, !!error, focused);
-    const children = new Array<React.ReactChild>();
-
-    value.forEach(x => {
-      children.push(this.tagRenderer(x));
-    });
-
-    const hasValue = !!inputValue || value.size > 0;
-
-    children.splice(
-      children.length,
-      0,
-      <InputContainer key="input">
-        <StyledInput
-          type="text"
-          labelShown={!!label}
-          theme={theme}
-          disabled={disabled}
-          value={inputValue}
-          ref={this.setContainer}
-          onChange={this.inputChangeHandler}
-        />
-      </InputContainer>,
-    );
-
-    return (
-      <TagsInputContainer>
-        <StyledInputBox border={border} disabled={disabled} focused={focused} hasValue={hasValue}>
-          <StyledInputRow
-            onClick={undefined}
-            label={label}
-            hasValue={hasValue}
-            placeholder={placeholder}
-            error={!!error}
-            focused={focused}>
-            <StyledTagsContainer labelShown={!!label} tagRenderer={true}>
-              {children}
-            </StyledTagsContainer>
-          </StyledInputRow>
-          <InputIcon disabled={disabled} theme={theme} error={error} hasValue={hasValue} />
-        </StyledInputBox>
-        {showInputInfo(error, info)}
-      </TagsInputContainer>
+      <Autocomplete
+        noSuggestionsMessage={noSuggestionsMessage}
+        suggestions={suggestions}
+        inputRenderer={this.tagBuilderRenderer}
+        renderSuggestion={renderSuggestion}
+        disabled={disabled}
+        value={inputValue}
+        onChange={this.inputChangeHandler}
+        onSuggestionSelected={this.suggestionSelectedHandler}
+        inputRef={this.inputRefHandler}
+      />
     );
   }
 }

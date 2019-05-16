@@ -62,7 +62,7 @@ interface StyledInputProps {
   valid?: boolean;
 }
 
-const StyledInput = styled('input')<StyledInputProps>`
+const StyledInput = styled('input') <StyledInputProps>`
   ${getFontSize('medium')}
   box-sizing: content-box;
   box-shadow: none;
@@ -86,7 +86,7 @@ interface InputContainerProps {
   tagRenderer: boolean;
 }
 
-const InputContainer = styled('div')<InputContainerProps>`
+const InputContainer = styled('div') <InputContainerProps>`
   display: inline;
   padding-bottom: ${({ tagRenderer }) => (!tagRenderer ? `${distance.small}` : '0')};
 `;
@@ -116,16 +116,16 @@ export interface TagBuilderState {
 }
 
 export class TagBuilderInt extends React.Component<TagBuilderProps & FormContextProps, TagBuilderState> {
-  private input: HTMLInputElement | null;
+  private _input: HTMLInputElement | null;
 
   constructor(props: TagBuilderProps) {
     super(props);
     const tags = (props.value || props.defaultValue || []).map(lowerize);
 
     this.state = {
-      inputValue: '',
       value: tags,
-      controlled: props.value !== undefined,
+      inputValue: props.inputValue || '',
+      controlled: props.value !== undefined || props.inputValue !== undefined,
       focused: false,
       valid: true,
       error: props.error,
@@ -133,13 +133,14 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
   }
 
   componentWillReceiveProps(nextProps: TagBuilderProps) {
-    const { value } = nextProps;
+    const { value, inputValue } = nextProps;
     const { controlled } = this.state;
 
     if (controlled && value !== undefined) {
       this.setState({
         value: [...value],
         error: nextProps.error,
+        inputValue: inputValue || '',
       });
     }
   }
@@ -162,9 +163,22 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     }
   }
 
+  private safeFireInBeforeTagRemoveEvent(index: number): void {
+    const { onBeforeTagRemove: onBeforeTagRemoveAttemp } = this.props;
+
+    if (typeof onBeforeTagRemoveAttemp === 'function') {
+      onBeforeTagRemoveAttemp(index);
+    }
+  }
+
   private inputChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { controlled, value: prevTags } = this.state;
+    const { onInputValueChange } = this.props;
     const { value } = e.currentTarget;
+
+    if (typeof onInputValueChange === 'function') {
+      onInputValueChange({ value });
+    }
 
     if (!controlled) {
       this.setState({ inputValue: value, valid: value.length > 0 ? prevTags.indexOf(value) === -1 : true });
@@ -280,7 +294,8 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
   }
 
   private setFocus = () => {
-    this.input && this.input.focus();
+    eval('console.log("clicked")');
+    this._input && this._input.focus();
   };
 
   private addTag(inputValue: string) {
@@ -300,9 +315,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     const { inputPosition = prevTags.length } = this.state;
 
     if (inputPosition > 0) {
-      const tags = [...prevTags];
-      tags.splice(inputPosition - 1, 1);
-      this.setState({ inputPosition: inputPosition - 1 }, () => this.onChange(tags));
+      this.removeTag(inputPosition - 1);
     }
   }
 
@@ -310,14 +323,14 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     const { value: prevTags, inputPosition } = this.state;
 
     if (inputPosition !== undefined && inputPosition < prevTags.length) {
-      const tags = [...prevTags];
-      tags.splice(inputPosition, 1);
-      this.onChange(tags);
+      this.removeTag(inputPosition);
     }
   }
 
   private removeTag(index: number) {
     const { value: prevTags } = this.state;
+
+    this.safeFireInBeforeTagRemoveEvent(index);
     const tags = [...prevTags.slice(0, index), ...prevTags.slice(index + 1)];
     this.onChange(tags);
   }
@@ -357,7 +370,12 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
   };
 
   private setContainer = (node: HTMLInputElement | null) => {
-    this.input = node;
+    this._input = node;
+
+    const { inputRef } = this.props;
+    if (typeof inputRef === 'function') {
+      inputRef(node);
+    }
   };
 
   render() {
