@@ -1,20 +1,20 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
-import { Checkbox, CheckboxChangeEvent } from './';
+import { Checkbox, CheckboxChangeEvent, CheckboxInt } from './';
 
-describe('<Checkbox />', () => {
-  it('should render <Checkbox> that is not controlled', () => {
-    const wrapper = enzyme.mount(enzyme.shallow(<Checkbox />).get(0));
+describe('<CheckboxInt />', () => {
+  it('should render <CheckboxInt> that is not controlled', () => {
+    const wrapper = enzyme.shallow(<CheckboxInt />);
     expect(wrapper.state('controlled')).toBe(false);
   });
 
-  it('should render a <Checkbox> that is controlled', () => {
-    const wrapper = enzyme.mount(enzyme.shallow(<Checkbox value={false} />).get(0));
+  it('should render a <CheckboxInt> that is controlled', () => {
+    const wrapper = enzyme.shallow(<CheckboxInt value={false} />);
     expect(wrapper.state('controlled')).toBe(true);
   });
 
   it('should not have <label> if no children', () => {
-    const wrapper = enzyme.mount(<Checkbox />);
+    const wrapper = enzyme.mount(<CheckboxInt />);
     expect(wrapper.find('label').length).toBe(0);
   });
 
@@ -41,7 +41,7 @@ describe('<Checkbox />', () => {
       clicked = true;
       status = e.value;
     };
-    const wrapper = enzyme.mount(enzyme.shallow(<Checkbox defaultValue={status} onChange={clickHandler} />).get(0));
+    const wrapper = enzyme.mount(<CheckboxInt defaultValue={status} onChange={clickHandler} />);
     wrapper.simulate('click', {
       preventDefault() {},
     });
@@ -58,7 +58,7 @@ describe('<Checkbox />', () => {
       clicked = true;
       status = e.value;
     };
-    const wrapper = enzyme.mount(enzyme.shallow(<Checkbox value={status} onChange={clickHandler} />).get(0));
+    const wrapper = enzyme.shallow(<CheckboxInt value={status} onChange={clickHandler} />);
     wrapper.simulate('click', {
       preventDefault() {},
     });
