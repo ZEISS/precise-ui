@@ -10,7 +10,6 @@ import {
 } from '../InteractiveList';
 import { KeyCodes } from '../../utils/keyCodes';
 import { InputChangeEvent } from '../../common';
-import console = require('console');
 
 export interface AutosuggestItem {
   key: string;
@@ -258,7 +257,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
 
   private handleFocus = () => {
     cancelAnimationFrame(this.delayedBlur);
-    
+
     this.show();
     this.setState(() => ({
       focus: true,
@@ -338,8 +337,8 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
                 open
               />
             ) : (
-                undefined
-              ))}
+              undefined
+            ))}
         </AutocompleteWrapper>
       </div>
     );

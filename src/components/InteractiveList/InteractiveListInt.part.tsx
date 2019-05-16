@@ -95,19 +95,19 @@ const ListItemContent = styled.div`
   flex-grow: 1;
 `;
 
-const ListItemContentPadding = styled('div')<ListItemContentProps>`
+const ListItemContentPadding = styled('div') <ListItemContentProps>`
   padding: ${props => (props.condensed ? `${distance.small} ${distance.medium}` : distance.medium)};
   ${props => (props.showTick ? 'padding-right: 0;' : '')};
 `;
 
-const ListItemContentComponentPadding = styled('div')<ListItemContentProps>`
+const ListItemContentComponentPadding = styled('div') <ListItemContentProps>`
   > * {
     padding: ${props => (props.condensed ? `${distance.small} ${distance.medium}` : distance.medium)};
     ${props => (props.showTick ? 'padding-right: 0;' : '')};
   }
 `;
 
-const ListItemIconPadding = styled('div')<ListItemIconProps>`
+const ListItemIconPadding = styled('div') <ListItemIconProps>`
   padding: 0 ${distance.medium};
 
   i {
@@ -225,7 +225,10 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       });
     }
 
-    if (nextProps.focus !== focus && nextProps.focus) {
+    const componentIsNotFocused =
+      nextProps.focus !== focus || (this.interactiveList && document.activeElement != this.interactiveList);
+
+    if (componentIsNotFocused && nextProps.focus) {
       if (open && nextProps.open) {
         this.interactiveList && this.interactiveList.focus();
         this.setState({
@@ -291,7 +294,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
     const start = selected ? (selected === data.length - 1 ? 0 : selected) : 0;
     let index = start;
 
-    for (let i = start; i < start + data.length; i++, index = i === data.length ? 0 : index + 1) {
+    for (let i = start; i < start + data.length; i++ , index = i === data.length ? 0 : index + 1) {
       const item = data[index];
       if (!item) {
         continue;
