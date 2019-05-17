@@ -3,7 +3,7 @@ import styled, { themed, css } from '../../utils/styled';
 import { FormContextProps } from '../../hoc/withFormContext';
 import { InteractiveListWrapperProps, InteractiveListDirection } from '../InteractiveList';
 import { InputChangeEvent } from '../../common';
-import { AutoTagBuilderProps, AutoTagBuilderState, AutoTagBuilderAutosuggestItem } from './AutoTagBuilder.types.part';
+import { AutoTagBuilderProps, AutoTagBuilderState } from './AutoTagBuilder.types.part';
 import { debounce } from '../../utils';
 import { TagBuilder } from '../TagBuilder';
 import { Autocomplete, AutocompleteInputProps, AutosuggestSelectEvent } from '../Autocomplete';
@@ -185,17 +185,29 @@ export class AutoTagBuilderInt<T> extends React.Component<
     return valueMap;
   }
 
-  private getSuggestionValue(item: T): string {
+  private getSuggestionValue(item: T) {
     const { getSuggestionValue } = this.props;
-    return typeof getSuggestionValue === 'function' ? getSuggestionValue(item) : String(item);
+    if (typeof item === 'string') {
+      return item;
+    } else if (typeof getSuggestionValue === 'function') {
+      return getSuggestionValue(item);
+    } else {
+      throw new Error('Get suggestion value should be specified');
+    }
   }
 
-  private getSuggestionKey(item: T): string {
+  private getSuggestionKey(item: T) {
     const { getSuggestionKey } = this.props;
-    return typeof getSuggestionKey === 'function' ? getSuggestionKey(item) : String(item);
+    if (typeof item === 'string') {
+      return item;
+    } else if (typeof getSuggestionKey === 'function') {
+      return getSuggestionKey(item);
+    } else {
+      throw new Error('Get suggestion key should be specified');
+    }
   }
 
-  private defaultSuggestionRenderer(suggestion: T): AutoTagBuilderAutosuggestItem {
+  private defaultSuggestionRenderer(suggestion: T) {
     return {
       content: this.getSuggestionValue(suggestion),
       key: this.getSuggestionKey(suggestion),
@@ -214,11 +226,11 @@ export class AutoTagBuilderInt<T> extends React.Component<
     this.changeInputValue(e.value);
   };
 
-  private inputRefHandler = (node: HTMLElement | null): void => {
+  private inputRefHandler = (node: HTMLElement | null) => {
     this._inputNode = node;
   };
 
-  private tagBuilderRenderer = (inputProps: AutocompleteInputProps): JSX.Element => {
+  private tagBuilderRenderer = (inputProps: AutocompleteInputProps) => {
     const { disabled } = this.props;
     const { tagValue } = this.state;
     const { onChange, value: inputValue, ...restProps } = inputProps;
