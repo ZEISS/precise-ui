@@ -173,26 +173,22 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
   }
 
   private inputChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { onInput} = this.props;
     const { controlled, value: prevTags } = this.state;
-    const { onInputValueChange } = this.props;
     const { value } = e.currentTarget;
 
-    if (typeof onInputValueChange === 'function') {
-      onInputValueChange({ value });
+    if (typeof onInput === 'function') {
+      onInput({ value: value });
     }
 
     if (!controlled) {
       this.setState({ inputValue: value, valid: value.length > 0 ? prevTags.indexOf(value) === -1 : true });
     }
   };
-
-  private onKeyInput = (e: React.KeyboardEvent<HTMLDivElement>) => {
+  
+  private keyDownHandler = (e: React.KeyboardEvent<HTMLDivElement>) => {
     const { inputValue, controlled } = this.state;
-    const { shouldFinishTag, onInput } = this.props;
-
-    if (typeof onInput === 'function') {
-      onInput();
-    }
+    const { shouldFinishTag } = this.props;
 
     let isHandled = false;
     const handleKeyEvent = () => {
@@ -407,7 +403,10 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     children.splice(
       inputPosition,
       0,
-      <InputContainer key="input" onKeyDown={this.onKeyInput} tagRenderer={!!tagRenderer}>
+      <InputContainer
+        key="input"
+        onKeyDown={this.keyDownHandler}
+        tagRenderer={!!tagRenderer}>
         <StyledInput
           theme={theme}
           disabled={disabled}

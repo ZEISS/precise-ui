@@ -46,7 +46,7 @@ InteractiveListWrapper.displayName = 'InteractiveListWrapper';
 export class AutoTagBuilderInt<T> extends React.Component<
   AutoTagBuilderProps<T> & FormContextProps,
   AutoTagBuilderState<T>
-> {
+  > {
   private _fireOnInputChange: (q: string) => void;
   private _enableInputChange: boolean;
   private _inputNode: HTMLElement | null;
@@ -114,6 +114,8 @@ export class AutoTagBuilderInt<T> extends React.Component<
       const newValue = new Map(value);
       newValue.set(key, suggestion);
       this.updateValue(newValue);
+
+      this.changeInputValue('');
     }
   }
 
@@ -123,13 +125,7 @@ export class AutoTagBuilderInt<T> extends React.Component<
     index = index >= 0 ? index : keys.length + index;
 
     if (index >= 0 && index < keys.length) {
-      this.removeValueByKey(keys[index]);
-    }
-  };
-
-  private removeValueByKey = (key: string) => {
-    const { value } = this.state;
-    if (value.has(key)) {
+      const key = keys[index];
       const newValue = new Map(value);
       newValue.delete(key);
       this.updateValue(newValue);
@@ -152,8 +148,6 @@ export class AutoTagBuilderInt<T> extends React.Component<
         });
       }
     }
-
-    this.changeInputValue('');
 
     if (this._inputNode) {
       this._inputNode.focus();
@@ -241,7 +235,7 @@ export class AutoTagBuilderInt<T> extends React.Component<
         value={tagValue}
         disabled={disabled}
         inputValue={inputValue}
-        onInputValueChange={onChange}
+        onInput={onChange}
         onBeforeTagRemove={this.tagRemoveHandler}
       />
     );

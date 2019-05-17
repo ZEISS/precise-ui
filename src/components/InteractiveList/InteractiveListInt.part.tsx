@@ -226,7 +226,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
     }
 
     const componentIsNotFocused =
-      nextProps.focus !== focus || (this.interactiveList && document.activeElement != this.interactiveList);
+      nextProps.focus !== focus || (this.interactiveList && document.activeElement !== this.interactiveList);
 
     if (componentIsNotFocused && nextProps.focus) {
       if (open && nextProps.open) {

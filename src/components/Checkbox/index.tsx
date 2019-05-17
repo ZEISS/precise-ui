@@ -166,7 +166,17 @@ class CheckboxInt extends React.PureComponent<CheckboxProps & FormContextProps, 
   };
 
   render() {
-    const { children, disabled, theme, value: _0, defaultValue: _1, onChange: _2, info, ...props } = this.props;
+    const {
+      children,
+      disabled,
+      theme,
+      value: _0,
+      defaultValue: _1,
+      onChange: _2,
+      onInput: _3,
+      info,
+      ...props
+    } = this.props;
     const { value, error } = this.state;
     const containerProps = {
       ...props,

@@ -216,6 +216,7 @@ class RatingInt extends React.Component<RatingProps & FormContextProps, RatingSt
       value: _2,
       defaultValue: _3,
       onChange: _4,
+      onInput: _5,
       disabled,
       size = 'medium',
       icon = 'Star',

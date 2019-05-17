@@ -51,10 +51,6 @@ export interface TagBuilderProps extends LabeledInputProps<Array<string>> {
    */
   inputValue?: string;
   /**
-   * The event fires on an attempt of adding value to the input field.
-   */
-  onInputValueChange?(e: InputChangeEvent<string>): void;
-  /**
    * The event fires on an attempt of tag removing.
    */
   onBeforeTagRemove?(index: number): void;
