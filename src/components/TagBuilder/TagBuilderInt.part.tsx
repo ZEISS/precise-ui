@@ -62,7 +62,7 @@ interface StyledInputProps {
   valid?: boolean;
 }
 
-const StyledInput = styled('input') <StyledInputProps>`
+const StyledInput = styled('input')<StyledInputProps>`
   ${getFontSize('medium')}
   box-sizing: content-box;
   box-shadow: none;
@@ -86,7 +86,7 @@ interface InputContainerProps {
   tagRenderer: boolean;
 }
 
-const InputContainer = styled('div') <InputContainerProps>`
+const InputContainer = styled('div')<InputContainerProps>`
   display: inline;
   padding-bottom: ${({ tagRenderer }) => (!tagRenderer ? `${distance.small}` : '0')};
 `;
