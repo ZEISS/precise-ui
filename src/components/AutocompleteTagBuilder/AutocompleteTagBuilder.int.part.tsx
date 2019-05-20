@@ -1,88 +1,45 @@
 import * as React from 'react';
-import styled, { themed, css } from '../../utils/styled';
+import memoize from 'memoize-one';
 import { FormContextProps } from '../../hoc/withFormContext';
-import { InteractiveListWrapperProps, InteractiveListDirection } from '../InteractiveList';
 import { InputChangeEvent } from '../../common';
-import { AutoTagBuilderProps, AutoTagBuilderState } from './AutoTagBuilder.types.part';
+import { AutocompleteTagBuilderProps, AutocompleteTagBuilderState } from './AutocompleteTagBuilder.types.part';
 import { debounce } from '../../utils';
 import { TagBuilder } from '../TagBuilder';
 import { Autocomplete, AutocompleteInputProps, AutosuggestSelectEvent } from '../Autocomplete';
 
-interface StyledAutoTagBuilderWrapperProps {
-  direction: InteractiveListDirection;
-}
-
-const StyledAutoTagBuilderWrapper = styled.ul<StyledAutoTagBuilderWrapperProps>(
-  themed(
-    ({ direction, theme: { ui1, ui4 } }) => css`
-      list-style: none;
-      width: 100%;
-      box-sizing: border-box;
-      box-shadow: none;
-      margin: 0;
-      padding: 0;
-      background: ${ui1};
-      border: 1px solid ${ui4};
-      ${direction === InteractiveListDirection.normal
-        ? 'border-top-color: transparent'
-        : 'border-bottom-color: transparent'};
-      max-height: 50vh;
-      position: absolute;
-      top: ${direction === InteractiveListDirection.normal ? '0' : '-100%'};
-      transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
-      overflow-y: auto;
-      z-index: 100;
-    `,
-  ),
-);
-
-// tslint:disable-next-line
-const NotOpenComponent = null;
-
-const InteractiveListWrapper: React.SFC<InteractiveListWrapperProps> = ({ border: _0, open, ...props }) =>
-  open ? <StyledAutoTagBuilderWrapper {...props} /> : NotOpenComponent;
-InteractiveListWrapper.displayName = 'InteractiveListWrapper';
-
-export class AutoTagBuilderInt<T> extends React.Component<
-  AutoTagBuilderProps<T> & FormContextProps,
-  AutoTagBuilderState<T>
+export class AutocompleteTagBuilderInt<T> extends React.Component<
+  AutocompleteTagBuilderProps<T> & FormContextProps,
+  AutocompleteTagBuilderState<T>
 > {
   private _fireOnInputChange: (q: string) => void;
-  private _enableInputChange: boolean;
   private _inputNode: HTMLElement | null;
 
-  public constructor(props: AutoTagBuilderProps<T>) {
+  public constructor(props: AutocompleteTagBuilderProps<T>) {
     super(props);
 
-    const { value: nullableValue, defaultValue, onInputChange, delay = 0 } = this.props;
+    const { value: nullableValue, defaultValue, onInputChange, inputValue, delay = 0 } = this.props;
     const value = nullableValue || defaultValue || [];
     const valueMap = this.mapItemArray(value);
 
     this.state = {
       value: valueMap,
-      tagValue: value.map(x => this.getSuggestionValue(x)),
-      inputValue: '',
-      open: false,
-      listFocused: false,
-      focused: false,
-      controlled: props.value !== undefined,
+      // tagValue: value.map(x => this.getSuggestionValue(x)),
+      inputValue: inputValue || '',
+      controlled: props.value !== undefined || inputValue !== undefined,
     };
 
-    if (typeof onInputChange === 'function') {
-      this._enableInputChange = true;
-
-      this._fireOnInputChange = debounce((value: string) => {
-        onInputChange({ value });
-      }, delay);
-    }
+    this._fireOnInputChange = debounce((value: string) => {
+      onInputChange && onInputChange({ value });
+    }, delay);
   }
 
-  public componentWillReceiveProps(nextProps: AutoTagBuilderProps<T>) {
+  public componentWillReceiveProps(nextProps: AutocompleteTagBuilderProps<T>) {
     if (this.state.controlled) {
-      const valueMap = this.mapItemArray(nextProps.value);
+      const { value, inputValue } = nextProps;
+      const valueMap = this.mapItemArray(value);
       this.setState({
         value: valueMap,
-        tagValue: Array.from(valueMap.values()).map(x => this.getSuggestionValue(x)),
+        inputValue: inputValue || '',
       });
     }
   }
@@ -114,9 +71,9 @@ export class AutoTagBuilderInt<T> extends React.Component<
       const newValue = new Map(value);
       newValue.set(key, suggestion);
       this.updateValue(newValue);
-
-      this.changeInputValue('');
     }
+
+    this.changeInputValue('');
   }
 
   private removeValueByIndex = (index: number) => {
@@ -144,7 +101,6 @@ export class AutoTagBuilderInt<T> extends React.Component<
       } else {
         this.setState({
           value,
-          tagValue: Array.from(value.values()).map(x => this.getSuggestionValue(x)),
         });
       }
     }
@@ -158,13 +114,13 @@ export class AutoTagBuilderInt<T> extends React.Component<
   }
 
   private changeInputValue(newValue: string) {
-    if (this._enableInputChange) {
+    if (!this.state.controlled) {
       this.setState({
         inputValue: newValue,
       });
-
-      this._fireOnInputChange(newValue);
     }
+
+    this._fireOnInputChange(newValue);
   }
 
   private mapItemArray(value?: Array<T>): Map<string, T> {
@@ -192,6 +148,7 @@ export class AutoTagBuilderInt<T> extends React.Component<
 
   private getSuggestionKey(item: T) {
     const { getSuggestionKey } = this.props;
+
     if (typeof item === 'string') {
       return item;
     } else if (typeof getSuggestionKey === 'function') {
@@ -200,6 +157,10 @@ export class AutoTagBuilderInt<T> extends React.Component<
       throw new Error('Get suggestion key should be specified');
     }
   }
+
+  private getTagsArray = memoize((value: Map<string, T>) => {
+    return Array.from(value.values()).map(x => this.getSuggestionValue(x));
+  });
 
   private defaultSuggestionRenderer(suggestion: T) {
     return {
@@ -226,16 +187,18 @@ export class AutoTagBuilderInt<T> extends React.Component<
 
   private tagBuilderRenderer = (inputProps: AutocompleteInputProps) => {
     const { disabled } = this.props;
-    const { tagValue } = this.state;
+    const { value } = this.state;
     const { onChange, value: inputValue, ...restProps } = inputProps;
+
+    const tagBuilderValue = this.getTagsArray(value);
 
     return (
       <TagBuilder
         {...restProps}
-        value={tagValue}
         disabled={disabled}
         inputValue={inputValue}
         onInput={onChange}
+        value={tagBuilderValue}
         onBeforeTagRemove={this.tagRemoveHandler}
       />
     );

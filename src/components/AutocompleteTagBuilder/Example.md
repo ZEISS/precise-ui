@@ -3,18 +3,55 @@
 The builder can be used with the static array of suggestions.
 
 ```jsx
-const { AutoTagBuilder } = require('precise-ui');
+const { AutocompleteTagBuilder } = require('precise-ui');
 let suggestions =  ['one', 'two', 'tree', 'foure'];
 
-<AutoTagBuilder suggestions={suggestions}/>
+<AutocompleteTagBuilder suggestions={suggestions}/>
 ```
+**Controlled mode**
 
+In controlled mode we can also prevent from value or input value changes.
+
+```jsx
+const { AutocompleteTagBuilder } = require('precise-ui');
+const suggestions =  ['one', 'two', 'tree', 'foure'];
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      value: [],
+    };
+  }
+
+  selectedValueChange(selectedValue) {
+    const value = selectedValue.value.length ? [selectedValue.value[selectedValue.value.length-1]] : [];
+    this.setState({
+      value,
+    })
+  }
+
+  render() {
+    const { value } = this.state;
+
+    return (
+      <>
+        <AutocompleteTagBuilder suggestions={suggestions} value={value} onChange={(x) => this.selectedValueChange(x)}/>
+      </>
+    );
+  }
+}
+
+<App />
+
+```
 **Dynamic Suggestions**
 
 The suggestions can be computed when the input changes. 
 
 ```jsx
-const { AutoTagBuilder, Button } = require('precise-ui');
+const { AutocompleteTagBuilder, Button } = require('precise-ui');
 
 const languages = [
   {
@@ -111,7 +148,6 @@ class App extends React.Component {
 
     this.state = {
       suggestions: [],
-      value: [],
     };
   }
 
@@ -121,37 +157,21 @@ class App extends React.Component {
     });
   };
 
-  changeHandler({value}) {
-    this.setState({
-      value,
-    })
-  };
-
-  resetHandler() {
-    this.setState({
-      value: [],
-    })
-  };
-
   render() {
     const { suggestions } = this.state;
 
     return (
       <>
-        <AutoTagBuilder
+        <AutocompleteTagBuilder
           label="Programming Language"
           placeholder="Type 'c'"
-          value={this.state.value}
           suggestions={suggestions}
           getSuggestionValue={getSuggestionValue}
           getSuggestionKey={getSuggestionKey}
           renderSuggestion={renderSuggestion}
           onInputChange={(e) => this.inputChangeHandler(e)}
-          onChange={(e) => this.changeHandler(e)}
           delay={200}
         />
-        <br/>
-        <Button onClick={() => this.resetHandler()}>Reset</Button>
       </>
     );
   }

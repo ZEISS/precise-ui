@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AutoTagBuilder /> should render <AutoTagBuilder> component 1`] = `
-<AutoTagBuilderInt
+exports[`<AutocompleteTagBuilder /> should render <AutocompleteTagBuilder> component 1`] = `
+<Component
   defaultValue={
     Array [
       "five",

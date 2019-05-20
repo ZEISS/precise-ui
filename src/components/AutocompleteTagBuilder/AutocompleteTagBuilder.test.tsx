@@ -1,18 +1,22 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
-import { AutoTagBuilder } from './';
+import { AutocompleteTagBuilderInt } from './AutocompleteTagBuilder.int.part';
 import { InteractiveList } from '../InteractiveList';
 import { KeyCodes } from '../../utils/keyCodes';
 import 'jest-styled-components';
 
-describe('<AutoTagBuilder />', () => {
-  it('should render <AutoTagBuilder> component', () => {
-    const wrapper = enzyme.shallow(<AutoTagBuilder suggestions={['one', 'two', 'three']} defaultValue={['five']} />);
+describe('<AutocompleteTagBuilder />', () => {
+  it('should render <AutocompleteTagBuilder> component', () => {
+    const wrapper = enzyme.shallow(
+      <AutocompleteTagBuilderInt suggestions={['one', 'two', 'three']} defaultValue={['five']} />,
+    );
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should show suggestions list when focused', () => {
-    const wrapper = enzyme.mount(<AutoTagBuilder suggestions={['one', 'two', 'three']} defaultValue={['five']} />);
+    const wrapper = enzyme.mount(
+      <AutocompleteTagBuilderInt suggestions={['one', 'two', 'three']} defaultValue={['five']} />,
+    );
     // tslint:disable-next-line:no-string-literal
     global['cancelAnimationFrame'] = jest.fn();
     wrapper
@@ -26,7 +30,9 @@ describe('<AutoTagBuilder />', () => {
   });
 
   it('should maintain input focus after suggestion is selected', () => {
-    const wrapper = enzyme.mount(<AutoTagBuilder suggestions={['one', 'two', 'three']} defaultValue={['five']} />);
+    const wrapper = enzyme.mount(
+      <AutocompleteTagBuilderInt suggestions={['one', 'two', 'three']} defaultValue={['five']} />,
+    );
     // tslint:disable-next-line:no-string-literal
     global['cancelAnimationFrame'] = jest.fn();
     wrapper

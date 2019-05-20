@@ -47,13 +47,15 @@ export interface TagBuilderProps extends LabeledInputProps<Array<string>> {
    */
   tagRenderer?(e: TagBuilderRenderEvent): React.ReactChild;
   /**
-   * Input value.
-   */
-  inputValue?: string;
-  /**
    * The event fires on an attempt of tag removing.
+   * @ignore
    */
   onBeforeTagRemove?(index: number): void;
+  /**
+   * Input value.
+   * @ignore
+   */
+  inputValue?: string;
   /**
    * @ignore
    */

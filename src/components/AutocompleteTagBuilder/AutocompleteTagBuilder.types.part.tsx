@@ -1,23 +1,23 @@
 import { LabeledInputProps, InputChangeEvent } from '../../common';
 
-export interface AutoTagBuilderAutosuggestItem {
+export interface AutocompleteTagBuilderAutosuggestItem {
   key: string;
   content?: React.ReactChild;
 }
 
-export interface AutoTagBuilderProps<T> extends LabeledInputProps<Array<T>> {
+export interface AutocompleteTagBuilderProps<T> extends LabeledInputProps<Array<T>> {
   /**
    * The optional message to show in case tehre are no suggestions to display.
    */
   noSuggestionsMessage?: React.ReactChild;
   /**
-   * The current value of the text field, leading to a controlled text field.
+   * The list of suggestions.
    */
   suggestions?: Array<T>;
   /**
    * How to render each suggestion in the InteractiveList.
    */
-  renderSuggestion?(data: T): AutoTagBuilderAutosuggestItem;
+  renderSuggestion?(data: T): AutocompleteTagBuilderAutosuggestItem;
   /**
    * Gets the suggestion value.
    */
@@ -31,6 +31,11 @@ export interface AutoTagBuilderProps<T> extends LabeledInputProps<Array<T>> {
    */
   onInputChange?(event: InputChangeEvent<string>): void;
   /**
+   * The current value of the text field, leading to a controlled text field.
+   * @ignore
+   */
+  inputValue?: string;
+  /**
    * The debounce time in milliseconds for the on input change event.
    * @default 0
    */
@@ -41,12 +46,8 @@ export interface AutoTagBuilderProps<T> extends LabeledInputProps<Array<T>> {
   inputRef?(instance: HTMLElement | null): void;
 }
 
-export interface AutoTagBuilderState<T> {
-  listFocused: boolean;
-  focused: boolean;
-  open: boolean;
+export interface AutocompleteTagBuilderState<T> {
   value: Map<string, T>;
-  tagValue: Array<string>;
   inputValue: string;
   controlled: boolean;
 }
