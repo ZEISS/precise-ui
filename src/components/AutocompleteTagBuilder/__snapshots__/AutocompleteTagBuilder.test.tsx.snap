@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<AutocompleteTagBuilder /> should render <AutocompleteTagBuilder> component 1`] = `
-<Component
+<AutocompleteTagBuilderInt
   defaultValue={
     Array [
       "five",
