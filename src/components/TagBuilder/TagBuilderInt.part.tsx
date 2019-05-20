@@ -164,11 +164,11 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     }
   }
 
-  private safeFireInBeforeTagRemoveEvent(index: number): void {
-    const { onBeforeTagRemove: onBeforeTagRemoveAttemp } = this.props;
+  private fireBeforeTagRemoveEvent(index: number): void {
+    const { onBeforeTagRemove } = this.props;
 
-    if (typeof onBeforeTagRemoveAttemp === 'function') {
-      onBeforeTagRemoveAttemp(index);
+    if (typeof onBeforeTagRemove === 'function') {
+      onBeforeTagRemove(index);
     }
   }
 
@@ -333,7 +333,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
   private removeTag(index: number) {
     const { value: prevTags } = this.state;
 
-    this.safeFireInBeforeTagRemoveEvent(index);
+    this.fireBeforeTagRemoveEvent(index);
     const tags = [...prevTags.slice(0, index), ...prevTags.slice(index + 1)];
     this.onChange(tags);
   }

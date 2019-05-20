@@ -46,7 +46,7 @@ InteractiveListWrapper.displayName = 'InteractiveListWrapper';
 export class AutoTagBuilderInt<T> extends React.Component<
   AutoTagBuilderProps<T> & FormContextProps,
   AutoTagBuilderState<T>
-  > {
+> {
   private _fireOnInputChange: (q: string) => void;
   private _enableInputChange: boolean;
   private _inputNode: HTMLElement | null;
