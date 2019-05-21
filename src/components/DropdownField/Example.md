@@ -20,6 +20,16 @@ const items = [
 <DropdownField data={items} defaultValue="Value 1" label="Select item"/>
 ```
 
+**Positioning**
+
+By default the list is positioned automatically based on the screen size (whether towards the top or bottom, depending on available space on the screen). There is an option to override this behavior by `direction` prop (`0` - bottom, `1` - top).
+
+```jsx
+const { DropdownField } = require('precise-ui');
+
+<DropdownField data={['first', 'second']} direction={0}/>
+```
+
 **Decoration Options**
 
 The given items can also be more than just values. We can provide complex objects that contain further information such as an optional item type (e.g., `divider`, `header`) or some fixed content.

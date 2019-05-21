@@ -51,6 +51,21 @@ describe('<DropdownField />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should be opened <DropdownField open>', () => {
+    const wrapper = enzyme.mount(<DropdownField open data={['1', '2']} defaultValue="1" borderless />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should be opened towards the top <DropdownField open direction={1}>', () => {
+    const wrapper = enzyme.mount(<DropdownField open direction={1} data={['1', '2']} defaultValue="1" borderless />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should be opened towards the bottom <DropdownField open direction={0}>', () => {
+    const wrapper = enzyme.mount(<DropdownField open direction={0} data={['1', '2']} defaultValue="1" borderless />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('clicking the div toggles the dropdown', () => {
     let clicked = false;
     let status = 'close';
