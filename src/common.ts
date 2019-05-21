@@ -413,7 +413,7 @@ export interface InputProps<T> extends StandardProps {
   /**
    * Event triggered when a key was pressed.
    */
-  onInput?(): void;
+  onInput?(e?: InputChangeEvent<string>): void;
   /**
    * Optional name if to be used within a form context.
    */

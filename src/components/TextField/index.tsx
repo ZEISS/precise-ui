@@ -252,6 +252,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
       onFocus: _4,
       onBlur: _5,
       inputRef: _6,
+      onInput: _7,
       ...rest
     } = this.props;
     const { focused, value, error } = this.state;
