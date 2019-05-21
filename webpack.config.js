@@ -68,6 +68,33 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /node_modules\/((ansi-styles|strip-ansi|ansi-regex|react-dev-utils|chalk|typescript-plugin-inner-jsx)\/).*/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+            presets: [
+              [
+                '@babel/preset-env',
+                {
+                  targets: {
+                    ie: 11,
+                    esmodules: true,
+                  },
+                },
+              ],
+              '@babel/preset-typescript',
+              '@babel/preset-react',
+            ],
+            plugins: [
+              ['@babel/plugin-proposal-decorators', { legacy: true }],
+              ['@babel/plugin-proposal-class-properties', { loose: true }],
+              '@babel/plugin-transform-runtime',
+            ],
+          },
+        },
+      },
+      {
         test: /\.tsx$/,
         loader: 'awesome-typescript-loader',
         options: {
