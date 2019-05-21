@@ -346,6 +346,7 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
       defaultValue: _0,
       value: _1,
       onChange: _2,
+      onInput: _3,
       allowOpacity,
       hideBar,
       width = '100%',

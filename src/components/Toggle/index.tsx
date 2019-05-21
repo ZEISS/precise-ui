@@ -173,7 +173,18 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
   };
 
   render() {
-    const { children, disabled, theme, value: _0, defaultValue: _1, onChange: _2, info, label, ...props } = this.props;
+    const {
+      children,
+      disabled,
+      theme,
+      value: _0,
+      defaultValue: _1,
+      onChange: _2,
+      onInput: _3,
+      info,
+      label,
+      ...props
+    } = this.props;
     const { value, focused, error } = this.state;
     const containerProps = {
       ...props,
