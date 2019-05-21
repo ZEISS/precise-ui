@@ -23,7 +23,6 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
 
     this.state = {
       value: valueMap,
-      // tagValue: value.map(x => this.getSuggestionValue(x)),
       inputValue: inputValue || '',
       controlled: props.value !== undefined || inputValue !== undefined,
     };
