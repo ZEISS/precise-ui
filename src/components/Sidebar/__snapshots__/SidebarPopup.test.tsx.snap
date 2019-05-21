@@ -1,0 +1,537 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sidebar /> should render Sidebar 1`] = `
+.c2 {
+  display: inline-block;
+}
+
+.c2 > svg {
+  float: left;
+}
+
+.c1 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(255,255,255,0);
+  padding: 0;
+  border: none;
+  -webkit-align-self: start;
+  -ms-flex-item-align: start;
+  align-self: start;
+  cursor: pointer;
+  color: rgba(0,0,0,1);
+  opacity: 0.2;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.c1:hover {
+  opacity: 0.5;
+}
+
+.c0 {
+  -webkit-transition: all 0.3s cubic-bezier(0,0,0.25,1);
+  transition: all 0.3s cubic-bezier(0,0,0.25,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: fixed;
+  background-color: white;
+  z-index: 100001;
+  visibility: hidden;
+  opacity: 0;
+  overflow: initial;
+  width: 275px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  right: -137.5px;
+}
+
+.c4 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.c5 {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.c6 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow: hidden;
+  z-index: 9999;
+  background: rgba(64,64,64,0.4);
+}
+
+.c3 {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+<Sidebar
+  activator="show"
+>
+  <div
+    onClick={[Function]}
+  >
+    show
+  </div>
+  <Component
+    onClose={[Function]}
+    open={false}
+    size="275px"
+  >
+    <styled.div
+      open={false}
+      size="275px"
+    >
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": false,
+              "lastClassName": "c0",
+              "rules": Array [
+                [Function],
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        open={false}
+        size="275px"
+      >
+        <div
+          className="c0"
+          open={false}
+          size="275px"
+        >
+          <CloseButton
+            onClick={[Function]}
+          >
+            <styled.a
+              onClick={[Function]}
+            >
+              <StyledComponent
+                forwardedComponent={
+                  Object {
+                    "$$typeof": Symbol(react.forward_ref),
+                    "attrs": Array [],
+                    "componentStyle": ComponentStyle {
+                      "componentId": "sc-bwzfXH",
+                      "isStatic": true,
+                      "lastClassName": "c1",
+                      "rules": Array [
+                        "
+  ",
+                        "
+    ",
+                        "font-size: 1rem;
+  ",
+                        "
+    ",
+                        "line-height: 1.375rem;
+  ",
+                        "
+    ",
+                        "
+  ",
+                        "
+
+  position: absolute;
+  top: ",
+                        "1rem",
+                        ";
+  right: ",
+                        "1rem",
+                        ";
+  background-color: ",
+                        "rgba(255, 255, 255, 0)",
+                        ";
+  padding: 0;
+  border: none;
+  align-self: start;
+  cursor: pointer;
+  color: ",
+                        "rgba(0,0,0,1)",
+                        ";
+  opacity: 0.2;
+  transition: opacity 0.2s ease-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
+",
+                      ],
+                    },
+                    "displayName": "styled.a",
+                    "foldedComponentIds": Array [],
+                    "render": [Function],
+                    "styledComponentId": "sc-bwzfXH",
+                    "target": "a",
+                    "toString": [Function],
+                    "warnTooManyClasses": [Function],
+                    "withComponent": [Function],
+                  }
+                }
+                forwardedRef={null}
+                onClick={[Function]}
+              >
+                <a
+                  className="c1"
+                  onClick={[Function]}
+                >
+                  <Icon
+                    name="Close"
+                    size={1.1}
+                  >
+                    <styled.i>
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bdVaJa",
+                              "isStatic": true,
+                              "lastClassName": "c2",
+                              "rules": Array [
+                                "
+  display: inline-block;
+
+  > svg {
+    float: left;
+  }
+",
+                              ],
+                            },
+                            "displayName": "styled.i",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bdVaJa",
+                            "target": "i",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                      >
+                        <i
+                          className="c2"
+                        >
+                          <Close
+                            height="1.1em"
+                            style={
+                              Object {
+                                "fill": "currentColor",
+                                "stroke": undefined,
+                              }
+                            }
+                            viewBox="0 0 24 24"
+                            width="1.1em"
+                          >
+                            <svg
+                              height="1.1em"
+                              style={
+                                Object {
+                                  "fill": "currentColor",
+                                  "stroke": undefined,
+                                }
+                              }
+                              viewBox="0 0 24 24"
+                              width="1.1em"
+                            >
+                              <path
+                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                              />
+                            </svg>
+                          </Close>
+                        </i>
+                      </StyledComponent>
+                    </styled.i>
+                  </Icon>
+                </a>
+              </StyledComponent>
+            </styled.a>
+          </CloseButton>
+          Content
+        </div>
+      </StyledComponent>
+    </styled.div>
+    <Styled(Blocker)
+      onClose={[Function]}
+      open={false}
+    >
+      <StyledComponent
+        forwardedComponent={
+          Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bZQynM",
+              "isStatic": false,
+              "lastClassName": "c3",
+              "rules": Array [
+                "
+  visibility: ",
+                [Function],
+                ";
+  opacity: ",
+                [Function],
+                ";
+  transition: all 0.5s;
+",
+              ],
+            },
+            "displayName": "Styled(Blocker)",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bZQynM",
+            "target": [Function],
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          }
+        }
+        forwardedRef={null}
+        onClose={[Function]}
+        open={false}
+      >
+        <Blocker
+          className="c3"
+          onClose={[Function]}
+          open={false}
+        >
+          <styled.div
+            className="c3"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            open={false}
+          >
+            <StyledComponent
+              className="c3"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bxivhb",
+                    "isStatic": true,
+                    "lastClassName": "c4",
+                    "rules": Array [
+                      "
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: auto;
+",
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bxivhb",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={[Function]}
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              open={false}
+            >
+              <div
+                className="c3 c4"
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                open={false}
+              >
+                <styled.a
+                  href="#"
+                  onFocus={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": true,
+                          "lastClassName": "c5",
+                          "rules": Array [
+                            "
+  height: 0;
+  width: 0;
+  overflow: hidden;
+",
+                          ],
+                        },
+                        "displayName": "styled.a",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "a",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    href="#"
+                    onFocus={[Function]}
+                  >
+                    <a
+                      className="c5"
+                      href="#"
+                      onFocus={[Function]}
+                    />
+                  </StyledComponent>
+                </styled.a>
+                <styled.a
+                  href="#"
+                  onFocus={[Function]}
+                >
+                  <StyledComponent
+                    forwardedComponent={
+                      Object {
+                        "$$typeof": Symbol(react.forward_ref),
+                        "attrs": Array [],
+                        "componentStyle": ComponentStyle {
+                          "componentId": "sc-ifAKCX",
+                          "isStatic": true,
+                          "lastClassName": "c5",
+                          "rules": Array [
+                            "
+  height: 0;
+  width: 0;
+  overflow: hidden;
+",
+                          ],
+                        },
+                        "displayName": "styled.a",
+                        "foldedComponentIds": Array [],
+                        "render": [Function],
+                        "styledComponentId": "sc-ifAKCX",
+                        "target": "a",
+                        "toString": [Function],
+                        "warnTooManyClasses": [Function],
+                        "withComponent": [Function],
+                      }
+                    }
+                    forwardedRef={null}
+                    href="#"
+                    onFocus={[Function]}
+                  >
+                    <a
+                      className="c5"
+                      href="#"
+                      onFocus={[Function]}
+                    />
+                  </StyledComponent>
+                </styled.a>
+              </div>
+            </StyledComponent>
+          </styled.div>
+          <Styled(styled.div)
+            className="c3"
+            open={false}
+          >
+            <StyledComponent
+              className="c3"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-EHOje",
+                    "isStatic": true,
+                    "lastClassName": "c6",
+                    "rules": Array [
+                      "
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: auto;
+",
+                      "
+  overflow: hidden;
+  z-index: 9999;
+  background: ",
+                      "rgba(64, 64, 64, 0.4)",
+                      ";
+",
+                    ],
+                  },
+                  "displayName": "Styled(styled.div)",
+                  "foldedComponentIds": Array [
+                    "sc-bxivhb",
+                  ],
+                  "render": [Function],
+                  "styledComponentId": "sc-EHOje",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
+              open={false}
+            >
+              <div
+                className="c3 c6"
+                open={false}
+              />
+            </StyledComponent>
+          </Styled(styled.div)>
+        </Blocker>
+      </StyledComponent>
+    </Styled(Blocker)>
+  </Component>
+</Sidebar>
+`;

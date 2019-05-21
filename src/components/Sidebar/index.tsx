@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { KeyCodes } from '../../utils/keyCodes';
-// import { SidebarPopup } from './SidebarPopup.part';
+import { SidebarPopup } from './SidebarPopup.part';
+import { SidebarActivatorContainer } from './SidebarActivatorContainer.part';
 
 type PositionType = 'top' | 'left' | 'bottom' | 'right';
 
@@ -59,8 +60,8 @@ export class Sidebar extends React.Component<SidebarProps, SidebarState> {
     const { open } = this.state;
     return (
       <>
-        <div onClick={this.show}>{activator}</div>
-        {/* <SidebarPopup {...props} open={open} onClose={this.hide} size={size} /> */}
+        <SidebarActivatorContainer onClick={this.show}>{activator}</SidebarActivatorContainer>
+        <SidebarPopup {...props} open={open} onClose={this.hide} size={size} />
       </>
     );
   }
