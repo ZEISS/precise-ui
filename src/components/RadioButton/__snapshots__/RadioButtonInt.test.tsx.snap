@@ -24,7 +24,6 @@ exports[`<RadioButtonInt /> should render the controlled RadioButtonInt with a l
       Value
     </Label>
   </styled.div>
-  <InputError />
 </styled.div>
 `;
 
@@ -46,6 +45,5 @@ exports[`<RadioButtonInt /> should render the disabled, uncontrolled RadioButton
       />
     </styled.div>
   </styled.div>
-  <InputError />
 </styled.div>
 `;

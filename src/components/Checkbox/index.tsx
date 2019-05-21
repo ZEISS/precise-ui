@@ -95,13 +95,11 @@ export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxStat
     };
   }
 
-  componentWillReceiveProps(nextProps: CheckboxProps) {
+  componentWillReceiveProps({ value = false, error }: CheckboxProps) {
     if (this.state.controlled) {
-      this.setState({
-        value: nextProps.value || false,
-        error: nextProps.error,
-      });
+      this.setState({ value });
     }
+    this.setState({ error });
   }
 
   componentDidMount() {

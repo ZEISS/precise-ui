@@ -59,8 +59,8 @@ export function withValidation<TEventArgs>(validate: (e: TEventArgs) => React.Re
         };
 
         render() {
-          const { error } = this.state;
-          return <Component {...this.props} error={error || this.props.error} onChange={this.validate} />;
+          const { error = this.props.error } = this.state;
+          return <Component {...this.props} error={error} onChange={this.validate} />;
         }
       },
       { Component },

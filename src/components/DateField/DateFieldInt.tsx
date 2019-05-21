@@ -235,19 +235,15 @@ export class DateFieldInt extends React.Component<DateFieldProps & FormContextPr
     };
   }
 
-  componentWillReceiveProps(nextProps: DateFieldProps) {
+  componentWillReceiveProps({ value = '', open = false, error }: DateFieldProps) {
     if (this.state.valueControlled) {
-      this.setState({
-        value: nextProps.value || '',
-        error: nextProps.error,
-      });
+      this.setState({ value });
+    }
+    if (this.state.open) {
+      this.setState({ open });
     }
 
-    if (this.state.openControlled) {
-      this.setState({
-        open: nextProps.open || false,
-      });
-    }
+    this.setState({ error });
   }
 
   componentDidMount() {
