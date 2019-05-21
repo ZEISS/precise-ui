@@ -31,8 +31,7 @@ export interface AutocompleteTagBuilderProps<T> extends LabeledInputProps<Array<
    */
   onInputChange?(event: InputChangeEvent<string>): void;
   /**
-   * The current value of the text field, leading to a controlled text field.
-   * @ignore
+   * The current value of the text field.
    */
   inputValue?: string;
   /**
