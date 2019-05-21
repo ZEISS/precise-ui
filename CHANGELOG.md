@@ -12,6 +12,7 @@
 - Added `onChangeDone` event to `Slider` component
 - Added `validationRules` for `Form`
 - Fixed: missed selection state of `RadioButtonGroup` in non-controlled mode with form context.
+- Compatibility with IE11
 
 ## 0.5.0
 
