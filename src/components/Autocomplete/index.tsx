@@ -136,13 +136,11 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
     };
   }
 
-  componentWillReceiveProps(nextProps: AutocompleteProps<T>) {
+  componentWillReceiveProps({ value = '', error }: AutocompleteProps<T>) {
     if (this.state.controlled) {
-      this.setState({
-        value: nextProps.value || '',
-        error: nextProps.error,
-      });
+      this.setState({ value });
     }
+    this.setState({ error });
   }
 
   componentDidMount() {

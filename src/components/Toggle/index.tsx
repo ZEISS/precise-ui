@@ -116,13 +116,11 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
     }
   }
 
-  componentWillReceiveProps(nextProps: ToggleProps) {
+  componentWillReceiveProps({ value = false, error }: ToggleProps) {
     if (this.state.controlled) {
-      this.setState({
-        value: nextProps.value || false,
-        error: nextProps.error,
-      });
+      this.setState({ value });
     }
+    this.setState({ error });
   }
 
   private changeValue() {

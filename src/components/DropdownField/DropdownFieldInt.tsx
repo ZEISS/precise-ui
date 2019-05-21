@@ -239,17 +239,16 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
     }
   }
 
-  componentWillReceiveProps(nextProps: DropdownFieldProps) {
+  componentWillReceiveProps({ data = [], value = [], error, multiple }: DropdownFieldProps) {
     const { controlled } = this.state;
 
     if (controlled) {
-      const data = nextProps.data || [];
-      const value = nextProps.value !== undefined ? nextProps.value : [];
       this.setState({
-        value: getIndices(data, value, nextProps.multiple),
-        error: nextProps.error,
+        value: getIndices(data, value, multiple),
       });
     }
+
+    this.setState({ error });
   }
 
   private show = () =>
