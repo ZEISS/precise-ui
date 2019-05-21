@@ -15,6 +15,7 @@
 - Fixed: missed selection state of `RadioButtonGroup` in non-controlled mode with form context.
 - Compatibility with IE11
 - Fixed: component wrapped with `withValidation` hoc didn't display an error
+- Feature: new Dropdown props (open / direction)
 
 ## 0.5.0
 
