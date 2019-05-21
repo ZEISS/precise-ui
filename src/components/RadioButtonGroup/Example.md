@@ -95,3 +95,32 @@ const { RadioButtonGroup, RadioButton } = require('precise-ui');
   <RadioButton name="third">Third</RadioButton>
 </RadioButtonGroup>
 ```
+
+
+**Multiple Checkbox selection**
+
+The `RadioButtonGroup` is supporting multiple selection, but only with `Checkboxes` as child elements.
+
+```jsx
+const { RadioButtonGroup, Checkbox } = require('precise-ui');
+
+<RadioButtonGroup multiple defaultValue={['first', 'second']}  onChange={e => console.log(e)}>
+  <Checkbox name="first">First</Checkbox>
+  <Checkbox name="second">Second</Checkbox>
+  <Checkbox name="third">Third</Checkbox>
+</RadioButtonGroup>
+```
+
+Multiselection works inside `Form` as well, the same way as any other form element.
+
+```jsx
+const { RadioButtonGroup, Checkbox, Form } = require('precise-ui');
+
+<Form defaultValue={{ roles: ['second'] }} onChange={e => console.log(e)}>
+  <RadioButtonGroup name="roles" multiple>
+    <Checkbox name="first">First</Checkbox>
+    <Checkbox name="second">Second</Checkbox>
+    <Checkbox name="third">Third</Checkbox>
+  </RadioButtonGroup>
+</Form>
+```

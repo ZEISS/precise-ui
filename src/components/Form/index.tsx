@@ -78,7 +78,7 @@ export interface FormState<FormValues> {
   initial: FormValues;
   controlled: boolean;
   current: FormValues;
-  errors?: { [T in keyof FormValues]: React.ReactChild };
+  errors: Partial<{ [T in keyof FormValues]: React.ReactChild }>;
 }
 
 const StyledForm = styled.form`
@@ -145,6 +145,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
       controlled: props.value !== undefined,
       initial: data as Values,
       current: data as Values,
+      errors: {},
     };
   }
 
@@ -156,41 +157,6 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
       const changed = isChanged(initial, value);
       this.setValues(value, changed);
     }
-  }
-
-  private getError(name: string, value: any) {
-    const validator = this.props.validationRules && this.props.validationRules[name];
-    const validationResult = validator ? validator(value) : true;
-    const error = validationResult === true ? undefined : validationResult;
-    return error;
-  }
-
-  private setErrors(current: Values) {
-    const keys = Object.keys(current);
-    const { errors = {} } = this.state;
-    const nextErrors = { ...errors };
-
-    for (const key of keys) {
-      const value = current[key];
-      const error = this.getError(key, value);
-      if (error) {
-        nextErrors[key] = error;
-      } else {
-        delete nextErrors[key];
-      }
-
-      for (const field of this.fields) {
-        if (field.props.name === key) {
-          field.setState({
-            error,
-          });
-        }
-      }
-    }
-
-    this.setState({
-      errors: nextErrors as FormState<Values>['errors'],
-    });
   }
 
   private setValues(current: Values, changed: boolean) {
@@ -214,6 +180,43 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
     }
   }
 
+  private getError(name: string, value: any) {
+    const validator = this.props.validationRules && this.props.validationRules[name];
+    const validationResult = validator ? validator(value) : true;
+    const error = validationResult === true ? undefined : validationResult;
+    return error;
+  }
+
+  private setFieldError(name: keyof Values, error?: React.ReactChild) {
+    for (const fieldEntity of this.fields) {
+      if (fieldEntity.props.name === name) {
+        fieldEntity.setState({ error });
+        return;
+      }
+    }
+  }
+
+  private setError({ name, value }: FormValueChange) {
+    const error = this.getError(name, value);
+    this.setFieldError(name, error);
+
+    this.setState({ errors: { ...this.state.errors, [name]: error } });
+  }
+
+  private setErrors(current: Values) {
+    const keys = Object.keys(current);
+    const errors = { ...this.state.errors };
+
+    for (const key of keys) {
+      const value = current[key];
+      const error = this.getError(key, value);
+      errors[key] = error;
+      this.setFieldError(key, error);
+    }
+
+    this.setState({ errors });
+  }
+
   private createContext(): FormContextType {
     return {
       change: (field: FormValueChange) => {
@@ -229,7 +232,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
           this.setValues(proposed, changed);
         }
 
-        this.setErrors(proposed);
+        this.setError(field);
 
         if (typeof onChange === 'function') {
           onChange({
@@ -277,6 +280,14 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
     this.setErrors(current);
 
     if (!disabled && typeof onSubmit === 'function') {
+      const arrayErrors = Object.keys(errors).reduce<Array<FormValidationError>>((arrayErrors, field) => {
+        const error = errors[field];
+        if (error) {
+          arrayErrors.push({ field, error });
+        }
+        return arrayErrors;
+      }, []);
+
       this.setState(
         {
           changed: false,
@@ -285,7 +296,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
         () =>
           onSubmit({
             data: current,
-            errors: errors ? Object.keys(errors).map(field => ({ field, error: errors[field] })) : undefined,
+            errors: arrayErrors,
             changed,
           }),
       );
