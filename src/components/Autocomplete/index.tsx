@@ -118,13 +118,11 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
     };
   }
 
-  componentWillReceiveProps(nextProps: AutocompleteProps<T>) {
+  componentWillReceiveProps({ value = '', error }: AutocompleteProps<T>) {
     if (this.state.controlled) {
-      this.setState({
-        value: nextProps.value || '',
-        error: nextProps.error,
-      });
+      this.setState({ value });
     }
+    this.setState({ error });
   }
 
   componentDidMount() {
@@ -282,7 +280,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       inputRef: _7,
       ...props
     } = this.props;
-    const { open, listFocus, value, error = this.props.error } = this.state;
+    const { open, listFocus, value, error } = this.state;
 
     return (
       <div onKeyDown={this.handleKeyDown} onFocus={this.handleFocus} onBlur={this.handleBlur}>

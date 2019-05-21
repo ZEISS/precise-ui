@@ -98,6 +98,7 @@ const StyledText = styled.span`
 
 interface CloseIconProps {
   onClick?(): void;
+
   theme?: PreciseTheme;
 }
 
@@ -132,16 +133,11 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     };
   }
 
-  componentWillReceiveProps(nextProps: TagBuilderProps) {
-    const { value } = nextProps;
-    const { controlled } = this.state;
-
-    if (controlled && value !== undefined) {
-      this.setState({
-        value: [...value],
-        error: nextProps.error,
-      });
+  componentWillReceiveProps({ value, error }: TagBuilderProps) {
+    if (this.state.controlled && value !== undefined) {
+      this.setState({ value: [...value] });
     }
+    this.setState({ error });
   }
 
   componentDidMount() {
@@ -362,7 +358,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
 
   render() {
     const { tagRenderer, info, disabled, borderless, theme, label, placeholder } = this.props;
-    const { value, inputValue, focused, valid, error = this.props.error } = this.state;
+    const { value, inputValue, focused, valid, error } = this.state;
     const { inputPosition = value.length } = this.state;
     const border = getTextFieldBorderType(borderless, !!error, focused);
     const renderer = tagRenderer || this.renderTag;

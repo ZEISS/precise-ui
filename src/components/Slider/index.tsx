@@ -204,19 +204,14 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
     }
   }
 
-  componentWillReceiveProps(nextProps: SliderProps) {
+  componentWillReceiveProps({ value = this.state.value, error, orientation }: SliderProps) {
     if (this.state.controlled) {
-      const { value } = this.state;
-      const newValue = nextProps.value === undefined ? value : nextProps.value;
-
-      this.setState({
-        value: newValue,
-        error: nextProps.error,
-      });
+      this.setState({ value });
     }
 
     this.setState({
-      vertical: nextProps.orientation === 'vertical',
+      vertical: orientation === 'vertical',
+      error,
     });
   }
 
@@ -420,7 +415,7 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
       showTooltip,
       ...props
     } = this.props;
-    const { value, active, vertical, hovered, error = this.props.error } = this.state;
+    const { value, active, vertical, hovered, error } = this.state;
     const values = Array.isArray(value) ? value : [value];
     const ind = values.length === 1 ? (100 * (values[0] - minimum)) / (maximum - minimum) : 0;
 

@@ -235,19 +235,15 @@ export class DateFieldInt extends React.Component<DateFieldProps & FormContextPr
     };
   }
 
-  componentWillReceiveProps(nextProps: DateFieldProps) {
+  componentWillReceiveProps({ value = '', open = false, error }: DateFieldProps) {
     if (this.state.valueControlled) {
-      this.setState({
-        value: nextProps.value || '',
-        error: nextProps.error,
-      });
+      this.setState({ value });
+    }
+    if (this.state.open) {
+      this.setState({ open });
     }
 
-    if (this.state.openControlled) {
-      this.setState({
-        open: nextProps.open || false,
-      });
-    }
+    this.setState({ error });
   }
 
   componentDidMount() {
@@ -561,7 +557,7 @@ export class DateFieldInt extends React.Component<DateFieldProps & FormContextPr
       weekDays,
       ...props
     } = this.props;
-    const { open, value, error = this.props.error } = this.state;
+    const { open, value, error } = this.state;
     const img = <Icon name="DateRange" color={tuna} size="22px" />;
 
     return (
