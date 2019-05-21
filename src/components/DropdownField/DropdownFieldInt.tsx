@@ -368,6 +368,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
       children: _0,
       value: _1,
       defaultValue: _2,
+      onInput: _3,
       data = [],
       theme,
       className: classNameProp,

@@ -239,6 +239,7 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
       onChange: _2,
       preview: _3,
       onOpen: _4,
+      onInput: _5,
       ...props
     } = this.props;
     const { value, error } = this.state;

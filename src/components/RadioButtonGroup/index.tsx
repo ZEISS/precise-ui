@@ -17,7 +17,7 @@ export interface RadioButtonGroupProps extends InputProps<string | Array<string>
   multiple?: boolean;
 }
 
-type StateValue = Array<string> | string | undefined;
+export type StateValue = Array<string> | string | undefined;
 
 export interface RadioButtonGroupState {
   controlled: boolean;
