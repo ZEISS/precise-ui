@@ -108,6 +108,11 @@ export interface InteractiveListProps extends StandardProps {
    * Event fired when clicked outside of the component
    */
   onClickOutside?(): void;
+  /**
+   * Whether to position the list to top or bottom.
+   * Either `0` (bottom) or `1` (top). Make sure that the value provided is number.
+   */
+  direction?: InteractiveListDirection;
 }
 
 export interface InteractiveListState {
