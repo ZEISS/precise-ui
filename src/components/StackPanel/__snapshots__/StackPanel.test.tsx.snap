@@ -1,6 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StackPanel /> should render the StackPanel bottom to top 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: auto;
+  height: auto;
+}
+
 <StackPanel
   direction="bottom"
 >
@@ -17,7 +43,7 @@ exports[`<StackPanel /> should render the StackPanel bottom to top 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "iRwuO",
+            "lastClassName": "c0",
             "rules": Array [
               "
   display: flex;
@@ -45,7 +71,7 @@ exports[`<StackPanel /> should render the StackPanel bottom to top 1`] = `
       wrapping="nowrap"
     >
       <div
-        className="sc-bdVaJa iRwuO"
+        className="c0"
         dir="column-reverse"
       >
         <StackItem>
@@ -58,7 +84,7 @@ exports[`<StackPanel /> should render the StackPanel bottom to top 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "bmilDA",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -86,7 +112,7 @@ exports[`<StackPanel /> should render the StackPanel bottom to top 1`] = `
               forwardedRef={null}
             >
               <div
-                className="sc-bwzfXH bmilDA"
+                className="c1"
               >
                 First
               </div>
@@ -103,7 +129,7 @@ exports[`<StackPanel /> should render the StackPanel bottom to top 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "bmilDA",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -131,7 +157,7 @@ exports[`<StackPanel /> should render the StackPanel bottom to top 1`] = `
               forwardedRef={null}
             >
               <div
-                className="sc-bwzfXH bmilDA"
+                className="c1"
               >
                 Second
               </div>
@@ -145,6 +171,32 @@ exports[`<StackPanel /> should render the StackPanel bottom to top 1`] = `
 `;
 
 exports[`<StackPanel /> should render the StackPanel right to left 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: auto;
+  height: auto;
+}
+
 <StackPanel
   direction="right"
 >
@@ -161,7 +213,7 @@ exports[`<StackPanel /> should render the StackPanel right to left 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "CIrhF",
+            "lastClassName": "c0",
             "rules": Array [
               "
   display: flex;
@@ -189,7 +241,7 @@ exports[`<StackPanel /> should render the StackPanel right to left 1`] = `
       wrapping="nowrap"
     >
       <div
-        className="sc-bdVaJa CIrhF"
+        className="c0"
         dir="row-reverse"
       >
         <StackItem>
@@ -202,7 +254,7 @@ exports[`<StackPanel /> should render the StackPanel right to left 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "bmilDA",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -230,7 +282,7 @@ exports[`<StackPanel /> should render the StackPanel right to left 1`] = `
               forwardedRef={null}
             >
               <div
-                className="sc-bwzfXH bmilDA"
+                className="c1"
               >
                 First
               </div>
@@ -247,7 +299,7 @@ exports[`<StackPanel /> should render the StackPanel right to left 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "bmilDA",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -275,7 +327,7 @@ exports[`<StackPanel /> should render the StackPanel right to left 1`] = `
               forwardedRef={null}
             >
               <div
-                className="sc-bwzfXH bmilDA"
+                className="c1"
               >
                 Second
               </div>
@@ -289,6 +341,41 @@ exports[`<StackPanel /> should render the StackPanel right to left 1`] = `
 `;
 
 exports[`<StackPanel /> should render the StackPanel top to bottom with explicit heights 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: auto;
+  height: 20%;
+}
+
+.c2 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: auto;
+  height: 60%;
+}
+
 <StackPanel
   direction="top"
   style={
@@ -315,7 +402,7 @@ exports[`<StackPanel /> should render the StackPanel top to bottom with explicit
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "bbJGId",
+            "lastClassName": "c0",
             "rules": Array [
               "
   display: flex;
@@ -348,7 +435,7 @@ exports[`<StackPanel /> should render the StackPanel top to bottom with explicit
       wrapping="nowrap"
     >
       <div
-        className="sc-bdVaJa bbJGId"
+        className="c0"
         dir="column"
         style={
           Object {
@@ -370,7 +457,7 @@ exports[`<StackPanel /> should render the StackPanel top to bottom with explicit
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "hqUuzP",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -399,7 +486,7 @@ exports[`<StackPanel /> should render the StackPanel top to bottom with explicit
               height="20%"
             >
               <div
-                className="sc-bwzfXH hqUuzP"
+                className="c1"
                 height="20%"
               >
                 First
@@ -421,7 +508,7 @@ exports[`<StackPanel /> should render the StackPanel top to bottom with explicit
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "hqUuzP",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -450,7 +537,7 @@ exports[`<StackPanel /> should render the StackPanel top to bottom with explicit
               height="60%"
             >
               <div
-                className="sc-bwzfXH dBuYpR"
+                className="c2"
                 height="60%"
               >
                 Second
@@ -472,7 +559,7 @@ exports[`<StackPanel /> should render the StackPanel top to bottom with explicit
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "hqUuzP",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -501,7 +588,7 @@ exports[`<StackPanel /> should render the StackPanel top to bottom with explicit
               height="20%"
             >
               <div
-                className="sc-bwzfXH hqUuzP"
+                className="c1"
                 height="20%"
               >
                 Third
@@ -516,6 +603,50 @@ exports[`<StackPanel /> should render the StackPanel top to bottom with explicit
 `;
 
 exports[`<StackPanel /> should render the StackPanel with explicit widths and wrapping 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 440px;
+  height: auto;
+}
+
+.c2 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 300px;
+  height: auto;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 40%;
+  height: auto;
+}
+
 <StackPanel
   wrap={true}
 >
@@ -532,7 +663,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit widths and wr
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "iYzFoh",
+            "lastClassName": "c0",
             "rules": Array [
               "
   display: flex;
@@ -560,7 +691,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit widths and wr
       wrapping="wrap"
     >
       <div
-        className="sc-bdVaJa iYzFoh"
+        className="c0"
         dir="row"
       >
         <StackItem
@@ -577,7 +708,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit widths and wr
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "dHGcix",
+                    "lastClassName": "c3",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -606,7 +737,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit widths and wr
               width="440px"
             >
               <div
-                className="sc-bwzfXH dmWoAt"
+                className="c1"
                 width="440px"
               >
                 First
@@ -628,7 +759,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit widths and wr
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "dHGcix",
+                    "lastClassName": "c3",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -657,7 +788,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit widths and wr
               width="300px"
             >
               <div
-                className="sc-bwzfXH ffJzaL"
+                className="c2"
                 width="300px"
               >
                 Second
@@ -679,7 +810,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit widths and wr
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "dHGcix",
+                    "lastClassName": "c3",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -708,7 +839,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit widths and wr
               width="40%"
             >
               <div
-                className="sc-bwzfXH dHGcix"
+                className="c3"
                 width="40%"
               >
                 Third
@@ -723,6 +854,32 @@ exports[`<StackPanel /> should render the StackPanel with explicit widths and wr
 `;
 
 exports[`<StackPanel /> should render the StackPanel with explicit withs and no wrapping 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 100px;
+  height: auto;
+}
+
 <StackPanel>
   <styled.div
     dir="row"
@@ -737,7 +894,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit withs and no 
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "jfORAu",
+            "lastClassName": "c0",
             "rules": Array [
               "
   display: flex;
@@ -765,7 +922,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit withs and no 
       wrapping="nowrap"
     >
       <div
-        className="sc-bdVaJa jfORAu"
+        className="c0"
         dir="row"
       >
         <StackItem
@@ -782,7 +939,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit withs and no 
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "blInJE",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -811,7 +968,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit withs and no 
               width="100px"
             >
               <div
-                className="sc-bwzfXH blInJE"
+                className="c1"
                 width="100px"
               >
                 First
@@ -833,7 +990,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit withs and no 
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "blInJE",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -862,7 +1019,7 @@ exports[`<StackPanel /> should render the StackPanel with explicit withs and no 
               width="100px"
             >
               <div
-                className="sc-bwzfXH blInJE"
+                className="c1"
                 width="100px"
               >
                 Second
@@ -877,6 +1034,32 @@ exports[`<StackPanel /> should render the StackPanel with explicit withs and no 
 `;
 
 exports[`<StackPanel /> should render the StackPanel with three items 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.c1 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: auto;
+  height: auto;
+}
+
 <StackPanel>
   <styled.div
     dir="row"
@@ -891,7 +1074,7 @@ exports[`<StackPanel /> should render the StackPanel with three items 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "jfORAu",
+            "lastClassName": "c0",
             "rules": Array [
               "
   display: flex;
@@ -919,7 +1102,7 @@ exports[`<StackPanel /> should render the StackPanel with three items 1`] = `
       wrapping="nowrap"
     >
       <div
-        className="sc-bdVaJa jfORAu"
+        className="c0"
         dir="row"
       >
         <StackItem>
@@ -932,7 +1115,7 @@ exports[`<StackPanel /> should render the StackPanel with three items 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "bmilDA",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -960,7 +1143,7 @@ exports[`<StackPanel /> should render the StackPanel with three items 1`] = `
               forwardedRef={null}
             >
               <div
-                className="sc-bwzfXH bmilDA"
+                className="c1"
               >
                 First
               </div>
@@ -977,7 +1160,7 @@ exports[`<StackPanel /> should render the StackPanel with three items 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "bmilDA",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -1005,7 +1188,7 @@ exports[`<StackPanel /> should render the StackPanel with three items 1`] = `
               forwardedRef={null}
             >
               <div
-                className="sc-bwzfXH bmilDA"
+                className="c1"
               >
                 Second
               </div>
@@ -1022,7 +1205,7 @@ exports[`<StackPanel /> should render the StackPanel with three items 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bwzfXH",
                     "isStatic": false,
-                    "lastClassName": "bmilDA",
+                    "lastClassName": "c1",
                     "rules": Array [
                       "
   flex-grow: ",
@@ -1050,7 +1233,7 @@ exports[`<StackPanel /> should render the StackPanel with three items 1`] = `
               forwardedRef={null}
             >
               <div
-                className="sc-bwzfXH bmilDA"
+                className="c1"
               >
                 Third
               </div>
@@ -1064,6 +1247,23 @@ exports[`<StackPanel /> should render the StackPanel with three items 1`] = `
 `;
 
 exports[`<StackPanel /> should render the default StackPanel 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
 <StackPanel>
   <styled.div
     dir="row"
@@ -1078,7 +1278,7 @@ exports[`<StackPanel /> should render the default StackPanel 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "jfORAu",
+            "lastClassName": "c0",
             "rules": Array [
               "
   display: flex;
@@ -1106,7 +1306,7 @@ exports[`<StackPanel /> should render the default StackPanel 1`] = `
       wrapping="nowrap"
     >
       <div
-        className="sc-bdVaJa jfORAu"
+        className="c0"
         dir="row"
       />
     </StyledComponent>

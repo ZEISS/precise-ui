@@ -30,7 +30,7 @@ export const SidebarContainer = styled.div<SidebarContainer>(
         `
     }
     ${getSizeStyles(position, size)}
-    ${getPositonStyles(position, open, size)}
+    ${getPositionStyles(position, open, size)}
   `;
   },
 );
@@ -49,7 +49,7 @@ function getSizeStyles(position: PositionType, size: string) {
   }
 }
 
-function getPositonStyles(position: PositionType, open: boolean, size: string) {
+function getPositionStyles(position: PositionType, open: boolean, size: string) {
   const opposite = {
     top: 'bottom',
     bottom: 'top',
