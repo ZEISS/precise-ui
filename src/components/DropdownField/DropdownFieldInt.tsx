@@ -17,6 +17,7 @@ import {
   InteractiveListWrapperProps,
   InteractiveListDirection,
   InteractiveListBorderType,
+  InteractiveListProps,
 } from '../InteractiveList';
 import {
   StyledInputRow,
@@ -217,7 +218,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
 
     this.state = {
       value: getIndices(data, value, props.multiple),
-      open: false,
+      open: props.open === true,
       controlled: props.value !== undefined,
       error: props.error,
     };
@@ -337,7 +338,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
   };
 
   private renderList = (screenSize?: ScreenSize) => {
-    const { data = [], theme, disabled, multiple } = this.props;
+    const { data = [], theme, disabled, multiple, direction } = this.props;
     const { open, value } = this.state;
     const mobile = screenSize === 'small';
     const wrapper = mobile ? getMobileWrapper(<StyledLabel>{this.props.label}</StyledLabel>) : StandardWrapper;
@@ -355,7 +356,8 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
         indices={value}
         customWrapper={wrapper}
         onClickOutside={() => {}}
-        autoPosition
+        direction={direction}
+        autoPosition={undefined === direction}
         autoFocus
       />
     );
