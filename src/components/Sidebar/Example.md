@@ -35,3 +35,30 @@ const { Sidebar } = require('precise-ui');
 
 <Sidebar size="50%" activator={<ActionLink>Show</ActionLink>}><PaddedContainer gutter="medium">Some content</PaddedContainer></Sidebar>
 ```
+
+Sidebar in Controlled mode.
+```jsx
+const { Sidebar } = require('precise-ui');
+
+class SidebarContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+    };
+  }
+
+  render() {
+    return (
+      <Sidebar
+        open={this.state.open}
+        onClose={() => this.setState({ open: false })}
+        activator={<Button onClick={() => this.setState({ open: true })}>Show sidebar</Button>}>
+        <PaddedContainer gutter="medium">Some content</PaddedContainer>
+      </Sidebar>
+    );
+  }
+}
+
+<SidebarContainer />
+```

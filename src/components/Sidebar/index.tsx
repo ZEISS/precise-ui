@@ -20,6 +20,18 @@ export interface SidebarProps {
    * @default 275px
    */
   size?: string;
+  /**
+   * Determines if sidebar is opened or closed. Puts sidebar in controlled mode.
+   */
+  open?: boolean;
+  /**
+   * Fires this event after trigger element was clicked.
+   */
+  onShow?(): void;
+  /**
+   * Fires this event when sidebar should be closed.
+   */
+  onClose?(): void;
 }
 
 interface SidebarState {
@@ -27,26 +39,44 @@ interface SidebarState {
 }
 
 export class Sidebar extends React.Component<SidebarProps, SidebarState> {
+  private controlled: boolean;
   constructor(props: SidebarProps) {
     super(props);
+    const { open } = this.props;
+    this.controlled = open !== undefined;
     this.state = {
-      open: false,
+      open: open !== undefined ? open : false,
     };
+  }
+
+  componentWillReceiveProps(props: SidebarProps) {
+    if (this.controlled) {
+      this.setState({ open: Boolean(props.open) });
+    }
   }
 
   componentDidMount() {
     document.addEventListener('keydown', this.onKeyPress);
   }
+
   componentWillUnmount() {
     document.removeEventListener('keydown', this.onKeyPress);
   }
 
   private show = () => {
-    this.setState({ open: true });
+    if (!this.controlled) {
+      this.setState({ open: true });
+    }
+
+    typeof this.props.onShow === 'function' && this.props.onShow();
   };
 
   private hide = () => {
-    this.setState({ open: false });
+    if (!this.controlled) {
+      this.setState({ open: false });
+    }
+
+    typeof this.props.onClose === 'function' && this.props.onClose();
   };
 
   private onKeyPress = (e: KeyboardEvent) => {
