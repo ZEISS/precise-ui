@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
 import { Badge } from './';
-import 'jest-styled-components';
 
 describe('<Badge />', () => {
   it('should render an empty <Badge> component', () => {

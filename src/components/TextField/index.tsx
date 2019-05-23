@@ -31,16 +31,19 @@ export interface TextFieldProps extends TextInputProps {
    * @default false
    */
   clearable?: boolean;
+
   /**
    * Event emitted when the clear button was pressed. Will always be fired after
    * the onChange event, i.e., after the value was set / proposed.
    */
   onClear?(): void;
+
   /**
    * Gets the reference to the underlying input or textarea element.
    * @ignore
    */
   inputRef?(instance: HTMLElement | null): void;
+
   /**
    * @ignore
    */
@@ -126,13 +129,11 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
     };
   }
 
-  componentWillReceiveProps(nextProps: TextFieldProps) {
+  componentWillReceiveProps({ value = '', error }: TextFieldProps) {
     if (this.state.controlled) {
-      this.setState({
-        value: nextProps.value || '',
-        error: nextProps.error,
-      });
+      this.setState({ value });
     }
+    this.setState({ error });
   }
 
   componentDidMount() {
@@ -252,6 +253,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
       onFocus: _4,
       onBlur: _5,
       inputRef: _6,
+      onInput: _7,
       ...rest
     } = this.props;
     const { focused, value, error } = this.state;

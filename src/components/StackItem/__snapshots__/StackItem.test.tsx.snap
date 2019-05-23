@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StackItem /> should render the StackItem with height and width declaration 1`] = `
+.c0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 40%;
+  height: 15px;
+}
+
 <StackItem
   height="15px"
   width="40%"
@@ -17,7 +26,7 @@ exports[`<StackItem /> should render the StackItem with height and width declara
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "dLpqhe",
+            "lastClassName": "c0",
             "rules": Array [
               "
   flex-grow: ",
@@ -47,7 +56,7 @@ exports[`<StackItem /> should render the StackItem with height and width declara
       width="40%"
     >
       <div
-        className="sc-bdVaJa dLpqhe"
+        className="c0"
         height="15px"
         width="40%"
       >
@@ -59,6 +68,15 @@ exports[`<StackItem /> should render the StackItem with height and width declara
 `;
 
 exports[`<StackItem /> should render the StackItem with no filling 1`] = `
+.c0 {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  min-width: auto;
+  height: auto;
+}
+
 <StackItem
   nofill={true}
 >
@@ -73,7 +91,7 @@ exports[`<StackItem /> should render the StackItem with no filling 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "ciHdvC",
+            "lastClassName": "c0",
             "rules": Array [
               "
   flex-grow: ",
@@ -102,7 +120,7 @@ exports[`<StackItem /> should render the StackItem with no filling 1`] = `
       nofill={true}
     >
       <div
-        className="sc-bdVaJa ciHdvC"
+        className="c0"
       />
     </StyledComponent>
   </styled.div>
@@ -110,6 +128,15 @@ exports[`<StackItem /> should render the StackItem with no filling 1`] = `
 `;
 
 exports[`<StackItem /> should render the StackItem with some content 1`] = `
+.c0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: auto;
+  height: auto;
+}
+
 <StackItem>
   <styled.div>
     <StyledComponent
@@ -120,7 +147,7 @@ exports[`<StackItem /> should render the StackItem with some content 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "eIfyAv",
+            "lastClassName": "c0",
             "rules": Array [
               "
   flex-grow: ",
@@ -148,7 +175,7 @@ exports[`<StackItem /> should render the StackItem with some content 1`] = `
       forwardedRef={null}
     >
       <div
-        className="sc-bdVaJa eIfyAv"
+        className="c0"
       >
         Item
       </div>
@@ -158,6 +185,15 @@ exports[`<StackItem /> should render the StackItem with some content 1`] = `
 `;
 
 exports[`<StackItem /> should render the StackItem with width declaration 1`] = `
+.c0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 20px;
+  height: auto;
+}
+
 <StackItem
   width="20px"
 >
@@ -172,7 +208,7 @@ exports[`<StackItem /> should render the StackItem with width declaration 1`] = 
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "cBvbun",
+            "lastClassName": "c0",
             "rules": Array [
               "
   flex-grow: ",
@@ -201,7 +237,7 @@ exports[`<StackItem /> should render the StackItem with width declaration 1`] = 
       width="20px"
     >
       <div
-        className="sc-bdVaJa cBvbun"
+        className="c0"
         width="20px"
       />
     </StyledComponent>
@@ -210,6 +246,15 @@ exports[`<StackItem /> should render the StackItem with width declaration 1`] = 
 `;
 
 exports[`<StackItem /> should render the default StackItem 1`] = `
+.c0 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: auto;
+  height: auto;
+}
+
 <StackItem>
   <styled.div>
     <StyledComponent
@@ -220,7 +265,7 @@ exports[`<StackItem /> should render the default StackItem 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-bdVaJa",
             "isStatic": false,
-            "lastClassName": "eIfyAv",
+            "lastClassName": "c0",
             "rules": Array [
               "
   flex-grow: ",
@@ -248,7 +293,7 @@ exports[`<StackItem /> should render the default StackItem 1`] = `
       forwardedRef={null}
     >
       <div
-        className="sc-bdVaJa eIfyAv"
+        className="c0"
       />
     </StyledComponent>
   </styled.div>

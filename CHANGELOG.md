@@ -1,7 +1,8 @@
 # Precise UI Changelog
 
-## 0.5.1
+## 0.6.0
 
+- Implement tag builder with auto-completion possibility
 - `Flyout` fixed compatibility with IE11
 - `Headline` styles update
 - Updated label in `Modal`
@@ -13,6 +14,9 @@
 - Added `validationRules` for `Form`
 - Fixed: missed selection state of `RadioButtonGroup` in non-controlled mode with form context.
 - Compatibility with IE11
+- `Sidebar` component added
+- Fixed: component wrapped with `withValidation` hoc didn't display an error
+- Feature: new Dropdown props (open / direction)
 
 ## 0.5.0
 

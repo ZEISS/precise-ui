@@ -99,7 +99,7 @@ export const HomePage: React.SFC = () => (
     <TopContainer>
       <LogoImage src="precise-logo.svg" />
       <Message>An extensive React component library with batteries included.</Message>
-      <Button to="/getting-started">Getting Started</Button>
+      <Button href="/#/Getting%20Started">Getting Started</Button>
     </TopContainer>
     <InfoContainer>
       <Head icon="Widgets" title="Prerequisites" />

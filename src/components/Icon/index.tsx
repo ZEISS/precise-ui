@@ -33,6 +33,10 @@ export interface IconProps extends StandardProps {
    * Event emitted when the icon is clicked.
    */
   onClick?(): void;
+  /**
+   * Event emitted when the mouse down on the icon.
+   */
+  onMouseDown?(e: React.MouseEvent): void;
 }
 
 const StyledIcon = styled.i`

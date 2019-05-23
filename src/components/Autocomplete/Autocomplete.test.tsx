@@ -3,7 +3,6 @@ import * as enzyme from 'enzyme';
 import { Autocomplete } from './';
 import { InteractiveList } from '../InteractiveList';
 import { KeyCodes } from '../../utils/keyCodes';
-import 'jest-styled-components';
 
 describe('<Autocomplete />', () => {
   it('should render <Autocomplete> component', () => {

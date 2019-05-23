@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
 import { Spinner } from './';
-import 'jest-styled-components';
 
 describe('<Spinner />', () => {
   it('should render the default spinner in medium without label', () => {

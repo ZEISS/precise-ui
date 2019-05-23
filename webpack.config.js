@@ -81,6 +81,7 @@ module.exports = {
                     ie: 11,
                     esmodules: true,
                   },
+                  modules: 'commonjs',
                 },
               ],
               '@babel/preset-typescript',
@@ -96,6 +97,7 @@ module.exports = {
       },
       {
         test: /\.tsx$/,
+        exclude: /node_modules/,
         loader: 'awesome-typescript-loader',
         options: {
           getCustomTransformers: () => ({ before: [innerJsxTransformer] }),
@@ -103,10 +105,12 @@ module.exports = {
       },
       {
         test: /\.ts$/,
+        exclude: /node_modules/,
         loader: 'awesome-typescript-loader',
       },
       {
         enforce: 'pre',
+        exclude: /node_modules/,
         test: /\.js$/,
         loader: 'source-map-loader',
       },
