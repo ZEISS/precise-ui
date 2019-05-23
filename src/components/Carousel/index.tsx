@@ -168,9 +168,8 @@ const Mask = styled.div`
   overflow: hidden;
 `;
 
-export const Arrow = styled.button`
-  ${getFontStyle({ size: 'medium' })}
-  
+const Arrow = styled.button`
+  ${getFontStyle({ size: 'medium' })};
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
