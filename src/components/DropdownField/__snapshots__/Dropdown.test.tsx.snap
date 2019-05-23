@@ -1,6 +1,243 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
+.c8 {
+  display: inline-block;
+}
+
+.c8 > svg {
+  float: left;
+}
+
+.c7 {
+  padding: 0 1rem;
+}
+
+.c7 i {
+  display: block;
+}
+
+.c7 + .c6 {
+  padding-left: 0;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  height: 100%;
+  position: relative;
+  min-width: 0;
+  margin: auto;
+}
+
+.c11 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.c12 {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.c22 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow: hidden;
+  z-index: 9999;
+  background: rgba(64,64,64,0.4);
+}
+
+.c16 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(255,255,255,0);
+  padding: 0;
+  border: none;
+  -webkit-align-self: start;
+  -ms-flex-item-align: start;
+  align-self: start;
+  cursor: pointer;
+  color: rgba(0,0,0,1);
+  opacity: 0.2;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.c16:hover {
+  opacity: 0.5;
+}
+
+.c13 {
+  padding: 1rem;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: auto;
+  background: rgba(255,255,255,1);
+}
+
+.c17 {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.c14 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: rgba(0,139,208,1);
+  padding-bottom: 1rem;
+  min-height: 0.875rem;
+}
+
+.c9 {
+  position: relative;
+  outline: none;
+}
+
+.c18 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  background: rgba(255,255,255,0);
+  color: rgba(114,114,114,1);
+  list-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c18 a {
+  color: inherit;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c18 a:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c20 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c21 {
+  padding: 1rem;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: rgba(248,248,248,1);
+  min-height: 54px;
+  max-height: 112px;
+  border-bottom: 1px solid rgba(0,139,208,1);
+  cursor: auto;
+  overflow-y: auto;
+  border: 1px solid rgba(211,211,211,1);
+}
+
+.c2:hover {
+  border-bottom-color: rgba(0,139,208,1);
+}
+
+.c4 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: rgba(62,62,62,1);
+  font-family: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: auto;
+}
+
+.c5 {
+  display: inline-block;
+  line-height: normal;
+  border: 0;
+  color: rgba(0,0,0,1);
+}
+
+.c15 {
+  padding-left: 1rem;
+}
+
+.c10 {
+  border: 2em solid transparent;
+}
+
 <DropdownFieldInt
   borderless={true}
   data={
@@ -23,7 +260,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-jlyJG",
             "isStatic": true,
-            "lastClassName": "XpIWY",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -45,7 +282,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
       open={true}
     >
       <div
-        className="sc-jlyJG XpIWY"
+        className="c0"
         open={true}
       >
         <styled.div
@@ -61,7 +298,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gipzik",
                   "isStatic": true,
-                  "lastClassName": "bxGTeT",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   display: flex;
@@ -84,7 +321,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
             tabIndex={0}
           >
             <div
-              className="sc-gipzik bxGTeT"
+              className="c1"
               onKeyDown={[Function]}
               onMouseDown={[Function]}
               tabIndex={0}
@@ -104,7 +341,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "kMIMiT",
+                        "lastClassName": "c2",
                         "rules": Array [
                           [Function],
                           "
@@ -130,7 +367,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                   hasValue={true}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl kMIMiT"
+                    className="c2"
                   >
                     <Component
                       error={false}
@@ -146,7 +383,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-gqjmRU",
                                 "isStatic": true,
-                                "lastClassName": "lohXgE",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "
   flex-grow: 1;
@@ -172,7 +409,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                           forwardedRef={null}
                         >
                           <div
-                            className="sc-gqjmRU lohXgE"
+                            className="c3"
                           >
                             <styled.div
                               labelShown={false}
@@ -185,7 +422,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-Rmtcm",
                                       "isStatic": false,
-                                      "lastClassName": "iZdMBl",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         "
   ",
@@ -236,7 +473,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                 labelShown={false}
                               >
                                 <div
-                                  className="sc-Rmtcm iZdMBl"
+                                  className="c4"
                                 >
                                   <styled.span
                                     key="1"
@@ -249,7 +486,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bRBYWo",
                                             "isStatic": false,
-                                            "lastClassName": "jelrwS",
+                                            "lastClassName": "c5",
                                             "rules": Array [
                                               "
   display: inline-block;
@@ -274,7 +511,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                       forwardedRef={null}
                                     >
                                       <span
-                                        className="sc-bRBYWo jelrwS"
+                                        className="c5"
                                       >
                                         1
                                       </span>
@@ -297,9 +534,9 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "c6",
                               "isStatic": true,
-                              "lastClassName": "YVZuN",
+                              "lastClassName": "c7",
                               "rules": Array [
                                 "
   padding: 0 ",
@@ -319,7 +556,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "c6",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -329,7 +566,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                         forwardedRef={null}
                       >
                         <div
-                          className="sc-gZMcBi YVZuN"
+                          className="c6 c7"
                         >
                           <Icon
                             color="rgba(75,78,82,1)"
@@ -345,7 +582,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-htpNat",
                                       "isStatic": true,
-                                      "lastClassName": "jgiceE",
+                                      "lastClassName": "c8",
                                       "rules": Array [
                                         "
   display: inline-block;
@@ -369,7 +606,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                 forwardedRef={null}
                               >
                                 <i
-                                  className="sc-htpNat jgiceE"
+                                  className="c8"
                                 >
                                   <KeyboardArrowUp
                                     height="22px"
@@ -512,7 +749,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-hSdWYo",
                         "isStatic": true,
-                        "lastClassName": "bUjOem",
+                        "lastClassName": "c9",
                         "rules": Array [
                           "
   position: relative;
@@ -539,7 +776,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                 >
                   <div
                     autoFocus={true}
-                    className="sc-hSdWYo bUjOem"
+                    className="c9"
                     onKeyDown={[Function]}
                     tabIndex={0}
                   >
@@ -561,7 +798,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-fBuWsC",
                                 "isStatic": true,
-                                "lastClassName": "eySOLS",
+                                "lastClassName": "c10",
                                 "rules": Array [
                                   "
   border: 2em solid transparent;
@@ -583,21 +820,21 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                           onClose={[Function]}
                         >
                           <WindowPopup
-                            className="sc-fBuWsC eySOLS"
+                            className="c10"
                             label={<ForwardRef />}
                             onClose={[Function]}
                           >
                             <Blocker
-                              className="sc-fBuWsC eySOLS"
+                              className="c10"
                               onClose={[Function]}
                             >
                               <styled.div
-                                className="sc-fBuWsC eySOLS"
+                                className="c10"
                                 onClick={[Function]}
                                 onKeyDown={[Function]}
                               >
                                 <StyledComponent
-                                  className="sc-fBuWsC eySOLS"
+                                  className="c10"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -605,7 +842,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-chPdSV",
                                         "isStatic": true,
-                                        "lastClassName": "juaCGL",
+                                        "lastClassName": "c11",
                                         "rules": Array [
                                           "
   top: 0;
@@ -634,7 +871,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                   onKeyDown={[Function]}
                                 >
                                   <div
-                                    className="sc-fBuWsC eySOLS sc-chPdSV juaCGL"
+                                    className="c10 c11"
                                     onClick={[Function]}
                                     onKeyDown={[Function]}
                                   >
@@ -650,7 +887,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kgoBCf",
                                               "isStatic": true,
-                                              "lastClassName": "ccpxKu",
+                                              "lastClassName": "c12",
                                               "rules": Array [
                                                 "
   height: 0;
@@ -674,7 +911,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                         onFocus={[Function]}
                                       >
                                         <a
-                                          className="sc-kgoBCf ccpxKu"
+                                          className="c12"
                                           href="#"
                                           onFocus={[Function]}
                                         />
@@ -691,7 +928,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-dxgOiQ",
                                               "isStatic": false,
-                                              "lastClassName": "dyHuYR",
+                                              "lastClassName": "c13",
                                               "rules": Array [
                                                 "
   padding: ",
@@ -720,7 +957,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                         tabIndex={0}
                                       >
                                         <div
-                                          className="sc-dxgOiQ dyHuYR"
+                                          className="c13"
                                           tabIndex={0}
                                         >
                                           <styled.div>
@@ -732,7 +969,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "sc-jKJlTe",
                                                     "isStatic": false,
-                                                    "lastClassName": "cKsVkt",
+                                                    "lastClassName": "c14",
                                                     "rules": Array [
                                                       "
   ",
@@ -775,7 +1012,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                               forwardedRef={null}
                                             >
                                               <div
-                                                className="sc-jKJlTe cKsVkt"
+                                                className="c14"
                                               >
                                                 <styled.div>
                                                   <StyledComponent
@@ -786,7 +1023,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-jhAzac",
                                                           "isStatic": true,
-                                                          "lastClassName": "gwtcyj",
+                                                          "lastClassName": "c15",
                                                           "rules": Array [
                                                             "
   padding-left: ",
@@ -808,7 +1045,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                     forwardedRef={null}
                                                   >
                                                     <div
-                                                      className="sc-jhAzac gwtcyj"
+                                                      className="c15"
                                                     />
                                                   </StyledComponent>
                                                 </styled.div>
@@ -829,7 +1066,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "sc-kpOJdX",
                                                       "isStatic": true,
-                                                      "lastClassName": "kxReIc",
+                                                      "lastClassName": "c16",
                                                       "rules": Array [
                                                         "
   ",
@@ -887,7 +1124,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                 onClick={[Function]}
                                               >
                                                 <a
-                                                  className="sc-kpOJdX kxReIc"
+                                                  className="c16"
                                                   onClick={[Function]}
                                                 >
                                                   <Icon
@@ -903,7 +1140,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                             "componentStyle": ComponentStyle {
                                                               "componentId": "sc-htpNat",
                                                               "isStatic": true,
-                                                              "lastClassName": "jgiceE",
+                                                              "lastClassName": "c8",
                                                               "rules": Array [
                                                                 "
   display: inline-block;
@@ -927,7 +1164,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                         forwardedRef={null}
                                                       >
                                                         <i
-                                                          className="sc-htpNat jgiceE"
+                                                          className="c8"
                                                         >
                                                           <Close
                                                             height="1.1em"
@@ -973,7 +1210,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "sc-ckVGcZ",
                                                     "isStatic": true,
-                                                    "lastClassName": "fvuixH",
+                                                    "lastClassName": "c17",
                                                     "rules": Array [
                                                       "
   box-sizing: border-box;
@@ -994,7 +1231,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                               forwardedRef={null}
                                             >
                                               <div
-                                                className="sc-ckVGcZ fvuixH"
+                                                className="c17"
                                               >
                                                 <styled.li
                                                   hovered={false}
@@ -1011,7 +1248,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-cvbbAY",
                                                           "isStatic": false,
-                                                          "lastClassName": "eAHqky",
+                                                          "lastClassName": "c18",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -1033,7 +1270,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                     selected={true}
                                                   >
                                                     <li
-                                                      className="sc-cvbbAY eAHqky"
+                                                      className="c18"
                                                       onClick={[Function]}
                                                       onMouseMove={[Function]}
                                                       selected={true}
@@ -1047,7 +1284,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-jWBwVP",
                                                                 "isStatic": true,
-                                                                "lastClassName": "jZcPPp",
+                                                                "lastClassName": "c19",
                                                                 "rules": Array [
                                                                   "
   display: flex;
@@ -1068,7 +1305,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                           forwardedRef={null}
                                                         >
                                                           <div
-                                                            className="sc-jWBwVP jZcPPp"
+                                                            className="c19"
                                                           >
                                                             <styled.div>
                                                               <StyledComponent
@@ -1079,7 +1316,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                     "componentStyle": ComponentStyle {
                                                                       "componentId": "sc-brqgnP",
                                                                       "isStatic": true,
-                                                                      "lastClassName": "jgYEci",
+                                                                      "lastClassName": "c20",
                                                                       "rules": Array [
                                                                         "
   flex-grow: 1;
@@ -1099,7 +1336,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                 forwardedRef={null}
                                                               >
                                                                 <div
-                                                                  className="sc-brqgnP jgYEci"
+                                                                  className="c20"
                                                                 >
                                                                   <styled.div
                                                                     condensed={false}
@@ -1114,7 +1351,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-cMljjf",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "gZZzyn",
+                                                                            "lastClassName": "c21",
                                                                             "rules": Array [
                                                                               "
   padding: ",
@@ -1140,7 +1377,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                       showTick={false}
                                                                     >
                                                                       <div
-                                                                        className="sc-cMljjf gZZzyn"
+                                                                        className="c21"
                                                                       >
                                                                         1
                                                                       </div>
@@ -1170,7 +1407,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-cvbbAY",
                                                           "isStatic": false,
-                                                          "lastClassName": "eAHqky",
+                                                          "lastClassName": "c18",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -1192,7 +1429,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                     selected={false}
                                                   >
                                                     <li
-                                                      className="sc-cvbbAY eAHqky"
+                                                      className="c18"
                                                       onClick={[Function]}
                                                       onMouseMove={[Function]}
                                                       selected={false}
@@ -1206,7 +1443,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-jWBwVP",
                                                                 "isStatic": true,
-                                                                "lastClassName": "jZcPPp",
+                                                                "lastClassName": "c19",
                                                                 "rules": Array [
                                                                   "
   display: flex;
@@ -1227,7 +1464,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                           forwardedRef={null}
                                                         >
                                                           <div
-                                                            className="sc-jWBwVP jZcPPp"
+                                                            className="c19"
                                                           >
                                                             <styled.div>
                                                               <StyledComponent
@@ -1238,7 +1475,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                     "componentStyle": ComponentStyle {
                                                                       "componentId": "sc-brqgnP",
                                                                       "isStatic": true,
-                                                                      "lastClassName": "jgYEci",
+                                                                      "lastClassName": "c20",
                                                                       "rules": Array [
                                                                         "
   flex-grow: 1;
@@ -1258,7 +1495,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                 forwardedRef={null}
                                                               >
                                                                 <div
-                                                                  className="sc-brqgnP jgYEci"
+                                                                  className="c20"
                                                                 >
                                                                   <styled.div
                                                                     condensed={false}
@@ -1273,7 +1510,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-cMljjf",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "gZZzyn",
+                                                                            "lastClassName": "c21",
                                                                             "rules": Array [
                                                                               "
   padding: ",
@@ -1299,7 +1536,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                       showTick={false}
                                                                     >
                                                                       <div
-                                                                        className="sc-cMljjf gZZzyn"
+                                                                        className="c21"
                                                                       >
                                                                         2
                                                                       </div>
@@ -1332,7 +1569,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kgoBCf",
                                               "isStatic": true,
-                                              "lastClassName": "ccpxKu",
+                                              "lastClassName": "c12",
                                               "rules": Array [
                                                 "
   height: 0;
@@ -1356,7 +1593,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                         onFocus={[Function]}
                                       >
                                         <a
-                                          className="sc-kgoBCf ccpxKu"
+                                          className="c12"
                                           href="#"
                                           onFocus={[Function]}
                                         />
@@ -1366,10 +1603,10 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                 </StyledComponent>
                               </styled.div>
                               <Styled(styled.div)
-                                className="sc-fBuWsC eySOLS"
+                                className="c10"
                               >
                                 <StyledComponent
-                                  className="sc-fBuWsC eySOLS"
+                                  className="c10"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -1377,7 +1614,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kGXeez",
                                         "isStatic": true,
-                                        "lastClassName": "fMcQrw",
+                                        "lastClassName": "c22",
                                         "rules": Array [
                                           "
   top: 0;
@@ -1413,7 +1650,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                   forwardedRef={null}
                                 >
                                   <div
-                                    className="sc-chPdSV sc-fBuWsC eySOLS sc-kGXeez fMcQrw"
+                                    className="c10 c22"
                                   />
                                 </StyledComponent>
                               </Styled(styled.div)>
@@ -1435,6 +1672,243 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
 `;
 
 exports[`<DropdownField /> should be opened towards the bottom <DropdownField open direction={0}> 1`] = `
+.c8 {
+  display: inline-block;
+}
+
+.c8 > svg {
+  float: left;
+}
+
+.c7 {
+  padding: 0 1rem;
+}
+
+.c7 i {
+  display: block;
+}
+
+.c7 + .c6 {
+  padding-left: 0;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  height: 100%;
+  position: relative;
+  min-width: 0;
+  margin: auto;
+}
+
+.c11 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.c12 {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.c22 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow: hidden;
+  z-index: 9999;
+  background: rgba(64,64,64,0.4);
+}
+
+.c16 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(255,255,255,0);
+  padding: 0;
+  border: none;
+  -webkit-align-self: start;
+  -ms-flex-item-align: start;
+  align-self: start;
+  cursor: pointer;
+  color: rgba(0,0,0,1);
+  opacity: 0.2;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.c16:hover {
+  opacity: 0.5;
+}
+
+.c13 {
+  padding: 1rem;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: auto;
+  background: rgba(255,255,255,1);
+}
+
+.c17 {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.c14 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: rgba(0,139,208,1);
+  padding-bottom: 1rem;
+  min-height: 0.875rem;
+}
+
+.c9 {
+  position: relative;
+  outline: none;
+}
+
+.c18 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  background: rgba(255,255,255,0);
+  color: rgba(114,114,114,1);
+  list-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c18 a {
+  color: inherit;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c18 a:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c20 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c21 {
+  padding: 1rem;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: rgba(248,248,248,1);
+  min-height: 54px;
+  max-height: 112px;
+  border-bottom: 1px solid rgba(0,139,208,1);
+  cursor: auto;
+  overflow-y: auto;
+  border: 1px solid rgba(211,211,211,1);
+}
+
+.c2:hover {
+  border-bottom-color: rgba(0,139,208,1);
+}
+
+.c4 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: rgba(62,62,62,1);
+  font-family: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: auto;
+}
+
+.c5 {
+  display: inline-block;
+  line-height: normal;
+  border: 0;
+  color: rgba(0,0,0,1);
+}
+
+.c15 {
+  padding-left: 1rem;
+}
+
+.c10 {
+  border: 2em solid transparent;
+}
+
 <DropdownFieldInt
   borderless={true}
   data={
@@ -1460,7 +1934,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
           "componentStyle": ComponentStyle {
             "componentId": "sc-jlyJG",
             "isStatic": true,
-            "lastClassName": "XpIWY",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -1482,7 +1956,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
       open={true}
     >
       <div
-        className="sc-jlyJG XpIWY"
+        className="c0"
         direction={0}
         open={true}
       >
@@ -1499,7 +1973,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gipzik",
                   "isStatic": true,
-                  "lastClassName": "bxGTeT",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   display: flex;
@@ -1522,7 +1996,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
             tabIndex={0}
           >
             <div
-              className="sc-gipzik bxGTeT"
+              className="c1"
               onKeyDown={[Function]}
               onMouseDown={[Function]}
               tabIndex={0}
@@ -1542,7 +2016,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "kMIMiT",
+                        "lastClassName": "c2",
                         "rules": Array [
                           [Function],
                           "
@@ -1568,7 +2042,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                   hasValue={true}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl kMIMiT"
+                    className="c2"
                   >
                     <Component
                       error={false}
@@ -1584,7 +2058,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-gqjmRU",
                                 "isStatic": true,
-                                "lastClassName": "lohXgE",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "
   flex-grow: 1;
@@ -1610,7 +2084,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                           forwardedRef={null}
                         >
                           <div
-                            className="sc-gqjmRU lohXgE"
+                            className="c3"
                           >
                             <styled.div
                               labelShown={false}
@@ -1623,7 +2097,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-Rmtcm",
                                       "isStatic": false,
-                                      "lastClassName": "iZdMBl",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         "
   ",
@@ -1674,7 +2148,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                 labelShown={false}
                               >
                                 <div
-                                  className="sc-Rmtcm iZdMBl"
+                                  className="c4"
                                 >
                                   <styled.span
                                     key="1"
@@ -1687,7 +2161,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bRBYWo",
                                             "isStatic": false,
-                                            "lastClassName": "jelrwS",
+                                            "lastClassName": "c5",
                                             "rules": Array [
                                               "
   display: inline-block;
@@ -1712,7 +2186,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                       forwardedRef={null}
                                     >
                                       <span
-                                        className="sc-bRBYWo jelrwS"
+                                        className="c5"
                                       >
                                         1
                                       </span>
@@ -1735,9 +2209,9 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "c6",
                               "isStatic": true,
-                              "lastClassName": "YVZuN",
+                              "lastClassName": "c7",
                               "rules": Array [
                                 "
   padding: 0 ",
@@ -1757,7 +2231,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "c6",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -1767,7 +2241,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                         forwardedRef={null}
                       >
                         <div
-                          className="sc-gZMcBi YVZuN"
+                          className="c6 c7"
                         >
                           <Icon
                             color="rgba(75,78,82,1)"
@@ -1783,7 +2257,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-htpNat",
                                       "isStatic": true,
-                                      "lastClassName": "jgiceE",
+                                      "lastClassName": "c8",
                                       "rules": Array [
                                         "
   display: inline-block;
@@ -1807,7 +2281,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                 forwardedRef={null}
                               >
                                 <i
-                                  className="sc-htpNat jgiceE"
+                                  className="c8"
                                 >
                                   <KeyboardArrowUp
                                     height="22px"
@@ -1954,7 +2428,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-hSdWYo",
                         "isStatic": true,
-                        "lastClassName": "bUjOem",
+                        "lastClassName": "c9",
                         "rules": Array [
                           "
   position: relative;
@@ -1981,7 +2455,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                 >
                   <div
                     autoFocus={true}
-                    className="sc-hSdWYo bUjOem"
+                    className="c9"
                     direction={0}
                     onKeyDown={[Function]}
                     tabIndex={0}
@@ -2004,7 +2478,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-fBuWsC",
                                 "isStatic": true,
-                                "lastClassName": "eySOLS",
+                                "lastClassName": "c10",
                                 "rules": Array [
                                   "
   border: 2em solid transparent;
@@ -2026,21 +2500,21 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                           onClose={[Function]}
                         >
                           <WindowPopup
-                            className="sc-fBuWsC eySOLS"
+                            className="c10"
                             label={<ForwardRef />}
                             onClose={[Function]}
                           >
                             <Blocker
-                              className="sc-fBuWsC eySOLS"
+                              className="c10"
                               onClose={[Function]}
                             >
                               <styled.div
-                                className="sc-fBuWsC eySOLS"
+                                className="c10"
                                 onClick={[Function]}
                                 onKeyDown={[Function]}
                               >
                                 <StyledComponent
-                                  className="sc-fBuWsC eySOLS"
+                                  className="c10"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -2048,7 +2522,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-chPdSV",
                                         "isStatic": true,
-                                        "lastClassName": "juaCGL",
+                                        "lastClassName": "c11",
                                         "rules": Array [
                                           "
   top: 0;
@@ -2077,7 +2551,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                   onKeyDown={[Function]}
                                 >
                                   <div
-                                    className="sc-fBuWsC eySOLS sc-chPdSV juaCGL"
+                                    className="c10 c11"
                                     onClick={[Function]}
                                     onKeyDown={[Function]}
                                   >
@@ -2093,7 +2567,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kgoBCf",
                                               "isStatic": true,
-                                              "lastClassName": "ccpxKu",
+                                              "lastClassName": "c12",
                                               "rules": Array [
                                                 "
   height: 0;
@@ -2117,7 +2591,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                         onFocus={[Function]}
                                       >
                                         <a
-                                          className="sc-kgoBCf ccpxKu"
+                                          className="c12"
                                           href="#"
                                           onFocus={[Function]}
                                         />
@@ -2134,7 +2608,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-dxgOiQ",
                                               "isStatic": false,
-                                              "lastClassName": "dyHuYR",
+                                              "lastClassName": "c13",
                                               "rules": Array [
                                                 "
   padding: ",
@@ -2163,7 +2637,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                         tabIndex={0}
                                       >
                                         <div
-                                          className="sc-dxgOiQ dyHuYR"
+                                          className="c13"
                                           tabIndex={0}
                                         >
                                           <styled.div>
@@ -2175,7 +2649,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "sc-jKJlTe",
                                                     "isStatic": false,
-                                                    "lastClassName": "cKsVkt",
+                                                    "lastClassName": "c14",
                                                     "rules": Array [
                                                       "
   ",
@@ -2218,7 +2692,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                               forwardedRef={null}
                                             >
                                               <div
-                                                className="sc-jKJlTe cKsVkt"
+                                                className="c14"
                                               >
                                                 <styled.div>
                                                   <StyledComponent
@@ -2229,7 +2703,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-jhAzac",
                                                           "isStatic": true,
-                                                          "lastClassName": "gwtcyj",
+                                                          "lastClassName": "c15",
                                                           "rules": Array [
                                                             "
   padding-left: ",
@@ -2251,7 +2725,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                     forwardedRef={null}
                                                   >
                                                     <div
-                                                      className="sc-jhAzac gwtcyj"
+                                                      className="c15"
                                                     />
                                                   </StyledComponent>
                                                 </styled.div>
@@ -2272,7 +2746,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "sc-kpOJdX",
                                                       "isStatic": true,
-                                                      "lastClassName": "kxReIc",
+                                                      "lastClassName": "c16",
                                                       "rules": Array [
                                                         "
   ",
@@ -2330,7 +2804,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                 onClick={[Function]}
                                               >
                                                 <a
-                                                  className="sc-kpOJdX kxReIc"
+                                                  className="c16"
                                                   onClick={[Function]}
                                                 >
                                                   <Icon
@@ -2346,7 +2820,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                             "componentStyle": ComponentStyle {
                                                               "componentId": "sc-htpNat",
                                                               "isStatic": true,
-                                                              "lastClassName": "jgiceE",
+                                                              "lastClassName": "c8",
                                                               "rules": Array [
                                                                 "
   display: inline-block;
@@ -2370,7 +2844,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                         forwardedRef={null}
                                                       >
                                                         <i
-                                                          className="sc-htpNat jgiceE"
+                                                          className="c8"
                                                         >
                                                           <Close
                                                             height="1.1em"
@@ -2416,7 +2890,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "sc-ckVGcZ",
                                                     "isStatic": true,
-                                                    "lastClassName": "fvuixH",
+                                                    "lastClassName": "c17",
                                                     "rules": Array [
                                                       "
   box-sizing: border-box;
@@ -2437,7 +2911,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                               forwardedRef={null}
                                             >
                                               <div
-                                                className="sc-ckVGcZ fvuixH"
+                                                className="c17"
                                               >
                                                 <styled.li
                                                   hovered={false}
@@ -2454,7 +2928,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-cvbbAY",
                                                           "isStatic": false,
-                                                          "lastClassName": "eAHqky",
+                                                          "lastClassName": "c18",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -2476,7 +2950,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                     selected={true}
                                                   >
                                                     <li
-                                                      className="sc-cvbbAY eAHqky"
+                                                      className="c18"
                                                       onClick={[Function]}
                                                       onMouseMove={[Function]}
                                                       selected={true}
@@ -2490,7 +2964,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-jWBwVP",
                                                                 "isStatic": true,
-                                                                "lastClassName": "jZcPPp",
+                                                                "lastClassName": "c19",
                                                                 "rules": Array [
                                                                   "
   display: flex;
@@ -2511,7 +2985,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                           forwardedRef={null}
                                                         >
                                                           <div
-                                                            className="sc-jWBwVP jZcPPp"
+                                                            className="c19"
                                                           >
                                                             <styled.div>
                                                               <StyledComponent
@@ -2522,7 +2996,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                     "componentStyle": ComponentStyle {
                                                                       "componentId": "sc-brqgnP",
                                                                       "isStatic": true,
-                                                                      "lastClassName": "jgYEci",
+                                                                      "lastClassName": "c20",
                                                                       "rules": Array [
                                                                         "
   flex-grow: 1;
@@ -2542,7 +3016,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                 forwardedRef={null}
                                                               >
                                                                 <div
-                                                                  className="sc-brqgnP jgYEci"
+                                                                  className="c20"
                                                                 >
                                                                   <styled.div
                                                                     condensed={false}
@@ -2557,7 +3031,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-cMljjf",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "gZZzyn",
+                                                                            "lastClassName": "c21",
                                                                             "rules": Array [
                                                                               "
   padding: ",
@@ -2583,7 +3057,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                       showTick={false}
                                                                     >
                                                                       <div
-                                                                        className="sc-cMljjf gZZzyn"
+                                                                        className="c21"
                                                                       >
                                                                         1
                                                                       </div>
@@ -2613,7 +3087,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-cvbbAY",
                                                           "isStatic": false,
-                                                          "lastClassName": "eAHqky",
+                                                          "lastClassName": "c18",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -2635,7 +3109,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                     selected={false}
                                                   >
                                                     <li
-                                                      className="sc-cvbbAY eAHqky"
+                                                      className="c18"
                                                       onClick={[Function]}
                                                       onMouseMove={[Function]}
                                                       selected={false}
@@ -2649,7 +3123,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-jWBwVP",
                                                                 "isStatic": true,
-                                                                "lastClassName": "jZcPPp",
+                                                                "lastClassName": "c19",
                                                                 "rules": Array [
                                                                   "
   display: flex;
@@ -2670,7 +3144,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                           forwardedRef={null}
                                                         >
                                                           <div
-                                                            className="sc-jWBwVP jZcPPp"
+                                                            className="c19"
                                                           >
                                                             <styled.div>
                                                               <StyledComponent
@@ -2681,7 +3155,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                     "componentStyle": ComponentStyle {
                                                                       "componentId": "sc-brqgnP",
                                                                       "isStatic": true,
-                                                                      "lastClassName": "jgYEci",
+                                                                      "lastClassName": "c20",
                                                                       "rules": Array [
                                                                         "
   flex-grow: 1;
@@ -2701,7 +3175,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                 forwardedRef={null}
                                                               >
                                                                 <div
-                                                                  className="sc-brqgnP jgYEci"
+                                                                  className="c20"
                                                                 >
                                                                   <styled.div
                                                                     condensed={false}
@@ -2716,7 +3190,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-cMljjf",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "gZZzyn",
+                                                                            "lastClassName": "c21",
                                                                             "rules": Array [
                                                                               "
   padding: ",
@@ -2742,7 +3216,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                       showTick={false}
                                                                     >
                                                                       <div
-                                                                        className="sc-cMljjf gZZzyn"
+                                                                        className="c21"
                                                                       >
                                                                         2
                                                                       </div>
@@ -2775,7 +3249,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kgoBCf",
                                               "isStatic": true,
-                                              "lastClassName": "ccpxKu",
+                                              "lastClassName": "c12",
                                               "rules": Array [
                                                 "
   height: 0;
@@ -2799,7 +3273,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                         onFocus={[Function]}
                                       >
                                         <a
-                                          className="sc-kgoBCf ccpxKu"
+                                          className="c12"
                                           href="#"
                                           onFocus={[Function]}
                                         />
@@ -2809,10 +3283,10 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                 </StyledComponent>
                               </styled.div>
                               <Styled(styled.div)
-                                className="sc-fBuWsC eySOLS"
+                                className="c10"
                               >
                                 <StyledComponent
-                                  className="sc-fBuWsC eySOLS"
+                                  className="c10"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -2820,7 +3294,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kGXeez",
                                         "isStatic": true,
-                                        "lastClassName": "fMcQrw",
+                                        "lastClassName": "c22",
                                         "rules": Array [
                                           "
   top: 0;
@@ -2856,7 +3330,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                   forwardedRef={null}
                                 >
                                   <div
-                                    className="sc-chPdSV sc-fBuWsC eySOLS sc-kGXeez fMcQrw"
+                                    className="c10 c22"
                                   />
                                 </StyledComponent>
                               </Styled(styled.div)>
@@ -2878,6 +3352,243 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
 `;
 
 exports[`<DropdownField /> should be opened towards the top <DropdownField open direction={1}> 1`] = `
+.c8 {
+  display: inline-block;
+}
+
+.c8 > svg {
+  float: left;
+}
+
+.c7 {
+  padding: 0 1rem;
+}
+
+.c7 i {
+  display: block;
+}
+
+.c7 + .c6 {
+  padding-left: 0;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  height: 100%;
+  position: relative;
+  min-width: 0;
+  margin: auto;
+}
+
+.c11 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.c12 {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.c22 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 10000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow: hidden;
+  z-index: 9999;
+  background: rgba(64,64,64,0.4);
+}
+
+.c16 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(255,255,255,0);
+  padding: 0;
+  border: none;
+  -webkit-align-self: start;
+  -ms-flex-item-align: start;
+  align-self: start;
+  cursor: pointer;
+  color: rgba(0,0,0,1);
+  opacity: 0.2;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.c16:hover {
+  opacity: 0.5;
+}
+
+.c13 {
+  padding: 1rem;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: auto;
+  background: rgba(255,255,255,1);
+}
+
+.c17 {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.c14 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: rgba(0,139,208,1);
+  padding-bottom: 1rem;
+  min-height: 0.875rem;
+}
+
+.c9 {
+  position: relative;
+  outline: none;
+}
+
+.c18 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  background: rgba(255,255,255,0);
+  color: rgba(114,114,114,1);
+  list-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.c18 a {
+  color: inherit;
+  display: block;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c18 a:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c20 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c21 {
+  padding: 1rem;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: rgba(248,248,248,1);
+  min-height: 54px;
+  max-height: 112px;
+  border-bottom: 1px solid rgba(0,139,208,1);
+  cursor: auto;
+  overflow-y: auto;
+  border: 1px solid rgba(211,211,211,1);
+}
+
+.c2:hover {
+  border-bottom-color: rgba(0,139,208,1);
+}
+
+.c4 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: rgba(62,62,62,1);
+  font-family: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: auto;
+}
+
+.c5 {
+  display: inline-block;
+  line-height: normal;
+  border: 0;
+  color: rgba(0,0,0,1);
+}
+
+.c15 {
+  padding-left: 1rem;
+}
+
+.c10 {
+  border: 2em solid transparent;
+}
+
 <DropdownFieldInt
   borderless={true}
   data={
@@ -2903,7 +3614,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
           "componentStyle": ComponentStyle {
             "componentId": "sc-jlyJG",
             "isStatic": true,
-            "lastClassName": "XpIWY",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -2925,7 +3636,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
       open={true}
     >
       <div
-        className="sc-jlyJG XpIWY"
+        className="c0"
         direction={1}
         open={true}
       >
@@ -2942,7 +3653,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gipzik",
                   "isStatic": true,
-                  "lastClassName": "bxGTeT",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   display: flex;
@@ -2965,7 +3676,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
             tabIndex={0}
           >
             <div
-              className="sc-gipzik bxGTeT"
+              className="c1"
               onKeyDown={[Function]}
               onMouseDown={[Function]}
               tabIndex={0}
@@ -2985,7 +3696,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "kMIMiT",
+                        "lastClassName": "c2",
                         "rules": Array [
                           [Function],
                           "
@@ -3011,7 +3722,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                   hasValue={true}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl kMIMiT"
+                    className="c2"
                   >
                     <Component
                       error={false}
@@ -3027,7 +3738,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-gqjmRU",
                                 "isStatic": true,
-                                "lastClassName": "lohXgE",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "
   flex-grow: 1;
@@ -3053,7 +3764,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                           forwardedRef={null}
                         >
                           <div
-                            className="sc-gqjmRU lohXgE"
+                            className="c3"
                           >
                             <styled.div
                               labelShown={false}
@@ -3066,7 +3777,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-Rmtcm",
                                       "isStatic": false,
-                                      "lastClassName": "iZdMBl",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         "
   ",
@@ -3117,7 +3828,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                 labelShown={false}
                               >
                                 <div
-                                  className="sc-Rmtcm iZdMBl"
+                                  className="c4"
                                 >
                                   <styled.span
                                     key="1"
@@ -3130,7 +3841,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bRBYWo",
                                             "isStatic": false,
-                                            "lastClassName": "jelrwS",
+                                            "lastClassName": "c5",
                                             "rules": Array [
                                               "
   display: inline-block;
@@ -3155,7 +3866,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                       forwardedRef={null}
                                     >
                                       <span
-                                        className="sc-bRBYWo jelrwS"
+                                        className="c5"
                                       >
                                         1
                                       </span>
@@ -3178,9 +3889,9 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "c6",
                               "isStatic": true,
-                              "lastClassName": "YVZuN",
+                              "lastClassName": "c7",
                               "rules": Array [
                                 "
   padding: 0 ",
@@ -3200,7 +3911,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "c6",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -3210,7 +3921,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                         forwardedRef={null}
                       >
                         <div
-                          className="sc-gZMcBi YVZuN"
+                          className="c6 c7"
                         >
                           <Icon
                             color="rgba(75,78,82,1)"
@@ -3226,7 +3937,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-htpNat",
                                       "isStatic": true,
-                                      "lastClassName": "jgiceE",
+                                      "lastClassName": "c8",
                                       "rules": Array [
                                         "
   display: inline-block;
@@ -3250,7 +3961,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                 forwardedRef={null}
                               >
                                 <i
-                                  className="sc-htpNat jgiceE"
+                                  className="c8"
                                 >
                                   <KeyboardArrowUp
                                     height="22px"
@@ -3397,7 +4108,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-hSdWYo",
                         "isStatic": true,
-                        "lastClassName": "bUjOem",
+                        "lastClassName": "c9",
                         "rules": Array [
                           "
   position: relative;
@@ -3424,7 +4135,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                 >
                   <div
                     autoFocus={true}
-                    className="sc-hSdWYo bUjOem"
+                    className="c9"
                     direction={1}
                     onKeyDown={[Function]}
                     tabIndex={0}
@@ -3447,7 +4158,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-fBuWsC",
                                 "isStatic": true,
-                                "lastClassName": "eySOLS",
+                                "lastClassName": "c10",
                                 "rules": Array [
                                   "
   border: 2em solid transparent;
@@ -3469,21 +4180,21 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                           onClose={[Function]}
                         >
                           <WindowPopup
-                            className="sc-fBuWsC eySOLS"
+                            className="c10"
                             label={<ForwardRef />}
                             onClose={[Function]}
                           >
                             <Blocker
-                              className="sc-fBuWsC eySOLS"
+                              className="c10"
                               onClose={[Function]}
                             >
                               <styled.div
-                                className="sc-fBuWsC eySOLS"
+                                className="c10"
                                 onClick={[Function]}
                                 onKeyDown={[Function]}
                               >
                                 <StyledComponent
-                                  className="sc-fBuWsC eySOLS"
+                                  className="c10"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -3491,7 +4202,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-chPdSV",
                                         "isStatic": true,
-                                        "lastClassName": "juaCGL",
+                                        "lastClassName": "c11",
                                         "rules": Array [
                                           "
   top: 0;
@@ -3520,7 +4231,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                   onKeyDown={[Function]}
                                 >
                                   <div
-                                    className="sc-fBuWsC eySOLS sc-chPdSV juaCGL"
+                                    className="c10 c11"
                                     onClick={[Function]}
                                     onKeyDown={[Function]}
                                   >
@@ -3536,7 +4247,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kgoBCf",
                                               "isStatic": true,
-                                              "lastClassName": "ccpxKu",
+                                              "lastClassName": "c12",
                                               "rules": Array [
                                                 "
   height: 0;
@@ -3560,7 +4271,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                         onFocus={[Function]}
                                       >
                                         <a
-                                          className="sc-kgoBCf ccpxKu"
+                                          className="c12"
                                           href="#"
                                           onFocus={[Function]}
                                         />
@@ -3577,7 +4288,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-dxgOiQ",
                                               "isStatic": false,
-                                              "lastClassName": "dyHuYR",
+                                              "lastClassName": "c13",
                                               "rules": Array [
                                                 "
   padding: ",
@@ -3606,7 +4317,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                         tabIndex={0}
                                       >
                                         <div
-                                          className="sc-dxgOiQ dyHuYR"
+                                          className="c13"
                                           tabIndex={0}
                                         >
                                           <styled.div>
@@ -3618,7 +4329,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "sc-jKJlTe",
                                                     "isStatic": false,
-                                                    "lastClassName": "cKsVkt",
+                                                    "lastClassName": "c14",
                                                     "rules": Array [
                                                       "
   ",
@@ -3661,7 +4372,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                               forwardedRef={null}
                                             >
                                               <div
-                                                className="sc-jKJlTe cKsVkt"
+                                                className="c14"
                                               >
                                                 <styled.div>
                                                   <StyledComponent
@@ -3672,7 +4383,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-jhAzac",
                                                           "isStatic": true,
-                                                          "lastClassName": "gwtcyj",
+                                                          "lastClassName": "c15",
                                                           "rules": Array [
                                                             "
   padding-left: ",
@@ -3694,7 +4405,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                     forwardedRef={null}
                                                   >
                                                     <div
-                                                      className="sc-jhAzac gwtcyj"
+                                                      className="c15"
                                                     />
                                                   </StyledComponent>
                                                 </styled.div>
@@ -3715,7 +4426,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "sc-kpOJdX",
                                                       "isStatic": true,
-                                                      "lastClassName": "kxReIc",
+                                                      "lastClassName": "c16",
                                                       "rules": Array [
                                                         "
   ",
@@ -3773,7 +4484,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                 onClick={[Function]}
                                               >
                                                 <a
-                                                  className="sc-kpOJdX kxReIc"
+                                                  className="c16"
                                                   onClick={[Function]}
                                                 >
                                                   <Icon
@@ -3789,7 +4500,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                             "componentStyle": ComponentStyle {
                                                               "componentId": "sc-htpNat",
                                                               "isStatic": true,
-                                                              "lastClassName": "jgiceE",
+                                                              "lastClassName": "c8",
                                                               "rules": Array [
                                                                 "
   display: inline-block;
@@ -3813,7 +4524,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                         forwardedRef={null}
                                                       >
                                                         <i
-                                                          className="sc-htpNat jgiceE"
+                                                          className="c8"
                                                         >
                                                           <Close
                                                             height="1.1em"
@@ -3859,7 +4570,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "sc-ckVGcZ",
                                                     "isStatic": true,
-                                                    "lastClassName": "fvuixH",
+                                                    "lastClassName": "c17",
                                                     "rules": Array [
                                                       "
   box-sizing: border-box;
@@ -3880,7 +4591,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                               forwardedRef={null}
                                             >
                                               <div
-                                                className="sc-ckVGcZ fvuixH"
+                                                className="c17"
                                               >
                                                 <styled.li
                                                   hovered={false}
@@ -3897,7 +4608,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-cvbbAY",
                                                           "isStatic": false,
-                                                          "lastClassName": "eAHqky",
+                                                          "lastClassName": "c18",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -3919,7 +4630,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                     selected={true}
                                                   >
                                                     <li
-                                                      className="sc-cvbbAY eAHqky"
+                                                      className="c18"
                                                       onClick={[Function]}
                                                       onMouseMove={[Function]}
                                                       selected={true}
@@ -3933,7 +4644,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-jWBwVP",
                                                                 "isStatic": true,
-                                                                "lastClassName": "jZcPPp",
+                                                                "lastClassName": "c19",
                                                                 "rules": Array [
                                                                   "
   display: flex;
@@ -3954,7 +4665,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                           forwardedRef={null}
                                                         >
                                                           <div
-                                                            className="sc-jWBwVP jZcPPp"
+                                                            className="c19"
                                                           >
                                                             <styled.div>
                                                               <StyledComponent
@@ -3965,7 +4676,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                     "componentStyle": ComponentStyle {
                                                                       "componentId": "sc-brqgnP",
                                                                       "isStatic": true,
-                                                                      "lastClassName": "jgYEci",
+                                                                      "lastClassName": "c20",
                                                                       "rules": Array [
                                                                         "
   flex-grow: 1;
@@ -3985,7 +4696,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                 forwardedRef={null}
                                                               >
                                                                 <div
-                                                                  className="sc-brqgnP jgYEci"
+                                                                  className="c20"
                                                                 >
                                                                   <styled.div
                                                                     condensed={false}
@@ -4000,7 +4711,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-cMljjf",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "gZZzyn",
+                                                                            "lastClassName": "c21",
                                                                             "rules": Array [
                                                                               "
   padding: ",
@@ -4026,7 +4737,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                       showTick={false}
                                                                     >
                                                                       <div
-                                                                        className="sc-cMljjf gZZzyn"
+                                                                        className="c21"
                                                                       >
                                                                         1
                                                                       </div>
@@ -4056,7 +4767,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-cvbbAY",
                                                           "isStatic": false,
-                                                          "lastClassName": "eAHqky",
+                                                          "lastClassName": "c18",
                                                           "rules": Array [
                                                             [Function],
                                                           ],
@@ -4078,7 +4789,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                     selected={false}
                                                   >
                                                     <li
-                                                      className="sc-cvbbAY eAHqky"
+                                                      className="c18"
                                                       onClick={[Function]}
                                                       onMouseMove={[Function]}
                                                       selected={false}
@@ -4092,7 +4803,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-jWBwVP",
                                                                 "isStatic": true,
-                                                                "lastClassName": "jZcPPp",
+                                                                "lastClassName": "c19",
                                                                 "rules": Array [
                                                                   "
   display: flex;
@@ -4113,7 +4824,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                           forwardedRef={null}
                                                         >
                                                           <div
-                                                            className="sc-jWBwVP jZcPPp"
+                                                            className="c19"
                                                           >
                                                             <styled.div>
                                                               <StyledComponent
@@ -4124,7 +4835,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                     "componentStyle": ComponentStyle {
                                                                       "componentId": "sc-brqgnP",
                                                                       "isStatic": true,
-                                                                      "lastClassName": "jgYEci",
+                                                                      "lastClassName": "c20",
                                                                       "rules": Array [
                                                                         "
   flex-grow: 1;
@@ -4144,7 +4855,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                 forwardedRef={null}
                                                               >
                                                                 <div
-                                                                  className="sc-brqgnP jgYEci"
+                                                                  className="c20"
                                                                 >
                                                                   <styled.div
                                                                     condensed={false}
@@ -4159,7 +4870,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                           "componentStyle": ComponentStyle {
                                                                             "componentId": "sc-cMljjf",
                                                                             "isStatic": false,
-                                                                            "lastClassName": "gZZzyn",
+                                                                            "lastClassName": "c21",
                                                                             "rules": Array [
                                                                               "
   padding: ",
@@ -4185,7 +4896,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                       showTick={false}
                                                                     >
                                                                       <div
-                                                                        className="sc-cMljjf gZZzyn"
+                                                                        className="c21"
                                                                       >
                                                                         2
                                                                       </div>
@@ -4218,7 +4929,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kgoBCf",
                                               "isStatic": true,
-                                              "lastClassName": "ccpxKu",
+                                              "lastClassName": "c12",
                                               "rules": Array [
                                                 "
   height: 0;
@@ -4242,7 +4953,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                         onFocus={[Function]}
                                       >
                                         <a
-                                          className="sc-kgoBCf ccpxKu"
+                                          className="c12"
                                           href="#"
                                           onFocus={[Function]}
                                         />
@@ -4252,10 +4963,10 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                 </StyledComponent>
                               </styled.div>
                               <Styled(styled.div)
-                                className="sc-fBuWsC eySOLS"
+                                className="c10"
                               >
                                 <StyledComponent
-                                  className="sc-fBuWsC eySOLS"
+                                  className="c10"
                                   forwardedComponent={
                                     Object {
                                       "$$typeof": Symbol(react.forward_ref),
@@ -4263,7 +4974,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kGXeez",
                                         "isStatic": true,
-                                        "lastClassName": "fMcQrw",
+                                        "lastClassName": "c22",
                                         "rules": Array [
                                           "
   top: 0;
@@ -4299,7 +5010,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                   forwardedRef={null}
                                 >
                                   <div
-                                    className="sc-chPdSV sc-fBuWsC eySOLS sc-kGXeez fMcQrw"
+                                    className="c10 c22"
                                   />
                                 </StyledComponent>
                               </Styled(styled.div)>
@@ -4321,6 +5032,116 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
 `;
 
 exports[`<DropdownField /> should render a <DropdownField> that does not render a placeholder 1`] = `
+.c8 {
+  display: inline-block;
+}
+
+.c8 > svg {
+  float: left;
+}
+
+.c7 {
+  padding: 0 1rem;
+}
+
+.c7 i {
+  display: block;
+}
+
+.c7 + .c6 {
+  padding-left: 0;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  height: 100%;
+  position: relative;
+  min-width: 0;
+  margin: auto;
+}
+
+.c9 {
+  position: relative;
+  outline: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: rgba(248,248,248,1);
+  min-height: 54px;
+  max-height: 112px;
+  border-bottom: 1px solid rgba(75,78,82,1);
+  cursor: auto;
+  overflow-y: auto;
+  border: 1px solid rgba(255,255,255,0);
+}
+
+.c2:hover {
+  border-bottom-color: rgba(0,139,208,1);
+}
+
+.c4 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: rgba(62,62,62,1);
+  font-family: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: auto;
+}
+
+.c5 {
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(211,211,211,1);
+  color: rgba(0,0,0,1);
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 0.8em;
+  border: 0;
+  margin: 0 0.5rem 0 0;
+}
+
 <DropdownFieldInt
   data={
     Array [
@@ -4346,7 +5167,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
           "componentStyle": ComponentStyle {
             "componentId": "sc-jlyJG",
             "isStatic": true,
-            "lastClassName": "XpIWY",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -4367,7 +5188,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
       forwardedRef={null}
     >
       <div
-        className="sc-jlyJG XpIWY"
+        className="c0"
       >
         <styled.div
           onKeyDown={[Function]}
@@ -4382,7 +5203,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gipzik",
                   "isStatic": true,
-                  "lastClassName": "bxGTeT",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   display: flex;
@@ -4405,7 +5226,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
             tabIndex={0}
           >
             <div
-              className="sc-gipzik bxGTeT"
+              className="c1"
               onKeyDown={[Function]}
               onMouseDown={[Function]}
               tabIndex={0}
@@ -4425,7 +5246,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "daEJUQ",
+                        "lastClassName": "c2",
                         "rules": Array [
                           [Function],
                           "
@@ -4451,7 +5272,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                   hasValue={true}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl daEJUQ"
+                    className="c2"
                   >
                     <Component
                       error={false}
@@ -4468,7 +5289,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-gqjmRU",
                                 "isStatic": true,
-                                "lastClassName": "lohXgE",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "
   flex-grow: 1;
@@ -4494,7 +5315,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                           forwardedRef={null}
                         >
                           <div
-                            className="sc-gqjmRU lohXgE"
+                            className="c3"
                           >
                             <styled.div
                               labelShown={false}
@@ -4507,7 +5328,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-Rmtcm",
                                       "isStatic": false,
-                                      "lastClassName": "iZdMBl",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         "
   ",
@@ -4558,7 +5379,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                 labelShown={false}
                               >
                                 <div
-                                  className="sc-Rmtcm iZdMBl"
+                                  className="c4"
                                 >
                                   <Styled(styled.span)
                                     key="1"
@@ -4571,7 +5392,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-fMiknA",
                                             "isStatic": false,
-                                            "lastClassName": "gzNMkT",
+                                            "lastClassName": "c5",
                                             "rules": Array [
                                               "
   padding: ",
@@ -4612,7 +5433,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                       forwardedRef={null}
                                     >
                                       <span
-                                        className="sc-cSHVUG sc-fMiknA gzNMkT"
+                                        className="c5"
                                       >
                                         1
                                       </span>
@@ -4629,7 +5450,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-fMiknA",
                                             "isStatic": false,
-                                            "lastClassName": "gzNMkT",
+                                            "lastClassName": "c5",
                                             "rules": Array [
                                               "
   padding: ",
@@ -4670,7 +5491,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                       forwardedRef={null}
                                     >
                                       <span
-                                        className="sc-cSHVUG sc-fMiknA gzNMkT"
+                                        className="c5"
                                       >
                                         2
                                       </span>
@@ -4693,9 +5514,9 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "c6",
                               "isStatic": true,
-                              "lastClassName": "YVZuN",
+                              "lastClassName": "c7",
                               "rules": Array [
                                 "
   padding: 0 ",
@@ -4715,7 +5536,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "c6",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -4725,7 +5546,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                         forwardedRef={null}
                       >
                         <div
-                          className="sc-gZMcBi YVZuN"
+                          className="c6 c7"
                         >
                           <Icon
                             color="rgba(75,78,82,1)"
@@ -4741,7 +5562,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-htpNat",
                                       "isStatic": true,
-                                      "lastClassName": "jgiceE",
+                                      "lastClassName": "c8",
                                       "rules": Array [
                                         "
   display: inline-block;
@@ -4765,7 +5586,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                 forwardedRef={null}
                               >
                                 <i
-                                  className="sc-htpNat jgiceE"
+                                  className="c8"
                                 >
                                   <KeyboardArrowDown
                                     height="22px"
@@ -4911,7 +5732,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-hSdWYo",
                         "isStatic": true,
-                        "lastClassName": "bUjOem",
+                        "lastClassName": "c9",
                         "rules": Array [
                           "
   position: relative;
@@ -4937,7 +5758,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                 >
                   <div
                     autoFocus={true}
-                    className="sc-hSdWYo bUjOem"
+                    className="c9"
                     onKeyDown={[Function]}
                   >
                     <Component
@@ -4959,6 +5780,105 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
 `;
 
 exports[`<DropdownField /> should render a <DropdownField> that renders a placeholder 1`] = `
+.c7 {
+  display: inline-block;
+}
+
+.c7 > svg {
+  float: left;
+}
+
+.c6 {
+  padding: 0 1rem;
+}
+
+.c6 i {
+  display: block;
+}
+
+.c6 + .c5 {
+  padding-left: 0;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  height: 100%;
+  position: relative;
+  min-width: 0;
+  margin: auto;
+}
+
+.c8 {
+  position: relative;
+  outline: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: rgba(248,248,248,1);
+  min-height: 54px;
+  max-height: 112px;
+  border-bottom: 1px solid rgba(239,239,239,1);
+  cursor: auto;
+  overflow-y: auto;
+  border: 1px solid rgba(255,255,255,0);
+}
+
+.c2:hover {
+  border-bottom-color: rgba(0,139,208,1);
+}
+
+.c4 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: rgba(62,62,62,1);
+  font-family: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: auto;
+}
+
 <DropdownFieldInt
   data={
     Array [
@@ -4978,7 +5898,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
           "componentStyle": ComponentStyle {
             "componentId": "sc-jlyJG",
             "isStatic": true,
-            "lastClassName": "XpIWY",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -4999,7 +5919,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
       forwardedRef={null}
     >
       <div
-        className="sc-jlyJG XpIWY"
+        className="c0"
       >
         <styled.div
           onKeyDown={[Function]}
@@ -5014,7 +5934,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gipzik",
                   "isStatic": true,
-                  "lastClassName": "bxGTeT",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   display: flex;
@@ -5037,7 +5957,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
             tabIndex={0}
           >
             <div
-              className="sc-gipzik bxGTeT"
+              className="c1"
               onKeyDown={[Function]}
               onMouseDown={[Function]}
               tabIndex={0}
@@ -5057,7 +5977,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "YzHwD",
+                        "lastClassName": "c2",
                         "rules": Array [
                           [Function],
                           "
@@ -5083,7 +6003,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                   hasValue={false}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl YzHwD"
+                    className="c2"
                   >
                     <Component
                       error={false}
@@ -5100,7 +6020,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-gqjmRU",
                                 "isStatic": true,
-                                "lastClassName": "lohXgE",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "
   flex-grow: 1;
@@ -5126,7 +6046,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                           forwardedRef={null}
                         >
                           <div
-                            className="sc-gqjmRU lohXgE"
+                            className="c3"
                           >
                             <styled.div
                               labelShown={false}
@@ -5139,7 +6059,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-Rmtcm",
                                       "isStatic": false,
-                                      "lastClassName": "iZdMBl",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         "
   ",
@@ -5190,7 +6110,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                                 labelShown={false}
                               >
                                 <div
-                                  className="sc-Rmtcm iZdMBl"
+                                  className="c4"
                                 >
                                   No value selected
                                 </div>
@@ -5210,9 +6130,9 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "c5",
                               "isStatic": true,
-                              "lastClassName": "YVZuN",
+                              "lastClassName": "c6",
                               "rules": Array [
                                 "
   padding: 0 ",
@@ -5232,7 +6152,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "c5",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -5242,7 +6162,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                         forwardedRef={null}
                       >
                         <div
-                          className="sc-gZMcBi YVZuN"
+                          className="c5 c6"
                         >
                           <Icon
                             color="rgba(75,78,82,1)"
@@ -5258,7 +6178,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-htpNat",
                                       "isStatic": true,
-                                      "lastClassName": "jgiceE",
+                                      "lastClassName": "c7",
                                       "rules": Array [
                                         "
   display: inline-block;
@@ -5282,7 +6202,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                                 forwardedRef={null}
                               >
                                 <i
-                                  className="sc-htpNat jgiceE"
+                                  className="c7"
                                 >
                                   <KeyboardArrowDown
                                     height="22px"
@@ -5418,7 +6338,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-hSdWYo",
                         "isStatic": true,
-                        "lastClassName": "bUjOem",
+                        "lastClassName": "c8",
                         "rules": Array [
                           "
   position: relative;
@@ -5444,7 +6364,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                 >
                   <div
                     autoFocus={true}
-                    className="sc-hSdWYo bUjOem"
+                    className="c8"
                     onKeyDown={[Function]}
                   >
                     <Component
@@ -5466,6 +6386,112 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
 `;
 
 exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
+.c9 {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  color: rgba(167,2,64,1);
+  padding: 0.25rem 0;
+}
+
+.c7 {
+  display: inline-block;
+}
+
+.c7 > svg {
+  float: left;
+}
+
+.c6 {
+  padding: 0 1rem;
+}
+
+.c6 i {
+  display: block;
+}
+
+.c6 + .c5 {
+  padding-left: 0;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  height: 100%;
+  position: relative;
+  min-width: 0;
+  margin: auto;
+}
+
+.c8 {
+  position: relative;
+  outline: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: rgba(248,248,248,1);
+  min-height: 54px;
+  max-height: 112px;
+  border-bottom: 1px solid rgba(167,2,64,1);
+  cursor: auto;
+  overflow-y: auto;
+  border: 1px solid rgba(255,255,255,0);
+}
+
+.c2:hover {
+  border-bottom-color: rgba(0,139,208,1);
+}
+
+.c4 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: rgba(62,62,62,1);
+  font-family: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: auto;
+}
+
 <DropdownFieldInt
   data={
     Array [
@@ -5487,7 +6513,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-jlyJG",
             "isStatic": true,
-            "lastClassName": "XpIWY",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -5508,7 +6534,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
       forwardedRef={null}
     >
       <div
-        className="sc-jlyJG XpIWY"
+        className="c0"
       >
         <styled.div
           onKeyDown={[Function]}
@@ -5523,7 +6549,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gipzik",
                   "isStatic": true,
-                  "lastClassName": "bxGTeT",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   display: flex;
@@ -5546,7 +6572,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
             tabIndex={0}
           >
             <div
-              className="sc-gipzik bxGTeT"
+              className="c1"
               onKeyDown={[Function]}
               onMouseDown={[Function]}
               tabIndex={0}
@@ -5566,7 +6592,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "bYFnfU",
+                        "lastClassName": "c2",
                         "rules": Array [
                           [Function],
                           "
@@ -5592,7 +6618,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                   hasValue={false}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl bYFnfU"
+                    className="c2"
                   >
                     <Component
                       error={true}
@@ -5608,7 +6634,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-gqjmRU",
                                 "isStatic": true,
-                                "lastClassName": "lohXgE",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "
   flex-grow: 1;
@@ -5634,7 +6660,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                           forwardedRef={null}
                         >
                           <div
-                            className="sc-gqjmRU lohXgE"
+                            className="c3"
                           >
                             <styled.div
                               labelShown={false}
@@ -5647,7 +6673,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-Rmtcm",
                                       "isStatic": false,
-                                      "lastClassName": "iZdMBl",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         "
   ",
@@ -5698,7 +6724,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                 labelShown={false}
                               >
                                 <div
-                                  className="sc-Rmtcm iZdMBl"
+                                  className="c4"
                                 />
                               </StyledComponent>
                             </styled.div>
@@ -5717,9 +6743,9 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-gZMcBi",
+                                "componentId": "c5",
                                 "isStatic": true,
-                                "lastClassName": "YVZuN",
+                                "lastClassName": "c6",
                                 "rules": Array [
                                   "
   padding: 0 ",
@@ -5739,7 +6765,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                               "displayName": "styled.div",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-gZMcBi",
+                              "styledComponentId": "c5",
                               "target": "div",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -5749,7 +6775,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                           forwardedRef={null}
                         >
                           <div
-                            className="sc-gZMcBi YVZuN"
+                            className="c5 c6"
                           >
                             <Icon
                               color="rgba(167,2,64,1)"
@@ -5765,7 +6791,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-htpNat",
                                         "isStatic": true,
-                                        "lastClassName": "jgiceE",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "
   display: inline-block;
@@ -5789,7 +6815,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                   forwardedRef={null}
                                 >
                                   <i
-                                    className="sc-htpNat jgiceE"
+                                    className="c7"
                                   >
                                     <Error
                                       height="22px"
@@ -5833,9 +6859,9 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "c5",
                               "isStatic": true,
-                              "lastClassName": "YVZuN",
+                              "lastClassName": "c6",
                               "rules": Array [
                                 "
   padding: 0 ",
@@ -5855,7 +6881,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "c5",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -5865,7 +6891,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                         forwardedRef={null}
                       >
                         <div
-                          className="sc-gZMcBi YVZuN"
+                          className="c5 c6"
                         >
                           <Icon
                             color="rgba(75,78,82,1)"
@@ -5881,7 +6907,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-htpNat",
                                       "isStatic": true,
-                                      "lastClassName": "jgiceE",
+                                      "lastClassName": "c7",
                                       "rules": Array [
                                         "
   display: inline-block;
@@ -5905,7 +6931,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                 forwardedRef={null}
                               >
                                 <i
-                                  className="sc-htpNat jgiceE"
+                                  className="c7"
                                 >
                                   <KeyboardArrowDown
                                     height="22px"
@@ -6039,7 +7065,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-hSdWYo",
                         "isStatic": true,
-                        "lastClassName": "bUjOem",
+                        "lastClassName": "c8",
                         "rules": Array [
                           "
   position: relative;
@@ -6065,7 +7091,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                 >
                   <div
                     autoFocus={true}
-                    className="sc-hSdWYo bUjOem"
+                    className="c8"
                     onKeyDown={[Function]}
                   >
                     <Component
@@ -6090,7 +7116,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bdVaJa",
                     "isStatic": false,
-                    "lastClassName": "cJrxtj",
+                    "lastClassName": "c9",
                     "rules": Array [
                       "
   ",
@@ -6130,7 +7156,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
               forwardedRef={null}
             >
               <div
-                className="sc-bdVaJa cJrxtj"
+                className="c9"
               >
                 You need to select a field
               </div>
@@ -6144,6 +7170,112 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
 `;
 
 exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
+.c9 {
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  color: rgba(167,2,64,1);
+  padding: 0.25rem 0;
+}
+
+.c7 {
+  display: inline-block;
+}
+
+.c7 > svg {
+  float: left;
+}
+
+.c6 {
+  padding: 0 1rem;
+}
+
+.c6 i {
+  display: block;
+}
+
+.c6 + .c5 {
+  padding-left: 0;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  height: 100%;
+  position: relative;
+  min-width: 0;
+  margin: auto;
+}
+
+.c8 {
+  position: relative;
+  outline: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: rgba(248,248,248,1);
+  min-height: 54px;
+  max-height: 112px;
+  border-bottom: 1px solid rgba(167,2,64,1);
+  cursor: auto;
+  overflow-y: auto;
+  border: 1px solid rgba(255,255,255,0);
+}
+
+.c2:hover {
+  border-bottom-color: rgba(0,139,208,1);
+}
+
+.c4 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: rgba(62,62,62,1);
+  font-family: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: auto;
+}
+
 <DropdownFieldInt
   data={
     Array [
@@ -6165,7 +7297,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-jlyJG",
             "isStatic": true,
-            "lastClassName": "XpIWY",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -6186,7 +7318,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
       forwardedRef={null}
     >
       <div
-        className="sc-jlyJG XpIWY"
+        className="c0"
       >
         <styled.div
           onKeyDown={[Function]}
@@ -6201,7 +7333,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gipzik",
                   "isStatic": true,
-                  "lastClassName": "bxGTeT",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   display: flex;
@@ -6224,7 +7356,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
             tabIndex={0}
           >
             <div
-              className="sc-gipzik bxGTeT"
+              className="c1"
               onKeyDown={[Function]}
               onMouseDown={[Function]}
               tabIndex={0}
@@ -6244,7 +7376,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "bYFnfU",
+                        "lastClassName": "c2",
                         "rules": Array [
                           [Function],
                           "
@@ -6270,7 +7402,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                   hasValue={false}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl bYFnfU"
+                    className="c2"
                   >
                     <Component
                       error={true}
@@ -6286,7 +7418,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-gqjmRU",
                                 "isStatic": true,
-                                "lastClassName": "lohXgE",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "
   flex-grow: 1;
@@ -6312,7 +7444,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                           forwardedRef={null}
                         >
                           <div
-                            className="sc-gqjmRU lohXgE"
+                            className="c3"
                           >
                             <styled.div
                               labelShown={false}
@@ -6325,7 +7457,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-Rmtcm",
                                       "isStatic": false,
-                                      "lastClassName": "iZdMBl",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         "
   ",
@@ -6376,7 +7508,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                 labelShown={false}
                               >
                                 <div
-                                  className="sc-Rmtcm iZdMBl"
+                                  className="c4"
                                 />
                               </StyledComponent>
                             </styled.div>
@@ -6395,9 +7527,9 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-gZMcBi",
+                                "componentId": "c5",
                                 "isStatic": true,
-                                "lastClassName": "YVZuN",
+                                "lastClassName": "c6",
                                 "rules": Array [
                                   "
   padding: 0 ",
@@ -6417,7 +7549,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                               "displayName": "styled.div",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-gZMcBi",
+                              "styledComponentId": "c5",
                               "target": "div",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -6427,7 +7559,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                           forwardedRef={null}
                         >
                           <div
-                            className="sc-gZMcBi YVZuN"
+                            className="c5 c6"
                           >
                             <Icon
                               color="rgba(167,2,64,1)"
@@ -6443,7 +7575,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-htpNat",
                                         "isStatic": true,
-                                        "lastClassName": "jgiceE",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "
   display: inline-block;
@@ -6467,7 +7599,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                   forwardedRef={null}
                                 >
                                   <i
-                                    className="sc-htpNat jgiceE"
+                                    className="c7"
                                   >
                                     <Error
                                       height="22px"
@@ -6511,9 +7643,9 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "c5",
                               "isStatic": true,
-                              "lastClassName": "YVZuN",
+                              "lastClassName": "c6",
                               "rules": Array [
                                 "
   padding: 0 ",
@@ -6533,7 +7665,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "c5",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -6543,7 +7675,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                         forwardedRef={null}
                       >
                         <div
-                          className="sc-gZMcBi YVZuN"
+                          className="c5 c6"
                         >
                           <Icon
                             color="rgba(75,78,82,1)"
@@ -6559,7 +7691,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-htpNat",
                                       "isStatic": true,
-                                      "lastClassName": "jgiceE",
+                                      "lastClassName": "c7",
                                       "rules": Array [
                                         "
   display: inline-block;
@@ -6583,7 +7715,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                 forwardedRef={null}
                               >
                                 <i
-                                  className="sc-htpNat jgiceE"
+                                  className="c7"
                                 >
                                   <KeyboardArrowDown
                                     height="22px"
@@ -6717,7 +7849,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-hSdWYo",
                         "isStatic": true,
-                        "lastClassName": "bUjOem",
+                        "lastClassName": "c8",
                         "rules": Array [
                           "
   position: relative;
@@ -6743,7 +7875,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                 >
                   <div
                     autoFocus={true}
-                    className="sc-hSdWYo bUjOem"
+                    className="c8"
                     onKeyDown={[Function]}
                   >
                     <Component
@@ -6768,7 +7900,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-bdVaJa",
                     "isStatic": false,
-                    "lastClassName": "cJrxtj",
+                    "lastClassName": "c9",
                     "rules": Array [
                       "
   ",
@@ -6808,7 +7940,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
               forwardedRef={null}
             >
               <div
-                className="sc-bdVaJa cJrxtj"
+                className="c9"
               >
                 You need to select a field
               </div>
@@ -6822,6 +7954,112 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
 `;
 
 exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
+.c8 {
+  display: inline-block;
+}
+
+.c8 > svg {
+  float: left;
+}
+
+.c7 {
+  padding: 0 1rem;
+}
+
+.c7 i {
+  display: block;
+}
+
+.c7 + .c6 {
+  padding-left: 0;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  height: 100%;
+  position: relative;
+  min-width: 0;
+  margin: auto;
+}
+
+.c9 {
+  position: relative;
+  outline: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: rgba(248,248,248,1);
+  min-height: 54px;
+  max-height: 112px;
+  border-bottom: 1px solid rgba(75,78,82,1);
+  cursor: auto;
+  overflow-y: auto;
+  border: 1px solid rgba(255,255,255,0);
+}
+
+.c2:hover {
+  border-bottom-color: rgba(0,139,208,1);
+}
+
+.c4 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: rgba(62,62,62,1);
+  font-family: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: auto;
+}
+
+.c5 {
+  display: inline-block;
+  line-height: normal;
+  border: 0;
+  color: rgba(0,0,0,1);
+}
+
 <DropdownFieldInt
   borderless={true}
   data={
@@ -6841,7 +8079,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-jlyJG",
             "isStatic": true,
-            "lastClassName": "XpIWY",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -6862,7 +8100,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
       forwardedRef={null}
     >
       <div
-        className="sc-jlyJG XpIWY"
+        className="c0"
       >
         <styled.div
           onKeyDown={[Function]}
@@ -6877,7 +8115,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gipzik",
                   "isStatic": true,
-                  "lastClassName": "bxGTeT",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   display: flex;
@@ -6900,7 +8138,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
             tabIndex={0}
           >
             <div
-              className="sc-gipzik bxGTeT"
+              className="c1"
               onKeyDown={[Function]}
               onMouseDown={[Function]}
               tabIndex={0}
@@ -6920,7 +8158,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "daEJUQ",
+                        "lastClassName": "c2",
                         "rules": Array [
                           [Function],
                           "
@@ -6946,7 +8184,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                   hasValue={true}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl daEJUQ"
+                    className="c2"
                   >
                     <Component
                       error={false}
@@ -6962,7 +8200,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-gqjmRU",
                                 "isStatic": true,
-                                "lastClassName": "lohXgE",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "
   flex-grow: 1;
@@ -6988,7 +8226,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                           forwardedRef={null}
                         >
                           <div
-                            className="sc-gqjmRU lohXgE"
+                            className="c3"
                           >
                             <styled.div
                               labelShown={false}
@@ -7001,7 +8239,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-Rmtcm",
                                       "isStatic": false,
-                                      "lastClassName": "iZdMBl",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         "
   ",
@@ -7052,7 +8290,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                 labelShown={false}
                               >
                                 <div
-                                  className="sc-Rmtcm iZdMBl"
+                                  className="c4"
                                 >
                                   <styled.span
                                     key="1"
@@ -7065,7 +8303,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bRBYWo",
                                             "isStatic": false,
-                                            "lastClassName": "jelrwS",
+                                            "lastClassName": "c5",
                                             "rules": Array [
                                               "
   display: inline-block;
@@ -7090,7 +8328,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                       forwardedRef={null}
                                     >
                                       <span
-                                        className="sc-bRBYWo jelrwS"
+                                        className="c5"
                                       >
                                         1
                                       </span>
@@ -7113,9 +8351,9 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "c6",
                               "isStatic": true,
-                              "lastClassName": "YVZuN",
+                              "lastClassName": "c7",
                               "rules": Array [
                                 "
   padding: 0 ",
@@ -7135,7 +8373,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "c6",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -7145,7 +8383,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                         forwardedRef={null}
                       >
                         <div
-                          className="sc-gZMcBi YVZuN"
+                          className="c6 c7"
                         >
                           <Icon
                             color="rgba(75,78,82,1)"
@@ -7161,7 +8399,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-htpNat",
                                       "isStatic": true,
-                                      "lastClassName": "jgiceE",
+                                      "lastClassName": "c8",
                                       "rules": Array [
                                         "
   display: inline-block;
@@ -7185,7 +8423,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                 forwardedRef={null}
                               >
                                 <i
-                                  className="sc-htpNat jgiceE"
+                                  className="c8"
                                 >
                                   <KeyboardArrowDown
                                     height="22px"
@@ -7327,7 +8565,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-hSdWYo",
                         "isStatic": true,
-                        "lastClassName": "bUjOem",
+                        "lastClassName": "c9",
                         "rules": Array [
                           "
   position: relative;
@@ -7353,7 +8591,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                 >
                   <div
                     autoFocus={true}
-                    className="sc-hSdWYo bUjOem"
+                    className="c9"
                     onKeyDown={[Function]}
                   >
                     <Component
@@ -7375,6 +8613,112 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
 `;
 
 exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
+.c8 {
+  display: inline-block;
+}
+
+.c8 > svg {
+  float: left;
+}
+
+.c7 {
+  padding: 0 1rem;
+}
+
+.c7 i {
+  display: block;
+}
+
+.c7 + .c6 {
+  padding-left: 0;
+}
+
+.c3 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column-reverse;
+  -ms-flex-flow: column-reverse;
+  flex-flow: column-reverse;
+  height: 100%;
+  position: relative;
+  min-width: 0;
+  margin: auto;
+}
+
+.c9 {
+  position: relative;
+  outline: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  box-sizing: border-box;
+  box-shadow: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: rgba(248,248,248,1);
+  min-height: 54px;
+  max-height: 112px;
+  border-bottom: 1px solid rgba(75,78,82,1);
+  cursor: not-allowed;
+  overflow-y: auto;
+  border: 1px solid rgba(255,255,255,0);
+}
+
+.c2:hover {
+  border-bottom-color: rgba(239,239,239,1);
+}
+
+.c4 {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  padding: 1rem;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: rgba(180,180,180,1);
+  font-family: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: not-allowed;
+}
+
+.c5 {
+  display: inline-block;
+  line-height: normal;
+  border: 0;
+  color: rgba(0,0,0,1);
+}
+
 <DropdownFieldInt
   data={
     Array [
@@ -7394,7 +8738,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
           "componentStyle": ComponentStyle {
             "componentId": "sc-jlyJG",
             "isStatic": true,
-            "lastClassName": "XpIWY",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -7415,7 +8759,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
       forwardedRef={null}
     >
       <div
-        className="sc-jlyJG XpIWY"
+        className="c0"
       >
         <styled.div
           onKeyDown={[Function]}
@@ -7430,7 +8774,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gipzik",
                   "isStatic": true,
-                  "lastClassName": "bxGTeT",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   display: flex;
@@ -7453,7 +8797,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
             tabIndex={0}
           >
             <div
-              className="sc-gipzik bxGTeT"
+              className="c1"
               onKeyDown={[Function]}
               onMouseDown={[Function]}
               tabIndex={0}
@@ -7475,7 +8819,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "fpBGEI",
+                        "lastClassName": "c2",
                         "rules": Array [
                           [Function],
                           "
@@ -7501,7 +8845,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                   hasValue={true}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl fpBGEI"
+                    className="c2"
                     disabled={true}
                   >
                     <Component
@@ -7518,7 +8862,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-gqjmRU",
                                 "isStatic": true,
-                                "lastClassName": "lohXgE",
+                                "lastClassName": "c3",
                                 "rules": Array [
                                   "
   flex-grow: 1;
@@ -7544,7 +8888,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                           forwardedRef={null}
                         >
                           <div
-                            className="sc-gqjmRU lohXgE"
+                            className="c3"
                           >
                             <styled.div
                               disabled={true}
@@ -7559,7 +8903,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-Rmtcm",
                                       "isStatic": false,
-                                      "lastClassName": "gOmgLT",
+                                      "lastClassName": "c4",
                                       "rules": Array [
                                         "
   ",
@@ -7610,7 +8954,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                 labelShown={false}
                               >
                                 <div
-                                  className="sc-Rmtcm gOmgLT"
+                                  className="c4"
                                   disabled={true}
                                 >
                                   <styled.span
@@ -7624,7 +8968,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bRBYWo",
                                             "isStatic": false,
-                                            "lastClassName": "jelrwS",
+                                            "lastClassName": "c5",
                                             "rules": Array [
                                               "
   display: inline-block;
@@ -7649,7 +8993,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                       forwardedRef={null}
                                     >
                                       <span
-                                        className="sc-bRBYWo jelrwS"
+                                        className="c5"
                                       >
                                         1
                                       </span>
@@ -7673,9 +9017,9 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "c6",
                               "isStatic": true,
-                              "lastClassName": "YVZuN",
+                              "lastClassName": "c7",
                               "rules": Array [
                                 "
   padding: 0 ",
@@ -7695,7 +9039,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "c6",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -7705,7 +9049,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                         forwardedRef={null}
                       >
                         <div
-                          className="sc-gZMcBi YVZuN"
+                          className="c6 c7"
                         >
                           <Icon
                             color="rgba(211,211,211,1)"
@@ -7721,7 +9065,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-htpNat",
                                       "isStatic": true,
-                                      "lastClassName": "jgiceE",
+                                      "lastClassName": "c8",
                                       "rules": Array [
                                         "
   display: inline-block;
@@ -7745,7 +9089,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                 forwardedRef={null}
                               >
                                 <i
-                                  className="sc-htpNat jgiceE"
+                                  className="c8"
                                 >
                                   <KeyboardArrowDown
                                     height="22px"
@@ -7887,7 +9231,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-hSdWYo",
                         "isStatic": true,
-                        "lastClassName": "bUjOem",
+                        "lastClassName": "c9",
                         "rules": Array [
                           "
   position: relative;
@@ -7913,7 +9257,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                 >
                   <div
                     autoFocus={true}
-                    className="sc-hSdWYo bUjOem"
+                    className="c9"
                     onKeyDown={[Function]}
                   >
                     <Component

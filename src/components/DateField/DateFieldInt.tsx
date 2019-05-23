@@ -218,6 +218,7 @@ function dateToString(dateObj: Date) {
 
 export class DateFieldInt extends React.Component<DateFieldProps & FormContextProps, DateFieldState> {
   private timeout: any;
+  private inputRef: HTMLElement | null;
 
   constructor(props: DateFieldProps & FormContextProps) {
     super(props);
@@ -545,6 +546,10 @@ export class DateFieldInt extends React.Component<DateFieldProps & FormContextPr
     this.changeValue(e.value, date || this.state.date);
   };
 
+  private setInputRef = (instance: HTMLElement | null) => {
+    this.inputRef = instance;
+  };
+
   render() {
     const {
       name: _0,
@@ -558,12 +563,15 @@ export class DateFieldInt extends React.Component<DateFieldProps & FormContextPr
       ...props
     } = this.props;
     const { open, value, error } = this.state;
-    const img = <Icon name="DateRange" color={tuna} size="22px" />;
+    const img = (
+      <Icon name="DateRange" color={tuna} size="22px" onClick={() => this.inputRef && this.inputRef.focus()} />
+    );
 
     return (
       <DateFieldContainer>
         <TextField
           {...props}
+          inputRef={this.setInputRef}
           onChange={this.changeDate}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}

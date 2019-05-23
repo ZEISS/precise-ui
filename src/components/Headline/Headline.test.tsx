@@ -2,7 +2,6 @@ import * as React from 'react';
 import { mount, mount } from 'enzyme';
 import { Headline } from './';
 import { light } from '../../themes';
-import 'jest-styled-components';
 
 describe('<Headline />', () => {
   it('should render default <Headline> component', () => {
