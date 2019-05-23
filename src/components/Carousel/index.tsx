@@ -168,9 +168,9 @@ const Mask = styled.div`
   overflow: hidden;
 `;
 
-const Arrow = styled.button`
+export const Arrow = styled.button`
   ${getFontStyle({ size: 'medium' })}
-
+  
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -183,10 +183,10 @@ const Arrow = styled.button`
     vertical-align: middle;
   }
 `;
-const ArrowLeft = styled(Arrow)`
+export const ArrowLeft = styled(Arrow)`
   left: 8px;
 `;
-const ArrowRight = styled(Arrow)`
+export const ArrowRight = styled(Arrow)`
   right: 8px;
 `;
 
