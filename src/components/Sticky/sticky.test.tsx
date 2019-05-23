@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
-import 'jest-styled-components';
 import { Sticky } from './';
 
 describe('<Sticky />', () => {

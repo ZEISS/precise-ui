@@ -48,7 +48,7 @@ class MySlider extends React.Component {
     const { value } = this.state;
     return (
       <div>
-        <Slider value={value} onChange={this.change} minimum={0} maximum={100} />
+        <Slider value={value} onChange={this.change} onChangeDone={(e)=>console.log(e.value)} minimum={0} maximum={100} />
         <span>{~~value}</span>
       </div>
     );

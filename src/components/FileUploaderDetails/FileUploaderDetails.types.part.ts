@@ -62,6 +62,7 @@ export const FileUploadActions = {
   cancelUpload: 'uploader/cancel_upload',
   showUploads: 'uploader/show_uploads',
   clearUploads: 'uploader/clear_uploads',
+  deleteUploads: 'uploader/delete_uploads',
   uploadProgress: 'uploader/upload_progress',
   uploadSuccess: 'uploader/upload_success',
   uploadFailure: 'uploader/upload_failure',

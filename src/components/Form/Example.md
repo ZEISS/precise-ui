@@ -132,3 +132,31 @@ class MyForm extends React.Component {
 
 <MyForm />
 ```
+The `Form` with validation rules
+
+```jsx
+const { Form, Button, TextField } = require('precise-ui');
+
+<Form 
+  onSubmit={e => alert(JSON.stringify(e))} 
+  validationRules={{
+    first: (value) => value && value > 10 ? 'Should be less than 10' : undefined,
+    last: () => 'Always some error',
+  }}>
+  <div>
+    First:
+  </div>
+  <div>
+    <TextField name="first" />
+  </div>
+  <div>
+    Last:
+  </div>
+  <div>
+    <TextField name="last" />
+  </div>
+  <div>
+    <Button>Submit</Button>
+  </div>
+</Form>
+```

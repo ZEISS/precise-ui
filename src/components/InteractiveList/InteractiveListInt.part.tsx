@@ -190,11 +190,11 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       value: props.indices || getIndices(props.data || [], value, props.multiple),
       controlled: props.indices !== undefined || props.value !== undefined,
       selected: undefined,
-      direction: InteractiveListDirection.normal,
+      direction: props.direction || InteractiveListDirection.normal,
     };
   }
 
-  handleClickOutside = () => {
+  private defaultHandleClickOutside = () => {
     const { open, onBlur } = this.props;
 
     if (open) {
@@ -205,6 +205,12 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       this.setState({
         selected: undefined,
       });
+    }
+  };
+
+  handleClickOutside = () => {
+    if (this.props.open) {
+      this.props.onClickOutside ? this.props.onClickOutside() : this.defaultHandleClickOutside();
     }
   };
 
@@ -219,7 +225,10 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       });
     }
 
-    if (nextProps.focus !== focus && nextProps.focus) {
+    const componentIsNotFocused =
+      nextProps.focus !== focus || (this.interactiveList && document.activeElement !== this.interactiveList);
+
+    if (componentIsNotFocused && nextProps.focus) {
       if (open && nextProps.open) {
         this.interactiveList && this.interactiveList.focus();
         this.setState({
@@ -488,6 +497,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       indices: _1,
       disabled: _2,
       onKeyDown: _3,
+      onClickOutside: _4,
       data = [],
       theme,
       borderless = false,

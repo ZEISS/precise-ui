@@ -1,6 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several children 1`] = `
+.c1 {
+  display: inline-block;
+  color: rgba(64,64,64,1);
+}
+
+.c0 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: rgba(106,176,226,1);
+}
+
+.c2 {
+  padding: 0 1rem;
+  color: rgba(64,64,64,1);
+  font-size: inherit;
+}
+
+.c2:after {
+  content: '/';
+}
+
 <Breadcrumbs>
   <styled.div>
     <StyledComponent
@@ -11,7 +32,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
           "componentStyle": ComponentStyle {
             "componentId": "sc-ckVGcZ",
             "isStatic": false,
-            "lastClassName": "huhJgh",
+            "lastClassName": "c0",
             "rules": Array [
               "
   ",
@@ -48,7 +69,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
       forwardedRef={null}
     >
       <div
-        className="sc-ckVGcZ huhJgh"
+        className="c0"
       >
         <span
           key="0"
@@ -65,7 +86,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": true,
-                      "lastClassName": "TpIwH",
+                      "lastClassName": "c1",
                       "rules": Array [
                         "
   display: inline-block;
@@ -88,7 +109,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                 forwardedRef={null}
               >
                 <span
-                  className="sc-bwzfXH TpIwH"
+                  className="c1"
                 >
                   First
                 </span>
@@ -108,7 +129,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-jKJlTe",
                     "isStatic": true,
-                    "lastClassName": "bxATnl",
+                    "lastClassName": "c2",
                     "rules": Array [
                       "
   padding: 0 ",
@@ -137,7 +158,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
               forwardedRef={null}
             >
               <span
-                className="sc-jKJlTe bxATnl"
+                className="c2"
               />
             </StyledComponent>
           </styled.span>
@@ -157,7 +178,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": true,
-                      "lastClassName": "TpIwH",
+                      "lastClassName": "c1",
                       "rules": Array [
                         "
   display: inline-block;
@@ -180,7 +201,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                 forwardedRef={null}
               >
                 <span
-                  className="sc-bwzfXH TpIwH"
+                  className="c1"
                 >
                   Second
                 </span>
@@ -200,7 +221,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-jKJlTe",
                     "isStatic": true,
-                    "lastClassName": "bxATnl",
+                    "lastClassName": "c2",
                     "rules": Array [
                       "
   padding: 0 ",
@@ -229,7 +250,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
               forwardedRef={null}
             >
               <span
-                className="sc-jKJlTe bxATnl"
+                className="c2"
               />
             </StyledComponent>
           </styled.span>
@@ -249,7 +270,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": true,
-                      "lastClassName": "TpIwH",
+                      "lastClassName": "c1",
                       "rules": Array [
                         "
   display: inline-block;
@@ -272,7 +293,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                 forwardedRef={null}
               >
                 <span
-                  className="sc-bwzfXH TpIwH"
+                  className="c1"
                 >
                   Third
                 </span>
@@ -292,7 +313,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-jKJlTe",
                     "isStatic": true,
-                    "lastClassName": "bxATnl",
+                    "lastClassName": "c2",
                     "rules": Array [
                       "
   padding: 0 ",
@@ -321,7 +342,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
               forwardedRef={null}
             >
               <span
-                className="sc-jKJlTe bxATnl"
+                className="c2"
               />
             </StyledComponent>
           </styled.span>
@@ -341,7 +362,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
                       "isStatic": true,
-                      "lastClassName": "TpIwH",
+                      "lastClassName": "c1",
                       "rules": Array [
                         "
   display: inline-block;
@@ -364,7 +385,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                 forwardedRef={null}
               >
                 <span
-                  className="sc-bwzfXH TpIwH"
+                  className="c1"
                 >
                   Last
                 </span>

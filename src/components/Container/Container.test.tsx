@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
 import { Container } from './';
-import 'jest-styled-components';
 
 describe('<Container />', () => {
   it('should render an empty <Container> component', () => {

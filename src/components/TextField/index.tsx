@@ -31,16 +31,19 @@ export interface TextFieldProps extends TextInputProps {
    * @default false
    */
   clearable?: boolean;
+
   /**
    * Event emitted when the clear button was pressed. Will always be fired after
    * the onChange event, i.e., after the value was set / proposed.
    */
   onClear?(): void;
+
   /**
    * Gets the reference to the underlying input or textarea element.
    * @ignore
    */
   inputRef?(instance: HTMLElement | null): void;
+
   /**
    * @ignore
    */
@@ -52,6 +55,7 @@ export interface TextFieldState {
   focused: boolean;
   reveal: boolean;
   value: string;
+  error?: React.ReactChild;
 }
 
 interface TextFieldAreaProps {
@@ -121,15 +125,15 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
       reveal: false,
       controlled: props.value !== undefined,
       value: props.value || props.defaultValue || '',
+      error: props.error,
     };
   }
 
-  componentWillReceiveProps(nextProps: TextFieldProps) {
+  componentWillReceiveProps({ value = '', error }: TextFieldProps) {
     if (this.state.controlled) {
-      this.setState({
-        value: nextProps.value || '',
-      });
+      this.setState({ value });
     }
+    this.setState({ error });
   }
 
   componentDidMount() {
@@ -237,7 +241,6 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
       resizable = false,
       disabled,
       placeholder,
-      error,
       info,
       label,
       clearable,
@@ -250,9 +253,10 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
       onFocus: _4,
       onBlur: _5,
       inputRef: _6,
+      onInput: _7,
       ...rest
     } = this.props;
-    const { focused, value } = this.state;
+    const { focused, value, error } = this.state;
     const rows = typeof multiline === 'number' ? multiline : undefined;
     const border = getTextFieldBorderType(borderless, !!error, focused);
     const hasValue = !!value;

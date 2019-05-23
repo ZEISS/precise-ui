@@ -9,16 +9,19 @@ import {
 
 export type RadioButtonGroupChangeEvent = InputChangeEvent<string>;
 
-export interface RadioButtonGroupProps extends InputProps<string> {
+export interface RadioButtonGroupProps extends InputProps<string | Array<string>> {
   /**
    * Sets the group's children.
    */
   children?: React.ReactNode;
+  multiple?: boolean;
 }
+
+export type StateValue = Array<string> | string | undefined;
 
 export interface RadioButtonGroupState {
   controlled: boolean;
-  value: string | undefined;
+  value: StateValue;
 }
 
 class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & FormContextProps, RadioButtonGroupState> {
@@ -28,19 +31,25 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
   constructor(props: RadioButtonGroupProps) {
     super(props);
     const controlled = props.value !== undefined;
+    const { value: propValue, defaultValue } = props;
+    const value = controlled ? propValue : defaultValue;
 
     this.state = {
       controlled,
-      value: controlled ? props.value : props.defaultValue,
+      value,
     };
   }
 
   setState<K extends keyof RadioButtonGroupState>(state: Pick<RadioButtonGroupState, K>) {
-    for (const button of this.buttons) {
-      const selected = button.name === (state as Pick<RadioButtonGroupState, 'value'>).value;
-      button.setValue(selected);
+    const value = (state as Pick<RadioButtonGroupState, 'value'>).value;
+    if (value) {
+      for (const button of this.buttons) {
+        const selected =
+          Array.isArray(value) && button.name ? value.indexOf(button.name) !== -1 : button.name === value;
+        button.setValue(selected);
+      }
+      super.setState({ ...state, value });
     }
-
     super.setState(state);
   }
 
@@ -62,24 +71,35 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
     }
   }
 
-  componentWillReceiveProps(nextProps: RadioButtonGroupProps) {
+  componentWillReceiveProps({ value }: RadioButtonGroupProps) {
     const { controlled } = this.state;
 
     if (controlled) {
-      const name = nextProps.value;
-
       this.setState({
-        value: name,
+        value,
       });
     }
   }
+
+  private getNextValue = (groupItemName?: string) => {
+    const { multiple } = this.props;
+    const { value } = this.state;
+    if (value && Array.isArray(value) && groupItemName) {
+      if (value.indexOf(groupItemName) !== -1) {
+        return value.filter(f => f !== groupItemName);
+      }
+      return [...value, groupItemName];
+    }
+
+    return multiple && groupItemName ? [groupItemName] : groupItemName;
+  };
 
   private createContext(): RadioButtonGroupContextType {
     return {
       select: (rb: RadioButtonGroupNotifier) => {
         const { onChange, form, name = '' } = this.props;
         const { controlled } = this.state;
-        const value = rb.name;
+        const value = this.getNextValue(rb.name);
 
         if (!controlled) {
           if (form) {
@@ -102,9 +122,9 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
           }
         }
 
-        if (typeof onChange === 'function') {
+        if (typeof onChange === 'function' && value) {
           onChange({
-            value: rb.name || '',
+            value,
           });
         }
       },
@@ -113,7 +133,8 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
         this.buttons.push(rb);
 
         if (value !== undefined) {
-          rb.setValue(rb.name === value);
+          const selected = Array.isArray(value) && rb.name ? value.indexOf(rb.name) !== -1 : rb.name === value;
+          rb.setValue(selected);
         }
       },
       unsubscribe: (rb: RadioButtonGroupNotifier) => {

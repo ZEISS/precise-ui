@@ -1,6 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
+.c0 {
+  margin: 0 0 0.25rem;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c1 {
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+  margin-right: 3rem;
+}
+
+.c1:hover {
+  color: rgba(0,139,208,1);
+  border: none;
+}
+
+.c1:last-child {
+  margin-right: 0;
+}
+
+.c2 {
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+  overflow: visible;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+  border-bottom: 2px solid transparent;
+  margin-right: 3rem;
+  font-weight: 500;
+  color: rgba(0,0,0,1);
+  border-color: rgba(64,64,64,1);
+}
+
+.c2:last-child {
+  margin-right: 0;
+}
+
+.c3 {
+  display: none;
+}
+
+@media (min-width:980px) {
+  .c1 {
+    font-size: 1.1875rem;
+  }
+}
+
+@media (max-width:979px) {
+  .c1 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:980px) {
+  .c1 {
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width:979px) {
+  .c1 {
+    line-height: 1.375rem;
+  }
+}
+
+@media (min-width:980px) {
+  .c2 {
+    font-size: 1.1875rem;
+  }
+}
+
+@media (max-width:979px) {
+  .c2 {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width:980px) {
+  .c2 {
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width:979px) {
+  .c2 {
+    line-height: 1.375rem;
+  }
+}
+
 <Tabs
   defaultIndex={2}
 >
@@ -241,7 +348,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                   forwardedRef={null}
                 >
                   <div
-                    className="sc-bdVaJa bDWFJH"
+                    className=""
                   >
                     <styled.ul>
                       <StyledComponent
@@ -252,7 +359,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-bwzfXH",
                               "isStatic": true,
-                              "lastClassName": "kqITuJ",
+                              "lastClassName": "c0",
                               "rules": Array [
                                 "
   margin: 0 0 ",
@@ -276,7 +383,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                         forwardedRef={null}
                       >
                         <ul
-                          className="sc-bwzfXH kqITuJ"
+                          className="c0"
                         >
                           <styled.li
                             active={false}
@@ -292,7 +399,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-bxivhb",
                                     "isStatic": false,
-                                    "lastClassName": "ceBXRX",
+                                    "lastClassName": "c1",
                                     "rules": Array [
                                       "
   ",
@@ -399,7 +506,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                               onClick={[Function]}
                             >
                               <li
-                                className="sc-bxivhb ceBXRX"
+                                className="c1"
                                 onClick={[Function]}
                               >
                                 First
@@ -420,7 +527,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-bxivhb",
                                     "isStatic": false,
-                                    "lastClassName": "ceBXRX",
+                                    "lastClassName": "c1",
                                     "rules": Array [
                                       "
   ",
@@ -527,7 +634,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                               onClick={[Function]}
                             >
                               <li
-                                className="sc-bxivhb ceBXRX"
+                                className="c1"
                                 onClick={[Function]}
                               >
                                 Second
@@ -548,7 +655,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-bxivhb",
                                     "isStatic": false,
-                                    "lastClassName": "ceBXRX",
+                                    "lastClassName": "c1",
                                     "rules": Array [
                                       "
   ",
@@ -655,7 +762,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                               onClick={[Function]}
                             >
                               <li
-                                className="sc-bxivhb dzsrff"
+                                className="c2"
                                 onClick={[Function]}
                               >
                                 Third
@@ -676,7 +783,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-bxivhb",
                                     "isStatic": false,
-                                    "lastClassName": "ceBXRX",
+                                    "lastClassName": "c1",
                                     "rules": Array [
                                       "
   ",
@@ -783,7 +890,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                               onClick={[Function]}
                             >
                               <li
-                                className="sc-bxivhb ceBXRX"
+                                className="c1"
                                 onClick={[Function]}
                               >
                                 Last
@@ -818,7 +925,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                         forwardedRef={null}
                       >
                         <div
-                          className="sc-htpNat KtFsv"
+                          className=""
                         >
                           <styled.div
                             active={false}
@@ -833,7 +940,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-ifAKCX",
                                     "isStatic": false,
-                                    "lastClassName": "jYugZ",
+                                    "lastClassName": "c3",
                                     "rules": Array [
                                       "
   ",
@@ -855,7 +962,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                               forwardedRef={null}
                             >
                               <div
-                                className="sc-ifAKCX jYugZ"
+                                className="c3"
                               >
                                 <TabPage
                                   header="First"
@@ -880,7 +987,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-ifAKCX",
                                     "isStatic": false,
-                                    "lastClassName": "jYugZ",
+                                    "lastClassName": "c3",
                                     "rules": Array [
                                       "
   ",
@@ -902,7 +1009,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                               forwardedRef={null}
                             >
                               <div
-                                className="sc-ifAKCX jYugZ"
+                                className="c3"
                               >
                                 <TabPage
                                   header="Second"
@@ -927,7 +1034,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-ifAKCX",
                                     "isStatic": false,
-                                    "lastClassName": "jYugZ",
+                                    "lastClassName": "c3",
                                     "rules": Array [
                                       "
   ",
@@ -949,7 +1056,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                               forwardedRef={null}
                             >
                               <div
-                                className="sc-ifAKCX cpuQTc"
+                                className=""
                               >
                                 <TabPage
                                   header="Third"
@@ -974,7 +1081,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-ifAKCX",
                                     "isStatic": false,
-                                    "lastClassName": "jYugZ",
+                                    "lastClassName": "c3",
                                     "rules": Array [
                                       "
   ",
@@ -996,7 +1103,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                               forwardedRef={null}
                             >
                               <div
-                                className="sc-ifAKCX jYugZ"
+                                className="c3"
                               >
                                 <TabPage
                                   header="Last"
