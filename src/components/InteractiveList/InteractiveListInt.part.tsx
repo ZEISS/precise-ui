@@ -190,7 +190,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       value: props.indices || getIndices(props.data || [], value, props.multiple),
       controlled: props.indices !== undefined || props.value !== undefined,
       selected: undefined,
-      direction: InteractiveListDirection.normal,
+      direction: props.direction || InteractiveListDirection.normal,
     };
   }
 
