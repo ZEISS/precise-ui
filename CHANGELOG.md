@@ -3,6 +3,8 @@
 ## 0.7.0
 
 - Added Gitter badge
+- Fixed security vulnerabilities
+- Removed unneeded packages
 
 ## 0.6.0
 
