@@ -1,5 +1,11 @@
 # Precise UI Changelog
 
+## 0.6.1
+
+- Added Gitter badge
+- Fixed security vulnerabilities
+- Removed unneeded packages
+
 ## 0.6.0
 
 - Implement tag builder with auto-completion possibility
