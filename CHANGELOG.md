@@ -1,6 +1,6 @@
 # Precise UI Changelog
 
-## 0.7.0
+## 0.6.1
 
 - Added Gitter badge
 - Fixed security vulnerabilities
