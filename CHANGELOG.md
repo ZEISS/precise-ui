@@ -5,6 +5,7 @@
 - Added Gitter badge
 - Fixed security vulnerabilities
 - Removed unneeded packages
+- Fixed notification overflow in IE11
 
 ## 0.6.0
 
