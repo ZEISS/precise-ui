@@ -1,5 +1,12 @@
 # Precise UI Changelog
 
+## 0.6.1
+
+- Added Gitter badge
+- Fixed security vulnerabilities
+- Removed unneeded packages
+- Fixed notification overflow in IE11
+
 ## 0.6.0
 
 - Implement tag builder with auto-completion possibility

@@ -118,6 +118,7 @@ const StyledContent = styled.div<LayoutProps>(
   line-height: ${notificationTextLineHeight};
   color: #404040;
   margin-right: ${distance.small};
+  max-width: 245px;
 `,
   ),
 );

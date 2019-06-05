@@ -46,7 +46,7 @@ export interface AutocompleteTagBuilderProps<T> extends LabeledInputProps<Array<
 }
 
 export interface AutocompleteTagBuilderState<T> {
-  value: Map<string, T>;
+  value: Array<T>;
   inputValue: string;
   controlled: boolean;
 }

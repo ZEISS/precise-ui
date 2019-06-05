@@ -178,3 +178,22 @@ class App extends React.Component {
 }
 
 <App />
+```
+**Form example**
+
+```jsx
+const { Form, Button, TextField, AutocompleteTagBuilder } = require('precise-ui');
+
+
+<Form onSubmit={e => alert(JSON.stringify(e.data))}>
+  <div>
+    Numbers
+  </div>
+  <div>
+    <AutocompleteTagBuilder name="numbers" getSuggestionKey={(x) => x} getSuggestionValue={(x) => x} suggestions={['1','2','3','4','5','6','7']}/>
+  </div>
+  <div>
+    <Button>Submit</Button>
+  </div>
+</Form>
+```
