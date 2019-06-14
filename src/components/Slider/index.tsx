@@ -69,10 +69,15 @@ export interface SliderProps extends InputProps<number | Array<number>> {
    * Emitted once the slider's value changed.
    */
   onChange?(e: SliderChangeEvent): void;
+  /**
+   * Emitted once the slider's value changing done and value is ready.
+   */
+  onChangeDone?(e: SliderChangeEvent): void;
 }
 
 export interface SliderState {
   value: number | Array<number>;
+  error?: React.ReactChild;
   active: number;
   controlled: boolean;
   vertical: boolean;
@@ -177,6 +182,7 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
       active: 0,
       controlled: typeof props.value !== 'undefined',
       hovered: false,
+      error: props.error,
     };
   }
 
@@ -198,18 +204,14 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
     }
   }
 
-  componentWillReceiveProps(nextProps: SliderProps) {
+  componentWillReceiveProps({ value = this.state.value, error, orientation }: SliderProps) {
     if (this.state.controlled) {
-      const { value } = this.state;
-      const newValue = nextProps.value === undefined ? value : nextProps.value;
-
-      this.setState({
-        value: newValue,
-      });
+      this.setState({ value });
     }
 
     this.setState({
-      vertical: nextProps.orientation === 'vertical',
+      vertical: orientation === 'vertical',
+      error,
     });
   }
 
@@ -260,7 +262,7 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
   }
 
   private setValue(position: number, knob: number) {
-    const { onChange, maximum = 1, minimum = 0, step = 0, disabled, form, name = '' } = this.props;
+    const { onChange, onChangeDone, maximum = 1, minimum = 0, step = 0, disabled, form, name = '' } = this.props;
 
     if (!disabled) {
       const current = this.state.value;
@@ -285,16 +287,24 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
         }
       }
 
-      this.setState({
-        active: knob,
-      });
+      const event: SliderChangeEvent = {
+        value: selected,
+        index: knob - 1,
+        type: multi ? 'multi' : 'single',
+      };
 
       if (valid && typeof onChange === 'function') {
-        onChange({
-          value: selected,
-          index: knob - 1,
-          type: multi ? 'multi' : 'single',
+        onChange(event);
+      }
+
+      if (knob !== this.state.active) {
+        this.setState({
+          active: knob,
         });
+
+        if (!knob && valid && typeof onChangeDone === 'function') {
+          onChangeDone(event);
+        }
       }
     }
   }
@@ -392,20 +402,20 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
       defaultValue: _2,
       disabled,
       onChange: _3,
-      margin: _4,
+      onChangeDone: _4,
+      margin: _5,
       step,
       minimum = 0,
       maximum = 1,
       color,
       theme,
       info,
-      error,
       onBlur,
       onFocus,
       showTooltip,
       ...props
     } = this.props;
-    const { value, active, vertical, hovered } = this.state;
+    const { value, active, vertical, hovered, error } = this.state;
     const values = Array.isArray(value) ? value : [value];
     const ind = values.length === 1 ? (100 * (values[0] - minimum)) / (maximum - minimum) : 0;
 

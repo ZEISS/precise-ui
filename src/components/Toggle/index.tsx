@@ -23,6 +23,7 @@ export interface ToggleProps extends InputProps<boolean> {
 
 export interface ToggleState {
   value: boolean;
+  error?: React.ReactChild;
   controlled: boolean;
   focused: boolean;
 }
@@ -93,6 +94,7 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
       controlled: typeof props.value !== 'undefined',
       value: props.value || props.defaultValue || false,
       focused: false,
+      error: props.error,
     };
   }
 
@@ -114,12 +116,11 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
     }
   }
 
-  componentWillReceiveProps(nextProps: ToggleProps) {
+  componentWillReceiveProps({ value = false, error }: ToggleProps) {
     if (this.state.controlled) {
-      this.setState({
-        value: nextProps.value || false,
-      });
+      this.setState({ value });
     }
+    this.setState({ error });
   }
 
   private changeValue() {
@@ -179,12 +180,12 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
       value: _0,
       defaultValue: _1,
       onChange: _2,
+      onInput: _3,
       info,
-      error,
       label,
       ...props
     } = this.props;
-    const { value, focused } = this.state;
+    const { value, focused, error } = this.state;
     const containerProps = {
       ...props,
       theme,

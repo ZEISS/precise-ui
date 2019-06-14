@@ -59,6 +59,7 @@ export interface DateFieldState {
   openControlled: boolean;
   value: string;
   date: Date;
+  error?: React.ReactChild;
 }
 
 export interface StyledCalendarCell {
@@ -217,6 +218,7 @@ function dateToString(dateObj: Date) {
 
 export class DateFieldInt extends React.Component<DateFieldProps & FormContextProps, DateFieldState> {
   private timeout: any;
+  private inputRef: HTMLElement | null;
 
   constructor(props: DateFieldProps & FormContextProps) {
     super(props);
@@ -230,21 +232,19 @@ export class DateFieldInt extends React.Component<DateFieldProps & FormContextPr
       open: props.open || false,
       date,
       value,
+      error: props.error,
     };
   }
 
-  componentWillReceiveProps(nextProps: DateFieldProps) {
+  componentWillReceiveProps({ value = '', open = false, error }: DateFieldProps) {
     if (this.state.valueControlled) {
-      this.setState({
-        value: nextProps.value || '',
-      });
+      this.setState({ value });
+    }
+    if (this.state.open) {
+      this.setState({ open });
     }
 
-    if (this.state.openControlled) {
-      this.setState({
-        open: nextProps.open || false,
-      });
-    }
+    this.setState({ error });
   }
 
   componentDidMount() {
@@ -546,6 +546,10 @@ export class DateFieldInt extends React.Component<DateFieldProps & FormContextPr
     this.changeValue(e.value, date || this.state.date);
   };
 
+  private setInputRef = (instance: HTMLElement | null) => {
+    this.inputRef = instance;
+  };
+
   render() {
     const {
       name: _0,
@@ -558,18 +562,22 @@ export class DateFieldInt extends React.Component<DateFieldProps & FormContextPr
       weekDays,
       ...props
     } = this.props;
-    const { open, value } = this.state;
-    const img = <Icon name="DateRange" color={tuna} size="22px" />;
+    const { open, value, error } = this.state;
+    const img = (
+      <Icon name="DateRange" color={tuna} size="22px" onClick={() => this.inputRef && this.inputRef.focus()} />
+    );
 
     return (
       <DateFieldContainer>
         <TextField
-          value={value}
+          {...props}
+          inputRef={this.setInputRef}
           onChange={this.changeDate}
           onFocus={this.handleFocus}
           onBlur={this.handleBlur}
           icon={img}
-          {...props}
+          value={value}
+          error={error}
         />
         {open && (
           <CalendarView tabIndex={0} onFocus={this.handleFocus} onBlur={this.handleBlur}>
