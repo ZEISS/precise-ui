@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 0.6.2
+
+- Fixed notification overflow in IE11
+
 ## 0.6.1
 
 - Added Gitter badge
