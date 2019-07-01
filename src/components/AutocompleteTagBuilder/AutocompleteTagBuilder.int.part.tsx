@@ -19,10 +19,9 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
 
     const { value: nullableValue, defaultValue, onInputChange, inputValue, delay = 0 } = this.props;
     const value = nullableValue || defaultValue || [];
-    const valueMap = this.mapItemArray(value);
 
     this.state = {
-      value: valueMap,
+      value: value,
       inputValue: inputValue || '',
       controlled: props.value !== undefined || inputValue !== undefined,
     };
@@ -35,9 +34,8 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
   public componentWillReceiveProps(nextProps: AutocompleteTagBuilderProps<T>) {
     if (this.state.controlled) {
       const { value, inputValue } = nextProps;
-      const valueMap = this.mapItemArray(value);
       this.setState({
-        value: valueMap,
+        value: value || [],
         inputValue: inputValue || '',
       });
     }
@@ -46,7 +44,6 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
   public componentDidMount() {
     const { form } = this.props;
     const { controlled } = this.state;
-
     if (!controlled && form) {
       form.subscribe(this);
     }
@@ -63,12 +60,12 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
 
   private addSuggestion(suggestion: T) {
     const { value } = this.state;
-
     const key = this.getSuggestionKey(suggestion);
 
-    if (!value.has(key)) {
-      const newValue = new Map(value);
-      newValue.set(key, suggestion);
+    const suggestionAlreadyAdded = value.some(x => this.getSuggestionKey(x) === key);
+    if (!suggestionAlreadyAdded) {
+      const newValue = [...value];
+      newValue.push(suggestion);
       this.updateValue(newValue);
     }
 
@@ -81,25 +78,24 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
     index = index >= 0 ? index : keys.length + index;
 
     if (index >= 0 && index < keys.length) {
-      const key = keys[index];
-      const newValue = new Map(value);
-      newValue.delete(key);
+      value.splice(index, 1);
+      const newValue = [...value];
       this.updateValue(newValue);
     }
   };
 
-  private updateValue(value: Map<string, T>) {
+  private updateValue(newValue: Array<T>) {
     const { onChange, name = '', form } = this.props;
 
     if (!this.state.controlled) {
       if (form) {
         form.change({
           name,
-          value,
+          value: newValue,
         });
       } else {
         this.setState({
-          value,
+          value: newValue,
         });
       }
     }
@@ -108,7 +104,7 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
       this._inputNode.focus();
     }
     if (typeof onChange === 'function') {
-      onChange({ value: Array.from(value.values()) });
+      onChange({ value: newValue });
     }
   }
 
@@ -120,18 +116,6 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
     }
 
     this._fireOnInputChange(newValue);
-  }
-
-  private mapItemArray(value?: Array<T>): Map<string, T> {
-    const valueMap = new Map();
-
-    value &&
-      value.forEach(x => {
-        const key = this.getSuggestionKey(x);
-        valueMap.set(key, x);
-      });
-
-    return valueMap;
   }
 
   private getSuggestionValue(item: T) {
@@ -157,8 +141,8 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
     }
   }
 
-  private getTagsArray = memoize((value: Map<string, T>) => {
-    return Array.from(value.values()).map(x => this.getSuggestionValue(x));
+  private getTagsArray = memoize((value: Array<T>) => {
+    return value.map(x => this.getSuggestionValue(x));
   });
 
   private defaultSuggestionRenderer(suggestion: T) {

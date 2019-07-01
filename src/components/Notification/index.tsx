@@ -151,6 +151,7 @@ const LayoutInline = css`
 const ContentContainer = styled.div<LayoutProps>`
   ${props => (props.inline ? LayoutInline : LayoutVertical)};
   margin-right: ${distance.medium};
+  width: 100%;
 `;
 
 const IconContainer = styled.div(
