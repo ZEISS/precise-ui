@@ -7,6 +7,7 @@
 [![GitHub Tag](https://img.shields.io/github/tag/ZEISS/precise-ui.svg)](https://github.com/ZEISS/precise-ui/releases)
 [![GitHub Issues](https://img.shields.io/github/issues/ZEISS/precise-ui.svg)](https://github.com/ZEISS/precise-ui/issues)
 [![CLA Assistant](https://cla-assistant.io/readme/badge/ZEISS/precise-ui)](https://cla-assistant.io/ZEISS/precise-ui)
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/ZEISS/precise-ui)
 
 A complete opinionated React component library with minimal dependencies powered ZEISS.
 
