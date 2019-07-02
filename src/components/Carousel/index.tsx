@@ -79,7 +79,7 @@ export interface CarouselProps extends StandardProps {
    * Whether the Carousel can stop propagation so that links can be clicked
    * @default false
    */
-  opaque: InteractiveSurfaceProps['opaque'];
+  opaque?: InteractiveSurfaceProps['opaque'];
 }
 
 export interface DragStatus {
