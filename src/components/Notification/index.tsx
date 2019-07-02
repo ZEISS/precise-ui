@@ -118,7 +118,6 @@ const StyledContent = styled.div<LayoutProps>(
   line-height: ${notificationTextLineHeight};
   color: #404040;
   margin-right: ${distance.small};
-  max-width: 245px;
 `,
   ),
 );
@@ -152,6 +151,7 @@ const LayoutInline = css`
 const ContentContainer = styled.div<LayoutProps>`
   ${props => (props.inline ? LayoutInline : LayoutVertical)};
   margin-right: ${distance.medium};
+  width: 100%;
 `;
 
 const IconContainer = styled.div(
