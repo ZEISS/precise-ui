@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled, { css } from '../../utils/styled';
 import { KeyCodes } from '../../utils/keyCodes';
 import { remCalc } from '../../utils/remCalc';
-import { InteractiveSurface, InteractiveSurfaceChangeEvent } from '../InteractiveSurface';
+import { InteractiveSurface, InteractiveSurfaceChangeEvent, InteractiveSurfaceProps } from '../InteractiveSurface';
 import { Icon } from '../Icon';
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
@@ -24,6 +24,7 @@ export interface CarouselStopEvent {
    * The reason for stopping the autoplay mode.
    */
   reason: 'ended' | 'manual';
+
   /**
    * Resumes execution of the autoplay mode.
    */
@@ -39,10 +40,12 @@ export interface CarouselProps extends StandardProps {
    * The currently selected page index - used in the controlled mode.
    */
   selectedIndex?: number;
+
   /**
    * Notification callback if the selected page index should change.
    */
   onPageChange?(e: CarouselChangeEvent): void;
+
   /**
    * The children, usually passed as a collection of elements.
    */
@@ -60,10 +63,12 @@ export interface CarouselProps extends StandardProps {
    * @default false
    */
   arrows?: boolean;
+
   /**
    * Event emitted once the Carousel autoplay stops.
    */
   onStop?(e: CarouselStopEvent): void;
+
   /**
    * Activate the autoplay mode, potentially with the time per slide
    * in milliseconds. By default 3000.
@@ -75,6 +80,11 @@ export interface CarouselProps extends StandardProps {
    * @default false
    */
   infinite?: boolean;
+  /**
+   * Whether the Carousel can stop propagation so that links can be clicked
+   * @default false
+   */
+  opaque: InteractiveSurfaceProps['opaque'];
 }
 
 export interface DragStatus {
@@ -121,10 +131,12 @@ export interface BulletProps extends StandardProps {
    * Determines if the bullet is active or not.
    */
   active: boolean;
+
   /**
    * Fired once the bullet has been clicked.
    */
   onClick(): void;
+
   /**
    * Sets the bullet's index.
    */
@@ -421,6 +433,7 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
       bullet: CustomBullet,
       arrows = false,
       infinite = false,
+      opaque = false,
       ...props
     } = this.props;
     const childrenCount = React.Children.count(children);
@@ -451,7 +464,7 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
     return (
       <RootContainer {...props} onKeyDown={this.handleKeyDown} tabIndex={0}>
         <Mask>
-          <InteractiveSurface theme={theme} onChange={this.dragTile} opaque>
+          <InteractiveSurface theme={theme} onChange={this.dragTile} opaque={opaque}>
             <PagesContainer ref={node => (this.pagesContainer = node)} selectedIndex={selectedIndex}>
               {items}
             </PagesContainer>
