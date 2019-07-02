@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 0.6.3
+
+- Fix overview pagination elements' layout in IE 11
+
 ## 0.6.2
 
 - Fixed notification overflow in IE11
