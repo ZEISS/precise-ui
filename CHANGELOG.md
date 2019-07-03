@@ -2,8 +2,9 @@
 
 ## 0.6.3
 
-- Fix overview pagination elements' layout in IE 11
+- Fixed overview pagination elements' layout in IE 11
 - Fixed display of label, placeholder and info on AutocompleteTagBuilder 
+- Fixed toaster action click area
 
 ## 0.6.2
 
