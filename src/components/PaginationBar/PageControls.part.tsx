@@ -20,6 +20,10 @@ export interface PageControlsProps {
   pages: Array<string>;
 }
 
+const StyledContainer = styled(Container)`
+  width: auto;
+`;
+
 const PageControlsStyled = styled.div`
   display: flex;
   align-items: center;
@@ -71,7 +75,7 @@ export const PageControls: React.SFC<PageControlsProps> = ({
   pages,
 }) => (
   <PageControlsStyled>
-    <Container>{children}</Container>
+    <StyledContainer>{children}</StyledContainer>
     <ChangePage disabled={current <= 0} onClick={changeToPrevious} type="button">
       <Icon name="KeyboardArrowLeft" />
     </ChangePage>
