@@ -13,7 +13,7 @@ There is also a default error component, which is used if we do not provide a cu
 ```jsx
 const { Image } = require('precise-ui');
 
-<Image preload src="/pexels-photo-248797.jpeg" alt="image" />
+<Image preload src="/pexels-photo-248797" alt="image" />
 ```
 
 **Preloading**
@@ -41,5 +41,5 @@ Same way as one can set custom preloader, can also alter the error component.
 const { Image } = require('precise-ui');
 const error = <div style={{ color: '#00ff00' }}>Image failed to load....</div>;
 
-<Image preload error={error} src="/pexels-photo-248797.jpeg" alt="image" />
+<Image preload error={error} src="/pexels-photo-248797" alt="image" />
 ```
