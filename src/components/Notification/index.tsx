@@ -109,6 +109,10 @@ const StyledTitle = styled.div(
   ),
 );
 
+const ContentWrapper = styled.span`
+  display: contents;
+`;
+
 const StyledContent = styled.div<LayoutProps>(
   themed(
     ({ inline, theme: { notificationTextFontSize, notificationTextLineHeight } }) => `
@@ -212,8 +216,8 @@ export class Notification extends React.Component<NotificationProps, Notificatio
           <StyledContent inline={isInline} theme={theme}>
             {children}
           </StyledContent>
-          <ActionContainer inline={isInline} onClick={this.onCloseHandler}>
-            {actionRenderer && actionRenderer()}
+          <ActionContainer inline={isInline}>
+            <ContentWrapper onClick={this.onCloseHandler}>{actionRenderer && actionRenderer()}</ContentWrapper>
           </ActionContainer>
         </ContentContainer>
         <CloseButton onClick={this.onCloseHandler} icon="Close" />
