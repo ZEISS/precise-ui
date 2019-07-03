@@ -193,6 +193,9 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
       noSuggestionsMessage,
       disabled,
       renderSuggestion = (item: T) => this.defaultSuggestionRenderer(item),
+      label,
+      placeholder,
+      info,
     } = this.props;
 
     const { inputValue } = this.state;
@@ -208,6 +211,9 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
         onChange={this.inputChangeHandler}
         onSuggestionSelected={this.suggestionSelectedHandler}
         inputRef={this.inputRefHandler}
+        label={label}
+        placeholder={placeholder}
+        info={info}
       />
     );
   }

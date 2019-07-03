@@ -3,6 +3,7 @@
 ## 0.6.3
 
 - Fix overview pagination elements' layout in IE 11
+- Fixed display of label, placeholder and info on AutocompleteTagBuilder 
 
 ## 0.6.2
 
