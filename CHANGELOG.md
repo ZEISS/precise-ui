@@ -2,6 +2,7 @@
 
 ## 0.6.3
 
+- Hide info element on open Autocomplete list
 - Fixed overview pagination elements' layout in IE 11
 - Fixed display of label, placeholder and info on AutocompleteTagBuilder 
 - Fixed toaster action click area
