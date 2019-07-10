@@ -313,7 +313,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
         <AutocompleteWrapper>
           {inputRenderer({
             ...props,
-            info: (open && (suggestions.length || noSuggestionsMessage) ? undefined : info),
+            info: open && (suggestions.length || noSuggestionsMessage) ? undefined : info,
             onChange: this.changed,
             clearable: true,
             inputRef: this.setNode,
