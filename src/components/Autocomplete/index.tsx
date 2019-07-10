@@ -303,6 +303,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       onFocus: _5,
       defaultValue: _6,
       inputRef: _7,
+      info,
       ...props
     } = this.props;
     const { open, listFocus, value, error } = this.state;
@@ -312,6 +313,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
         <AutocompleteWrapper>
           {inputRenderer({
             ...props,
+            info: (open && (suggestions.length || noSuggestionsMessage) ? undefined : info),
             onChange: this.changed,
             clearable: true,
             inputRef: this.setNode,
@@ -321,19 +323,22 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
 
           {open &&
             (suggestions.length || noSuggestionsMessage ? (
-              <InteractiveList
-                data={
-                  suggestions.length
-                    ? suggestions.map(renderSuggestion)
-                    : [{ key: 'default', content: noSuggestionsMessage }]
-                }
-                disabled={suggestions.length === 0}
-                customWrapper={AutosuggestWrapper}
-                focus={listFocus}
-                onChange={this.handleListChange}
-                autoPosition
-                open
-              />
+              <div>
+                <InteractiveList
+                  data={
+                    suggestions.length
+                      ? suggestions.map(renderSuggestion)
+                      : [{ key: 'default', content: noSuggestionsMessage }]
+                  }
+                  disabled={suggestions.length === 0}
+                  customWrapper={AutosuggestWrapper}
+                  focus={listFocus}
+                  onChange={this.handleListChange}
+                  autoPosition
+                  open
+                />
+                {!!info && <div>{info}</div>}
+              </div>
             ) : (
               undefined
             ))}
