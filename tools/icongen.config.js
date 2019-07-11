@@ -70,6 +70,7 @@ module.exports = {
     'ic_notifications_24px.svg',
     'ic_pageview_24px.svg',
     'ic_person_24px.svg',
+    'ic_phone_24px.svg',
     'ic_place_24px.svg',
     'ic_play_arrow_24px.svg',
     'ic_power_settings_new_24px.svg',

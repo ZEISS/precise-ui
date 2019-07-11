@@ -254,6 +254,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render Phone icon', () => {
+    const Component = icons.Phone;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Add icon', () => {
     const Component = icons.Add;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
