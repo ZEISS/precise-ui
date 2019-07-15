@@ -1,5 +1,16 @@
 # Precise UI Changelog
 
+## 0.6.3
+
+- Fixed overview pagination elements' layout in IE 11
+- Fixed display of label, placeholder and info on AutocompleteTagBuilder 
+- Fixed toaster action click area
+
+## 0.6.2
+
+- Fixed notification overflow in IE11
+- Fixed Carousel component to make carousel item clickable
+
 ## 0.6.1
 
 - Added Gitter badge
