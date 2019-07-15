@@ -164,7 +164,7 @@ For unit tests we use Jest. We recommend using snapshot tests (which are done vi
 
 Visual snapshots are located in `/integration/__image_snapshots__`.
 
-When the testing runs it renders components from `[componentName]/Example.md`, makes screenshots and compares them to the previous verison screenshots.
+When the testing runs it renders components from `[componentName]/Example.md`, makes screenshots and compares them to the previous version screenshots.
 
 To run the testing locally Docker should be installed.
 
@@ -172,7 +172,7 @@ To run the testing locally Docker should be installed.
 npm run test:visual
 ```
 
-After a component was changed, added or removed then snapshots should be updated.
+Once a component was changed, added or removed then snapshots should be updated.
 To update snapshots:
 ```sh
 npm run test:visual -- -u
