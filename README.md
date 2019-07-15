@@ -160,6 +160,38 @@ npm run test:unit --coverage
 
 For unit tests we use Jest. We recommend using snapshot tests (which are done via enzyme and some JSON snapshot serializer).
 
+#### Visual testing
+
+Visual snapshots are located in `/integration/__image_snapshots__`.
+
+When the testing runs it renders components from `[componentName]/Example.md`, makes screenshots and compares them to the previous verison screenshots.
+
+To run the testing locally Docker should be installed.
+
+```sh
+npm run test:visual
+```
+
+After a component was changed, added or removed then snapshots should be updated.
+To update snapshots:
+```sh
+npm run test:visual -- -u
+```
+
+In some cases (i.e components with animations) it's needed to skip the test. It can be done in the next way: update Example.md file:
+```
+```js { "props": { "data-skip": true } }
+
+<Component />
+```
+In some cases it's needed to tell visual test to wait before doing a snapshot. It can be done in the next way: update Example.md file:
+
+```
+```js { "props": { "data-wait": 500 } }
+
+<Component />
+```
+
 #### Adding new icons
 
 The list of all imported icons is in `/tools/icongen.config`. After modifying the list you should run `npm run icongen` or it will be run on prepush.
