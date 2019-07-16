@@ -2,7 +2,7 @@
 
 Standard usage of a Image component. By default `Image` is fluid, occupying 100% of it's parent.
 
-```jsx
+```jsx { "props": { "data-wait": 500 } }
 const { Image } = require('precise-ui');
 
 <Image src="/pexels-photo-248797.jpeg" alt="image" />
@@ -10,7 +10,7 @@ const { Image } = require('precise-ui');
 
 There is also a default error component, which is used if we do not provide a custom one.
 
-```jsx
+```jsx { "props": { "data-wait": 500 } }
 const { Image } = require('precise-ui');
 
 <Image preload src="/pexels-photo-248797" alt="image" />
@@ -20,7 +20,7 @@ const { Image } = require('precise-ui');
 
 Image component also has built in pre-loading functionality, and uses the `Spinner` component to indicate pre-loading state.
 
-```jsx
+```jsx { "props": { "data-wait": 500 } }
 const { Image } = require('precise-ui');
 
 <Image preload src="/pexels-photo-248797.jpeg" alt="image" />
@@ -28,7 +28,7 @@ const { Image } = require('precise-ui');
 
 Image preloader could also be altered by providing alternative preloader prop.
 
-```jsx
+```jsx { "props": { "data-wait": 500 } }
 const { Image } = require('precise-ui');
 const customPreloader = <div>Loading....</div>;
 
@@ -37,7 +37,7 @@ const customPreloader = <div>Loading....</div>;
 
 Same way as one can set custom preloader, can also alter the error component.
 
-```jsx
+```jsx { "props": { "data-wait": 500 } }
 const { Image } = require('precise-ui');
 const error = <div style={{ color: '#00ff00' }}>Image failed to load....</div>;
 
