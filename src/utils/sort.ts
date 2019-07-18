@@ -7,22 +7,30 @@ function compareGeneralReverse(a: any, b: any) {
 }
 
 function compareStringNormal(a: string, b: string) {
-  if (!a) {
-    return true;
-  } else if (!b) {
+  if (!a && !b) {
     return false;
   } else {
-    return a.localeCompare(b) === -1;
+    if (!a) {
+      return false;
+    } else if (!b) {
+      return true;
+    } else {
+      return a.localeCompare(b) === -1;
+    }
   }
 }
 
 function compareStringReverse(a: string, b: string) {
-  if (!b) {
-    return true;
-  } else if (!a) {
+  if (!a && !b) {
     return false;
   } else {
-    return b.localeCompare(a) === -1;
+    if (!b) {
+      return true;
+    } else if (!a) {
+      return false;
+    } else {
+      return b.localeCompare(a) === -1;
+    }
   }
 }
 
@@ -39,7 +47,9 @@ function sorter<T extends {}>(indices: Array<number>, items: Array<T>, key: keyo
   const n = values.length;
 
   if (n > 1) {
-    const type = typeof values[0];
+    const firstNonFalsyValue = values.find(item => !!item);
+
+    const type = typeof firstNonFalsyValue;
     const comparer = getComparer(type, reverse);
 
     for (let i = 1; i < n; i++) {

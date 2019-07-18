@@ -174,4 +174,49 @@ describe('data sorting', () => {
     );
     expect(result).toEqual([2, 1, 0, 3, 4, 6, 5, 7, 8]);
   });
+
+  it('should return sorted indices with non-sorted table on falsy values', () => {
+    const result = sortObjectList(
+      [
+        {
+          a: undefined,
+          b: 32,
+        },
+        {
+          a: undefined,
+          b: 12,
+        },
+        {
+          a: 'B',
+          b: 34,
+        },
+        {
+          a: '',
+          b: 55,
+        },
+        {
+          a: 'B',
+          b: 33,
+        },
+        {
+          b: 45,
+        },
+        {
+          a: 'C',
+          b: 27,
+        },
+        {
+          a: false,
+          b: 38,
+        },
+      ],
+      'a',
+    );
+
+    // the items with truthy fields should be sorted at the start of the result
+    expect(result.slice(0, 3)).toEqual([2, 4, 6]);
+
+    // the order of items with falsy fields is not defined. Therefore we don't test for exact order
+    expect(result.slice(3, 8)).toEqual(expect.arrayContaining([0, 1, 3, 5, 7]));
+  });
 });
