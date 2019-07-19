@@ -6,7 +6,7 @@ function compareGeneralReverse(a: any, b: any) {
   return b < a;
 }
 
-function compareStringNormal(a: string, b: string) {
+function compareStringNormal(a: string | undefined, b: string | undefined) {
   if (!a && !b) {
     return false;
   } else {
@@ -20,7 +20,7 @@ function compareStringNormal(a: string, b: string) {
   }
 }
 
-function compareStringReverse(a: string, b: string) {
+function compareStringReverse(a: string | undefined, b: string | undefined) {
   if (!a && !b) {
     return false;
   } else {
@@ -34,12 +34,40 @@ function compareStringReverse(a: string, b: string) {
   }
 }
 
-function getComparer(type: string, reverse: boolean) {
-  if (type !== 'string') {
-    return reverse ? compareGeneralReverse : compareGeneralNormal;
+export function compareNumberNormal(a: number | undefined, b: number | undefined): boolean {
+  if (a === b) {
+    return false;
   }
 
-  return reverse ? compareStringReverse : compareStringNormal;
+  if (a === 0) {
+    return !b || a < b;
+  }
+
+  if (!a) {
+    return false;
+  }
+
+  if (!b && b !== 0) {
+    return true;
+  }
+
+  return a < b;
+}
+
+function compareNumberReverse(a: number | undefined, b: number | undefined): boolean {
+  return compareNumberNormal(b, a);
+}
+
+function getComparer(type: string, reverse: boolean): (a: any, b: any) => boolean {
+  if (type === 'string') {
+    return reverse ? compareStringReverse : compareStringNormal;
+  }
+
+  if (type === 'number') {
+    return reverse ? compareNumberReverse : compareNumberNormal;
+  }
+
+  return reverse ? compareGeneralReverse : compareGeneralNormal;
 }
 
 function sorter<T extends {}>(indices: Array<number>, items: Array<T>, key: keyof T, reverse = false) {

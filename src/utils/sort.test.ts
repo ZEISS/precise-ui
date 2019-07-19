@@ -1,4 +1,4 @@
-import { sortObjectList } from './sort';
+import { sortObjectList, compareNumberNormal } from './sort';
 
 describe('data sorting', () => {
   it('should do nothing for an empty table', () => {
@@ -175,7 +175,7 @@ describe('data sorting', () => {
     expect(result).toEqual([2, 1, 0, 3, 4, 6, 5, 7, 8]);
   });
 
-  it('should return sorted indices with non-sorted table on falsy values', () => {
+  it('should return sorted indices with non-sorted table on not defined values', () => {
     const result = sortObjectList(
       [
         {
@@ -183,7 +183,8 @@ describe('data sorting', () => {
           b: 32,
         },
         {
-          a: undefined,
+          // tslint:disable-next-line
+          a: null,
           b: 12,
         },
         {
@@ -218,5 +219,92 @@ describe('data sorting', () => {
 
     // the order of items with falsy fields is not defined. Therefore we don't test for exact order
     expect(result.slice(3, 8)).toEqual(expect.arrayContaining([0, 1, 3, 5, 7]));
+  });
+
+  it('should sort items with non-defined number values but still handle 0 as normal number', () => {
+    const data = [
+      {
+        a: 'A',
+        b: 0,
+      },
+      {
+        a: 'B',
+        b: 5,
+      },
+      {
+        a: 'C',
+      },
+      {
+        a: 'D',
+        b: undefined,
+      },
+      {
+        a: 'E',
+        b: 3,
+      },
+      {
+        a: 'F',
+        b: 0,
+      },
+      {
+        a: 'G',
+        b: 1,
+      },
+      {
+        a: 'H',
+        // tslint:disable-next-line
+        b: null,
+      },
+    ];
+    const result = sortObjectList(data, 'b');
+
+    expect(result.slice(0, 5)).toEqual([0, 5, 6, 4, 1]);
+
+    // the order of items without a groupBy-value is not defined. Therefore we don't test for exact order
+    expect(result.slice(5, 8)).toEqual(expect.arrayContaining([2, 3, 7]));
+  });
+
+  describe('internal comparator for numbers: compareNumberNormal', () => {
+    it('undefined undefined', () => {
+      expect(compareNumberNormal(undefined, undefined)).toBeFalsy();
+    });
+    it('undefined 12', () => {
+      expect(compareNumberNormal(undefined, 12)).toBeFalsy();
+    });
+    it('12 undefined', () => {
+      expect(compareNumberNormal(12, undefined)).toBeTruthy();
+    });
+    it('12 10', () => {
+      expect(compareNumberNormal(12, 10)).toBeFalsy();
+    });
+    it('10 12', () => {
+      expect(compareNumberNormal(10, 12)).toBeTruthy();
+    });
+    it('undefined 0', () => {
+      expect(compareNumberNormal(undefined, 0)).toBeFalsy();
+    });
+    it('0 undefined', () => {
+      expect(compareNumberNormal(0, undefined)).toBeTruthy();
+    });
+    it('10 0', () => {
+      expect(compareNumberNormal(10, 0)).toBeFalsy();
+    });
+    it('0 10', () => {
+      expect(compareNumberNormal(0, 10)).toBeTruthy();
+    });
+    it('0 0', () => {
+      expect(compareNumberNormal(0, 0)).toBeFalsy();
+    });
+    it('10 10', () => {
+      expect(compareNumberNormal(10, 10)).toBeFalsy();
+    });
+
+    it('0 -10', () => {
+      expect(compareNumberNormal(0, -10)).toBeFalsy();
+    });
+
+    it('-10 0', () => {
+      expect(compareNumberNormal(-10, 0)).toBeTruthy();
+    });
   });
 });
