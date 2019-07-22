@@ -74,6 +74,11 @@ const TextFieldWrapper = styled(StackPanel)`
 `;
 
 const TextFieldArea = styled.textarea<TextFieldAreaProps>`
+  ::-ms-clear { display: none; }
+  
+  white-space: pre-wrap;
+  word-break: break-all;
+
   ${getFontSize('medium')}
   color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text2))};
   border-radius: 0;

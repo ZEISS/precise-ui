@@ -6,6 +6,7 @@
 - Fixed overview pagination elements' layout in IE 11
 - Fixed display of label, placeholder and info on AutocompleteTagBuilder 
 - Fixed toaster action click area
+- Fixed two cross(clear) buttons displayed inside TextField in IE 11
 
 ## 0.6.2
 
