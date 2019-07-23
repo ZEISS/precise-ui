@@ -126,9 +126,26 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
 
     if (groupBy) {
       if (group === noValueGroupLabel) {
-        return data.filter(m => !m[groupBy]);
+        return data.filter(m => {
+          const value = m[groupBy];
+
+          return !value || (Array.isArray(value) && value.length === 0);
+        });
       } else {
-        return data.filter(m => m[groupBy] === group);
+        return data.filter(m => {
+          const value = m[groupBy];
+
+          if (value === group) {
+            return true;
+          } else {
+            // special handling for arrays is needed because '===' doesn't work for arrays
+            if (Array.isArray(value) && Array.isArray(group)) {
+              return value.toString() && group.toString();
+            } else {
+              return false;
+            }
+          }
+        });
       }
     }
 
@@ -197,16 +214,40 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
     );
   }
 
+  private getGroupByValue = (rowData: any) => {
+    const { groupBy, noValueGroupLabel } = this.props;
+
+    if (groupBy) {
+      const rowValue = rowData[groupBy];
+      if (rowValue) {
+        if (Array.isArray(rowValue) && rowValue.length === 0) {
+          return noValueGroupLabel;
+        } else {
+          return rowValue;
+        }
+      } else {
+        return noValueGroupLabel;
+      }
+    }
+
+    return undefined;
+  };
+
   private rowRenderer = ({ cells, index, data, key, state }: TableRowEvent<T>) => {
     const { detailsRenderer, rowRenderer, theme, arrowToggle, groupBy, noValueGroupLabel } = this.props;
     const { selectedIndex, expandedGroups } = this.state;
     const { groupedRows = [] } = state;
     const active = hasIndex(selectedIndex, index);
     const count = React.Children.count(cells);
-    const col = groupBy && (data[groupBy] ? data[groupBy] : noValueGroupLabel);
+    const col = this.getGroupByValue(data);
     const open = !col || expandedGroups.indexOf(col) !== -1;
     const renderData = { cells, index, data, active, key, state };
-    const isNewGroup = col && groupedRows.indexOf(col) === -1;
+    // const isNewGroup = col && groupedRows.indexOf(col) === -1;
+    const isNewGroup =
+      col &&
+      // if col is an array we need special handling to find it in the groupedRows
+      // because 'indexOf' is using strict equalty (===) internally which doesn't work for arrays
+      (Array.isArray(col) ? JSON.stringify(groupedRows).indexOf(JSON.stringify(col)) : groupedRows.indexOf(col)) === -1;
 
     if (isNewGroup) {
       state.groupedRows = [...groupedRows, col];

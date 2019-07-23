@@ -6,6 +6,28 @@ function compareGeneralReverse(a: any, b: any) {
   return b < a;
 }
 
+export function compareArrayNormal(a: Array<any> | undefined, b: Array<any> | undefined) {
+  // treat empty array like undefined
+  const aIsUndefined = !a || a.length === 0;
+  const bIsUndefined = !b || b.length === 0;
+
+  if (aIsUndefined && bIsUndefined) {
+    return false;
+  } else {
+    if (aIsUndefined) {
+      return false;
+    } else if (bIsUndefined) {
+      return true;
+    } else {
+      return !!a && !!b && a < b; // double checking for not undefined is needed to satisfy typescript
+    }
+  }
+}
+
+function compareArrayReverse(a: Array<any> | undefined, b: Array<any> | undefined) {
+  return compareArrayNormal(b, a);
+}
+
 function compareStringNormal(a: string | undefined, b: string | undefined) {
   if (!a && !b) {
     return false;
@@ -58,13 +80,17 @@ function compareNumberReverse(a: number | undefined, b: number | undefined): boo
   return compareNumberNormal(b, a);
 }
 
-function getComparer(type: string, reverse: boolean): (a: any, b: any) => boolean {
-  if (type === 'string') {
+function getComparer(exampleValue: any, reverse: boolean): (a: any, b: any) => boolean {
+  if (typeof exampleValue === 'string') {
     return reverse ? compareStringReverse : compareStringNormal;
   }
 
-  if (type === 'number') {
+  if (typeof exampleValue === 'number') {
     return reverse ? compareNumberReverse : compareNumberNormal;
+  }
+
+  if (Array.isArray(exampleValue)) {
+    return reverse ? compareArrayReverse : compareArrayNormal;
   }
 
   return reverse ? compareGeneralReverse : compareGeneralNormal;
@@ -77,8 +103,7 @@ function sorter<T extends {}>(indices: Array<number>, items: Array<T>, key: keyo
   if (n > 1) {
     const firstNonFalsyValue = values.find(item => !!item);
 
-    const type = typeof firstNonFalsyValue;
-    const comparer = getComparer(type, reverse);
+    const comparer = getComparer(firstNonFalsyValue, reverse);
 
     for (let i = 1; i < n; i++) {
       for (let j = 0; j < i; j++) {
