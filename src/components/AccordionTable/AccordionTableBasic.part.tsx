@@ -89,7 +89,7 @@ function defaultGroupRenderer<T>(e: AccordionGroupRenderEvent<T>): React.ReactCh
 export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<T>, AccordionTableBasicState> {
   static defaultProps = {
     multiple: false,
-    noValueGroupLabel: '-',
+    noValueGroupLabel: '—',
   };
 
   constructor(props: AccordionTableProps<T>) {

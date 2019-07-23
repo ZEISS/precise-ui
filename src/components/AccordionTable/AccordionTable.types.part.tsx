@@ -111,7 +111,7 @@ export interface AccordionTableProps<T> extends TableProps<T>, AccordionCardLabe
 
   /**
    * A label to be used for the group of those items which have no value for the 'groupBy' column.
-   * Default value is `-`.
+   * Default value is `—`.
    */
   noValueGroupLabel?: string;
 }

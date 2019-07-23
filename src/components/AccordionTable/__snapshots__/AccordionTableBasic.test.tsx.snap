@@ -6,7 +6,7 @@ exports[`<AccordionTableBasic /> should render a <AccordionTable> component with
   columns={Object {}}
   data={Array []}
   mode="table"
-  noValueGroupLabel="-"
+  noValueGroupLabel="—"
   placeholder="No data"
   rowRenderer={[Function]}
 />
@@ -52,7 +52,7 @@ exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component
     ]
   }
   mode="table"
-  noValueGroupLabel="-"
+  noValueGroupLabel="—"
   rowRenderer={[Function]}
   selectedIndex={1}
 />
@@ -93,7 +93,7 @@ exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component
     ]
   }
   mode="table"
-  noValueGroupLabel="-"
+  noValueGroupLabel="—"
   rowRenderer={[Function]}
 />
 `;
@@ -122,7 +122,7 @@ exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component
     ]
   }
   mode="table"
-  noValueGroupLabel="-"
+  noValueGroupLabel="—"
   rowRenderer={[Function]}
 />
 `;
@@ -151,7 +151,7 @@ exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component
     ]
   }
   mode="table"
-  noValueGroupLabel="-"
+  noValueGroupLabel="—"
   rowRenderer={[Function]}
   sortBy="c"
 />
@@ -182,7 +182,7 @@ exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component
     ]
   }
   mode="table"
-  noValueGroupLabel="-"
+  noValueGroupLabel="—"
   rowRenderer={[Function]}
 />
 `;
@@ -193,7 +193,7 @@ exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component
   columns={Object {}}
   data={Array []}
   mode="table"
-  noValueGroupLabel="-"
+  noValueGroupLabel="—"
   placeholder="No data"
   rowRenderer={[Function]}
 />
@@ -224,7 +224,7 @@ exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component
   }
   mode="table"
   noHeader={true}
-  noValueGroupLabel="-"
+  noValueGroupLabel="—"
   rowRenderer={[Function]}
 />
 `;

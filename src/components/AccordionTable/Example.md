@@ -363,7 +363,7 @@ class GroupTable extends React.Component {
 ```
 
 If some of the items don't have a value set for the `groupBy` column, those items will be put in a separate group.
-By default this group has a label of `-` which can also be changed with the `noValueGroupLabel` prop.
+By default this group has a label of `—` which can also be changed with the `noValueGroupLabel` prop.
 
 ```
 const data = [
