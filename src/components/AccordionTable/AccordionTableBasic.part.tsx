@@ -129,7 +129,13 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
         return data.filter(m => {
           const value = m[groupBy];
 
-          return !value || (Array.isArray(value) && value.length === 0);
+          // the number '0' shouldn't be in the no-value-group.
+          if (typeof value === 'number' && value === 0) {
+            return false;
+          } else {
+            // empty arrays should be in the no-value-group
+            return !value || (Array.isArray(value) && value.length === 0);
+          }
         });
       } else {
         return data.filter(m => {
@@ -219,7 +225,7 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
 
     if (groupBy) {
       const rowValue = rowData[groupBy];
-      if (rowValue) {
+      if (rowValue || rowValue === 0) {
         if (Array.isArray(rowValue) && rowValue.length === 0) {
           return noValueGroupLabel;
         } else {
@@ -234,17 +240,17 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
   };
 
   private rowRenderer = ({ cells, index, data, key, state }: TableRowEvent<T>) => {
-    const { detailsRenderer, rowRenderer, theme, arrowToggle, groupBy, noValueGroupLabel } = this.props;
+    const { detailsRenderer, rowRenderer, theme, arrowToggle } = this.props;
     const { selectedIndex, expandedGroups } = this.state;
     const { groupedRows = [] } = state;
     const active = hasIndex(selectedIndex, index);
     const count = React.Children.count(cells);
     const col = this.getGroupByValue(data);
-    const open = !col || expandedGroups.indexOf(col) !== -1;
+    const open = !(col || col === 0) || expandedGroups.indexOf(col) !== -1;
     const renderData = { cells, index, data, active, key, state };
     // const isNewGroup = col && groupedRows.indexOf(col) === -1;
     const isNewGroup =
-      col &&
+      (col || col === 0) &&
       // if col is an array we need special handling to find it in the groupedRows
       // because 'indexOf' is using strict equalty (===) internally which doesn't work for arrays
       (Array.isArray(col) ? JSON.stringify(groupedRows).indexOf(JSON.stringify(col)) : groupedRows.indexOf(col)) === -1;
