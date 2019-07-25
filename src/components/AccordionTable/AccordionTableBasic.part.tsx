@@ -248,7 +248,7 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
     const col = this.getGroupByValue(data);
     const open = !(col || col === 0) || expandedGroups.indexOf(col) !== -1;
     const renderData = { cells, index, data, active, key, state };
-    // const isNewGroup = col && groupedRows.indexOf(col) === -1;
+
     const isNewGroup =
       (col || col === 0) &&
       // if col is an array we need special handling to find it in the groupedRows
