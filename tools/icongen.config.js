@@ -68,6 +68,7 @@ module.exports = {
     'ic_menu_24px.svg',
     'ic_more_horiz_24px.svg',
     'ic_more_vert_24px.svg',
+    'ic_my_location_24px.svg',
     'ic_notifications_24px.svg',
     'ic_pageview_24px.svg',
     'ic_person_24px.svg',
