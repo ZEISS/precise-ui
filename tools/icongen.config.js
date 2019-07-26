@@ -39,6 +39,7 @@ module.exports = {
     'ic_email_24px.svg',
     'ic_error_24px.svg',
     'ic_event_24px.svg',
+    'ic_exit_to_app_24px.svg',
     'ic_favorite_24px.svg',
     'ic_favorite_border_24px.svg',
     'ic_feedback_24px.svg',
