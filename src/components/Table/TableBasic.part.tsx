@@ -1,7 +1,6 @@
 import * as React from 'react';
 import memoize from 'memoize-one';
 import styled, { themed, css } from '../../utils/styled';
-import { remCalc } from '../../utils/remCalc';
 import { sortObjectList } from '../../utils/sort';
 import { distance } from '../../distance';
 import { RefProps, StandardProps } from '../../common';
@@ -15,7 +14,7 @@ import {
   StyledTableFoot,
   defaultBodyRenderer,
   getColumns,
-  defaultHeaderCellRenderer,
+  getDefaultHeaderCellRenderer,
 } from './TableShared.part';
 
 import { getFontStyle } from '../../textStyles';
@@ -202,6 +201,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
   }
 
   private defaultHeadRenderer = ({ columns, sortBy, keys }: TableSectionRenderEvent<T>) => {
+    const defaultHeaderCellRenderer = getDefaultHeaderCellRenderer({ setState: this.setState.bind(this) });
     const { indexed, theme, headerCellRenderer = defaultHeaderCellRenderer } = this.props;
 
     return (
