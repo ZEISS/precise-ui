@@ -176,6 +176,20 @@ export const Event = <SvgIconConstructor>function(props: SvgIconProps) {
 Event.displayName = 'Event';
 Event.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const ExitToApp = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z',
+    }),
+  );
+};
+
+ExitToApp.displayName = 'ExitToApp';
+ExitToApp.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Favorite = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -906,6 +920,20 @@ export const FilterNone = <SvgIconConstructor>function(props: SvgIconProps) {
 
 FilterNone.displayName = 'FilterNone';
 FilterNone.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const MyLocation = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z',
+    }),
+  );
+};
+
+MyLocation.displayName = 'MyLocation';
+MyLocation.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Place = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(

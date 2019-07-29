@@ -80,6 +80,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render ExitToApp icon', () => {
+    const Component = icons.ExitToApp;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Favorite icon', () => {
     const Component = icons.Favorite;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -424,6 +430,12 @@ describe('Generated icons', () => {
 
   it('should render FilterNone icon', () => {
     const Component = icons.FilterNone;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render MyLocation icon', () => {
+    const Component = icons.MyLocation;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
