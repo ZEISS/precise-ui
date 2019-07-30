@@ -30,7 +30,7 @@ const IncreaseDecreaseArrow = styled.div<{ active?: boolean }>`
 `;
 
 const getBorderStyle = (position: 'top' | 'bottom', active = false) => css`
-border-${position}: 4px solid ${themed(({ theme }) => (active ? theme.ui5 : theme.ui4))};
+  border-${position}: 4px solid ${themed(({ theme }) => (active ? theme.ui5 : theme.ui4))};
 `;
 
 const IncreaseDecreaseArrowUp = styled(IncreaseDecreaseArrow)`
