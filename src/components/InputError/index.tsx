@@ -15,7 +15,7 @@ const StyledError = styled('div')<InputErrorProps>`
   ${getFontStyle({ size: 'xSmall' })}
   color: ${themed(props => props.theme.inputError)};
 
-  padding: ${distance.xsmall} 0;
+  padding: ${distance.xsmall} ${distance.medium};
 `;
 
 /**
