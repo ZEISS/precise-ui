@@ -1,6 +1,151 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Pagination /> should be able to use a custom host 1`] = `
+.c6 {
+  display: inline-block;
+}
+
+.c6 > svg {
+  float: left;
+}
+
+.c9 {
+  position: relative;
+  outline: none;
+}
+
+.c7 {
+  color: rgba(0,139,208,1);
+}
+
+.c7:hover {
+  color: rgba(106,176,226,1);
+}
+
+.c8 {
+  padding-left: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.c10 {
+  position: absolute;
+  border: solid 1px #dfe3e6;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  background: rgba(255,255,255,1);
+  border: 1px solid #dfe3e6;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c3 {
+  width: auto;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.c5 {
+  font-size: 1.5rem;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  line-height: 1.75rem;
+  position: relative;
+  cursor: not-allowed;
+  outline: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent;
+  border: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  color: rgba(77,79,83,1);
+}
+
+.c5:before,
+.c5:after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background: #dfe3e6;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 100%;
+}
+
+.c5:after {
+  right: 0;
+  left: auto;
+}
+
+.c5:last-child {
+  margin-right: 0;
+}
+
+.c5:last-child:after {
+  display: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-left: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+}
+
+.c0 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: rgba(64,64,64,1);
+}
+
 <Pagination
   host={[Function]}
 >
@@ -34,9 +179,9 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-hMqMXs",
+              "componentId": "sc-kEYyzF",
               "isStatic": true,
-              "lastClassName": "bmmnLa",
+              "lastClassName": "c0",
               "rules": Array [
                 "
   ",
@@ -63,7 +208,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-hMqMXs",
+            "styledComponentId": "sc-kEYyzF",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -73,7 +218,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
         forwardedRef={null}
       >
         <div
-          className="sc-hMqMXs bmmnLa"
+          className="c0"
         >
           <host>
             <ul>
@@ -103,9 +248,9 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-eNQAEJ",
+                      "componentId": "sc-hMqMXs",
                       "isStatic": true,
-                      "lastClassName": "eBTFJE",
+                      "lastClassName": "c1",
                       "rules": Array [
                         "
   display: flex;
@@ -119,7 +264,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-eNQAEJ",
+                    "styledComponentId": "sc-hMqMXs",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -129,7 +274,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="sc-eNQAEJ eBTFJE"
+                  className="c1"
                 >
                   <Component
                     changeToNext={[Function]}
@@ -150,9 +295,9 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-ckVGcZ",
+                              "componentId": "sc-jKJlTe",
                               "isStatic": true,
-                              "lastClassName": "griOHA",
+                              "lastClassName": "c2",
                               "rules": Array [
                                 "
   display: flex;
@@ -164,7 +309,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-ckVGcZ",
+                            "styledComponentId": "sc-jKJlTe",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -174,50 +319,84 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                         forwardedRef={null}
                       >
                         <div
-                          className="sc-ckVGcZ griOHA"
+                          className="c2"
                         >
-                          <Container>
-                            <styled.div
-                              align="center"
-                            >
-                              <StyledComponent
-                                align="center"
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-dxgOiQ",
-                                      "isStatic": false,
-                                      "lastClassName": "frZHhL",
-                                      "rules": Array [
-                                        "
-  ",
-                                        [Function],
-                                        ";
+                          <Styled(Container)>
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-ckVGcZ",
+                                    "isStatic": true,
+                                    "lastClassName": "c3",
+                                    "rules": Array [
+                                      "
+  width: auto;
 ",
-                                      ],
-                                    },
-                                    "displayName": "styled.div",
-                                    "foldedComponentIds": Array [],
-                                    "render": [Function],
-                                    "styledComponentId": "sc-dxgOiQ",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
+                                    ],
+                                  },
+                                  "displayName": "Styled(Container)",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-ckVGcZ",
+                                  "target": [Function],
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
                                 }
-                                forwardedRef={null}
+                              }
+                              forwardedRef={null}
+                            >
+                              <Container
+                                className="c3"
                               >
-                                <div
-                                  className="sc-dxgOiQ frZHhL"
+                                <styled.div
+                                  align="center"
+                                  className="c3"
                                 >
-                                  1 of 1 pages
-                                </div>
-                              </StyledComponent>
-                            </styled.div>
-                          </Container>
+                                  <StyledComponent
+                                    align="center"
+                                    className="c3"
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-dxgOiQ",
+                                          "isStatic": false,
+                                          "lastClassName": "c4",
+                                          "rules": Array [
+                                            "
+  ",
+                                            [Function],
+                                            ";
+",
+                                          ],
+                                        },
+                                        "displayName": "styled.div",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-dxgOiQ",
+                                        "target": "div",
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                  >
+                                    <div
+                                      className="c3 c4"
+                                    >
+                                      1 of 1 pages
+                                    </div>
+                                  </StyledComponent>
+                                </styled.div>
+                              </Container>
+                            </StyledComponent>
+                          </Styled(Container)>
                           <styled.button
                             disabled={true}
                             onClick={[Function]}
@@ -230,9 +409,9 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-jKJlTe",
+                                    "componentId": "sc-eNQAEJ",
                                     "isStatic": false,
-                                    "lastClassName": "bKuqvi",
+                                    "lastClassName": "c5",
                                     "rules": Array [
                                       "
   ",
@@ -297,7 +476,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                   "displayName": "styled.button",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-jKJlTe",
+                                  "styledComponentId": "sc-eNQAEJ",
                                   "target": "button",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -309,7 +488,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                               type="button"
                             >
                               <button
-                                className="sc-jKJlTe bKuqvi"
+                                className="c5"
                                 disabled={true}
                                 onClick={[Function]}
                                 type="button"
@@ -326,7 +505,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bdVaJa",
                                             "isStatic": true,
-                                            "lastClassName": "cIqOZO",
+                                            "lastClassName": "c6",
                                             "rules": Array [
                                               "
   display: inline-block;
@@ -350,7 +529,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                       forwardedRef={null}
                                     >
                                       <i
-                                        className="sc-bdVaJa cIqOZO"
+                                        className="c6"
                                       >
                                         <KeyboardArrowLeft
                                           height="1em"
@@ -454,7 +633,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kAzzGY",
                                         "isStatic": true,
-                                        "lastClassName": "dyRsxz",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "
   color: ",
@@ -484,7 +663,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                   stopPropagation={false}
                                 >
                                   <div
-                                    className="sc-kAzzGY dyRsxz"
+                                    className="c7"
                                   >
                                     <styled.div
                                       onMouseDown={[Function]}
@@ -497,7 +676,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-chPdSV",
                                               "isStatic": true,
-                                              "lastClassName": "irvcZR",
+                                              "lastClassName": "c8",
                                               "rules": Array [
                                                 "
   padding-left: ",
@@ -523,7 +702,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                         onMouseDown={[Function]}
                                       >
                                         <div
-                                          className="sc-chPdSV irvcZR"
+                                          className="c8"
                                           onMouseDown={[Function]}
                                         >
                                           1
@@ -540,7 +719,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "sc-bdVaJa",
                                                       "isStatic": true,
-                                                      "lastClassName": "cIqOZO",
+                                                      "lastClassName": "c6",
                                                       "rules": Array [
                                                         "
   display: inline-block;
@@ -564,7 +743,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                                 forwardedRef={null}
                                               >
                                                 <i
-                                                  className="sc-bdVaJa cIqOZO"
+                                                  className="c6"
                                                 >
                                                   <ArrowDropDown
                                                     height="1.5em"
@@ -689,7 +868,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-htoDjs",
                                                   "isStatic": true,
-                                                  "lastClassName": "fJTDDB",
+                                                  "lastClassName": "c9",
                                                   "rules": Array [
                                                     "
   position: relative;
@@ -717,7 +896,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                           >
                                             <div
                                               autoFocus={true}
-                                              className="sc-htoDjs fJTDDB"
+                                              className="c9"
                                               onKeyDown={[Function]}
                                               value="1"
                                             >
@@ -741,7 +920,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-kgoBCf",
                                                           "isStatic": false,
-                                                          "lastClassName": "jMucZi",
+                                                          "lastClassName": "c10",
                                                           "rules": Array [
                                                             "
   position: absolute;
@@ -778,7 +957,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                                     open={false}
                                                   >
                                                     <div
-                                                      className="sc-kgoBCf jMucZi"
+                                                      className="c10"
                                                       direction={0}
                                                       open={false}
                                                     />
@@ -807,9 +986,9 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-jKJlTe",
+                                    "componentId": "sc-eNQAEJ",
                                     "isStatic": false,
-                                    "lastClassName": "bKuqvi",
+                                    "lastClassName": "c5",
                                     "rules": Array [
                                       "
   ",
@@ -874,7 +1053,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                   "displayName": "styled.button",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-jKJlTe",
+                                  "styledComponentId": "sc-eNQAEJ",
                                   "target": "button",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -886,7 +1065,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                               type="button"
                             >
                               <button
-                                className="sc-jKJlTe bKuqvi"
+                                className="c5"
                                 disabled={true}
                                 onClick={[Function]}
                                 type="button"
@@ -903,7 +1082,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bdVaJa",
                                             "isStatic": true,
-                                            "lastClassName": "cIqOZO",
+                                            "lastClassName": "c6",
                                             "rules": Array [
                                               "
   display: inline-block;
@@ -927,7 +1106,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                       forwardedRef={null}
                                     >
                                       <i
-                                        className="sc-bdVaJa cIqOZO"
+                                        className="c6"
                                       >
                                         <KeyboardArrowRight
                                           height="1em"
@@ -979,6 +1158,151 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
 `;
 
 exports[`<Pagination /> should be able to use an in-built host 1`] = `
+.c6 {
+  display: inline-block;
+}
+
+.c6 > svg {
+  float: left;
+}
+
+.c9 {
+  position: relative;
+  outline: none;
+}
+
+.c7 {
+  color: rgba(0,139,208,1);
+}
+
+.c7:hover {
+  color: rgba(106,176,226,1);
+}
+
+.c8 {
+  padding-left: 0.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.c10 {
+  position: absolute;
+  border: solid 1px #dfe3e6;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  position: absolute;
+  z-index: 2;
+  top: 8px;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  background: rgba(255,255,255,1);
+  border: 1px solid #dfe3e6;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.c4 {
+  width: 100%;
+}
+
+.c3 {
+  width: auto;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.c5 {
+  font-size: 1.5rem;
+  -webkit-letter-spacing: 0.5px;
+  -moz-letter-spacing: 0.5px;
+  -ms-letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  line-height: 1.75rem;
+  position: relative;
+  cursor: not-allowed;
+  outline: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background: transparent;
+  border: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  color: rgba(77,79,83,1);
+}
+
+.c5:before,
+.c5:after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  background: #dfe3e6;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 100%;
+}
+
+.c5:after {
+  right: 0;
+  left: auto;
+}
+
+.c5:last-child {
+  margin-right: 0;
+}
+
+.c5:last-child:after {
+  display: none;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-left: auto;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 40px;
+}
+
+.c0 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  color: rgba(64,64,64,1);
+}
+
 <Pagination
   host="ul"
 >
@@ -1012,9 +1336,9 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "sc-hMqMXs",
+              "componentId": "sc-kEYyzF",
               "isStatic": true,
-              "lastClassName": "bmmnLa",
+              "lastClassName": "c0",
               "rules": Array [
                 "
   ",
@@ -1041,7 +1365,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
             "displayName": "styled.div",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "sc-hMqMXs",
+            "styledComponentId": "sc-kEYyzF",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -1051,7 +1375,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
         forwardedRef={null}
       >
         <div
-          className="sc-hMqMXs bmmnLa"
+          className="c0"
         >
           <ul>
             <li>
@@ -1076,9 +1400,9 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-eNQAEJ",
+                      "componentId": "sc-hMqMXs",
                       "isStatic": true,
-                      "lastClassName": "eBTFJE",
+                      "lastClassName": "c1",
                       "rules": Array [
                         "
   display: flex;
@@ -1092,7 +1416,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                     "displayName": "styled.div",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-eNQAEJ",
+                    "styledComponentId": "sc-hMqMXs",
                     "target": "div",
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -1102,7 +1426,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                 forwardedRef={null}
               >
                 <div
-                  className="sc-eNQAEJ eBTFJE"
+                  className="c1"
                 >
                   <Component
                     changeToNext={[Function]}
@@ -1123,9 +1447,9 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-ckVGcZ",
+                              "componentId": "sc-jKJlTe",
                               "isStatic": true,
-                              "lastClassName": "griOHA",
+                              "lastClassName": "c2",
                               "rules": Array [
                                 "
   display: flex;
@@ -1137,7 +1461,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-ckVGcZ",
+                            "styledComponentId": "sc-jKJlTe",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -1147,50 +1471,84 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                         forwardedRef={null}
                       >
                         <div
-                          className="sc-ckVGcZ griOHA"
+                          className="c2"
                         >
-                          <Container>
-                            <styled.div
-                              align="center"
-                            >
-                              <StyledComponent
-                                align="center"
-                                forwardedComponent={
-                                  Object {
-                                    "$$typeof": Symbol(react.forward_ref),
-                                    "attrs": Array [],
-                                    "componentStyle": ComponentStyle {
-                                      "componentId": "sc-dxgOiQ",
-                                      "isStatic": false,
-                                      "lastClassName": "frZHhL",
-                                      "rules": Array [
-                                        "
-  ",
-                                        [Function],
-                                        ";
+                          <Styled(Container)>
+                            <StyledComponent
+                              forwardedComponent={
+                                Object {
+                                  "$$typeof": Symbol(react.forward_ref),
+                                  "attrs": Array [],
+                                  "componentStyle": ComponentStyle {
+                                    "componentId": "sc-ckVGcZ",
+                                    "isStatic": true,
+                                    "lastClassName": "c3",
+                                    "rules": Array [
+                                      "
+  width: auto;
 ",
-                                      ],
-                                    },
-                                    "displayName": "styled.div",
-                                    "foldedComponentIds": Array [],
-                                    "render": [Function],
-                                    "styledComponentId": "sc-dxgOiQ",
-                                    "target": "div",
-                                    "toString": [Function],
-                                    "warnTooManyClasses": [Function],
-                                    "withComponent": [Function],
-                                  }
+                                    ],
+                                  },
+                                  "displayName": "Styled(Container)",
+                                  "foldedComponentIds": Array [],
+                                  "render": [Function],
+                                  "styledComponentId": "sc-ckVGcZ",
+                                  "target": [Function],
+                                  "toString": [Function],
+                                  "warnTooManyClasses": [Function],
+                                  "withComponent": [Function],
                                 }
-                                forwardedRef={null}
+                              }
+                              forwardedRef={null}
+                            >
+                              <Container
+                                className="c3"
                               >
-                                <div
-                                  className="sc-dxgOiQ frZHhL"
+                                <styled.div
+                                  align="center"
+                                  className="c3"
                                 >
-                                  1 of 1 pages
-                                </div>
-                              </StyledComponent>
-                            </styled.div>
-                          </Container>
+                                  <StyledComponent
+                                    align="center"
+                                    className="c3"
+                                    forwardedComponent={
+                                      Object {
+                                        "$$typeof": Symbol(react.forward_ref),
+                                        "attrs": Array [],
+                                        "componentStyle": ComponentStyle {
+                                          "componentId": "sc-dxgOiQ",
+                                          "isStatic": false,
+                                          "lastClassName": "c4",
+                                          "rules": Array [
+                                            "
+  ",
+                                            [Function],
+                                            ";
+",
+                                          ],
+                                        },
+                                        "displayName": "styled.div",
+                                        "foldedComponentIds": Array [],
+                                        "render": [Function],
+                                        "styledComponentId": "sc-dxgOiQ",
+                                        "target": "div",
+                                        "toString": [Function],
+                                        "warnTooManyClasses": [Function],
+                                        "withComponent": [Function],
+                                      }
+                                    }
+                                    forwardedRef={null}
+                                  >
+                                    <div
+                                      className="c3 c4"
+                                    >
+                                      1 of 1 pages
+                                    </div>
+                                  </StyledComponent>
+                                </styled.div>
+                              </Container>
+                            </StyledComponent>
+                          </Styled(Container)>
                           <styled.button
                             disabled={true}
                             onClick={[Function]}
@@ -1203,9 +1561,9 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-jKJlTe",
+                                    "componentId": "sc-eNQAEJ",
                                     "isStatic": false,
-                                    "lastClassName": "bKuqvi",
+                                    "lastClassName": "c5",
                                     "rules": Array [
                                       "
   ",
@@ -1270,7 +1628,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                   "displayName": "styled.button",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-jKJlTe",
+                                  "styledComponentId": "sc-eNQAEJ",
                                   "target": "button",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -1282,7 +1640,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                               type="button"
                             >
                               <button
-                                className="sc-jKJlTe bKuqvi"
+                                className="c5"
                                 disabled={true}
                                 onClick={[Function]}
                                 type="button"
@@ -1299,7 +1657,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bdVaJa",
                                             "isStatic": true,
-                                            "lastClassName": "cIqOZO",
+                                            "lastClassName": "c6",
                                             "rules": Array [
                                               "
   display: inline-block;
@@ -1323,7 +1681,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                       forwardedRef={null}
                                     >
                                       <i
-                                        className="sc-bdVaJa cIqOZO"
+                                        className="c6"
                                       >
                                         <KeyboardArrowLeft
                                           height="1em"
@@ -1427,7 +1785,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kAzzGY",
                                         "isStatic": true,
-                                        "lastClassName": "dyRsxz",
+                                        "lastClassName": "c7",
                                         "rules": Array [
                                           "
   color: ",
@@ -1457,7 +1815,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                   stopPropagation={false}
                                 >
                                   <div
-                                    className="sc-kAzzGY dyRsxz"
+                                    className="c7"
                                   >
                                     <styled.div
                                       onMouseDown={[Function]}
@@ -1470,7 +1828,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-chPdSV",
                                               "isStatic": true,
-                                              "lastClassName": "irvcZR",
+                                              "lastClassName": "c8",
                                               "rules": Array [
                                                 "
   padding-left: ",
@@ -1496,7 +1854,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                         onMouseDown={[Function]}
                                       >
                                         <div
-                                          className="sc-chPdSV irvcZR"
+                                          className="c8"
                                           onMouseDown={[Function]}
                                         >
                                           1
@@ -1513,7 +1871,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "sc-bdVaJa",
                                                       "isStatic": true,
-                                                      "lastClassName": "cIqOZO",
+                                                      "lastClassName": "c6",
                                                       "rules": Array [
                                                         "
   display: inline-block;
@@ -1537,7 +1895,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                                 forwardedRef={null}
                                               >
                                                 <i
-                                                  className="sc-bdVaJa cIqOZO"
+                                                  className="c6"
                                                 >
                                                   <ArrowDropDown
                                                     height="1.5em"
@@ -1662,7 +2020,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-htoDjs",
                                                   "isStatic": true,
-                                                  "lastClassName": "fJTDDB",
+                                                  "lastClassName": "c9",
                                                   "rules": Array [
                                                     "
   position: relative;
@@ -1690,7 +2048,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                           >
                                             <div
                                               autoFocus={true}
-                                              className="sc-htoDjs fJTDDB"
+                                              className="c9"
                                               onKeyDown={[Function]}
                                               value="1"
                                             >
@@ -1714,7 +2072,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-kgoBCf",
                                                           "isStatic": false,
-                                                          "lastClassName": "jMucZi",
+                                                          "lastClassName": "c10",
                                                           "rules": Array [
                                                             "
   position: absolute;
@@ -1751,7 +2109,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                                     open={false}
                                                   >
                                                     <div
-                                                      className="sc-kgoBCf jMucZi"
+                                                      className="c10"
                                                       direction={0}
                                                       open={false}
                                                     />
@@ -1780,9 +2138,9 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "sc-jKJlTe",
+                                    "componentId": "sc-eNQAEJ",
                                     "isStatic": false,
-                                    "lastClassName": "bKuqvi",
+                                    "lastClassName": "c5",
                                     "rules": Array [
                                       "
   ",
@@ -1847,7 +2205,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                   "displayName": "styled.button",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "sc-jKJlTe",
+                                  "styledComponentId": "sc-eNQAEJ",
                                   "target": "button",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -1859,7 +2217,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                               type="button"
                             >
                               <button
-                                className="sc-jKJlTe bKuqvi"
+                                className="c5"
                                 disabled={true}
                                 onClick={[Function]}
                                 type="button"
@@ -1876,7 +2234,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bdVaJa",
                                             "isStatic": true,
-                                            "lastClassName": "cIqOZO",
+                                            "lastClassName": "c6",
                                             "rules": Array [
                                               "
   display: inline-block;
@@ -1900,7 +2258,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                       forwardedRef={null}
                                     >
                                       <i
-                                        className="sc-bdVaJa cIqOZO"
+                                        className="c6"
                                       >
                                         <KeyboardArrowRight
                                           height="1em"

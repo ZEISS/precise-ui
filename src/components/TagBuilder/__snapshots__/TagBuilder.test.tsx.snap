@@ -68,6 +68,7 @@ exports[`<TagBuilderInt /> should render component with error block and default 
           </styled.span>
           <CloseIcon
             onClick={[Function]}
+            onMouseDown={[Function]}
           />
         </Styled(styled.span)>
         <Styled(styled.span)
@@ -78,6 +79,7 @@ exports[`<TagBuilderInt /> should render component with error block and default 
           </styled.span>
           <CloseIcon
             onClick={[Function]}
+            onMouseDown={[Function]}
           />
         </Styled(styled.span)>
         <Styled(styled.span)
@@ -88,6 +90,7 @@ exports[`<TagBuilderInt /> should render component with error block and default 
           </styled.span>
           <CloseIcon
             onClick={[Function]}
+            onMouseDown={[Function]}
           />
         </Styled(styled.span)>
         <Styled(styled.span)
@@ -98,6 +101,7 @@ exports[`<TagBuilderInt /> should render component with error block and default 
           </styled.span>
           <CloseIcon
             onClick={[Function]}
+            onMouseDown={[Function]}
           />
         </Styled(styled.span)>
         <styled.div
@@ -152,6 +156,7 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
           </styled.span>
           <CloseIcon
             onClick={[Function]}
+            onMouseDown={[Function]}
           />
         </Styled(styled.span)>
         <Styled(styled.span)
@@ -162,6 +167,7 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
           </styled.span>
           <CloseIcon
             onClick={[Function]}
+            onMouseDown={[Function]}
           />
         </Styled(styled.span)>
         <Styled(styled.span)
@@ -172,6 +178,7 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
           </styled.span>
           <CloseIcon
             onClick={[Function]}
+            onMouseDown={[Function]}
           />
         </Styled(styled.span)>
         <Styled(styled.span)
@@ -182,6 +189,7 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
           </styled.span>
           <CloseIcon
             onClick={[Function]}
+            onMouseDown={[Function]}
           />
         </Styled(styled.span)>
         <styled.div

@@ -5,12 +5,13 @@ import { Label } from '../Label';
 import { Icon } from '../Icon';
 import { InputProps, InputChangeEvent } from '../../common';
 import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
+import { GroupContextProps, withGroupContext } from '../../hoc/withGroupContext';
 import { showInputInfo } from '../../utils/input';
 import { KeyCodes } from '../../utils/keyCodes';
 
 export type CheckboxChangeEvent = InputChangeEvent<boolean>;
 
-export interface CheckboxProps extends InputProps<boolean> {
+export interface CheckboxProps extends InputProps<boolean>, FormContextProps, GroupContextProps {
   /**
    * The content of the checkbox.
    */
@@ -81,9 +82,12 @@ const FlexContainer = styled.div`
   align-items: center;
 `;
 
-class CheckboxInt extends React.PureComponent<CheckboxProps & FormContextProps, CheckboxState> {
+export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxState> {
+  readonly name?: string;
+
   constructor(props: CheckboxProps) {
     super(props);
+    this.name = props.name;
     this.state = {
       controlled: typeof props.value !== 'undefined',
       value: props.value || props.defaultValue || false,
@@ -91,42 +95,64 @@ class CheckboxInt extends React.PureComponent<CheckboxProps & FormContextProps, 
     };
   }
 
-  componentWillReceiveProps(nextProps: CheckboxProps) {
+  componentWillReceiveProps({ value = false, error }: CheckboxProps) {
     if (this.state.controlled) {
-      this.setState({
-        value: nextProps.value || false,
-        error: nextProps.error,
-      });
+      this.setState({ value });
     }
+    this.setState({ error });
   }
 
   componentDidMount() {
-    const { form } = this.props;
+    const { group, form } = this.props;
     const { controlled } = this.state;
 
-    if (!controlled && form) {
-      form.subscribe(this);
+    if (!controlled) {
+      if (group) {
+        group.subscribe(this);
+      } else if (form) {
+        form.subscribe(this);
+      }
     }
   }
 
   componentWillUnmount() {
-    const { form } = this.props;
+    const { group, form } = this.props;
     const { controlled } = this.state;
 
-    if (!controlled && form) {
-      form.unsubscribe(this);
+    if (!controlled) {
+      if (group) {
+        group.unsubscribe(this);
+      } else if (form) {
+        form.unsubscribe(this);
+      }
     }
   }
 
+  setValue = (value: boolean) => {
+    const { onChange } = this.props;
+
+    this.setState({
+      value,
+    });
+
+    if (typeof onChange === 'function') {
+      onChange({
+        value,
+      });
+    }
+  };
+
   private toggle = () => {
-    const { onChange, disabled, form, name = '' } = this.props;
+    const { onChange, disabled, form, group, name = '' } = this.props;
 
     if (!disabled) {
       const { controlled, value } = this.state;
       const checked = !value;
 
       if (!controlled) {
-        if (form) {
+        if (group) {
+          group.select(this);
+        } else if (form) {
           form.change({
             name,
             value: checked,
@@ -166,7 +192,17 @@ class CheckboxInt extends React.PureComponent<CheckboxProps & FormContextProps, 
   };
 
   render() {
-    const { children, disabled, theme, value: _0, defaultValue: _1, onChange: _2, info, ...props } = this.props;
+    const {
+      children,
+      disabled,
+      theme,
+      value: _0,
+      defaultValue: _1,
+      onChange: _2,
+      onInput: _3,
+      info,
+      ...props
+    } = this.props;
     const { value, error } = this.state;
     const containerProps = {
       ...props,
@@ -204,5 +240,5 @@ class CheckboxInt extends React.PureComponent<CheckboxProps & FormContextProps, 
 /**
  * The checkbox input field.
  */
-export const Checkbox = withFormContext(CheckboxInt);
+export const Checkbox = withFormContext(withGroupContext(CheckboxInt));
 Checkbox.displayName = 'Checkbox';

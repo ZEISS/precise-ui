@@ -211,9 +211,9 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
     };
   }
 
-  componentWillReceiveProps(nextProps: ColorPickerProps) {
-    if (nextProps.value && nextProps.value !== this.state.value) {
-      const { hsv, color, base } = computeColor(nextProps.value || this.state.value);
+  componentWillReceiveProps({ value, error }: ColorPickerProps) {
+    if (value && value !== this.state.value) {
+      const { hsv, color, base } = computeColor(value || this.state.value);
 
       this.setState({
         value: {
@@ -223,10 +223,10 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
           s: hsv.s,
           v: hsv.v,
         },
-        error: nextProps.error,
         base,
       });
     }
+    this.setState({ error });
   }
 
   componentDidMount() {
@@ -346,6 +346,7 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
       defaultValue: _0,
       value: _1,
       onChange: _2,
+      onInput: _3,
       allowOpacity,
       hideBar,
       width = '100%',

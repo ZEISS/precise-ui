@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
-import 'jest-styled-components';
 import { ListItem } from './';
 
 describe('<ListItem />', () => {

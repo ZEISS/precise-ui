@@ -1,4 +1,5 @@
 import { InputChangeEvent, LabeledInputProps } from '../../common';
+import { InteractiveListDirection } from '../InteractiveList';
 
 export interface DropdownFieldToggleEvent {
   state: 'open' | 'close';
@@ -12,7 +13,9 @@ export interface DropdownFieldItem {
   searchText?: string;
   type?: 'item' | 'divider' | 'header';
 }
+
 ``;
+
 export interface DropdownFieldProps extends LabeledInputProps<string | Array<string>> {
   /**
    * @ignore
@@ -29,14 +32,17 @@ export interface DropdownFieldProps extends LabeledInputProps<string | Array<str
    * @default 8
    */
   maxSelectedShown?: number;
+
   /**
    * Fired when the dropdown gets opened or closed.
    */
   onToggle?(e: DropdownFieldToggleEvent): void;
+
   /**
    * Fired once the selected value changes.
    */
   onChange?(e: DropdownFieldChangeEvent): void;
+
   /**
    * The data to be displayed as selection basis.
    */
@@ -46,4 +52,15 @@ export interface DropdownFieldProps extends LabeledInputProps<string | Array<str
    * @default false
    */
   borderless?: boolean;
+
+  /**
+   * Whether to open dropdown list to top or bottom.
+   * If not provided then opens depending on the screen size.
+   */
+  direction?: InteractiveListDirection;
+
+  /**
+   * Allows to open dropdown immediately after initializing.
+   */
+  open?: boolean;
 }

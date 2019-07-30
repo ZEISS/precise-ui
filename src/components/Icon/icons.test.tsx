@@ -80,6 +80,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render ExitToApp icon', () => {
+    const Component = icons.ExitToApp;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Favorite icon', () => {
     const Component = icons.Favorite;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -236,6 +242,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render PlayArrow icon', () => {
+    const Component = icons.PlayArrow;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Replay icon', () => {
     const Component = icons.Replay;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -244,6 +256,12 @@ describe('Generated icons', () => {
 
   it('should render Email icon', () => {
     const Component = icons.Email;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Phone icon', () => {
+    const Component = icons.Phone;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -416,6 +434,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render MyLocation icon', () => {
+    const Component = icons.MyLocation;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Place icon', () => {
     const Component = icons.Place;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -544,6 +568,12 @@ describe('Generated icons', () => {
 
   it('should render Public icon', () => {
     const Component = icons.Public;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Share icon', () => {
+    const Component = icons.Share;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
