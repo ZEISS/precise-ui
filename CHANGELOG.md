@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 0.6.4
+
+ - Fixed `Styled Input Box` flex layout for IE 11
+
 ## 0.6.3
 
 - Hide info element on open Autocomplete list
