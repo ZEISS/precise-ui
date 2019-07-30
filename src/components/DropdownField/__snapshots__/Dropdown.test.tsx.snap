@@ -105,7 +105,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "daEJUQ",
+                        "lastClassName": "cCBZdj",
                         "rules": Array [
                           [Function],
                           "
@@ -131,7 +131,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                   hasValue={true}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl daEJUQ"
+                    className="sc-jzJRlG sc-csuQGl cCBZdj"
                   >
                     <Component
                       error={false}
@@ -737,7 +737,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "YzHwD",
+                        "lastClassName": "khcWyo",
                         "rules": Array [
                           [Function],
                           "
@@ -763,7 +763,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                   hasValue={false}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl YzHwD"
+                    className="sc-jzJRlG sc-csuQGl khcWyo"
                   >
                     <Component
                       error={false}
@@ -1246,7 +1246,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "bYFnfU",
+                        "lastClassName": "bjTHRo",
                         "rules": Array [
                           [Function],
                           "
@@ -1272,7 +1272,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                   hasValue={false}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl bYFnfU"
+                    className="sc-jzJRlG sc-csuQGl bjTHRo"
                   >
                     <Component
                       error={true}
@@ -1924,7 +1924,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "bYFnfU",
+                        "lastClassName": "bjTHRo",
                         "rules": Array [
                           [Function],
                           "
@@ -1950,7 +1950,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                   hasValue={false}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl bYFnfU"
+                    className="sc-jzJRlG sc-csuQGl bjTHRo"
                   >
                     <Component
                       error={true}
@@ -2600,7 +2600,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "daEJUQ",
+                        "lastClassName": "cCBZdj",
                         "rules": Array [
                           [Function],
                           "
@@ -2626,7 +2626,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                   hasValue={true}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl daEJUQ"
+                    className="sc-jzJRlG sc-csuQGl cCBZdj"
                   >
                     <Component
                       error={false}
@@ -3155,7 +3155,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-csuQGl",
                         "isStatic": false,
-                        "lastClassName": "fpBGEI",
+                        "lastClassName": "fGlqwO",
                         "rules": Array [
                           [Function],
                           "
@@ -3181,7 +3181,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                   hasValue={true}
                 >
                   <div
-                    className="sc-jzJRlG sc-csuQGl fpBGEI"
+                    className="sc-jzJRlG sc-csuQGl fGlqwO"
                     disabled={true}
                   >
                     <Component

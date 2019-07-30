@@ -135,7 +135,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-jzJRlG",
                                   "isStatic": false,
-                                  "lastClassName": "gHloTz",
+                                  "lastClassName": "hSeURl",
                                   "rules": Array [
                                     [Function],
                                   ],
@@ -154,7 +154,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                             hasValue={false}
                           >
                             <div
-                              className="sc-jzJRlG gHloTz"
+                              className="sc-jzJRlG hSeURl"
                             >
                               <Component
                                 error={false}
@@ -503,7 +503,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-jzJRlG",
                                   "isStatic": false,
-                                  "lastClassName": "gHloTz",
+                                  "lastClassName": "hSeURl",
                                   "rules": Array [
                                     [Function],
                                   ],
@@ -522,7 +522,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                             hasValue={false}
                           >
                             <div
-                              className="sc-jzJRlG gHloTz"
+                              className="sc-jzJRlG hSeURl"
                             >
                               <Component
                                 error={false}

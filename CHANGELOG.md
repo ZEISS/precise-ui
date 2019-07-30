@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 0.5.2
+
+- Fixed `Styled Input Box` flex layout for IE 11
+
 ## 0.5.1
 
 - `Flyout` fixed compatibility with IE11
