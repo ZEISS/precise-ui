@@ -6390,7 +6390,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
   font-size: 0.75rem;
   line-height: 0.875rem;
   color: rgba(167,2,64,1);
-  padding: 0.25rem 0;
+  padding: 0.25rem 1rem;
 }
 
 .c7 {
@@ -7139,7 +7139,9 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
 
   padding: ",
                       "0.25rem",
-                      " 0;
+                      " ",
+                      "1rem",
+                      ";
 ",
                     ],
                   },
@@ -7174,7 +7176,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
   font-size: 0.75rem;
   line-height: 0.875rem;
   color: rgba(167,2,64,1);
-  padding: 0.25rem 0;
+  padding: 0.25rem 1rem;
 }
 
 .c7 {
@@ -7923,7 +7925,9 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
 
   padding: ",
                       "0.25rem",
-                      " 0;
+                      " ",
+                      "1rem",
+                      ";
 ",
                     ],
                   },

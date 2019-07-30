@@ -5,7 +5,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
   font-size: 0.75rem;
   line-height: 0.875rem;
   color: rgba(114,114,114,1);
-  padding: 0.25rem 0;
+  padding: 0.25rem 1rem;
 }
 
 .c2 {
@@ -491,7 +491,9 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                           ";
   padding: ",
                           "0.25rem",
-                          " 0;
+                          " ",
+                          "1rem",
+                          ";
 ",
                         ],
                       },
@@ -528,7 +530,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
   font-size: 0.75rem;
   line-height: 0.875rem;
   color: rgba(114,114,114,1);
-  padding: 0.25rem 0;
+  padding: 0.25rem 1rem;
 }
 
 .c2 {
@@ -1014,7 +1016,9 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                           ";
   padding: ",
                           "0.25rem",
-                          " 0;
+                          " ",
+                          "1rem",
+                          ";
 ",
                         ],
                       },
