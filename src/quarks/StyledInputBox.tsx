@@ -37,7 +37,7 @@ export const StyledInputBox = styled('div')<StyledInputBoxProps>(
       margin: 0;
       display: flex;
       align-items: center;
-      flex: 1;
+      flex: 1 1 auto;
       background: ${ui2};
       min-height: 54px;
       max-height: 112px;
