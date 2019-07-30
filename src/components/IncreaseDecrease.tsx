@@ -1,5 +1,5 @@
-import styled, { themed, css } from '../utils/styled';
 import * as React from 'react';
+import styled, { themed, css } from '../utils/styled';
 
 const IncreaseDecreaseContainer = styled.span`
   width: 4px;

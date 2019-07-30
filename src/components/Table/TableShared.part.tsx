@@ -59,7 +59,9 @@ export const StyledTableHeader = styled('th')<TableHeaderProps>`
   ${({ width }) => (width && `width: ${width}`) || ''};
 `;
 
-export const getDefaultHeaderCellRenderer = ({ setState }: { setState: any }) => <T extends {}>({
+export const getDefaultHeaderCellRenderer = (sort: (key: string, order: 'ascending' | 'descending') => void) => <
+  T extends {}
+>({
   value,
   sorting,
   column,
@@ -74,21 +76,11 @@ export const getDefaultHeaderCellRenderer = ({ setState }: { setState: any }) =>
             value={sorting ? (sorting === 'descending' ? 'decrease' : 'increase') : undefined}
             onIncrease={e => {
               e.stopPropagation();
-              setState({
-                sorting: {
-                  columnKey: key,
-                  order: 'ascending',
-                },
-              });
+              sort(key, 'ascending');
             }}
             onDecrease={e => {
               e.stopPropagation();
-              setState({
-                sorting: {
-                  columnKey: key,
-                  order: 'descending',
-                },
-              });
+              sort(key, 'descending');
             }}
           />
         )}

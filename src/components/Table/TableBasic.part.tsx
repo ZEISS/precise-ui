@@ -201,7 +201,15 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
   }
 
   private defaultHeadRenderer = ({ columns, sortBy, keys }: TableSectionRenderEvent<T>) => {
-    const defaultHeaderCellRenderer = getDefaultHeaderCellRenderer({ setState: this.setState.bind(this) });
+    const defaultHeaderCellRenderer = getDefaultHeaderCellRenderer((columnKey, order) => {
+      this.setState({
+        sorting: {
+          columnKey,
+          order,
+        },
+      });
+    });
+
     const { indexed, theme, headerCellRenderer = defaultHeaderCellRenderer } = this.props;
 
     return (
