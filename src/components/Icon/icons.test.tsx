@@ -440,6 +440,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render LocalOffer icon', () => {
+    const Component = icons.LocalOffer;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Place icon', () => {
     const Component = icons.Place;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -614,4 +620,3 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
-  
