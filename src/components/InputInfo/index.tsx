@@ -20,7 +20,8 @@ interface InputInfoProps extends StandardProps {
 const StyledInfo = styled('div')<InputInfoProps>`
   ${getFontStyle({ size: 'xSmall' })}
   color: ${themed(props => props.theme.text2)};
-  padding: ${props => props.padding ? props.padding.vertical : '0'} ${props => props.padding ? props.padding.horizontal : '0'};
+  padding: ${props => (props.padding ? props.padding.vertical : '0')} ${props =>
+  props.padding ? props.padding.horizontal : '0'};
 `;
 
 /**
@@ -29,6 +30,10 @@ const StyledInfo = styled('div')<InputInfoProps>`
 export class InputInfo extends React.PureComponent<InputInfoProps> {
   render() {
     const { children } = this.props;
-    return children ? <StyledInfo padding={{horizontal: distance.medium, vertical: distance.xsmall}} {...this.props} /> : false;
+    return children ? (
+      <StyledInfo padding={{ horizontal: distance.medium, vertical: distance.xsmall }} {...this.props} />
+    ) : (
+      false
+    );
   }
 }

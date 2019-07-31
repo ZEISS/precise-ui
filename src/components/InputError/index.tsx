@@ -20,7 +20,8 @@ interface InputErrorProps extends StandardProps {
 const StyledError = styled('div')<InputErrorProps>`
   ${getFontStyle({ size: 'xSmall' })}
   color: ${themed(props => props.theme.inputError)};
-  padding: ${props => props.padding ? props.padding.vertical : distance.xsmall} ${props => props.padding ? props.padding.horizontal : distance.medium};
+  padding: ${props => (props.padding ? props.padding.vertical : distance.xsmall)} ${props =>
+  props.padding ? props.padding.horizontal : distance.medium};
 `;
 
 /**
