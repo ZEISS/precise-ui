@@ -64,6 +64,7 @@ module.exports = {
     'ic_keyboard_arrow_up_24px.svg',
     'ic_label_24px.svg',
     'ic_language_24px.svg',
+    'ic_local_offer_24px.svg',
     'ic_location_searching_24px.svg',
     'ic_menu_24px.svg',
     'ic_more_horiz_24px.svg',
