@@ -126,9 +126,9 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   background: rgba(248,248,248,1);
   min-height: 54px;
   max-height: 112px;
@@ -651,9 +651,9 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   background: rgba(248,248,248,1);
   min-height: 54px;
   max-height: 112px;
@@ -811,7 +811,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-jzJRlG",
                                   "isStatic": false,
-                                  "lastClassName": "bSfnqi",
+                                  "lastClassName": "fvjFQg",
                                   "rules": Array [
                                     [Function],
                                   ],
