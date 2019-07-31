@@ -1,27 +1,13 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
-import { StandardProps } from '../../common';
-import { distance } from '../../distance';
 import { getFontStyle } from '../../textStyles';
+import { PaddedContainer, PaddedContainerProps } from '../PaddedContainer';
 
-interface CustomPadding {
-  horizontal: string;
-  vertical: string;
-}
+export interface InputInfoProps extends PaddedContainerProps {}
 
-interface InputInfoProps extends StandardProps {
-  /**
-   * The content of input info (text to display).
-   */
-  children?: React.ReactNode;
-  padding?: CustomPadding;
-}
-
-const StyledInfo = styled('div')<InputInfoProps>`
-  ${getFontStyle({ size: 'xSmall' })}
+const StyledInfo = styled(PaddedContainer)<InputInfoProps>`
+  ${getFontStyle({ size: 'xSmall' })};
   color: ${themed(props => props.theme.text2)};
-  padding: ${props => (props.padding ? props.padding.vertical : '0')} ${props =>
-  props.padding ? props.padding.horizontal : '0'};
 `;
 
 /**
@@ -30,10 +16,6 @@ const StyledInfo = styled('div')<InputInfoProps>`
 export class InputInfo extends React.PureComponent<InputInfoProps> {
   render() {
     const { children } = this.props;
-    return children ? (
-      <StyledInfo padding={{ horizontal: distance.medium, vertical: distance.xsmall }} {...this.props} />
-    ) : (
-      false
-    );
+    return children ? <StyledInfo top="xsmall" bottom="xsmall" {...this.props} /> : false;
   }
 }

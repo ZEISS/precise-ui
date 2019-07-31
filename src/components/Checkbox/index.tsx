@@ -1,15 +1,14 @@
 import * as React from 'react';
-import styled, { themed, css } from '../../utils/styled';
+import styled, { css, themed } from '../../utils/styled';
 import { light } from '../../themes';
 import { Label } from '../Label';
 import { Icon } from '../Icon';
-import { InputProps, InputChangeEvent } from '../../common';
-import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
+import { InputChangeEvent, InputProps } from '../../common';
+import { FormContextProps, withFormContext } from '../../hoc';
 import { GroupContextProps, withGroupContext } from '../../hoc/withGroupContext';
-import { InputError } from '../InputError';
 import { InputInfo } from '../InputInfo';
-import { distance } from '../../distance';
-import { KeyCodes } from '../../utils/keyCodes';
+import { KeyCodes } from '../../utils';
+import { withInputInfo } from '../../hoc/withInputInfo';
 
 export type CheckboxChangeEvent = InputChangeEvent<boolean>;
 
@@ -34,24 +33,6 @@ interface CheckboxBoxProps {
   checked: boolean;
   disabled: boolean;
   theme: any;
-}
-
-function showInputInfo(error?: React.ReactChild, info?: React.ReactChild) {
-  if (error) {
-    if (typeof error === 'string') {
-      return <InputError padding={{ horizontal: '28px', vertical: distance.xsmall }}>{error}</InputError>;
-    }
-
-    return error;
-  } else if (info) {
-    if (typeof info === 'string') {
-      return <InputInfo padding={{ horizontal: '28px', vertical: distance.xsmall }}>{info}</InputInfo>;
-    }
-
-    return info;
-  }
-
-  return false;
 }
 
 const CheckboxContainer = styled('div')<CheckboxContainerProps>`
@@ -96,10 +77,12 @@ const RealCheckbox = styled.input`
   display: none;
 `;
 
-const FlexContainer = styled.div`
+const FlexContainer = styled.div.attrs(({ withInputInfo = false }: { withInputInfo: boolean }) => ({
+  withInputInfo,
+}))`
   display: flex;
-  align-items: center;
   padding-right: 0.25em;
+  align-items: ${({ withInputInfo }) => (withInputInfo ? 'start' : 'center')};
 `;
 
 export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxState> {
@@ -238,20 +221,23 @@ export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxStat
       tabIndex: disabled ? undefined : 0,
     };
 
+    const InputInfo = withInputInfo({ error, info });
+
     return (
       <CheckboxContainer {...containerProps}>
         <RealCheckbox type="checkbox" defaultChecked={value} />
-        <FlexContainer>
+        <FlexContainer withInputInfo={!!(error || info)}>
           <CheckboxBox {...boxProps}>
             <Icon name="Check" color={theme ? theme.ui1 : light.ui1} size={1.0625} />
           </CheckboxBox>
           {children && (
             <Label attached theme={theme}>
               {children}
+              {<InputInfo left={undefined} />}
             </Label>
           )}
         </FlexContainer>
-        {showInputInfo(error, info)}
+        {!children && <InputInfo left={undefined} />}
       </CheckboxContainer>
     );
   }

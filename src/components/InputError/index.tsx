@@ -1,27 +1,13 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
-import { StandardProps } from '../../common';
-import { distance } from '../../distance';
 import { getFontStyle } from '../../textStyles';
+import { PaddedContainer, PaddedContainerProps } from '../PaddedContainer';
 
-interface CustomPadding {
-  horizontal: string;
-  vertical: string;
-}
+export interface InputErrorProps extends PaddedContainerProps {}
 
-interface InputErrorProps extends StandardProps {
-  /**
-   * The content of input error (error to display).
-   */
-  children?: React.ReactNode;
-  padding?: CustomPadding;
-}
-
-const StyledError = styled('div')<InputErrorProps>`
-  ${getFontStyle({ size: 'xSmall' })}
+const StyledError = styled(PaddedContainer)<InputErrorProps>`
+  ${getFontStyle({ size: 'xSmall' })};
   color: ${themed(props => props.theme.inputError)};
-  padding: ${props => (props.padding ? props.padding.vertical : distance.xsmall)} ${props =>
-  props.padding ? props.padding.horizontal : distance.medium};
 `;
 
 /**
@@ -30,6 +16,6 @@ const StyledError = styled('div')<InputErrorProps>`
 export class InputError extends React.PureComponent<InputErrorProps> {
   render() {
     const { children } = this.props;
-    return children ? <StyledError {...this.props} /> : false;
+    return children ? <StyledError top="xsmall" bottom="xsmall" {...this.props} /> : false;
   }
 }

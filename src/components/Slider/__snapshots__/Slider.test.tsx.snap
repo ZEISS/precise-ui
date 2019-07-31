@@ -76,7 +76,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -90,7 +90,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -121,7 +121,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -171,7 +171,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -348,6 +348,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -443,7 +444,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -457,7 +458,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -488,7 +489,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -538,7 +539,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -620,7 +621,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "sc-gqjmRU",
                               "isStatic": false,
                               "lastClassName": "c3",
                               "rules": Array [
@@ -650,7 +651,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "sc-gqjmRU",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -786,6 +787,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -875,7 +877,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -889,7 +891,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -920,7 +922,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -970,7 +972,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -1252,6 +1254,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -1336,7 +1339,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -1350,7 +1353,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -1381,7 +1384,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -1431,7 +1434,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -1609,6 +1612,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -1701,7 +1705,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -1715,7 +1719,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -1746,7 +1750,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -1796,7 +1800,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -2183,6 +2187,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -2278,7 +2283,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -2292,7 +2297,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -2323,7 +2328,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -2373,7 +2378,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -2455,7 +2460,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "sc-gqjmRU",
                               "isStatic": false,
                               "lastClassName": "c3",
                               "rules": Array [
@@ -2485,7 +2490,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "sc-gqjmRU",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -2621,6 +2626,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -2713,7 +2719,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -2727,7 +2733,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -2758,7 +2764,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -2808,7 +2814,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -3090,6 +3096,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -3186,7 +3193,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -3200,7 +3207,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -3231,7 +3238,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -3281,7 +3288,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -3363,7 +3370,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "sc-gqjmRU",
                               "isStatic": false,
                               "lastClassName": "c3",
                               "rules": Array [
@@ -3393,7 +3400,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "sc-gqjmRU",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -3529,6 +3536,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -3626,7 +3634,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -3640,7 +3648,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -3671,7 +3679,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -3721,7 +3729,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -3803,7 +3811,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "sc-gqjmRU",
                               "isStatic": false,
                               "lastClassName": "c3",
                               "rules": Array [
@@ -3833,7 +3841,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "sc-gqjmRU",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -3969,6 +3977,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -4053,7 +4062,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -4067,7 +4076,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -4100,7 +4109,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -4150,7 +4159,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -4332,6 +4341,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -4428,7 +4438,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -4442,7 +4452,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -4474,7 +4484,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -4524,7 +4534,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -4611,7 +4621,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "sc-gqjmRU",
                               "isStatic": false,
                               "lastClassName": "c3",
                               "rules": Array [
@@ -4641,7 +4651,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "sc-gqjmRU",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -4777,6 +4787,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -4869,7 +4880,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -4883,7 +4894,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -4914,7 +4925,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -4964,7 +4975,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -5351,6 +5362,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -5435,7 +5447,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -5449,7 +5461,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -5481,7 +5493,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -5531,7 +5543,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -5713,6 +5725,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
             </InteractiveSurface>
           </StyledComponent>
         </Styled(InteractiveSurface)>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
