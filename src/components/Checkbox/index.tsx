@@ -46,6 +46,7 @@ const CheckboxBox = styled('div')<CheckboxBoxProps>(
     ({ disabled, checked, theme: { ui0, ui1, ui4, ui5 } }) => css`
       outline: 0;
       flex: 0 0 1.0625em;
+      max-width: 1.0625em;
       height: 1.0625em;
       position: relative;
       background: ${checked ? ui5 : ui1};
@@ -56,9 +57,7 @@ const CheckboxBox = styled('div')<CheckboxBoxProps>(
       box-sizing: border-box;
 
       &:focus {
-        outline-color: ${ui0};
-        outline-width: 2px;
-        outline-style: solid;
+        outline: ${ui0} solid 2px;
       }
 
       > i {
@@ -80,6 +79,7 @@ const RealCheckbox = styled.input`
 const FlexContainer = styled.div`
   display: flex;
   align-items: center;
+  padding-right: 0.25em;
 `;
 
 export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxState> {
