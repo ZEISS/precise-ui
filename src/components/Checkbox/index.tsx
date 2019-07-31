@@ -6,7 +6,9 @@ import { Icon } from '../Icon';
 import { InputProps, InputChangeEvent } from '../../common';
 import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
 import { GroupContextProps, withGroupContext } from '../../hoc/withGroupContext';
-import { showInputInfo } from '../../utils/input';
+import { InputError } from '../InputError'
+import { InputInfo } from '../InputInfo'
+import { distance} from '../../distance'
 import { KeyCodes } from '../../utils/keyCodes';
 
 export type CheckboxChangeEvent = InputChangeEvent<boolean>;
@@ -32,6 +34,24 @@ interface CheckboxBoxProps {
   checked: boolean;
   disabled: boolean;
   theme: any;
+}
+
+function showInputInfo(error?: React.ReactChild, info?: React.ReactChild) {
+  if (error) {
+    if (typeof error === 'string') {
+    return <InputError padding={{horizontal: '28px', vertical: distance.xsmall}}>{error}</InputError>;
+    }
+
+    return error;
+  } else if (info) {
+    if (typeof info === 'string') {
+      return <InputInfo padding={{horizontal: '28px', vertical: distance.xsmall}}>{info}</InputInfo>;
+    }
+
+    return info;
+  }
+
+  return false;
 }
 
 const CheckboxContainer = styled('div')<CheckboxContainerProps>`

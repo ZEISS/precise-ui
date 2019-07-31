@@ -460,7 +460,14 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
               </StyledComponent>
             </Styled(StackPanel)>
             <InputInfo>
-              <styled.div>
+              <styled.div
+                padding={
+                  Object {
+                    "horizontal": "1rem",
+                    "vertical": "0.25rem",
+                  }
+                }
+              >
                 <StyledComponent
                   forwardedComponent={
                     Object {
@@ -490,9 +497,9 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                           [Function],
                           ";
   padding: ",
-                          "0.25rem",
+                          [Function],
                           " ",
-                          "1rem",
+                          [Function],
                           ";
 ",
                         ],
@@ -508,6 +515,12 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                     }
                   }
                   forwardedRef={null}
+                  padding={
+                    Object {
+                      "horizontal": "1rem",
+                      "vertical": "0.25rem",
+                    }
+                  }
                 >
                   <div
                     className="c6"
@@ -985,7 +998,14 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
               </StyledComponent>
             </Styled(StackPanel)>
             <InputInfo>
-              <styled.div>
+              <styled.div
+                padding={
+                  Object {
+                    "horizontal": "1rem",
+                    "vertical": "0.25rem",
+                  }
+                }
+              >
                 <StyledComponent
                   forwardedComponent={
                     Object {
@@ -1015,9 +1035,9 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                           [Function],
                           ";
   padding: ",
-                          "0.25rem",
+                          [Function],
                           " ",
-                          "1rem",
+                          [Function],
                           ";
 ",
                         ],
@@ -1033,6 +1053,12 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                     }
                   }
                   forwardedRef={null}
+                  padding={
+                    Object {
+                      "horizontal": "1rem",
+                      "vertical": "0.25rem",
+                    }
+                  }
                 >
                   <div
                     className="c6"
@@ -1055,7 +1081,14 @@ exports[`<InputInfo /> should not render an <InputInfo> from direct API without 
 exports[`<InputInfo /> should not render an <InputInfo> from jsx 1`] = `""`;
 
 exports[`<InputInfo /> should render <InputInfo> that has an error message 1`] = `
-<styled.div>
+<styled.div
+  padding={
+    Object {
+      "horizontal": "1rem",
+      "vertical": "0.25rem",
+    }
+  }
+>
   I am wrong
 </styled.div>
 `;

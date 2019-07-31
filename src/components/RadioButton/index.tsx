@@ -284,7 +284,11 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
             </Label>
           )}
         </FlexContainer>
-        {error && <InputError theme={theme}>{error}</InputError>}
+        {error && (
+          <InputError padding={{horizontal: '28px', vertical: distance.xsmall}}>
+            {error}
+          </InputError>
+        )}
       </RadioButtonContainer>
     );
   }

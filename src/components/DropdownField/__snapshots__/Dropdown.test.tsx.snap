@@ -7136,11 +7136,10 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
   color: ",
                       [Function],
                       ";
-
   padding: ",
-                      "0.25rem",
+                      [Function],
                       " ",
-                      "1rem",
+                      [Function],
                       ";
 ",
                     ],
@@ -7922,11 +7921,10 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
   color: ",
                       [Function],
                       ";
-
   padding: ",
-                      "0.25rem",
+                      [Function],
                       " ",
-                      "1rem",
+                      [Function],
                       ";
 ",
                     ],
