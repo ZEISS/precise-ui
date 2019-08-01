@@ -23,4 +23,15 @@ describe('<PaddedContainer />', () => {
     expect(container).toHaveStyleRule('padding-right', distance.xxlarge);
     expect(container).toHaveStyleRule('padding', distance.medium);
   });
+
+  it('Should set padding value to 0(px) if undefined provided except `gutter`', () => {
+    const wrapper = enzyme.mount(<PaddedContainer top={undefined} bottom={undefined} gutter={undefined} />);
+    const container = wrapper.find('div').first();
+
+    expect(container).toHaveStyleRule('padding-top', '0');
+    expect(container).toHaveStyleRule('padding-bottom', '0');
+    expect(container).toHaveStyleRule('padding-left', '0');
+    expect(container).toHaveStyleRule('padding-right', '0');
+    expect(container).toHaveStyleRule('padding', undefined);
+  });
 });

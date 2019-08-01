@@ -258,7 +258,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jlyJG",
+            "componentId": "sc-gipzik",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -271,7 +271,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jlyJG",
+          "styledComponentId": "sc-gipzik",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -296,7 +296,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-gipzik",
+                  "componentId": "sc-csuQGl",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -308,7 +308,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-gipzik",
+                "styledComponentId": "sc-csuQGl",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -339,7 +339,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-csuQGl",
+                        "componentId": "sc-Rmtcm",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -353,10 +353,10 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                       },
                       "displayName": "Styled(styled.div)",
                       "foldedComponentIds": Array [
-                        "sc-jzJRlG",
+                        "sc-cSHVUG",
                       ],
                       "render": [Function],
-                      "styledComponentId": "sc-csuQGl",
+                      "styledComponentId": "sc-Rmtcm",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -381,7 +381,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-gqjmRU",
+                                "componentId": "sc-VigVT",
                                 "isStatic": true,
                                 "lastClassName": "c3",
                                 "rules": Array [
@@ -399,7 +399,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                               "displayName": "styled.div",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-gqjmRU",
+                              "styledComponentId": "sc-VigVT",
                               "target": "div",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -420,7 +420,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-Rmtcm",
+                                      "componentId": "sc-bRBYWo",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
@@ -462,7 +462,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                     "displayName": "styled.div",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-Rmtcm",
+                                    "styledComponentId": "sc-bRBYWo",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -484,7 +484,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-bRBYWo",
+                                            "componentId": "sc-hzDkRC",
                                             "isStatic": false,
                                             "lastClassName": "c5",
                                             "rules": Array [
@@ -501,7 +501,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-bRBYWo",
+                                          "styledComponentId": "sc-hzDkRC",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -580,7 +580,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-htpNat",
+                                      "componentId": "sc-bxivhb",
                                       "isStatic": true,
                                       "lastClassName": "c8",
                                       "rules": Array [
@@ -596,7 +596,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                     "displayName": "styled.i",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-htpNat",
+                                    "styledComponentId": "sc-bxivhb",
                                     "target": "i",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -747,7 +747,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-hSdWYo",
+                        "componentId": "sc-eHgmQL",
                         "isStatic": true,
                         "lastClassName": "c9",
                         "rules": Array [
@@ -760,7 +760,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-hSdWYo",
+                      "styledComponentId": "sc-eHgmQL",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -796,7 +796,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-fBuWsC",
+                                "componentId": "sc-fMiknA",
                                 "isStatic": true,
                                 "lastClassName": "c10",
                                 "rules": Array [
@@ -808,7 +808,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                               "displayName": "Styled(WindowPopup)",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-fBuWsC",
+                              "styledComponentId": "sc-fMiknA",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -840,7 +840,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kgoBCf",
                                         "isStatic": true,
                                         "lastClassName": "c11",
                                         "rules": Array [
@@ -859,7 +859,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                       "displayName": "styled.div",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kgoBCf",
                                       "target": "div",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
@@ -885,7 +885,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                             "$$typeof": Symbol(react.forward_ref),
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-kgoBCf",
+                                              "componentId": "sc-kGXeez",
                                               "isStatic": true,
                                               "lastClassName": "c12",
                                               "rules": Array [
@@ -899,7 +899,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                             "displayName": "styled.a",
                                             "foldedComponentIds": Array [],
                                             "render": [Function],
-                                            "styledComponentId": "sc-kgoBCf",
+                                            "styledComponentId": "sc-kGXeez",
                                             "target": "a",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -926,7 +926,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                             "$$typeof": Symbol(react.forward_ref),
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-dxgOiQ",
+                                              "componentId": "sc-ckVGcZ",
                                               "isStatic": false,
                                               "lastClassName": "c13",
                                               "rules": Array [
@@ -946,7 +946,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                             "displayName": "styled.div",
                                             "foldedComponentIds": Array [],
                                             "render": [Function],
-                                            "styledComponentId": "sc-dxgOiQ",
+                                            "styledComponentId": "sc-ckVGcZ",
                                             "target": "div",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -967,7 +967,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-jKJlTe",
+                                                    "componentId": "sc-eNQAEJ",
                                                     "isStatic": false,
                                                     "lastClassName": "c14",
                                                     "rules": Array [
@@ -1002,7 +1002,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                   "displayName": "styled.div",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "sc-jKJlTe",
+                                                  "styledComponentId": "sc-eNQAEJ",
                                                   "target": "div",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -1021,7 +1021,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-jhAzac",
+                                                          "componentId": "sc-fBuWsC",
                                                           "isStatic": true,
                                                           "lastClassName": "c15",
                                                           "rules": Array [
@@ -1035,7 +1035,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                         "displayName": "styled.div",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-jhAzac",
+                                                        "styledComponentId": "sc-fBuWsC",
                                                         "target": "div",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -1064,7 +1064,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                     "$$typeof": Symbol(react.forward_ref),
                                                     "attrs": Array [],
                                                     "componentStyle": ComponentStyle {
-                                                      "componentId": "sc-kpOJdX",
+                                                      "componentId": "sc-dxgOiQ",
                                                       "isStatic": true,
                                                       "lastClassName": "c16",
                                                       "rules": Array [
@@ -1113,7 +1113,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                     "displayName": "styled.a",
                                                     "foldedComponentIds": Array [],
                                                     "render": [Function],
-                                                    "styledComponentId": "sc-kpOJdX",
+                                                    "styledComponentId": "sc-dxgOiQ",
                                                     "target": "a",
                                                     "toString": [Function],
                                                     "warnTooManyClasses": [Function],
@@ -1138,7 +1138,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "attrs": Array [],
                                                             "componentStyle": ComponentStyle {
-                                                              "componentId": "sc-htpNat",
+                                                              "componentId": "sc-bxivhb",
                                                               "isStatic": true,
                                                               "lastClassName": "c8",
                                                               "rules": Array [
@@ -1154,7 +1154,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                             "displayName": "styled.i",
                                                             "foldedComponentIds": Array [],
                                                             "render": [Function],
-                                                            "styledComponentId": "sc-htpNat",
+                                                            "styledComponentId": "sc-bxivhb",
                                                             "target": "i",
                                                             "toString": [Function],
                                                             "warnTooManyClasses": [Function],
@@ -1208,7 +1208,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-ckVGcZ",
+                                                    "componentId": "sc-jKJlTe",
                                                     "isStatic": true,
                                                     "lastClassName": "c17",
                                                     "rules": Array [
@@ -1221,7 +1221,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                   "displayName": "styled.div",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "sc-ckVGcZ",
+                                                  "styledComponentId": "sc-jKJlTe",
                                                   "target": "div",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -1246,7 +1246,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-cvbbAY",
+                                                          "componentId": "sc-jWBwVP",
                                                           "isStatic": false,
                                                           "lastClassName": "c18",
                                                           "rules": Array [
@@ -1256,7 +1256,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                         "displayName": "styled.li",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-cvbbAY",
+                                                        "styledComponentId": "sc-jWBwVP",
                                                         "target": "li",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -1282,7 +1282,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-jWBwVP",
+                                                                "componentId": "sc-brqgnP",
                                                                 "isStatic": true,
                                                                 "lastClassName": "c19",
                                                                 "rules": Array [
@@ -1295,7 +1295,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                               "displayName": "styled.div",
                                                               "foldedComponentIds": Array [],
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-jWBwVP",
+                                                              "styledComponentId": "sc-brqgnP",
                                                               "target": "div",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -1314,7 +1314,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                     "$$typeof": Symbol(react.forward_ref),
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
-                                                                      "componentId": "sc-brqgnP",
+                                                                      "componentId": "sc-cMljjf",
                                                                       "isStatic": true,
                                                                       "lastClassName": "c20",
                                                                       "rules": Array [
@@ -1326,7 +1326,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                     "displayName": "styled.div",
                                                                     "foldedComponentIds": Array [],
                                                                     "render": [Function],
-                                                                    "styledComponentId": "sc-brqgnP",
+                                                                    "styledComponentId": "sc-cMljjf",
                                                                     "target": "div",
                                                                     "toString": [Function],
                                                                     "warnTooManyClasses": [Function],
@@ -1349,7 +1349,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                           "$$typeof": Symbol(react.forward_ref),
                                                                           "attrs": Array [],
                                                                           "componentStyle": ComponentStyle {
-                                                                            "componentId": "sc-cMljjf",
+                                                                            "componentId": "sc-jAaTju",
                                                                             "isStatic": false,
                                                                             "lastClassName": "c21",
                                                                             "rules": Array [
@@ -1366,7 +1366,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                           "displayName": "styled.div",
                                                                           "foldedComponentIds": Array [],
                                                                           "render": [Function],
-                                                                          "styledComponentId": "sc-cMljjf",
+                                                                          "styledComponentId": "sc-jAaTju",
                                                                           "target": "div",
                                                                           "toString": [Function],
                                                                           "warnTooManyClasses": [Function],
@@ -1405,7 +1405,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-cvbbAY",
+                                                          "componentId": "sc-jWBwVP",
                                                           "isStatic": false,
                                                           "lastClassName": "c18",
                                                           "rules": Array [
@@ -1415,7 +1415,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                         "displayName": "styled.li",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-cvbbAY",
+                                                        "styledComponentId": "sc-jWBwVP",
                                                         "target": "li",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -1441,7 +1441,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-jWBwVP",
+                                                                "componentId": "sc-brqgnP",
                                                                 "isStatic": true,
                                                                 "lastClassName": "c19",
                                                                 "rules": Array [
@@ -1454,7 +1454,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                               "displayName": "styled.div",
                                                               "foldedComponentIds": Array [],
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-jWBwVP",
+                                                              "styledComponentId": "sc-brqgnP",
                                                               "target": "div",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -1473,7 +1473,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                     "$$typeof": Symbol(react.forward_ref),
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
-                                                                      "componentId": "sc-brqgnP",
+                                                                      "componentId": "sc-cMljjf",
                                                                       "isStatic": true,
                                                                       "lastClassName": "c20",
                                                                       "rules": Array [
@@ -1485,7 +1485,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                     "displayName": "styled.div",
                                                                     "foldedComponentIds": Array [],
                                                                     "render": [Function],
-                                                                    "styledComponentId": "sc-brqgnP",
+                                                                    "styledComponentId": "sc-cMljjf",
                                                                     "target": "div",
                                                                     "toString": [Function],
                                                                     "warnTooManyClasses": [Function],
@@ -1508,7 +1508,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                           "$$typeof": Symbol(react.forward_ref),
                                                                           "attrs": Array [],
                                                                           "componentStyle": ComponentStyle {
-                                                                            "componentId": "sc-cMljjf",
+                                                                            "componentId": "sc-jAaTju",
                                                                             "isStatic": false,
                                                                             "lastClassName": "c21",
                                                                             "rules": Array [
@@ -1525,7 +1525,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                           "displayName": "styled.div",
                                                                           "foldedComponentIds": Array [],
                                                                           "render": [Function],
-                                                                          "styledComponentId": "sc-cMljjf",
+                                                                          "styledComponentId": "sc-jAaTju",
                                                                           "target": "div",
                                                                           "toString": [Function],
                                                                           "warnTooManyClasses": [Function],
@@ -1567,7 +1567,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                             "$$typeof": Symbol(react.forward_ref),
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-kgoBCf",
+                                              "componentId": "sc-kGXeez",
                                               "isStatic": true,
                                               "lastClassName": "c12",
                                               "rules": Array [
@@ -1581,7 +1581,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                             "displayName": "styled.a",
                                             "foldedComponentIds": Array [],
                                             "render": [Function],
-                                            "styledComponentId": "sc-kgoBCf",
+                                            "styledComponentId": "sc-kGXeez",
                                             "target": "a",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -1612,7 +1612,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-kGXeez",
+                                        "componentId": "sc-kpOJdX",
                                         "isStatic": true,
                                         "lastClassName": "c22",
                                         "rules": Array [
@@ -1637,10 +1637,10 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                       },
                                       "displayName": "Styled(styled.div)",
                                       "foldedComponentIds": Array [
-                                        "sc-chPdSV",
+                                        "sc-kgoBCf",
                                       ],
                                       "render": [Function],
-                                      "styledComponentId": "sc-kGXeez",
+                                      "styledComponentId": "sc-kpOJdX",
                                       "target": "div",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
@@ -1665,6 +1665,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -1932,7 +1933,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jlyJG",
+            "componentId": "sc-gipzik",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -1945,7 +1946,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jlyJG",
+          "styledComponentId": "sc-gipzik",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -1971,7 +1972,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-gipzik",
+                  "componentId": "sc-csuQGl",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -1983,7 +1984,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-gipzik",
+                "styledComponentId": "sc-csuQGl",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -2014,7 +2015,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-csuQGl",
+                        "componentId": "sc-Rmtcm",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -2028,10 +2029,10 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                       },
                       "displayName": "Styled(styled.div)",
                       "foldedComponentIds": Array [
-                        "sc-jzJRlG",
+                        "sc-cSHVUG",
                       ],
                       "render": [Function],
-                      "styledComponentId": "sc-csuQGl",
+                      "styledComponentId": "sc-Rmtcm",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -2056,7 +2057,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-gqjmRU",
+                                "componentId": "sc-VigVT",
                                 "isStatic": true,
                                 "lastClassName": "c3",
                                 "rules": Array [
@@ -2074,7 +2075,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                               "displayName": "styled.div",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-gqjmRU",
+                              "styledComponentId": "sc-VigVT",
                               "target": "div",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -2095,7 +2096,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-Rmtcm",
+                                      "componentId": "sc-bRBYWo",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
@@ -2137,7 +2138,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                     "displayName": "styled.div",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-Rmtcm",
+                                    "styledComponentId": "sc-bRBYWo",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -2159,7 +2160,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-bRBYWo",
+                                            "componentId": "sc-hzDkRC",
                                             "isStatic": false,
                                             "lastClassName": "c5",
                                             "rules": Array [
@@ -2176,7 +2177,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-bRBYWo",
+                                          "styledComponentId": "sc-hzDkRC",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -2255,7 +2256,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-htpNat",
+                                      "componentId": "sc-bxivhb",
                                       "isStatic": true,
                                       "lastClassName": "c8",
                                       "rules": Array [
@@ -2271,7 +2272,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                     "displayName": "styled.i",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-htpNat",
+                                    "styledComponentId": "sc-bxivhb",
                                     "target": "i",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -2426,7 +2427,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-hSdWYo",
+                        "componentId": "sc-eHgmQL",
                         "isStatic": true,
                         "lastClassName": "c9",
                         "rules": Array [
@@ -2439,7 +2440,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-hSdWYo",
+                      "styledComponentId": "sc-eHgmQL",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -2476,7 +2477,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-fBuWsC",
+                                "componentId": "sc-fMiknA",
                                 "isStatic": true,
                                 "lastClassName": "c10",
                                 "rules": Array [
@@ -2488,7 +2489,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                               "displayName": "Styled(WindowPopup)",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-fBuWsC",
+                              "styledComponentId": "sc-fMiknA",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -2520,7 +2521,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kgoBCf",
                                         "isStatic": true,
                                         "lastClassName": "c11",
                                         "rules": Array [
@@ -2539,7 +2540,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                       "displayName": "styled.div",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kgoBCf",
                                       "target": "div",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
@@ -2565,7 +2566,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                             "$$typeof": Symbol(react.forward_ref),
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-kgoBCf",
+                                              "componentId": "sc-kGXeez",
                                               "isStatic": true,
                                               "lastClassName": "c12",
                                               "rules": Array [
@@ -2579,7 +2580,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                             "displayName": "styled.a",
                                             "foldedComponentIds": Array [],
                                             "render": [Function],
-                                            "styledComponentId": "sc-kgoBCf",
+                                            "styledComponentId": "sc-kGXeez",
                                             "target": "a",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -2606,7 +2607,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                             "$$typeof": Symbol(react.forward_ref),
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-dxgOiQ",
+                                              "componentId": "sc-ckVGcZ",
                                               "isStatic": false,
                                               "lastClassName": "c13",
                                               "rules": Array [
@@ -2626,7 +2627,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                             "displayName": "styled.div",
                                             "foldedComponentIds": Array [],
                                             "render": [Function],
-                                            "styledComponentId": "sc-dxgOiQ",
+                                            "styledComponentId": "sc-ckVGcZ",
                                             "target": "div",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -2647,7 +2648,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-jKJlTe",
+                                                    "componentId": "sc-eNQAEJ",
                                                     "isStatic": false,
                                                     "lastClassName": "c14",
                                                     "rules": Array [
@@ -2682,7 +2683,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                   "displayName": "styled.div",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "sc-jKJlTe",
+                                                  "styledComponentId": "sc-eNQAEJ",
                                                   "target": "div",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -2701,7 +2702,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-jhAzac",
+                                                          "componentId": "sc-fBuWsC",
                                                           "isStatic": true,
                                                           "lastClassName": "c15",
                                                           "rules": Array [
@@ -2715,7 +2716,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                         "displayName": "styled.div",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-jhAzac",
+                                                        "styledComponentId": "sc-fBuWsC",
                                                         "target": "div",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -2744,7 +2745,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                     "$$typeof": Symbol(react.forward_ref),
                                                     "attrs": Array [],
                                                     "componentStyle": ComponentStyle {
-                                                      "componentId": "sc-kpOJdX",
+                                                      "componentId": "sc-dxgOiQ",
                                                       "isStatic": true,
                                                       "lastClassName": "c16",
                                                       "rules": Array [
@@ -2793,7 +2794,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                     "displayName": "styled.a",
                                                     "foldedComponentIds": Array [],
                                                     "render": [Function],
-                                                    "styledComponentId": "sc-kpOJdX",
+                                                    "styledComponentId": "sc-dxgOiQ",
                                                     "target": "a",
                                                     "toString": [Function],
                                                     "warnTooManyClasses": [Function],
@@ -2818,7 +2819,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "attrs": Array [],
                                                             "componentStyle": ComponentStyle {
-                                                              "componentId": "sc-htpNat",
+                                                              "componentId": "sc-bxivhb",
                                                               "isStatic": true,
                                                               "lastClassName": "c8",
                                                               "rules": Array [
@@ -2834,7 +2835,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                             "displayName": "styled.i",
                                                             "foldedComponentIds": Array [],
                                                             "render": [Function],
-                                                            "styledComponentId": "sc-htpNat",
+                                                            "styledComponentId": "sc-bxivhb",
                                                             "target": "i",
                                                             "toString": [Function],
                                                             "warnTooManyClasses": [Function],
@@ -2888,7 +2889,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-ckVGcZ",
+                                                    "componentId": "sc-jKJlTe",
                                                     "isStatic": true,
                                                     "lastClassName": "c17",
                                                     "rules": Array [
@@ -2901,7 +2902,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                   "displayName": "styled.div",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "sc-ckVGcZ",
+                                                  "styledComponentId": "sc-jKJlTe",
                                                   "target": "div",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -2926,7 +2927,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-cvbbAY",
+                                                          "componentId": "sc-jWBwVP",
                                                           "isStatic": false,
                                                           "lastClassName": "c18",
                                                           "rules": Array [
@@ -2936,7 +2937,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                         "displayName": "styled.li",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-cvbbAY",
+                                                        "styledComponentId": "sc-jWBwVP",
                                                         "target": "li",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -2962,7 +2963,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-jWBwVP",
+                                                                "componentId": "sc-brqgnP",
                                                                 "isStatic": true,
                                                                 "lastClassName": "c19",
                                                                 "rules": Array [
@@ -2975,7 +2976,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                               "displayName": "styled.div",
                                                               "foldedComponentIds": Array [],
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-jWBwVP",
+                                                              "styledComponentId": "sc-brqgnP",
                                                               "target": "div",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -2994,7 +2995,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                     "$$typeof": Symbol(react.forward_ref),
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
-                                                                      "componentId": "sc-brqgnP",
+                                                                      "componentId": "sc-cMljjf",
                                                                       "isStatic": true,
                                                                       "lastClassName": "c20",
                                                                       "rules": Array [
@@ -3006,7 +3007,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                     "displayName": "styled.div",
                                                                     "foldedComponentIds": Array [],
                                                                     "render": [Function],
-                                                                    "styledComponentId": "sc-brqgnP",
+                                                                    "styledComponentId": "sc-cMljjf",
                                                                     "target": "div",
                                                                     "toString": [Function],
                                                                     "warnTooManyClasses": [Function],
@@ -3029,7 +3030,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                           "$$typeof": Symbol(react.forward_ref),
                                                                           "attrs": Array [],
                                                                           "componentStyle": ComponentStyle {
-                                                                            "componentId": "sc-cMljjf",
+                                                                            "componentId": "sc-jAaTju",
                                                                             "isStatic": false,
                                                                             "lastClassName": "c21",
                                                                             "rules": Array [
@@ -3046,7 +3047,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                           "displayName": "styled.div",
                                                                           "foldedComponentIds": Array [],
                                                                           "render": [Function],
-                                                                          "styledComponentId": "sc-cMljjf",
+                                                                          "styledComponentId": "sc-jAaTju",
                                                                           "target": "div",
                                                                           "toString": [Function],
                                                                           "warnTooManyClasses": [Function],
@@ -3085,7 +3086,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-cvbbAY",
+                                                          "componentId": "sc-jWBwVP",
                                                           "isStatic": false,
                                                           "lastClassName": "c18",
                                                           "rules": Array [
@@ -3095,7 +3096,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                         "displayName": "styled.li",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-cvbbAY",
+                                                        "styledComponentId": "sc-jWBwVP",
                                                         "target": "li",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -3121,7 +3122,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-jWBwVP",
+                                                                "componentId": "sc-brqgnP",
                                                                 "isStatic": true,
                                                                 "lastClassName": "c19",
                                                                 "rules": Array [
@@ -3134,7 +3135,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                               "displayName": "styled.div",
                                                               "foldedComponentIds": Array [],
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-jWBwVP",
+                                                              "styledComponentId": "sc-brqgnP",
                                                               "target": "div",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -3153,7 +3154,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                     "$$typeof": Symbol(react.forward_ref),
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
-                                                                      "componentId": "sc-brqgnP",
+                                                                      "componentId": "sc-cMljjf",
                                                                       "isStatic": true,
                                                                       "lastClassName": "c20",
                                                                       "rules": Array [
@@ -3165,7 +3166,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                     "displayName": "styled.div",
                                                                     "foldedComponentIds": Array [],
                                                                     "render": [Function],
-                                                                    "styledComponentId": "sc-brqgnP",
+                                                                    "styledComponentId": "sc-cMljjf",
                                                                     "target": "div",
                                                                     "toString": [Function],
                                                                     "warnTooManyClasses": [Function],
@@ -3188,7 +3189,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                           "$$typeof": Symbol(react.forward_ref),
                                                                           "attrs": Array [],
                                                                           "componentStyle": ComponentStyle {
-                                                                            "componentId": "sc-cMljjf",
+                                                                            "componentId": "sc-jAaTju",
                                                                             "isStatic": false,
                                                                             "lastClassName": "c21",
                                                                             "rules": Array [
@@ -3205,7 +3206,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                           "displayName": "styled.div",
                                                                           "foldedComponentIds": Array [],
                                                                           "render": [Function],
-                                                                          "styledComponentId": "sc-cMljjf",
+                                                                          "styledComponentId": "sc-jAaTju",
                                                                           "target": "div",
                                                                           "toString": [Function],
                                                                           "warnTooManyClasses": [Function],
@@ -3247,7 +3248,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                             "$$typeof": Symbol(react.forward_ref),
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-kgoBCf",
+                                              "componentId": "sc-kGXeez",
                                               "isStatic": true,
                                               "lastClassName": "c12",
                                               "rules": Array [
@@ -3261,7 +3262,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                             "displayName": "styled.a",
                                             "foldedComponentIds": Array [],
                                             "render": [Function],
-                                            "styledComponentId": "sc-kgoBCf",
+                                            "styledComponentId": "sc-kGXeez",
                                             "target": "a",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -3292,7 +3293,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-kGXeez",
+                                        "componentId": "sc-kpOJdX",
                                         "isStatic": true,
                                         "lastClassName": "c22",
                                         "rules": Array [
@@ -3317,10 +3318,10 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                       },
                                       "displayName": "Styled(styled.div)",
                                       "foldedComponentIds": Array [
-                                        "sc-chPdSV",
+                                        "sc-kgoBCf",
                                       ],
                                       "render": [Function],
-                                      "styledComponentId": "sc-kGXeez",
+                                      "styledComponentId": "sc-kpOJdX",
                                       "target": "div",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
@@ -3345,6 +3346,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -3612,7 +3614,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jlyJG",
+            "componentId": "sc-gipzik",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -3625,7 +3627,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jlyJG",
+          "styledComponentId": "sc-gipzik",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -3651,7 +3653,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-gipzik",
+                  "componentId": "sc-csuQGl",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -3663,7 +3665,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-gipzik",
+                "styledComponentId": "sc-csuQGl",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -3694,7 +3696,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-csuQGl",
+                        "componentId": "sc-Rmtcm",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -3708,10 +3710,10 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                       },
                       "displayName": "Styled(styled.div)",
                       "foldedComponentIds": Array [
-                        "sc-jzJRlG",
+                        "sc-cSHVUG",
                       ],
                       "render": [Function],
-                      "styledComponentId": "sc-csuQGl",
+                      "styledComponentId": "sc-Rmtcm",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -3736,7 +3738,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-gqjmRU",
+                                "componentId": "sc-VigVT",
                                 "isStatic": true,
                                 "lastClassName": "c3",
                                 "rules": Array [
@@ -3754,7 +3756,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                               "displayName": "styled.div",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-gqjmRU",
+                              "styledComponentId": "sc-VigVT",
                               "target": "div",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -3775,7 +3777,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-Rmtcm",
+                                      "componentId": "sc-bRBYWo",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
@@ -3817,7 +3819,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                     "displayName": "styled.div",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-Rmtcm",
+                                    "styledComponentId": "sc-bRBYWo",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -3839,7 +3841,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-bRBYWo",
+                                            "componentId": "sc-hzDkRC",
                                             "isStatic": false,
                                             "lastClassName": "c5",
                                             "rules": Array [
@@ -3856,7 +3858,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-bRBYWo",
+                                          "styledComponentId": "sc-hzDkRC",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -3935,7 +3937,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-htpNat",
+                                      "componentId": "sc-bxivhb",
                                       "isStatic": true,
                                       "lastClassName": "c8",
                                       "rules": Array [
@@ -3951,7 +3953,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                     "displayName": "styled.i",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-htpNat",
+                                    "styledComponentId": "sc-bxivhb",
                                     "target": "i",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -4106,7 +4108,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-hSdWYo",
+                        "componentId": "sc-eHgmQL",
                         "isStatic": true,
                         "lastClassName": "c9",
                         "rules": Array [
@@ -4119,7 +4121,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-hSdWYo",
+                      "styledComponentId": "sc-eHgmQL",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -4156,7 +4158,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-fBuWsC",
+                                "componentId": "sc-fMiknA",
                                 "isStatic": true,
                                 "lastClassName": "c10",
                                 "rules": Array [
@@ -4168,7 +4170,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                               "displayName": "Styled(WindowPopup)",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-fBuWsC",
+                              "styledComponentId": "sc-fMiknA",
                               "target": [Function],
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -4200,7 +4202,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-chPdSV",
+                                        "componentId": "sc-kgoBCf",
                                         "isStatic": true,
                                         "lastClassName": "c11",
                                         "rules": Array [
@@ -4219,7 +4221,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                       "displayName": "styled.div",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-chPdSV",
+                                      "styledComponentId": "sc-kgoBCf",
                                       "target": "div",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
@@ -4245,7 +4247,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                             "$$typeof": Symbol(react.forward_ref),
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-kgoBCf",
+                                              "componentId": "sc-kGXeez",
                                               "isStatic": true,
                                               "lastClassName": "c12",
                                               "rules": Array [
@@ -4259,7 +4261,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                             "displayName": "styled.a",
                                             "foldedComponentIds": Array [],
                                             "render": [Function],
-                                            "styledComponentId": "sc-kgoBCf",
+                                            "styledComponentId": "sc-kGXeez",
                                             "target": "a",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -4286,7 +4288,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                             "$$typeof": Symbol(react.forward_ref),
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-dxgOiQ",
+                                              "componentId": "sc-ckVGcZ",
                                               "isStatic": false,
                                               "lastClassName": "c13",
                                               "rules": Array [
@@ -4306,7 +4308,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                             "displayName": "styled.div",
                                             "foldedComponentIds": Array [],
                                             "render": [Function],
-                                            "styledComponentId": "sc-dxgOiQ",
+                                            "styledComponentId": "sc-ckVGcZ",
                                             "target": "div",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -4327,7 +4329,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-jKJlTe",
+                                                    "componentId": "sc-eNQAEJ",
                                                     "isStatic": false,
                                                     "lastClassName": "c14",
                                                     "rules": Array [
@@ -4362,7 +4364,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                   "displayName": "styled.div",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "sc-jKJlTe",
+                                                  "styledComponentId": "sc-eNQAEJ",
                                                   "target": "div",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -4381,7 +4383,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-jhAzac",
+                                                          "componentId": "sc-fBuWsC",
                                                           "isStatic": true,
                                                           "lastClassName": "c15",
                                                           "rules": Array [
@@ -4395,7 +4397,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                         "displayName": "styled.div",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-jhAzac",
+                                                        "styledComponentId": "sc-fBuWsC",
                                                         "target": "div",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -4424,7 +4426,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                     "$$typeof": Symbol(react.forward_ref),
                                                     "attrs": Array [],
                                                     "componentStyle": ComponentStyle {
-                                                      "componentId": "sc-kpOJdX",
+                                                      "componentId": "sc-dxgOiQ",
                                                       "isStatic": true,
                                                       "lastClassName": "c16",
                                                       "rules": Array [
@@ -4473,7 +4475,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                     "displayName": "styled.a",
                                                     "foldedComponentIds": Array [],
                                                     "render": [Function],
-                                                    "styledComponentId": "sc-kpOJdX",
+                                                    "styledComponentId": "sc-dxgOiQ",
                                                     "target": "a",
                                                     "toString": [Function],
                                                     "warnTooManyClasses": [Function],
@@ -4498,7 +4500,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "attrs": Array [],
                                                             "componentStyle": ComponentStyle {
-                                                              "componentId": "sc-htpNat",
+                                                              "componentId": "sc-bxivhb",
                                                               "isStatic": true,
                                                               "lastClassName": "c8",
                                                               "rules": Array [
@@ -4514,7 +4516,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                             "displayName": "styled.i",
                                                             "foldedComponentIds": Array [],
                                                             "render": [Function],
-                                                            "styledComponentId": "sc-htpNat",
+                                                            "styledComponentId": "sc-bxivhb",
                                                             "target": "i",
                                                             "toString": [Function],
                                                             "warnTooManyClasses": [Function],
@@ -4568,7 +4570,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                   "$$typeof": Symbol(react.forward_ref),
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
-                                                    "componentId": "sc-ckVGcZ",
+                                                    "componentId": "sc-jKJlTe",
                                                     "isStatic": true,
                                                     "lastClassName": "c17",
                                                     "rules": Array [
@@ -4581,7 +4583,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                   "displayName": "styled.div",
                                                   "foldedComponentIds": Array [],
                                                   "render": [Function],
-                                                  "styledComponentId": "sc-ckVGcZ",
+                                                  "styledComponentId": "sc-jKJlTe",
                                                   "target": "div",
                                                   "toString": [Function],
                                                   "warnTooManyClasses": [Function],
@@ -4606,7 +4608,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-cvbbAY",
+                                                          "componentId": "sc-jWBwVP",
                                                           "isStatic": false,
                                                           "lastClassName": "c18",
                                                           "rules": Array [
@@ -4616,7 +4618,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                         "displayName": "styled.li",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-cvbbAY",
+                                                        "styledComponentId": "sc-jWBwVP",
                                                         "target": "li",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -4642,7 +4644,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-jWBwVP",
+                                                                "componentId": "sc-brqgnP",
                                                                 "isStatic": true,
                                                                 "lastClassName": "c19",
                                                                 "rules": Array [
@@ -4655,7 +4657,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                               "displayName": "styled.div",
                                                               "foldedComponentIds": Array [],
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-jWBwVP",
+                                                              "styledComponentId": "sc-brqgnP",
                                                               "target": "div",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -4674,7 +4676,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                     "$$typeof": Symbol(react.forward_ref),
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
-                                                                      "componentId": "sc-brqgnP",
+                                                                      "componentId": "sc-cMljjf",
                                                                       "isStatic": true,
                                                                       "lastClassName": "c20",
                                                                       "rules": Array [
@@ -4686,7 +4688,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                     "displayName": "styled.div",
                                                                     "foldedComponentIds": Array [],
                                                                     "render": [Function],
-                                                                    "styledComponentId": "sc-brqgnP",
+                                                                    "styledComponentId": "sc-cMljjf",
                                                                     "target": "div",
                                                                     "toString": [Function],
                                                                     "warnTooManyClasses": [Function],
@@ -4709,7 +4711,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                           "$$typeof": Symbol(react.forward_ref),
                                                                           "attrs": Array [],
                                                                           "componentStyle": ComponentStyle {
-                                                                            "componentId": "sc-cMljjf",
+                                                                            "componentId": "sc-jAaTju",
                                                                             "isStatic": false,
                                                                             "lastClassName": "c21",
                                                                             "rules": Array [
@@ -4726,7 +4728,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                           "displayName": "styled.div",
                                                                           "foldedComponentIds": Array [],
                                                                           "render": [Function],
-                                                                          "styledComponentId": "sc-cMljjf",
+                                                                          "styledComponentId": "sc-jAaTju",
                                                                           "target": "div",
                                                                           "toString": [Function],
                                                                           "warnTooManyClasses": [Function],
@@ -4765,7 +4767,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                         "$$typeof": Symbol(react.forward_ref),
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
-                                                          "componentId": "sc-cvbbAY",
+                                                          "componentId": "sc-jWBwVP",
                                                           "isStatic": false,
                                                           "lastClassName": "c18",
                                                           "rules": Array [
@@ -4775,7 +4777,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                         "displayName": "styled.li",
                                                         "foldedComponentIds": Array [],
                                                         "render": [Function],
-                                                        "styledComponentId": "sc-cvbbAY",
+                                                        "styledComponentId": "sc-jWBwVP",
                                                         "target": "li",
                                                         "toString": [Function],
                                                         "warnTooManyClasses": [Function],
@@ -4801,7 +4803,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
-                                                                "componentId": "sc-jWBwVP",
+                                                                "componentId": "sc-brqgnP",
                                                                 "isStatic": true,
                                                                 "lastClassName": "c19",
                                                                 "rules": Array [
@@ -4814,7 +4816,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                               "displayName": "styled.div",
                                                               "foldedComponentIds": Array [],
                                                               "render": [Function],
-                                                              "styledComponentId": "sc-jWBwVP",
+                                                              "styledComponentId": "sc-brqgnP",
                                                               "target": "div",
                                                               "toString": [Function],
                                                               "warnTooManyClasses": [Function],
@@ -4833,7 +4835,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                     "$$typeof": Symbol(react.forward_ref),
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
-                                                                      "componentId": "sc-brqgnP",
+                                                                      "componentId": "sc-cMljjf",
                                                                       "isStatic": true,
                                                                       "lastClassName": "c20",
                                                                       "rules": Array [
@@ -4845,7 +4847,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                     "displayName": "styled.div",
                                                                     "foldedComponentIds": Array [],
                                                                     "render": [Function],
-                                                                    "styledComponentId": "sc-brqgnP",
+                                                                    "styledComponentId": "sc-cMljjf",
                                                                     "target": "div",
                                                                     "toString": [Function],
                                                                     "warnTooManyClasses": [Function],
@@ -4868,7 +4870,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                           "$$typeof": Symbol(react.forward_ref),
                                                                           "attrs": Array [],
                                                                           "componentStyle": ComponentStyle {
-                                                                            "componentId": "sc-cMljjf",
+                                                                            "componentId": "sc-jAaTju",
                                                                             "isStatic": false,
                                                                             "lastClassName": "c21",
                                                                             "rules": Array [
@@ -4885,7 +4887,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                           "displayName": "styled.div",
                                                                           "foldedComponentIds": Array [],
                                                                           "render": [Function],
-                                                                          "styledComponentId": "sc-cMljjf",
+                                                                          "styledComponentId": "sc-jAaTju",
                                                                           "target": "div",
                                                                           "toString": [Function],
                                                                           "warnTooManyClasses": [Function],
@@ -4927,7 +4929,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                             "$$typeof": Symbol(react.forward_ref),
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
-                                              "componentId": "sc-kgoBCf",
+                                              "componentId": "sc-kGXeez",
                                               "isStatic": true,
                                               "lastClassName": "c12",
                                               "rules": Array [
@@ -4941,7 +4943,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                             "displayName": "styled.a",
                                             "foldedComponentIds": Array [],
                                             "render": [Function],
-                                            "styledComponentId": "sc-kgoBCf",
+                                            "styledComponentId": "sc-kGXeez",
                                             "target": "a",
                                             "toString": [Function],
                                             "warnTooManyClasses": [Function],
@@ -4972,7 +4974,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-kGXeez",
+                                        "componentId": "sc-kpOJdX",
                                         "isStatic": true,
                                         "lastClassName": "c22",
                                         "rules": Array [
@@ -4997,10 +4999,10 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                       },
                                       "displayName": "Styled(styled.div)",
                                       "foldedComponentIds": Array [
-                                        "sc-chPdSV",
+                                        "sc-kgoBCf",
                                       ],
                                       "render": [Function],
-                                      "styledComponentId": "sc-kGXeez",
+                                      "styledComponentId": "sc-kpOJdX",
                                       "target": "div",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
@@ -5025,6 +5027,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -5165,7 +5168,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jlyJG",
+            "componentId": "sc-gipzik",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -5178,7 +5181,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jlyJG",
+          "styledComponentId": "sc-gipzik",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -5201,7 +5204,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-gipzik",
+                  "componentId": "sc-csuQGl",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -5213,7 +5216,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-gipzik",
+                "styledComponentId": "sc-csuQGl",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -5244,7 +5247,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-csuQGl",
+                        "componentId": "sc-Rmtcm",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -5258,10 +5261,10 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                       },
                       "displayName": "Styled(styled.div)",
                       "foldedComponentIds": Array [
-                        "sc-jzJRlG",
+                        "sc-cSHVUG",
                       ],
                       "render": [Function],
-                      "styledComponentId": "sc-csuQGl",
+                      "styledComponentId": "sc-Rmtcm",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -5287,7 +5290,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-gqjmRU",
+                                "componentId": "sc-VigVT",
                                 "isStatic": true,
                                 "lastClassName": "c3",
                                 "rules": Array [
@@ -5305,7 +5308,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                               "displayName": "styled.div",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-gqjmRU",
+                              "styledComponentId": "sc-VigVT",
                               "target": "div",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -5326,7 +5329,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-Rmtcm",
+                                      "componentId": "sc-bRBYWo",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
@@ -5368,7 +5371,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                     "displayName": "styled.div",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-Rmtcm",
+                                    "styledComponentId": "sc-bRBYWo",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -5390,7 +5393,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-fMiknA",
+                                            "componentId": "sc-dVhcbM",
                                             "isStatic": false,
                                             "lastClassName": "c5",
                                             "rules": Array [
@@ -5420,10 +5423,10 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                           },
                                           "displayName": "Styled(styled.span)",
                                           "foldedComponentIds": Array [
-                                            "sc-cSHVUG",
+                                            "sc-kAzzGY",
                                           ],
                                           "render": [Function],
-                                          "styledComponentId": "sc-fMiknA",
+                                          "styledComponentId": "sc-dVhcbM",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -5448,7 +5451,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-fMiknA",
+                                            "componentId": "sc-dVhcbM",
                                             "isStatic": false,
                                             "lastClassName": "c5",
                                             "rules": Array [
@@ -5478,10 +5481,10 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                           },
                                           "displayName": "Styled(styled.span)",
                                           "foldedComponentIds": Array [
-                                            "sc-cSHVUG",
+                                            "sc-kAzzGY",
                                           ],
                                           "render": [Function],
-                                          "styledComponentId": "sc-fMiknA",
+                                          "styledComponentId": "sc-dVhcbM",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -5560,7 +5563,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-htpNat",
+                                      "componentId": "sc-bxivhb",
                                       "isStatic": true,
                                       "lastClassName": "c8",
                                       "rules": Array [
@@ -5576,7 +5579,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                     "displayName": "styled.i",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-htpNat",
+                                    "styledComponentId": "sc-bxivhb",
                                     "target": "i",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -5730,7 +5733,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-hSdWYo",
+                        "componentId": "sc-eHgmQL",
                         "isStatic": true,
                         "lastClassName": "c9",
                         "rules": Array [
@@ -5743,7 +5746,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-hSdWYo",
+                      "styledComponentId": "sc-eHgmQL",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -5773,6 +5776,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -5896,7 +5900,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jlyJG",
+            "componentId": "sc-gipzik",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -5909,7 +5913,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jlyJG",
+          "styledComponentId": "sc-gipzik",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -5932,7 +5936,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-gipzik",
+                  "componentId": "sc-csuQGl",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -5944,7 +5948,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-gipzik",
+                "styledComponentId": "sc-csuQGl",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -5975,7 +5979,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-csuQGl",
+                        "componentId": "sc-Rmtcm",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -5989,10 +5993,10 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                       },
                       "displayName": "Styled(styled.div)",
                       "foldedComponentIds": Array [
-                        "sc-jzJRlG",
+                        "sc-cSHVUG",
                       ],
                       "render": [Function],
-                      "styledComponentId": "sc-csuQGl",
+                      "styledComponentId": "sc-Rmtcm",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -6018,7 +6022,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-gqjmRU",
+                                "componentId": "sc-VigVT",
                                 "isStatic": true,
                                 "lastClassName": "c3",
                                 "rules": Array [
@@ -6036,7 +6040,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                               "displayName": "styled.div",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-gqjmRU",
+                              "styledComponentId": "sc-VigVT",
                               "target": "div",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -6057,7 +6061,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-Rmtcm",
+                                      "componentId": "sc-bRBYWo",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
@@ -6099,7 +6103,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                                     "displayName": "styled.div",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-Rmtcm",
+                                    "styledComponentId": "sc-bRBYWo",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -6176,7 +6180,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-htpNat",
+                                      "componentId": "sc-bxivhb",
                                       "isStatic": true,
                                       "lastClassName": "c7",
                                       "rules": Array [
@@ -6192,7 +6196,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                                     "displayName": "styled.i",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-htpNat",
+                                    "styledComponentId": "sc-bxivhb",
                                     "target": "i",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -6336,7 +6340,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-hSdWYo",
+                        "componentId": "sc-eHgmQL",
                         "isStatic": true,
                         "lastClassName": "c8",
                         "rules": Array [
@@ -6349,7 +6353,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-hSdWYo",
+                      "styledComponentId": "sc-eHgmQL",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -6379,6 +6383,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -6386,11 +6391,17 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
 `;
 
 exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
+.c10 {
+  padding-top: 0.25rem;
+  padding-left: 1rem;
+  padding-bottom: 0.25rem;
+  padding-right: 0;
+}
+
 .c9 {
   font-size: 0.75rem;
   line-height: 0.875rem;
   color: rgba(167,2,64,1);
-  padding: 0.25rem 1rem;
 }
 
 .c7 {
@@ -6511,7 +6522,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jlyJG",
+            "componentId": "sc-gipzik",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -6524,7 +6535,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jlyJG",
+          "styledComponentId": "sc-gipzik",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -6547,7 +6558,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-gipzik",
+                  "componentId": "sc-csuQGl",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -6559,7 +6570,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-gipzik",
+                "styledComponentId": "sc-csuQGl",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -6590,7 +6601,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-csuQGl",
+                        "componentId": "sc-Rmtcm",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -6604,10 +6615,10 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                       },
                       "displayName": "Styled(styled.div)",
                       "foldedComponentIds": Array [
-                        "sc-jzJRlG",
+                        "sc-cSHVUG",
                       ],
                       "render": [Function],
-                      "styledComponentId": "sc-csuQGl",
+                      "styledComponentId": "sc-Rmtcm",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -6632,7 +6643,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-gqjmRU",
+                                "componentId": "sc-VigVT",
                                 "isStatic": true,
                                 "lastClassName": "c3",
                                 "rules": Array [
@@ -6650,7 +6661,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                               "displayName": "styled.div",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-gqjmRU",
+                              "styledComponentId": "sc-VigVT",
                               "target": "div",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -6671,7 +6682,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-Rmtcm",
+                                      "componentId": "sc-bRBYWo",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
@@ -6713,7 +6724,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                     "displayName": "styled.div",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-Rmtcm",
+                                    "styledComponentId": "sc-bRBYWo",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -6789,7 +6800,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-htpNat",
+                                        "componentId": "sc-bxivhb",
                                         "isStatic": true,
                                         "lastClassName": "c7",
                                         "rules": Array [
@@ -6805,7 +6816,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                       "displayName": "styled.i",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-htpNat",
+                                      "styledComponentId": "sc-bxivhb",
                                       "target": "i",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
@@ -6905,7 +6916,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-htpNat",
+                                      "componentId": "sc-bxivhb",
                                       "isStatic": true,
                                       "lastClassName": "c7",
                                       "rules": Array [
@@ -6921,7 +6932,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                     "displayName": "styled.i",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-htpNat",
+                                    "styledComponentId": "sc-bxivhb",
                                     "target": "i",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -7063,7 +7074,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-hSdWYo",
+                        "componentId": "sc-eHgmQL",
                         "isStatic": true,
                         "lastClassName": "c8",
                         "rules": Array [
@@ -7076,7 +7087,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-hSdWYo",
+                      "styledComponentId": "sc-eHgmQL",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -7106,64 +7117,118 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <InputError>
-          <styled.div>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-bdVaJa",
-                    "isStatic": false,
-                    "lastClassName": "c9",
-                    "rules": Array [
-                      "
-  ",
-                      "
-    ",
-                      "font-size: 0.75rem;
-  ",
-                      "
-    ",
-                      "line-height: 0.875rem;
-  ",
-                      "
-    ",
-                      "
-  ",
-                      "
-  color: ",
-                      [Function],
-                      ";
-  padding: ",
-                      [Function],
-                      " ",
-                      [Function],
-                      ";
-",
-                    ],
-                  },
-                  "displayName": "styled.div",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-bdVaJa",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
+        <Component>
+          <WithError
+            error="You need to select a field"
+          >
+            <InputError
+              left="medium"
             >
-              <div
-                className="c9"
+              <Styled(Component)
+                bottom="xsmall"
+                left="medium"
+                top="xsmall"
               >
-                You need to select a field
-              </div>
-            </StyledComponent>
-          </styled.div>
-        </InputError>
+                <StyledComponent
+                  bottom="xsmall"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-htpNat",
+                        "isStatic": false,
+                        "lastClassName": "c9",
+                        "rules": Array [
+                          "
+  ",
+                          "
+    ",
+                          "font-size: 0.75rem;
+  ",
+                          "
+    ",
+                          "line-height: 0.875rem;
+  ",
+                          "
+    ",
+                          "
+  ",
+                          ";
+  color: ",
+                          [Function],
+                          ";
+",
+                        ],
+                      },
+                      "displayName": "Styled(Component)",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-htpNat",
+                      "target": [Function],
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  left="medium"
+                  top="xsmall"
+                >
+                  <Component
+                    bottom="xsmall"
+                    className="c9"
+                    left="medium"
+                    top="xsmall"
+                  >
+                    <styled.div
+                      bottom="xsmall"
+                      className="c9"
+                      left="medium"
+                      top="xsmall"
+                    >
+                      <StyledComponent
+                        bottom="xsmall"
+                        className="c9"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bdVaJa",
+                              "isStatic": false,
+                              "lastClassName": "c10",
+                              "rules": Array [
+                                [Function],
+                              ],
+                            },
+                            "displayName": "styled.div",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bdVaJa",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        left="medium"
+                        top="xsmall"
+                      >
+                        <div
+                          className="c9 c10"
+                        >
+                          You need to select a field
+                        </div>
+                      </StyledComponent>
+                    </styled.div>
+                  </Component>
+                </StyledComponent>
+              </Styled(Component)>
+            </InputError>
+          </WithError>
+        </Component>
       </div>
     </StyledComponent>
   </styled.div>
@@ -7171,11 +7236,17 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
 `;
 
 exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
+.c10 {
+  padding-top: 0.25rem;
+  padding-left: 1rem;
+  padding-bottom: 0.25rem;
+  padding-right: 0;
+}
+
 .c9 {
   font-size: 0.75rem;
   line-height: 0.875rem;
   color: rgba(167,2,64,1);
-  padding: 0.25rem 1rem;
 }
 
 .c7 {
@@ -7296,7 +7367,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jlyJG",
+            "componentId": "sc-gipzik",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -7309,7 +7380,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jlyJG",
+          "styledComponentId": "sc-gipzik",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -7332,7 +7403,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-gipzik",
+                  "componentId": "sc-csuQGl",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -7344,7 +7415,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-gipzik",
+                "styledComponentId": "sc-csuQGl",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -7375,7 +7446,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-csuQGl",
+                        "componentId": "sc-Rmtcm",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -7389,10 +7460,10 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                       },
                       "displayName": "Styled(styled.div)",
                       "foldedComponentIds": Array [
-                        "sc-jzJRlG",
+                        "sc-cSHVUG",
                       ],
                       "render": [Function],
-                      "styledComponentId": "sc-csuQGl",
+                      "styledComponentId": "sc-Rmtcm",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -7417,7 +7488,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-gqjmRU",
+                                "componentId": "sc-VigVT",
                                 "isStatic": true,
                                 "lastClassName": "c3",
                                 "rules": Array [
@@ -7435,7 +7506,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                               "displayName": "styled.div",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-gqjmRU",
+                              "styledComponentId": "sc-VigVT",
                               "target": "div",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -7456,7 +7527,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-Rmtcm",
+                                      "componentId": "sc-bRBYWo",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
@@ -7498,7 +7569,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                     "displayName": "styled.div",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-Rmtcm",
+                                    "styledComponentId": "sc-bRBYWo",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -7574,7 +7645,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "sc-htpNat",
+                                        "componentId": "sc-bxivhb",
                                         "isStatic": true,
                                         "lastClassName": "c7",
                                         "rules": Array [
@@ -7590,7 +7661,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                       "displayName": "styled.i",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "sc-htpNat",
+                                      "styledComponentId": "sc-bxivhb",
                                       "target": "i",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],
@@ -7690,7 +7761,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-htpNat",
+                                      "componentId": "sc-bxivhb",
                                       "isStatic": true,
                                       "lastClassName": "c7",
                                       "rules": Array [
@@ -7706,7 +7777,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                     "displayName": "styled.i",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-htpNat",
+                                    "styledComponentId": "sc-bxivhb",
                                     "target": "i",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -7848,7 +7919,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-hSdWYo",
+                        "componentId": "sc-eHgmQL",
                         "isStatic": true,
                         "lastClassName": "c8",
                         "rules": Array [
@@ -7861,7 +7932,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-hSdWYo",
+                      "styledComponentId": "sc-eHgmQL",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -7891,64 +7962,118 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <InputError>
-          <styled.div>
-            <StyledComponent
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-bdVaJa",
-                    "isStatic": false,
-                    "lastClassName": "c9",
-                    "rules": Array [
-                      "
-  ",
-                      "
-    ",
-                      "font-size: 0.75rem;
-  ",
-                      "
-    ",
-                      "line-height: 0.875rem;
-  ",
-                      "
-    ",
-                      "
-  ",
-                      "
-  color: ",
-                      [Function],
-                      ";
-  padding: ",
-                      [Function],
-                      " ",
-                      [Function],
-                      ";
-",
-                    ],
-                  },
-                  "displayName": "styled.div",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-bdVaJa",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
+        <Component>
+          <WithError
+            error="You need to select a field"
+          >
+            <InputError
+              left="medium"
             >
-              <div
-                className="c9"
+              <Styled(Component)
+                bottom="xsmall"
+                left="medium"
+                top="xsmall"
               >
-                You need to select a field
-              </div>
-            </StyledComponent>
-          </styled.div>
-        </InputError>
+                <StyledComponent
+                  bottom="xsmall"
+                  forwardedComponent={
+                    Object {
+                      "$$typeof": Symbol(react.forward_ref),
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "sc-htpNat",
+                        "isStatic": false,
+                        "lastClassName": "c9",
+                        "rules": Array [
+                          "
+  ",
+                          "
+    ",
+                          "font-size: 0.75rem;
+  ",
+                          "
+    ",
+                          "line-height: 0.875rem;
+  ",
+                          "
+    ",
+                          "
+  ",
+                          ";
+  color: ",
+                          [Function],
+                          ";
+",
+                        ],
+                      },
+                      "displayName": "Styled(Component)",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "sc-htpNat",
+                      "target": [Function],
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  left="medium"
+                  top="xsmall"
+                >
+                  <Component
+                    bottom="xsmall"
+                    className="c9"
+                    left="medium"
+                    top="xsmall"
+                  >
+                    <styled.div
+                      bottom="xsmall"
+                      className="c9"
+                      left="medium"
+                      top="xsmall"
+                    >
+                      <StyledComponent
+                        bottom="xsmall"
+                        className="c9"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bdVaJa",
+                              "isStatic": false,
+                              "lastClassName": "c10",
+                              "rules": Array [
+                                [Function],
+                              ],
+                            },
+                            "displayName": "styled.div",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bdVaJa",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        left="medium"
+                        top="xsmall"
+                      >
+                        <div
+                          className="c9 c10"
+                        >
+                          You need to select a field
+                        </div>
+                      </StyledComponent>
+                    </styled.div>
+                  </Component>
+                </StyledComponent>
+              </Styled(Component)>
+            </InputError>
+          </WithError>
+        </Component>
       </div>
     </StyledComponent>
   </styled.div>
@@ -8079,7 +8204,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jlyJG",
+            "componentId": "sc-gipzik",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -8092,7 +8217,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jlyJG",
+          "styledComponentId": "sc-gipzik",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -8115,7 +8240,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-gipzik",
+                  "componentId": "sc-csuQGl",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -8127,7 +8252,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-gipzik",
+                "styledComponentId": "sc-csuQGl",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -8158,7 +8283,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-csuQGl",
+                        "componentId": "sc-Rmtcm",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -8172,10 +8297,10 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                       },
                       "displayName": "Styled(styled.div)",
                       "foldedComponentIds": Array [
-                        "sc-jzJRlG",
+                        "sc-cSHVUG",
                       ],
                       "render": [Function],
-                      "styledComponentId": "sc-csuQGl",
+                      "styledComponentId": "sc-Rmtcm",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -8200,7 +8325,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-gqjmRU",
+                                "componentId": "sc-VigVT",
                                 "isStatic": true,
                                 "lastClassName": "c3",
                                 "rules": Array [
@@ -8218,7 +8343,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                               "displayName": "styled.div",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-gqjmRU",
+                              "styledComponentId": "sc-VigVT",
                               "target": "div",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -8239,7 +8364,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-Rmtcm",
+                                      "componentId": "sc-bRBYWo",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
@@ -8281,7 +8406,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                     "displayName": "styled.div",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-Rmtcm",
+                                    "styledComponentId": "sc-bRBYWo",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -8303,7 +8428,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-bRBYWo",
+                                            "componentId": "sc-hzDkRC",
                                             "isStatic": false,
                                             "lastClassName": "c5",
                                             "rules": Array [
@@ -8320,7 +8445,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-bRBYWo",
+                                          "styledComponentId": "sc-hzDkRC",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -8399,7 +8524,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-htpNat",
+                                      "componentId": "sc-bxivhb",
                                       "isStatic": true,
                                       "lastClassName": "c8",
                                       "rules": Array [
@@ -8415,7 +8540,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                     "displayName": "styled.i",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-htpNat",
+                                    "styledComponentId": "sc-bxivhb",
                                     "target": "i",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -8565,7 +8690,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-hSdWYo",
+                        "componentId": "sc-eHgmQL",
                         "isStatic": true,
                         "lastClassName": "c9",
                         "rules": Array [
@@ -8578,7 +8703,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-hSdWYo",
+                      "styledComponentId": "sc-eHgmQL",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -8608,6 +8733,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -8738,7 +8864,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-jlyJG",
+            "componentId": "sc-gipzik",
             "isStatic": true,
             "lastClassName": "c0",
             "rules": Array [
@@ -8751,7 +8877,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-jlyJG",
+          "styledComponentId": "sc-gipzik",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -8774,7 +8900,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-gipzik",
+                  "componentId": "sc-csuQGl",
                   "isStatic": true,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -8786,7 +8912,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                 "displayName": "styled.div",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-gipzik",
+                "styledComponentId": "sc-csuQGl",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -8819,7 +8945,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-csuQGl",
+                        "componentId": "sc-Rmtcm",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -8833,10 +8959,10 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                       },
                       "displayName": "Styled(styled.div)",
                       "foldedComponentIds": Array [
-                        "sc-jzJRlG",
+                        "sc-cSHVUG",
                       ],
                       "render": [Function],
-                      "styledComponentId": "sc-csuQGl",
+                      "styledComponentId": "sc-Rmtcm",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -8862,7 +8988,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                               "$$typeof": Symbol(react.forward_ref),
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
-                                "componentId": "sc-gqjmRU",
+                                "componentId": "sc-VigVT",
                                 "isStatic": true,
                                 "lastClassName": "c3",
                                 "rules": Array [
@@ -8880,7 +9006,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                               "displayName": "styled.div",
                               "foldedComponentIds": Array [],
                               "render": [Function],
-                              "styledComponentId": "sc-gqjmRU",
+                              "styledComponentId": "sc-VigVT",
                               "target": "div",
                               "toString": [Function],
                               "warnTooManyClasses": [Function],
@@ -8903,7 +9029,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-Rmtcm",
+                                      "componentId": "sc-bRBYWo",
                                       "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
@@ -8945,7 +9071,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                     "displayName": "styled.div",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-Rmtcm",
+                                    "styledComponentId": "sc-bRBYWo",
                                     "target": "div",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -8968,7 +9094,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                           "$$typeof": Symbol(react.forward_ref),
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
-                                            "componentId": "sc-bRBYWo",
+                                            "componentId": "sc-hzDkRC",
                                             "isStatic": false,
                                             "lastClassName": "c5",
                                             "rules": Array [
@@ -8985,7 +9111,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                           "displayName": "styled.span",
                                           "foldedComponentIds": Array [],
                                           "render": [Function],
-                                          "styledComponentId": "sc-bRBYWo",
+                                          "styledComponentId": "sc-hzDkRC",
                                           "target": "span",
                                           "toString": [Function],
                                           "warnTooManyClasses": [Function],
@@ -9065,7 +9191,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                     "$$typeof": Symbol(react.forward_ref),
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
-                                      "componentId": "sc-htpNat",
+                                      "componentId": "sc-bxivhb",
                                       "isStatic": true,
                                       "lastClassName": "c8",
                                       "rules": Array [
@@ -9081,7 +9207,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                     "displayName": "styled.i",
                                     "foldedComponentIds": Array [],
                                     "render": [Function],
-                                    "styledComponentId": "sc-htpNat",
+                                    "styledComponentId": "sc-bxivhb",
                                     "target": "i",
                                     "toString": [Function],
                                     "warnTooManyClasses": [Function],
@@ -9231,7 +9357,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                       "$$typeof": Symbol(react.forward_ref),
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "sc-hSdWYo",
+                        "componentId": "sc-eHgmQL",
                         "isStatic": true,
                         "lastClassName": "c9",
                         "rules": Array [
@@ -9244,7 +9370,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                       "displayName": "styled.div",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "sc-hSdWYo",
+                      "styledComponentId": "sc-eHgmQL",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -9274,6 +9400,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
+        <Component />
       </div>
     </StyledComponent>
   </styled.div>

@@ -1,11 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<InputInfo /> should be shown with the withValidation hoc if not changed 1`] = `
+.c7 {
+  padding-top: 0.25rem;
+  padding-left: 1rem;
+  padding-bottom: 0.25rem;
+  padding-right: 0;
+}
+
 .c6 {
   font-size: 0.75rem;
   line-height: 0.875rem;
   color: rgba(114,114,114,1);
-  padding: 0.25rem 1rem;
 }
 
 .c2 {
@@ -170,7 +176,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-kgoBCf",
+                "componentId": "sc-kGXeez",
                 "isStatic": true,
                 "lastClassName": "c0",
                 "rules": Array [
@@ -182,7 +188,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-kgoBCf",
+              "styledComponentId": "sc-kGXeez",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -201,7 +207,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kGXeez",
+                      "componentId": "sc-kpOJdX",
                       "isStatic": true,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -213,7 +219,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                     "displayName": "Styled(StackPanel)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kGXeez",
+                    "styledComponentId": "sc-kpOJdX",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -238,7 +244,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-bwzfXH",
+                            "componentId": "sc-htpNat",
                             "isStatic": false,
                             "lastClassName": "c2",
                             "rules": Array [
@@ -257,7 +263,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-bwzfXH",
+                          "styledComponentId": "sc-htpNat",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -284,7 +290,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jzJRlG",
+                                  "componentId": "sc-cSHVUG",
                                   "isStatic": false,
                                   "lastClassName": "c3",
                                   "rules": Array [
@@ -294,7 +300,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                                 "displayName": "styled.div",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-jzJRlG",
+                                "styledComponentId": "sc-cSHVUG",
                                 "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -320,7 +326,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-gqjmRU",
+                                          "componentId": "sc-VigVT",
                                           "isStatic": true,
                                           "lastClassName": "c4",
                                           "rules": Array [
@@ -338,7 +344,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                                         "displayName": "styled.div",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-gqjmRU",
+                                        "styledComponentId": "sc-VigVT",
                                         "target": "div",
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -363,7 +369,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-fjdhpX",
+                                                "componentId": "sc-jzJRlG",
                                                 "isStatic": false,
                                                 "lastClassName": "c5",
                                                 "rules": Array [
@@ -419,7 +425,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                                               "displayName": "styled.input",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-fjdhpX",
+                                              "styledComponentId": "sc-jzJRlG",
                                               "target": "input",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -459,77 +465,118 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                 </StackPanel>
               </StyledComponent>
             </Styled(StackPanel)>
-            <InputInfo>
-              <styled.div
-                padding={
-                  Object {
-                    "horizontal": "1rem",
-                    "vertical": "0.25rem",
-                  }
-                }
+            <Component>
+              <WithInfo
+                info="Required input"
               >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bdVaJa",
-                        "isStatic": false,
-                        "lastClassName": "c6",
-                        "rules": Array [
-                          "
-  ",
-                          "
-    ",
-                          "font-size: 0.75rem;
-  ",
-                          "
-    ",
-                          "line-height: 0.875rem;
-  ",
-                          "
-    ",
-                          "
-  ",
-                          "
-  color: ",
-                          [Function],
-                          ";
-  padding: ",
-                          [Function],
-                          " ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bdVaJa",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  padding={
-                    Object {
-                      "horizontal": "1rem",
-                      "vertical": "0.25rem",
-                    }
-                  }
+                <InputInfo
+                  left="medium"
                 >
-                  <div
-                    className="c6"
+                  <Styled(Component)
+                    bottom="xsmall"
+                    left="medium"
+                    top="xsmall"
                   >
-                    Required input
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InputInfo>
+                    <StyledComponent
+                      bottom="xsmall"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bwzfXH",
+                            "isStatic": false,
+                            "lastClassName": "c6",
+                            "rules": Array [
+                              "
+  ",
+                              "
+    ",
+                              "font-size: 0.75rem;
+  ",
+                              "
+    ",
+                              "line-height: 0.875rem;
+  ",
+                              "
+    ",
+                              "
+  ",
+                              ";
+  color: ",
+                              [Function],
+                              ";
+",
+                            ],
+                          },
+                          "displayName": "Styled(Component)",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bwzfXH",
+                          "target": [Function],
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      left="medium"
+                      top="xsmall"
+                    >
+                      <Component
+                        bottom="xsmall"
+                        className="c6"
+                        left="medium"
+                        top="xsmall"
+                      >
+                        <styled.div
+                          bottom="xsmall"
+                          className="c6"
+                          left="medium"
+                          top="xsmall"
+                        >
+                          <StyledComponent
+                            bottom="xsmall"
+                            className="c6"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bdVaJa",
+                                  "isStatic": false,
+                                  "lastClassName": "c7",
+                                  "rules": Array [
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.div",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-bdVaJa",
+                                "target": "div",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            left="medium"
+                            top="xsmall"
+                          >
+                            <div
+                              className="c6 c7"
+                            >
+                              Required input
+                            </div>
+                          </StyledComponent>
+                        </styled.div>
+                      </Component>
+                    </StyledComponent>
+                  </Styled(Component)>
+                </InputInfo>
+              </WithInfo>
+            </Component>
           </div>
         </StyledComponent>
       </styled.div>
@@ -539,11 +586,17 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
 `;
 
 exports[`<InputInfo /> should not be shown with the withValidation hoc if changed 1`] = `
+.c7 {
+  padding-top: 0.25rem;
+  padding-left: 1rem;
+  padding-bottom: 0.25rem;
+  padding-right: 0;
+}
+
 .c6 {
   font-size: 0.75rem;
   line-height: 0.875rem;
   color: rgba(114,114,114,1);
-  padding: 0.25rem 1rem;
 }
 
 .c2 {
@@ -708,7 +761,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
               "$$typeof": Symbol(react.forward_ref),
               "attrs": Array [],
               "componentStyle": ComponentStyle {
-                "componentId": "sc-kgoBCf",
+                "componentId": "sc-kGXeez",
                 "isStatic": true,
                 "lastClassName": "c0",
                 "rules": Array [
@@ -720,7 +773,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
               "displayName": "styled.div",
               "foldedComponentIds": Array [],
               "render": [Function],
-              "styledComponentId": "sc-kgoBCf",
+              "styledComponentId": "sc-kGXeez",
               "target": "div",
               "toString": [Function],
               "warnTooManyClasses": [Function],
@@ -739,7 +792,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                     "$$typeof": Symbol(react.forward_ref),
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
-                      "componentId": "sc-kGXeez",
+                      "componentId": "sc-kpOJdX",
                       "isStatic": true,
                       "lastClassName": "c1",
                       "rules": Array [
@@ -751,7 +804,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                     "displayName": "Styled(StackPanel)",
                     "foldedComponentIds": Array [],
                     "render": [Function],
-                    "styledComponentId": "sc-kGXeez",
+                    "styledComponentId": "sc-kpOJdX",
                     "target": [Function],
                     "toString": [Function],
                     "warnTooManyClasses": [Function],
@@ -776,7 +829,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                           "$$typeof": Symbol(react.forward_ref),
                           "attrs": Array [],
                           "componentStyle": ComponentStyle {
-                            "componentId": "sc-bwzfXH",
+                            "componentId": "sc-htpNat",
                             "isStatic": false,
                             "lastClassName": "c2",
                             "rules": Array [
@@ -795,7 +848,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                           "displayName": "styled.div",
                           "foldedComponentIds": Array [],
                           "render": [Function],
-                          "styledComponentId": "sc-bwzfXH",
+                          "styledComponentId": "sc-htpNat",
                           "target": "div",
                           "toString": [Function],
                           "warnTooManyClasses": [Function],
@@ -822,9 +875,9 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                                 "$$typeof": Symbol(react.forward_ref),
                                 "attrs": Array [],
                                 "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jzJRlG",
+                                  "componentId": "sc-cSHVUG",
                                   "isStatic": false,
-                                  "lastClassName": "fvjFQg",
+                                  "lastClassName": "kiKoQn",
                                   "rules": Array [
                                     [Function],
                                   ],
@@ -832,7 +885,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                                 "displayName": "styled.div",
                                 "foldedComponentIds": Array [],
                                 "render": [Function],
-                                "styledComponentId": "sc-jzJRlG",
+                                "styledComponentId": "sc-cSHVUG",
                                 "target": "div",
                                 "toString": [Function],
                                 "warnTooManyClasses": [Function],
@@ -858,7 +911,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                                         "$$typeof": Symbol(react.forward_ref),
                                         "attrs": Array [],
                                         "componentStyle": ComponentStyle {
-                                          "componentId": "sc-gqjmRU",
+                                          "componentId": "sc-VigVT",
                                           "isStatic": true,
                                           "lastClassName": "c4",
                                           "rules": Array [
@@ -876,7 +929,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                                         "displayName": "styled.div",
                                         "foldedComponentIds": Array [],
                                         "render": [Function],
-                                        "styledComponentId": "sc-gqjmRU",
+                                        "styledComponentId": "sc-VigVT",
                                         "target": "div",
                                         "toString": [Function],
                                         "warnTooManyClasses": [Function],
@@ -901,7 +954,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                                               "$$typeof": Symbol(react.forward_ref),
                                               "attrs": Array [],
                                               "componentStyle": ComponentStyle {
-                                                "componentId": "sc-fjdhpX",
+                                                "componentId": "sc-jzJRlG",
                                                 "isStatic": false,
                                                 "lastClassName": "c5",
                                                 "rules": Array [
@@ -957,7 +1010,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                                               "displayName": "styled.input",
                                               "foldedComponentIds": Array [],
                                               "render": [Function],
-                                              "styledComponentId": "sc-fjdhpX",
+                                              "styledComponentId": "sc-jzJRlG",
                                               "target": "input",
                                               "toString": [Function],
                                               "warnTooManyClasses": [Function],
@@ -997,77 +1050,118 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                 </StackPanel>
               </StyledComponent>
             </Styled(StackPanel)>
-            <InputInfo>
-              <styled.div
-                padding={
-                  Object {
-                    "horizontal": "1rem",
-                    "vertical": "0.25rem",
-                  }
-                }
+            <Component>
+              <WithInfo
+                info="Required input"
               >
-                <StyledComponent
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bdVaJa",
-                        "isStatic": false,
-                        "lastClassName": "c6",
-                        "rules": Array [
-                          "
-  ",
-                          "
-    ",
-                          "font-size: 0.75rem;
-  ",
-                          "
-    ",
-                          "line-height: 0.875rem;
-  ",
-                          "
-    ",
-                          "
-  ",
-                          "
-  color: ",
-                          [Function],
-                          ";
-  padding: ",
-                          [Function],
-                          " ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bdVaJa",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  padding={
-                    Object {
-                      "horizontal": "1rem",
-                      "vertical": "0.25rem",
-                    }
-                  }
+                <InputInfo
+                  left="medium"
                 >
-                  <div
-                    className="c6"
+                  <Styled(Component)
+                    bottom="xsmall"
+                    left="medium"
+                    top="xsmall"
                   >
-                    Required input
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InputInfo>
+                    <StyledComponent
+                      bottom="xsmall"
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bwzfXH",
+                            "isStatic": false,
+                            "lastClassName": "c6",
+                            "rules": Array [
+                              "
+  ",
+                              "
+    ",
+                              "font-size: 0.75rem;
+  ",
+                              "
+    ",
+                              "line-height: 0.875rem;
+  ",
+                              "
+    ",
+                              "
+  ",
+                              ";
+  color: ",
+                              [Function],
+                              ";
+",
+                            ],
+                          },
+                          "displayName": "Styled(Component)",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bwzfXH",
+                          "target": [Function],
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
+                        }
+                      }
+                      forwardedRef={null}
+                      left="medium"
+                      top="xsmall"
+                    >
+                      <Component
+                        bottom="xsmall"
+                        className="c6"
+                        left="medium"
+                        top="xsmall"
+                      >
+                        <styled.div
+                          bottom="xsmall"
+                          className="c6"
+                          left="medium"
+                          top="xsmall"
+                        >
+                          <StyledComponent
+                            bottom="xsmall"
+                            className="c6"
+                            forwardedComponent={
+                              Object {
+                                "$$typeof": Symbol(react.forward_ref),
+                                "attrs": Array [],
+                                "componentStyle": ComponentStyle {
+                                  "componentId": "sc-bdVaJa",
+                                  "isStatic": false,
+                                  "lastClassName": "c7",
+                                  "rules": Array [
+                                    [Function],
+                                  ],
+                                },
+                                "displayName": "styled.div",
+                                "foldedComponentIds": Array [],
+                                "render": [Function],
+                                "styledComponentId": "sc-bdVaJa",
+                                "target": "div",
+                                "toString": [Function],
+                                "warnTooManyClasses": [Function],
+                                "withComponent": [Function],
+                              }
+                            }
+                            forwardedRef={null}
+                            left="medium"
+                            top="xsmall"
+                          >
+                            <div
+                              className="c6 c7"
+                            >
+                              Required input
+                            </div>
+                          </StyledComponent>
+                        </styled.div>
+                      </Component>
+                    </StyledComponent>
+                  </Styled(Component)>
+                </InputInfo>
+              </WithInfo>
+            </Component>
           </div>
         </StyledComponent>
       </styled.div>
@@ -1081,14 +1175,10 @@ exports[`<InputInfo /> should not render an <InputInfo> from direct API without 
 exports[`<InputInfo /> should not render an <InputInfo> from jsx 1`] = `""`;
 
 exports[`<InputInfo /> should render <InputInfo> that has an error message 1`] = `
-<styled.div
-  padding={
-    Object {
-      "horizontal": "1rem",
-      "vertical": "0.25rem",
-    }
-  }
+<Styled(Component)
+  bottom="xsmall"
+  top="xsmall"
 >
   I am wrong
-</styled.div>
+</Styled(Component)>
 `;

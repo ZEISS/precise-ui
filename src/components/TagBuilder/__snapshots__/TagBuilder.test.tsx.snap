@@ -37,9 +37,7 @@ exports[`<TagBuilderInt /> should render component with empty value 1`] = `
       hasValue={false}
     />
   </styled.div>
-  <InputInfo>
-    info block
-  </InputInfo>
+  <Component />
 </styled.div>
 `;
 
@@ -125,9 +123,7 @@ exports[`<TagBuilderInt /> should render component with error block and default 
       hasValue={true}
     />
   </styled.div>
-  <InputError>
-    error block
-  </InputError>
+  <Component />
 </styled.div>
 `;
 
@@ -212,9 +208,7 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
       hasValue={true}
     />
   </styled.div>
-  <InputInfo>
-    info block
-  </InputInfo>
+  <Component />
 </styled.div>
 `;
 
@@ -255,5 +249,6 @@ exports[`<TagBuilderInt /> should render the component 1`] = `
       hasValue={false}
     />
   </styled.div>
+  <Component />
 </styled.div>
 `;

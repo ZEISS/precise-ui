@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled, { css } from '../../utils/styled';
 import { distance } from '../../distance';
 
-interface PaddedContainerProps {
+export interface PaddedContainerProps {
   /**
    * Padding on top. Valid values: xxsmall, xsmall, small, medium, large, xlarge, xxlarge, xxxlarge.
    */
@@ -32,10 +32,10 @@ interface PaddedContainerProps {
 
 const StyledContainer = styled('div')<PaddedContainerProps>(
   ({ top, left, bottom, right, gutter }) => css`
-    ${top ? `padding-top: ${distance[top]};` : ''}
-    ${left ? `padding-left: ${distance[left]};` : ''}
-    ${bottom ? `padding-bottom: ${distance[bottom]};` : ''}
-    ${right ? `padding-right: ${distance[right]};` : ''}
+    padding-top: ${(top && distance[top]) || 0};
+    padding-left: ${(left && distance[left]) || 0};
+    padding-bottom: ${(bottom && distance[bottom]) || 0};
+    padding-right: ${(right && distance[right]) || 0};
     ${gutter ? `padding: ${distance[gutter]};` : ''}
   `,
 );

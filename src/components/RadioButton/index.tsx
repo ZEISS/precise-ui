@@ -3,10 +3,11 @@ import styled, { themed } from '../../utils/styled';
 import { Label } from '../Label';
 import { StandardProps } from '../../common';
 import { InputError } from '../InputError';
-import { RadioButtonGroupContext, RadioButtonGroupContextType, FormContext } from '../../contexts';
-import { FormContextProps } from '../../hoc/withFormContext';
-import { KeyCodes } from '../../utils/keyCodes';
+import { FormContext, RadioButtonGroupContext, RadioButtonGroupContextType } from '../../contexts';
+import { FormContextProps } from '../../hoc';
+import { KeyCodes } from '../../utils';
 import { distance } from '../../distance';
+import { withInputInfo } from '../../hoc/withInputInfo';
 
 export interface RadioButtonChangeEvent {
   /**
@@ -110,9 +111,11 @@ const SelectMark = styled('div')<RadioButtonCircleProps>`
   transform: ${props => (props.selected ? 'scale(1)' : 'scale(0)')};
 `;
 
-const FlexContainer = styled.div`
+const FlexContainer = styled.div.attrs(({ withError = false }: { withError: boolean }) => ({
+  withError,
+}))`
   display: flex;
-  align-items: center;
+  align-items: ${({ withError }) => (withError ? 'start' : 'center')};
 `;
 
 /**
@@ -272,19 +275,22 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
       tabIndex: disabled ? undefined : 0,
     };
 
+    const InputError = withInputInfo({ error });
+
     return (
       <RadioButtonContainer {...containerProps}>
-        <FlexContainer>
+        <FlexContainer withError={!!error}>
           <RadioButtonCircle {...circleProps}>
             <SelectMark {...circleProps} />
           </RadioButtonCircle>
           {children && (
             <Label attached theme={theme}>
               {children}
+              <InputError left={undefined} />
             </Label>
           )}
         </FlexContainer>
-        {error && <InputError padding={{ horizontal: '28px', vertical: distance.xsmall }}>{error}</InputError>}
+        {!children && <InputError left={undefined} />}
       </RadioButtonContainer>
     );
   }

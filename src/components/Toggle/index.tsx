@@ -1,11 +1,11 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
 import { InputProps, InputChangeEvent } from '../../common';
-import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
-import { showInputInfo } from '../../utils/input';
+import { withFormContext, FormContextProps } from '../../hoc';
 import { distance } from '../../distance';
 import { IndicatorKnob } from '../IndicatorKnob';
 import { getFontStyle } from '../../textStyles';
+import { withInputInfo } from '../../hoc/withInputInfo';
 
 export type ToggleChangeEvent = InputChangeEvent<boolean>;
 
@@ -41,7 +41,7 @@ const transitionDuration = '0.3s';
 const transitionEase = 'cubic-bezier(0, 0, 0.25, 1)';
 
 const ToggleContainer = styled('div')<ToggleContainerProps>`
-  ${getFontStyle({ size: 'medium' })}
+  ${getFontStyle({ size: 'medium' })};
   position: relative;
   display: inline-block;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
@@ -197,6 +197,8 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
       theme,
     };
 
+    const InputInfo = withInputInfo({ error, info });
+
     return (
       <ToggleContainer {...containerProps}>
         {label && <StyledLabel theme={theme}>{label}</StyledLabel>}
@@ -219,7 +221,7 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
           </ToggleBox>
         </ToggleBoxWrapper>
         {children && <StyledDesc>{children}</StyledDesc>}
-        {showInputInfo(error, info)}
+        <InputInfo left={undefined} />
       </ToggleContainer>
     );
   }
