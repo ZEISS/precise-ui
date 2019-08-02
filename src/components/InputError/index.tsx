@@ -1,11 +1,11 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
 import { getFontStyle } from '../../textStyles';
-import { PaddedContainer, PaddedContainerProps } from '../PaddedContainer';
+import { StandardProps } from '../../common';
 
-export interface InputErrorProps extends PaddedContainerProps {}
+export interface InputErrorProps extends StandardProps {}
 
-const StyledError = styled(PaddedContainer)<InputErrorProps>`
+const StyledError = styled.div`
   ${getFontStyle({ size: 'xSmall' })};
   color: ${themed(props => props.theme.inputError)};
 `;
@@ -16,6 +16,6 @@ const StyledError = styled(PaddedContainer)<InputErrorProps>`
 export class InputError extends React.PureComponent<InputErrorProps> {
   render() {
     const { children } = this.props;
-    return children ? <StyledError top="xsmall" bottom="xsmall" {...this.props} /> : false;
+    return children ? <StyledError {...this.props} /> : false;
   }
 }

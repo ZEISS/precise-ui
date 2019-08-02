@@ -5,10 +5,7 @@ exports[`<InputError /> should not render an <InputError> from direct API withou
 exports[`<InputError /> should not render an <InputError> from jsx 1`] = `""`;
 
 exports[`<InputError /> should render <InputError> that has an error message 1`] = `
-<Styled(Component)
-  bottom="xsmall"
-  top="xsmall"
->
+<styled.div>
   I am wrong
-</Styled(Component)>
+</styled.div>
 `;

@@ -6,9 +6,9 @@ import { Icon } from '../Icon';
 import { InputChangeEvent, InputProps } from '../../common';
 import { FormContextProps, withFormContext } from '../../hoc';
 import { GroupContextProps, withGroupContext } from '../../hoc/withGroupContext';
-import { InputInfo } from '../InputInfo';
 import { KeyCodes } from '../../utils';
-import { withInputInfo } from '../../hoc/withInputInfo';
+import { InputNotification } from '../InputNotification';
+import { PaddedContainer } from '../PaddedContainer';
 
 export type CheckboxChangeEvent = InputChangeEvent<boolean>;
 
@@ -77,9 +77,7 @@ const RealCheckbox = styled.input`
   display: none;
 `;
 
-const FlexContainer = styled.div.attrs(({ withInputInfo = false }: { withInputInfo: boolean }) => ({
-  withInputInfo,
-}))`
+const FlexContainer = styled.div<{ withInputInfo?: boolean }>`
   display: flex;
   padding-right: 0.25em;
   align-items: ${({ withInputInfo }) => (withInputInfo ? 'start' : 'center')};
@@ -221,7 +219,11 @@ export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxStat
       tabIndex: disabled ? undefined : 0,
     };
 
-    const InputInfo = withInputInfo({ error, info });
+    const InputInfo = (error || info) && (
+      <PaddedContainer top="xsmall" bottom="xsmall">
+        <InputNotification error={error} info={info} />
+      </PaddedContainer>
+    );
 
     return (
       <CheckboxContainer {...containerProps}>
@@ -233,11 +235,11 @@ export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxStat
           {children && (
             <Label attached theme={theme}>
               {children}
-              {<InputInfo left={undefined} />}
+              {InputInfo}
             </Label>
           )}
         </FlexContainer>
-        {!children && <InputInfo left={undefined} />}
+        {!children && InputInfo}
       </CheckboxContainer>
     );
   }

@@ -32,10 +32,10 @@ export interface PaddedContainerProps {
 
 const StyledContainer = styled('div')<PaddedContainerProps>(
   ({ top, left, bottom, right, gutter }) => css`
-    padding-top: ${(top && distance[top]) || 0};
-    padding-left: ${(left && distance[left]) || 0};
-    padding-bottom: ${(bottom && distance[bottom]) || 0};
-    padding-right: ${(right && distance[right]) || 0};
+    ${top ? `padding-top: ${distance[top]};` : ''}
+    ${left ? `padding-left: ${distance[left]};` : ''}
+    ${bottom ? `padding-bottom: ${distance[bottom]};` : ''}
+    ${right ? `padding-right: ${distance[right]};` : ''}
     ${gutter ? `padding: ${distance[gutter]};` : ''}
   `,
 );

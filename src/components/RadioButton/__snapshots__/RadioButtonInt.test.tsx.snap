@@ -24,7 +24,6 @@ exports[`<RadioButtonInt /> should render the controlled RadioButtonInt with a l
       attached={true}
     >
       Value
-      <Component />
     </Label>
   </styled.div>
 </styled.div>
@@ -50,6 +49,5 @@ exports[`<RadioButtonInt /> should render the disabled, uncontrolled RadioButton
       />
     </styled.div>
   </styled.div>
-  <Component />
 </styled.div>
 `;

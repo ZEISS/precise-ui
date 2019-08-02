@@ -1,14 +1,14 @@
 import * as React from 'react';
-import styled, { themed, css } from '../../utils/styled';
+import styled, { themed } from '../../utils/styled';
 import { ocean } from '../../colors';
 import { InputProps, InputChangeEvent } from '../../common';
 import { IndicatorKnob } from '../IndicatorKnob';
 import { InteractiveSurface, InteractiveSurfaceChangeEvent, InteractiveSurfaceProps } from '../InteractiveSurface';
-import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
+import { withFormContext, FormContextProps } from '../../hoc';
 import { showInputInfo } from '../../utils/input';
-import { KeyCodes } from '../../utils/keyCodes';
+import { KeyCodes } from '../../utils';
 import { distance } from '../../distance';
-import { transparentize } from '../../utils/colors';
+import { transparentize } from '../../utils';
 import { Tooltip } from '../Tooltip';
 
 export interface SliderChangeEvent extends InputChangeEvent<number> {
@@ -385,7 +385,9 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
   };
 
   private countDecimals(val: number) {
-    if (Math.floor(val) === val) return 0;
+    if (Math.floor(val) === val) {
+      return 0;
+    }
     return val.toString().split('.')[1].length || 0;
   }
 

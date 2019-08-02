@@ -7,7 +7,8 @@ import { FormContext, RadioButtonGroupContext, RadioButtonGroupContextType } fro
 import { FormContextProps } from '../../hoc';
 import { KeyCodes } from '../../utils';
 import { distance } from '../../distance';
-import { withInputInfo } from '../../hoc/withInputInfo';
+import { InputNotification } from '../InputNotification';
+import { PaddedContainer } from '../PaddedContainer';
 
 export interface RadioButtonChangeEvent {
   /**
@@ -111,9 +112,7 @@ const SelectMark = styled('div')<RadioButtonCircleProps>`
   transform: ${props => (props.selected ? 'scale(1)' : 'scale(0)')};
 `;
 
-const FlexContainer = styled.div.attrs(({ withError = false }: { withError: boolean }) => ({
-  withError,
-}))`
+const FlexContainer = styled.div<{ withError?: boolean }>`
   display: flex;
   align-items: ${({ withError }) => (withError ? 'start' : 'center')};
 `;
@@ -275,7 +274,11 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
       tabIndex: disabled ? undefined : 0,
     };
 
-    const InputError = withInputInfo({ error });
+    const Error = error && (
+      <PaddedContainer top="xsmall" bottom="xsmall">
+        <InputError>{error}</InputError>
+      </PaddedContainer>
+    );
 
     return (
       <RadioButtonContainer {...containerProps}>
@@ -286,11 +289,11 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
           {children && (
             <Label attached theme={theme}>
               {children}
-              <InputError left={undefined} />
+              {Error}
             </Label>
           )}
         </FlexContainer>
-        {!children && <InputError left={undefined} />}
+        {!children && Error}
       </RadioButtonContainer>
     );
   }

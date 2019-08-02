@@ -5,7 +5,8 @@ import { withFormContext, FormContextProps } from '../../hoc';
 import { distance } from '../../distance';
 import { IndicatorKnob } from '../IndicatorKnob';
 import { getFontStyle } from '../../textStyles';
-import { withInputInfo } from '../../hoc/withInputInfo';
+import { InputNotification } from '../InputNotification';
+import { PaddedContainer } from '../PaddedContainer';
 
 export type ToggleChangeEvent = InputChangeEvent<boolean>;
 
@@ -197,8 +198,6 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
       theme,
     };
 
-    const InputInfo = withInputInfo({ error, info });
-
     return (
       <ToggleContainer {...containerProps}>
         {label && <StyledLabel theme={theme}>{label}</StyledLabel>}
@@ -221,7 +220,11 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
           </ToggleBox>
         </ToggleBoxWrapper>
         {children && <StyledDesc>{children}</StyledDesc>}
-        <InputInfo left={undefined} />
+        {(error || info) && (
+          <PaddedContainer top="xsmall" bottom="xsmall">
+            <InputNotification error={error} info={info} />
+          </PaddedContainer>
+        )}
       </ToggleContainer>
     );
   }

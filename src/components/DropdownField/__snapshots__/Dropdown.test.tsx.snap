@@ -1665,7 +1665,6 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -3346,7 +3345,6 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -5027,7 +5025,6 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -5776,7 +5773,6 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -6383,7 +6379,6 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -6392,16 +6387,15 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
 
 exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
 .c10 {
-  padding-top: 0.25rem;
-  padding-left: 1rem;
-  padding-bottom: 0.25rem;
-  padding-right: 0;
-}
-
-.c9 {
   font-size: 0.75rem;
   line-height: 0.875rem;
   color: rgba(167,2,64,1);
+}
+
+.c9 {
+  padding-top: 0.25rem;
+  padding-left: 1rem;
+  padding-bottom: 0.25rem;
 }
 
 .c7 {
@@ -7117,79 +7111,53 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <Component>
-          <WithError
-            error="You need to select a field"
+        <Component
+          bottom="xsmall"
+          left="medium"
+          top="xsmall"
+        >
+          <styled.div
+            bottom="xsmall"
+            left="medium"
+            top="xsmall"
           >
-            <InputError
+            <StyledComponent
+              bottom="xsmall"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": false,
+                    "lastClassName": "c9",
+                    "rules": Array [
+                      [Function],
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
               left="medium"
+              top="xsmall"
             >
-              <Styled(Component)
-                bottom="xsmall"
-                left="medium"
-                top="xsmall"
+              <div
+                className="c9"
               >
-                <StyledComponent
-                  bottom="xsmall"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-htpNat",
-                        "isStatic": false,
-                        "lastClassName": "c9",
-                        "rules": Array [
-                          "
-  ",
-                          "
-    ",
-                          "font-size: 0.75rem;
-  ",
-                          "
-    ",
-                          "line-height: 0.875rem;
-  ",
-                          "
-    ",
-                          "
-  ",
-                          ";
-  color: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "Styled(Component)",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-htpNat",
-                      "target": [Function],
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  left="medium"
-                  top="xsmall"
+                <Component
+                  error="You need to select a field"
                 >
-                  <Component
-                    bottom="xsmall"
-                    className="c9"
-                    left="medium"
-                    top="xsmall"
-                  >
-                    <styled.div
-                      bottom="xsmall"
-                      className="c9"
-                      left="medium"
-                      top="xsmall"
-                    >
+                  <InputError>
+                    <styled.div>
                       <StyledComponent
-                        bottom="xsmall"
-                        className="c9"
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
@@ -7199,7 +7167,25 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                               "isStatic": false,
                               "lastClassName": "c10",
                               "rules": Array [
+                                "
+  ",
+                                "
+    ",
+                                "font-size: 0.75rem;
+  ",
+                                "
+    ",
+                                "line-height: 0.875rem;
+  ",
+                                "
+    ",
+                                "
+  ",
+                                ";
+  color: ",
                                 [Function],
+                                ";
+",
                               ],
                             },
                             "displayName": "styled.div",
@@ -7213,21 +7199,19 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                           }
                         }
                         forwardedRef={null}
-                        left="medium"
-                        top="xsmall"
                       >
                         <div
-                          className="c9 c10"
+                          className="c10"
                         >
                           You need to select a field
                         </div>
                       </StyledComponent>
                     </styled.div>
-                  </Component>
-                </StyledComponent>
-              </Styled(Component)>
-            </InputError>
-          </WithError>
+                  </InputError>
+                </Component>
+              </div>
+            </StyledComponent>
+          </styled.div>
         </Component>
       </div>
     </StyledComponent>
@@ -7237,16 +7221,15 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
 
 exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
 .c10 {
-  padding-top: 0.25rem;
-  padding-left: 1rem;
-  padding-bottom: 0.25rem;
-  padding-right: 0;
-}
-
-.c9 {
   font-size: 0.75rem;
   line-height: 0.875rem;
   color: rgba(167,2,64,1);
+}
+
+.c9 {
+  padding-top: 0.25rem;
+  padding-left: 1rem;
+  padding-bottom: 0.25rem;
 }
 
 .c7 {
@@ -7962,79 +7945,53 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <Component>
-          <WithError
-            error="You need to select a field"
+        <Component
+          bottom="xsmall"
+          left="medium"
+          top="xsmall"
+        >
+          <styled.div
+            bottom="xsmall"
+            left="medium"
+            top="xsmall"
           >
-            <InputError
+            <StyledComponent
+              bottom="xsmall"
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-htpNat",
+                    "isStatic": false,
+                    "lastClassName": "c9",
+                    "rules": Array [
+                      [Function],
+                    ],
+                  },
+                  "displayName": "styled.div",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-htpNat",
+                  "target": "div",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
               left="medium"
+              top="xsmall"
             >
-              <Styled(Component)
-                bottom="xsmall"
-                left="medium"
-                top="xsmall"
+              <div
+                className="c9"
               >
-                <StyledComponent
-                  bottom="xsmall"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-htpNat",
-                        "isStatic": false,
-                        "lastClassName": "c9",
-                        "rules": Array [
-                          "
-  ",
-                          "
-    ",
-                          "font-size: 0.75rem;
-  ",
-                          "
-    ",
-                          "line-height: 0.875rem;
-  ",
-                          "
-    ",
-                          "
-  ",
-                          ";
-  color: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "Styled(Component)",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-htpNat",
-                      "target": [Function],
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  left="medium"
-                  top="xsmall"
+                <Component
+                  error="You need to select a field"
                 >
-                  <Component
-                    bottom="xsmall"
-                    className="c9"
-                    left="medium"
-                    top="xsmall"
-                  >
-                    <styled.div
-                      bottom="xsmall"
-                      className="c9"
-                      left="medium"
-                      top="xsmall"
-                    >
+                  <InputError>
+                    <styled.div>
                       <StyledComponent
-                        bottom="xsmall"
-                        className="c9"
                         forwardedComponent={
                           Object {
                             "$$typeof": Symbol(react.forward_ref),
@@ -8044,7 +8001,25 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                               "isStatic": false,
                               "lastClassName": "c10",
                               "rules": Array [
+                                "
+  ",
+                                "
+    ",
+                                "font-size: 0.75rem;
+  ",
+                                "
+    ",
+                                "line-height: 0.875rem;
+  ",
+                                "
+    ",
+                                "
+  ",
+                                ";
+  color: ",
                                 [Function],
+                                ";
+",
                               ],
                             },
                             "displayName": "styled.div",
@@ -8058,21 +8033,19 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                           }
                         }
                         forwardedRef={null}
-                        left="medium"
-                        top="xsmall"
                       >
                         <div
-                          className="c9 c10"
+                          className="c10"
                         >
                           You need to select a field
                         </div>
                       </StyledComponent>
                     </styled.div>
-                  </Component>
-                </StyledComponent>
-              </Styled(Component)>
-            </InputError>
-          </WithError>
+                  </InputError>
+                </Component>
+              </div>
+            </StyledComponent>
+          </styled.div>
         </Component>
       </div>
     </StyledComponent>
@@ -8733,7 +8706,6 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <Component />
       </div>
     </StyledComponent>
   </styled.div>
@@ -9400,7 +9372,6 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <Component />
       </div>
     </StyledComponent>
   </styled.div>
