@@ -3,10 +3,12 @@ import styled, { themed } from '../../utils/styled';
 import { Label } from '../Label';
 import { StandardProps } from '../../common';
 import { InputError } from '../InputError';
-import { RadioButtonGroupContext, RadioButtonGroupContextType, FormContext } from '../../contexts';
-import { FormContextProps } from '../../hoc/withFormContext';
-import { KeyCodes } from '../../utils/keyCodes';
+import { FormContext, RadioButtonGroupContext, RadioButtonGroupContextType } from '../../contexts';
+import { FormContextProps } from '../../hoc';
+import { KeyCodes } from '../../utils';
 import { distance } from '../../distance';
+import { InputNotification } from '../InputNotification';
+import { PaddedContainer } from '../PaddedContainer';
 
 export interface RadioButtonChangeEvent {
   /**
@@ -110,9 +112,9 @@ const SelectMark = styled('div')<RadioButtonCircleProps>`
   transform: ${props => (props.selected ? 'scale(1)' : 'scale(0)')};
 `;
 
-const FlexContainer = styled.div`
+const FlexContainer = styled.div<{ withError?: boolean }>`
   display: flex;
-  align-items: center;
+  align-items: ${({ withError }) => (withError ? 'start' : 'center')};
 `;
 
 /**
@@ -272,19 +274,26 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
       tabIndex: disabled ? undefined : 0,
     };
 
+    const Error = error && (
+      <PaddedContainer top="xsmall" bottom="xsmall">
+        <InputError>{error}</InputError>
+      </PaddedContainer>
+    );
+
     return (
       <RadioButtonContainer {...containerProps}>
-        <FlexContainer>
+        <FlexContainer withError={!!error}>
           <RadioButtonCircle {...circleProps}>
             <SelectMark {...circleProps} />
           </RadioButtonCircle>
           {children && (
             <Label attached theme={theme}>
               {children}
+              {Error}
             </Label>
           )}
         </FlexContainer>
-        {error && <InputError theme={theme}>{error}</InputError>}
+        {!children && Error}
       </RadioButtonContainer>
     );
   }

@@ -1,13 +1,14 @@
 import * as React from 'react';
-import styled, { themed, css } from '../../utils/styled';
+import styled, { css, themed } from '../../utils/styled';
 import { light } from '../../themes';
 import { Label } from '../Label';
 import { Icon } from '../Icon';
-import { InputProps, InputChangeEvent } from '../../common';
-import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
+import { InputChangeEvent, InputProps } from '../../common';
+import { FormContextProps, withFormContext } from '../../hoc';
 import { GroupContextProps, withGroupContext } from '../../hoc/withGroupContext';
-import { showInputInfo } from '../../utils/input';
-import { KeyCodes } from '../../utils/keyCodes';
+import { KeyCodes } from '../../utils';
+import { InputNotification } from '../InputNotification';
+import { PaddedContainer } from '../PaddedContainer';
 
 export type CheckboxChangeEvent = InputChangeEvent<boolean>;
 
@@ -76,10 +77,10 @@ const RealCheckbox = styled.input`
   display: none;
 `;
 
-const FlexContainer = styled.div`
+const FlexContainer = styled.div<{ withInputInfo?: boolean }>`
   display: flex;
-  align-items: center;
   padding-right: 0.25em;
+  align-items: ${({ withInputInfo }) => (withInputInfo ? 'start' : 'center')};
 `;
 
 export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxState> {
@@ -218,20 +219,27 @@ export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxStat
       tabIndex: disabled ? undefined : 0,
     };
 
+    const InputInfo = (error || info) && (
+      <PaddedContainer top="xsmall" bottom="xsmall">
+        <InputNotification error={error} info={info} />
+      </PaddedContainer>
+    );
+
     return (
       <CheckboxContainer {...containerProps}>
         <RealCheckbox type="checkbox" defaultChecked={value} />
-        <FlexContainer>
+        <FlexContainer withInputInfo={!!(error || info)}>
           <CheckboxBox {...boxProps}>
             <Icon name="Check" color={theme ? theme.ui1 : light.ui1} size={1.0625} />
           </CheckboxBox>
           {children && (
             <Label attached theme={theme}>
               {children}
+              {InputInfo}
             </Label>
           )}
         </FlexContainer>
-        {showInputInfo(error, info)}
+        {!children && InputInfo}
       </CheckboxContainer>
     );
   }
