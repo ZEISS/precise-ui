@@ -53,13 +53,13 @@ const initialState: FileUploaderDetailsState = {
 
 const StyledUploaderHost = styled.div`
   z-index: 10001;
+  width: 100%;
   position: fixed;
   left: 0;
   bottom: ${distance.large};
-  display: flex;
-  width: 100%;
   height: 0px;
   overflow: visible;
+  display: flex;
   align-items: flex-end;
 `;
 
