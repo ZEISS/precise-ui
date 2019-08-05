@@ -8,6 +8,8 @@ import { rgbToHsv, hsvToRgb, parseColor } from '../../utils/colors';
 import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
 import { showInputInfo } from '../../utils/input';
 import { distance } from '../../distance';
+import { PaddedContainer } from '../PaddedContainer';
+import { InputNotification } from '../InputNotification';
 
 export interface ColorChangeEvent {
   /**
@@ -361,6 +363,7 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
       width,
       height,
     };
+
     return (
       <PickerContainer {...props}>
         <PickerSurface {...surface} onChange={this.changeColor}>
@@ -370,7 +373,11 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
         </PickerSurface>
         {!hideBar && <ColorSlider onChange={this.changeBackground} value={value.h} color={baseRgb} />}
         {allowOpacity && <OpacitySlider onChange={this.changeOpacity} value={value.a} />}
-        {showInputInfo(error, info)}
+        {(error || info) && (
+          <PaddedContainer top="small" bottom="xsmall">
+            <InputNotification error={error} info={info} />
+          </PaddedContainer>
+        )}
       </PickerContainer>
     );
   }

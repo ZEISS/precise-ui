@@ -1,6 +1,7 @@
 # Precise UI Changelog
 ## 0.6.3
 
+- Fixed horizontal padding for InputInfo and InputError
 - Hide info element on open Autocomplete list
 - Fixed overview pagination elements' layout in IE 11
 - Fixed display of label, placeholder and info on AutocompleteTagBuilder 
