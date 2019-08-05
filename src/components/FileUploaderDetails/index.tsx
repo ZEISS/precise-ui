@@ -51,13 +51,16 @@ const initialState: FileUploaderDetailsState = {
   showUploader: false,
 };
 
-const StyledUploaderHost = styled.div`
-  box-sizing: border-box;
+const StyledCenteringHost = styled.div`
   z-index: 10001;
   position: fixed;
-  bottom: ${distance.large};
   left: 0;
+  bottom: ${distance.large};
+  display: flex;
   width: 100%;
+  height: 0px;
+  overflow: visible;
+  align-items: flex-end;
 `;
 
 /**
@@ -199,7 +202,7 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
             progressValue={totalProgress}
           />
           {!showDetails && (
-            <StyledUploaderHost>
+            <StyledCenteringHost>
               <UploaderProgressBar
                 {...props}
                 scanning={scanning}
@@ -210,7 +213,7 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
                 onShow={this.showDetails}
                 onClose={this.closeUploader}
               />
-            </StyledUploaderHost>
+            </StyledCenteringHost>
           )}
         </>
       )

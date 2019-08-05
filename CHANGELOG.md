@@ -7,7 +7,8 @@
 - Fixed display of label, placeholder and info on AutocompleteTagBuilder 
 - Fixed toaster action click area
 - Fixed two cross(clear) buttons displayed inside TextField in IE 11
- - Fixed `Styled Input Box` flex layout for IE 11
+- Fixed `Styled Input Box` flex layout for IE 11
+- Fixed `FileUploader` background blocking area
 
 
 ## 0.6.2
