@@ -7,6 +7,7 @@
 - Fixed display of label, placeholder and info on AutocompleteTagBuilder 
 - Fixed toaster action click area
 - Fixed two cross(clear) buttons displayed inside TextField in IE 11
+- New `DateField`
 
 ## 0.6.2
 

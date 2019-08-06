@@ -449,6 +449,7 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
                               <Component
                                 hasValue={false}
                                 onClear={[Function]}
+                                onClick={[Function]}
                               />
                             </div>
                           </StyledComponent>
@@ -972,6 +973,7 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
                               <Component
                                 hasValue={false}
                                 onClear={[Function]}
+                                onClick={[Function]}
                               />
                             </div>
                           </StyledComponent>
