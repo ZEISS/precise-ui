@@ -52,12 +52,15 @@ const initialState: FileUploaderDetailsState = {
 };
 
 const StyledUploaderHost = styled.div`
-  box-sizing: border-box;
   z-index: 10001;
-  position: fixed;
-  bottom: ${distance.large};
-  left: 0;
   width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: ${distance.large};
+  height: 0px;
+  overflow: visible;
+  display: flex;
+  align-items: flex-end;
 `;
 
 /**

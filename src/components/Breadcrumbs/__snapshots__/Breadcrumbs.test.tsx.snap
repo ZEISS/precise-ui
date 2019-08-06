@@ -30,7 +30,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-ckVGcZ",
+            "componentId": "sc-jKJlTe",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -59,7 +59,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-ckVGcZ",
+          "styledComponentId": "sc-jKJlTe",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -127,7 +127,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-jKJlTe",
+                    "componentId": "sc-eNQAEJ",
                     "isStatic": true,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -148,7 +148,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                   "displayName": "styled.span",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-jKJlTe",
+                  "styledComponentId": "sc-eNQAEJ",
                   "target": "span",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -219,7 +219,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-jKJlTe",
+                    "componentId": "sc-eNQAEJ",
                     "isStatic": true,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -240,7 +240,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                   "displayName": "styled.span",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-jKJlTe",
+                  "styledComponentId": "sc-eNQAEJ",
                   "target": "span",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -311,7 +311,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                   "$$typeof": Symbol(react.forward_ref),
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "sc-jKJlTe",
+                    "componentId": "sc-eNQAEJ",
                     "isStatic": true,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -332,7 +332,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                   "displayName": "styled.span",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "sc-jKJlTe",
+                  "styledComponentId": "sc-eNQAEJ",
                   "target": "span",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
