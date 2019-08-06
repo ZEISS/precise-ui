@@ -1,12 +1,14 @@
 # Precise UI Changelog
-
 ## 0.6.3
 
+- Fixed horizontal padding for InputInfo and InputError
 - Hide info element on open Autocomplete list
 - Fixed overview pagination elements' layout in IE 11
 - Fixed display of label, placeholder and info on AutocompleteTagBuilder 
 - Fixed toaster action click area
 - Fixed two cross(clear) buttons displayed inside TextField in IE 11
+- Fixed `Styled Input Box` flex layout for IE 11
+- Fixed `FileUploader` background blocking area
 - New `DateField`
 
 ## 0.6.2

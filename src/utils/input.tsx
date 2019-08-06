@@ -1,21 +1,18 @@
 import * as React from 'react';
-import { InputError } from '../components/InputError';
-import { InputInfo } from '../components/InputInfo';
+import { InputNotification } from '../components/InputNotification';
+import { PaddedContainer } from '../components/PaddedContainer';
 
+/**
+ * @deprecated use InputNotification component instead
+ * @param error ReactChild
+ * @param info ReactChild
+ */
 export function showInputInfo(error?: React.ReactChild, info?: React.ReactChild) {
-  if (error) {
-    if (typeof error === 'string') {
-      return <InputError>{error}</InputError>;
-    }
-
-    return error;
-  } else if (info) {
-    if (typeof info === 'string') {
-      return <InputInfo>{info}</InputInfo>;
-    }
-
-    return info;
-  }
-
-  return false;
+  return (
+    (error || info) && (
+      <PaddedContainer left="medium" top="xsmall" bottom="xsmall">
+        <InputNotification error={error} info={info} />
+      </PaddedContainer>
+    )
+  );
 }
