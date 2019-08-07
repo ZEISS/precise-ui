@@ -116,6 +116,25 @@ const reactDatepickerProps = {
   onMonthMouseLeave: 1,
 };
 
+const excludedReactDatePickerProps = {
+  autoComplete: 1,
+  onBlur: 1,
+  onChange: 1,
+  onFocus: 1,
+  children: 1,
+  todayButton: 1,
+  placeholderText: 1,
+  isClearable: 1,
+  withPortal: 1,
+  showYearDropdown: 1,
+  showMonthDropdown: 1,
+  useShortMonthInDropdown: 1,
+  showMonthYearDropdown: 1,
+  dropdownMode: 1,
+  monthsShown: 1,
+  showTimeInput: 1,
+};
+
 interface DatePickerOnChangeEvent extends InputChangeEvent<string> {
   date: Date;
 }
@@ -147,25 +166,6 @@ interface DateFieldBasicProps extends FormContextProps, TextInputProps {
    */
   children?: void;
 }
-
-const excludedReactDatePickerProps = {
-  autoComplete: 1,
-  onBlur: 1,
-  onChange: 1,
-  onFocus: 1,
-  children: 1,
-  todayButton: 1,
-  placeholderText: 1,
-  isClearable: 1,
-  withPortal: 1,
-  showYearDropdown: 1,
-  showMonthDropdown: 1,
-  useShortMonthInDropdown: 1,
-  showMonthYearDropdown: 1,
-  dropdownMode: 1,
-  monthsShown: 1,
-  showTimeInput: 1,
-};
 
 export type DateFieldProps = DateFieldBasicProps &
   Omit<ReactDatePickerProps, keyof typeof excludedReactDatePickerProps>;
