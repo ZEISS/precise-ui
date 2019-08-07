@@ -1,6 +1,4 @@
 import { parseDate } from './date';
-import parse from 'date-fns/parse';
-console.log(parse);
 describe('Date utils', () => {
   describe('parseDate', () => {
     it('should parse date that matches the format', () => {
