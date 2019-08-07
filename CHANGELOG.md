@@ -1,5 +1,5 @@
 # Precise UI Changelog
-## 0.6.3
+## 0.7.0
 
 - Fixed horizontal padding for InputInfo and InputError
 - Hide info element on open Autocomplete list
