@@ -14,8 +14,8 @@ const defaultWeekDays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 const defaultMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 function patchLocale(locale: Locale, inputWeekDays = defaultWeekDays, months = defaultMonths): Locale {
-  const weekDays = [...inputWeekDays];
-  weekDays.unshift(weekDays.pop() as any);
+  // in react-datepicker week starts from Sunday, not from Monday
+  const weekDays = [...inputWeekDays.slice(-1), ...inputWeekDays.slice(0, -1)];
 
   return {
     ...locale,
@@ -47,7 +47,6 @@ const Arrow = styled.button`
 `;
 
 const Row = styled.div`
-  display: relative;
   margin-bottom: ${distance.medium};
   display: flex;
   justify-content: space-between;

@@ -319,10 +319,9 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
       defaultValue: _2,
       onChange: _3,
       onOpenChange: _4,
-      onChange: _5,
-      onClickOutside: _6,
-      onFocus: _7,
-      onBlur: _8,
+      onClickOutside: _5,
+      onFocus: _6,
+      onBlur: _7,
       ...rest
     } = this.props;
 

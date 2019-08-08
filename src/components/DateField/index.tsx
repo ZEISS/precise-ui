@@ -1,6 +1,6 @@
 export { DateField, DateFieldOpenChangedEvent, DateFieldProps } from './DateFieldInt.part';
 
 /**
- * Deprecated
+ * @deprecated
  */
 export type CalendarViewOptions = 'days' | 'months' | 'years';
