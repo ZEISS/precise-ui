@@ -424,6 +424,7 @@ Inline version
 const { DateField } = require('precise-ui');
 
 <DateField
+  selected={new Date("1988/06/14")}
   inline
   onChange={(e) => console.log(e)}
 />
@@ -433,7 +434,14 @@ Inline version time
 ```jsx
 const { DateField } = require('precise-ui');
 
-<DateField inline showTimeSelect timeFormat="HH:mm" timeIntervals={15} dateFormat="MMMM d, yyyy h:mm aa" onChange={(e) => console.log(e)}/>
+<DateField 
+  selected={new Date("1988/06/14")}
+  inline 
+  showTimeSelect 
+  timeFormat="HH:mm" 
+  timeIntervals={15} 
+  dateFormat="MMMM d, yyyy h:mm aa" 
+  onChange={(e) => console.log(e)} />
 ```
 
 Inline version select time only
@@ -442,6 +450,7 @@ Inline version select time only
 const { DateField } = require('precise-ui');
 
 <DateField
+  selected={new Date("1988/06/14")}
   inline
   showTimeSelect
   showTimeSelectOnly
@@ -459,6 +468,7 @@ const { DateField } = require('precise-ui');
 
 <DateField
   inline
+  selected={new Date("1988/06/14")}
   dateFormat="MM/yyyy"
   showMonthYearPicker
   onChange={(e) => console.log(e)}
