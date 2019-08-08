@@ -65,34 +65,29 @@ const StyledIncreaseDecrease = styled(IncreaseDecrease)`
   margin-left: ${distance.xsmall};
 `;
 
-const getHeaderRender = ({ months = defaultMonths }: { months: CustomReactDatepickerProps['months'] }) => {
-  const CalendarHeader: ReactDatePickerProps['renderCustomHeader'] = ({
-    date,
-    increaseMonth,
-    decreaseMonth,
-    changeYear,
-  }) => {
-    const monthName = months[date.getMonth()];
-    const year = date.getFullYear();
-    return (
-      <PaddedContainer gutter="medium">
-        <Row>
-          <Arrow onClick={decreaseMonth} type="button">
-            <Icon name="KeyboardArrowLeft" size={2} />
-          </Arrow>
-          <HeaderDateContainer>
-            {monthName} {year}
-            <StyledIncreaseDecrease onIncrease={() => changeYear(year + 1)} onDecrease={() => changeYear(year - 1)} />
-          </HeaderDateContainer>
-          <Arrow onClick={increaseMonth} type="button">
-            <Icon name="KeyboardArrowRight" size={2} />
-          </Arrow>
-        </Row>
-      </PaddedContainer>
-    );
-  };
-
-  return CalendarHeader;
+const getHeaderRender = ({
+  months = defaultMonths,
+}: {
+  months: CustomReactDatepickerProps['months'];
+}): ReactDatePickerProps['renderCustomHeader'] => ({ date, increaseMonth, decreaseMonth, changeYear }) => {
+  const monthName = months[date.getMonth()];
+  const year = date.getFullYear();
+  return (
+    <PaddedContainer gutter="medium">
+      <Row>
+        <Arrow onClick={decreaseMonth} type="button">
+          <Icon name="KeyboardArrowLeft" size={2} />
+        </Arrow>
+        <HeaderDateContainer>
+          {monthName} {year}
+          <StyledIncreaseDecrease onIncrease={() => changeYear(year + 1)} onDecrease={() => changeYear(year - 1)} />
+        </HeaderDateContainer>
+        <Arrow onClick={increaseMonth} type="button">
+          <Icon name="KeyboardArrowRight" size={2} />
+        </Arrow>
+      </Row>
+    </PaddedContainer>
+  );
 };
 
 export interface CustomReactDatepickerProps extends ReactDatePickerProps {
