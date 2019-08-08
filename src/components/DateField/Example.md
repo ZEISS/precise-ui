@@ -2,7 +2,7 @@
 
 The `DateField` component provides an easy way for selecting a date. As all inputs it can be used in a controlled and managed mode. 
 
-`DateField` is based on (ReactJS Datepicker)[https://reactdatepicker.com/]. Please refer to ReactJS Datepicker Docs for the detailed props description.
+`DateField` is based on [ReactJS Datepicker](https://reactdatepicker.com/). Please refer to ReactJS Datepicker Docs for the detailed props description.
 
 ```jsx
 const { DateField } = require('precise-ui');
