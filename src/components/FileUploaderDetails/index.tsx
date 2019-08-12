@@ -63,6 +63,10 @@ const StyledUploaderHost = styled.div`
   align-items: flex-end;
 `;
 
+const StyledDetailsHost = styled.div`
+  z-index: 10001;
+`;
+
 /**
  * The host element for global async file upload process. Use as a singleton only.
  */
@@ -192,15 +196,17 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
     return (
       show && (
         <>
-          <UploaderProgressDetails
-            {...props}
-            open={showDetails}
-            files={files}
-            onCancel={this.onCancel}
-            onDelete={this.onDelete}
-            onHide={this.hideDetails}
-            progressValue={totalProgress}
-          />
+          <StyledDetailsHost>
+            <UploaderProgressDetails
+              {...props}
+              open={showDetails}
+              files={files}
+              onCancel={this.onCancel}
+              onDelete={this.onDelete}
+              onHide={this.hideDetails}
+              progressValue={totalProgress}
+            />
+          </StyledDetailsHost>
           {!showDetails && (
             <StyledUploaderHost>
               <UploaderProgressBar
