@@ -26,6 +26,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render Book icon', () => {
+    const Component = icons.Book;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Bookmark icon', () => {
     const Component = icons.Bookmark;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -112,6 +118,12 @@ describe('Generated icons', () => {
 
   it('should render Home icon', () => {
     const Component = icons.Home;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render ImportantDevices icon', () => {
+    const Component = icons.ImportantDevices;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -250,6 +262,12 @@ describe('Generated icons', () => {
 
   it('should render Replay icon', () => {
     const Component = icons.Replay;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render VideoLibrary icon', () => {
+    const Component = icons.VideoLibrary;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -434,14 +452,14 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render MyLocation icon', () => {
-    const Component = icons.MyLocation;
+  it('should render LocalOffer icon', () => {
+    const Component = icons.LocalOffer;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render LocalOffer icon', () => {
-    const Component = icons.LocalOffer;
+  it('should render MyLocation icon', () => {
+    const Component = icons.MyLocation;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -620,3 +638,4 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
+  
