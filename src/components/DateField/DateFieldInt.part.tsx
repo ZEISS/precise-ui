@@ -326,7 +326,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
     } = this.props;
 
     const datePickerProps = {} as ReactDatePickerProps;
-    const otherProps = {} as Omit<DateFieldBasicProps, 'onChange' | 'children'>;
+    const customInputProps = {} as Omit<DateFieldBasicProps, 'onChange' | 'children'>;
     Object.keys(rest).forEach(propName => {
       if (excludedReactDatePickerProps[propName]) {
         return;
@@ -335,7 +335,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
       if (reactDatepickerProps[propName]) {
         datePickerProps[propName] = rest[propName];
       } else {
-        otherProps[propName] = rest[propName];
+        customInputProps[propName] = rest[propName];
       }
     });
 
@@ -343,7 +343,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
 
     return (
       <CustomReactDatepicker
-        customInput={<DatePickerTextField {...otherProps} error={error} autoComplete={autoComplete} />}
+        customInput={<DatePickerTextField {...customInputProps} error={error} autoComplete={autoComplete} />}
         placeholderText={placeholder}
         customInputRef="inputRef"
         months={months}

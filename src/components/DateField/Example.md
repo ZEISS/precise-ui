@@ -15,7 +15,7 @@ const { DateField } = require('precise-ui');
 ```jsx { "props": { "data-skip": true } }
 const { DateField } = require('precise-ui');
 
-<DateField onChange={(e) => console.log(e)} autoComplete />
+<DateField onChange={(e) => console.log(e)} autoComplete placeholder="With autocomplete" />
 ```
 
 `DateField` with custom date format
@@ -23,7 +23,7 @@ const { DateField } = require('precise-ui');
 ```jsx { "props": { "data-skip": true } }
 const { DateField } = require('precise-ui');
 
-<DateField onChange={(e) => console.log(e)} dateFormat="yyyy/mm/dd" />
+<DateField onChange={(e) => console.log(e)} dateFormat="yyyy/mm/dd" placeholder="With custom date format" />
 ```
 
 Select time
@@ -31,7 +31,13 @@ Select time
 ```jsx { "props": { "data-skip": true } }
 const { DateField } = require('precise-ui');
 
-<DateField showTimeSelect timeFormat="HH:mm" timeIntervals={15} dateFormat="MMMM d, yyyy h:mm aa" onChange={(e) => console.log(e)}/>
+<DateField 
+  showTimeSelect 
+  timeFormat="HH:mm" 
+  timeIntervals={15} 
+  dateFormat="MMMM d, yyyy h:mm aa" 
+  onChange={(e) => console.log(e)}
+  placeholder="Select time" />
 ```
 
 Select time only
@@ -46,6 +52,7 @@ const { DateField } = require('precise-ui');
   dateFormat="h:mm aa"
   timeCaption="Time"
   onChange={(e) => console.log(e)}
+  placeholder="Only select time"
 />
 ```
 
@@ -60,6 +67,7 @@ const { setHours, setMinutes } = require('date-fns');
   excludeTimes={[setHours(setMinutes(new Date(), 0), 17), setHours(setMinutes(new Date(), 30), 18), setHours(setMinutes(new Date(), 30), 19), setHours(setMinutes(new Date(), 30), 17)]}
   dateFormat="MMMM d, yyyy h:mm aa"
   onChange={(e) => console.log(e)}
+  placeholder="With excluded times"
 />
 ```
 
@@ -74,6 +82,7 @@ const { setHours, setMinutes } = require('date-fns');
   includeTimes={[setHours(setMinutes(new Date(), 0), 17), setHours(setMinutes(new Date(), 30), 18), setHours(setMinutes(new Date(), 30), 19), setHours(setMinutes(new Date(), 30), 17)]}
   dateFormat="MMMM d, yyyy h:mm aa"
   onChange={(e) => console.log(e)}
+  placeholder="With included times"
 />
 ```
 
@@ -93,6 +102,7 @@ const { setHours, setMinutes } = require('date-fns');
   ]}
   dateFormat="MMMM d, yyyy h:mm aa"
   onChange={(e) => console.log(e)}
+  placeholder="With specific times"
 />
 ```
 
@@ -108,19 +118,7 @@ const { setHours, setMinutes } = require('date-fns');
   maxTime={setHours(setMinutes(new Date(), 30), 20)}
   dateFormat="MMMM d, yyyy"
   onChange={(e) => console.log(e)}
-/>
-```
-
-Max date
-
-```jsx { "props": { "data-skip": true } }
-const { DateField } = require('precise-ui');
-const { addDays } = require('date-fns');
-
-<DateField
-  maxDate={addDays(new Date(), 5)}
-  placeholder="Select a date before 5 days in the future"
-  onChange={(e) => console.log(e)}
+  placeholder="With specified time range"
 />
 ```
 
@@ -133,7 +131,22 @@ const { subDays } = require('date-fns');
 <DateField
   excludeDates={[new Date(), subDays(new Date(), 1)]}
   placeholder="Select a date other than today or yesterday" 
-  onChange={(e) => console.log(e)} />
+  onChange={(e) => console.log(e)} 
+  placeholder="Exluded times" />
+```
+
+Max date
+
+```jsx { "props": { "data-skip": true } }
+const { DateField } = require('precise-ui');
+const { addDays } = require('date-fns');
+
+<DateField
+  maxDate={addDays(new Date(), 5)}
+  placeholder="Select a date before 5 days in the future"
+  onChange={(e) => console.log(e)}
+  placeholder="Max date"
+/>
 ```
 
 Highlighted dates
@@ -178,6 +191,7 @@ const DateRange = () => {
           startDate={startDate}
           endDate={endDate}
           onChange={({date}) => setStartDate(date)}
+          placeholder="Select start date"
         />
       </StackItem>
       
@@ -189,6 +203,7 @@ const DateRange = () => {
           endDate={endDate}
           onChange={({date}) => setEndDate(date)}
           minDate={startDate}
+          placeholder="Select end date"
         />
       </StackItem>
     </StackPanel>
@@ -206,7 +221,7 @@ const { DateField } = require('precise-ui');
 
 <DateField
   disabled={true}
-  placeholderText="This is disabled" />
+  placeholder="This is disabled" />
 ```
 
 Disabled keyboard navigation
@@ -216,7 +231,7 @@ const { DateField } = require('precise-ui');
 
 <DateField
   disabledKeyboardNavigation
-  placeholderText="This has disabled keyboard navigation" 
+  placeholder="This has disabled keyboard navigation" 
   onChange={(e) => console.log(e)} />
 ```
 
@@ -240,6 +255,7 @@ const { DateField } = require('precise-ui');
     }
   }}
   onChange={(e) => console.log(e)}
+  placeholder="With changed popup position"
 />
 ```
 
@@ -248,6 +264,7 @@ Opened to date
 <DateField
   openToDate={new Date("1993/09/28")}
   onChange={(e) => console.log(e)}
+  placeholder={`Will be opened to "1993/09/28"`}
 />
 ```
 
@@ -256,6 +273,7 @@ Display Week Numbers
 <DateField
   showWeekNumbers
   onChange={(e) => console.log(e)}
+  placeholder="Shows week numbers"
 />
 ```
 
@@ -275,6 +293,7 @@ const { DateField } = require('precise-ui');
 
 <DateField
   onChangeRaw={(e) => console.log(event.target.value)}
+  placeholder="Fires event on input field change"
 />
 ```
 
@@ -286,6 +305,7 @@ const { DateField } = require('precise-ui');
 <DateField
   shouldCloseOnSelect={false}
   onChange={(e) => console.log(e)}
+  placeholder="Doesn't hide calendar on date select"
 />
 ```
 
@@ -296,6 +316,7 @@ const { DateField } = require('precise-ui');
 <DateField
   renderCustomHeader={()=>'Custom header'}
   onChange={(e) => console.log(e)}
+  placeholder="With custom header"
 />
 ```
 
@@ -307,6 +328,7 @@ const { DateField } = require('precise-ui');
   dateFormat="MM/yyyy"
   showMonthYearPicker
   onChange={(e) => console.log(e)}
+  placeholder="Select month"
 />
 ```
 
@@ -329,6 +351,7 @@ const DateRange = () => {
           onChange={({date}) => setStartDate(date)}
           showMonthYearPicker
           dateFormat="MM/yyyy"
+          placeholder="Select start month"
         />
       </StackItem>
       
@@ -342,6 +365,7 @@ const DateRange = () => {
           minDate={startDate}
           showMonthYearPicker
           dateFormat="MM/yyyy"
+          placeholder="Select end month"
         />
       </StackItem>
     </StackPanel>
@@ -360,7 +384,7 @@ const Example = () => {
 
   return (
     <div>
-      <DateField open={open} onOpenChange={(open) => console.log(open)}/>
+      <DateField open={open} onOpenChange={(open) => console.log(open)} placeholder="Click show button"/>
       <Button onClick={() => setOpen(!open)}>{ open ? 'Hide' : 'Show' }</Button>
     </div>
   )
@@ -393,6 +417,7 @@ const { DateField } = require('precise-ui');
 <DateField
   onOpenChange={(e)=> console.log(e)}
   onChange={(e) => console.log(e)}
+  placeholder="Fires event when calendar view open/closed"
 />
 ```
 
@@ -416,7 +441,31 @@ const { DateField } = require('precise-ui');
     'ноябрь',
     'декабрь'
   ]}
+  placeholder="With custom week days and month names"
 />
+```
+
+With error handling
+
+```jsx { "props": { "data-skip": true } }
+const { DateField } = require('precise-ui');
+
+const Example = () => {
+  const [ error, setError ] = React.useState();
+
+  const validate = (value) => setError(value.match(/^\d{2}-\d{2}-\d{4}$/) ? undefined : 'Invalid date format')
+
+  return (
+    <DateField 
+      onChangeRaw={(e) => validate(e.target.value)} 
+      onChange={({value}) => validate(value)}
+      error={error} 
+      placeholder="Type aaaa"
+    />
+  )
+}
+
+<Example />
 ```
 
 Inline version
