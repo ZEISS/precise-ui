@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
-import { AccordionCard } from './';
-import { StyledActionContainer } from './AccordionCardInt.part';
+import { AccordionCard, AccordionCardActionContainer } from './';
 
 describe('<AccordionCard />', () => {
   it('should render <AccordionCard> component', () => {
@@ -18,7 +17,7 @@ describe('<AccordionCard />', () => {
       </AccordionCard>,
     );
     expect(wrapper.state().opened).toEqual(false);
-    wrapper.find(StyledActionContainer).simulate('click');
+    wrapper.find(AccordionCardActionContainer).simulate('click');
     expect(wrapper.state().opened).toEqual(true);
     expect(onActionClick).lastCalledWith({ opened: true });
   });
@@ -31,7 +30,7 @@ describe('<AccordionCard />', () => {
       </AccordionCard>,
     );
     expect(wrapper.state().opened).toEqual(true);
-    wrapper.find(StyledActionContainer).simulate('click');
+    wrapper.find(AccordionCardActionContainer).simulate('click');
     expect(wrapper.state().opened).toEqual(true);
     expect(onActionClick).lastCalledWith({ opened: true });
   });

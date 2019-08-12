@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled, { themed, css } from '../../utils/styled';
 import { distance } from '../../distance';
 import { StandardProps } from '../../common';
-import { setLabels, getPropLabel, AccordionCardLabels } from '../../utils/labels';
+import { setLabels, getPropLabel, AccordionCardLabels } from '../../utils';
 import { getFontStyle } from '../../textStyles';
 
 setLabels({
@@ -18,7 +18,7 @@ export interface ActiveProps {
   onClick?(e: React.MouseEvent): void;
 }
 
-const StyledContainer = styled('div')<ActiveProps>(
+export const AccordionCardContainer = styled('div')<ActiveProps>(
   themed(
     ({
       open,
@@ -36,7 +36,7 @@ const StyledContainer = styled('div')<ActiveProps>(
   ),
 );
 
-const StyledHeaderContainer = styled('div')<ActiveProps>(
+export const AccordionCardHeaderContainer = styled('div')<ActiveProps>(
   themed(
     ({
       open,
@@ -51,7 +51,7 @@ const StyledHeaderContainer = styled('div')<ActiveProps>(
   ),
 );
 
-export const StyledActionContainer = styled.div<ActiveProps>(
+export const AccordionCardActionContainer = styled.div<ActiveProps>(
   themed(
     ({ open, theme: { ui0, ui1 } }) => css`
       text-align: center;
@@ -136,9 +136,9 @@ export class AccordionCard extends React.Component<AccordionCardProps, Accordion
     const { opened } = this.state;
 
     return (
-      <StyledActionContainer theme={theme} onClick={this.handleClick} open={opened}>
+      <AccordionCardActionContainer theme={theme} onClick={this.handleClick} open={opened}>
         {getPropLabel(this.props, opened ? 'closeLabel' : 'openLabel')}
-      </StyledActionContainer>
+      </AccordionCardActionContainer>
     );
   };
 
@@ -153,15 +153,15 @@ export class AccordionCard extends React.Component<AccordionCardProps, Accordion
     const { opened } = this.state;
 
     return (
-      <StyledContainer {...props} theme={theme} open={opened}>
-        <StyledHeaderContainer theme={theme} open={opened}>
+      <AccordionCardContainer {...props} theme={theme} open={opened}>
+        <AccordionCardHeaderContainer theme={theme} open={opened}>
           {header}
-        </StyledHeaderContainer>
+        </AccordionCardHeaderContainer>
         <StyledDetailsContainerAnimator theme={theme} open={opened}>
           {children}
         </StyledDetailsContainerAnimator>
         {this.renderActions()}
-      </StyledContainer>
+      </AccordionCardContainer>
     );
   }
 }
