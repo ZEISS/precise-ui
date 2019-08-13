@@ -10,6 +10,8 @@
 - Fixed `Styled Input Box` flex layout for IE 11
 - Fixed `FileUploader` background blocking area
 - New `DateField`
+- Show FileUploader on top of modal
+- Improved `AccordionTable` sorting (empty groups)
 
 ## 0.6.2
 
