@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled, { css } from '../../utils/styled';
 import { KeyCodes } from '../../utils/keyCodes';
 import { remCalc } from '../../utils/remCalc';
-import { InteractiveSurface, InteractiveSurfaceChangeEvent } from '../InteractiveSurface';
+import { InteractiveSurface, InteractiveSurfaceChangeEvent, InteractiveSurfaceProps } from '../InteractiveSurface';
 import { Icon } from '../Icon';
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
@@ -75,6 +75,11 @@ export interface CarouselProps extends StandardProps {
    * @default false
    */
   infinite?: boolean;
+  /**
+   * Whether the Carousel can stop propagation so that links can be clicked
+   * @default false
+   */
+  opaque?: InteractiveSurfaceProps['opaque'];
 }
 
 export interface DragStatus {
@@ -421,6 +426,7 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
       bullet: CustomBullet,
       arrows = false,
       infinite = false,
+      opaque = false,
       ...props
     } = this.props;
     const childrenCount = React.Children.count(children);
@@ -451,7 +457,7 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
     return (
       <RootContainer {...props} onKeyDown={this.handleKeyDown} tabIndex={0}>
         <Mask>
-          <InteractiveSurface theme={theme} onChange={this.dragTile} opaque>
+          <InteractiveSurface theme={theme} onChange={this.dragTile} opaque={opaque}>
             <PagesContainer ref={node => (this.pagesContainer = node)} selectedIndex={selectedIndex}>
               {items}
             </PagesContainer>

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled, { themed } from '../utils/styled';
-import { remCalc } from '../utils/remCalc';
+import { remCalc } from '../utils';
 import { distance } from '../distance';
 import { PreciseTheme } from '../common';
 
@@ -12,7 +12,11 @@ export interface StyledInputProps extends React.InputHTMLAttributes<HTMLInputEle
   innerRef?(ref: HTMLElement): void;
 }
 
-export const StyledInput = styled('input')<StyledInputProps>`
+export const StyledInput = styled.input<StyledInputProps>`
+  ::-ms-clear {
+    display: none;
+  }
+
   color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text1))};
   background: none;
   border: none;

@@ -13,6 +13,7 @@ export * from './displayTo';
 export * from './keyCodes';
 export * from './text';
 export * from './labels';
+export * from './date';
 export {
   default as styled,
   css,
