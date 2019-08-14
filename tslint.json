@@ -8,10 +8,7 @@
   "rules": {
     "prettier": true,
     "prefer-for-of": true,
-    "curly": [
-      true,
-      "ignore-same-line"
-    ],
+    "curly": true,
     "no-duplicate-variable": true,
     "no-null-keyword": true,
     "no-string-literal": true,

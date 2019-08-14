@@ -1,21 +1,13 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
-import { StandardProps } from '../../common';
-import { distance } from '../../distance';
 import { getFontStyle } from '../../textStyles';
+import { StandardProps } from '../../common';
 
-export interface InputErrorProps extends StandardProps {
-  /**
-   * The content of input error (error to display).
-   */
-  children?: React.ReactNode;
-}
+export interface InputErrorProps extends StandardProps {}
 
-const StyledError = styled('div')<InputErrorProps>`
-  ${getFontStyle({ size: 'xSmall' })}
+const StyledError = styled.div`
+  ${getFontStyle({ size: 'xSmall' })};
   color: ${themed(props => props.theme.inputError)};
-
-  padding: ${distance.xsmall} 0;
 `;
 
 /**
