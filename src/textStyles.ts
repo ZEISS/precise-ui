@@ -9,12 +9,12 @@ export function getFontLineHeight(size?: LineHeight) {
   switch (size) {
     case 'xxxLarge':
       return css`
-        ${displayFrom('xLarge')`line-height: ${remCalc('56px')};`}
+        ${displayFrom('large')`line-height: ${remCalc('56px')};`}
         ${displayUpTo('large')`line-height: ${remCalc('36px')};`}
       `;
     case 'xxLarge':
       return css`
-        ${displayFrom('xLarge')`line-height: ${remCalc('36px')};`}
+        ${displayFrom('large')`line-height: ${remCalc('36px')};`}
         ${displayUpTo('large')`line-height: ${remCalc('28px')};`}
       `;
     case 'xLarge':
@@ -23,7 +23,7 @@ export function getFontLineHeight(size?: LineHeight) {
       `;
     case 'large':
       return css`
-        ${displayFrom('xLarge')`line-height: ${remCalc('24px')};`}
+        ${displayFrom('large')`line-height: ${remCalc('24px')};`}
         ${displayUpTo('large')`line-height: ${remCalc('22px')};`}
       `;
     case 'medium':
@@ -44,14 +44,14 @@ export function getFontSize(size?: FontSize) {
   switch (size) {
     case 'xxxLarge':
       return css`
-        ${displayFrom('xLarge')`font-size: ${remCalc('44px')};`}
+        ${displayFrom('large')`font-size: ${remCalc('44px')};`}
         ${displayUpTo('large')`font-size: ${remCalc('32px')};`}
 
  	      letter-spacing: 0.5px;
       `;
     case 'xxLarge':
       return css`
-        ${displayFrom('xLarge')`font-size: ${remCalc('32px')};`}
+        ${displayFrom('large')`font-size: ${remCalc('32px')};`}
         ${displayUpTo('large')`font-size: ${remCalc('24px')};`}
 
  	      letter-spacing: 0.5px;
@@ -63,7 +63,7 @@ export function getFontSize(size?: FontSize) {
       `;
     case 'large':
       return css`
-        ${displayFrom('xLarge')`font-size: ${remCalc('19px')};`}
+        ${displayFrom('large')`font-size: ${remCalc('19px')};`}
         ${displayUpTo('large')`font-size: ${remCalc('16px')};`}
       `;
     case 'medium':
