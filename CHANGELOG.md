@@ -1,4 +1,9 @@
 # Precise UI Changelog
+
+## 0.7.1
+
+- Revert `DateField`
+
 ## 0.7.0
 
 - Fixed horizontal padding for InputInfo and InputError
