@@ -4,6 +4,10 @@
 
 - Implement new breakpoints and screen sizes
 
+## 0.7.1
+
+- Revert `DateField`
+
 ## 0.7.0
 
 - Fixed horizontal padding for InputInfo and InputError

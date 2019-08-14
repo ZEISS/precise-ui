@@ -161,10 +161,10 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
   }
 
   private changeValue = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    this.updateValue(e.target.value, e);
+    this.updateValue(e.target.value);
   };
 
-  private updateValue(value: string, e?: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+  private updateValue(value: string) {
     const { onChange, name = '', form } = this.props;
 
     if (!this.state.controlled) {
@@ -183,7 +183,6 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
     if (typeof onChange === 'function') {
       onChange({
         value,
-        originalEvent: e,
       });
     }
   }
@@ -326,7 +325,6 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
                 hasValue={hasValue}
                 clearable={clearable}
                 onClear={this.handleReset}
-                onClick={() => this._element && this._element.focus()}
               />
             </StyledInputBox>
             {suffix && <TextFieldElement>{suffix}</TextFieldElement>}
