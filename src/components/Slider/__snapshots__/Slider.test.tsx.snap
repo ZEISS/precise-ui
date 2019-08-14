@@ -1,6 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Slider /> should render <Slider> 1`] = `
+.c3 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(114,114,114,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c3:hover {
+  border: 0.25rem solid rgba(75,78,82,1);
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0.5rem 0;
+  height: 0.25rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(211,211,211,0.25);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
 <SliderInt>
   <styled.div
     onKeyDown={[Function]}
@@ -14,9 +76,9 @@ exports[`<Slider /> should render <Slider> 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -28,7 +90,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -42,7 +104,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -59,9 +121,9 @@ exports[`<Slider /> should render <Slider> 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "dZZYUB",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -109,7 +171,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -121,19 +183,19 @@ exports[`<Slider /> should render <Slider> 1`] = `
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI dZZYUB"
+              className="c1"
               onChange={[Function]}
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI dZZYUB"
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI dZZYUB"
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -141,7 +203,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fIcmpj",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -170,7 +232,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="sc-iwsKbI dZZYUB sc-bwzfXH fIcmpj"
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -203,7 +265,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -267,7 +329,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -293,6 +355,79 @@ exports[`<Slider /> should render <Slider> 1`] = `
 `;
 
 exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
+.c4 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(114,114,114,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c4:hover {
+  border: 0.25rem solid rgba(75,78,82,1);
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0.5rem 0;
+  height: 0.25rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(211,211,211,0.25);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
+.c3 {
+  border-radius: 0.5rem;
+  background: rgba(75,78,82,0.75);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  height: 0.25rem;
+  width: auto;
+  position: absolute;
+  margin: auto;
+}
+
 <SliderInt
   value={0.5}
 >
@@ -308,9 +443,9 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -322,7 +457,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -336,7 +471,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -353,9 +488,9 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "dZZYUB",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -403,7 +538,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -415,19 +550,19 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI dZZYUB"
+              className="c1"
               onChange={[Function]}
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI dZZYUB"
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI dZZYUB"
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -435,7 +570,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fIcmpj",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -464,7 +599,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="sc-iwsKbI dZZYUB sc-bwzfXH fIcmpj"
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -485,9 +620,9 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "sc-gqjmRU",
                               "isStatic": false,
-                              "lastClassName": "dRcLqV",
+                              "lastClassName": "c3",
                               "rules": Array [
                                 "
   border-radius: ",
@@ -515,7 +650,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "sc-gqjmRU",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -531,7 +666,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                         vertical={false}
                       >
                         <div
-                          className="sc-gZMcBi dRcLqV"
+                          className="c3"
                           style={
                             Object {
                               "width": "50%",
@@ -568,7 +703,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c4",
                                   "rules": Array [
                                     "
   width: ",
@@ -632,7 +767,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c4"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -658,6 +793,68 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
 `;
 
 exports[`<Slider /> should render <Slider> in controlled mode with multiple values 1`] = `
+.c3 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(114,114,114,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c3:hover {
+  border: 0.25rem solid rgba(75,78,82,1);
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0.5rem 0;
+  height: 0.25rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(211,211,211,0.25);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
 <SliderInt
   value={
     Array [
@@ -678,9 +875,9 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -692,7 +889,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -706,7 +903,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -723,9 +920,9 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "dZZYUB",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -773,7 +970,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -785,19 +982,19 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI dZZYUB"
+              className="c1"
               onChange={[Function]}
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI dZZYUB"
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI dZZYUB"
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -805,7 +1002,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fIcmpj",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -834,7 +1031,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="sc-iwsKbI dZZYUB sc-bwzfXH fIcmpj"
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -867,7 +1064,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -931,7 +1128,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -972,7 +1169,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -1036,7 +1233,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -1062,6 +1259,68 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
 `;
 
 exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = `
+.c3 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(114,114,114,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c3:hover {
+  border: 0.25rem solid rgba(75,78,82,1);
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0.5rem 0;
+  height: 0.25rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(211,211,211,0.25);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
 <SliderInt
   color="red"
 >
@@ -1077,9 +1336,9 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -1091,7 +1350,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -1105,7 +1364,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -1122,9 +1381,9 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "dZZYUB",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -1172,7 +1431,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -1184,19 +1443,19 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI dZZYUB"
+              className="c1"
               onChange={[Function]}
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI dZZYUB"
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI dZZYUB"
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -1204,7 +1463,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fIcmpj",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -1233,7 +1492,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="sc-iwsKbI dZZYUB sc-bwzfXH fIcmpj"
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -1267,7 +1526,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -1331,7 +1590,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": "red",
@@ -1357,6 +1616,68 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
 `;
 
 exports[`<Slider /> should render <Slider> with an initial multiple values 1`] = `
+.c3 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(114,114,114,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c3:hover {
+  border: 0.25rem solid rgba(75,78,82,1);
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0.5rem 0;
+  height: 0.25rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(211,211,211,0.25);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
 <SliderInt
   defaultValue={
     Array [
@@ -1380,9 +1701,9 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -1394,7 +1715,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -1408,7 +1729,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -1425,9 +1746,9 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "dZZYUB",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -1475,7 +1796,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -1487,19 +1808,19 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI dZZYUB"
+              className="c1"
               onChange={[Function]}
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI dZZYUB"
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI dZZYUB"
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -1507,7 +1828,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fIcmpj",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -1536,7 +1857,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="sc-iwsKbI dZZYUB sc-bwzfXH fIcmpj"
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -1569,7 +1890,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -1633,7 +1954,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -1674,7 +1995,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -1738,7 +2059,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -1779,7 +2100,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -1843,7 +2164,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -1869,6 +2190,79 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
 `;
 
 exports[`<Slider /> should render <Slider> with an initial value 1`] = `
+.c4 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(114,114,114,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c4:hover {
+  border: 0.25rem solid rgba(75,78,82,1);
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0.5rem 0;
+  height: 0.25rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(211,211,211,0.25);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
+.c3 {
+  border-radius: 0.5rem;
+  background: rgba(75,78,82,0.75);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  height: 0.25rem;
+  width: auto;
+  position: absolute;
+  margin: auto;
+}
+
 <SliderInt
   defaultValue={0.76}
 >
@@ -1884,9 +2278,9 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -1898,7 +2292,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -1912,7 +2306,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -1929,9 +2323,9 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "dZZYUB",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -1979,7 +2373,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -1991,19 +2385,19 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI dZZYUB"
+              className="c1"
               onChange={[Function]}
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI dZZYUB"
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI dZZYUB"
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -2011,7 +2405,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fIcmpj",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -2040,7 +2434,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="sc-iwsKbI dZZYUB sc-bwzfXH fIcmpj"
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -2061,9 +2455,9 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "sc-gqjmRU",
                               "isStatic": false,
-                              "lastClassName": "dRcLqV",
+                              "lastClassName": "c3",
                               "rules": Array [
                                 "
   border-radius: ",
@@ -2091,7 +2485,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "sc-gqjmRU",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -2107,7 +2501,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                         vertical={false}
                       >
                         <div
-                          className="sc-gZMcBi dRcLqV"
+                          className="c3"
                           style={
                             Object {
                               "width": "76%",
@@ -2144,7 +2538,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c4",
                                   "rules": Array [
                                     "
   width: ",
@@ -2208,7 +2602,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c4"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -2234,6 +2628,68 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
 `;
 
 exports[`<Slider /> should render <Slider> with multiple values and a fixed margin 1`] = `
+.c3 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(114,114,114,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c3:hover {
+  border: 0.25rem solid rgba(75,78,82,1);
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0.5rem 0;
+  height: 0.25rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(211,211,211,0.25);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
 <SliderInt
   defaultValue={
     Array [
@@ -2257,9 +2713,9 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -2271,7 +2727,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -2285,7 +2741,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -2302,9 +2758,9 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "dZZYUB",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -2352,7 +2808,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -2364,19 +2820,19 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI dZZYUB"
+              className="c1"
               onChange={[Function]}
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI dZZYUB"
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI dZZYUB"
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -2384,7 +2840,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fIcmpj",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -2413,7 +2869,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="sc-iwsKbI dZZYUB sc-bwzfXH fIcmpj"
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -2446,7 +2902,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -2510,7 +2966,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -2551,7 +3007,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -2615,7 +3071,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -2641,6 +3097,79 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
 `;
 
 exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
+.c4 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(114,114,114,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c4:hover {
+  border: 0.25rem solid rgba(75,78,82,1);
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0.5rem 0;
+  height: 0.25rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(211,211,211,0.25);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
+.c3 {
+  border-radius: 0.5rem;
+  background: rgba(75,78,82,0.75);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  height: 0.25rem;
+  width: auto;
+  position: absolute;
+  margin: auto;
+}
+
 <SliderInt
   step={0.1}
   value={0.5}
@@ -2657,9 +3186,9 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -2671,7 +3200,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -2685,7 +3214,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -2702,9 +3231,9 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "dZZYUB",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -2752,7 +3281,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -2764,19 +3293,19 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI dZZYUB"
+              className="c1"
               onChange={[Function]}
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI dZZYUB"
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI dZZYUB"
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -2784,7 +3313,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fIcmpj",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -2813,7 +3342,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="sc-iwsKbI dZZYUB sc-bwzfXH fIcmpj"
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -2834,9 +3363,9 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "sc-gqjmRU",
                               "isStatic": false,
-                              "lastClassName": "dRcLqV",
+                              "lastClassName": "c3",
                               "rules": Array [
                                 "
   border-radius: ",
@@ -2864,7 +3393,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "sc-gqjmRU",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -2880,7 +3409,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                         vertical={false}
                       >
                         <div
-                          className="sc-gZMcBi dRcLqV"
+                          className="c3"
                           style={
                             Object {
                               "width": "50%",
@@ -2917,7 +3446,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c4",
                                   "rules": Array [
                                     "
   width: ",
@@ -2981,7 +3510,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c4"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -3007,6 +3536,79 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
 `;
 
 exports[`<Slider /> should render a <Slider> with custom boundaries in controlled mode 1`] = `
+.c4 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(114,114,114,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c4:hover {
+  border: 0.25rem solid rgba(75,78,82,1);
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0.5rem 0;
+  height: 0.25rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(211,211,211,0.25);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
+.c3 {
+  border-radius: 0.5rem;
+  background: rgba(75,78,82,0.75);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  height: 0.25rem;
+  width: auto;
+  position: absolute;
+  margin: auto;
+}
+
 <SliderInt
   maximum={10}
   minimum={1}
@@ -3024,9 +3626,9 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -3038,7 +3640,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -3052,7 +3654,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -3069,9 +3671,9 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "dZZYUB",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -3119,7 +3721,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -3131,19 +3733,19 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI dZZYUB"
+              className="c1"
               onChange={[Function]}
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI dZZYUB"
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI dZZYUB"
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -3151,7 +3753,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fIcmpj",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -3180,7 +3782,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="sc-iwsKbI dZZYUB sc-bwzfXH fIcmpj"
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -3201,9 +3803,9 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "sc-gqjmRU",
                               "isStatic": false,
-                              "lastClassName": "dRcLqV",
+                              "lastClassName": "c3",
                               "rules": Array [
                                 "
   border-radius: ",
@@ -3231,7 +3833,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "sc-gqjmRU",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -3247,7 +3849,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                         vertical={false}
                       >
                         <div
-                          className="sc-gZMcBi dRcLqV"
+                          className="c3"
                           style={
                             Object {
                               "width": "55.55555555555556%",
@@ -3284,7 +3886,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c4",
                                   "rules": Array [
                                     "
   width: ",
@@ -3348,7 +3950,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c4"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -3374,6 +3976,68 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
 `;
 
 exports[`<Slider /> should render a disabled <Slider> 1`] = `
+.c3 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(239,239,239,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: not-allowed;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c3:hover {
+  border: none;
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0.5rem 0;
+  height: 0.25rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(239,239,239,1);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
 <SliderInt
   disabled={true}
 >
@@ -3389,9 +4053,9 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -3403,7 +4067,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -3417,7 +4081,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -3436,9 +4100,9 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "dCKOoc",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -3486,7 +4150,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -3498,22 +4162,20 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI dCKOoc"
+              className="c1"
               disabled={true}
               onChange={[Function]}
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI dCKOoc"
-                disabled={true}
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI dCKOoc"
-                  disabled={true}
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -3521,7 +4183,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "dAdpme",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -3550,8 +4212,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="sc-iwsKbI dCKOoc sc-bwzfXH dAdpme"
-                    disabled={true}
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -3587,7 +4248,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "eJgwxd",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -3651,7 +4312,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
                             }
                           >
                             <div
-                              className="sc-bdVaJa eJgwxd"
+                              className="c3"
                               disabled={true}
                               style={
                                 Object {
@@ -3678,6 +4339,79 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
 `;
 
 exports[`<Slider /> should render a horizontal <Slider> 1`] = `
+.c4 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(114,114,114,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c4:hover {
+  border: 0.25rem solid rgba(75,78,82,1);
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0.5rem 0;
+  height: 0.25rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(211,211,211,0.25);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
+.c3 {
+  border-radius: 0.5rem;
+  background: rgba(75,78,82,0.75);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  height: 0.25rem;
+  width: auto;
+  position: absolute;
+  margin: auto;
+}
+
 <SliderInt
   orientation="horizontal"
   value={0.5}
@@ -3694,9 +4428,9 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -3708,7 +4442,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -3722,7 +4456,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -3740,9 +4474,9 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "dZZYUB",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -3790,7 +4524,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -3803,13 +4537,13 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI dZZYUB"
+              className="c1"
               onChange={[Function]}
               orientation="horizontal"
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI dZZYUB"
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
@@ -3817,7 +4551,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI dZZYUB"
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -3825,7 +4559,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fIcmpj",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -3855,7 +4589,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                   orientation="horizontal"
                 >
                   <div
-                    className="sc-iwsKbI dZZYUB sc-bwzfXH fIcmpj"
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -3877,9 +4611,9 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                             "$$typeof": Symbol(react.forward_ref),
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
-                              "componentId": "sc-gZMcBi",
+                              "componentId": "sc-gqjmRU",
                               "isStatic": false,
-                              "lastClassName": "dRcLqV",
+                              "lastClassName": "c3",
                               "rules": Array [
                                 "
   border-radius: ",
@@ -3907,7 +4641,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                             "displayName": "styled.div",
                             "foldedComponentIds": Array [],
                             "render": [Function],
-                            "styledComponentId": "sc-gZMcBi",
+                            "styledComponentId": "sc-gqjmRU",
                             "target": "div",
                             "toString": [Function],
                             "warnTooManyClasses": [Function],
@@ -3923,7 +4657,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                         vertical={false}
                       >
                         <div
-                          className="sc-gZMcBi dRcLqV"
+                          className="c3"
                           style={
                             Object {
                               "width": "50%",
@@ -3960,7 +4694,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c4",
                                   "rules": Array [
                                     "
   width: ",
@@ -4024,7 +4758,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c4"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -4050,6 +4784,68 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
 `;
 
 exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1`] = `
+.c3 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(114,114,114,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c3:hover {
+  border: 0.25rem solid rgba(75,78,82,1);
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0.5rem 0;
+  height: 0.25rem;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(211,211,211,0.25);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
 <SliderInt
   maximum={1000}
   step={10}
@@ -4073,9 +4869,9 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -4087,7 +4883,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -4101,7 +4897,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -4118,9 +4914,9 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "dZZYUB",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -4168,7 +4964,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -4180,19 +4976,19 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI dZZYUB"
+              className="c1"
               onChange={[Function]}
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI dZZYUB"
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI dZZYUB"
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -4200,7 +4996,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fIcmpj",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -4229,7 +5025,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="sc-iwsKbI dZZYUB sc-bwzfXH fIcmpj"
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -4262,7 +5058,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -4326,7 +5122,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -4367,7 +5163,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -4431,7 +5227,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -4472,7 +5268,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -4536,7 +5332,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": undefined,
@@ -4562,6 +5358,68 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
 `;
 
 exports[`<Slider /> should render a vertical <Slider> 1`] = `
+.c3 {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: rgba(114,114,114,1);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+  box-sizing: border-box;
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1), border 0.2s cubic-bezier(0,0,0.25,1);
+}
+
+.c3:hover {
+  border: 0.25rem solid rgba(75,78,82,1);
+}
+
+.c2 {
+  position: relative;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c0 {
+  position: relative;
+  outline: 0;
+  height: 100%;
+}
+
+.c1 {
+  position: relative;
+  padding: 0 0.5rem;
+  height: 100%;
+  width: 0.25rem;
+  box-sizing: content-box;
+}
+
+.c1:after {
+  content: '';
+  display: block;
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(211,211,211,0.25);
+  -webkit-transition: background 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background 0.3s cubic-bezier(0,0,0.25,1);
+}
+
+.c1:hover {
+  cursor: pointer;
+}
+
+.c1:hover:after {
+  background: rgba(0,102,156,0.25);
+}
+
 <SliderInt
   orientation="vertical"
 >
@@ -4577,9 +5435,9 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "sc-dnqmqq",
+            "componentId": "sc-iwsKbI",
             "isStatic": true,
-            "lastClassName": "bnodmU",
+            "lastClassName": "c0",
             "rules": Array [
               "
   position: relative;
@@ -4591,7 +5449,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
           "displayName": "styled.div",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "sc-dnqmqq",
+          "styledComponentId": "sc-iwsKbI",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -4605,7 +5463,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
       tabIndex={0}
     >
       <div
-        className="sc-dnqmqq bnodmU"
+        className="c0"
         onKeyDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
@@ -4623,9 +5481,9 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "sc-iwsKbI",
+                  "componentId": "sc-gZMcBi",
                   "isStatic": false,
-                  "lastClassName": "cTOTra",
+                  "lastClassName": "c1",
                   "rules": Array [
                     "
   position: relative;
@@ -4673,7 +5531,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
                 "displayName": "Styled(InteractiveSurface)",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "sc-iwsKbI",
+                "styledComponentId": "sc-gZMcBi",
                 "target": [Function],
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -4686,13 +5544,13 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
           >
             <InteractiveSurface
               active={false}
-              className="sc-iwsKbI cTOTra"
+              className="c1"
               onChange={[Function]}
               orientation="vertical"
             >
               <styled.div
                 active={false}
-                className="sc-iwsKbI cTOTra"
+                className="c1"
                 onClickCapture={[Function]}
                 onMouseDownCapture={[Function]}
                 onTouchStartCapture={[Function]}
@@ -4700,7 +5558,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
               >
                 <StyledComponent
                   active={false}
-                  className="sc-iwsKbI cTOTra"
+                  className="c1"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
@@ -4708,7 +5566,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-bwzfXH",
                         "isStatic": false,
-                        "lastClassName": "fIcmpj",
+                        "lastClassName": "c2",
                         "rules": Array [
                           "
   position: relative;
@@ -4738,7 +5596,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
                   orientation="vertical"
                 >
                   <div
-                    className="sc-iwsKbI cTOTra sc-bwzfXH fIcmpj"
+                    className="c1 c2"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -4772,7 +5630,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
                                 "componentStyle": ComponentStyle {
                                   "componentId": "sc-bdVaJa",
                                   "isStatic": false,
-                                  "lastClassName": "dkOuFp",
+                                  "lastClassName": "c3",
                                   "rules": Array [
                                     "
   width: ",
@@ -4836,7 +5694,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
                             }
                           >
                             <div
-                              className="sc-bdVaJa dkOuFp"
+                              className="c3"
                               style={
                                 Object {
                                   "backgroundColor": undefined,

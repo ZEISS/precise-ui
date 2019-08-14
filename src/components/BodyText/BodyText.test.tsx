@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
 import { BodyText } from './';
-import 'jest-styled-components';
 
 describe('<BodyText />', () => {
   it('should render default <BodyText> component', () => {

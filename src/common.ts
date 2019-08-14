@@ -383,6 +383,10 @@ export interface InputChangeEvent<T> {
    * The current value of the input field.
    */
   value: T;
+  /**
+   * Original change event
+   */
+  originalEvent?: React.ChangeEvent<any>;
 }
 
 export interface InputProps<T> extends StandardProps {
@@ -413,7 +417,7 @@ export interface InputProps<T> extends StandardProps {
   /**
    * Event triggered when a key was pressed.
    */
-  onInput?(): void;
+  onInput?(e?: InputChangeEvent<string>): void;
   /**
    * Optional name if to be used within a form context.
    */
@@ -435,6 +439,14 @@ export interface InputProps<T> extends StandardProps {
    * Sets the autocomplete mode of the input.
    */
   autoComplete?: 'on' | 'off';
+  /**
+   * Sets type on the input field.
+   */
+  type?: string;
+  /**
+   * Sets maximum lenngth of input field.
+   */
+  maxLength?: number;
 }
 
 export interface LabeledInputProps<T> extends InputProps<T> {

@@ -146,6 +146,12 @@ const ModalContent = styled.div<ModalContentProps>(
   `,
 );
 
+const ModalLabel = styled.span`
+  ${getFontStyle({ size: 'small' })}
+
+  padding-bottom: ${distance.small};
+`;
+
 const StyledModalBody = styled.div`
   ${getFontStyle({ size: 'medium', weight: 'regular' })}
 
@@ -236,10 +242,11 @@ ModalBody.displayName = 'ModalBody';
  */
 export const ModalHeader: React.SFC<ModalHeaderProps> = ({ title, label, ...rest }) => (
   <StyledModalHeader {...rest}>
-    {label && <Headline level={6}>{label}</Headline>}
-    {title && <Headline level={4}>{title}</Headline>}
+    {label && <ModalLabel>{label}</ModalLabel>}
+    {title && <Headline level={2}>{title}</Headline>}
   </StyledModalHeader>
 );
+
 ModalHeader.displayName = 'ModalHeader';
 
 /**

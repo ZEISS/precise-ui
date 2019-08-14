@@ -4,7 +4,9 @@ exports[`<RadioButtonInt /> should render the controlled RadioButtonInt with a l
 <styled.div
   onClick={[Function]}
 >
-  <styled.div>
+  <styled.div
+    withError={false}
+  >
     <styled.div
       disabled={false}
       onKeyDown={[Function]}
@@ -24,7 +26,6 @@ exports[`<RadioButtonInt /> should render the controlled RadioButtonInt with a l
       Value
     </Label>
   </styled.div>
-  <InputError />
 </styled.div>
 `;
 
@@ -33,7 +34,9 @@ exports[`<RadioButtonInt /> should render the disabled, uncontrolled RadioButton
   disabled={true}
   onClick={[Function]}
 >
-  <styled.div>
+  <styled.div
+    withError={false}
+  >
     <styled.div
       disabled={true}
       onKeyDown={[Function]}
@@ -46,6 +49,5 @@ exports[`<RadioButtonInt /> should render the disabled, uncontrolled RadioButton
       />
     </styled.div>
   </styled.div>
-  <InputError />
 </styled.div>
 `;

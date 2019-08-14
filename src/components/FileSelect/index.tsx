@@ -35,6 +35,7 @@ export interface FileSelectProps extends InputProps<Array<File>> {
 
 export interface FileSelectState {
   value: Array<File>;
+  error?: React.ReactChild;
   controlled: boolean;
   previews: Array<FileImagePreview>;
 }
@@ -63,6 +64,7 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
       value,
       controlled: props.value !== undefined,
       previews: [],
+      error: props.error,
     };
   }
 
@@ -84,15 +86,14 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
     }
   }
 
-  componentWillReceiveProps(e: FileSelectProps) {
-    const { controlled, value } = this.state;
-
-    if (controlled && e.value && value !== e.value) {
-      this.setState(() => ({
-        value: e.value || [],
+  componentWillReceiveProps({ value = [], error }: FileSelectProps) {
+    if (this.state.controlled && value && this.state.value !== value) {
+      this.setState({
+        value,
         previews: [],
-      }));
+      });
     }
+    this.setState({ error });
   }
 
   private addFileEntries = (ev: React.ChangeEvent<HTMLInputElement>) => {
@@ -225,24 +226,11 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
   };
 
   render() {
-    const {
-      children,
-      theme,
-      value: _0,
-      defaultValue: _1,
-      disabled,
-      multiple,
-      error,
-      info,
-      onChange: _2,
-      preview: _3,
-      onOpen: _4,
-      ...props
-    } = this.props;
-    const { value } = this.state;
+    const { children, disabled, multiple, info } = this.props;
+    const { value, error } = this.state;
 
     return (
-      <div {...props}>
+      <div>
         <Button onClick={this.openFilePicker} disabled={disabled} buttonStyle="secondary" type="button">
           {children}
         </Button>

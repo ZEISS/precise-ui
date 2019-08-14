@@ -20,6 +20,24 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render Announcement icon', () => {
+    const Component = icons.Announcement;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Book icon', () => {
+    const Component = icons.Book;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Bookmark icon', () => {
+    const Component = icons.Bookmark;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Cached icon', () => {
     const Component = icons.Cached;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -50,8 +68,26 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render Description icon', () => {
+    const Component = icons.Description;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Done icon', () => {
     const Component = icons.Done;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Event icon', () => {
+    const Component = icons.Event;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render ExitToApp icon', () => {
+    const Component = icons.ExitToApp;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -76,6 +112,18 @@ describe('Generated icons', () => {
 
   it('should render HelpOutline icon', () => {
     const Component = icons.HelpOutline;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Home icon', () => {
+    const Component = icons.Home;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render ImportantDevices icon', () => {
+    const Component = icons.ImportantDevices;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -170,6 +218,18 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render VerifiedUser icon', () => {
+    const Component = icons.VerifiedUser;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render ViewColumn icon', () => {
+    const Component = icons.ViewColumn;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Visibility icon', () => {
     const Component = icons.Visibility;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -194,14 +254,32 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render PlayArrow icon', () => {
+    const Component = icons.PlayArrow;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Replay icon', () => {
     const Component = icons.Replay;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render VideoLibrary icon', () => {
+    const Component = icons.VideoLibrary;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Email icon', () => {
     const Component = icons.Email;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Phone icon', () => {
+    const Component = icons.Phone;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -290,6 +368,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render CreateNewFolder icon', () => {
+    const Component = icons.CreateNewFolder;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render FileDownload icon', () => {
     const Component = icons.FileDownload;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -298,6 +382,24 @@ describe('Generated icons', () => {
 
   it('should render FileUpload icon', () => {
     const Component = icons.FileUpload;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Folder icon', () => {
+    const Component = icons.Folder;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render FolderOpen icon', () => {
+    const Component = icons.FolderOpen;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render FolderShared icon', () => {
+    const Component = icons.FolderShared;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -350,6 +452,18 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render LocalOffer icon', () => {
+    const Component = icons.LocalOffer;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render MyLocation icon', () => {
+    const Component = icons.MyLocation;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Place icon', () => {
     const Component = icons.Place;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -376,6 +490,12 @@ describe('Generated icons', () => {
 
   it('should render ArrowForward icon', () => {
     const Component = icons.ArrowForward;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Cancel icon', () => {
+    const Component = icons.Cancel;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -472,6 +592,12 @@ describe('Generated icons', () => {
 
   it('should render Public icon', () => {
     const Component = icons.Public;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Share icon', () => {
+    const Component = icons.Share;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });

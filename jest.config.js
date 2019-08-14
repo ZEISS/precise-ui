@@ -1,5 +1,6 @@
 module.exports = {
   setupFiles: ['./test/setup.ts'],
+  setupFilesAfterEnv: ['./test/setupTest.ts'],
   transform: {
     '^.+\\.(ts|tsx?)$': 'ts-jest',
   },
@@ -10,5 +11,8 @@ module.exports = {
     'ts-jest': {
       diagnostics: false,
     },
+  },
+  moduleNameMapper: {
+    '\\.(s?css|less)$': 'identity-obj-proxy',
   },
 };

@@ -10,7 +10,7 @@ const { Headline } = require('precise-ui');
 
 **Semantics**
 
-Component is supporting levels from 1-6, setting the `level` property will set the corresponding html tag:
+Component is supporting levels from 1-5, setting the `level` property will set the corresponding html tag:
 
 ```jsx
 const { Headline } = require('precise-ui');
@@ -42,6 +42,5 @@ const { Headline }= require('precise-ui');
   <Headline level={3}>h3 headline</Headline>
   <Headline level={4}>h4 headline</Headline>
   <Headline level={5}>h5 headline</Headline>
-  <Headline level={6}>h6 headline</Headline>
 </div>
 ```

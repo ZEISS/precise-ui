@@ -6,6 +6,7 @@ exports[`<Headline /> should render h2 headline 1`] = `
   -moz-letter-spacing: 0.5px;
   -ms-letter-spacing: 0.5px;
   letter-spacing: 0.5px;
+  font-weight: 300;
   margin: 0;
   padding: 0 0 0.5rem 0;
   font-family: inherit;

@@ -49,6 +49,43 @@ export const AccountCircle = <SvgIconConstructor>function(props: SvgIconProps) {
 AccountCircle.displayName = 'AccountCircle';
 AccountCircle.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Announcement = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d: 'M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z',
+    }),
+  );
+};
+
+Announcement.displayName = 'Announcement';
+Announcement.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Book = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d: 'M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z',
+    }),
+  );
+};
+
+Book.displayName = 'Book';
+Book.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Bookmark = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', { d: 'M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z' }),
+  );
+};
+
+Bookmark.displayName = 'Bookmark';
+Bookmark.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Cached = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -113,6 +150,20 @@ export const Delete = <SvgIconConstructor>function(props: SvgIconProps) {
 Delete.displayName = 'Delete';
 Delete.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Description = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z',
+    }),
+  );
+};
+
+Description.displayName = 'Description';
+Description.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Done = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -123,6 +174,34 @@ export const Done = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Done.displayName = 'Done';
 Done.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Event = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z',
+    }),
+  );
+};
+
+Event.displayName = 'Event';
+Event.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const ExitToApp = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z',
+    }),
+  );
+};
+
+ExitToApp.displayName = 'ExitToApp';
+ExitToApp.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Favorite = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -178,6 +257,27 @@ export const HelpOutline = <SvgIconConstructor>function(props: SvgIconProps) {
 
 HelpOutline.displayName = 'HelpOutline';
 HelpOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Home = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement('svg', props, React.createElement('path', { d: 'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z' }));
+};
+
+Home.displayName = 'Home';
+Home.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const ImportantDevices = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M23 11.01L18 11c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5c.55 0 1-.45 1-1v-9c0-.55-.45-.99-1-.99zM23 20h-5v-7h5v7zM20 2H2C.89 2 0 2.89 0 4v12c0 1.1.89 2 2 2h7v2H7v2h8v-2h-2v-2h2v-2H2V4h18v5h2V4c0-1.11-.9-2-2-2zm-8.03 7L11 6l-.97 3H7l2.47 1.76-.94 2.91 2.47-1.8 2.47 1.8-.94-2.91L15 9h-3.03z',
+    }),
+  );
+};
+
+ImportantDevices.displayName = 'ImportantDevices';
+ImportantDevices.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Info = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -385,6 +485,31 @@ export const Update = <SvgIconConstructor>function(props: SvgIconProps) {
 Update.displayName = 'Update';
 Update.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const VerifiedUser = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z',
+    }),
+  );
+};
+
+VerifiedUser.displayName = 'VerifiedUser';
+VerifiedUser.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const ViewColumn = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', { d: 'M10 18h5V5h-5v13zm-6 0h5V5H4v13zM16 5v13h5V5h-5z' }),
+  );
+};
+
+ViewColumn.displayName = 'ViewColumn';
+ViewColumn.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Visibility = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -437,6 +562,13 @@ export const Warning = <SvgIconConstructor>function(props: SvgIconProps) {
 Warning.displayName = 'Warning';
 Warning.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const PlayArrow = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement('svg', props, React.createElement('path', { d: 'M8 5v14l11-7z' }));
+};
+
+PlayArrow.displayName = 'PlayArrow';
+PlayArrow.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Replay = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -449,6 +581,20 @@ export const Replay = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Replay.displayName = 'Replay';
 Replay.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const VideoLibrary = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z',
+    }),
+  );
+};
+
+VideoLibrary.displayName = 'VideoLibrary';
+VideoLibrary.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Email = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -463,6 +609,20 @@ export const Email = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Email.displayName = 'Email';
 Email.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Phone = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z',
+    }),
+  );
+};
+
+Phone.displayName = 'Phone';
+Phone.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Add = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement('svg', props, React.createElement('path', { d: 'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z' }));
@@ -630,6 +790,20 @@ export const BorderClear = <SvgIconConstructor>function(props: SvgIconProps) {
 BorderClear.displayName = 'BorderClear';
 BorderClear.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const CreateNewFolder = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M20 6h-8l-2-2H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-1 8h-3v3h-2v-3h-3v-2h3V9h2v3h3v2z',
+    }),
+  );
+};
+
+CreateNewFolder.displayName = 'CreateNewFolder';
+CreateNewFolder.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const FileDownload = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -647,6 +821,46 @@ export const FileUpload = <SvgIconConstructor>function(props: SvgIconProps) {
 
 FileUpload.displayName = 'FileUpload';
 FileUpload.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Folder = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d: 'M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z',
+    }),
+  );
+};
+
+Folder.displayName = 'Folder';
+Folder.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const FolderOpen = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d: 'M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z',
+    }),
+  );
+};
+
+FolderOpen.displayName = 'FolderOpen';
+FolderOpen.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const FolderShared = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z',
+    }),
+  );
+};
+
+FolderShared.displayName = 'FolderShared';
+FolderShared.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const KeyboardArrowDown = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -748,6 +962,34 @@ export const FilterNone = <SvgIconConstructor>function(props: SvgIconProps) {
 FilterNone.displayName = 'FilterNone';
 FilterNone.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const LocalOffer = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z',
+    }),
+  );
+};
+
+LocalOffer.displayName = 'LocalOffer';
+LocalOffer.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const MyLocation = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z',
+    }),
+  );
+};
+
+MyLocation.displayName = 'MyLocation';
+MyLocation.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Place = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -800,6 +1042,20 @@ export const ArrowForward = <SvgIconConstructor>function(props: SvgIconProps) {
 
 ArrowForward.displayName = 'ArrowForward';
 ArrowForward.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Cancel = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z',
+    }),
+  );
+};
+
+Cancel.displayName = 'Cancel';
+Cancel.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Check = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -1013,6 +1269,20 @@ export const Public = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Public.displayName = 'Public';
 Public.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Share = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z',
+    }),
+  );
+};
+
+Share.displayName = 'Share';
+Share.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const CheckBox = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(

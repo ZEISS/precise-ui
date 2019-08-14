@@ -108,6 +108,13 @@ export interface AccordionTableProps<T> extends TableProps<T>, AccordionCardLabe
    * Notification callback if a group is expanded or collapsed.
    */
   onToggleGroup?(e: AccordionGroupToggleEvent<T>): void;
+
+  /**
+   * A label to be used for the group of those items which have no value for the 'groupBy' column.
+   *
+   * @default '—'
+   */
+  noValueGroupLabel?: string;
 }
 
 export interface AccordionTableRowEvent<T> extends TableRowEvent<T> {
