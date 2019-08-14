@@ -1,5 +1,5 @@
 # Precise UI Changelog
-## 0.6.3
+## 0.7.0
 
 - Fixed horizontal padding for InputInfo and InputError
 - Hide info element on open Autocomplete list
@@ -9,7 +9,9 @@
 - Fixed two cross(clear) buttons displayed inside TextField in IE 11
 - Fixed `Styled Input Box` flex layout for IE 11
 - Fixed `FileUploader` background blocking area
-
+- New `DateField`
+- Show FileUploader on top of modal
+- Improved `AccordionTable` sorting (empty groups)
 
 ## 0.6.2
 
