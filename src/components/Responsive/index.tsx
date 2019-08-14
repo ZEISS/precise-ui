@@ -54,7 +54,6 @@ export class Responsive extends React.Component<ResponsiveProps, ResponsiveState
     const mediaQueries = this.mediaQueriesToListen;
 
     for (const screenSize of Object.keys(mediaQueries)) {
-      console.log(mediaQueries[screenSize].media);
       if (mediaQueries[screenSize].matches) {
         return screenSize as ScreenSize;
       }
