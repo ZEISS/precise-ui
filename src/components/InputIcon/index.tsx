@@ -13,7 +13,6 @@ export interface InputIconProps {
   theme?: PreciseTheme;
   defaultIcon?: React.ReactChild;
   onClear?(): void;
-  onClick?(): void;
 }
 
 export const InputIcon: React.SFC<InputIconProps> = ({
@@ -24,21 +23,16 @@ export const InputIcon: React.SFC<InputIconProps> = ({
   theme,
   defaultIcon,
   onClear,
-  onClick,
 }) =>
   !disabled && clearable && hasValue ? (
-    <StyledIconContainer
-      onClick={() => {
-        onClear && onClear();
-        onClick && onClick();
-      }}>
+    <StyledIconContainer onClick={onClear}>
       <IconLink icon="Close" />
     </StyledIconContainer>
   ) : error ? (
-    <StyledIconContainer onClick={onClick}>
+    <StyledIconContainer>
       <Icon name="Error" color={theme ? theme.inputError : purpleRed} size="22px" />
     </StyledIconContainer>
   ) : defaultIcon ? (
-    <StyledIconContainer onClick={onClick}>{defaultIcon}</StyledIconContainer>
+    <StyledIconContainer>{defaultIcon}</StyledIconContainer>
   ) : //tslint:disable-next-line
   null;
