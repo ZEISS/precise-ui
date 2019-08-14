@@ -149,7 +149,7 @@ const StyledButton = styled(AnchorInt)<StyledButtonProps>(
       display: ${props.block ? 'block' : 'inline-block'};
       cursor: ${props.disabled ? 'not-allowed' : 'pointer'};
       ${!props.disabled ? PseudoButtonStyle(themeSettings) : ''};
-      ${displayUpTo('large')`
+      ${displayUpTo('medium')`
         width: 100%;
         margin: ${distance.small} 0;
       `};

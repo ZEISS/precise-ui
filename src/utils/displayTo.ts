@@ -10,6 +10,7 @@ export function getMediaQueries(breakpoints: Breakpoints) {
   );
 }
 
+// create max-width media query including screen size
 export function displayUpTo(screen: ScreenSize) {
   const screenBreakpoints = getScreenSizeBreakpoints(screen, breakpoints);
   if (!screenBreakpoints) {
@@ -19,6 +20,7 @@ export function displayUpTo(screen: ScreenSize) {
   return formatMedia(query);
 }
 
+// create min-width media query including screen size
 export function displayFrom(screen: ScreenSize) {
   const screenBreakpoints = getScreenSizeBreakpoints(screen, breakpoints);
   if (!screenBreakpoints) {

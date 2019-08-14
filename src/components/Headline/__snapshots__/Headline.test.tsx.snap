@@ -19,7 +19,7 @@ exports[`<Headline /> should render h2 headline 1`] = `
   }
 }
 
-@media (max-width:1199px) {
+@media (max-width:979px) {
   .c0 {
     font-size: 1.5rem;
   }
@@ -31,7 +31,7 @@ exports[`<Headline /> should render h2 headline 1`] = `
   }
 }
 
-@media (max-width:1199px) {
+@media (max-width:979px) {
   .c0 {
     line-height: 1.75rem;
   }
