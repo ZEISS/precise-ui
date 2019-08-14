@@ -13,25 +13,25 @@ exports[`<Headline /> should render h2 headline 1`] = `
   color: inherit;
 }
 
-@media (min-width:980px) {
+@media (min-width:1200px) {
   .c0 {
     font-size: 2rem;
   }
 }
 
-@media (max-width:979px) {
+@media (max-width:1199px) {
   .c0 {
     font-size: 1.5rem;
   }
 }
 
-@media (min-width:980px) {
+@media (min-width:1200px) {
   .c0 {
     line-height: 2.25rem;
   }
 }
 
-@media (max-width:979px) {
+@media (max-width:1199px) {
   .c0 {
     line-height: 1.75rem;
   }

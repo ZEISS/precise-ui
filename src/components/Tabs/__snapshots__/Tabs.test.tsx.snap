@@ -60,49 +60,49 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
   display: none;
 }
 
-@media (min-width:980px) {
+@media (min-width:1200px) {
   .c1 {
     font-size: 1.1875rem;
   }
 }
 
-@media (max-width:979px) {
+@media (max-width:1199px) {
   .c1 {
     font-size: 1rem;
   }
 }
 
-@media (min-width:980px) {
+@media (min-width:1200px) {
   .c1 {
     line-height: 1.5rem;
   }
 }
 
-@media (max-width:979px) {
+@media (max-width:1199px) {
   .c1 {
     line-height: 1.375rem;
   }
 }
 
-@media (min-width:980px) {
+@media (min-width:1200px) {
   .c2 {
     font-size: 1.1875rem;
   }
 }
 
-@media (max-width:979px) {
+@media (max-width:1199px) {
   .c2 {
     font-size: 1rem;
   }
 }
 
-@media (min-width:980px) {
+@media (min-width:1200px) {
   .c2 {
     line-height: 1.5rem;
   }
 }
 
-@media (max-width:979px) {
+@media (max-width:1199px) {
   .c2 {
     line-height: 1.375rem;
   }
@@ -409,7 +409,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(min-width: 980px)",
+                                      "(min-width: 1200px)",
                                       " {
         ",
                                       "font-size: ",
@@ -422,7 +422,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(max-width: 979px)",
+                                      "(max-width: 1199px)",
                                       " {
         ",
                                       "font-size: ",
@@ -439,7 +439,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(min-width: 980px)",
+                                      "(min-width: 1200px)",
                                       " {
         ",
                                       "line-height: ",
@@ -452,7 +452,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(max-width: 979px)",
+                                      "(max-width: 1199px)",
                                       " {
         ",
                                       "line-height: ",
@@ -537,7 +537,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(min-width: 980px)",
+                                      "(min-width: 1200px)",
                                       " {
         ",
                                       "font-size: ",
@@ -550,7 +550,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(max-width: 979px)",
+                                      "(max-width: 1199px)",
                                       " {
         ",
                                       "font-size: ",
@@ -567,7 +567,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(min-width: 980px)",
+                                      "(min-width: 1200px)",
                                       " {
         ",
                                       "line-height: ",
@@ -580,7 +580,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(max-width: 979px)",
+                                      "(max-width: 1199px)",
                                       " {
         ",
                                       "line-height: ",
@@ -665,7 +665,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(min-width: 980px)",
+                                      "(min-width: 1200px)",
                                       " {
         ",
                                       "font-size: ",
@@ -678,7 +678,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(max-width: 979px)",
+                                      "(max-width: 1199px)",
                                       " {
         ",
                                       "font-size: ",
@@ -695,7 +695,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(min-width: 980px)",
+                                      "(min-width: 1200px)",
                                       " {
         ",
                                       "line-height: ",
@@ -708,7 +708,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(max-width: 979px)",
+                                      "(max-width: 1199px)",
                                       " {
         ",
                                       "line-height: ",
@@ -793,7 +793,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(min-width: 980px)",
+                                      "(min-width: 1200px)",
                                       " {
         ",
                                       "font-size: ",
@@ -806,7 +806,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(max-width: 979px)",
+                                      "(max-width: 1199px)",
                                       " {
         ",
                                       "font-size: ",
@@ -823,7 +823,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(min-width: 980px)",
+                                      "(min-width: 1200px)",
                                       " {
         ",
                                       "line-height: ",
@@ -836,7 +836,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
         ",
                                       "
       @media ",
-                                      "(max-width: 979px)",
+                                      "(max-width: 1199px)",
                                       " {
         ",
                                       "line-height: ",
