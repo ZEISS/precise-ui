@@ -38,11 +38,12 @@
   "author": "ZEISS Digital Innovation Partners",
   "license": "MIT",
   "dependencies": {
+    "date-fns": "^2.0.0-beta.1",
+    "jest-environment-node": "^24.8.0",
     "memoize-one": "^5.0.0",
     "react-datepicker": "^2.8.0",
     "react-onclickoutside": "^6.7.1",
-    "typescript-plugin-inner-jsx": "^0.1.9",
-    "date-fns": "^2.0.0-beta.1"
+    "typescript-plugin-inner-jsx": "^0.1.9"
   },
   "peerDependencies": {
     "react": "^16.8.0",
@@ -88,7 +89,7 @@
     "jest-enzyme": "^7.0.1",
     "jest-image-snapshot": "^2.8.1",
     "jest-puppeteer": "^4.0.0",
-    "jest-puppeteer-docker": "^1.1.3",
+    "jest-puppeteer-docker": "^1.2.0",
     "jest-styled-components": "^6.3.1",
     "material-design-icons": "^3.0.1",
     "node-sass": "^4.12.0",

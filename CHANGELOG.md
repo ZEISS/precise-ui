@@ -12,6 +12,7 @@
 - New `DateField`
 - Show FileUploader on top of modal
 - Improved `AccordionTable` sorting (empty groups)
+- Fixed label ellipsis shown at incorrect position
 
 ## 0.6.2
 
