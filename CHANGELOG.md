@@ -1,4 +1,9 @@
 # Precise UI Changelog
+
+## 0.8.0
+
+- Implement new breakpoints and screen sizes
+
 ## 0.7.0
 
 - Fixed horizontal padding for InputInfo and InputError

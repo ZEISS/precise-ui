@@ -1,6 +1,8 @@
 export interface Breakpoints {
   medium: number;
   large: number;
+  xLarge: number;
+  max: number;
 }
 
 export interface AccordionCardStyling {
@@ -494,7 +496,10 @@ export interface RefProps {
   innerRef?(node: HTMLElement | null): void;
 }
 
-export type ScreenSize = 'small' | 'smallAndMedium' | 'medium' | 'mediumAndLarge' | 'large';
+export type ScreenSize = 'small' | 'smallAndMedium' | 'medium' | 'mediumAndLarge' | 'large' | 'xLarge' | 'max';
+
+export const CombinedScreenSizeList: Array<ScreenSize> = ['smallAndMedium', 'mediumAndLarge'];
+export const ScreenSizeList: Array<ScreenSize> = ['small', 'medium', 'large', 'xLarge', 'max'];
 
 // Helper type operators
 export type KeyofBase = keyof any;

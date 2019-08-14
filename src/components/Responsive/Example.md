@@ -34,19 +34,18 @@ const { Responsive } = require('precise-ui');
 ```
 
 **Utility Functions**
-
-Utils also exports `displayTo[screenSize]` function for styled components. Where the screen size is `small | smallAndMedium | medium | mediumAndLarge | large`.
+Utils also exports `displayTo[ScreenSize | query], displayUpTo(ScreenSize), displayFrom(ScreenSize)` function for styled components.
 
 ```jsx
 const styled = require('styled-components').default;
-const { displayTo } = require('precise-ui');
+const { displayTo, displayFrom, displayUpTo, CombinedScreenSizeList, ScreenSizeList } = require('precise-ui');
 
 const StyledDiv1 = styled.div`
-  ${displayTo('large')`font-weight: bold;`};
+  ${displayFrom('large')`font-weight: bold;`};
 `;
 
 const StyledDiv2 = styled.div`
-  ${displayTo('mediumAndLarge')`font-weight: bold;`};
+  ${displayFrom('medium')`font-weight: bold;`};
 `;
 
 const StyledDiv3 = styled.div`
@@ -54,7 +53,7 @@ const StyledDiv3 = styled.div`
 `;
 
 const StyledDiv4 = styled.div`
-  ${displayTo('smallAndMedium')`font-weight: bold;`};
+  ${displayUpTo('medium')`font-weight: bold;`};
 `;
 
 const StyledDiv5 = styled.div`
@@ -66,6 +65,10 @@ const StyledDiv6 = styled.div`
 `;
 
 <>
+  <p>
+     Available screen sizes: <code>{JSON.stringify([...CombinedScreenSizeList, ...ScreenSizeList])}</code>.
+  </p>
+  
   <StyledDiv1>It's bold on large screens.</StyledDiv1>
   <StyledDiv2>It's bold on medium and large screens.</StyledDiv2>
   <StyledDiv3>It's bold on medium screens.</StyledDiv3>

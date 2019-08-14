@@ -1,13 +1,11 @@
 import * as React from 'react';
 import { getMediaQueries } from '../../utils/displayTo';
-import { PreciseTheme, ScreenSize } from '../../common';
+import { PreciseTheme, ScreenSize, ScreenSizeList } from '../../common';
 import { light, breakpoints } from '../../themes';
 
 export interface ResponsiveProps {
   /**
    * Sets the screen size for which to show the children.
-   *
-   * One of 'small' | 'smallAndMedium' | 'medium' | 'mediumAndLarge' | 'large'
    */
   screenSize?: ScreenSize;
   /**
@@ -37,11 +35,10 @@ export class Responsive extends React.Component<ResponsiveProps, ResponsiveState
 
     const { theme = light, screenSize, render } = this.props;
     this.allMediaQueries = getMediaQueries({ ...breakpoints, ...theme.breakpoints });
-
     if (typeof render !== 'function' && (!screenSize || Object.keys(this.allMediaQueries).indexOf(screenSize) === -1)) {
       console.error('`render` callback method or valid `screenSize` should be defined');
     } else {
-      const screenSizesListenTo = screenSize ? [screenSize] : ['small', 'medium', 'large'];
+      const screenSizesListenTo = screenSize ? [screenSize] : [...ScreenSizeList];
 
       for (const screenSizeListenTo of screenSizesListenTo) {
         this.mediaQueriesToListen[screenSizeListenTo] = window.matchMedia(this.allMediaQueries[screenSizeListenTo]);
@@ -56,9 +53,10 @@ export class Responsive extends React.Component<ResponsiveProps, ResponsiveState
   private currentlyMatches() {
     const mediaQueries = this.mediaQueriesToListen;
 
-    for (const sceenSize of Object.keys(mediaQueries)) {
-      if (mediaQueries[sceenSize].matches) {
-        return sceenSize as ScreenSize;
+    for (const screenSize of Object.keys(mediaQueries)) {
+      console.log(mediaQueries[screenSize].media);
+      if (mediaQueries[screenSize].matches) {
+        return screenSize as ScreenSize;
       }
     }
 
@@ -73,7 +71,7 @@ export class Responsive extends React.Component<ResponsiveProps, ResponsiveState
 
   componentDidMount() {
     const { screenSize } = this.props;
-    const screenSizesListenTo = screenSize ? [screenSize] : ['small', 'medium', 'large'];
+    const screenSizesListenTo = screenSize ? [screenSize] : [...ScreenSizeList];
 
     for (const screenSizeListenTo of screenSizesListenTo) {
       this.mediaQueriesToListen[screenSizeListenTo] = window.matchMedia(this.allMediaQueries[screenSizeListenTo]);
