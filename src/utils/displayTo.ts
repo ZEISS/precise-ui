@@ -79,8 +79,8 @@ export function formatQuery(breakpoints: { prev?: number; next?: number }) {
   if (prev !== undefined) {
     queries.push(`(min-width: ${prev}px)`);
   }
-  if (prev !== undefined) {
-    queries.push(`(max-width: ${prev - 1}px)`);
+  if (next !== undefined) {
+    queries.push(`(max-width: ${next - 1}px)`);
   }
   return `${queries.join(' and ')}`;
 }
