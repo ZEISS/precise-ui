@@ -3,6 +3,7 @@
 ## 0.7.1
 
 - Revert `DateField`
+- Fixed: Modal closes on drag and release cursor outside modal (#152)
 
 ## 0.7.0
 
