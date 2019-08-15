@@ -59,12 +59,12 @@ export function getScreenSizeBreakpoints(
   switch (screen) {
     case 'small':
       return { next: breakpoints.medium };
-    // `smallAndMedium` deprecated and will be deleted in the future
+    // `smallAndMedium` was deprecated and will be deleted in the future
     case 'smallAndMedium':
       return { next: breakpoints.large };
     case 'medium':
       return { prev: breakpoints.medium, next: breakpoints.large };
-    // `mediumAndLarge` deprecated and will be deleted in the future
+    // `mediumAndLarge` was deprecated and will be deleted in the future
     case 'mediumAndLarge':
       return { prev: breakpoints.medium };
     case 'large':
