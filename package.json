@@ -38,8 +38,6 @@
   "author": "ZEISS Digital Innovation Partners",
   "license": "MIT",
   "dependencies": {
-    "date-fns": "^2.0.0-beta.1",
-    "jest-environment-node": "^24.8.0",
     "memoize-one": "^5.0.0",
     "react-onclickoutside": "^6.7.1",
     "typescript-plugin-inner-jsx": "^0.1.9"
