@@ -35,26 +35,36 @@ export function displayTo(screen: ScreenSize | string): ThemedCssFunction<any> {
   return formatMedia(query);
 }
 
-function formatMedia(query: string): ThemedCssFunction<any> {
-  return (strings: any, ...interpolations: Array<any>) =>
-    css`
-      @media ${query} {
-        ${css(strings, ...interpolations)};
-      }
-    `;
+// create media query based on previous and next breakpoints
+export function formatQuery(breakpoints: { prev?: number; next?: number }) {
+  const { next, prev } = breakpoints;
+  if (prev === undefined && next === undefined) {
+    throw new Error('Invaild breakpoints');
+  }
+
+  const queries = [];
+  if (prev !== undefined) {
+    queries.push(`(min-width: ${prev}px)`);
+  }
+  if (next !== undefined) {
+    queries.push(`(max-width: ${next - 1}px)`);
+  }
+  return `${queries.join(' and ')}`;
 }
 
-function getScreenSizeBreakpoints(
+export function getScreenSizeBreakpoints(
   screen: ScreenSize,
   breakpoints: Breakpoints,
 ): { next?: number; prev?: number } | undefined {
   switch (screen) {
     case 'small':
       return { next: breakpoints.medium };
+    // `smallAndMedium` deprecated and will be deleted in the future
     case 'smallAndMedium':
       return { next: breakpoints.large };
     case 'medium':
       return { prev: breakpoints.medium, next: breakpoints.large };
+    // `mediumAndLarge` deprecated and will be deleted in the future
     case 'mediumAndLarge':
       return { prev: breakpoints.medium };
     case 'large':
@@ -68,19 +78,11 @@ function getScreenSizeBreakpoints(
   }
 }
 
-// create media query based on previous and next breakpoints
-export function formatQuery(breakpoints: { prev?: number; next?: number }) {
-  const { next, prev } = breakpoints;
-  if (prev === undefined && next === undefined) {
-    throw new Error('Both breakpoints cannot be `undefined`');
-  }
-
-  const queries = [];
-  if (prev !== undefined) {
-    queries.push(`(min-width: ${prev}px)`);
-  }
-  if (next !== undefined) {
-    queries.push(`(max-width: ${next - 1}px)`);
-  }
-  return `${queries.join(' and ')}`;
+function formatMedia(query: string): ThemedCssFunction<any> {
+  return (strings: any, ...interpolations: Array<any>) =>
+    css`
+      @media ${query} {
+        ${css(strings, ...interpolations)};
+      }
+    `;
 }
