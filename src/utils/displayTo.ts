@@ -59,13 +59,13 @@ export function getScreenSizeBreakpoints(
   switch (screen) {
     case 'small':
       return { next: breakpoints.medium };
-    // `smallAndMedium` was deprecated and will be deleted in the future
     case 'smallAndMedium':
+      console.warn("'smallAndMedium' screen size has been deprecated since 0.8.0. Use 'displayUpTo' function.");
       return { next: breakpoints.large };
     case 'medium':
       return { prev: breakpoints.medium, next: breakpoints.large };
-    // `mediumAndLarge` was deprecated and will be deleted in the future
     case 'mediumAndLarge':
+      console.warn("'mediumAndLarge' screen size has been deprecated since 0.8.0. Use 'displayFrom' function.");
       return { prev: breakpoints.medium };
     case 'large':
       return { prev: breakpoints.large, next: breakpoints.xLarge };
