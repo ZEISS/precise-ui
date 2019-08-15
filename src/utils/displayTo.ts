@@ -72,7 +72,7 @@ function getScreenSizeBreakpoints(
 export function formatQuery(breakpoints: { prev?: number; next?: number }) {
   const { next, prev } = breakpoints;
   if (prev === undefined && next === undefined) {
-    throw new Error('Invaild breakpoints');
+    throw new Error('Both breakpoints cannot be `undefined`');
   }
 
   const queries = [];
