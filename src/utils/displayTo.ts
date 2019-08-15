@@ -70,15 +70,15 @@ function getScreenSizeBreakpoints(
 }
 
 export function formatQuery(previousBreakpoint?: number, nextBreakpoint?: number) {
-  if (previousBreakpoint == undefined && nextBreakpoint == undefined) {
+  if (previousBreakpoint === undefined && nextBreakpoint === undefined) {
     throw new Error('Invaild breakpoints');
   }
 
   const queries = [];
-  if (previousBreakpoint != undefined) {
+  if (previousBreakpoint !== undefined) {
     queries.push(`(min-width: ${previousBreakpoint}px)`);
   }
-  if (nextBreakpoint != undefined) {
+  if (nextBreakpoint !== undefined) {
     queries.push(`(max-width: ${nextBreakpoint - 1}px)`);
   }
   return `${queries.join(' and ')}`;
