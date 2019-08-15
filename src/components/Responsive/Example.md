@@ -34,7 +34,7 @@ const { Responsive } = require('precise-ui');
 ```
 
 **Utility Functions**
-Utils also exports `displayTo[ScreenSize | query], displayUpTo(ScreenSize), displayFrom(ScreenSize)` function for styled components.
+Utils also exports `displayTo(ScreenSize | query), displayUpTo(ScreenSize), displayFrom(ScreenSize)` function for styled components.
 
 ```jsx
 const styled = require('styled-components').default;
