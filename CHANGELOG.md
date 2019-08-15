@@ -3,6 +3,7 @@
 ## 0.7.1
 
 - Revert `DateField`
+- Fixed label ellipsis shown at incorrect position
 
 ## 0.7.0
 
@@ -17,7 +18,6 @@
 - New `DateField`
 - Show FileUploader on top of modal
 - Improved `AccordionTable` sorting (empty groups)
-- Fixed label ellipsis shown at incorrect position
 
 ## 0.6.2
 
