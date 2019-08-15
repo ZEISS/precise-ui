@@ -4,8 +4,7 @@ import { breakpoints } from '../themes';
 
 export function getMediaQueries(breakpoints: Breakpoints) {
   return ScreenSizeList.map(x => ({ screen: x, breakpoints: getScreenSizeBreakpoints(x, breakpoints) })).reduce(
-    (acc, next) =>
-      next.breakpoints ? { ...acc, [next.screen]: formatQuery(next.breakpoints.prev, next.breakpoints.next) } : acc,
+    (acc, next) => (next.breakpoints ? { ...acc, [next.screen]: formatQuery(next.breakpoints) } : acc),
     {},
   );
 }
@@ -16,7 +15,7 @@ export function displayUpTo(screen: ScreenSize) {
   if (!screenBreakpoints) {
     throw new Error('Invalid screen size');
   }
-  const query = formatQuery(undefined, screenBreakpoints.next);
+  const query = formatQuery({ next: screenBreakpoints.next });
   return formatMedia(query);
 }
 
@@ -26,13 +25,13 @@ export function displayFrom(screen: ScreenSize) {
   if (!screenBreakpoints) {
     throw new Error('Invalid screen size');
   }
-  const query = formatQuery(screenBreakpoints.prev, undefined);
+  const query = formatQuery({ prev: screenBreakpoints.prev });
   return formatMedia(query);
 }
 
 export function displayTo(screen: ScreenSize | string): ThemedCssFunction<any> {
   const screenBreakpoints = getScreenSizeBreakpoints(screen as ScreenSize, breakpoints);
-  const query = screenBreakpoints ? formatQuery(screenBreakpoints.prev, screenBreakpoints.next) : screen;
+  const query = screenBreakpoints ? formatQuery(screenBreakpoints) : screen;
   return formatMedia(query);
 }
 
@@ -69,17 +68,19 @@ function getScreenSizeBreakpoints(
   }
 }
 
-export function formatQuery(previousBreakpoint?: number, nextBreakpoint?: number) {
-  if (previousBreakpoint === undefined && nextBreakpoint === undefined) {
+// create media query based on previous and next breakpoints
+export function formatQuery(breakpoints: { prev?: number; next?: number }) {
+  const { next, prev } = breakpoints;
+  if (prev === undefined && next === undefined) {
     throw new Error('Invaild breakpoints');
   }
 
   const queries = [];
-  if (previousBreakpoint !== undefined) {
-    queries.push(`(min-width: ${previousBreakpoint}px)`);
+  if (prev !== undefined) {
+    queries.push(`(min-width: ${prev}px)`);
   }
-  if (nextBreakpoint !== undefined) {
-    queries.push(`(max-width: ${nextBreakpoint - 1}px)`);
+  if (prev !== undefined) {
+    queries.push(`(max-width: ${prev - 1}px)`);
   }
   return `${queries.join(' and ')}`;
 }
