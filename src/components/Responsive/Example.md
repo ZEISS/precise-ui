@@ -34,6 +34,7 @@ const { Responsive } = require('precise-ui');
 ```
 
 **Utility Functions**
+
 Utils also exports `displayTo(ScreenSize | query), displayUpTo(ScreenSize), displayFrom(ScreenSize)` functions for styled components.
 
 ```jsx
@@ -75,5 +76,17 @@ const StyledDiv6 = styled.div`
   <StyledDiv4>It's bold on small and medium screens.</StyledDiv4>
   <StyledDiv5>It's bold on small screens.</StyledDiv5>
   <StyledDiv6>It's bold on screens between 200px and 500px.</StyledDiv6>
+</>;
+```
+
+In addition, utils exports `getWidthBreakpointsQuery({max, min})`.
+The function `getWidthBreakpointsQuery` formates width media query.
+
+```jsx
+const styled = require('styled-components').default;
+const { getWidthBreakpointsQuery } = require('precise-ui');
+
+<>
+  <p>It's media query for screens between 200px and 500px: <b>{getWidthBreakpointsQuery({min: 200, max: 501})}</b></p>
 </>;
 ```

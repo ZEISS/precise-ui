@@ -2,9 +2,11 @@ import { css, ThemedCssFunction } from './styled';
 import { ScreenSize, Breakpoints, ScreenSizeList } from '../common';
 import { breakpoints } from '../themes';
 
+export type WidthBreakpoints = { min?: number; max?: number };
+
 export function getMediaQueries(breakpoints: Breakpoints) {
   return ScreenSizeList.map(x => ({ screen: x, breakpoints: getScreenSizeBreakpoints(x, breakpoints) })).reduce(
-    (acc, next) => (next.breakpoints ? { ...acc, [next.screen]: formatQuery(next.breakpoints) } : acc),
+    (acc, next) => (next.breakpoints ? { ...acc, [next.screen]: getWidthBreakpointsQuery(next.breakpoints) } : acc),
     {},
   );
 }
@@ -15,8 +17,8 @@ export function displayUpTo(screen: ScreenSize) {
   if (!screenBreakpoints) {
     throw new Error('Invalid screen size');
   }
-  const query = formatQuery({ next: screenBreakpoints.next });
-  return formatMedia(query);
+  const query = getWidthBreakpointsQuery({ max: screenBreakpoints.max });
+  return getMediaQueryFunc(query);
 }
 
 // create min-width media query including screen size
@@ -25,64 +27,63 @@ export function displayFrom(screen: ScreenSize) {
   if (!screenBreakpoints) {
     throw new Error('Invalid screen size');
   }
-  const query = formatQuery({ prev: screenBreakpoints.prev });
-  return formatMedia(query);
+  const query = getWidthBreakpointsQuery({ min: screenBreakpoints.min });
+  return getMediaQueryFunc(query);
 }
 
 export function displayTo(screen: ScreenSize | string): ThemedCssFunction<any> {
   const screenBreakpoints = getScreenSizeBreakpoints(screen as ScreenSize, breakpoints);
-  const query = screenBreakpoints ? formatQuery(screenBreakpoints) : screen;
-  return formatMedia(query);
+  const query = screenBreakpoints ? getWidthBreakpointsQuery(screenBreakpoints) : screen;
+  return getMediaQueryFunc(query);
 }
 
 // create media query based on previous and next breakpoints
-export function formatQuery(breakpoints: { prev?: number; next?: number }) {
-  const { next, prev } = breakpoints;
-  if (prev === undefined && next === undefined) {
-    throw new Error('Invaild breakpoints');
+export function getWidthBreakpointsQuery({ max, min }: WidthBreakpoints) {
+  if (min === undefined && max === undefined) {
+    throw new Error('Both breakpoints cannot be `undefined`');
+  }
+  if (min !== undefined && max != undefined && max < min) {
+    throw new Error(`The min(${min}) breakpoint must be less than max(${max})`);
   }
 
   const queries = [];
-  if (prev !== undefined) {
-    queries.push(`(min-width: ${prev}px)`);
+  if (min !== undefined) {
+    queries.push(`(min-width: ${min}px)`);
   }
-  if (next !== undefined) {
-    queries.push(`(max-width: ${next - 1}px)`);
+  if (max !== undefined) {
+    queries.push(`(max-width: ${max - 1}px)`);
   }
   return `${queries.join(' and ')}`;
 }
 
-export function getScreenSizeBreakpoints(
-  screen: ScreenSize,
-  breakpoints: Breakpoints,
-): { next?: number; prev?: number } | undefined {
+function getScreenSizeBreakpoints(screen: ScreenSize, breakpoints: Breakpoints): WidthBreakpoints | undefined {
   switch (screen) {
     case 'small':
-      return { next: breakpoints.medium };
+      return { max: breakpoints.medium };
     case 'smallAndMedium':
       console.warn(
         "'smallAndMedium' screen size has been deprecated since 0.8.0. Please, use 'displayUpTo('medium')'.",
       );
-      return { next: breakpoints.large };
+      return { max: breakpoints.large };
     case 'medium':
-      return { prev: breakpoints.medium, next: breakpoints.large };
+      return { min: breakpoints.medium, max: breakpoints.large };
     case 'mediumAndLarge':
       console.warn(
         "'mediumAndLarge' screen size has been deprecated since 0.8.0. Please, use 'displayFrom('medium')'.",
       );
-      return { prev: breakpoints.medium };
+      return { min: breakpoints.medium };
     case 'large':
-      return { prev: breakpoints.large, next: breakpoints.xLarge };
+      return { min: breakpoints.large, max: breakpoints.xLarge };
     case 'xLarge':
-      return { prev: breakpoints.xLarge, next: breakpoints.max };
+      return { min: breakpoints.xLarge, max: breakpoints.max };
     case 'max':
-      return { prev: breakpoints.max };
+      return { min: breakpoints.max };
     default:
       return undefined;
   }
 }
 
-function formatMedia(query: string): ThemedCssFunction<any> {
+function getMediaQueryFunc(query: string): ThemedCssFunction<any> {
   return (strings: any, ...interpolations: Array<any>) =>
     css`
       @media ${query} {
