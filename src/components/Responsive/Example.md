@@ -83,7 +83,6 @@ In addition, utils exports `getWidthBreakpointsQuery({max, min})`.
 The function `getWidthBreakpointsQuery` creates media query.
 
 ```jsx
-const styled = require('styled-components').default;
 const { getWidthBreakpointsQuery } = require('precise-ui');
 
 <>
