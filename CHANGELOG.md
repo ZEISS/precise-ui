@@ -7,6 +7,7 @@
 ## 0.7.1
 
 - Revert `DateField`
+- Fixed label ellipsis shown at incorrect position
 
 ## 0.7.0
 
