@@ -83,7 +83,7 @@ function getScreenSizeBreakpoints(screen: ScreenSize, breakpoints: Breakpoints):
   }
 }
 
-function getMediaQueryFunc(query: string): ThemedCssFunction<any> {
+function getMediaQuery(query: string): ThemedCssFunction<any> {
   return (strings: any, ...interpolations: Array<any>) =>
     css`
       @media ${query} {
