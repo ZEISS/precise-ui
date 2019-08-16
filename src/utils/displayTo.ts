@@ -18,7 +18,7 @@ export function displayUpTo(screen: ScreenSize) {
     throw new Error('Invalid screen size');
   }
   const query = getWidthBreakpointsQuery({ max: screenBreakpoints.max });
-  return getMediaQueryFunc(query);
+  return getMediaQuery(query);
 }
 
 // create min-width media query including screen size
@@ -28,13 +28,13 @@ export function displayFrom(screen: ScreenSize) {
     throw new Error('Invalid screen size');
   }
   const query = getWidthBreakpointsQuery({ min: screenBreakpoints.min });
-  return getMediaQueryFunc(query);
+  return getMediaQuery(query);
 }
 
 export function displayTo(screen: ScreenSize | string): ThemedCssFunction<any> {
   const screenBreakpoints = getScreenSizeBreakpoints(screen as ScreenSize, breakpoints);
   const query = screenBreakpoints ? getWidthBreakpointsQuery(screenBreakpoints) : screen;
-  return getMediaQueryFunc(query);
+  return getMediaQuery(query);
 }
 
 // create media query based on previous and next breakpoints
