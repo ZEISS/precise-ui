@@ -80,7 +80,7 @@ const StyledDiv6 = styled.div`
 ```
 
 In addition, utils exports `getWidthBreakpointsQuery({max, min})`.
-The function `getWidthBreakpointsQuery` formates width media query.
+The function `getWidthBreakpointsQuery` creates media query.
 
 ```jsx
 const styled = require('styled-components').default;
