@@ -133,6 +133,7 @@ const excludedReactDatePickerProps = {
   dropdownMode: 1,
   monthsShown: 1,
   showTimeInput: 1,
+  showMonthYearPicker: 1,
 };
 
 interface DatePickerOnChangeEvent extends InputChangeEvent<string> {
