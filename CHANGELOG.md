@@ -1,6 +1,6 @@
 # Precise UI Changelog
 
-## 0.7.1
+## 0.8.0
 
 - Fixed label ellipsis shown at incorrect position
 - Removed `SASS` support 
