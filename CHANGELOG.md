@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 0.8.0
+
+- Implement new breakpoints and screen sizes
+
 ## 0.7.1
 
 - Fixed label ellipsis shown at incorrect position
