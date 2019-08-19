@@ -26,6 +26,8 @@ const colorCycle = [
 export const breakpoints: Breakpoints = {
   medium: 740, // tablet
   large: 980, // desktop
+  xLarge: 1200, // hd desktop
+  max: 1800, // full hd desktop
 };
 
 export const buttonPrimary: ButtonThemeSettings = {

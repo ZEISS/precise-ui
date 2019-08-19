@@ -1,8 +1,12 @@
 # Precise UI Changelog
 
+## 0.8.0
+
+- Implement new breakpoints and screen sizes
+- Removed `SASS` support 
+
 ## 0.7.1
 
-- Revert `DateField`
 - Fixed label ellipsis shown at incorrect position
 - Fixed: Modal closes on drag and release cursor outside modal (#152)
 
