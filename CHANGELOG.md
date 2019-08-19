@@ -2,8 +2,12 @@
 
 ## 0.8.0
 
-- Fixed label ellipsis shown at incorrect position
+- Implement new breakpoints and screen sizes
 - Removed `SASS` support 
+
+## 0.7.1
+
+- Fixed label ellipsis shown at incorrect position
 
 ## 0.7.0
 
