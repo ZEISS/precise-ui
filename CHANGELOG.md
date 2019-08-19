@@ -3,10 +3,11 @@
 ## 0.8.0
 
 - Implement new breakpoints and screen sizes
+- Removed `SASS` support 
+- Fixed: Modal closes on drag and release cursor outside modal (#152)
 
 ## 0.7.1
 
-- Revert `DateField`
 - Fixed label ellipsis shown at incorrect position
 
 ## 0.7.0

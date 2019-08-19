@@ -385,6 +385,10 @@ export interface InputChangeEvent<T> {
    * The current value of the input field.
    */
   value: T;
+  /**
+   * Original change event
+   */
+  originalEvent?: React.ChangeEvent<any>;
 }
 
 export interface InputProps<T> extends StandardProps {

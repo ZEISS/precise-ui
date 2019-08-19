@@ -830,8 +830,8 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                             >
                               <styled.div
                                 className="c10"
-                                onClick={[Function]}
                                 onKeyDown={[Function]}
+                                onMouseDown={[Function]}
                               >
                                 <StyledComponent
                                   className="c10"
@@ -867,13 +867,13 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                     }
                                   }
                                   forwardedRef={[Function]}
-                                  onClick={[Function]}
                                   onKeyDown={[Function]}
+                                  onMouseDown={[Function]}
                                 >
                                   <div
                                     className="c10 c11"
-                                    onClick={[Function]}
                                     onKeyDown={[Function]}
+                                    onMouseDown={[Function]}
                                   >
                                     <styled.a
                                       href="#"
@@ -2510,8 +2510,8 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                             >
                               <styled.div
                                 className="c10"
-                                onClick={[Function]}
                                 onKeyDown={[Function]}
+                                onMouseDown={[Function]}
                               >
                                 <StyledComponent
                                   className="c10"
@@ -2547,13 +2547,13 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                     }
                                   }
                                   forwardedRef={[Function]}
-                                  onClick={[Function]}
                                   onKeyDown={[Function]}
+                                  onMouseDown={[Function]}
                                 >
                                   <div
                                     className="c10 c11"
-                                    onClick={[Function]}
                                     onKeyDown={[Function]}
+                                    onMouseDown={[Function]}
                                   >
                                     <styled.a
                                       href="#"
@@ -4190,8 +4190,8 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                             >
                               <styled.div
                                 className="c10"
-                                onClick={[Function]}
                                 onKeyDown={[Function]}
+                                onMouseDown={[Function]}
                               >
                                 <StyledComponent
                                   className="c10"
@@ -4227,13 +4227,13 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                     }
                                   }
                                   forwardedRef={[Function]}
-                                  onClick={[Function]}
                                   onKeyDown={[Function]}
+                                  onMouseDown={[Function]}
                                 >
                                   <div
                                     className="c10 c11"
-                                    onClick={[Function]}
                                     onKeyDown={[Function]}
+                                    onMouseDown={[Function]}
                                   >
                                     <styled.a
                                       href="#"
