@@ -3,6 +3,7 @@
 ## 0.7.1
 
 - Fixed label ellipsis shown at incorrect position
+- Removed `SASS` support 
 
 ## 0.7.0
 
