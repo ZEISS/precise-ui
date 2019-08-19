@@ -56,7 +56,7 @@ export function getWidthBreakpointsQuery({ max, min }: WidthBreakpoints) {
   return `${queries.join(' and ')}`;
 }
 
-function getScreenSizeBreakpoints(screen: ScreenSize, breakpoints: Breakpoints): WidthBreakpoints | undefined {
+export function getScreenSizeBreakpoints(screen: ScreenSize, breakpoints: Breakpoints): WidthBreakpoints | undefined {
   switch (screen) {
     case 'small':
       return { max: breakpoints.medium };

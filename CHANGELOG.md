@@ -5,6 +5,7 @@
 - Implement new breakpoints and screen sizes
 - Removed `SASS` support 
 - Fixed: Modal closes on drag and release cursor outside modal (#152)
+- Improved `Responsive` component to avoid using of combined screen sizes
 
 ## 0.7.1
 
