@@ -1,9 +1,5 @@
 import * as React from 'react';
-import {
-  getWidthBreakpointsQuery,
-  getScreenSizeBreakpoints,
-  getMediaQueries,
-} from '../../utils/displayTo';
+import { getWidthBreakpointsQuery, getScreenSizeBreakpoints, getMediaQueries } from '../../utils/displayTo';
 import { PreciseTheme, ScreenSize, Breakpoints } from '../../common';
 import { light, breakpoints } from '../../themes';
 
