@@ -2,7 +2,6 @@ import * as React from 'react';
 import {
   getWidthBreakpointsQuery,
   getScreenSizeBreakpoints,
-  WidthBreakpoints,
   getMediaQueries,
 } from '../../utils/displayTo';
 import { PreciseTheme, ScreenSize, Breakpoints } from '../../common';
