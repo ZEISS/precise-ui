@@ -8,10 +8,13 @@ export type ScreenSizeCondition = 'equal' | 'from' | 'upTo';
 export interface ResponsiveProps {
   /**
    * Sets the screen size for which to show the children.
+   * Valid values are: 'small' | 'medium' | 'large' | 'xLarge' | 'max' | 'smallAndMedium', 'mediumAndLarge'
    */
   screenSize?: ScreenSize;
-  /*
+  /**
    * Sets the screen size check condition.
+   * @default 'equal'
+   * Valid values are: 'equal' | 'from' | 'upTo'
    */
   screenSizeCondition?: ScreenSizeCondition;
   /**
@@ -54,7 +57,7 @@ export class Responsive extends React.Component<ResponsiveProps, ResponsiveState
     }
 
     if (typeof render !== 'function' && !Object.keys(this.mediaQueriesToListen).length) {
-      console.error('`render` callback method or valid `screenSize` should be defined');
+      console.error('`render` callback method or valid `screenSize` and `screenSizeCondition` should be defined');
     }
 
     this.state = {
@@ -65,7 +68,7 @@ export class Responsive extends React.Component<ResponsiveProps, ResponsiveState
   private getBreakpoints(breakpoints: Breakpoints, screenSize: ScreenSize, screenSizeCondition: ScreenSizeCondition) {
     const screenSizeBreakpoints = getScreenSizeBreakpoints(screenSize, breakpoints);
     if (!screenSizeBreakpoints) {
-      console.error('Invalid screen size');
+      console.error(`Invalid screen size ${screenSize}`);
       return;
     }
 
@@ -77,7 +80,7 @@ export class Responsive extends React.Component<ResponsiveProps, ResponsiveState
       case 'upTo':
         return { ...screenSizeBreakpoints, min: undefined };
       default:
-        console.error('Invalid compare condition');
+        console.error(`Invalid screen size condition ${screenSizeCondition}`);
         return;
     }
   }
