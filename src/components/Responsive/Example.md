@@ -27,8 +27,17 @@ const { Responsive } = require('precise-ui');
   <Responsive screenSize="max">
     <p>This will render on max screens.</p>
   </Responsive>
+  <Responsive screenSize="smallAndMedium">
+    <p>This will render on small and medium screens.</p>
+  </Responsive>
   <Responsive screenSize="medium" theme={{ breakpoints: { medium: 200, large: 500 } }}>
     <p>This will render on medium screens with custom breakpoints.</p>
+  </Responsive>
+  <Responsive screenSize="large" screenSizeCondition="from">
+    <p>This will render on large screens and wider.</p>
+  </Responsive>
+  <Responsive screenSize="large" screenSizeCondition="upTo">
+    <p>This will render on large screens and narrower.</p>
   </Responsive>
 </>;
 ```
