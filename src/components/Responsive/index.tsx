@@ -13,8 +13,8 @@ export interface ResponsiveProps {
   screenSize?: ScreenSize;
   /**
    * Sets the screen size check condition.
-   * @default 'equal'
    * Valid values are: 'equal' | 'from' | 'upTo'
+   * @default 'equal'
    */
   screenSizeCondition?: ScreenSizeCondition;
   /**
