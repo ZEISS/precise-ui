@@ -6,6 +6,7 @@
 - Removed `SASS` support 
 - Fixed: Modal closes on drag and release cursor outside modal (#152)
 - Improved `Responsive` component to avoid using of combined screen sizes
+- Fixed(DateField): Use valid date format as a default  - `yyyy-MM-dd` instead of `dd-MM-yyyy`
 
 ## 0.7.1
 
