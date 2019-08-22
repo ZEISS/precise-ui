@@ -107,7 +107,10 @@ export class Blocker extends React.Component<BlockerProps> {
   private onContainerClick = (e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation();
 
-    if (e.target === e.currentTarget || (e.target instanceof HTMLElement && e.target.hasAttribute('tabindex'))) {
+    if (
+      e.target === e.currentTarget ||
+      (e.target instanceof HTMLElement && e.target.parentElement === e.currentTarget)
+    ) {
       this.notifyClose(e);
     }
   };
