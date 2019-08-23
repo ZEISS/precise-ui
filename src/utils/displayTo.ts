@@ -60,18 +60,8 @@ export function getScreenSizeBreakpoints(screen: ScreenSize, breakpoints: Breakp
   switch (screen) {
     case 'small':
       return { max: breakpoints.medium };
-    case 'smallAndMedium':
-      console.warn(
-        "'smallAndMedium' screen size has been deprecated since 0.8.0. Please, use 'displayUpTo('medium')'.",
-      );
-      return { max: breakpoints.large };
     case 'medium':
       return { min: breakpoints.medium, max: breakpoints.large };
-    case 'mediumAndLarge':
-      console.warn(
-        "'mediumAndLarge' screen size has been deprecated since 0.8.0. Please, use 'displayFrom('medium')'.",
-      );
-      return { min: breakpoints.medium };
     case 'large':
       return { min: breakpoints.large, max: breakpoints.xLarge };
     case 'xLarge':
