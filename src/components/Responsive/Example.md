@@ -27,9 +27,6 @@ const { Responsive } = require('precise-ui');
   <Responsive screenSize="max">
     <p>This will render on max screens.</p>
   </Responsive>
-  <Responsive screenSize="smallAndMedium">
-    <p>This will render on small and medium screens.</p>
-  </Responsive>
   <Responsive screenSize="medium" theme={{ breakpoints: { medium: 200, large: 500 } }}>
     <p>This will render on medium screens with custom breakpoints.</p>
   </Responsive>
@@ -48,7 +45,7 @@ Utils also exports `displayTo(ScreenSize | query), displayUpTo(ScreenSize), disp
 
 ```jsx
 const styled = require('styled-components').default;
-const { displayTo, displayFrom, displayUpTo, CombinedScreenSizeList, ScreenSizeList } = require('precise-ui');
+const { displayTo, displayFrom, displayUpTo, ScreenSizeList } = require('precise-ui');
 
 const StyledDivFromLarge = styled.div`
   ${displayFrom('large')`font-weight: bold;`};
@@ -84,7 +81,7 @@ const StyledDivCustom = styled.div`
 
 <>
   <p>
-     Available screen sizes: <code>{JSON.stringify([...CombinedScreenSizeList, ...ScreenSizeList])}</code>.
+     Available screen sizes: <code>{JSON.stringify(ScreenSizeList)}</code>.
   </p>
   
   <StyledDivFromLarge>It's bold on large screens and wider.</StyledDivFromLarge>

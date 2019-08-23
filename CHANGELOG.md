@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 0.8.1
+
+- Removed deprecated screen sizes smallAndMedium, mediumAndLarge
+
 ## 0.8.0
 
 - Implement new breakpoints and screen sizes
