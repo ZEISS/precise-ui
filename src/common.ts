@@ -506,6 +506,6 @@ export type Diff<T extends KeyofBase, U extends KeyofBase> = ({ [P in T]: P } &
 export type Omit<T, K extends keyof T> = Pick<T, Diff<keyof T, K>>;
 export type Component<P> = React.ComponentClass<P> | React.StatelessComponent<P>;
 // Helper type functions
-function stringLiteralArray<T extends string>(val: T[]) {
+function stringLiteralArray<T extends string>(val: Array<T>) {
   return val;
 }
