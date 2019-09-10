@@ -1,6 +1,8 @@
 export interface Breakpoints {
   medium: number;
   large: number;
+  xLarge: number;
+  max: number;
 }
 
 export interface AccordionCardStyling {
@@ -494,7 +496,8 @@ export interface RefProps {
   innerRef?(node: HTMLElement | null): void;
 }
 
-export type ScreenSize = 'small' | 'smallAndMedium' | 'medium' | 'mediumAndLarge' | 'large';
+export const ScreenSizeList = stringLiteralArray(['small', 'medium', 'large', 'xLarge', 'max']);
+export type ScreenSize = typeof ScreenSizeList[number];
 
 // Helper type operators
 export type KeyofBase = keyof any;
@@ -502,3 +505,7 @@ export type Diff<T extends KeyofBase, U extends KeyofBase> = ({ [P in T]: P } &
   { [P in U]: never } & { [x: string]: never })[T];
 export type Omit<T, K extends keyof T> = Pick<T, Diff<keyof T, K>>;
 export type Component<P> = React.ComponentClass<P> | React.StatelessComponent<P>;
+// Helper type functions
+function stringLiteralArray<T extends string>(val: Array<T>) {
+  return val;
+}

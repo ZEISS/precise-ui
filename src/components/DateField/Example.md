@@ -320,61 +320,6 @@ const { DateField } = require('precise-ui');
 />
 ```
 
-Month Picker
-```jsx { "props": { "data-skip": true } }
-const { DateField } = require('precise-ui');
-
-<DateField
-  dateFormat="MM/yyyy"
-  showMonthYearPicker
-  onChange={(e) => console.log(e)}
-  placeholder="Select month"
-/>
-```
-
-Range Month Picker
-```jsx { "props": { "data-skip": true } }
-const { DateField, StackPanel, StackItem } = require('precise-ui');
-
-const DateRange = () => {
-  const [startDate, setStartDate] = React.useState();
-  const [endDate, setEndDate] = React.useState();
-
-  return (
-    <StackPanel>
-      <StackItem>
-        <DateField
-          selected={startDate}
-          selectsStart
-          startDate={startDate}
-          endDate={endDate}
-          onChange={({date}) => setStartDate(date)}
-          showMonthYearPicker
-          dateFormat="MM/yyyy"
-          placeholder="Select start month"
-        />
-      </StackItem>
-      
-      <StackItem>
-        <DateField
-          selected={endDate}
-          selectsEnd
-          startDate={startDate}
-          endDate={endDate}
-          onChange={({date}) => setEndDate(date)}
-          minDate={startDate}
-          showMonthYearPicker
-          dateFormat="MM/yyyy"
-          placeholder="Select end month"
-        />
-      </StackItem>
-    </StackPanel>
-  )
-}
-
-<DateRange />
-```
-
 In `open` controlled mode
 ```jsx { "props": { "data-skip": true } }
 const { DateField, StackPanel, StackItem, Button } = require('precise-ui');
@@ -506,20 +451,6 @@ const { DateField } = require('precise-ui');
   timeIntervals={15}
   dateFormat="h:mm aa"
   timeCaption="Time"
-  onChange={(e) => console.log(e)}
-/>
-```
-
-Inline version month
-
-```jsx
-const { DateField } = require('precise-ui');
-
-<DateField
-  inline
-  selected={new Date("1988/06/14")}
-  dateFormat="MM/yyyy"
-  showMonthYearPicker
   onChange={(e) => console.log(e)}
 />
 ```
