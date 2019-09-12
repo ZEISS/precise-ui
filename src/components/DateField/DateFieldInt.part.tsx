@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { TextInputProps, Omit, InputChangeEvent } from '../../common';
 import { ReactDatePickerProps } from 'react-datepicker';
-import { FormContextProps, withFormContext } from '../../hoc/withFormContext';
+import { TextInputProps, Omit, InputChangeEvent } from '../../common';
+import { FormContextProps, withFormContext } from '../../hoc';
 import { CustomReactDatepicker } from './CustomReactDatepicker.part';
 import { DatePickerTextField } from './DateFieldTextField.part';
-import { parseDate, safeDateFormat } from '../../utils/date';
+import { parseDate, safeDateFormat } from '../../utils';
+
+export { ReactDatePickerProps };
 
 export interface DateFieldOpenChangedEvent {
   /**
@@ -136,11 +138,11 @@ const excludedReactDatePickerProps = {
   showMonthYearPicker: 1,
 };
 
-interface DatePickerOnChangeEvent extends InputChangeEvent<string> {
+export interface DatePickerOnChangeEvent extends InputChangeEvent<string> {
   date: Date;
 }
 
-interface DateFieldBasicProps extends FormContextProps, TextInputProps {
+export interface DateFieldBasicProps extends FormContextProps, TextInputProps {
   /**
    * Optional abbreviations for the 12 months (Jan - Dec) of the year to use.
    */
@@ -161,7 +163,7 @@ interface DateFieldBasicProps extends FormContextProps, TextInputProps {
   /**
    * Event emitted once the value changes due to user input.
    */
-  onChange(e: DatePickerOnChangeEvent): void;
+  onChange?(e: DatePickerOnChangeEvent): void;
   /**
    * @ignore
    */
@@ -177,10 +179,10 @@ interface DateFieldState {
   error?: React.ReactChild;
 }
 
-const defaultDateFormat = 'dd-MM-yyyy';
+const DefaultDateFormat = 'yyyy-MM-dd';
 
 class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
-  private valueControlled: boolean;
+  private readonly valueControlled: boolean;
 
   constructor(props: DateFieldProps) {
     super(props);
@@ -231,7 +233,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
   }
 
   private changeValue: ReactDatePickerProps['onChange'] = inputDate => {
-    const { dateFormat = defaultDateFormat, locale } = this.props;
+    const { dateFormat = DefaultDateFormat, locale } = this.props;
     const date = inputDate || new Date();
 
     const value = safeDateFormat(date, {
@@ -253,7 +255,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
   };
 
   private parseDate = (value: string) => {
-    const { locale, dateFormat = defaultDateFormat, strictParsing } = this.props;
+    const { locale, dateFormat = DefaultDateFormat, strictParsing } = this.props;
     return parseDate(value, dateFormat, locale, strictParsing) || new Date();
   };
 

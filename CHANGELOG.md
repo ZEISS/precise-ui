@@ -1,11 +1,17 @@
 # Precise UI Changelog
 
+## 0.8.1
+
+- Removed deprecated screen sizes smallAndMedium, mediumAndLarge
+
 ## 0.8.0
 
 - Implement new breakpoints and screen sizes
 - Removed `SASS` support 
 - Fixed: Modal closes on drag and release cursor outside modal (#152)
 - Improved `Responsive` component to avoid using of combined screen sizes
+- Fixed(DateField): Use valid date format as a default  - `yyyy-MM-dd` instead of `dd-MM-yyyy`
+- Fixed(Modal): Remove usage of [tabindex] attribute for closing the modal
 
 ## 0.7.1
 

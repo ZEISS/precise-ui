@@ -8,7 +8,7 @@ export type ScreenSizeCondition = 'equal' | 'from' | 'upTo';
 export interface ResponsiveProps {
   /**
    * Sets the screen size for which to show the children.
-   * Valid values are: 'small' | 'medium' | 'large' | 'xLarge' | 'max' | 'smallAndMedium', 'mediumAndLarge'
+   * Valid values are: 'small' | 'medium' | 'large' | 'xLarge' | 'max'
    */
   screenSize?: ScreenSize;
   /**
