@@ -2,6 +2,7 @@
 
 ## 0.8.1
 
+- Fixed: Tooltip blinking when hovering border (#167)
 - Removed deprecated screen sizes smallAndMedium, mediumAndLarge
 
 ## 0.8.0
