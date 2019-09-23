@@ -114,11 +114,6 @@ module.exports = {
         test: /\.js$/,
         loader: 'source-map-loader',
       },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'sass-loader?sourceMap'],
-      },
     ],
   },
 

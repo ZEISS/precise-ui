@@ -1,4 +1,10 @@
-export { DateField, DateFieldOpenChangedEvent, DateFieldProps } from './DateFieldInt.part';
+export {
+  DateField,
+  DateFieldOpenChangedEvent,
+  DatePickerOnChangeEvent,
+  ReactDatePickerProps,
+  DateFieldProps,
+} from './DateFieldInt.part';
 
 /**
  * @deprecated
