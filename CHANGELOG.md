@@ -4,6 +4,7 @@
 
 - Fixed: Tooltip blinking when hovering border (#167)
 - Removed deprecated screen sizes smallAndMedium, mediumAndLarge
+- Exporting types from date-picker by using it as a dependency
 
 ## 0.8.0
 
