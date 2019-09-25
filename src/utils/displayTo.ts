@@ -1,33 +1,83 @@
 import { css, ThemedCssFunction } from './styled';
-import { ScreenSize, Breakpoints } from '../common';
+import { ScreenSize, Breakpoints, ScreenSizeList } from '../common';
 import { breakpoints } from '../themes';
 
-function isBreakpoint(breakpoints: Breakpoints, name: keyof Breakpoints) {
-  const value = breakpoints && breakpoints[name];
-  return typeof value === 'number' && value > 0;
-}
+export type WidthBreakpoints = { min?: number; max?: number };
 
 export function getMediaQueries(breakpoints: Breakpoints) {
-  if (!isBreakpoint(breakpoints, 'medium') || !isBreakpoint(breakpoints, 'large')) {
-    throw new Error('Invaild breakpoints');
-  }
+  return ScreenSizeList.map(x => ({ screen: x, breakpoints: getScreenSizeBreakpoints(x, breakpoints) })).reduce(
+    (acc, next) => (next.breakpoints ? { ...acc, [next.screen]: getWidthBreakpointsQuery(next.breakpoints) } : acc),
+    {},
+  );
+}
 
-  return {
-    small: `(max-width: ${breakpoints.medium - 1}px)`,
-    smallAndMedium: `(max-width: ${breakpoints.large - 1}px)`,
-    medium: `(min-width: ${breakpoints.medium}px) and (max-width: ${breakpoints.large - 1}px)`,
-    mediumAndLarge: `(min-width: ${breakpoints.medium}px)`,
-    large: `(min-width: ${breakpoints.large}px)`,
-  };
+// create max-width media query including screen size
+export function displayUpTo(screen: ScreenSize) {
+  const screenBreakpoints = getScreenSizeBreakpoints(screen, breakpoints);
+  if (!screenBreakpoints) {
+    throw new Error('Invalid screen size');
+  }
+  const query = getWidthBreakpointsQuery({ max: screenBreakpoints.max });
+  return getMediaQuery(query);
+}
+
+// create min-width media query including screen size
+export function displayFrom(screen: ScreenSize) {
+  const screenBreakpoints = getScreenSizeBreakpoints(screen, breakpoints);
+  if (!screenBreakpoints) {
+    throw new Error('Invalid screen size');
+  }
+  const query = getWidthBreakpointsQuery({ min: screenBreakpoints.min });
+  return getMediaQuery(query);
 }
 
 export function displayTo(screen: ScreenSize | string): ThemedCssFunction<any> {
-  const query = getMediaQueries(breakpoints)[screen] || screen;
-  const result: ThemedCssFunction<any> = (strings: any, ...interpolations: Array<any>) =>
+  const screenBreakpoints = getScreenSizeBreakpoints(screen as ScreenSize, breakpoints);
+  const query = screenBreakpoints ? getWidthBreakpointsQuery(screenBreakpoints) : screen;
+  return getMediaQuery(query);
+}
+
+// create media query based on previous and next breakpoints
+export function getWidthBreakpointsQuery({ max, min }: WidthBreakpoints) {
+  if (min === undefined && max === undefined) {
+    throw new Error('Both breakpoints cannot be `undefined`');
+  }
+  if (min !== undefined && max != undefined && max < min) {
+    throw new Error(`The min(${min}) breakpoint must be less than max(${max})`);
+  }
+
+  const queries = [];
+  if (min !== undefined) {
+    queries.push(`(min-width: ${min}px)`);
+  }
+  if (max !== undefined) {
+    queries.push(`(max-width: ${max - 1}px)`);
+  }
+  return `${queries.join(' and ')}`;
+}
+
+export function getScreenSizeBreakpoints(screen: ScreenSize, breakpoints: Breakpoints): WidthBreakpoints | undefined {
+  switch (screen) {
+    case 'small':
+      return { max: breakpoints.medium };
+    case 'medium':
+      return { min: breakpoints.medium, max: breakpoints.large };
+    case 'large':
+      return { min: breakpoints.large, max: breakpoints.xLarge };
+    case 'xLarge':
+      return { min: breakpoints.xLarge, max: breakpoints.max };
+    case 'max':
+      return { min: breakpoints.max };
+    default:
+      return undefined;
+  }
+}
+
+function getMediaQuery(query: string): ThemedCssFunction<any> {
+  return (strings: any, ...interpolations: Array<any>) =>
     css`
       @media ${query} {
         ${css(strings, ...interpolations)};
       }
     `;
-  return result;
 }

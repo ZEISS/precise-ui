@@ -49,7 +49,7 @@ const TextFieldLabelText = styled('span')<TextFieldLabelProps>`
   background: ${themed(({ multiline, theme }) => (multiline ? theme.ui2 : 'transparent'))};
 
   > span {
-    opacity: ${props => (props.active || props.filled ? '0' : '1')};
+    display: ${props => (props.active || props.filled ? 'none' : '')};
     transition: inherit;
   }
 `;
