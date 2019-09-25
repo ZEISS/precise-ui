@@ -287,6 +287,7 @@ interface StyledFlyoutArrowProps extends Position {
 const StyledFlyoutArrow = styled('div')<StyledFlyoutArrowProps>(
   themed(
     ({ top, left, bottom, right, rotate, theme }) => css`
+      pointer-events: none;
       position: absolute;
       z-index: 101;
       width: ${toolTipArrowSize}px;
