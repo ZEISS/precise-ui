@@ -2,8 +2,8 @@
 
 ## 0.8.2
 
-- Fixed InteractiveList examples
-- Fixed truncation of long text in the Interactive List for IE 11
+- Fixed `InteractiveList` examples
+- Fixed truncation of long text in the `InteractiveList` for IE 11
 
 ## 0.8.1
 
