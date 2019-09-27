@@ -1,5 +1,10 @@
 # Precise UI Changelog
 
+## 0.8.2
+
+- Fixed InteractiveList examples
+- Fixed InteractiveList layout in IE 11
+
 ## 0.8.1
 
 - Fixed: Tooltip blinking when hovering border (#167)
