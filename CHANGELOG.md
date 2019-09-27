@@ -2,6 +2,7 @@
 
 ## 0.8.2
 
+- Updated `date-fns` dependency.
 - Fixed `InteractiveList` examples
 - Fixed truncation of long text in the `InteractiveList` for IE 11
 

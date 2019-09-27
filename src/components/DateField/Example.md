@@ -454,3 +454,19 @@ const { DateField } = require('precise-ui');
   onChange={(e) => console.log(e)}
 />
 ```
+
+Version using withValidation HOC
+
+```jsx
+
+const { DateField, withValidation } = require('precise-ui');
+const MyDateField = withValidation(({ value }) => {
+  return (new Date(value) < new Date()  && "You need the date to be later than today")
+})(DateField);
+
+<MyDateField
+  onChange={(e) => console.log(e)}
+  placeholder="Shows an error when a date before than today is selected"
+/>
+
+```
