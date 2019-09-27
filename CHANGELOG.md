@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 0.8.2
+
+- Updated `date-fns` dependency.
+
 ## 0.8.1
 
 - Fixed: Tooltip blinking when hovering border (#167)

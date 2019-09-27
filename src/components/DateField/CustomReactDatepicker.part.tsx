@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ReactDatePicker, { ReactDatePickerProps } from 'react-datepicker';
-import * as enGB from 'date-fns/locale/en-GB';
+import enGB from 'date-fns/locale/en-GB';
 import { Locale } from 'date-fns';
 import { PaddedContainer } from '../PaddedContainer';
 import { Icon } from '../Icon';
