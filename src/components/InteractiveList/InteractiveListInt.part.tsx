@@ -92,7 +92,7 @@ const ListItemInnerContainer = styled.div`
 `;
 
 const ListItemContent = styled.div`
-  flex-grow: 1;
+  flex: 1 0 0px;
 `;
 
 const ListItemContentPadding = styled('div')<ListItemContentProps>`
@@ -105,6 +105,10 @@ const ListItemContentComponentPadding = styled('div')<ListItemContentProps>`
     padding: ${props => (props.condensed ? `${distance.small} ${distance.medium}` : distance.medium)};
     ${props => (props.showTick ? 'padding-right: 0;' : '')};
   }
+`;
+
+const StyledCheckbox = styled(Checkbox)`
+  display: block;
 `;
 
 const ListItemIconPadding = styled('div')<ListItemIconProps>`
@@ -393,7 +397,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       content = item.content || item.key;
     }
 
-    const newContent = <Checkbox value={value.indexOf(index) >= 0}>{content}</Checkbox>;
+    const newContent = <StyledCheckbox value={value.indexOf(index) >= 0}>{content}</StyledCheckbox>;
     return this.createItem(key, index, newContent);
   };
 
