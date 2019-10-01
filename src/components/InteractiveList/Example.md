@@ -157,3 +157,55 @@ const data = [
 
 <InteractiveList data={data} open/>
 ```
+
+**Disable selection for specific items**
+
+To disable specific items pass an array of strings (matching the strings if plain strings are used or the `key` 
+field if objects are used as `data`). This prevents those items from being selected by the user.
+
+Here is an example for single-selection:
+
+```jsx
+const { InteractiveList } = require('precise-ui');
+
+const data = [
+  'Value 1',
+  'Value 2',
+  'Value 3',
+  {
+    key: "4",
+    content: "Value 4"
+  },
+];
+
+const disabledItems = [
+  'Value 2',
+  '4',
+];
+
+<InteractiveList data={data} disabledItems={disabledItems} onChange={e => console.log('was changed', e)} open/>
+```
+
+Here is an example for multi-selection with the `multiple` option set to true.
+ 
+```jsx
+const { InteractiveList } = require('precise-ui');
+
+const data = [
+  'Value 1',
+  'Value 2',
+  'Value 3',
+  {
+    key: "4",
+    content: "Value 4"
+  },
+];
+
+const disabledItems = [
+  'Value 2',
+  '4',
+];
+
+<InteractiveList data={data} disabledItems={disabledItems} onChange={e => console.log('was changed', e)} multiple open/>
+```
+
