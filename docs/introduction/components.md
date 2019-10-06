@@ -15,10 +15,10 @@
 - [x] Button
 - [x] Card
 - [x] Checkbox
-- [x] Content Switcher
 - [x] Close Button
 - [x] Color Picker
 - [x] Container
+- [x] Content Switcher
 - [x] Dashboard
 - [x] Date Field
 - [x] Dropdown
@@ -44,9 +44,9 @@
 - [x] Interactive Surface
 - [x] Label
 - [x] List
-- [x] Metro Tile
-- [x] Metro Radio Group
 - [x] Metro Radio Button Tile
+- [x] Metro Radio Group
+- [x] Metro Tile
 - [x] Modal
 - [x] Navigation Bar
 - [x] Notification
@@ -62,14 +62,15 @@
 - [x] Responsive
 - [x] Search Field
 - [x] Select Button
+- [x] Skeleton
 - [x] Slider
 - [x] Spinner
 - [x] Stack Panel
 - [x] Step Indicator
 - [x] Sticky
 - [x] Swiper
-- [x] Table
 - [x] Tab Page
+- [x] Table
 - [x] Tabs
 - [x] Tag
 - [x] Tag Builder
