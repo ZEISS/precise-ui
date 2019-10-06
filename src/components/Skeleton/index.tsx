@@ -34,6 +34,7 @@ export interface SkeletonProps extends StandardProps {
   isText?: boolean;
   /**
    * Determines whether the pulsing animation is active or not. Could be use to stop the animation in case your component has some kind of error or just to have a more simple `Skeleton` component.
+   * @default true
    */
   isPulsing?: boolean;
 }
