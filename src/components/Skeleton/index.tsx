@@ -1,7 +1,6 @@
 import * as React from 'react';
-import styled, { keyframes, css } from '../../utils/styled';
+import styled, { keyframes, css, themed } from '../../utils/styled';
 import { StandardProps } from '../../common';
-import { whiteSmoke, whiterSmoke } from '../../colors';
 
 export interface SkeletonProps extends StandardProps {
   /**
@@ -39,16 +38,25 @@ export interface SkeletonProps extends StandardProps {
   isPulsing?: boolean;
 }
 
-const defaultBaseColor = whiteSmoke;
-const defaultHighlightColor = whiterSmoke;
+const defaultBaseColor = themed(({ theme }) => theme.ui3);
+const defaultHighlightColor = themed(({ theme }) => theme.ui2);
 
 const shine = keyframes`
   from {
-    background-position: -100px;
+    background-position: -200px;
   }
   to {
-    background-position: 110%;
+    background-position: 130%;
   }
+`;
+
+const Span = styled.span`
+  background-color: ${defaultBaseColor};
+  background-image: linear-gradient(90deg, ${defaultBaseColor}, ${defaultHighlightColor}, ${defaultBaseColor});
+  background-size: 60px 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  line-height: 1;
 `;
 
 export const Skeleton: React.FC<SkeletonProps> = props => {
@@ -56,11 +64,11 @@ export const Skeleton: React.FC<SkeletonProps> = props => {
   const skeletons = [];
 
   for (let i = 0; i < count; i++) {
-    const extraStyle = css`
+    const StyledSpan = styled(Span)`
       animation: ${shine} ${duration}s infinite linear ${!isPulsing ? 'paused' : 'running'};
 
       ${count > 1 && isText
-        ? { width: `${Math.floor(Math.random() * (100 - 80 + 1) + 80)}%` }
+        ? { width: `${Math.floor(Math.random() * 21 + 80)}%` } // random number between 80 and 100
         : { width: typeof width === 'number' ? `${width}px` : width }};
 
       height: ${typeof height === 'number' ? `${height}px` : height};
@@ -72,20 +80,10 @@ export const Skeleton: React.FC<SkeletonProps> = props => {
         }};
     `;
 
-    const Span = styled.span`
-      background-color: ${defaultBaseColor};
-      background-image: linear-gradient(90deg, ${defaultBaseColor}, ${defaultHighlightColor}, ${defaultBaseColor});
-      background-size: 60px 100%;
-      background-repeat: no-repeat;
-      display: inline-block;
-      line-height: 1;
-      ${extraStyle};
-    `;
-
     skeletons.push(
-      <Span key={i} {...props}>
+      <StyledSpan key={i} {...props}>
         &zwnj;
-      </Span>,
+      </StyledSpan>,
     );
   }
 
