@@ -6,6 +6,7 @@
 - Fixed `InteractiveList` examples
 - Fixed truncation of long text in the `InteractiveList` for IE 11
 - Fixed regular expression for Babel in Webpack
+- Fixed Datepicker bugs: incorrect date format, controlled mode issues
 
 ## 0.8.1
 
