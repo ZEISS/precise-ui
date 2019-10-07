@@ -395,3 +395,36 @@ function getContent({index, data}) {
   noValueGroupLabel="No value" 
 />
 ```
+
+It is also possible to group by a column whose values are arrays.
+
+```
+const data = [
+  {tag: ['A'], value: 'Alpha3', team: 'Alpha team'},
+  {value: 'Alpha1', team: 'Alpha team'},
+  {tag: ['B'], value: 'Bravo2', team: 'Bravo team'},
+  {tag: undefined, value: 'Alpha2', team: 'Alpha team'},
+  {tag: ['A','B'], value: 'Bravo3', team: 'Bravo team'},
+  {tag: ['C'], value: 'Charlie1', team: 'Charlie team'},
+  {tag: [], value: 'Echo1', team: 'Echo team'},
+  {tag: ['A','B'], value: 'Alpha4', team: 'Alpha team'},
+  {tag: ['B'], value: 'Bravo1', team: 'Bravo team'},
+  {tag: ['E'], value: 'Echo2', team: 'Echo team'},
+]
+   
+function getContent({index, data}) {
+  return (
+    <div>
+      Details for row #
+      <b>{index}</b>
+    </div>
+  );
+}
+     
+<AccordionTable 
+  groupBy="tag" 
+  detailsRenderer={getContent} 
+  data={data} 
+  noValueGroupLabel="No value" 
+/>
+```
