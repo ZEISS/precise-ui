@@ -81,7 +81,7 @@ const StyledIcon = styled(StyledIconInt)<StyledArrowProps>`
 function defaultGroupRenderer<T>(e: AccordionGroupRenderEvent<T>): React.ReactChild {
   return (
     <>
-      {e.group} ({e.items.length})
+      {e.group ? e.group.toString() : e.group} ({e.items.length})
     </>
   );
 }
@@ -146,7 +146,7 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
           } else {
             // special handling for arrays is needed because '===' doesn't work for arrays
             if (Array.isArray(value) && Array.isArray(group)) {
-              return value.toString() && group.toString();
+              return value.toString() === group.toString();
             } else {
               return false;
             }
@@ -239,6 +239,17 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
     return undefined;
   };
 
+  /**
+   * helper method to check if an element is included in an array.
+   * This method has special handling for arrays of arrays. In this case normal strict equality checking (===)
+   * wouldn't work.
+   */
+  private static arrayIncludes<E>(element: E, arr: Array<E>): boolean {
+    return (
+      (Array.isArray(element) ? JSON.stringify(arr).indexOf(JSON.stringify(element)) : arr.indexOf(element)) !== -1
+    );
+  }
+
   private rowRenderer = ({ cells, index, data, key, state }: TableRowEvent<T>) => {
     const { detailsRenderer, rowRenderer, theme, arrowToggle } = this.props;
     const { selectedIndex, expandedGroups } = this.state;
@@ -246,14 +257,10 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
     const active = hasIndex(selectedIndex, index);
     const count = React.Children.count(cells);
     const col = this.getGroupByValue(data);
-    const open = !(col || col === 0) || expandedGroups.indexOf(col) !== -1;
+    const open = !(col || col === 0) || AccordionTableBasic.arrayIncludes(col, expandedGroups);
     const renderData = { cells, index, data, active, key, state };
 
-    const isNewGroup =
-      (col || col === 0) &&
-      // if col is an array we need special handling to find it in the groupedRows
-      // because 'indexOf' is using strict equalty (===) internally which doesn't work for arrays
-      (Array.isArray(col) ? JSON.stringify(groupedRows).indexOf(JSON.stringify(col)) : groupedRows.indexOf(col)) === -1;
+    const isNewGroup = (col || col === 0) && !AccordionTableBasic.arrayIncludes(col, groupedRows);
 
     if (isNewGroup) {
       state.groupedRows = [...groupedRows, col];
