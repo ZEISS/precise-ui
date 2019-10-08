@@ -1,5 +1,12 @@
 # Precise UI Changelog
 
+## 0.8.2
+
+- Updated `date-fns` dependency.
+- Fixed `InteractiveList` examples
+- Fixed truncation of long text in the `InteractiveList` for IE 11
+- Fixed regular expression for Babel in Webpack
+
 ## 0.8.1
 
 - Fixed: Tooltip blinking when hovering border (#167)

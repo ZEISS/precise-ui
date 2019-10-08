@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ReactDatePicker, { ReactDatePickerProps } from 'react-datepicker';
-import * as enGB from 'date-fns/locale/en-GB';
+import { enGB } from 'date-fns/locale';
 import { Locale } from 'date-fns';
 import { PaddedContainer } from '../PaddedContainer';
 import { Icon } from '../Icon';
@@ -16,7 +16,6 @@ const defaultMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', '
 function patchLocale(locale: Locale, inputWeekDays = defaultWeekDays, months = defaultMonths): Locale {
   // in react-datepicker week starts from Sunday, not from Monday
   const weekDays = [...inputWeekDays.slice(-1), ...inputWeekDays.slice(0, -1)];
-
   return {
     ...locale,
     localize: {

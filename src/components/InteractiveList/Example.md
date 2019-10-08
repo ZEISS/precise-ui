@@ -5,7 +5,7 @@ Most basic usage of Interactive list requires to specify data and whether the li
 ```jsx
 const { InteractiveList } = require('precise-ui');
 
-<InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} />
+<InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} open/>
 ```
 
 You can show a tick for the selected item by using the `showTick` options.
@@ -13,7 +13,7 @@ You can show a tick for the selected item by using the `showTick` options.
 ```jsx
 const { InteractiveList } = require('precise-ui');
 
-<InteractiveList data={['Item 1', 'Item 2']} showTick />
+<InteractiveList data={['Item 1', 'Item 2']} showTick open/>
 ```
 
 Condensed list with smaller spacings
@@ -21,15 +21,16 @@ Condensed list with smaller spacings
 ```jsx
 const { InteractiveList } = require('precise-ui');
 
-<InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} condensed />
+<InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} condensed open/>
 ```
 
 It's possible to select multiple elements, by adding checkboxes
 
 ```jsx
 const { InteractiveList } = require('precise-ui');
-
-<InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} multiple />
+<div style={{width: '50%'}}>
+  <InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} multiple open/>
+</div>
 ```
 
 You can add dividers
@@ -44,7 +45,7 @@ const data = ['1', '2',
   key: '2',
   content: 'Test Header',
 }];
-<InteractiveList data={data} />
+<InteractiveList data={data} open/>
 ```
 
 **Custom Wrapper**
@@ -94,7 +95,7 @@ const ListContainerStyle = {
   position: 'absolute',
   width: '250px',
   maxHeight: '300px',
-  zIndex: '100',
+  zIndex: '999',
 }
 
 const CustomWrapper = ({ children, ...rest }) => {
@@ -121,17 +122,13 @@ class CustomComponent extends React.Component {
     e.preventDefault();
   }
 
-  handleBlur() {
-    this.setState({open: false});
-  }
-
   render() {
     const { open } = this.state;
     return (
       <div>
         <Button onMouseDown={this.handleMouseDown.bind(this)}>{ open ? 'Close' : 'Open' }</Button>
         <div style={ListContainerStyle}>
-          <InteractiveList data={items} open={open} onBlur={this.handleBlur.bind(this)} customWrapper={CustomWrapper}/>
+          <InteractiveList data={items} open={open} customWrapper={CustomWrapper}/>
         </div>
       </div>
     );
@@ -158,5 +155,57 @@ const data = [
   },
 ];
 
-<InteractiveList data={data}  />
+<InteractiveList data={data} open/>
 ```
+
+**Disable selection for specific items**
+
+To disable specific items pass an array of strings (matching the strings if plain strings are used or the `key` 
+field if objects are used as `data`). This prevents those items from being selected by the user.
+
+Here is an example for single-selection:
+
+```jsx
+const { InteractiveList } = require('precise-ui');
+
+const data = [
+  'Value 1',
+  'Value 2',
+  'Value 3',
+  {
+    key: "4",
+    content: "Value 4"
+  },
+];
+
+const disabledItems = [
+  'Value 2',
+  '4',
+];
+
+<InteractiveList data={data} disabledItems={disabledItems} onChange={e => console.log('was changed', e)} open/>
+```
+
+Here is an example for multi-selection with the `multiple` option set to true.
+ 
+```jsx
+const { InteractiveList } = require('precise-ui');
+
+const data = [
+  'Value 1',
+  'Value 2',
+  'Value 3',
+  {
+    key: "4",
+    content: "Value 4"
+  },
+];
+
+const disabledItems = [
+  'Value 2',
+  '4',
+];
+
+<InteractiveList data={data} disabledItems={disabledItems} onChange={e => console.log('was changed', e)} multiple open/>
+```
+

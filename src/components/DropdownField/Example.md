@@ -117,3 +117,80 @@ class MyDropdown extends React.Component {
 
 <MyDropdown />
 ```
+
+**Disable specific options**
+
+To disable specific options pass an array of strings (matching the strings if plain strings are used or the `key` 
+field if objects are used as `data`). This prevents those options from being selected by the user.
+
+Example with single selection:
+
+```jsx
+const { DropdownField } = require('precise-ui');
+
+const items = [
+  {
+    key: "1",
+    content: "Option 1"
+  },
+  {
+    key: "2",
+    content: "Option 2"
+  },
+  {
+    key: "3",
+    content: "Option 3"
+  },
+  {
+    key: "4",
+    content: "Option 4"
+  },
+  {
+    key: "5",
+    content: "Option 5"
+  },
+]
+
+const disabledItems = [
+  "1",
+  "3"
+];
+
+<DropdownField data={items} disabledItems={disabledItems} />
+```
+
+Example with multiple selection:
+
+```jsx
+const { DropdownField } = require('precise-ui');
+
+const items = [
+  {
+    key: "1",
+    content: "Option 1"
+  },
+  {
+    key: "2",
+    content: "Option 2"
+  },
+  {
+    key: "3",
+    content: "Option 3"
+  },
+  {
+    key: "4",
+    content: "Option 4"
+  },
+  {
+    key: "5",
+    content: "Option 5"
+  },
+]
+
+const disabledItems = [
+  "1",
+  "3"
+];
+
+<DropdownField data={items} disabledItems={disabledItems} multiple/>
+```
