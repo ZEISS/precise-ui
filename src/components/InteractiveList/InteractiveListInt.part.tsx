@@ -411,12 +411,12 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
   };
 
   private done = () => {
-    const { multiple, onChange, disabled, data, disabledItems } = this.props;
+    const { multiple, onChange, disabled, data, disabledItems = [] } = this.props;
     const { value, controlled, selected } = this.state;
 
     const item = data && selected !== undefined && data[selected];
     const key = item && this.getItemDetails(item).key;
-    const isItemDisabled = key && disabledItems && disabledItems.indexOf(key) !== -1;
+    const isItemDisabled = key && disabledItems.indexOf(key) !== -1;
 
     if (!disabled && !isItemDisabled && selected !== undefined) {
       const newValue = multiple
