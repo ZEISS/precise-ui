@@ -126,6 +126,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
   color: rgba(114,114,114,1);
   list-style: none;
   box-sizing: border-box;
+  opacity: 1.0;
   cursor: pointer;
   display: block;
   width: 100%;
@@ -1796,6 +1797,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
   color: rgba(114,114,114,1);
   list-style: none;
   box-sizing: border-box;
+  opacity: 1.0;
   cursor: pointer;
   display: block;
   width: 100%;
@@ -3475,6 +3477,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
   color: rgba(114,114,114,1);
   list-style: none;
   box-sizing: border-box;
+  opacity: 1.0;
   cursor: pointer;
   display: block;
   width: 100%;
