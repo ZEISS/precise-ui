@@ -59,6 +59,11 @@ const Span = styled.span`
   line-height: 1;
 `;
 
+const randomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+/**
+ * The `Sekeleton` component displays a low fidelity UI into which information will be gradually loaded.
+ */
 export const Skeleton: React.FC<SkeletonProps> = props => {
   const { count = 1, duration = 1.2, width = '100%', height = '100%', isCircle, isText, isPulsing = true } = props;
   const skeletons = [];
@@ -68,7 +73,7 @@ export const Skeleton: React.FC<SkeletonProps> = props => {
       animation: ${shine} ${duration}s infinite linear ${!isPulsing ? 'paused' : 'running'};
 
       ${count > 1 && isText
-        ? { width: `${Math.floor(Math.random() * 21 + 80)}%` } // random number between 80 and 100
+        ? { width: `${randomInt(80, 100)}%` }
         : { width: typeof width === 'number' ? `${width}px` : width }};
 
       height: ${typeof height === 'number' ? `${height}px` : height};

@@ -1,6 +1,6 @@
 **Elementary**
 
-The `Skeleton` component is quite flexible. It is block that can be use to display a loading skeleton instead of actual content. It will automatically adapt to your component.
+The `Skeleton` component is quite flexible. It displays a low fidelity UI into which information will be gradually loaded.
 
 By default it has a pulsing animation running infinitely. You could also pause it and show only the `Sekeleton`.
 
