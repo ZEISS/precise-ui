@@ -1,7 +1,9 @@
 # Precise UI Changelog
 
-## 0.9.2
- - Added onBeforeClose event to Modal
+## 0.8.3
+
+- `Skeleton` component added
+- Added onBeforeClose event to Modal
 
 ## 0.8.2
 
@@ -9,6 +11,7 @@
 - Fixed `InteractiveList` examples
 - Fixed truncation of long text in the `InteractiveList` for IE 11
 - Fixed regular expression for Babel in Webpack
+- Fixed Datepicker controlled mode issues
 
 ## 0.8.1
 
