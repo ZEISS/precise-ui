@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 0.8.3
+
+- `Skeleton` component added
+
 ## 0.8.2
 
 - Updated `date-fns` dependency.
