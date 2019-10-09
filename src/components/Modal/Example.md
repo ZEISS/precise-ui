@@ -19,10 +19,6 @@ class ModalConsumer extends React.Component {
     e.preventDefault();
   }
 
-  handleBeforeClose() {
-  	return window.confirm('Are you sure? All unsaved data will be lost.');
-  }
-
   handleClose() {
     this.setState({open: false});
   }
@@ -32,7 +28,7 @@ class ModalConsumer extends React.Component {
     return (
       <div>
         <Button onClick={this.handleClick.bind(this)}>Open Modal</Button>
-        <Modal open={open} onClose={this.handleClose.bind(this)} onBeforeClose={this.handleBeforeClose.bind(this)}>
+        <Modal open={open} onClose={this.handleClose.bind(this)}>
           <ModalHeader title="Consectetur nostrud nulla duis." label="Optional label"/>
           <ModalBody>
             Esse minim quis reprehenderit exercitation consectetur do culpa cillum. Tempor in laborum sit minim amet aliquip deserunt mollit commodo incididunt fugiat excepteur. Quis culpa incididunt laborum do Lorem cupidatat ad velit irure exercitation est amet. Officia reprehenderit tempor ut consectetur amet quis consequat culpa minim sint adipisicing aliquip incididunt. Ut laboris Lorem fugiat id anim do dolor ipsum.
@@ -280,6 +276,54 @@ class ModalConsumer extends React.Component {
             </ModalFooter>
           </Modal>
         </Form>
+      </div>
+    );
+  }
+}
+
+<ModalConsumer />
+```
+
+**onBeforeClose**
+
+Modal with custom confirmation on close.
+
+```jsx
+const { Button, Modal, ModalBody, ModalHeader } = require('precise-ui');
+
+class ModalConsumer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    }
+  }
+
+  handleClick(e) {
+    const { open } = this.state;
+    this.setState({open: !open});
+    e.preventDefault();
+  }
+
+  handleBeforeClose() {
+  	return window.confirm('Are you sure? All unsaved data will be lost.');
+  }
+
+  handleClose() {
+    this.setState({open: false});
+  }
+
+  render() {
+    const { open } = this.state;
+    return (
+      <div>
+        <Button onClick={this.handleClick.bind(this)}>Open Modal</Button>
+        <Modal open={open} onClose={this.handleClose.bind(this)} onBeforeClose={this.handleBeforeClose.bind(this)}>
+          <ModalHeader title="Consectetur nostrud nulla duis." label="Optional label"/>
+          <ModalBody>
+            Esse minim quis reprehenderit exercitation consectetur do culpa cillum. Tempor in laborum sit minim amet aliquip deserunt mollit commodo incididunt fugiat excepteur. Quis culpa incididunt laborum do Lorem cupidatat ad velit irure exercitation est amet. Officia reprehenderit tempor ut consectetur amet quis consequat culpa minim sint adipisicing aliquip incididunt. Ut laboris Lorem fugiat id anim do dolor ipsum.
+          </ModalBody>
+        </Modal>
       </div>
     );
   }
