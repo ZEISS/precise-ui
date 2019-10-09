@@ -1,5 +1,8 @@
 # Precise UI Changelog
 
+## 0.9.2
+ - Added onBeforeClose event to Modal
+
 ## 0.8.2
 
 - Updated `date-fns` dependency.
