@@ -4,7 +4,7 @@ import { TextInputProps, Omit, InputChangeEvent } from '../../common';
 import { FormContextProps, withFormContext } from '../../hoc';
 import { CustomReactDatepicker } from './CustomReactDatepicker.part';
 import { DatePickerTextField } from './DateFieldTextField.part';
-import { parseDate, safeDateFormat } from '../../utils';
+import { parseDate, safeDateFormat, getIsoDateFormat } from '../../utils';
 
 export { ReactDatePickerProps };
 
@@ -179,7 +179,7 @@ interface DateFieldState {
   error?: React.ReactChild;
 }
 
-const DefaultDateFormat = 'yyyy-MM-dd';
+const DefaultDateFormat = getIsoDateFormat();
 
 class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
   private readonly valueControlled: boolean;
@@ -200,7 +200,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
 
   componentWillReceiveProps({ value = '', error }: DateFieldProps) {
     if (this.valueControlled) {
-      this.setState({ value });
+      this.setState({ value, date: this.parseDate(value) });
     }
 
     this.setState({ error });

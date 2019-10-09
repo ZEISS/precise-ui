@@ -343,7 +343,7 @@ In `value` controlled mode
 const { DateField, StackPanel, StackItem, Button } = require('precise-ui');
 
 const Example = () => {
-  const [ value, setValue ] = React.useState('14-06-1988');
+  const [ value, setValue ] = React.useState(new Date().toISOString().slice(0, 10));
 
   return (
     <div>
