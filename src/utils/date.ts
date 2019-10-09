@@ -76,23 +76,8 @@ export function parseDate(
   return isValid(parsedDate) && strictParsingValueMatch ? parsedDate : null;
 }
 
-export function getDefaultDateFormat() {
-  const formatObj = new Intl.DateTimeFormat().formatToParts(new Date());
-
-  return formatObj
-    .map(obj => {
-      switch (obj.type) {
-        case 'day':
-          return 'dd';
-        case 'month':
-          return 'MM';
-        case 'year':
-          return 'yyyy';
-        default:
-          return obj.value;
-      }
-    })
-    .join('');
+export function getIsoDateFormat() {
+  return 'yyyy-MM-dd';
 }
 
 function getLocaleObject(localeSpec: string | Locale) {
