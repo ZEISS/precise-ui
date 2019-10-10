@@ -284,7 +284,7 @@ class ModalConsumer extends React.Component {
 <ModalConsumer />
 ```
 
-**onBeforeClose**
+**Prompting on before closing**
 
 Modal with custom confirmation on close.
 
