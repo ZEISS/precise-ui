@@ -288,7 +288,7 @@ class ModalConsumer extends React.Component {
 
 Modal with custom confirmation on close.
 
-```jsx
+```jsx { "props": { "data-skip": true } }
 const { Button, Modal, ModalBody, ModalHeader } = require('precise-ui');
 
 class ModalConsumer extends React.Component {
