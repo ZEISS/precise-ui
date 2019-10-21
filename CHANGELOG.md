@@ -12,6 +12,7 @@
 - Fixed truncation of long text in the `InteractiveList` for IE 11
 - Fixed regular expression for Babel in Webpack
 - Fixed Datepicker controlled mode issues
+- Fixed hiding suggestion list of `Autocomplete` after selection for IE 11
 
 ## 0.8.1
 
