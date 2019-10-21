@@ -3,6 +3,7 @@
 ## 0.8.3
 
 - `Skeleton` component added
+- Added onBeforeClose event to Modal
 
 ## 0.8.2
 
