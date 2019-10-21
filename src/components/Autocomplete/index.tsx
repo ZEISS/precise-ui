@@ -183,6 +183,10 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
 
     const hide = () => {
       this.hide();
+      /*
+        On IE11 the focus event from this._element.focus(); triggers after this.hide() and so the suggestion list opens again after hiding it.
+        If we call this.hide() again with a timeout, it works also for IE11.
+      */
       setTimeout(() => {
         if (this.state.open) {
           this.hide();
