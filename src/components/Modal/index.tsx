@@ -14,6 +14,8 @@ export interface ModalCloseEvent {
   origin: ModalCloseOrigin;
 }
 
+type onBeforeCloseHandler = (e: ModalCloseEvent) => boolean | Promise<boolean>;
+
 export interface ModalProps extends StandardProps {
   /**
    * Sets the content of the modal dialog.
@@ -23,6 +25,10 @@ export interface ModalProps extends StandardProps {
    * Determines if the modal is currently open or not.
    */
   open?: boolean;
+  /**
+   * Event triggered before the modal is actually closed by the user.
+   */
+  onBeforeClose?: onBeforeCloseHandler;
   /**
    * Event triggered when the modal should be closed by the user.
    */
@@ -187,18 +193,30 @@ export class Modal extends React.PureComponent<ModalProps, ModalState> {
   }
 
   private closeFrom(origin: ModalCloseOrigin) {
-    const { onClose } = this.props;
+    const { onClose, onBeforeClose } = this.props;
+    const closeEvent = { origin };
 
-    this.setState({ closing: true }, () =>
-      setTimeout(() => {
-        if (typeof onClose === 'function') {
-          onClose({
-            origin,
-          });
-        }
-        this.setState({ closing: false });
-      }, closeAnimationDuration),
-    );
+    this.callOnBeforeCloseHandler(onBeforeClose, closeEvent).then(closePermitted => {
+      if (!closePermitted) {
+        return;
+      }
+      this.setState({ closing: true }, () =>
+        setTimeout(() => {
+          if (typeof onClose === 'function') {
+            onClose(closeEvent);
+          }
+          this.setState({ closing: false });
+        }, closeAnimationDuration),
+      );
+    });
+  }
+
+  private callOnBeforeCloseHandler(onBeforeClose: onBeforeCloseHandler | undefined, closeEvent: ModalCloseEvent) {
+    if (typeof onBeforeClose !== 'function') {
+      return Promise.resolve(true);
+    }
+    const canClose = onBeforeClose(closeEvent);
+    return Promise.resolve(canClose);
   }
 
   private closeBackground = () => {
@@ -210,7 +228,7 @@ export class Modal extends React.PureComponent<ModalProps, ModalState> {
   };
 
   render() {
-    const { children, onClose, open = false, minHeight, ...rest } = this.props;
+    const { onBeforeClose: _0, children, onClose, open = false, minHeight, ...rest } = this.props;
     const canClose = typeof onClose === 'function';
     const { closing } = this.state;
 
