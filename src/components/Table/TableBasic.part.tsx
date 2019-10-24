@@ -142,7 +142,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
   }
 
   private headerClicked(e: React.MouseEvent<HTMLTableCellElement>, column: number, key: string) {
-    const { onHeaderClick, data = [], columns } = this.props;
+    const { onHeaderClick, onSort, data = [], columns } = this.props;
     e.preventDefault();
 
     if (typeof onHeaderClick === 'function') {
