@@ -165,6 +165,13 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
       }
 
       this.setState({ sorting: newSortingValue });
+
+      if (typeof onSort === 'function') {
+        onSort({
+          column,
+          key,
+          value: order,
+          row: -1,
         });
       }
     }
