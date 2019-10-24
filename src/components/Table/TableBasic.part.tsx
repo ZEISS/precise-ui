@@ -154,17 +154,17 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     } else if (this.isSortable(key, getColumns(data, columns))) {
       const { sorting } = this.state;
       const isAscending = sorting && sorting.order === 'descending' && sorting.columnKey === key;
+      const order = sorting && sorting.columnKey === key ? 'descending' : 'ascending';
+      let newSortingValue: TableSorting | undefined = undefined;
 
       if (!isAscending && column !== -1) {
-        this.setState({
-          sorting: {
-            columnKey: key,
-            order: sorting && sorting.columnKey === key ? 'descending' : 'ascending',
-          },
-        });
-      } else {
-        this.setState({
-          sorting: undefined,
+        newSortingValue = {
+          columnKey: key,
+          order,
+        };
+      }
+
+      this.setState({ sorting: newSortingValue });
         });
       }
     }
