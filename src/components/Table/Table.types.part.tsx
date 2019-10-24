@@ -186,6 +186,10 @@ export interface TableProps<T> extends StandardProps, ModeProviderProps<TableMod
    */
   onDataClick?(e: TableCellEvent<T>): void;
   /**
+   * Handler that is being called after the table has been sorted.
+   */
+  onSort?(e: TableCellEvent<T>): void;
+  /**
    * Optionally provides a custom way for computing the row key.
    */
   getRowKey?(e: TableRowEvent<T>): string;
