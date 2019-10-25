@@ -208,14 +208,24 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
   }
 
   private defaultHeadRenderer = ({ columns, sortBy, keys }: TableSectionRenderEvent<T>) => {
+    const { onSort } = this.props;
+
     const defaultHeaderCellRenderer = getDefaultHeaderCellRenderer((columnKey, order) => {
-      console.log('TEST');
       this.setState({
         sorting: {
           columnKey,
           order,
         },
       });
+
+      if (typeof onSort === 'function') {
+        onSort({
+          column: keys.indexOf(columnKey),
+          key: columnKey,
+          value: order,
+          row: -1,
+        });
+      }
     });
 
     const { indexed, theme, headerCellRenderer = defaultHeaderCellRenderer } = this.props;
