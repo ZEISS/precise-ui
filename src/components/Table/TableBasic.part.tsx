@@ -452,6 +452,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
       footRenderer: _11,
       headerCellRenderer: _12,
       footerCellRenderer: _13,
+      onSort: _14,
       ...props
     } = this.props;
     const cols = getColumns(data, columns);
