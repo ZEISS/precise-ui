@@ -177,4 +177,27 @@ describe('<Table />', () => {
     const wrapper = enzyme.shallow(<Table mode="card" data={data} columns={columns} cellRenderer={render} />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  describe('onSort', () => {
+    it('should trigger the passed callback when clicking the header', () => {
+      const onSortCallback = jest.fn();
+      const wrapper = enzyme.mount(<Table data={[{ c: 5 }, { c: 10 }]} onSort={onSortCallback} />);
+      wrapper.find('th').simulate('click');
+
+      expect(onSortCallback).toHaveBeenCalledTimes(1);
+    });
+
+    it('should pass the columnName and the order to the callback ', () => {
+      const onSortCallback = jest.fn();
+      const wrapper = enzyme.mount(<Table data={[{ c: 5 }, { c: 10 }]} onSort={onSortCallback} />);
+      wrapper.find('th').simulate('click');
+
+      expect(onSortCallback).toHaveBeenCalledWith({
+        column: 0,
+        row: -1,
+        key: 'c',
+        value: 'ascending',
+      });
+    });
+  });
 });
