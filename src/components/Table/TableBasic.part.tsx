@@ -170,7 +170,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
         onSort({
           column,
           key,
-          value: order,
+          value: (newSortingValue && newSortingValue.order) || undefined,
           row: -1,
         });
       }
@@ -209,6 +209,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
 
   private defaultHeadRenderer = ({ columns, sortBy, keys }: TableSectionRenderEvent<T>) => {
     const defaultHeaderCellRenderer = getDefaultHeaderCellRenderer((columnKey, order) => {
+      console.log('TEST');
       this.setState({
         sorting: {
           columnKey,
