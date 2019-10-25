@@ -4,6 +4,7 @@
 
 - `Skeleton` component added
 - Added onBeforeClose event to Modal
+- Added appendTagOnBlur prop to TagBuilder
 
 ## 0.8.2
 

@@ -60,4 +60,8 @@ export interface TagBuilderProps extends LabeledInputProps<Array<string>> {
    * @ignore
    */
   inputRef?(instance: HTMLElement | null): void;
+  /**
+   * If set, the current input value will be added as a tag on blur.
+   */
+  appendTagOnBlur?: boolean;
 }
