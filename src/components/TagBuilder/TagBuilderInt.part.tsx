@@ -259,7 +259,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
 
   private inputBlurred = () => {
     const { onBlur, appendTagOnBlur } = this.props;
-    if (!!appendTagOnBlur) {
+    if (!!appendTagOnBlur && !this.state.controlled) {
       const { inputValue } = this.state;
       if (inputValue) {
         this.addTag(inputValue);
