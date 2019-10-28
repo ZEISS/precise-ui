@@ -170,7 +170,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
         onSort({
           column,
           key,
-          value: (newSortingValue && newSortingValue.order) || undefined,
+          value: newSortingValue && newSortingValue.order,
           row: -1,
         });
       }
