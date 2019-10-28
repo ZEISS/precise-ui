@@ -5,6 +5,7 @@
 - `Skeleton` component added
 - Added onBeforeClose event to Modal
 - Added appendTagOnBlur prop to TagBuilder
+- Added onSort callback to Table
 - Fixed "Autocomplete" that blocked "InteractiveList" automatic position determination
 
 ## 0.8.2
