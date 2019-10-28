@@ -438,5 +438,5 @@ const data = [{
   age: 15,
 }];
 
-<Table data={data} sortBy="age" onSort={(ev) => console.log(ev)} />
+<Table data={data} onSort={(ev) => console.log(ev)} />
 ```
