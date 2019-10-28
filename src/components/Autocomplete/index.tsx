@@ -320,41 +320,35 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       ...props
     } = this.props;
     const { open, listFocus, value, error } = this.state;
-
+    const isListOpen = open && (!!suggestions.length || !!noSuggestionsMessage);
     return (
       <div onKeyDown={this.handleKeyDown} onFocus={this.handleFocus} onBlur={this.handleBlur}>
         <AutocompleteWrapper>
           {inputRenderer({
             ...props,
-            info: open && (suggestions.length || noSuggestionsMessage) ? undefined : info,
+            info: isListOpen ? undefined : info,
             onChange: this.changed,
             clearable: true,
             inputRef: this.setNode,
             value: value,
             error: error,
           })}
-
-          {open &&
-            (suggestions.length || noSuggestionsMessage ? (
-              <div>
-                <InteractiveList
-                  data={
-                    suggestions.length
-                      ? suggestions.map(renderSuggestion)
-                      : [{ key: 'default', content: noSuggestionsMessage }]
-                  }
-                  disabled={suggestions.length === 0}
-                  customWrapper={AutosuggestWrapper}
-                  focus={listFocus}
-                  onChange={this.handleListChange}
-                  autoPosition
-                  open
-                />
-                {!!info && <div>{info}</div>}
-              </div>
-            ) : (
-              undefined
-            ))}
+          <div>
+            <InteractiveList
+              data={
+                suggestions.length
+                  ? suggestions.map(renderSuggestion)
+                  : [{ key: 'default', content: noSuggestionsMessage }]
+              }
+              disabled={suggestions.length === 0}
+              customWrapper={AutosuggestWrapper}
+              focus={listFocus}
+              onChange={this.handleListChange}
+              autoPosition
+              open={isListOpen}
+            />
+            {isListOpen && info && <div>{info}</div>}
+          </div>
         </AutocompleteWrapper>
       </div>
     );
