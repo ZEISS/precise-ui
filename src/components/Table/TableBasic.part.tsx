@@ -152,28 +152,32 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
         row: -1,
       });
     } else if (this.isSortable(key, getColumns(data, columns))) {
-      const { sorting } = this.state;
-      const isAscending = sorting && sorting.order === 'descending' && sorting.columnKey === key;
-      const order = sorting && sorting.columnKey === key ? 'descending' : 'ascending';
-      let newSortingValue: TableSorting | undefined = undefined;
+      this.setState(
+        ({ sorting }) => {
+          const isAscending = sorting && sorting.order === 'descending' && sorting.columnKey === key;
+          const order = sorting && sorting.columnKey === key ? 'descending' : 'ascending';
+          let newSortingValue: TableSorting | undefined = undefined;
 
-      if (!isAscending && column !== -1) {
-        newSortingValue = {
-          columnKey: key,
-          order,
-        };
-      }
+          if (!isAscending && column !== -1) {
+            newSortingValue = {
+              columnKey: key,
+              order,
+            };
+          }
 
-      this.setState({ sorting: newSortingValue });
-
-      if (typeof onSort === 'function') {
-        onSort({
-          column,
-          key,
-          value: newSortingValue && newSortingValue.order,
-          row: -1,
-        });
-      }
+          return { sorting: newSortingValue };
+        },
+        () => {
+          if (typeof onSort === 'function') {
+            onSort({
+              column,
+              key,
+              value: this.state.sorting && this.state.sorting.order,
+              row: -1,
+            });
+          }
+        },
+      );
     }
   }
 
@@ -211,21 +215,24 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     const { onSort } = this.props;
 
     const defaultHeaderCellRenderer = getDefaultHeaderCellRenderer((columnKey, order) => {
-      this.setState({
-        sorting: {
-          columnKey,
-          order,
+      this.setState(
+        {
+          sorting: {
+            columnKey,
+            order,
+          },
         },
-      });
-
-      if (typeof onSort === 'function') {
-        onSort({
-          column: keys.indexOf(columnKey),
-          key: columnKey,
-          value: order,
-          row: -1,
-        });
-      }
+        () => {
+          if (typeof onSort === 'function') {
+            onSort({
+              column: keys.indexOf(columnKey),
+              key: columnKey,
+              value: order,
+              row: -1,
+            });
+          }
+        },
+      );
     });
 
     const { indexed, theme, headerCellRenderer = defaultHeaderCellRenderer } = this.props;
