@@ -186,7 +186,10 @@ export interface TableProps<T> extends StandardProps, ModeProviderProps<TableMod
    */
   onDataClick?(e: TableCellEvent<T>): void;
   /**
-   * Handler that is being called after the table has been sorted.
+   * Handler that is being called after the table has internally been sorted.
+   * When the `onHeaderClick` or the `sortBy` property is present `onSort`
+   * will never execute. This handler only gets called when internal sorting
+   * is being used.
    */
   onSort?(e: TableCellEvent<T>): void;
   /**
