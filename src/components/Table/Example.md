@@ -420,7 +420,7 @@ const data = [{
 
 ** onSort Callback **
 
-Providing an `onSort` callback allows you to do additional data fetching if the user invokes sorting on your table.
+Providing an `onSort` callback allows you to react to the table being sorted.
 
 ```jsx { "props": { "data-skip": true } }
 const { Table } = require('precise-ui');
