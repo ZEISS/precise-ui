@@ -29,6 +29,9 @@ export interface TableCellEvent<T> {
   data?: T;
 }
 
+/**
+ * Arguments for sorting events.
+ */
 export interface TableSortEvent {
   /**
    * The index of the column that's sorted.
