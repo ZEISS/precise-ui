@@ -7,6 +7,7 @@ import { breakpoints } from '../../themes';
 export {
   TableMode,
   TableCellEvent,
+  TableSortEvent,
   TableRowEvent,
   TableBodyRenderEvent,
   TableCardRendererEvent,
