@@ -417,3 +417,26 @@ const data = [{
 
 <Table data={data} groupBy="name" />
 ```
+
+** onSort Callback **
+
+Providing an `onSort` callback allows you to react to the table being sorted.
+
+```jsx { "props": { "data-skip": true } }
+const { Table } = require('precise-ui');
+const data = [{
+  name: 'A',
+  age: 21,
+}, {
+  name: 'B',
+  age: 12,
+}, {
+  name: 'C',
+  age: 25,
+}, {
+  name: 'D',
+  age: 15,
+}];
+
+<Table data={data} onSort={(ev) => console.log(ev)} />
+```

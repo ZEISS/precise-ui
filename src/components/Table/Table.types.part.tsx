@@ -30,6 +30,25 @@ export interface TableCellEvent<T> {
 }
 
 /**
+ * Arguments for sorting events.
+ */
+export interface TableSortEvent {
+  /**
+   * The index of the column that's sorted.
+   */
+  column: number;
+  /**
+   * The column key name that's sorted.
+   */
+  key: string;
+  /**
+   * The direction in which the table is sorted.
+   * `undefined` represents the default unsorted state.
+   */
+  order?: 'ascending' | 'descending';
+}
+
+/**
  * Arguments for custom cell rendering events.
  */
 export interface TableCellRenderEvent<T> extends TableCellEvent<T> {
@@ -185,6 +204,13 @@ export interface TableProps<T> extends StandardProps, ModeProviderProps<TableMod
    * Handler that is being called when a data cell has been clicked.
    */
   onDataClick?(e: TableCellEvent<T>): void;
+  /**
+   * Handler that is being called after the table has internally been sorted.
+   * When the `onHeaderClick` or the `sortBy` property is present `onSort`
+   * will never execute. This handler only gets called when internal sorting
+   * is being used.
+   */
+  onSort?(e: TableSortEvent): void;
   /**
    * Optionally provides a custom way for computing the row key.
    */
