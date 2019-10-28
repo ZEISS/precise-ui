@@ -5,6 +5,7 @@
 - `Skeleton` component added
 - Added onBeforeClose event to Modal
 - Added appendTagOnBlur prop to TagBuilder
+- Added onSort callback to Table
 
 ## 0.8.2
 
