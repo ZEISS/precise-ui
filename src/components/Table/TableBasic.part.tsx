@@ -172,8 +172,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
             onSort({
               column,
               key,
-              value: this.state.sorting && this.state.sorting.order,
-              row: -1,
+              order: this.state.sorting && this.state.sorting.order,
             });
           }
         },
@@ -227,8 +226,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
             onSort({
               column: keys.indexOf(columnKey),
               key: columnKey,
-              value: order,
-              row: -1,
+              order,
             });
           }
         },

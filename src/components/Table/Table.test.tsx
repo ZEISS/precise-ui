@@ -194,9 +194,8 @@ describe('<Table />', () => {
 
       expect(onSortCallback).toHaveBeenCalledWith({
         column: 0,
-        row: -1,
         key: 'c',
-        value: 'ascending',
+        order: 'ascending',
       });
     });
   });

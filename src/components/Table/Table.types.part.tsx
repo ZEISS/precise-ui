@@ -29,6 +29,22 @@ export interface TableCellEvent<T> {
   data?: T;
 }
 
+export interface TableSortEvent {
+  /**
+   * The index of the column that's sorted.
+   */
+  column: number;
+  /**
+   * The column key name that's sorted.
+   */
+  key: string;
+  /**
+   * The direction in which the table is sorted.
+   * `undefined` represents the default unsorted state.
+   */
+  order: 'ascending' | 'descending' | undefined;
+}
+
 /**
  * Arguments for custom cell rendering events.
  */
@@ -191,7 +207,7 @@ export interface TableProps<T> extends StandardProps, ModeProviderProps<TableMod
    * will never execute. This handler only gets called when internal sorting
    * is being used.
    */
-  onSort?(e: TableCellEvent<T>): void;
+  onSort?(e: TableSortEvent): void;
   /**
    * Optionally provides a custom way for computing the row key.
    */
