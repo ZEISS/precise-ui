@@ -209,7 +209,7 @@ export class Notification extends React.Component<NotificationProps, Notificatio
     return (
       <StyledNotification theme={theme} closed={closed} type={type} {...other}>
         <IconContainer theme={theme}>
-          <StyledIcon type={type} name={getNotificationIcon(type)} size="22px" />
+          <StyledIcon type={type} name={getNotificationIcon(type)} size="22px" theme={theme} />
         </IconContainer>
         <ContentContainer inline={isInline}>
           {title && <StyledTitle theme={theme}>{title}</StyledTitle>}
