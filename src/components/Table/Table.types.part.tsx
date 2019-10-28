@@ -45,7 +45,7 @@ export interface TableSortEvent {
    * The direction in which the table is sorted.
    * `undefined` represents the default unsorted state.
    */
-  order: 'ascending' | 'descending' | undefined;
+  order?: 'ascending' | 'descending';
 }
 
 /**
