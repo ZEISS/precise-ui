@@ -6,6 +6,7 @@
 - Added onBeforeClose event to Modal
 - Added appendTagOnBlur prop to TagBuilder
 - Added onSort callback to Table
+- Allow themeing of icon of notification component
 
 ## 0.8.2
 
