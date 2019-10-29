@@ -86,7 +86,7 @@ export class Sidebar extends React.Component<SidebarProps, SidebarState> {
   };
 
   render() {
-    const { activator, size = '275px', onShow: _1, ...props } = this.props;
+    const { onShow: _0, activator, size = '275px', ...props } = this.props;
     const { open } = this.state;
     return (
       <>
