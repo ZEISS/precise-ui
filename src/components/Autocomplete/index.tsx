@@ -333,22 +333,20 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
             value: value,
             error: error,
           })}
-          <div>
-            <InteractiveList
-              data={
-                suggestions.length
-                  ? suggestions.map(renderSuggestion)
-                  : [{ key: 'default', content: noSuggestionsMessage }]
-              }
-              disabled={suggestions.length === 0}
-              customWrapper={AutosuggestWrapper}
-              focus={listFocus}
-              onChange={this.handleListChange}
-              autoPosition
-              open={isListOpen}
-            />
-            {isListOpen && info && <div>{info}</div>}
-          </div>
+          <InteractiveList
+            data={
+              suggestions.length
+                ? suggestions.map(renderSuggestion)
+                : [{ key: 'default', content: noSuggestionsMessage }]
+            }
+            disabled={suggestions.length === 0}
+            customWrapper={AutosuggestWrapper}
+            focus={listFocus}
+            onChange={this.handleListChange}
+            autoPosition
+            open={isListOpen}
+          />
+          {isListOpen && info && <div>{info}</div>}
         </AutocompleteWrapper>
       </div>
     );
