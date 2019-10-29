@@ -149,7 +149,7 @@ export class AccordionCard extends React.Component<AccordionCardProps, Accordion
   }
 
   render() {
-    const { theme, children, header, ...props } = this.props;
+    const { theme, children, header, onActionClick: _1, ...props } = this.props;
     const { opened } = this.state;
 
     return (
