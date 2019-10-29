@@ -6,8 +6,9 @@
 - Added onBeforeClose event to Modal
 - Added appendTagOnBlur prop to TagBuilder
 - Added onSort callback to Table
-- Allow themeing of icon of notification component
 - Fixed(Tag): Theming of tag component (#190)
+- Allow themeing of icon of notification component
+- Fixed: Integration tests are always executed if repository is stored in a location with `src` in it's path
 
 ## 0.8.2
 
