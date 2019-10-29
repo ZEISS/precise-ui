@@ -9,6 +9,7 @@
 - Fixed(Tag): Theming of tag component (#190)
 - Allow themeing of icon of notification component
 - Fixed: Integration tests are always executed if repository is stored in a location with `src` in it's path
+- Fixed "Autocomplete" that blocked "InteractiveList" automatic position determination4f3cc2f7d36b938005d99031058a1a066
 
 ## 0.8.2
 
