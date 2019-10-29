@@ -7,6 +7,7 @@
 - Added appendTagOnBlur prop to TagBuilder
 - Added onSort callback to Table
 - Fixed: Integration tests are always executed if repository is stored in a location with `src` in it's path
+- Fixed(Tag): Theming of tag component (#190)
 
 ## 0.8.2
 
