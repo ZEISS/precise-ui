@@ -93,7 +93,7 @@ const StyledAutosuggestWrapper = styled.ul<StyledAutosuggestWrapperProps>(
         : 'border-bottom-color: transparent'};
       max-height: 50vh;
       position: absolute;
-      top: ${direction === InteractiveListDirection.normal ? '0' : '-100%'};
+      top: ${direction === InteractiveListDirection.normal ? '100%' : '0px'};
       transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
       overflow-y: auto;
       z-index: 100;
@@ -345,6 +345,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
             onChange={this.handleListChange}
             autoPosition
             open={isListOpen}
+            style={{ position: 'static' }}
           />
           {isListOpen && info && <div>{info}</div>}
         </AutocompleteWrapper>
