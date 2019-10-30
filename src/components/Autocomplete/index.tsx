@@ -73,6 +73,10 @@ const AutocompleteWrapper = styled.div`
   position: relative;
 `;
 
+const StyledInteractiveList = styled(InteractiveList)`
+  position: static;
+`;
+
 interface StyledAutosuggestWrapperProps {
   direction: InteractiveListDirection;
 }
@@ -333,7 +337,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
             value: value,
             error: error,
           })}
-          <InteractiveList
+          <StyledInteractiveList
             data={
               suggestions.length
                 ? suggestions.map(renderSuggestion)
@@ -345,7 +349,6 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
             onChange={this.handleListChange}
             autoPosition
             open={isListOpen}
-            style={{ position: 'static' }}
           />
           {isListOpen && info && <div>{info}</div>}
         </AutocompleteWrapper>
