@@ -17,6 +17,27 @@ describe('<List />', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should not render children that are null or undefined', () => {
+    const wrapper = enzyme.shallow(
+      <List disablePadding>
+        <div>Item</div>
+        {null}
+        {undefined}
+      </List>,
+    );
+    expect(wrapper.children().length).toBe(1);
+  });
+
+  it('should render children that are primitives', () => {
+    const wrapper = enzyme.shallow(
+      <List disablePadding>
+        {'Nice '}
+        {1}
+      </List>,
+    );
+    expect(wrapper.text()).toBe('Nice 1');
+  });
+
   it('should set `active` property on 2nd child element', () => {
     const wrapper = enzyme.shallow(
       <List activeItem={2}>
