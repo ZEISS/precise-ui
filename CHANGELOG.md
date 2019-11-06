@@ -11,7 +11,7 @@
 - Fixed: Integration tests are always executed if repository is stored in a location with `src` in it's path
 - Fixed `Autocomplete` that blocked `InteractiveList` automatic position determination
 - Fixed `InteractiveList` position in `Autocomplete` component
-- Replaced `forEach` with `for-of` in `ContentSwitchInt` to fix displaying content switch for IE 11
+- Replaced `forEach` with `Array.from` in `ContentSwitchInt` to fix displaying content switch for IE 11
 
 ## 0.8.2
 
