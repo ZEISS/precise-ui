@@ -25,20 +25,22 @@ const Highlighted = styled.span`
  * Highlight component is meant to be a simple component to display text with highlighted search.
  * Component will render a SPAN or series of SPAN with the content and highlights
  */
-export const Highlight: React.FC<HighlightProps> = ({ text, highlight, ignoreCase = true }) => {
-  // Sanitized the user input to pevent them from using RegEx patterns
+export const Highlight: React.FC<HighlightProps> = ({ text, highlight, ignoreCase = true, theme }) => {
+  // Sanitized the user input to prevent them from using RegEx patterns
   const sanitized = highlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const parts = text.split(new RegExp(`(${sanitized})`, ignoreCase ? 'gi' : 'g'));
   return (
-    <span>
+    <>
       {parts.map((part, i) =>
         part.toLowerCase() === highlight.toLowerCase() ? (
-          <Highlighted key={i}>{part}</Highlighted>
+          <Highlighted theme={theme} key={i}>
+            {part}
+          </Highlighted>
         ) : (
           <span key={i}>{part}</span>
         ),
       )}
-    </span>
+    </>
   );
 };
 

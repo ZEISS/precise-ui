@@ -23,3 +23,14 @@ const { Highlight } = require('precise-ui');
 
 <Highlight text="Hello World! Searching for world!" highlight="world" ignoreCase={false} />
 ```
+
+**Appearance Options**
+
+Following example demonstrates theme usage for component style adjustments.
+
+```jsx { "props": { "data-wait": 500 } }
+const { Highlight } = require('precise-ui');
+
+<Highlight text="Hello World!" highlight="World" theme={{highlightColor: '#f00'}} />
+```
+
