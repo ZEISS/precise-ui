@@ -27,7 +27,7 @@ const Highlighted = styled.span`
  */
 export const Highlight: React.FC<HighlightProps> = ({ text, highlight, ignoreCase = true, theme }) => {
   if (highlight === '') {
-    return <span>{text}</span>;
+    return <>{text}</>;
   }
 
   // Sanitized the user input to prevent them from using RegEx patterns
