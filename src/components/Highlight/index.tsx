@@ -26,6 +26,10 @@ const Highlighted = styled.span`
  * Component will render a SPAN or series of SPAN with the content and highlights
  */
 export const Highlight: React.FC<HighlightProps> = ({ text, highlight, ignoreCase = true, theme }) => {
+  if (highlight === '') {
+    return <span>{text}</span>;
+  }
+
   // Sanitized the user input to prevent them from using RegEx patterns
   const sanitized = highlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const parts = text.split(new RegExp(`(${sanitized})`, ignoreCase ? 'gi' : 'g'));

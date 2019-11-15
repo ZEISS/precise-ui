@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Highlight /> should render <Highlight> treating regex patterns as text 1`] = `
-<span>
+<Fragment>
   <span
     key="0"
   >
@@ -17,7 +17,7 @@ exports[`<Highlight /> should render <Highlight> treating regex patterns as text
   >
     World!
   </span>
-</span>
+</Fragment>
 `;
 
 exports[`<Highlight /> should render <Highlight> with background color on search term 1`] = `
@@ -41,7 +41,7 @@ exports[`<Highlight /> should render <Highlight> with background color on search
 `;
 
 exports[`<Highlight /> should render <Highlight> with exact match on case 1`] = `
-<span>
+<Fragment>
   <span
     key="0"
   >
@@ -57,25 +57,25 @@ exports[`<Highlight /> should render <Highlight> with exact match on case 1`] = 
   >
     !
   </span>
-</span>
+</Fragment>
 `;
 
 exports[`<Highlight /> should render <Highlight> with no exact match on case 1`] = `
-<span>
+<Fragment>
   <span
     key="0"
   >
     Hello World!
   </span>
-</span>
+</Fragment>
 `;
 
 exports[`<Highlight /> should render <Highlight> with no matched search term 1`] = `
-<span>
+<Fragment>
   <span
     key="0"
   >
     Hello World!
   </span>
-</span>
+</Fragment>
 `;
