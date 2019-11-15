@@ -56,7 +56,7 @@ class ContentSwitchInt extends React.Component<ContentSwitchProps, ContentSwitch
 
     if (headers && container && orientation === 'horizontal') {
       if (!headerNodesWidth.length) {
-        headers.childNodes.forEach((node: HTMLLIElement) => {
+        Array.from(headers.childNodes).forEach((node: HTMLLIElement) => {
           headerNodesWidth.push(node.offsetWidth);
         });
       }

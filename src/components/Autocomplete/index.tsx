@@ -73,6 +73,10 @@ const AutocompleteWrapper = styled.div`
   position: relative;
 `;
 
+const StyledInteractiveList = styled(InteractiveList)`
+  position: static;
+`;
+
 interface StyledAutosuggestWrapperProps {
   direction: InteractiveListDirection;
 }
@@ -93,7 +97,7 @@ const StyledAutosuggestWrapper = styled.ul<StyledAutosuggestWrapperProps>(
         : 'border-bottom-color: transparent'};
       max-height: 50vh;
       position: absolute;
-      top: ${direction === InteractiveListDirection.normal ? '0' : '-100%'};
+      top: ${direction === InteractiveListDirection.normal ? '100%' : '0px'};
       transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
       overflow-y: auto;
       z-index: 100;
@@ -333,7 +337,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
             value: value,
             error: error,
           })}
-          <InteractiveList
+          <StyledInteractiveList
             data={
               suggestions.length
                 ? suggestions.map(renderSuggestion)
