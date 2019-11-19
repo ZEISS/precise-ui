@@ -31,20 +31,24 @@ describe('<Highlight />', () => {
   it('should render <Highlight> without trailing empty span', () => {
     const wrapper = shallow(<Highlight text="Hello World!" highlight="!" />);
     expect(wrapper.children()).toHaveLength(2);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render <Highlight> without leading empty span', () => {
     const wrapper = shallow(<Highlight text="Hello World!" highlight="H" />);
     expect(wrapper.children()).toHaveLength(2);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render <Highlight> a single span if no match', () => {
     const wrapper = shallow(<Highlight text="A" highlight="a" />);
     expect(wrapper.children()).toHaveLength(1);
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('should render <Highlight> should escape \\', () => {
     const wrapper = shallow(<Highlight text="Hello World!" highlight="\world" />);
     expect(wrapper.children()).toHaveLength(1);
+    expect(wrapper).toMatchSnapshot();
   });
 });
