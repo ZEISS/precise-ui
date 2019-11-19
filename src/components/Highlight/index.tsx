@@ -32,7 +32,7 @@ export const Highlight: React.FC<HighlightProps> = ({ text, highlight, ignoreCas
 
   // Sanitized the user input to prevent them from using RegEx patterns
   const sanitized = highlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const parts = text.split(new RegExp(`(${sanitized})`, ignoreCase ? 'gi' : 'g'));
+  const parts = text.split(new RegExp(`(${sanitized})`, ignoreCase ? 'gi' : 'g')).filter(Boolean);
   return (
     <>
       {parts.map((part, i) =>
