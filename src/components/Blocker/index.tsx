@@ -108,11 +108,15 @@ export class Blocker extends React.Component<BlockerProps> {
     e.stopPropagation();
 
     if (
-      e.target === e.currentTarget ||
-      (e.target instanceof HTMLElement && e.target.parentElement === e.currentTarget)
+      !this.onScrollbarClick(e) &&
+      (e.target === e.currentTarget || (e.target instanceof HTMLElement && e.target.parentElement === e.currentTarget))
     ) {
       this.notifyClose(e);
     }
+  };
+
+  private onScrollbarClick = (e: React.MouseEvent<HTMLElement>) => {
+    return e.target instanceof HTMLElement && e.target.offsetLeft + e.target.scrollWidth < e.clientX;
   };
 
   private onKeyPress = (e: React.KeyboardEvent<HTMLElement>) => {
