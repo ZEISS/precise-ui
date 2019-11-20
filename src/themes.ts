@@ -145,4 +145,5 @@ export const light: PreciseFullTheme = {
   notificationTextFontSize: remCalc('16px'),
   notificationTextLineHeight: `22px`,
   notificationIconMarginRight: distance.medium,
+  highlightColor: colors.brightLemon,
 };

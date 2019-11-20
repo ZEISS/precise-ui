@@ -33,6 +33,7 @@
 - [x] Grid
 - [x] Grid Area
 - [x] Headline
+- [x] Highlight
 - [x] Icon
 - [x] Icon Link
 - [x] Image
