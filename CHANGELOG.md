@@ -12,6 +12,7 @@
 - Fixed `Autocomplete` that blocked `InteractiveList` automatic position determination
 - Fixed `InteractiveList` position in `Autocomplete` component
 - Replaced `forEach` with `Array.from` in `ContentSwitchInt` to fix displaying content switch for IE 11
+- Fixed(Blocker): Closing modal when using scrollbars (#203)
 
 ## 0.8.2
 
