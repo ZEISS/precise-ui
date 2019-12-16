@@ -51,4 +51,10 @@ describe('<Highlight />', () => {
     expect(wrapper.children()).toHaveLength(1);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render <Highlight> matching the indices', () => {
+    const wrapper = shallow(<Highlight text="Hello World! Searching for World!" matches={[[1, 3], [6, 12]]} />);
+    expect(wrapper.children()).toHaveLength(5);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
