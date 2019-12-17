@@ -27,6 +27,35 @@ const Highlighted = styled.span`
 `;
 
 /**
+ * Validates that the matches provided are valid, if not it will throw an error
+ *
+ * @param matches
+ */
+function validateMatches(matches: Array<Array<number>>) {
+  let lastMatch = -1;
+
+  matches.forEach(match => {
+    if (!Array.isArray(match) || match.length !== 2) {
+      throw Error('match must be an Array of [start, end]');
+    }
+
+    if (!Number.isInteger(match[0]) || !Number.isInteger(match[1]) || match[0] < 0 || match[1] < 0) {
+      throw Error('match [start] and [end] must be a positive integers.');
+    }
+
+    if (match[0] >= match[1]) {
+      throw Error('[start] must be lower than [end].');
+    }
+
+    if (match[0] <= lastMatch) {
+      throw Error('match indices cannot overlap.');
+    }
+
+    lastMatch = match[1];
+  });
+}
+
+/**
  * Highlight component is meant to be a simple component to display text with highlighted search.
  * Component will render a SPAN or series of SPAN with the content and highlights
  */
@@ -36,24 +65,9 @@ export const Highlight: React.FC<HighlightProps> = ({ text, matches, highlight, 
   }
 
   if (matches) {
-    let lastMatch = 0;
-    matches.forEach(match => {
-      if (
-        !Array.isArray(match) ||
-        match.length !== 2 ||
-        !Number.isInteger(match[0]) ||
-        !Number.isInteger(match[1]) ||
-        match[0] >= match[1] ||
-        match[0] <= lastMatch
-      ) {
-        throw Error(
-          'A match must be an array of [start, end], where start and end are positive integers, start is lower than end and the indices cannot overlap.',
-        );
-      }
-      lastMatch = match[1];
-    });
+    validateMatches(matches);
 
-    lastMatch = 0;
+    let lastMatch = 0;
     return (
       <>
         {matches.map((match, i) => {
