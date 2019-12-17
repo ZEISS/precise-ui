@@ -13,6 +13,7 @@ export interface HighlightProps extends StandardProps {
   highlight?: string;
   /**
    * Array that defines the indices to highlight, each element is an array of [start, end]
+   * In case this is procided then highlight will be ignored.
    */
   matches?: Array<Array<number>>;
   /**
@@ -30,12 +31,29 @@ const Highlighted = styled.span`
  * Component will render a SPAN or series of SPAN with the content and highlights
  */
 export const Highlight: React.FC<HighlightProps> = ({ text, matches, highlight, ignoreCase = true, theme }) => {
-  if (!matches && !highlight) {
+  if (!matches && undefined === highlight) {
     throw new Error('You must set either indices or highlight');
   }
 
   if (matches) {
     let lastMatch = 0;
+    matches.forEach(match => {
+      if (
+        !Array.isArray(match) ||
+        match.length !== 2 ||
+        !Number.isInteger(match[0]) ||
+        !Number.isInteger(match[1]) ||
+        match[0] >= match[1] ||
+        match[0] <= lastMatch
+      ) {
+        throw Error(
+          'A match must be an array of [start, end], where start and end are positive integers, start is lower than end and the indices cannot overlap.',
+        );
+      }
+      lastMatch = match[1];
+    });
+
+    lastMatch = 0;
     return (
       <>
         {matches.map((match, i) => {
