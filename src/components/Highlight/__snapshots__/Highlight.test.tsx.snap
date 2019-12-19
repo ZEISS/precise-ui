@@ -10,6 +10,26 @@ exports[`<Highlight /> should render <Highlight> a single span if no match 1`] =
 </Fragment>
 `;
 
+exports[`<Highlight /> should render <Highlight> matching the indices 1`] = `
+<Fragment>
+  <span>
+    H
+  </span>
+  <styled.span>
+    el
+  </styled.span>
+  <span>
+    lo 
+  </span>
+  <styled.span>
+    World!
+  </styled.span>
+  <span>
+     Searching for World!
+  </span>
+</Fragment>
+`;
+
 exports[`<Highlight /> should render <Highlight> should escape \\ 1`] = `
 <Fragment>
   <span
