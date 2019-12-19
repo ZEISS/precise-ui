@@ -34,9 +34,9 @@ const Highlighted = styled.span`
 function validateMatches(matches: Array<Array<number>>) {
   let lastMatch = -1;
 
-    if (!Array.isArray(matches)) {
-      throw Error(`match must be an Array of [start, end], but provided ${JSON.stringify(matches)}`);
-    }
+  if (!Array.isArray(matches)) {
+    throw Error(`match must be an Array of [start, end], but provided ${JSON.stringify(matches)}`);
+  }
 
   matches.forEach(match => {
     if (!Array.isArray(match) || match.length !== 2) {
