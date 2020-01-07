@@ -73,6 +73,10 @@ const AutocompleteWrapper = styled.div`
   position: relative;
 `;
 
+const StyledInteractiveList = styled(InteractiveList)`
+  position: static;
+`;
+
 interface StyledAutosuggestWrapperProps {
   direction: InteractiveListDirection;
 }
@@ -93,7 +97,7 @@ const StyledAutosuggestWrapper = styled.ul<StyledAutosuggestWrapperProps>(
         : 'border-bottom-color: transparent'};
       max-height: 50vh;
       position: absolute;
-      top: ${direction === InteractiveListDirection.normal ? '0' : '-100%'};
+      top: ${direction === InteractiveListDirection.normal ? '100%' : '0px'};
       transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
       overflow-y: auto;
       z-index: 100;
@@ -181,7 +185,20 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       this._element.focus();
     }
 
-    suggestionSelected ? this.hide() : this.show();
+    const hide = () => {
+      this.hide();
+      /*
+        On IE11 the focus event from this._element.focus(); triggers after this.hide() and so the suggestion list opens again after hiding it.
+        If we call this.hide() again with a timeout, it works also for IE11.
+      */
+      setTimeout(() => {
+        if (this.state.open) {
+          this.hide();
+        }
+      });
+    };
+
+    suggestionSelected ? hide() : this.show();
 
     if (typeof onChange === 'function') {
       onChange({
@@ -307,41 +324,33 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       ...props
     } = this.props;
     const { open, listFocus, value, error } = this.state;
-
+    const isListOpen = open && (!!suggestions.length || !!noSuggestionsMessage);
     return (
       <div onKeyDown={this.handleKeyDown} onFocus={this.handleFocus} onBlur={this.handleBlur}>
         <AutocompleteWrapper>
           {inputRenderer({
             ...props,
-            info: open && (suggestions.length || noSuggestionsMessage) ? undefined : info,
+            info: isListOpen ? undefined : info,
             onChange: this.changed,
             clearable: true,
             inputRef: this.setNode,
             value: value,
             error: error,
           })}
-
-          {open &&
-            (suggestions.length || noSuggestionsMessage ? (
-              <div>
-                <InteractiveList
-                  data={
-                    suggestions.length
-                      ? suggestions.map(renderSuggestion)
-                      : [{ key: 'default', content: noSuggestionsMessage }]
-                  }
-                  disabled={suggestions.length === 0}
-                  customWrapper={AutosuggestWrapper}
-                  focus={listFocus}
-                  onChange={this.handleListChange}
-                  autoPosition
-                  open
-                />
-                {!!info && <div>{info}</div>}
-              </div>
-            ) : (
-              undefined
-            ))}
+          <StyledInteractiveList
+            data={
+              suggestions.length
+                ? suggestions.map(renderSuggestion)
+                : [{ key: 'default', content: noSuggestionsMessage }]
+            }
+            disabled={suggestions.length === 0}
+            customWrapper={AutosuggestWrapper}
+            focus={listFocus}
+            onChange={this.handleListChange}
+            autoPosition
+            open={isListOpen}
+          />
+          {isListOpen && info && <div>{info}</div>}
         </AutocompleteWrapper>
       </div>
     );

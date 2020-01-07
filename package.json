@@ -11,7 +11,7 @@
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --project tsconfig.json",
     "test": "npm run lint && npm run test:unit",
     "test:visual": "jest -c integration/jest.config.js --noStackTrace --runInBand",
-    "test:unit": "cross-env NODE_ENV=test jest src",
+    "test:unit": "cross-env NODE_ENV=test jest",
     "test:watch": "npm run test:unit -- --watch",
     "prettier": "prettier --config prettier.config.js --write 'src/**/*.{ts,tsx}'",
     "build": "rimraf dist && npm run build:bundle && npm run build:es5 && npm run build:es6",

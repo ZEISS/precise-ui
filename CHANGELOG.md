@@ -4,6 +4,15 @@
 
 - `Skeleton` component added
 - Added onBeforeClose event to Modal
+- Added appendTagOnBlur prop to TagBuilder
+- Added onSort callback to Table
+- Fixed(Tag): Theming of tag component (#190)
+- Allow themeing of icon of notification component
+- Fixed: Integration tests are always executed if repository is stored in a location with `src` in it's path
+- Fixed `Autocomplete` that blocked `InteractiveList` automatic position determination
+- Fixed `InteractiveList` position in `Autocomplete` component
+- Replaced `forEach` with `Array.from` in `ContentSwitchInt` to fix displaying content switch for IE 11
+- Fixed(Blocker): Closing modal when using scrollbars (#203)
 
 ## 0.8.2
 
@@ -12,6 +21,7 @@
 - Fixed truncation of long text in the `InteractiveList` for IE 11
 - Fixed regular expression for Babel in Webpack
 - Fixed Datepicker controlled mode issues
+- Fixed hiding suggestion list of `Autocomplete` after selection for IE 11
 
 ## 0.8.1
 
