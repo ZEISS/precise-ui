@@ -13,6 +13,7 @@
 - Fixed `InteractiveList` position in `Autocomplete` component
 - Replaced `forEach` with `Array.from` in `ContentSwitchInt` to fix displaying content switch for IE 11
 - Fixed(Blocker): Closing modal when using scrollbars (#203)
+- Fixed: DropdownMenu list has no width when expanded on IE11 (#201)
 
 ## 0.8.2
 
