@@ -14,6 +14,7 @@
 - Replaced `forEach` with `Array.from` in `ContentSwitchInt` to fix displaying content switch for IE 11
 - Fixed(Blocker): Closing modal when using scrollbars (#203)
 - Fixed: DropdownMenu list has no width when expanded on IE11 (#201)
+- Fix(Accordion): header strips spaces when html tags are used
 
 ## 0.8.2
 
@@ -33,7 +34,7 @@
 ## 0.8.0
 
 - Implement new breakpoints and screen sizes
-- Removed `SASS` support 
+- Removed `SASS` support
 - Fixed: Modal closes on drag and release cursor outside modal (#152)
 - Improved `Responsive` component to avoid using of combined screen sizes
 - Fixed(DateField): Use valid date format as a default  - `yyyy-MM-dd` instead of `dd-MM-yyyy`
@@ -48,7 +49,7 @@
 - Fixed horizontal padding for InputInfo and InputError
 - Hide info element on open Autocomplete list
 - Fixed overview pagination elements' layout in IE 11
-- Fixed display of label, placeholder and info on AutocompleteTagBuilder 
+- Fixed display of label, placeholder and info on AutocompleteTagBuilder
 - Fixed toaster action click area
 - Fixed two cross(clear) buttons displayed inside TextField in IE 11
 - Fixed `Styled Input Box` flex layout for IE 11
