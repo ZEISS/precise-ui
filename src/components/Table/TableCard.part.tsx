@@ -3,7 +3,7 @@ import styled, { themed, css } from '../../utils/styled';
 import { List } from '../List';
 import { ListItem } from '../ListItem';
 import { TableProps, TableCardRendererEvent, TableBodyRenderEvent } from './Table.types.part';
-import { defaultCellRenderer } from './TableShared.part';
+import { defaultCellRenderer, handleDataClickedEvent } from './TableShared.part';
 import { distance } from '../../distance';
 import { getFontStyle } from '../../textStyles';
 
@@ -92,7 +92,7 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
   }
 
   private renderItemProps(item: T, rowIndex: number, keys: Array<string>) {
-    const { columns, cellRenderer = defaultCellRenderer } = this.props;
+    const { columns, cellRenderer = defaultCellRenderer, data, onDataClick } = this.props;
 
     return keys
       .map((key, colIndex) => {
@@ -110,7 +110,12 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
           });
 
           return (
-            <PropContainer key={colIndex} onClick={e => this.dataClicked(e, rowIndex, colIndex, key)}>
+            <PropContainer
+              key={colIndex}
+              onClick={handleDataClickedEvent(
+                { row: rowIndex, column: colIndex, key, data: data[rowIndex] },
+                onDataClick,
+              )}>
               <PropName>{propKey}</PropName>
               <PropValue>{value}</PropValue>
             </PropContainer>
@@ -120,22 +125,6 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
         return undefined;
       })
       .filter(m => !!m);
-  }
-
-  private dataClicked(e: React.MouseEvent<HTMLDivElement>, row: number, column: number, key: string) {
-    const { onDataClick, data } = this.props;
-    e.preventDefault();
-
-    if (typeof onDataClick === 'function') {
-      const rowData = data[row];
-      onDataClick({
-        row,
-        column,
-        key,
-        data: rowData,
-        value: rowData && (column === -1 ? row + 1 : rowData[key]),
-      });
-    }
   }
 
   render() {

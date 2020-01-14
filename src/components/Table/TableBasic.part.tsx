@@ -15,6 +15,7 @@ import {
   defaultBodyRenderer,
   getColumns,
   getDefaultHeaderCellRenderer,
+  handleDataClickedEvent,
 } from './TableShared.part';
 
 import { getFontStyle } from '../../textStyles';
@@ -341,16 +342,19 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
   };
 
   private renderCells(keys: Array<string>, rowIndex: number) {
-    const { data = [], cellRenderer = defaultCellRenderer, indexed, theme, columns } = this.props;
+    const { data = [], cellRenderer = defaultCellRenderer, indexed, theme, columns, onDataClick } = this.props;
     const cols = getColumns(data, columns);
+    const row = data[rowIndex];
     const cells = keys.map((key, cell) => {
       const column = cols[key];
       const hidden = typeof column !== 'string' && column.hidden;
 
       if (!hidden) {
-        const row = data[rowIndex];
         return (
-          <StyledTableCell key={key} onClick={e => this.dataClicked(e, rowIndex, cell, key)} theme={theme}>
+          <StyledTableCell
+            key={key}
+            onClick={handleDataClickedEvent({ row: rowIndex, column: cell, key, data: row }, onDataClick)}
+            theme={theme}>
             {cellRenderer({
               column: cell,
               key,
@@ -368,7 +372,10 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
 
     if (indexed) {
       cells.unshift(
-        <StyledTableCell key="index#" onClick={e => this.dataClicked(e, rowIndex, -1, '__indexed')} theme={theme}>
+        <StyledTableCell
+          key="index#"
+          onClick={handleDataClickedEvent({ row: rowIndex, column: -1, key: '__indexed', data: row }, onDataClick)}
+          theme={theme}>
           {rowIndex + 1}
         </StyledTableCell>,
       );
