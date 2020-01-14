@@ -127,13 +127,13 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
     e.preventDefault();
 
     if (typeof onDataClick === 'function') {
-      const d = data[row];
+      const rowData = data[row];
       onDataClick({
         row,
         column,
         key,
-        data: d,
-        value: d && (column === -1 ? row + 1 : d[key]),
+        data: rowData,
+        value: rowData && (column === -1 ? row + 1 : rowData[key]),
       });
     }
   }
