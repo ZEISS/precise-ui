@@ -13,6 +13,7 @@
 - Fixed `InteractiveList` position in `Autocomplete` component
 - Replaced `forEach` with `Array.from` in `ContentSwitchInt` to fix displaying content switch for IE 11
 - Fixed(Blocker): Closing modal when using scrollbars (#203)
+- Fixed missing onDataClick handler for Table component in mobile view (#214)
 
 ## 0.8.2
 
