@@ -42,6 +42,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  white-space: pre-wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -273,6 +274,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -556,6 +558,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -839,6 +842,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -1122,6 +1126,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -1352,6 +1357,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  white-space: pre-wrap;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1603,6 +1609,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -1886,6 +1893,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -2269,6 +2277,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
