@@ -110,7 +110,7 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
           });
 
           return (
-            <PropContainer key={colIndex}>
+            <PropContainer key={colIndex} onClick={e => this.dataClicked(e, rowIndex, colIndex, key)}>
               <PropName>{propKey}</PropName>
               <PropValue>{value}</PropValue>
             </PropContainer>
@@ -120,6 +120,22 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
         return undefined;
       })
       .filter(m => !!m);
+  }
+
+  private dataClicked(e: React.MouseEvent<HTMLDivElement>, row: number, column: number, key: string) {
+    const { onDataClick, data } = this.props;
+    e.preventDefault();
+
+    if (typeof onDataClick === 'function') {
+      const d = data[row];
+      onDataClick({
+        row,
+        column,
+        key,
+        data: d,
+        value: d && (column === -1 ? row + 1 : d[key]),
+      });
+    }
   }
 
   render() {
