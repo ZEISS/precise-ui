@@ -199,4 +199,119 @@ describe('<Table />', () => {
       });
     });
   });
+
+  describe('onDataClick', () => {
+    let wrapper: ReturnType<typeof enzyme.mount>;
+    const onDataClickCallback = jest.fn();
+
+    beforeAll(() => {
+      wrapper = enzyme.mount(
+        <Table mode="table" data={[{ a: 1, b: 3, c: 5 }, { a: 2, b: 4, c: 8 }]} onDataClick={onDataClickCallback} />,
+      );
+    });
+
+    beforeEach(() => {
+      wrapper.setProps({ mode: 'table' });
+    });
+
+    it('should trigger onDataClick handler when clicking data', () => {
+      wrapper.find('td').forEach(td => td.simulate('click'));
+
+      expect(onDataClickCallback).toHaveBeenCalledTimes(6);
+
+      wrapper.setProps({ indexed: true });
+      wrapper.find('td').forEach(td => td.simulate('click'));
+
+      expect(onDataClickCallback).toHaveBeenCalledTimes(14);
+
+      wrapper.setProps({ mode: 'card' });
+      wrapper.find('PropContainer').forEach(propContainer => propContainer.simulate('click'));
+
+      expect(onDataClickCallback).toHaveBeenCalledTimes(20);
+    });
+
+    it('should trigger onDataClick handler with params when clicking data', () => {
+      wrapper
+        .find('td')
+        .at(0)
+        .simulate('click');
+
+      expect(onDataClickCallback).toHaveBeenCalledWith({
+        row: 0,
+        column: 0,
+        key: 'a',
+        data: { a: 1, b: 3, c: 5 },
+        value: 1,
+      });
+
+      wrapper
+        .find('td')
+        .at(4)
+        .simulate('click');
+
+      expect(onDataClickCallback).toHaveBeenCalledWith({
+        row: 1,
+        column: 1,
+        key: 'b',
+        data: { a: 2, b: 4, c: 8 },
+        value: 4,
+      });
+
+      wrapper.setProps({ indexed: true });
+
+      wrapper
+        .find('td')
+        .at(0)
+        .simulate('click');
+
+      expect(onDataClickCallback).toHaveBeenCalledWith({
+        row: 0,
+        column: -1,
+        key: '__indexed',
+        data: { a: 1, b: 3, c: 5 },
+        value: 1,
+      });
+
+      wrapper
+        .find('td')
+        .at(4)
+        .simulate('click');
+
+      expect(onDataClickCallback).toHaveBeenCalledWith({
+        row: 1,
+        column: -1,
+        key: '__indexed',
+        data: { a: 2, b: 4, c: 8 },
+        value: 2,
+      });
+
+      wrapper.setProps({ mode: 'card' });
+
+      wrapper
+        .find('PropContainer')
+        .at(1)
+        .simulate('click');
+
+      expect(onDataClickCallback).toHaveBeenCalledWith({
+        row: 0,
+        column: 1,
+        key: 'b',
+        data: { a: 1, b: 3, c: 5 },
+        value: 3,
+      });
+
+      wrapper
+        .find('PropContainer')
+        .at(5)
+        .simulate('click');
+
+      expect(onDataClickCallback).toHaveBeenCalledWith({
+        row: 1,
+        column: 2,
+        key: 'c',
+        data: { a: 2, b: 4, c: 8 },
+        value: 8,
+      });
+    });
+  });
 });

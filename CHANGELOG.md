@@ -14,6 +14,7 @@
 - Replaced `forEach` with `Array.from` in `ContentSwitchInt` to fix displaying content switch for IE 11
 - Fixed(Blocker): Closing modal when using scrollbars (#203)
 - Fix(Accordion): header strips spaces when html tags are used
+- Fixed missing onDataClick handler for Table component in mobile view (#214)
 
 ## 0.8.2
 
