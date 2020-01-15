@@ -3,8 +3,6 @@ import * as enzyme from 'enzyme';
 import { Table } from './';
 import { TableBasic } from './TableBasic.part';
 import { TableCard } from './TableCard.part';
-import { Simulate } from 'react-dom/test-utils';
-import click = Simulate.click;
 
 describe('<Table />', () => {
   it('should render an empty <Table> component', () => {
