@@ -195,22 +195,6 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     }
   }
 
-  private dataClicked(e: React.MouseEvent<HTMLTableCellElement>, row: number, column: number, key: string) {
-    const { onDataClick, data } = this.props;
-    e.preventDefault();
-
-    if (typeof onDataClick === 'function') {
-      const d = data[row];
-      onDataClick({
-        row,
-        column,
-        key,
-        data: d,
-        value: d && (column === -1 ? row + 1 : d[key]),
-      });
-    }
-  }
-
   private defaultHeadRenderer = ({ columns, sortBy, keys }: TableSectionRenderEvent<T>) => {
     const { onSort } = this.props;
 

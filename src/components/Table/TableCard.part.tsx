@@ -31,6 +31,8 @@ const PropContainer = styled.div`
   }
 `;
 
+PropContainer.displayName = 'PropContainer';
+
 const PropName = styled.div`
   ${getFontStyle({ size: 'xSmall' })}
 `;
