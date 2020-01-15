@@ -3,6 +3,8 @@ import * as enzyme from 'enzyme';
 import { Table } from './';
 import { TableBasic } from './TableBasic.part';
 import { TableCard } from './TableCard.part';
+import { Simulate } from 'react-dom/test-utils';
+import click = Simulate.click;
 
 describe('<Table />', () => {
   it('should render an empty <Table> component', () => {
@@ -196,6 +198,87 @@ describe('<Table />', () => {
         column: 0,
         key: 'c',
         order: 'ascending',
+      });
+    });
+  });
+
+  describe('onDataClick', () => {
+    it('should trigger onDataClick handler when clicking data', () => {
+      const onDataClickCallback = jest.fn();
+      const onDataClickMobileCallback = jest.fn();
+      const wrapper = enzyme.mount(
+        <Table data={[{ a: 1, b: 3, c: 5 }, { a: 2, b: 4, c: 8 }]} onDataClick={onDataClickCallback} />,
+      );
+      const wrapperMobileView = enzyme.mount(
+        <Table
+          mode="card"
+          data={[{ a: 1, b: 3, c: 5 }, { a: 2, b: 4, c: 8 }]}
+          onDataClick={onDataClickMobileCallback}
+        />,
+      );
+
+      wrapper.find('td').forEach(td => td.simulate('click'));
+      expect(onDataClickCallback).toHaveBeenCalledTimes(6);
+
+      wrapperMobileView
+        .find('div')
+        .filterWhere(item => typeof item.prop('onClick') === 'function')
+        .forEach(item => item.simulate('click'));
+
+      expect(onDataClickMobileCallback).toHaveBeenCalledTimes(6);
+    });
+
+    it('should trigger onDataClick handler with params', () => {
+      const onDataClickCallback = jest.fn();
+      const wrapperNormalView = enzyme.mount(
+        <Table data={[{ a: 1, b: 3, c: 5 }, { a: 2, b: 4, c: 8 }]} onDataClick={onDataClickCallback} />,
+      );
+      const wrapperMobileView = enzyme.mount(
+        <Table mode="card" data={[{ a: 1, b: 3, c: 5 }, { a: 2, b: 4, c: 8 }]} onDataClick={onDataClickCallback} />,
+      );
+      const testItems = wrapperNormalView.find('td');
+      const mobileTestItems = wrapperMobileView
+        .find('div')
+        .filterWhere(item => typeof item.prop('onClick') === 'function');
+
+      testItems.at(0).simulate('click');
+
+      expect(onDataClickCallback).toHaveBeenCalledWith({
+        row: 0,
+        column: 0,
+        key: 'a',
+        data: { a: 1, b: 3, c: 5 },
+        value: 1,
+      });
+
+      testItems.at(4).simulate('click');
+
+      expect(onDataClickCallback).toHaveBeenCalledWith({
+        row: 1,
+        column: 1,
+        key: 'b',
+        data: { a: 2, b: 4, c: 8 },
+        value: 4,
+      });
+
+      mobileTestItems.at(1).simulate('click');
+
+      expect(onDataClickCallback).toHaveBeenCalledWith({
+        row: 0,
+        column: 1,
+        key: 'b',
+        data: { a: 1, b: 3, c: 5 },
+        value: 3,
+      });
+
+      mobileTestItems.at(5).simulate('click');
+
+      expect(onDataClickCallback).toHaveBeenCalledWith({
+        row: 1,
+        column: 2,
+        key: 'c',
+        data: { a: 2, b: 4, c: 8 },
+        value: 8,
       });
     });
   });
