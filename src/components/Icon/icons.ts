@@ -62,6 +62,17 @@ export const Announcement = <SvgIconConstructor>function(props: SvgIconProps) {
 Announcement.displayName = 'Announcement';
 Announcement.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Bookmark = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', { d: 'M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z' }),
+  );
+};
+
+Bookmark.displayName = 'Bookmark';
+Bookmark.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Book = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -75,16 +86,19 @@ export const Book = <SvgIconConstructor>function(props: SvgIconProps) {
 Book.displayName = 'Book';
 Book.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Bookmark = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Build = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
-    React.createElement('path', { d: 'M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z' }),
+    React.createElement('path', {
+      d:
+        'M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z',
+    }),
   );
 };
 
-Bookmark.displayName = 'Bookmark';
-Bookmark.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+Build.displayName = 'Build';
+Build.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Cached = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -499,6 +513,17 @@ export const VerifiedUser = <SvgIconConstructor>function(props: SvgIconProps) {
 VerifiedUser.displayName = 'VerifiedUser';
 VerifiedUser.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const ViewCarousel = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', { d: 'M7 19h10V4H7v15zm-5-2h4V6H2v11zM18 6v11h4V6h-4z' }),
+  );
+};
+
+ViewCarousel.displayName = 'ViewCarousel';
+ViewCarousel.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const ViewColumn = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -609,6 +634,20 @@ export const Email = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Email.displayName = 'Email';
 Email.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const MailOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z',
+    }),
+  );
+};
+
+MailOutline.displayName = 'MailOutline';
+MailOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Phone = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
