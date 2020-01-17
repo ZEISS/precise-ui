@@ -334,6 +334,20 @@ export const Label = <SvgIconConstructor>function(props: SvgIconProps) {
 Label.displayName = 'Label';
 Label.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const LabelOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16zM16 17H5V7h11l3.55 5L16 17z',
+    }),
+  );
+};
+
+LabelOutline.displayName = 'LabelOutline';
+LabelOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Language = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -787,6 +801,20 @@ export const Sort = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Sort.displayName = 'Sort';
 Sort.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Unarchive = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M20.55 5.22l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.15.55L3.46 5.22C3.17 5.57 3 6.01 3 6.5V19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.49-.17-.93-.45-1.28zM12 9.5l5.5 5.5H14v2h-4v-2H6.5L12 9.5zM5.12 5l.82-1h12l.93 1H5.12z',
+    }),
+  );
+};
+
+Unarchive.displayName = 'Unarchive';
+Unarchive.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const LocationSearching = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(

@@ -1080,6 +1080,24 @@ exports[`Generated icons should render Label icon 1`] = `
 </Label>
 `;
 
+exports[`Generated icons should render LabelOutline icon 1`] = `
+<LabelOutline
+  height="12"
+  viewBox="0 0 24 24"
+  width="12"
+>
+  <svg
+    height="12"
+    viewBox="0 0 24 24"
+    width="12"
+  >
+    <path
+      d="M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16zM16 17H5V7h11l3.55 5L16 17z"
+    />
+  </svg>
+</LabelOutline>
+`;
+
 exports[`Generated icons should render Language icon 1`] = `
 <Language
   height="12"
@@ -1744,6 +1762,24 @@ exports[`Generated icons should render ThumbUp icon 1`] = `
     />
   </svg>
 </ThumbUp>
+`;
+
+exports[`Generated icons should render Unarchive icon 1`] = `
+<Unarchive
+  height="12"
+  viewBox="0 0 24 24"
+  width="12"
+>
+  <svg
+    height="12"
+    viewBox="0 0 24 24"
+    width="12"
+  >
+    <path
+      d="M20.55 5.22l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.15.55L3.46 5.22C3.17 5.57 3 6.01 3 6.5V19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.49-.17-.93-.45-1.28zM12 9.5l5.5 5.5H14v2h-4v-2H6.5L12 9.5zM5.12 5l.82-1h12l.93 1H5.12z"
+    />
+  </svg>
+</Unarchive>
 `;
 
 exports[`Generated icons should render UnfoldLess icon 1`] = `
