@@ -140,7 +140,7 @@ const { Form, Button, TextField } = require('precise-ui');
 <Form 
   onSubmit={e => alert(JSON.stringify(e))} 
   validationRules={{
-    first: (value) => value && value > 10 ? 'Should be less than 10' : undefined,
+    first: (value) => value && value.length > 10 ? 'Should be less than 10' : undefined,
     last: () => 'Always some error',
   }}>
   <div>
