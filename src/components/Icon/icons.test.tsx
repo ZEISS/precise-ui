@@ -667,5 +667,22 @@ describe('Generated icons', () => {
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render FitToWidth icon', () => {
+    const Component = icons.FitToWidth;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render FitToHeight icon', () => {
+    const Component = icons.FitToHeight;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Page icon', () => {
+    const Component = icons.Page;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
-  
