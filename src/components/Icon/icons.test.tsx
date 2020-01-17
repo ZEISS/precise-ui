@@ -152,6 +152,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render LabelOutline icon', () => {
+    const Component = icons.LabelOutline;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Language icon', () => {
     const Component = icons.Language;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -364,6 +370,12 @@ describe('Generated icons', () => {
 
   it('should render Sort icon', () => {
     const Component = icons.Sort;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Unarchive icon', () => {
+    const Component = icons.Unarchive;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
