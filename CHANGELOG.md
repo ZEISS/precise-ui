@@ -16,6 +16,7 @@
 - Fix(Accordion): header strips spaces when html tags are used
 - Fixed missing onDataClick handler for Table component in mobile view (#214)
 - Add Material Icons: 'Build', 'ViewCarousel', 'MailOutline', 'LabelOutline', 'Unarchive'
+- Fix opening `UploaderProgressDetails` in front of 'parent' modal in IE (#225)
 
 ## 0.8.2
 
