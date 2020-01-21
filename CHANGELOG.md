@@ -18,6 +18,7 @@
 - Fixed missing onDataClick handler for Table component in mobile view (#214)
 - Add Material Icons: 'Build', 'ViewCarousel', 'MailOutline', 'LabelOutline', 'Unarchive'
 - Add new Icons to match design system
+- Remove refocus of component(Autocomplete) on every value change, remove corresponding test
 
 ## 0.8.2
 
