@@ -13,9 +13,11 @@
 - Fixed `InteractiveList` position in `Autocomplete` component
 - Replaced `forEach` with `Array.from` in `ContentSwitchInt` to fix displaying content switch for IE 11
 - Fixed(Blocker): Closing modal when using scrollbars (#203)
+- Fixed: DropdownMenu list has no width when expanded on IE11 (#201)
 - Fix(Accordion): header strips spaces when html tags are used
 - Fixed missing onDataClick handler for Table component in mobile view (#214)
 - Add Material Icons: 'Build', 'ViewCarousel', 'MailOutline', 'LabelOutline', 'Unarchive'
+- Add new Icons to match design system
 - Fix opening `UploaderProgressDetails` in front of 'parent' modal in IE (#225)
 
 ## 0.8.2

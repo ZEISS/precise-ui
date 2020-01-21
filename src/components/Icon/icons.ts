@@ -1153,7 +1153,9 @@ export const Fullscreen = <SvgIconConstructor>function(props: SvgIconProps) {
     'svg',
     props,
     React.createElement('path', {
-      d: 'M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z',
+      transform: 'translate(11.919596, 11.919596) rotate(-45.000000) translate(-11.919596, -11.919596)',
+      d:
+        'M7.11159595,12.7195959 L7.11159595,15.1195959 L3.91959595,11.9195959 L7.11159595,8.71959595 L7.11159595,11.1195959 L16.7275959,11.1195959 L16.7275959,8.71959595 L19.9195959,11.9195959 L16.7275959,15.1195959 L16.7275959,12.7195959 L7.11159595,12.7195959 Z',
     }),
   );
 };
@@ -1165,7 +1167,11 @@ export const FullscreenExit = <SvgIconConstructor>function(props: SvgIconProps) 
   return React.createElement(
     'svg',
     props,
-    React.createElement('path', { d: 'M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z' }),
+    React.createElement('path', {
+      transform: 'translate(12.220116, 12.220116) rotate(-45.000000) translate(-12.220116, -12.220116)',
+      d:
+        'M8.85261633,11.4701163 L3.59511633,11.4701163 L3.59511633,12.9701163 L8.85261633,12.9701163 L8.85261633,15.2201163 L11.8451163,12.2201163 L8.85261633,9.22011633 L8.85261633,11.4701163 L8.85261633,11.4701163 Z M15.5876163,15.2201163 L15.5876163,12.9701163 L20.8451163,12.9701163 L20.8451163,11.4701163 L15.5876163,11.4701163 L15.5876163,9.22011633 L12.5951163,12.2201163 L15.5876163,15.2201163 L15.5876163,15.2201163 Z',
+    }),
   );
 };
 
@@ -1431,3 +1437,45 @@ export const Star = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Star.displayName = 'Star';
 Star.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const FitToWidth = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M14,4 L18.8,8.8 L18.8,18.4 C18.8,19.28 18.08,20 17.2,20 L17.2,20 L7.592,20 C6.712,20 6,19.28 6,18.4 L6,18.4 L6,5.6 C6,4.72 6.72,4 7.6,4 L7.6,4 L14,4 Z M8.68968421,10.6666667 L6.67368421,12.6666667 L8.68968421,14.6666667 L8.68968421,13.1666667 L11.5578947,13.1666667 L11.5578947,12.1666667 L8.68968421,12.1666667 L8.68968421,10.6666667 Z M16.2787368,10.6666667 L16.2787368,12.1666667 L13.4105263,12.1666667 L13.4105263,13.1666667 L16.2787368,13.1666667 L16.2787368,14.6666667 L18.2947368,12.6666667 L16.2787368,10.6666667 Z',
+    }),
+  );
+};
+
+FitToWidth.displayName = 'FitToWidth';
+FitToWidth.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const FitToHeight = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M14,4 L18.8,8.8 L18.8,18.4 C18.8,19.28 18.08,20 17.2,20 L17.2,20 L7.592,20 C6.712,20 6,19.28 6,18.4 L6,18.4 L6,5.6 C6,4.72 6.72,4 7.6,4 L7.6,4 L14,4 Z M12.8,13.3333333 L11.8,13.3333333 L11.8,16.8383333 L10.3,16.8383333 L12.3,18.8333333 L14.3,16.8383333 L12.8,16.8383333 L12.8,13.3333333 Z M12.3,5.33333333 L10.3,7.32833333 L11.8,7.32833333 L11.8,10.8333333 L12.8,10.8333333 L12.8,7.32833333 L14.3,7.32833333 L12.3,5.33333333 Z',
+    }),
+  );
+};
+
+FitToHeight.displayName = 'FitToHeight';
+FitToHeight.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Page = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M14,4 L7.6,4 C6.72,4 6,4.72 6,5.6 L6,18.4 C6,19.28 6.712,20 7.592,20 L17.2,20 C18.08,20 18.8,19.28 18.8,18.4 L18.8,8.8 L14,4 Z',
+    }),
+  );
+};
+
+Page.displayName = 'Page';
+Page.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
