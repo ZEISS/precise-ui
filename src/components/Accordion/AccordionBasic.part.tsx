@@ -62,6 +62,7 @@ const AccordionItemHeaderContainer = styled('div')<AccordionItemProps>`
 
 const AccordionItemHeader = styled.div`
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ${themed(({ theme }) => theme.accordionPadding)};
