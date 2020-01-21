@@ -28,12 +28,14 @@ deploy:
   - provider: npm
     email: $auth_email
     api_key: $auth_token
+    edge: true
     skip_cleanup: true
     on:
       branch: master
   - provider: npm
     email: $auth_email
     api_key: $auth_token
+    edge: true
     skip_cleanup: true
     tag: next
     on:
