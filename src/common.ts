@@ -361,6 +361,10 @@ export interface PreciseFullTheme extends PreciseThemeColors {
    * Specific AccordionCard theme settings.
    */
   accordionCard: AccordionCardStyling;
+  /**
+   * Color of highlighted text
+   */
+  highlightColor: string;
 }
 
 export type PreciseTheme = { [T in keyof PreciseFullTheme]?: Partial<PreciseFullTheme[T]> };

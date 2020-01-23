@@ -45,13 +45,15 @@ const StyledList = styled.ul<ListProps>`
  * General purpose list component which can be used for rendering list items.
  */
 export const List: React.SFC<ListProps> = ({ disablePadding, borderless, children, activeItem, ...props }) => {
-  const listItems = React.Children.map(children, (child: React.ReactElement<any>, index) =>
-    React.cloneElement(child, {
-      ...(disablePadding !== undefined ? { disablePadding } : undefined),
-      ...(borderless !== undefined ? { border: !borderless } : undefined),
-      ...child.props,
-      ...(activeItem !== undefined ? { active: index === activeItem } : {}),
-    }),
+  const listItems = React.Children.map(children, (child, index) =>
+    React.isValidElement(child)
+      ? React.cloneElement(child, {
+          ...(disablePadding !== undefined ? { disablePadding } : undefined),
+          ...(borderless !== undefined ? { border: !borderless } : undefined),
+          ...child.props,
+          ...(activeItem !== undefined ? { active: index === activeItem } : {}),
+        })
+      : child,
   );
 
   return <StyledList {...props}>{listItems}</StyledList>;

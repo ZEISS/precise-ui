@@ -63,4 +63,10 @@ export interface DropdownFieldProps extends LabeledInputProps<string | Array<str
    * Allows to open dropdown immediately after initializing.
    */
   open?: boolean;
+
+  /**
+   * Disable specific options. Strings in this list have to match the strings used as `data` or the `key`
+   * fields if `InteractiveListItemObject` are used.
+   */
+  disabledItems?: Array<string>;
 }

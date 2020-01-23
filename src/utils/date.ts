@@ -76,6 +76,10 @@ export function parseDate(
   return isValid(parsedDate) && strictParsingValueMatch ? parsedDate : null;
 }
 
+export function getIsoDateFormat() {
+  return 'yyyy-MM-dd';
+}
+
 function getLocaleObject(localeSpec: string | Locale) {
   if (typeof localeSpec === 'string') {
     // Treat it as a locale name registered by registerLocale

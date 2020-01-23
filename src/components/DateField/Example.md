@@ -343,7 +343,7 @@ In `value` controlled mode
 const { DateField, StackPanel, StackItem, Button } = require('precise-ui');
 
 const Example = () => {
-  const [ value, setValue ] = React.useState('14-06-1988');
+  const [ value, setValue ] = React.useState(new Date().toISOString().slice(0, 10));
 
   return (
     <div>
@@ -453,4 +453,20 @@ const { DateField } = require('precise-ui');
   timeCaption="Time"
   onChange={(e) => console.log(e)}
 />
+```
+
+Version using withValidation HOC
+
+```jsx
+
+const { DateField, withValidation } = require('precise-ui');
+const MyDateField = withValidation(({ value }) => {
+  return (new Date(value) < new Date()  && "You need the date to be later than today")
+})(DateField);
+
+<MyDateField
+  onChange={(e) => console.log(e)}
+  placeholder="Shows an error when a date before than today is selected"
+/>
+
 ```

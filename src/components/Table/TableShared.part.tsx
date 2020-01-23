@@ -1,5 +1,12 @@
 import * as React from 'react';
-import { TableBodyRenderEvent, Column, TableColumns, TableCellRenderEvent } from './Table.types.part';
+import {
+  TableBodyRenderEvent,
+  Column,
+  TableColumns,
+  TableCellRenderEvent,
+  TableCellEvent,
+  TableProps,
+} from './Table.types.part';
 import styled, { themed, css } from '../../utils/styled';
 import { getFontStyle } from '../../textStyles';
 import { IncreaseDecrease } from '../IncreaseDecrease';
@@ -123,4 +130,18 @@ export function getColumns<T>(data: Array<T>, columns?: TableColumns) {
       return columns;
     }, {})
   );
+}
+
+export function handleDataClickedEvent<T>(tableCellEvent: TableCellEvent<T>, handler?: TableProps<T>['onDataClick']) {
+  return <E extends HTMLElement = HTMLElement>(e: React.MouseEvent<E>) => {
+    e.preventDefault();
+    const { row, column, key, data } = tableCellEvent;
+
+    if (typeof handler === 'function') {
+      handler({
+        ...tableCellEvent,
+        value: data && (column === -1 ? row + 1 : data[key]),
+      });
+    }
+  };
 }

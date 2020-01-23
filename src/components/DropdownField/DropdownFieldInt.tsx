@@ -338,7 +338,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
   };
 
   private renderList = (screenSize?: ScreenSize) => {
-    const { data = [], theme, disabled, multiple, direction } = this.props;
+    const { data = [], theme, disabled, multiple, direction, disabledItems } = this.props;
     const { open, value } = this.state;
     const mobile = screenSize === 'small';
     const wrapper = mobile ? getMobileWrapper(<StyledLabel>{this.props.label}</StyledLabel>) : StandardWrapper;
@@ -358,6 +358,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
         onClickOutside={() => {}}
         direction={direction}
         autoPosition={undefined === direction}
+        disabledItems={disabledItems}
         autoFocus
       />
     );
@@ -380,6 +381,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
       multiple,
       info,
       onChange,
+      disabledItems,
       ...other
     } = this.props;
     const { open: openState, value, error } = this.state;

@@ -1,5 +1,33 @@
 # Precise UI Changelog
 
+## 0.8.3
+
+- `Skeleton` component added
+- Added onBeforeClose event to Modal
+- Added appendTagOnBlur prop to TagBuilder
+- Added onSort callback to Table
+- Fixed(Tag): Theming of tag component (#190)
+- Allow themeing of icon of notification component
+- Fixed: Integration tests are always executed if repository is stored in a location with `src` in it's path
+- Fixed `Autocomplete` that blocked `InteractiveList` automatic position determination
+- Fixed `InteractiveList` position in `Autocomplete` component
+- Replaced `forEach` with `Array.from` in `ContentSwitchInt` to fix displaying content switch for IE 11
+- Fixed(Blocker): Closing modal when using scrollbars (#203)
+- Fixed: DropdownMenu list has no width when expanded on IE11 (#201)
+- Fix(Accordion): header strips spaces when html tags are used
+- Fixed missing onDataClick handler for Table component in mobile view (#214)
+- Add Material Icons: 'Build', 'ViewCarousel', 'MailOutline', 'LabelOutline', 'Unarchive'
+- Add new Icons to match design system
+
+## 0.8.2
+
+- Updated `date-fns` dependency.
+- Fixed `InteractiveList` examples
+- Fixed truncation of long text in the `InteractiveList` for IE 11
+- Fixed regular expression for Babel in Webpack
+- Fixed Datepicker controlled mode issues
+- Fixed hiding suggestion list of `Autocomplete` after selection for IE 11
+
 ## 0.8.1
 
 - Fixed: Tooltip blinking when hovering border (#167)
@@ -9,7 +37,7 @@
 ## 0.8.0
 
 - Implement new breakpoints and screen sizes
-- Removed `SASS` support 
+- Removed `SASS` support
 - Fixed: Modal closes on drag and release cursor outside modal (#152)
 - Improved `Responsive` component to avoid using of combined screen sizes
 - Fixed(DateField): Use valid date format as a default  - `yyyy-MM-dd` instead of `dd-MM-yyyy`
@@ -24,7 +52,7 @@
 - Fixed horizontal padding for InputInfo and InputError
 - Hide info element on open Autocomplete list
 - Fixed overview pagination elements' layout in IE 11
-- Fixed display of label, placeholder and info on AutocompleteTagBuilder 
+- Fixed display of label, placeholder and info on AutocompleteTagBuilder
 - Fixed toaster action click area
 - Fixed two cross(clear) buttons displayed inside TextField in IE 11
 - Fixed `Styled Input Box` flex layout for IE 11
