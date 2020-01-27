@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const createInnerJsxTransformer = require('typescript-plugin-inner-jsx').default;
+
 const env = process.env.NODE_ENV || 'development';
 const develop = env === 'development';
 const test = env === 'test';
