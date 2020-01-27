@@ -19,6 +19,7 @@
 - Add Material Icons: 'Build', 'ViewCarousel', 'MailOutline', 'LabelOutline', 'Unarchive'
 - Add new Icons to match design system
 - Fix opening `UploaderProgressDetails` in front of 'parent' modal in IE (#225)
+- Fix Accordion not responding when defaultSelectedIndex is set
 
 ## 0.8.2
 
