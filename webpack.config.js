@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const createInnerJsxTransformer = require('typescript-plugin-inner-jsx').default;
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const env = process.env.NODE_ENV || 'development';
 const develop = env === 'development';
@@ -129,6 +128,5 @@ module.exports = {
       allowAsyncCycles: false,
       cwd: process.cwd(),
     }),
-    new BundleAnalyzerPlugin()
   ],
 };
