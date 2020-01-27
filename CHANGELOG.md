@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 0.8.4
+
+- Remove refocus of component(Autocomplete) on every value change, remove corresponding test
+
 ## 0.8.3
 
 - `Skeleton` component added
@@ -18,7 +22,7 @@
 - Fixed missing onDataClick handler for Table component in mobile view (#214)
 - Add Material Icons: 'Build', 'ViewCarousel', 'MailOutline', 'LabelOutline', 'Unarchive'
 - Add new Icons to match design system
-- Remove refocus of component(Autocomplete) on every value change, remove corresponding test
+- Fix Accordion not responding when defaultSelectedIndex is set
 
 ## 0.8.2
 
