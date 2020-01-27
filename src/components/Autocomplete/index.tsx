@@ -232,14 +232,9 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
   }
 
   private show = () => {
-    const { onFocus } = this.props;
-
-    this.setState(
-      () => ({
-        open: true,
-      }),
-      onFocus,
-    );
+    this.setState(() => ({
+      open: true,
+    }));
   };
 
   private hide = () => {
@@ -254,6 +249,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
   };
 
   private handleFocus = () => {
+    const { onFocus } = this.props;
     cancelAnimationFrame(this.delayedBlur);
 
     this.show();
@@ -261,6 +257,10 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       focus: true,
       listFocus: false,
     }));
+
+    if (onFocus && typeof onFocus === 'function') {
+      onFocus();
+    }
   };
 
   private handleBlur = () => {
