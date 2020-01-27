@@ -1,5 +1,8 @@
 # Precise UI Changelog
 
+## 1.0.1
+- Fix opening `UploaderProgressDetails` behind modal in IE (#225)
+
 ## 1.0.0
 
 - Bumped Precise UI to major version 1. From now on, Precise UI follows **semver** guidelines.
@@ -23,7 +26,6 @@
 - Add Material Icons: 'Build', 'ViewCarousel', 'MailOutline', 'LabelOutline', 'Unarchive'
 - Add new Icons to match design system
 - Fix Accordion not responding when defaultSelectedIndex is set
-- Fix opening `UploaderProgressDetails` behind modal in IE (#225)
 
 ## 0.8.2
 
