@@ -18,8 +18,8 @@
 - Fixed missing onDataClick handler for Table component in mobile view (#214)
 - Add Material Icons: 'Build', 'ViewCarousel', 'MailOutline', 'LabelOutline', 'Unarchive'
 - Add new Icons to match design system
-- Fix opening `UploaderProgressDetails` in front of 'parent' modal in IE (#225)
 - Fix Accordion not responding when defaultSelectedIndex is set
+- Fix opening `UploaderProgressDetails` behind modal in IE (#225)
 
 ## 0.8.2
 
