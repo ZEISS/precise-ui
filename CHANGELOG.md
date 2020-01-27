@@ -1,13 +1,14 @@
 # Precise UI Changelog
 
-## 0.8.4
+## 1.0.0
 
+- Bumped Precise UI to major version 1. From now on, Precise UI follows **semver** guidelines.
 - Fix Accordion not responding when defaultSelectedIndex is set
 - Remove refocus of component(Autocomplete) on every value change, remove corresponding test
 
 ## 0.8.3
 
-- `Skeleton` component added
+- Added `Skeleton` component
 - Added onBeforeClose event to Modal
 - Added appendTagOnBlur prop to TagBuilder
 - Added onSort callback to Table
