@@ -258,7 +258,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       listFocus: false,
     }));
 
-    if (onFocus && typeof onFocus === 'function') {
+    if (typeof onFocus === 'function') {
       onFocus();
     }
   };
