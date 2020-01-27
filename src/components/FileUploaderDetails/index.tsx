@@ -65,7 +65,7 @@ const StyledUploaderHost = styled.div`
 
 const StyledDetailsHost = styled.div`
   // We override the 'z-index' of the styled component 'FixedContainer' of 'Blocker' (which is called by 'Modal').
-  // This fixes the problem of showing 'UploadProgressDetails' in front of 'parent' modal in IE.
+  // This fixes the problem of showing 'UploadProgressDetails' behind modal in IE.
   & > div:first-child {
     z-index: 10001;
   }
