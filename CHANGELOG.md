@@ -1,8 +1,17 @@
 # Precise UI Changelog
 
+## 1.0.1
+
+- Fix TagBuilder not deleting tags properly with backspace (#223)
+
+## 1.0.0
+
+- Bumped Precise UI to major version 1. From now on, Precise UI follows **semver** guidelines.
+- Fix Accordion not responding when defaultSelectedIndex is set
+
 ## 0.8.3
 
-- `Skeleton` component added
+- Added `Skeleton` component
 - Added onBeforeClose event to Modal
 - Added appendTagOnBlur prop to TagBuilder
 - Added onSort callback to Table
@@ -13,10 +22,11 @@
 - Fixed `InteractiveList` position in `Autocomplete` component
 - Replaced `forEach` with `Array.from` in `ContentSwitchInt` to fix displaying content switch for IE 11
 - Fixed(Blocker): Closing modal when using scrollbars (#203)
+- Fixed: DropdownMenu list has no width when expanded on IE11 (#201)
 - Fix(Accordion): header strips spaces when html tags are used
 - Fixed missing onDataClick handler for Table component in mobile view (#214)
 - Add Material Icons: 'Build', 'ViewCarousel', 'MailOutline', 'LabelOutline', 'Unarchive'
-- Fix TagBuilder not deleting tags properly with backspace (#223)
+- Add new Icons to match design system
 
 ## 0.8.2
 
