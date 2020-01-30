@@ -1,6 +1,11 @@
 # Precise UI Changelog
 
+## 1.1.0
+
+- Add `borderless` and `tagRenderer` props to AutocompleteTagBuilder
+
 ## 1.0.1
+
 - Fix opening `UploaderProgressDetails` behind modal in IE (#225)
 
 ## 1.0.0
