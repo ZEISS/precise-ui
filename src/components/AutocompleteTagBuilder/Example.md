@@ -4,7 +4,7 @@ The builder can be used with the static array of suggestions.
 
 ```jsx
 const { AutocompleteTagBuilder } = require('precise-ui');
-let suggestions =  ['one', 'two', 'tree', 'foure'];
+let suggestions =  ['one', 'two', 'three', 'four'];
 
 <AutocompleteTagBuilder suggestions={suggestions}/>
 ```
@@ -14,7 +14,7 @@ In controlled mode we can also prevent from value or input value changes.
 
 ```jsx
 const { AutocompleteTagBuilder } = require('precise-ui');
-const suggestions =  ['one', 'two', 'tree', 'foure'];
+const suggestions =  ['one', 'two', 'three', 'four'];
 
 class App extends React.Component {
   constructor(props) {
@@ -196,4 +196,18 @@ const { Form, Button, TextField, AutocompleteTagBuilder } = require('precise-ui'
     <Button>Submit</Button>
   </div>
 </Form>
+```
+
+**Tag Presentation**
+
+Here you can see a demo of custom tag building with help of tagRenderer method.
+
+```jsx
+const { AutocompleteTagBuilder, themes } = require('precise-ui');
+
+const tagRenderer = e => (<Button type={e.index % 2 === 0 ? "primary" : "secondary"}>{e.item}</Button>);
+
+let suggestions =  ['one', 'two', 'three', 'four'];
+
+<AutocompleteTagBuilder	suggestions={suggestions} tagRenderer={tagRenderer} />
 ```
