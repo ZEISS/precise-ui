@@ -232,9 +232,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
   }
 
   private show = () => {
-    this.setState(() => ({
-      open: true,
-    }));
+    this.setState({ open: true });
   };
 
   private hide = () => {
