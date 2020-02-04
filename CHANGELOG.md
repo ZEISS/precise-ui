@@ -1,9 +1,12 @@
 # Precise UI Changelog
 
+## 1.0.2
+
+- Fix TagBuilder not deleting tags properly with backspace (#223)
+
 ## 1.0.1
 
 - Fix opening `UploaderProgressDetails` behind modal in IE (#225)
-- Fix TagBuilder not deleting tags properly with backspace (#223)
 
 ## 1.0.0
 
