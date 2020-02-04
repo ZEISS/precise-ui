@@ -1,9 +1,12 @@
 # Precise UI Changelog
 
+## 1.0.2
+
+- Remove refocus of component(Autocomplete) on every value change, remove corresponding test
+
 ## 1.0.1
 
 - Fix opening `UploaderProgressDetails` behind modal in IE (#225)
-- Remove refocus of component(Autocomplete) on every value change, remove corresponding test
 
 ## 1.0.0
 
