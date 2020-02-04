@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 1.0.2
+
+- Fixed cellRenderer passed key in AccordionTableCard
+
 ## 1.0.1
 - Fix opening `UploaderProgressDetails` behind modal in IE (#225)
 
