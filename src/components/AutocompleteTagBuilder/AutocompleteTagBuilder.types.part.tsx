@@ -1,6 +1,5 @@
 import { LabeledInputProps, InputChangeEvent } from '../../common';
 import { TagBuilderRenderEvent } from '../TagBuilder';
-import { ReactChild } from 'react';
 
 export interface AutocompleteTagBuilderAutosuggestItem {
   key: string;
@@ -35,7 +34,7 @@ export interface AutocompleteTagBuilderProps<T> extends LabeledInputProps<Array<
   /**
    * Custom tag renderer for the component.
    */
-  tagRenderer?(event: TagBuilderRenderEvent): ReactChild;
+  tagRenderer?(event: TagBuilderRenderEvent): React.ReactChild;
   /**
    * The current value of the text field.
    */
