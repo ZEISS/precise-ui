@@ -203,7 +203,7 @@ const { Form, Button, TextField, AutocompleteTagBuilder } = require('precise-ui'
 Here you can see a demo of custom tag building with help of `tagRenderer` method.
 
 ```jsx
-const { AutocompleteTagBuilder, themes } = require('precise-ui');
+const { AutocompleteTagBuilder } = require('precise-ui');
 
 const tagRenderer = e => (<Button type={e.index % 2 === 0 ? "primary" : "secondary"}>{e.item}</Button>);
 
