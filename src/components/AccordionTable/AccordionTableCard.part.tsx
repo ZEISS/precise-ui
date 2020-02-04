@@ -132,11 +132,12 @@ export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T
   }
 
   private renderItemProps(item: T, keys: Array<string>, row: number) {
-    return keys.map((key, index) => this.renderItemProp(this.getHeader(key), item[key], index, row));
+    return keys.map((key, index) => this.renderItemProp(key, item[key], index, row));
   }
 
-  private renderItemProp(propKey: React.ReactChild, propValue: any, index: number, row: number) {
+  private renderItemProp(key: string, propValue: any, index: number, row: number) {
     const { cellRenderer = defaultCellRenderer } = this.props;
+    const propKey = this.getHeader(key);
 
     return (
       <PropContainer key={index}>
@@ -145,7 +146,7 @@ export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T
           {cellRenderer({
             row,
             column: index,
-            key: propKey.toString(),
+            key,
             value: propValue,
             render: defaultCellRenderer,
           })}
