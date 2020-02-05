@@ -187,6 +187,11 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
     });
   };
 
+  private closeProgressBar = ({ files }: FileUploaderDetailsEvent<FileProgress>) => {
+    this.closeUploader();
+    this.onDelete({ files });
+  };
+
   render() {
     const { events, onCancel, onClose, onDelete, onUpload, ...props } = this.props;
     const { showDetails, showUploader, files } = this.state;
@@ -221,7 +226,7 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
                 errors={errorFiles.length}
                 total={files.length}
                 onShow={this.showDetails}
-                onClose={this.closeUploader}
+                onClose={() => this.closeProgressBar({ files })}
               />
             </StyledUploaderHost>
           )}
