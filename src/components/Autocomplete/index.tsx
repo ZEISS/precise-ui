@@ -181,24 +181,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       }
     }
 
-    if (this._element) {
-      this._element.focus();
-    }
-
-    const hide = () => {
-      this.hide();
-      /*
-        On IE11 the focus event from this._element.focus(); triggers after this.hide() and so the suggestion list opens again after hiding it.
-        If we call this.hide() again with a timeout, it works also for IE11.
-      */
-      setTimeout(() => {
-        if (this.state.open) {
-          this.hide();
-        }
-      });
-    };
-
-    suggestionSelected ? hide() : this.show();
+    suggestionSelected ? this.hide() : this.show();
 
     if (typeof onChange === 'function') {
       onChange({
@@ -249,14 +232,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
   }
 
   private show = () => {
-    const { onFocus } = this.props;
-
-    this.setState(
-      () => ({
-        open: true,
-      }),
-      onFocus,
-    );
+    this.setState({ open: true });
   };
 
   private hide = () => {
@@ -271,6 +247,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
   };
 
   private handleFocus = () => {
+    const { onFocus } = this.props;
     cancelAnimationFrame(this.delayedBlur);
 
     this.show();
@@ -278,6 +255,10 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       focus: true,
       listFocus: false,
     }));
+
+    if (typeof onFocus === 'function') {
+      onFocus();
+    }
   };
 
   private handleBlur = () => {
