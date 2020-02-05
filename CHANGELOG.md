@@ -1,5 +1,8 @@
 # Precise UI Changelog
 
+## 1.0.2
+- Fix opening file selection of `FileUploader` for single file upload (#243)
+
 ## 1.0.1
 - Fix opening `UploaderProgressDetails` behind modal in IE (#225)
 
