@@ -197,7 +197,6 @@ const { Form, Button, TextField, AutocompleteTagBuilder } = require('precise-ui'
   </div>
 </Form>
 ```
-
 **Tag Presentation**
 
 Here you can see a demo of custom tag building with help of `tagRenderer` method.
