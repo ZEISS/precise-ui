@@ -1,6 +1,6 @@
 # Precise UI Changelog
 
-## 1.0.2
+## 1.1.0
 
 - Remove refocus of component(Autocomplete) on every value change, remove corresponding test
 
