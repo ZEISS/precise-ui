@@ -1,14 +1,20 @@
 # Precise UI Changelog
 
+## 1.1.0
+
+- Remove refocus of component(Autocomplete) on every value change, remove corresponding test
+
 ## 1.0.2
 - Fix opening file selection of `FileUploader` for single file upload (#243)
 
 ## 1.0.1
+
 - Fix opening `UploaderProgressDetails` behind modal in IE (#225)
 
 ## 1.0.0
 
 - Bumped Precise UI to major version 1. From now on, Precise UI follows **semver** guidelines.
+- Fix Accordion not responding when defaultSelectedIndex is set
 
 ## 0.8.3
 
@@ -28,7 +34,6 @@
 - Fixed missing onDataClick handler for Table component in mobile view (#214)
 - Add Material Icons: 'Build', 'ViewCarousel', 'MailOutline', 'LabelOutline', 'Unarchive'
 - Add new Icons to match design system
-- Fix Accordion not responding when defaultSelectedIndex is set
 
 ## 0.8.2
 
