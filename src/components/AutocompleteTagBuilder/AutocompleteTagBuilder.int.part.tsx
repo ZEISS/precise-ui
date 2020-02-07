@@ -169,7 +169,7 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
   };
 
   private tagBuilderRenderer = (inputProps: AutocompleteInputProps) => {
-    const { disabled } = this.props;
+    const { disabled, tagRenderer, borderless = false } = this.props;
     const { value } = this.state;
     const { onChange, value: inputValue, ...restProps } = inputProps;
 
@@ -182,6 +182,8 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
         inputValue={inputValue}
         onInput={onChange}
         value={tagBuilderValue}
+        tagRenderer={tagRenderer}
+        borderless={borderless}
         onBeforeTagRemove={this.tagRemoveHandler}
       />
     );
@@ -196,6 +198,8 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
       label,
       placeholder,
       info,
+      borderless = false,
+      error,
     } = this.props;
 
     const { inputValue } = this.state;
@@ -214,6 +218,8 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
         label={label}
         placeholder={placeholder}
         info={info}
+        error={error}
+        borderless={borderless}
       />
     );
   }
