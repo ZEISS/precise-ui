@@ -34,23 +34,35 @@
     "zeiss",
     "ux"
   ],
-  "engines": {
-    "node": ">=8.0.0"
-  },
-  "author": "ZEISS Digital Innovation Partners",
   "license": "MIT",
-  "dependencies": {
-    "memoize-one": "^5.0.0",
-    "react-datepicker": "^2.8.0",
-    "@types/react-datepicker": "^2.8.0",
-    "react-onclickoutside": "^6.7.1",
-    "typescript-plugin-inner-jsx": "^0.1.9",
-    "date-fns": "^2.3.0"
+  "author": "ZEISS Digital Innovation Partners",
+  "main": "dist/es6",
+  "typings": "dist/es6",
+  "scripts": {
+    "build": "rimraf dist && npm run build:bundle && npm run build:es5 && npm run build:es6",
+    "build:bundle": "cross-env NODE_ENV=production webpack -p",
+    "build:demo": "cross-env NODE_ENV=production styleguidist build",
+    "build:demo:test": "cross-env NODE_ENV=test styleguidist build",
+    "build:es5": "build-with-transform-jsx -t es5 --outDir dist/es5 --declaration --inlineSourceMap --inlineSources --config ./tsconfig.json",
+    "build:es6": "build-with-transform-jsx -t es6 -m es6 --outDir dist/es6 --declaration --inlineSourceMap --inlineSources --config ./tsconfig.json",
+    "icongen": "node tools/convert-icons.js",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --project tsconfig.json",
+    "prepush": "npm run test & npm run build",
+    "prettier": "prettier --config prettier.config.js --write 'src/**/*.{ts,tsx}'",
+    "serve": "pushstate-server -d styleguide -p 6060",
+    "serve:test": "pushstate-server -d integration/styleguide -p 6065",
+    "start": "styleguidist server",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "cross-env NODE_ENV=test jest",
+    "test:visual": "jest -c integration/jest.config.js --noStackTrace --runInBand",
+    "test:watch": "npm run test:unit -- --watch"
   },
-  "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8",
-    "styled-components": "^4.x"
+  "dependencies": {
+    "@types/react-datepicker": "^2.8.0",
+    "date-fns": "^2.3.0",
+    "memoize-one": "^5.1.0",
+    "react-datepicker": "^2.8.0",
+    "react-onclickoutside": "^6.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -110,6 +122,7 @@
     "tslint-config-prettier": "^1.17.0",
     "tslint-plugin-prettier": "^2.0.1",
     "typescript": "3.2.2",
+    "typescript-plugin-inner-jsx": "^0.1.9",
     "webpack": "^4.28.1",
     "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.2.1",
