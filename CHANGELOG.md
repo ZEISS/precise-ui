@@ -2,6 +2,7 @@
 
 ## 1.1.0
 
+- Add `borderless` and `tagRenderer` props to AutocompleteTagBuilder
 - Remove refocus of component(Autocomplete) on every value change, remove corresponding test
 - Enable `date-fns` tree-shaking
 
