@@ -3,6 +3,7 @@
 ## 1.1.0
 
 - Remove refocus of component(Autocomplete) on every value change, remove corresponding test
+- Enable `date-fns` tree-shaking
 
 ## 1.0.1
 
