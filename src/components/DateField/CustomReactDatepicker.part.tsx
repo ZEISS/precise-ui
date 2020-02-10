@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ReactDatePicker, { ReactDatePickerProps } from 'react-datepicker';
-import { enGB } from 'date-fns/locale';
+import enGB from 'date-fns/esm/locale/en-GB';
 import { Locale } from 'date-fns';
 import { PaddedContainer } from '../PaddedContainer';
 import { Icon } from '../Icon';
@@ -68,7 +68,7 @@ const itemSize = '40px';
 
 const ReactDatePickerContainer = styled.div(
   themed(
-    ({ theme: { ui0, ui1, ui3, ui4 } }) => `    
+    ({ theme: { ui0, ui1, ui3, ui4 } }) => `
     .react-datepicker {
       background-color: ${ui1};
       border: 1px solid ${ui4};
@@ -130,7 +130,7 @@ const ReactDatePickerContainer = styled.div(
     .react-datepicker__month-container {
       float: left;
       padding: 0 ${distance.medium};
-    }    
+    }
 
     .react-datepicker__time-container {
       float: right;

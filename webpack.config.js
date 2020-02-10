@@ -69,7 +69,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /node_modules[\/\\]((ansi-styles|strip-ansi|ansi-regex|react-dev-utils|chalk|typescript-plugin-inner-jsx)[\/\\]).*/,
+        test: /node_modules[\/\\]((date-fns|ansi-styles|strip-ansi|ansi-regex|react-dev-utils|chalk|typescript-plugin-inner-jsx)[\/\\]).*/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -108,6 +108,9 @@ module.exports = {
         test: /\.ts$/,
         exclude: /node_modules/,
         loader: 'awesome-typescript-loader',
+        options: {
+          silent: true
+        }
       },
       {
         enforce: 'pre',
