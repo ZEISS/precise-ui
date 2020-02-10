@@ -306,8 +306,11 @@ export class FileUploader extends React.Component<FileUploaderProps> {
     const notCanceledFiles = files.filter(file => file.status !== 'canceled');
 
     if (!multiple && notCanceledFiles.length === 1) {
-      e.preventDefault();
-      events.emit(FileUploadActions.showUploads, {});
+      const completedFiles = notCanceledFiles.filter(file => file.status === 'complete');
+      if (completedFiles.length === 0) {
+        e.preventDefault();
+        events.emit(FileUploadActions.showUploads, {});
+      }
     }
   };
 
