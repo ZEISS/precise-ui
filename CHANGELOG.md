@@ -5,6 +5,9 @@
 - Add `borderless` and `tagRenderer` props to AutocompleteTagBuilder
 - Remove refocus of component(Autocomplete) on every value change, remove corresponding test
 
+## 1.0.2
+- Fix opening file selection of `FileUploader` for single file upload (#243)
+
 ## 1.0.1
 
 - Fix opening `UploaderProgressDetails` behind modal in IE (#225)
