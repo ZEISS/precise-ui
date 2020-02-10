@@ -4,6 +4,7 @@
 
 - Add `borderless` and `tagRenderer` props to AutocompleteTagBuilder
 - Remove refocus of component(Autocomplete) on every value change, remove corresponding test
+- Enable `date-fns` tree-shaking
 - Fix TagBuilder not deleting tags properly with backspace (#223)
 
 ## 1.0.2
