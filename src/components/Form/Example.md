@@ -188,9 +188,9 @@ const filterDefinitions = {
       { content: 'Credit', key: 'Credit' },
     ],
   },
-  statis: {
+  statuses: {
     label: 'Status',
-    name: 'statis',
+    name: 'statuses',
     data: [
       { content: 'Open', key: 'Open' },
       { content: 'Paid', key: 'Paid' },
@@ -198,7 +198,7 @@ const filterDefinitions = {
   }
 };
 
-<Form defaultValue={{first: 'My Firstname', statis: [1], types: [1, 2] }} onSubmit={e => alert(JSON.stringify(e.data))} onReset={e => { console.info(e, 'reset'); }} onChange={e => { console.info(e, 'CHANGE'); }}>
+<Form defaultValue={{first: 'My Firstname', statuses: [1], types: [1, 2] }} onSubmit={e => alert(JSON.stringify(e.data))} onReset={e => { console.info(e, 'reset'); }} onChange={e => { console.info(e, 'CHANGE'); }}>
   <div>
     First:
   </div>
@@ -219,7 +219,7 @@ const filterDefinitions = {
     <hr/>
   </div>
   <div>
-    <DropdownField {...filterDefinitions.statis} />
+    <DropdownField {...filterDefinitions.statuses} />
     <hr/>
   </div>
   <div>
