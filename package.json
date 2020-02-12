@@ -1,6 +1,6 @@
 {
   "name": "precise-ui",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Precise UI React component library.",
   "main": "dist/es6",
   "typings": "dist/es6",
@@ -20,6 +20,7 @@
     "build:es6": "build-with-transform-jsx -t es6 -m es6 --outDir dist/es6 --declaration --inlineSourceMap --inlineSources --config ./tsconfig.json",
     "build:demo": "cross-env NODE_ENV=production styleguidist build",
     "build:demo:test": "cross-env NODE_ENV=test styleguidist build",
+    "webpack:analyzer": "npm run build:bundle -- --config ./tools/bundle-analyzer.js",
     "icongen": "node tools/convert-icons.js",
     "prepush": "npm run test & npm run build"
   },
@@ -52,11 +53,11 @@
     "styled-components": "^4.x"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
+    "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/plugin-transform-runtime": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.3.3",
     "@types/enzyme": "^3.1.15",
@@ -74,6 +75,7 @@
     "@types/react-router-dom": "^4.3.1",
     "@types/styled-components": "^4.1.10",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
     "circular-dependency-plugin": "^5.0.2",
     "cross-env": "^5.0.5",
@@ -116,6 +118,7 @@
     "tslint-plugin-prettier": "^2.0.1",
     "typescript": "3.2.2",
     "webpack": "^4.28.1",
+    "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
   }

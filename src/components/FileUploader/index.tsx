@@ -303,10 +303,14 @@ export class FileUploader extends React.Component<FileUploaderProps> {
   private fileSelect = (e: DropzoneOpenEvent) => {
     const { multiple } = this.props;
     const { files, events } = this.data;
+    const notCanceledFiles = files.filter(file => file.status !== 'canceled');
 
-    if (!multiple && files.length === 1) {
-      e.preventDefault();
-      events.emit(FileUploadActions.showUploads, {});
+    if (!multiple && notCanceledFiles.length === 1) {
+      const completedFiles = notCanceledFiles.filter(file => file.status === 'complete');
+      if (completedFiles.length === 0) {
+        e.preventDefault();
+        events.emit(FileUploadActions.showUploads, {});
+      }
     }
   };
 
