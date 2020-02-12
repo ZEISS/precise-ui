@@ -1,5 +1,10 @@
 # Precise UI Changelog
 
+## 1.1.1
+
+- Migrate `react-styleguidist` to `^10.0.0`
+- Update all examples to use ES modules
+
 ## 1.1.0
 
 - Add `borderless` and `tagRenderer` props to AutocompleteTagBuilder
