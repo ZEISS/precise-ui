@@ -140,6 +140,7 @@ interface GridCellProps {
 }
 
 const GridCell = styled.div<GridCellProps>`
+  overflow: auto;
   -ms-grid-row: ${props => props.ri + 1};
   -ms-grid-row-span: ${props => props.rf - props.ri};
   grid-row: ${props => props.ri + 1} / span ${props => props.rf - props.ri};
