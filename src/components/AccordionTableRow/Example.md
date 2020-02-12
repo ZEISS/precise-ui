@@ -3,7 +3,7 @@
 Renders single row for the `AccordionTable`.
 
 ```jsx
-import { AccordionTable, colors } from 'precise-ui';
+import { AccordionTableRow, AccordionTable, colors } from 'precise-ui';
 
 const columns = {
   key: { header: 'Key', sortable: true },

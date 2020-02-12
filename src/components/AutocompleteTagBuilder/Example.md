@@ -182,7 +182,7 @@ class App extends React.Component {
 **Form example**
 
 ```jsx
-import { Form, Button, TextField } from 'precise-ui';
+import { AutocompleteTagBuilder, Form, Button, TextField } from 'precise-ui';
 
 <Form onSubmit={e => alert(JSON.stringify(e.data))}>
   <div>

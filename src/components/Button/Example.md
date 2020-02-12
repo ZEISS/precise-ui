@@ -3,12 +3,16 @@
 A simple anchor button.
 
 ```jsx
+import { Button } from 'precise-ui';
+
 <Button href="#🍕">Click me</Button>
 ```
 
 Custom interaction after clicking the button.
 
 ```jsx
+import { Button } from 'precise-ui';
+
 <Button onClick={() => alert('Hi')}>Click me</Button>
 ```
 
@@ -17,12 +21,12 @@ Custom interaction after clicking the button.
 There are two types of buttons with their own color themes: `primary` (default) and `secondary`.
 
 ```jsx
+import { Button } from 'precise-ui';
+
 <div>
-  <div>
     <Button>Default</Button>
     <Button buttonStyle="primary">Primary</Button>
     <Button buttonStyle="secondary">Secondary</Button>
-  </div>
 </div>
 
 ```
