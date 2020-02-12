@@ -3,7 +3,7 @@
 Using the `AccordionCard` component. Renders card which is expandable by clicking action button.
 
 ```jsx
-import { AccordionCard, AccordionTab } from 'precise-ui';
+import { AccordionCard } from 'precise-ui';
 
 <AccordionCard header="Title">
   <div style={{ padding: '10px' }}>
@@ -22,7 +22,7 @@ import { AccordionCard, AccordionTab } from 'precise-ui';
 `AccordionCard` in controlled mode with custom action renderer.
 
 ```jsx
-import { AccordionCard, AccordionTab, StackPanel, StackItem, ActionLink } from 'precise-ui';
+import { AccordionCard, StackPanel, StackItem, ActionLink } from 'precise-ui';
 
 class MyAccordionCard extends React.Component {
   constructor(props) {
