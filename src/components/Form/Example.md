@@ -137,8 +137,8 @@ The `Form` with validation rules
 ```jsx
 const { Form, Button, TextField } = require('precise-ui');
 
-<Form 
-  onSubmit={e => alert(JSON.stringify(e))} 
+<Form
+  onSubmit={e => alert(JSON.stringify(e))}
   validationRules={{
     first: (value) => value && value.length > 10 ? 'Should be less than 10' : undefined,
     last: () => 'Always some error',
@@ -157,6 +157,77 @@ const { Form, Button, TextField } = require('precise-ui');
   </div>
   <div>
     <Button>Submit</Button>
+  </div>
+</Form>
+```
+
+Managed `Form` with default value and reset button
+
+```jsx
+const { Form, Button, TextField, DropdownField } = require('precise-ui');
+
+const filterDefinitions = {
+  timeRanges: {
+    label: 'Time Range',
+    name: 'timeRanges',
+    data: [
+      { content: 'Last 7 days', key: '7' },
+      { content: 'Last 30 days', key: '30' },
+      { content: 'Last 60 days', key: '60' },
+      { content: 'Last 90 days', key: '90' },
+      { content: 'Last year', key: '365' },
+    ],
+  },
+  types: {
+    label: 'Types',
+    name: 'types',
+    multiple: true,
+    data: [
+      { content: 'Statement', key: 'Statement' },
+      { content: 'Invoice', key: 'Invoice' },
+      { content: 'Credit', key: 'Credit' },
+    ],
+  },
+  statis: {
+    label: 'Status',
+    name: 'statis',
+    data: [
+      { content: 'Open', key: 'Open' },
+      { content: 'Paid', key: 'Paid' },
+    ],
+  }
+};
+
+<Form defaultValue={{first: 'My Firstname', statis: [1], types: [1, 2] }} onSubmit={e => alert(JSON.stringify(e.data))} onReset={e => { console.info(e, 'reset'); }} onChange={e => { console.info(e, 'CHANGE'); }}>
+  <div>
+    First:
+  </div>
+  <div>
+    <TextField name="first" />
+  </div>
+  <div>
+    Last:
+  </div>
+  <div>
+    <TextField name="last" />
+  </div>
+  <div>
+    Filters:
+  </div>
+  <div>
+    <DropdownField {...filterDefinitions.timeRanges} />
+    <hr/>
+  </div>
+  <div>
+    <DropdownField {...filterDefinitions.statis} />
+    <hr/>
+  </div>
+  <div>
+    <DropdownField {...filterDefinitions.types} />
+  </div>
+  <div>
+    <Button>Submit</Button>
+    <Button type="reset" buttonStyle="secondary">Reset</Button>
   </div>
 </Form>
 ```
