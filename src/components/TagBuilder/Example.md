@@ -58,6 +58,7 @@ The following is an example of using of `defaultValue`. With `defaultValue` set 
 
 ```jsx
 import { TagBuilder } from 'precise-ui';
+
 const theme = { tagBackground: 'lightgreen', tagColor: 'blue', iconColor: 'red', iconBackground: 'yellow' };
 
 <TagBuilder
@@ -70,6 +71,7 @@ Here you can see a demo of custom tag building with help of `tagRenderer` method
 
 ```jsx
 import { TagBuilder, themes } from 'precise-ui';
+
 const tagRenderer = e => (<Button type={e.index % 2 === 0 ? "primary" : "secondary"}>{e.item}</Button>);
 
 <TagBuilder

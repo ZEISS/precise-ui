@@ -14,6 +14,7 @@ Enabling the animation effect to have smoother transitions when changing the val
 
 ```js { "props": { "data-skip": true } }
 import { ProgressBar } from 'precise-ui';
+
 const stops = [0, 10, 30, 30, 30, 30, 60, 60, 70, 70, 70, 90, 90, 91, 95, 99, 100];
 
 class AnimationProgressBar extends React.Component {

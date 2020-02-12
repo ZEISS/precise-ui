@@ -16,6 +16,7 @@ The style of the radio buttons can be varied. Here we use some wrapping to preve
 
 ```jsx
 import { RadioButtonGroup, RadioButton } from 'precise-ui';
+
 const style = { padding: '5px', margin: '5px' };
 
 <RadioButtonGroup>

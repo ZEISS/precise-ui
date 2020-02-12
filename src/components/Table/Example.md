@@ -349,6 +349,7 @@ Adding an optional index and no-data message. Sorting by age.
 
 ```jsx
 import { Table } from 'precise-ui';
+
 const data = [{
   name: 'First Entry',
   age: 21,
@@ -381,6 +382,7 @@ Displaying no data.
 
 ```jsx
 import { Table } from 'precise-ui';
+
 const data = [];
 const columns = {
   name: 'Name',
@@ -401,6 +403,7 @@ Grouping works similar to sorting. If we sorting and grouping is done by the sam
 
 ```jsx
 import { Table } from 'precise-ui';
+
 const data = [{
   name: 'A',
   age: 21,
@@ -433,6 +436,7 @@ Providing an `onSort` callback allows you to react to the table being sorted.
 
 ```jsx { "props": { "data-skip": true } }
 import { Table } from 'precise-ui';
+
 const data = [{
   name: 'A',
   age: 21,

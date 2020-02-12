@@ -4,6 +4,7 @@ Using the stack panel with the default options.
 
 ```jsx
 import { StackPanel, StackItem } from 'precise-ui';
+
 const style = { background: 'gray', padding: '5px', margin: '5px' };
 
 <StackPanel>
@@ -19,6 +20,7 @@ The widths of the boxes can be varied with an optional wrapping option to preven
 
 ```jsx
 import { StackPanel, StackItem } from 'precise-ui';
+
 const style = { background: 'gray', padding: '5px', margin: '5px' };
 
 <StackPanel wrap>
@@ -32,6 +34,7 @@ The row is not necessarily filled up. We can tell individual items to not fill (
 
 ```jsx
 import { StackPanel, StackItem } from 'precise-ui';
+
 const style = { background: 'gray', padding: '5px', margin: '5px' };
 
 <StackPanel>
@@ -44,6 +47,7 @@ The stack panel can also be used to create flexible layouts. For instance, the f
 
 ```jsx
 import { StackPanel, StackItem } from 'precise-ui';
+
 const style = { background: 'gray', padding: '5px', margin: '5px' };
 
 <StackPanel direction="top" style={{ height: '400px' }}>
