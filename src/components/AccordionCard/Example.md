@@ -22,7 +22,7 @@ import { AccordionCard, AccordionTab } from 'precise-ui';
 `AccordionCard` in controlled mode with custom action renderer.
 
 ```jsx
-import { AccordionCardб AccordionTab, StackPanel, StackItem, ActionLink } from 'precise-ui';
+import { AccordionCard, AccordionTab, StackPanel, StackItem, ActionLink } from 'precise-ui';
 
 class MyAccordionCard extends React.Component {
   constructor(props) {
