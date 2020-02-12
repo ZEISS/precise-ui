@@ -3,7 +3,7 @@
 In order to use Notifications only one `<Notifications />` component has to be placed inside you application. The `<Notifications />` container can be used to set the common properties, which can be later overwritten by specific notifications.
 
 ```jsx
-const { Notifications } = require('precise-ui');
+import { Notifications } from 'precise-ui';
 
 <Notifications />
 ```
@@ -13,7 +13,7 @@ const { Notifications } = require('precise-ui');
 In order to display notification, notify function needs to be used providing the content of the notification and optionally other options. When not type option provided, default option type will be used.
 
 ```jsx
-const { notify, Button } = require('precise-ui');
+import { notify, Button } from 'precise-ui';
 
 <Button onClick={() => notify({
   content: 'Labore et in ullamco minim reprehenderit anim veniam qui laboris anim Lorem consequat mollit.'
@@ -25,7 +25,7 @@ const { notify, Button } = require('precise-ui');
 Like already mentioned, default notifications container behavior can be overwritten by every single notification:
 
 ```jsx
-const { notify, Button } = require('precise-ui');
+import { notify, Button } from 'precise-ui';
 
 <div>
   <Button onClick={() => notify.error({ content: 'Laborum deserunt ad ipsum exercitation.', options: { position: 'bottom-left' }})}>
@@ -42,7 +42,7 @@ const { notify, Button } = require('precise-ui');
 Notifications can have a custom action renderer:
 
 ```jsx
-const { notify, Button, ActionLink } = require('precise-ui');
+import { notify, Button, ActionLink } from 'precise-ui';
 
 <div>
   <Button onClick={() => notify.info({ content: 'Backing up finished.', options: { actionRenderer:() => <ActionLink onClick={() => alert('Ok pressed')}>Ok</ActionLink>, position: 'bottom-left' }})}>
@@ -57,7 +57,7 @@ const { notify, Button, ActionLink } = require('precise-ui');
 ...or custom content:
 
 ```jsx
-const { notify, Button, Headline, Tag } = require('precise-ui');
+import { notify, Button, Headline, Tag } from 'precise-ui';
 
 <Button onClick={() => notify.info({ content:
   <div>
@@ -76,7 +76,7 @@ const { notify, Button, Headline, Tag } = require('precise-ui');
 Example of various notifications in sequence.
 
 ```jsx
-const { notify, Button } = require('precise-ui');
+import { notify, Button } from 'precise-ui';
 
 const notifications = [
   () => notify({ content: <div>Veniam velit ad fugiat voluptate. Proident do sit reprehenderit officia tempor aliquip ut elit sint laboris reprehenderit irure.</div>, options: { title: 'Notification title', autoClose: 5000 } }),
@@ -101,7 +101,7 @@ There is a possibility of heaving multiple instances of `Notifications` containe
 For this example one needs to create a custom `SimpleEventManager` instance which implements `EventManager` and pass it as a prop to the new `Notifications` container. After that, in order to show notifications in this newly created container, `events` property, with a value of custom `SimpleEventManager`, needs to be set when calling notify function.
 
 ```jsx
-const { Notifications, notify, Button, SimpleEventManager } = require('precise-ui');
+import { Notifications, notify, Button, SimpleEventManager } from 'precise-ui';
 
 const myEventManager = new SimpleEventManager();
 

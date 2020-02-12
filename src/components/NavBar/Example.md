@@ -3,7 +3,7 @@
 The navigation bar can be used in layouts as follows:
 
 ```jsx
-const { NavBar } = require('precise-ui');
+import { NavBar } from 'precise-ui';
 
 const navItems = [
   {
@@ -30,7 +30,7 @@ Ideally, it leaves some freedom for creativity while taking away some of the man
 The `hamburger` mode is a light variant of the menu. The other one is called `full`, as it should usually be shown on full screen desktop pages. In this mode we have `pin` and `lead` entries. The former being on the right side, the latter on the left side next to the menu.
 
 ```jsx
-const { NavBar, Icon } = require('precise-ui');
+import { NavBar, Icon } from 'precise-ui';
 
 const navItems = [
   {

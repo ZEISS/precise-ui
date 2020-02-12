@@ -2,7 +2,7 @@ PaddedComponent adds gutter around its content.
 
 Basic usage.
 ```jsx
-const { PaddedContainer } = require('precise-ui');
+import { PaddedContainer } from 'precise-ui';
 
 <PaddedContainer gutter="large">Some content</PaddedContainer>
 ```
@@ -10,7 +10,7 @@ const { PaddedContainer } = require('precise-ui');
 
 Adds `xlarge` padding to the left.
 ```jsx
-const { PaddedContainer } = require('precise-ui');
+import { PaddedContainer } from 'precise-ui';
 
 <PaddedContainer left="xlarge">Some content</PaddedContainer>
 ```

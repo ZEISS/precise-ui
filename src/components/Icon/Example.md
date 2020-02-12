@@ -3,7 +3,7 @@
 A "public" icon.
 
 ```jsx
-const { Icon } = require('precise-ui');
+import { Icon } from 'precise-ui';
 
 <Icon name="Public" />
 ```
@@ -13,7 +13,7 @@ const { Icon } = require('precise-ui');
 The person symbol colored in red.
 
 ```jsx
-const { Icon } = require('precise-ui');
+import { Icon } from 'precise-ui';
 
 <Icon name="Person" color="red" />
 ```
@@ -21,7 +21,7 @@ const { Icon } = require('precise-ui');
 The `Icon` actually scales with the font (if not being told otherwise). Additionally, by default it uses the color of the font.
 
 ```jsx
-const { Icon, colors } = require('precise-ui');
+import { Icon, colors } from 'precise-ui';
 
 <div style={{ background: 'black', padding: '1em', color: colors.white, fontSize: '2em' }}>
   Please <Icon name="Check" /> me
@@ -31,7 +31,8 @@ const { Icon, colors } = require('precise-ui');
 Different sizes of an eye icon.
 
 ```jsx
-const { Icon, colors } = require('precise-ui');
+import { Icon, colors } from 'precise-ui';
+
 const { indigo, orangeNeon, green, brightLemon, purpleRed, teal } = colors;
 
 <table>
@@ -77,7 +78,8 @@ registerIcons({
 ```
 
 ```jsx
-const { Icon, registerIcons, colors } = require('precise-ui');
+import { Icon, registerIcons, colors } from 'precise-ui';
+
 const { indigo, purpleRed, teal } = colors;
 
 registerIcons({
@@ -130,7 +132,8 @@ registerIcons({
 All available icons.
 
 ```jsx
-const { Icon, IconNames } = require('precise-ui');
+import { Icon, IconNames } from 'precise-ui';
+
 const names = IconNames.slice(0).sort();
 
 <div style={{ columnWidth: '180px' }}>

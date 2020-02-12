@@ -3,7 +3,7 @@
 Most basic usage of Interactive list requires to specify data and whether the list is open or closed. The list is placed in absolutely positioned wrapper.
 
 ```jsx
-const { InteractiveList } = require('precise-ui');
+import { InteractiveList } from 'precise-ui';
 
 <InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} open/>
 ```
@@ -11,7 +11,7 @@ const { InteractiveList } = require('precise-ui');
 You can show a tick for the selected item by using the `showTick` options.
 
 ```jsx
-const { InteractiveList } = require('precise-ui');
+import { InteractiveList } from 'precise-ui';
 
 <InteractiveList data={['Item 1', 'Item 2']} showTick open/>
 ```
@@ -19,7 +19,7 @@ const { InteractiveList } = require('precise-ui');
 Condensed list with smaller spacings
 
 ```jsx
-const { InteractiveList } = require('precise-ui');
+import { InteractiveList } from 'precise-ui';
 
 <InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} condensed open/>
 ```
@@ -27,15 +27,16 @@ const { InteractiveList } = require('precise-ui');
 It's possible to select multiple elements, by adding checkboxes
 
 ```jsx
-const { InteractiveList } = require('precise-ui');
-<div style={{width: '50%'}}>
+import { InteractiveList } from 'precise-ui';
+
+<div style={{ width: '50%' }}>
   <InteractiveList data={['Item 1', 'Item 2', 'Item 3', 'Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines. Item 4 has very long text inside. It will break in two lines.']} multiple open/>
 </div>
 ```
 
 You can add dividers
 ```jsx
-const { InteractiveList } = require('precise-ui');
+import { InteractiveList } from 'precise-ui';
 
 const data = ['1', '2',
 {
@@ -53,8 +54,7 @@ const data = ['1', '2',
 It's also possible to override the default wrapper by providing custom wrapper, where one could possibly build custom styled wrapper for the list.
 
 ```jsx
-
-const { InteractiveList } = require('precise-ui');
+import { InteractiveList } from 'precise-ui';
 
 const CustomWrapper = function (props) {
   const { children, ...rest } = props;
@@ -74,7 +74,7 @@ const CustomWrapper = function (props) {
 Here is an example of using a controlling version of the interactive list together with another component.
 
 ```jsx
-const { InteractiveList, Button } = require('precise-ui');
+import { InteractiveList, Button } from 'precise-ui';
 
 const items = [
   "Anim qui laborum officia laborum occaecat eu deserunt et.",
@@ -143,7 +143,8 @@ class CustomComponent extends React.Component {
 Using links in the interactive list is possible (e.g., for building up menus).
 
 ```jsx
-const { InteractiveList } = require('precise-ui');
+import { InteractiveList } from 'precise-ui';
+
 const data = [
   {
     key: 'firstLink',
@@ -160,13 +161,13 @@ const data = [
 
 **Disable selection for specific items**
 
-To disable specific items pass an array of strings (matching the strings if plain strings are used or the `key` 
+To disable specific items pass an array of strings (matching the strings if plain strings are used or the `key`
 field if objects are used as `data`). This prevents those items from being selected by the user.
 
 Here is an example for single-selection:
 
 ```jsx
-const { InteractiveList } = require('precise-ui');
+import { InteractiveList } from 'precise-ui';
 
 const data = [
   'Value 1',
@@ -187,9 +188,9 @@ const disabledItems = [
 ```
 
 Here is an example for multi-selection with the `multiple` option set to true.
- 
+
 ```jsx
-const { InteractiveList } = require('precise-ui');
+import { InteractiveList } from 'precise-ui';
 
 const data = [
   'Value 1',

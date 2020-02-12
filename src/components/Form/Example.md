@@ -3,7 +3,7 @@
 The `Form` is a simple form container that gives us an easy abstraction over controlling single form fields.
 
 ```jsx
-const { Form, Button, TextField } = require('precise-ui');
+import { Form, Button, TextField } from 'precise-ui';
 
 <Form onSubmit={e => alert(JSON.stringify(e.data))}>
   <div>
@@ -31,7 +31,7 @@ const { Form, Button, TextField } = require('precise-ui');
 Like the input fields the `form` can be also controlled and managed. The managed version already gives us an easy way to observe changes:
 
 ```jsx
-const { Form, Button, DropdownField, TextField } = require('precise-ui');
+import { Form, Button, DropdownField, TextField } from 'precise-ui';
 
 <Form onSubmit={e => alert(JSON.stringify(e.data))} defaultValue={{ first: 'Your', last: 'Name' }} onChange={e => console.log(e)}>
   <div>
@@ -63,7 +63,7 @@ const { Form, Button, DropdownField, TextField } = require('precise-ui');
 In controlled mode we can also prevent certain changes etc.
 
 ```jsx
-const { Form, Button, Checkbox, RadioButton, RadioButtonGroup, DropdownField, FileSelect, ColorPicker, Toggle, Slider } = require('precise-ui');
+import { Form, Button, Checkbox, RadioButton, RadioButtonGroup, DropdownField, FileSelect, ColorPicker, Toggle, Slider } from 'precise-ui';
 
 class MyForm extends React.Component {
   constructor(props) {
@@ -135,10 +135,10 @@ class MyForm extends React.Component {
 The `Form` with validation rules
 
 ```jsx
-const { Form, Button, TextField } = require('precise-ui');
+import { Form, Button, TextField } from 'precise-ui';
 
-<Form 
-  onSubmit={e => alert(JSON.stringify(e))} 
+<Form
+  onSubmit={e => alert(JSON.stringify(e))}
   validationRules={{
     first: (value) => value && value.length > 10 ? 'Should be less than 10' : undefined,
     last: () => 'Always some error',

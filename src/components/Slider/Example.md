@@ -5,7 +5,7 @@ The `SliderChangeEvent` contains properties such as `current`, `selected`, `inde
 Standard usage of a slider component.
 
 ```jsx
-const { Slider } = require('precise-ui');
+import { Slider } from 'precise-ui';
 
 <Slider />
 ```
@@ -13,7 +13,7 @@ const { Slider } = require('precise-ui');
 The Slider can have a tooltip showing the value.
 
 ```jsx
-const { Slider } = require('precise-ui');
+import { Slider } from 'precise-ui';
 
 <Slider defaultValue={[5]} minimum={0} maximum={10} showTooltip />
 ```
@@ -21,7 +21,7 @@ const { Slider } = require('precise-ui');
 The Slider could be disabled as well using the `disabled` prop. This is the same as on on every input field.
 
 ```jsx
-const { Slider } = require('precise-ui');
+import { Slider } from 'precise-ui';
 
 <Slider disabled defaultValue={[5]} minimum={0} maximum={10} />
 ```
@@ -31,7 +31,7 @@ const { Slider } = require('precise-ui');
 The slider supports two modes: controlled and managed. Setting the `value` will trigger the controlled mode.
 
 ```jsx
-const { Slider } = require('precise-ui');
+import { Slider } from 'precise-ui';
 
 class MySlider extends React.Component {
   constructor(props) {
@@ -65,7 +65,7 @@ The slider also supports multiple values. Just use an array as (initial) input. 
 **Boundaries**
 
 ```jsx
-const { Slider } = require('precise-ui');
+import { Slider } from 'precise-ui';
 
 <Slider defaultValue={[0, 5, 10]} minimum={0} maximum={10} margin={1} />
 ```
@@ -73,7 +73,7 @@ const { Slider } = require('precise-ui');
 An optional stepping can be used to make the slider snap to certain fix points. This also has an impact on the reported value.
 
 ```jsx
-const { Slider } = require('precise-ui');
+import { Slider } from 'precise-ui';
 
 <Slider defaultValue={[1, 9]} minimum={0} maximum={10} margin={1} step={0.5} />
 ```
@@ -83,7 +83,7 @@ const { Slider } = require('precise-ui');
 The slider could also be shown with vertical orientation. Note the height of the slider depends on the outer container - like the width of the horizontal slider.
 
 ```jsx
-const { Slider } = require('precise-ui');
+import { Slider } from 'precise-ui';
 
 <div style={{ height: '200px' }}>
   <Slider defaultValue={[0.3, 0.6]} margin={0.1} orientation="vertical" showTooltip />

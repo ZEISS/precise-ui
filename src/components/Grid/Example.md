@@ -3,7 +3,7 @@
 A very simple 2x2 grid with some content. The placement is determined automatically.
 
 ```jsx
-const { Grid } = require('precise-ui');
+import { Grid } from 'precise-ui';
 
 <Grid rows={2} columns={2}>
   <div>A</div>
@@ -18,7 +18,7 @@ const { Grid } = require('precise-ui');
 We may place some of these on new positions, thus overriding the default placement. The component will look for remaining spots to do the placement.
 
 ```jsx
-const { Grid } = require('precise-ui');
+import { Grid } from 'precise-ui';
 
 <Grid rows={2} columns={2}>
   <div column={1}>A</div>
@@ -31,7 +31,7 @@ const { Grid } = require('precise-ui');
 The same holds true once spanning comes into play. In the following example the cells (0, 1) and (1, 0) to (1, 1) are already taken. Thus the remaining content is placed in (0, 0), (0, 2) and (1, 2).
 
 ```jsx
-const { Grid } = require('precise-ui');
+import { Grid } from 'precise-ui';
 
 <Grid rows={2} columns={3}>
   <div column={1}>A</div>
@@ -45,7 +45,7 @@ const { Grid } = require('precise-ui');
 The grid layout is not constraint to uniform grids - we can define the available space freely. Here we use some fixed units (pixels and ems) along the fractional unit (`fr`).
 
 ```jsx
-const { Grid } = require('precise-ui');
+import { Grid } from 'precise-ui';
 
 <div style={{ height: '200px' }}>
   <Grid rows={['100px', '1fr', '50px']} columns={['10em', '1fr']}>
@@ -62,7 +62,7 @@ const { Grid } = require('precise-ui');
 Grid layouts are great for general layouts. Consider the following structure with explicit row and column placement.
 
 ```jsx
-const { Grid } = require('precise-ui');
+import { Grid } from 'precise-ui';
 
 <Grid rows={3} columns={3}>
   <div column={0} row={0} colSpan={3}>Header</div>
@@ -75,7 +75,8 @@ const { Grid } = require('precise-ui');
 Grid layouts are great for general layouts. Consider the following structure with explicit row and column placement.
 
 ```jsx
-const { Grid } = require('precise-ui');
+import { Grid } from 'precise-ui';
+
 const Cell = (props) => (
   <div style={{ background: '#ccc', padding: '5px', height: '100%', boxSizing: 'border-box' }}>
     {props.children}
@@ -95,7 +96,7 @@ const Cell = (props) => (
 The grid layout works also together with the responsive HOC. The responsive HOC always takes the size of the parent container and is thus more flexible than CSS media queries, which are bound to the viewport size.
 
 ```jsx
-const { Grid, withResponsive } = require('precise-ui');
+import { Grid, withResponsive } from 'precise-ui';
 
 const ResponsiveGrid = withResponsive(({ width }) => (
   <Grid rows={width < 800 ? 2 : 1} columns={width >= 800 ? ['100px', '1fr'] : 1}>
@@ -118,7 +119,8 @@ The rendering for the empty / unused cell can be provided in three different way
 Let's see one possible way in action:
 
 ```jsx
-const { Grid } = require('precise-ui');
+import { Grid } from 'precise-ui';
+
 const Cell = (props) => (
   <div style={{ background: '#ccc', padding: '5px', height: '100%', boxSizing: 'border-box' }}>
     {props.children}

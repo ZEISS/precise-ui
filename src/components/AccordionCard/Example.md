@@ -3,7 +3,7 @@
 Using the `AccordionCard` component. Renders card which is expandable by clicking action button.
 
 ```jsx
-const { AccordionCard } = require('precise-ui');
+import { AccordionCard, AccordionTab } from 'precise-ui';
 
 <AccordionCard header="Title">
   <div style={{ padding: '10px' }}>
@@ -14,7 +14,7 @@ const { AccordionCard } = require('precise-ui');
     Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of
     Lorem Ipsum.
   </div>
-</AccordionCard>;
+</AccordionCard>
 ```
 
 **Controlled Mode**
@@ -22,9 +22,9 @@ const { AccordionCard } = require('precise-ui');
 `AccordionCard` in controlled mode with custom action renderer.
 
 ```jsx
-const { AccordionCard, StackPanel, StackItem, ActionLink } = require('precise-ui');
+import { AccordionCardб AccordionTab, StackPanel, StackItem, ActionLink } from 'precise-ui';
 
-class AccordionCardInt extends React.Component {
+class MyAccordionCard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -60,5 +60,5 @@ class AccordionCardInt extends React.Component {
   }
 }
 
-<AccordionCardInt />;
+<MyAccordionCard />
 ```

@@ -3,7 +3,7 @@
 By default, the checkbox is displayed without any label.
 
 ```jsx
-const { Checkbox } = require('precise-ui');
+import { Checkbox } from 'precise-ui';
 
 <Checkbox />
 ```
@@ -11,7 +11,7 @@ const { Checkbox } = require('precise-ui');
 Checkbox with some arbitrary prop, e.g., `data-eid`, provided.
 
 ```jsx
-const { Checkbox } = require('precise-ui');
+import { Checkbox } from 'precise-ui';
 
 <>
   <Checkbox data-eid="checkbox" />
@@ -21,7 +21,7 @@ const { Checkbox } = require('precise-ui');
 Inline List of checkboxes
 
 ```jsx
-const { Checkbox } = require('precise-ui');
+import { Checkbox } from 'precise-ui';
 
 const itemStyle = {
   verticalAlign: 'middle',
@@ -40,7 +40,7 @@ const itemStyle = {
 Labels are just described by the checkbox's children. Setting the `value` prop (either to true or false) will switch to controlled mode.
 
 ```jsx
-const { Checkbox } = require('precise-ui');
+import { Checkbox } from 'precise-ui';
 
 <Checkbox value>Controlled checkbox</Checkbox>
 ```
@@ -50,7 +50,7 @@ const { Checkbox } = require('precise-ui');
 If we want to supply a default value without switching into controlled mode we use the `defaultValue` prop. The checkbox will scale with the used font size.
 
 ```jsx
-const { Checkbox } = require('precise-ui');
+import { Checkbox } from 'precise-ui';
 
 <Checkbox defaultValue style={{ fontSize: '2em' }}>Scaled checkbox</Checkbox>
 ```
@@ -60,7 +60,7 @@ const { Checkbox } = require('precise-ui');
 With very long labels the component just wraps as expected.
 
 ```jsx
-const { Checkbox } = require('precise-ui');
+import { Checkbox } from 'precise-ui';
 
 <Checkbox>This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text. This is a really long text.</Checkbox>
 ```
@@ -68,7 +68,7 @@ const { Checkbox } = require('precise-ui');
 We are not constraint by simple text for the label's content. Any component will be accepted.
 
 ```jsx
-const { Checkbox } = require('precise-ui');
+import { Checkbox } from 'precise-ui';
 
 <Checkbox>
   <b>
@@ -80,7 +80,7 @@ const { Checkbox } = require('precise-ui');
 The `disabled` prop allows to disable the checkbox for further interaction.
 
 ```jsx
-const { Checkbox } = require('precise-ui');
+import { Checkbox } from 'precise-ui';
 
 <>
   <Checkbox disabled>Disabled</Checkbox>
@@ -91,7 +91,7 @@ const { Checkbox } = require('precise-ui');
 Finally, it is possible to annotate the component with an error message.
 
 ```jsx
-const { Checkbox } = require('precise-ui');
+import { Checkbox } from 'precise-ui';
 
 <Checkbox error="You need to check this one">Required input (not controlled)</Checkbox>
 ```

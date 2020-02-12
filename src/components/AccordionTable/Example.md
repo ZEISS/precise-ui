@@ -3,7 +3,7 @@
 Using the `AccordionTable` component. The following example also demonstrates usage of custom `cellRenderer` which allows specifying custom cell content.
 
 ```jsx
-const { AccordionTable } = require('precise-ui');
+import { AccordionTable, Tag } from 'precise-ui';
 
 const style = { width: '200px', margin: '0 auto', textAlign: 'center' };
 
@@ -39,7 +39,7 @@ function cellRenderer({key, value}) {
 Using the `AccordionTable` component with paging for desktop machines. Here, we also want to use a different rendering at mobile - not using the standard pagination, but rather an infinite list.
 
 ```jsx
-const { AccordionTable, Pagination, distance } = require('precise-ui');
+import { AccordionTable, Pagination, distance } from 'precise-ui';
 
 initialState = {
   offset: 0,
@@ -114,8 +114,8 @@ function renderCardBody(e) {
 Using the `AccordionTable` with custom `rowRenderer` in controlled mode.
 
 ```jsx
-const { AccordionTable, AccordionTableRow, colors } = require('precise-ui');
-const { default: styled } = require('styled-components');
+import { AccordionTableRow, colors } from 'precise-ui';
+import styled from 'styled-components';
 
 const StyledAccordionTableRow = styled(AccordionTableRow)`
   td {
@@ -190,7 +190,7 @@ class ControlledAccordionTable extends React.Component {
 Condensed `AccordionTable` with smaller spacings.
 
 ```jsx
-const { AccordionTable } = require('precise-ui');
+import { AccordionTable } from 'precise-ui';
 
 const style = { width: '200px', margin: '0 auto', textAlign: 'center' };
 
@@ -216,7 +216,8 @@ function getContent({index, data}) {
 Borderless condensed `AccordionTable` with smaller spacings.
 
 ```jsx
-const { AccordionTable } = require('precise-ui');
+import { AccordionTable } from 'precise-ui';
+
 const style = { width: '200px', margin: '0 auto', textAlign: 'center' };
 
 function getContent({index, data}) {
@@ -244,7 +245,8 @@ function getContent({index, data}) {
 We can use the `groupBy` to introduce an additional level.
 
 ```jsx
-const { AccordionTable } = require('precise-ui');
+import { AccordionTable } from 'precise-ui';
+
 const style = { width: '200px', margin: '0 auto', textAlign: 'center' };
 
 function getContent({index, data}) {
@@ -276,7 +278,8 @@ function getContent({index, data}) {
 Custom rendering of the column headers can give us additional functionality combined with the `groupBy`.
 
 ```jsx
-const { AccordionTable, RadioButton, TextField } = require('precise-ui');
+import { AccordionTable, RadioButton, TextField } from 'precise-ui';
+
 const style = { width: '200px', margin: '0 auto', textAlign: 'center' };
 
 function getContent({index, data}) {
@@ -366,6 +369,8 @@ If some of the items don't have a value set for the `groupBy` column, those item
 By default this group has a label of `—` which can also be changed with the `noValueGroupLabel` prop.
 
 ```
+import { AccordionTable } from 'precise-ui';
+
 const data = [
   {value: 'Alpha1', team: 'Alpha team'},
   {tag: 'A', value: 'Alpha3', team: 'Alpha team'},
@@ -378,7 +383,7 @@ const data = [
   {tag: 'B', value: 'Bravo1', team: 'Bravo team'},
   {tag: 'E', value: 'Echo2', team: 'Echo team'},
 ]
-   
+
 function getContent({index, data}) {
   return (
     <div>
@@ -387,18 +392,20 @@ function getContent({index, data}) {
     </div>
   );
 }
-     
-<AccordionTable 
-  groupBy="tag" 
-  detailsRenderer={getContent} 
-  data={data} 
-  noValueGroupLabel="No value" 
+
+<AccordionTable
+  groupBy="tag"
+  detailsRenderer={getContent}
+  data={data}
+  noValueGroupLabel="No value"
 />
 ```
 
 It is also possible to group by a column whose values are arrays.
 
 ```
+import { AccordionTable } from 'precise-ui';
+
 const data = [
   {tag: ['A'], value: 'Alpha3', team: 'Alpha team'},
   {value: 'Alpha1', team: 'Alpha team'},
@@ -411,7 +418,7 @@ const data = [
   {tag: ['B'], value: 'Bravo1', team: 'Bravo team'},
   {tag: ['E'], value: 'Echo2', team: 'Echo team'},
 ]
-   
+
 function getContent({index, data}) {
   return (
     <div>
@@ -420,11 +427,11 @@ function getContent({index, data}) {
     </div>
   );
 }
-     
-<AccordionTable 
-  groupBy="tag" 
-  detailsRenderer={getContent} 
-  data={data} 
-  noValueGroupLabel="No value" 
+
+<AccordionTable
+  groupBy="tag"
+  detailsRenderer={getContent}
+  data={data}
+  noValueGroupLabel="No value"
 />
 ```

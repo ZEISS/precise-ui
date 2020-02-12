@@ -3,7 +3,7 @@
 Standard usage of a `Label` component.
 
 ```jsx
-const { Label } = require('precise-ui');
+import { Label } from 'precise-ui';
 
 <Label>First Name:</Label>
 ```

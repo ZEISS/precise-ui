@@ -1,9 +1,8 @@
 import * as React from 'react';
-import { ActionLink, Expander, styled, distance, Icon, ActionLinkProps } from '../../src';
+import { ActionLink, Expander, styled, distance, themed, Icon, ActionLinkProps } from '../../src';
 
 // @ts-ignore
-import getUrl from 'react-styleguidist/lib/utils/getUrl';
-import { themed } from '../../src';
+import getUrl from 'react-styleguidist/lib/client/utils/getUrl';
 
 interface ComponentDefinition {
   hasExamples: boolean;

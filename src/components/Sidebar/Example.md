@@ -2,7 +2,7 @@ Sidebar component shows a sidebar floating from the edge of the screen after cli
 
 Basic usage.
 ```jsx
-const { Sidebar } = require('precise-ui');
+import { Sidebar, Button, PaddedContainer } from 'precise-ui';
 
 <Sidebar activator={<Button>Show sidebar</Button>}><PaddedContainer gutter="medium">Some content</PaddedContainer></Sidebar>
 ```
@@ -10,35 +10,35 @@ const { Sidebar } = require('precise-ui');
 
 Sidebar element on left side of the screen.
 ```jsx
-const { Sidebar } = require('precise-ui');
+import { Sidebar, Button, PaddedContainer } from 'precise-ui';
 
 <Sidebar position="left" activator={<Button>Show sidebar on left</Button>}><PaddedContainer gutter="medium">Some content</PaddedContainer></Sidebar>
 ```
 
 Sidebar element on bottom of the screen.
 ```jsx
-const { Sidebar } = require('precise-ui');
+import { Sidebar, Button, PaddedContainer } from 'precise-ui';
 
 <Sidebar position="bottom" activator={<Button>Show sidebar on bottom</Button>}><PaddedContainer gutter="medium">Some content</PaddedContainer></Sidebar>
 ```
 
 Sidebar element on top of the screen.
 ```jsx
-const { Sidebar } = require('precise-ui');
+import { Sidebar, Button, PaddedContainer } from 'precise-ui';
 
 <Sidebar position="top" activator={<Button>Show sidebar on top</Button>}><PaddedContainer gutter="medium">Some content</PaddedContainer></Sidebar>
 ```
 
 Sidebar with different activator element and custom size.
 ```jsx
-const { Sidebar } = require('precise-ui');
+import { Sidebar, Button, PaddedContainer, ActionLink } from 'precise-ui';
 
 <Sidebar size="50%" activator={<ActionLink>Show</ActionLink>}><PaddedContainer gutter="medium">Some content</PaddedContainer></Sidebar>
 ```
 
 Sidebar in Controlled mode.
 ```jsx
-const { Sidebar } = require('precise-ui');
+import { Sidebar, Button, PaddedContainer } from 'precise-ui';
 
 class SidebarContainer extends React.Component {
   constructor(props) {

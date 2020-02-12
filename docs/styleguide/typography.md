@@ -5,7 +5,8 @@ Library exports helper functions `getFontLineHeight`, `getFontSize`, `getFontWei
 ### Font weights:
 
 ```
-const { styled, getFontStyle } = require('precise-ui');
+import { getFontStyle } from 'precise-ui';
+import styled from 'styled-components';
 
 const fontWeights = ['light', 'regular', 'medium', 'bold'];
 
@@ -23,7 +24,8 @@ const StyledText = styled.p`
 ### Font sizes:
 
 ```
-const { styled, getFontStyle } = require('precise-ui');
+import { getFontStyle } from 'precise-ui';
+import styled from 'styled-components';
 
 const fontSizes = ['xSmall', 'small', 'medium', 'large', 'xLarge', 'xxLarge', 'xxxLarge'];
 

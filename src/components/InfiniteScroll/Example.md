@@ -7,7 +7,7 @@ By default, new items are loaded automatically, when end of screen is reached an
 User can optionaly provide `edgeOffset` prop, to tell component to start loading new items `X` pixels before it reaches the end. By default `loadItems` function is called only when end reached.
 
 ```jsx
-const { InfiniteScroll, Button, ListItem } = require('precise-ui');
+import { InfiniteScroll, Button, ListItem } from 'precise-ui';
 
 function getData() {
   return Array.apply(null, { length: 50 }).map((v, index) => (
@@ -34,7 +34,7 @@ const initialState = {
 With custom loading indicator.
 
 ```jsx
-const { InfiniteScroll, Button, ListItem } = require('precise-ui');
+import { InfiniteScroll, ProgressBar, Button, ListItem } from 'precise-ui';
 
 function getData() {
   return Array.apply(null, { length: 50 }).map((v, index) => (
@@ -43,7 +43,7 @@ function getData() {
 }
 
 function loadItems(offset) {
-  setTimeout(()=>setState({data: [...state.data, ...getData()]}), 1000)
+  setTimeout(() => setState({ data: [...state.data, ...getData()] }), 1000)
 }
 
 const initialState = {

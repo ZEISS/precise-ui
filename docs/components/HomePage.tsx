@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled, Headline, Icon, IconName, Button, BodyText, StackPanel, StackItem, colors } from '../../src';
 
 // @ts-ignore
-import Markdown from 'react-styleguidist/lib/rsg-components/Markdown';
+import Markdown from 'react-styleguidist/lib/client/rsg-components/Markdown';
 
 const HeadIcon = styled(Icon)`
   vertical-align: text-bottom;
@@ -77,8 +77,8 @@ function codeBlock(language: string, block: string) {
 
 const cb = '```';
 // edit via https://codepen.io/anon/pen/GzRYXd
-const installation = codeBlock('sh', 'npm i precise-ui');
-const dependencies = codeBlock('sh', 'npm i react@16 styled-components@2');
+const installation = codeBlock('bash', 'npm i precise-ui');
+const dependencies = codeBlock('bash', 'npm i react@16 styled-components@2');
 const usageExample = codeBlock(
   'jsx',
   `<span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;

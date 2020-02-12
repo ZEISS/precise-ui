@@ -3,7 +3,7 @@
 The autocomplete can be used in a very simple, non-interactive fashion.
 
 ```jsx
-const { Autocomplete } = require('precise-ui');
+import { Autocomplete } from 'precise-ui';
 
 <Autocomplete suggestions={['one', 'two', 'three']} defaultValue="five" />
 ```
@@ -13,7 +13,7 @@ const { Autocomplete } = require('precise-ui');
 The autocomplete component renders a textfield with an interactive list. The suggestions can be computed when the input changes.
 
 ```jsx
-const { Autocomplete, Button } = require('precise-ui');
+import { Autocomplete, Button } from 'precise-ui';
 
 const languages = [
   {

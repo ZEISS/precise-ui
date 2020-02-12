@@ -20,10 +20,9 @@ module.exports = {
   skipComponentsWithoutExample: true,
   pagePerSection: true,
   compilerConfig: {
-    transforms: {
-      dangerousTaggedTemplateString: true,
-    },
     objectAssign: 'Object.assign',
+    target: { ie: 11 },
+    transforms: { modules: false, dangerousTaggedTemplateString: true },
   },
   ribbon: {
     url: 'https://github.com/ZEISS/precise-ui',

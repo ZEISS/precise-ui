@@ -3,17 +3,19 @@
 The following colors are available. Feel free to change them.
 
 ```jsx
-const {
-  colors,
-  clipboardCopy,
-  notify,
-  themes,
-  Notifications,
-  Table,
-  TextField,
-  Flyout,
-  serializeColor,
-} = require('precise-ui');
+import {
+    colors,
+    clipboardCopy,
+    notify,
+    themes,
+    Notifications,
+    MetroInfoTile,
+    ColorPicker,
+    Table,
+    TextField,
+    Flyout,
+    serializeColor
+} from 'precise-ui';
 
 const isUi = m => /^ui[0-9]+$/.test(m);
 const isText = m => /^text[0-9]+$/.test(m);

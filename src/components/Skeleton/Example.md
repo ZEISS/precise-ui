@@ -5,7 +5,7 @@ The `Skeleton` component is quite flexible. It displays a low fidelity UI into w
 By default it has a pulsing animation running infinitely. You could also pause it and show only the `Sekeleton`.
 
 ```js { "props": { "data-skip": true } }
-const { Skeleton } = require('precise-ui');
+import { Skeleton } from 'precise-ui';
 
 const exampleWrapper = {
   display: 'flex',
@@ -27,7 +27,7 @@ const skeletonWrapper = {
 You can display many `Skeletons` to replicate rows or text.
 
 ```js { "props": { "data-skip": true } }
-const { Skeleton } = require('precise-ui');
+import { Skeleton } from 'precise-ui';
 
 const exampleWrapper = {
   display: 'flex',
@@ -37,7 +37,7 @@ const exampleWrapper = {
 const skeletonWrapper = {
   flex: '1 1 100%',
   padding: '10px',
-  alignSelf: 'flex-start',  
+  alignSelf: 'flex-start',
 };
 
 <div style={exampleWrapper}>
@@ -49,7 +49,7 @@ const skeletonWrapper = {
 You can also adapt it for circle elements.
 
 ```js { "props": { "data-skip": true } }
-const { Skeleton } = require('precise-ui');
+import { Skeleton } from 'precise-ui';
 
 <Skeleton width="100px" height="100px" isCircle />
 ```
@@ -59,7 +59,7 @@ const { Skeleton } = require('precise-ui');
 If you are using the `Card` component you could easily display it like this while loading.
 
 ```js { "props": { "data-skip": true } }
-const { CardBody, Skeleton } = require('precise-ui');
+import { Card, CardBody, Skeleton, Button, Image } from 'precise-ui';
 
 const exampleWrapper = {
   display: 'flex',
@@ -138,7 +138,7 @@ const imageStyle = {
 For more complex layouts it is up to you how to position the `Skeleton` elements.
 
 ```js { "props": { "data-skip": true } }
-const { Skeleton } = require('precise-ui');
+import { Skeleton, Button, Headline, IconLink } from 'precise-ui';
 
 const exampleWrapper = {
   display: 'flex',

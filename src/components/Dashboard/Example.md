@@ -3,7 +3,8 @@
 Using a dashboard with three tiles.
 
 ```jsx
-const { Dashboard } = require('precise-ui');
+import { Dashboard } from 'precise-ui';
+
 const style = {
   height: '100%',
   width: '100%',
@@ -29,7 +30,8 @@ const tiles = [
 The dashboard can also be used in a more static way using the `disabled` prop.
 
 ```jsx
-const { Dashboard } = require('precise-ui');
+import { Dashboard } from 'precise-ui';
+
 const style = {
   background: '#ccc',
   height: '100%',
@@ -50,7 +52,8 @@ const tiles = [
 What is missing so far is the ability to see upfront where the dragged tile is placed and what is the consequence for the layout. The `preview` prop does that.
 
 ```jsx
-const { Dashboard } = require('precise-ui');
+import { Dashboard } from 'precise-ui';
+
 const style = {
   height: '100%',
   width: '100%',
@@ -72,7 +75,8 @@ const tiles = [
 Showing the empty tiles is also possible. In this case we only need to use the `emptyTiles` prop.
 
 ```jsx
-const { Dashboard } = require('precise-ui');
+import { Dashboard } from 'precise-ui';
+
 const style = {
   height: '100%',
   width: '100%',
@@ -94,8 +98,8 @@ const tiles = [
 Example for 0 x 0 grid cell
 
 ```jsx
-const { Dashboard, Button, colors } = require('precise-ui');
-const styled = require('styled-components').default;
+import { Dashboard, Button, colors } from 'precise-ui';
+import styled from 'styled-components';
 
 const style = {
   height: '100%',
@@ -165,7 +169,7 @@ class App extends React.Component {
 The `Dashboard` tiles can also be dragged during operation without interferring with normal operations. Let's consider the following case where we want to display "Clicked" in the console only if we don't drag.
 
 ```jsx
-const { Dashboard } = require('precise-ui');
+import { Dashboard } from 'precise-ui';
 
 const style = {
   height: '100%',

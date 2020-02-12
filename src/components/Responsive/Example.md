@@ -3,7 +3,7 @@
 The `Responsive` component is a simple component the gives us the ability to react to screen changes in a declarative way.
 
 ```jsx
-const { Responsive } = require('precise-ui');
+import { Responsive } from 'precise-ui';
 
 <>
   <Responsive
@@ -44,8 +44,8 @@ const { Responsive } = require('precise-ui');
 Utils also exports `displayTo(ScreenSize | query), displayUpTo(ScreenSize), displayFrom(ScreenSize)` functions for styled components.
 
 ```jsx
-const styled = require('styled-components').default;
-const { displayTo, displayFrom, displayUpTo, ScreenSizeList } = require('precise-ui');
+import { displayTo, displayFrom, displayUpTo, ScreenSizeList } from 'precise-ui';
+import styled from 'styled-components';
 
 const StyledDivFromLarge = styled.div`
   ${displayFrom('large')`font-weight: bold;`};
@@ -83,7 +83,7 @@ const StyledDivCustom = styled.div`
   <p>
      Available screen sizes: <code>{JSON.stringify(ScreenSizeList)}</code>.
   </p>
-  
+
   <StyledDivFromLarge>It's bold on large screens and wider.</StyledDivFromLarge>
   <StyledDivUpToMedium>It's bold on medium screens and narrower.</StyledDivUpToMedium>
   <StyledDivMax>It's bold on max screens.</StyledDivMax>
@@ -99,7 +99,7 @@ In addition, utils exports `getWidthBreakpointsQuery({max, min})`.
 The function `getWidthBreakpointsQuery` creates media query.
 
 ```jsx
-const { getWidthBreakpointsQuery } = require('precise-ui');
+import { getWidthBreakpointsQuery } from 'precise-ui';
 
 <>
   <p>It's media query for screens between 200px and 500px: <b>{getWidthBreakpointsQuery({min: 200, max: 501})}</b></p>

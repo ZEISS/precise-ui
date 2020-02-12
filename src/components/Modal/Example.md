@@ -3,7 +3,7 @@
 Passive modal example with optional label and mandatory title.
 
 ```jsx
-const { Button, Modal, ModalBody, ModalHeader } = require('precise-ui');
+import { Button, Modal, ModalBody, ModalHeader } from 'precise-ui';
 
 class ModalConsumer extends React.Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class ModalConsumer extends React.Component {
 The modal itself also can be easily expanded beyond the screen. It then automatically goes into scrolling.
 
 ```jsx
-const { Button, Modal, ModalBody, ModalHeader } = require('precise-ui');
+import { Button, Modal, ModalBody, ModalHeader } from 'precise-ui';
 
 class ModalConsumer extends React.Component {
   constructor(props) {
@@ -99,7 +99,7 @@ class ModalConsumer extends React.Component {
 A simple confirmation modal can also be displayed.
 
 ```jsx
-const { Modal, ModalBody, ModalHeader, ModalFooter, Button } = require('precise-ui');
+import { Modal, ModalBody, ModalHeader, ModalFooter, Button } from 'precise-ui';
 
 class ModalConsumer extends React.Component {
   constructor(props) {
@@ -147,7 +147,7 @@ class ModalConsumer extends React.Component {
 Modal with custom content for displaying, e.g., some tutorial screens.
 
 ```jsx
-const { Modal, ModalBody, ModalHeader, ModalFooter, Swiper, Button, Icon } = require('precise-ui');
+import { Modal, ModalBody, ModalHeader, ModalFooter, Swiper, Button, Icon } from 'precise-ui';
 
 const CustomBulletsContainer = ({ children, ...rest }) => {
   const style = {
@@ -238,7 +238,7 @@ class ModalConsumer extends React.Component {
 The modal is compatible with the `Form` component.
 
 ```jsx
-const { Button, TextField, Modal, ModalBody, ModalHeader, ModalFooter, Form } = require('precise-ui');
+import { Button, TextField, Modal, ModalBody, ModalHeader, ModalFooter, Form } from 'precise-ui';
 
 class ModalConsumer extends React.Component {
   constructor(props) {
@@ -289,7 +289,7 @@ class ModalConsumer extends React.Component {
 Modal with custom confirmation on close.
 
 ```jsx { "props": { "data-skip": true } }
-const { Button, Modal, ModalBody, ModalHeader } = require('precise-ui');
+import { Button, Modal, ModalBody, ModalHeader } from 'precise-ui';
 
 class ModalConsumer extends React.Component {
   constructor(props) {

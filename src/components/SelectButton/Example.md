@@ -3,7 +3,7 @@
 The `SelectButton` provides a simple way to have a simple combination representing the intersection between `Button` and `Dropdown`.
 
 ```jsx
-const { SelectButton } = require('precise-ui');
+import { SelectButton } from 'precise-ui';
 
 <SelectButton data={['First', 'Second', 'Third']} onChange={e => alert(e.value)} />
 ```
@@ -13,7 +13,8 @@ const { SelectButton } = require('precise-ui');
 Like other `data` displaying components this one allows us to specify how an item should be rendered. We only need to supply a list consisting of a `key` and `content` prop. The `key` must be unique, the `content` determines the item to display.
 
 ```jsx
-const { styled, SelectButton } = require('precise-ui');
+import { SelectButton } from 'precise-ui';
+import styled from 'styled-components';
 
 const Item = styled.div`
   padding: 0.5em;

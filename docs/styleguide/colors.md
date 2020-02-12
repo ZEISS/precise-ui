@@ -3,7 +3,8 @@
 The following generic colors are available.
 
 ```jsx
-const { colors, clipboardCopy, notify, Notifications, invertColor, MetroInfoTile, StackPanel, StackPanelDirection } = require('precise-ui');
+import { colors, clipboardCopy, notify, Notifications, invertColor, MetroInfoTile, StackPanel, StackPanelDirection } from 'precise-ui';
+
 const namedColors = Object.keys(colors.all);
 
 const ColorTile = ({ colorName, color }) => typeof color === 'string' ? (

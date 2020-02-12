@@ -3,17 +3,17 @@
 The builder can be used with the static array of suggestions.
 
 ```jsx
-const { AutocompleteTagBuilder } = require('precise-ui');
-let suggestions =  ['one', 'two', 'three', 'four'];
+import { AutocompleteTagBuilder } from 'precise-ui';
 
-<AutocompleteTagBuilder suggestions={suggestions}/>
+<AutocompleteTagBuilder suggestions={['one', 'two', 'three', 'four']}/>
 ```
 **Controlled mode**
 
 In controlled mode we can also prevent from value or input value changes.
 
 ```jsx
-const { AutocompleteTagBuilder } = require('precise-ui');
+import { AutocompleteTagBuilder } from 'precise-ui';
+
 const suggestions =  ['one', 'two', 'three', 'four'];
 
 class App extends React.Component {
@@ -48,10 +48,10 @@ class App extends React.Component {
 ```
 **Dynamic Suggestions**
 
-The suggestions can be computed when the input changes. 
+The suggestions can be computed when the input changes.
 
 ```jsx
-const { AutocompleteTagBuilder, Button } = require('precise-ui');
+import { AutocompleteTagBuilder, Button } from 'precise-ui';
 
 const languages = [
   {
@@ -182,8 +182,7 @@ class App extends React.Component {
 **Form example**
 
 ```jsx
-const { Form, Button, TextField, AutocompleteTagBuilder } = require('precise-ui');
-
+import { Form, Button, TextField } from 'precise-ui';
 
 <Form onSubmit={e => alert(JSON.stringify(e.data))}>
   <div>
@@ -202,11 +201,9 @@ const { Form, Button, TextField, AutocompleteTagBuilder } = require('precise-ui'
 Here you can see a demo of custom tag building with help of `tagRenderer` method.
 
 ```jsx
-const { AutocompleteTagBuilder } = require('precise-ui');
+import { AutocompleteTagBuilder, Button } from 'precise-ui';
 
 const tagRenderer = e => (<Button type={e.index % 2 === 0 ? "primary" : "secondary"}>{e.item}</Button>);
 
-let suggestions =  ['one', 'two', 'three', 'four'];
-
-<AutocompleteTagBuilder	suggestions={suggestions} tagRenderer={tagRenderer} />
+<AutocompleteTagBuilder	suggestions={['one', 'two', 'three', 'four']} tagRenderer={tagRenderer} />
 ```

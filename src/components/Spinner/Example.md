@@ -3,7 +3,7 @@
 A simple loading spinner in all different sizes.
 
 ```jsx
-const { Spinner } = require('precise-ui');
+import { Spinner } from 'precise-ui';
 
 <table>
   <tbody>
@@ -28,7 +28,7 @@ const { Spinner } = require('precise-ui');
 Labels are supported as children, which align to the chosen size.
 
 ```jsx
-const { Spinner } = require('precise-ui');
+import { Spinner } from 'precise-ui';
 
 <table>
   <tbody>
@@ -53,7 +53,7 @@ const { Spinner } = require('precise-ui');
 By design, the loading spinner is always placed in the center of its occupied area.
 
 ```jsx
-const { Spinner, Icon } = require('precise-ui');
+import { Spinner, Icon } from 'precise-ui';
 
 <Spinner>
   Preparing with <Icon name="Favorite" color="red" /> ...

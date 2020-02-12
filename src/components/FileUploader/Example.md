@@ -5,7 +5,7 @@
 The component sends events on file selection to start upload and receives events on success, error, and progress events. All these events are available via the `onChange` event. Moreover, it is possible to then be notified only about events from particular files.
 
 ```jsx
-const { FileUploader } = require('precise-ui');
+import { FileUploader } from 'precise-ui';
 
 function onChange({ files }) {
   files.forEach(file => {
@@ -27,7 +27,8 @@ function onChange({ files }) {
 `FileUploader` can accept custom event object in case of several instances of `FileUploaderDetails` were created. For more details see `FileUploaderDetails` component example.
 
 ```jsx
-const { FileUploader, SimpleEventManager, FileUploaderDetails } = require('precise-ui');
+import { FileUploader, SimpleEventManager, FileUploaderDetails } from 'precise-ui';
+
 const myEventManager = new SimpleEventManager();
 
 <FileUploader events={myEventManager} multiple onChange={(e) => console.log(e)}>
@@ -40,7 +41,7 @@ const myEventManager = new SimpleEventManager();
 Even better, the `FileUploader` allows to be used decoupled from the React tree. By using an explicit `UploadData` instance we can make it happen. Compare the two versions.
 
 ```jsx
-const { Button, FileUploader, UploadData } = require('precise-ui');
+import { FileUploader, Button, UploadData } from 'precise-ui';
 
 const customData = new UploadData();
 customData.on('ready', () => console.log('All ready'));

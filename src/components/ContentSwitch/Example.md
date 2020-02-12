@@ -3,7 +3,7 @@
 Some basic `ContentSwitch` usage example.
 
 ```jsx
-const { ContentSwitch, TabPage } = require('precise-ui');
+import { ContentSwitch, TabPage } from 'precise-ui';
 
 <ContentSwitch>
   <TabPage header="First">
@@ -24,7 +24,7 @@ const { ContentSwitch, TabPage } = require('precise-ui');
 The `ContentSwitch` component is also responsive. As show in the example below, switch buttons which are overflowing the available space, are moved into the Flyout.
 
 ```jsx
-const { ContentSwitch, TabPage } = require('precise-ui');
+import { ContentSwitch, TabPage } from 'precise-ui';
 
 const pages = [];
 
@@ -44,7 +44,7 @@ for (var i = 0; i < 20; i++) {
 The content switch can be also used in vertical orientation.
 
 ```jsx
-const { ContentSwitch, TabPage } = require('precise-ui');
+import { ContentSwitch, TabPage } from 'precise-ui';
 
 <ContentSwitch orientation="vertical">
   <TabPage header="First">
