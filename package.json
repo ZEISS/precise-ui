@@ -21,8 +21,7 @@
     "build:demo": "cross-env NODE_ENV=production styleguidist build",
     "build:demo:test": "cross-env NODE_ENV=test styleguidist build",
     "webpack:analyzer": "npm run build:bundle -- --config ./tools/bundle-analyzer.js",
-    "icongen": "node tools/convert-icons.js",
-    "prepush": "npm run test & npm run build"
+    "icongen": "node tools/convert-icons.js"
   },
   "keywords": [
     "react",
@@ -121,5 +120,10 @@
     "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run test & npm run build"
+    }
   }
 }
