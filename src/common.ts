@@ -129,6 +129,21 @@ export interface ButtonThemeSettings {
   lineHeightSmall: string;
 }
 
+export interface ActionButtonThemeSettings {
+  /**
+   * Color of icon background.
+   */
+  iconBackground: string;
+  /**
+   * Color of icon background when hovered.
+   */
+  hoverIconBackground: string;
+  /**
+   * Color of icon background when focused.
+   */
+  focusIconBackground: string;
+}
+
 export type PreciseThemeColors = {
   /**
    * Theme color UI0.
@@ -221,6 +236,10 @@ export interface PreciseFullTheme extends PreciseThemeColors {
    * Colors of the secondary button.
    */
   buttonSecondary: ButtonThemeSettings;
+  /**
+   * Colors of the warning action button.
+   */
+  actionButtonWarning: ActionButtonThemeSettings;
   /**
    * Position of the icon when place inside a button.
    */
