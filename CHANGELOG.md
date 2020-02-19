@@ -1,7 +1,7 @@
 # Precise UI Changelog
 
 ## 1.1.1
-- Added new theme object `ActionButtonWarning` (this is required by new Pharos `ActionButton` component)
+- Added new theme object `actionButtonWarning` (this is required by new Pharos `ActionButton` component)
 
 ## 1.1.0
 
