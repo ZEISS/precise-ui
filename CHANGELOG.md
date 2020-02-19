@@ -1,5 +1,8 @@
 # Precise UI Changelog
 
+## 1.1.1
+- Added new theme object for `ActionButtonWarning` (that is required by new Pharos `ActionButton` component)
+
 ## 1.1.0
 
 - Add `borderless` and `tagRenderer` props to AutocompleteTagBuilder
