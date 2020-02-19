@@ -6,6 +6,7 @@ import {
   FlyoutStyling,
   MetroInfoTileStyling,
   AccordionCardStyling,
+  ActionButtonThemeSettings,
 } from './common';
 import { distance } from './distance';
 import { remCalc } from './utils/remCalc';
@@ -64,6 +65,12 @@ export const buttonSecondary: ButtonThemeSettings = {
   lineHeightSmall: '16px',
 };
 
+export const actionButtonWarning: ActionButtonThemeSettings = {
+  iconBackground: colors.purpleRed,
+  hoverIconBackground: colors.purpleRed5,
+  focusIconBackground: colors.purpleRed6,
+};
+
 export const flyout: FlyoutStyling = {
   maxHeight: '600px',
   maxWidth: '300px',
@@ -110,6 +117,7 @@ export const light: PreciseFullTheme = {
   text7: colors.white,
   buttonPrimary,
   buttonSecondary,
+  actionButtonWarning,
   buttonIconPosition: 'right',
   primary: colors.pacificBlue,
   secondary: colors.lighterGray,
