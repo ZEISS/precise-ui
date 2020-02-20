@@ -1,5 +1,8 @@
 # Precise UI Changelog
 
+## 1.1.2
+- Fix TagBuilder not deleting tags properly with backspace (#223)
+
 ## 1.1.1
 - Added new theme object `actionButtonWarning`
 
@@ -8,7 +11,6 @@
 - Add `borderless` and `tagRenderer` props to AutocompleteTagBuilder
 - Remove refocus of component(Autocomplete) on every value change, remove corresponding test
 - Enable `date-fns` tree-shaking
-- Fix TagBuilder not deleting tags properly with backspace (#223)
 
 ## 1.0.2
 - Fix opening file selection of `FileUploader` for single file upload (#243)
