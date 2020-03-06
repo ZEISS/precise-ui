@@ -1,5 +1,8 @@
 # Precise UI Changelog
 
+## 1.1.3
+- Add new icons
+
 ## 1.1.2
 - Fix TagBuilder not deleting tags properly with backspace (#223)
 
