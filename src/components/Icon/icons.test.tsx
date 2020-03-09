@@ -685,4 +685,28 @@ describe('Generated icons', () => {
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render PDFFile icon', () => {
+    const Component = icons.PDFFile;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render PDFFileOutline icon', () => {
+    const Component = icons.PDFFileOutline;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Video icon', () => {
+    const Component = icons.Video;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render VideoOutline icon', () => {
+    const Component = icons.VideoOutline;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
