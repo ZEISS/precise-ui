@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const createInnerJsxTransformer = require('typescript-plugin-inner-jsx').default;
+
 const env = process.env.NODE_ENV || 'development';
 const develop = env === 'development';
 const test = env === 'test';
@@ -68,7 +69,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /node_modules[\/\\]((ansi-styles|strip-ansi|ansi-regex|react-dev-utils|chalk|typescript-plugin-inner-jsx)[\/\\]).*/,
+        test: /node_modules[\/\\]((date-fns|ansi-styles|strip-ansi|ansi-regex|react-dev-utils|chalk|typescript-plugin-inner-jsx)[\/\\]).*/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -107,6 +108,9 @@ module.exports = {
         test: /\.ts$/,
         exclude: /node_modules/,
         loader: 'awesome-typescript-loader',
+        options: {
+          silent: true
+        }
       },
       {
         enforce: 'pre',

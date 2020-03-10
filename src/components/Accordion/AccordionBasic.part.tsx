@@ -62,6 +62,7 @@ const AccordionItemHeaderContainer = styled('div')<AccordionItemProps>`
 
 const AccordionItemHeader = styled.div`
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ${themed(({ theme }) => theme.accordionPadding)};
@@ -93,16 +94,21 @@ export class AccordionBasic extends React.Component<AccordionProps, AccordionBas
     };
   }
 
+  componentDidMount() {
+    const { defaultSelectedIndex } = this.props;
+    if (defaultSelectedIndex) {
+      this.setState({
+        selectedIndexes: normalizeIndex(defaultSelectedIndex),
+      });
+    }
+  }
+
   static getDerivedStateFromProps(props: AccordionProps, state: AccordionBasicState) {
-    const { selectedIndex, defaultSelectedIndex } = props;
+    const { selectedIndex } = props;
 
     if (state.controlled && selectedIndex !== undefined) {
       return {
         selectedIndexes: normalizeIndex(selectedIndex),
-      };
-    } else if (defaultSelectedIndex !== undefined) {
-      return {
-        selectedIndexes: normalizeIndex(defaultSelectedIndex),
       };
     }
 

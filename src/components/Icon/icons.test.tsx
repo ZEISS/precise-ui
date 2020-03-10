@@ -26,14 +26,20 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render Bookmark icon', () => {
+    const Component = icons.Bookmark;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Book icon', () => {
     const Component = icons.Book;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render Bookmark icon', () => {
-    const Component = icons.Bookmark;
+  it('should render Build icon', () => {
+    const Component = icons.Build;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -146,6 +152,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render LabelOutline icon', () => {
+    const Component = icons.LabelOutline;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render Language icon', () => {
     const Component = icons.Language;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -224,6 +236,12 @@ describe('Generated icons', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render ViewCarousel icon', () => {
+    const Component = icons.ViewCarousel;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render ViewColumn icon', () => {
     const Component = icons.ViewColumn;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
@@ -274,6 +292,12 @@ describe('Generated icons', () => {
 
   it('should render Email icon', () => {
     const Component = icons.Email;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render MailOutline icon', () => {
+    const Component = icons.MailOutline;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -346,6 +370,12 @@ describe('Generated icons', () => {
 
   it('should render Sort icon', () => {
     const Component = icons.Sort;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Unarchive icon', () => {
+    const Component = icons.Unarchive;
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -637,5 +667,46 @@ describe('Generated icons', () => {
     const wrapper = enzyme.mount(<Component width="12" height="12" />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render FitToWidth icon', () => {
+    const Component = icons.FitToWidth;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render FitToHeight icon', () => {
+    const Component = icons.FitToHeight;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Page icon', () => {
+    const Component = icons.Page;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render PDFFile icon', () => {
+    const Component = icons.PDFFile;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render PDFFileOutline icon', () => {
+    const Component = icons.PDFFileOutline;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render Video icon', () => {
+    const Component = icons.Video;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render VideoOutline icon', () => {
+    const Component = icons.VideoOutline;
+    const wrapper = enzyme.mount(<Component width="12" height="12" />);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
-  

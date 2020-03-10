@@ -38,6 +38,7 @@ export * from './GradientContainer';
 export * from './Grid';
 export * from './GridArea';
 export * from './Headline';
+export * from './Highlight';
 export * from './Icon';
 export * from './IconLink';
 export * from './Image';

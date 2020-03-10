@@ -1,8 +1,35 @@
 # Precise UI Changelog
 
+## 1.1.3
+- Add new icons
+
+## 1.1.2
+- Fix TagBuilder not deleting tags properly with backspace (#223)
+
+## 1.1.1
+- Added new theme object `actionButtonWarning`
+
+## 1.1.0
+
+- Add `borderless` and `tagRenderer` props to AutocompleteTagBuilder
+- Remove refocus of component(Autocomplete) on every value change, remove corresponding test
+- Enable `date-fns` tree-shaking
+
+## 1.0.2
+- Fix opening file selection of `FileUploader` for single file upload (#243)
+
+## 1.0.1
+
+- Fix opening `UploaderProgressDetails` behind modal in IE (#225)
+
+## 1.0.0
+
+- Bumped Precise UI to major version 1. From now on, Precise UI follows **semver** guidelines.
+- Fix Accordion not responding when defaultSelectedIndex is set
+
 ## 0.8.3
 
-- `Skeleton` component added
+- Added `Skeleton` component
 - Added onBeforeClose event to Modal
 - Added appendTagOnBlur prop to TagBuilder
 - Added onSort callback to Table
@@ -11,6 +38,13 @@
 - Fixed: Integration tests are always executed if repository is stored in a location with `src` in it's path
 - Fixed `Autocomplete` that blocked `InteractiveList` automatic position determination
 - Fixed `InteractiveList` position in `Autocomplete` component
+- Replaced `forEach` with `Array.from` in `ContentSwitchInt` to fix displaying content switch for IE 11
+- Fixed(Blocker): Closing modal when using scrollbars (#203)
+- Fixed: DropdownMenu list has no width when expanded on IE11 (#201)
+- Fix(Accordion): header strips spaces when html tags are used
+- Fixed missing onDataClick handler for Table component in mobile view (#214)
+- Add Material Icons: 'Build', 'ViewCarousel', 'MailOutline', 'LabelOutline', 'Unarchive'
+- Add new Icons to match design system
 
 ## 0.8.2
 
@@ -30,7 +64,7 @@
 ## 0.8.0
 
 - Implement new breakpoints and screen sizes
-- Removed `SASS` support 
+- Removed `SASS` support
 - Fixed: Modal closes on drag and release cursor outside modal (#152)
 - Improved `Responsive` component to avoid using of combined screen sizes
 - Fixed(DateField): Use valid date format as a default  - `yyyy-MM-dd` instead of `dd-MM-yyyy`
@@ -45,7 +79,7 @@
 - Fixed horizontal padding for InputInfo and InputError
 - Hide info element on open Autocomplete list
 - Fixed overview pagination elements' layout in IE 11
-- Fixed display of label, placeholder and info on AutocompleteTagBuilder 
+- Fixed display of label, placeholder and info on AutocompleteTagBuilder
 - Fixed toaster action click area
 - Fixed two cross(clear) buttons displayed inside TextField in IE 11
 - Fixed `Styled Input Box` flex layout for IE 11

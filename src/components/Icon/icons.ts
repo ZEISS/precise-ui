@@ -62,6 +62,17 @@ export const Announcement = <SvgIconConstructor>function(props: SvgIconProps) {
 Announcement.displayName = 'Announcement';
 Announcement.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Bookmark = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', { d: 'M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z' }),
+  );
+};
+
+Bookmark.displayName = 'Bookmark';
+Bookmark.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Book = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -75,16 +86,19 @@ export const Book = <SvgIconConstructor>function(props: SvgIconProps) {
 Book.displayName = 'Book';
 Book.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Bookmark = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Build = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
-    React.createElement('path', { d: 'M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z' }),
+    React.createElement('path', {
+      d:
+        'M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z',
+    }),
   );
 };
 
-Bookmark.displayName = 'Bookmark';
-Bookmark.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+Build.displayName = 'Build';
+Build.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Cached = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -320,6 +334,20 @@ export const Label = <SvgIconConstructor>function(props: SvgIconProps) {
 Label.displayName = 'Label';
 Label.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const LabelOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16zM16 17H5V7h11l3.55 5L16 17z',
+    }),
+  );
+};
+
+LabelOutline.displayName = 'LabelOutline';
+LabelOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Language = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -499,6 +527,17 @@ export const VerifiedUser = <SvgIconConstructor>function(props: SvgIconProps) {
 VerifiedUser.displayName = 'VerifiedUser';
 VerifiedUser.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const ViewCarousel = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', { d: 'M7 19h10V4H7v15zm-5-2h4V6H2v11zM18 6v11h4V6h-4z' }),
+  );
+};
+
+ViewCarousel.displayName = 'ViewCarousel';
+ViewCarousel.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const ViewColumn = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -609,6 +648,20 @@ export const Email = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Email.displayName = 'Email';
 Email.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const MailOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z',
+    }),
+  );
+};
+
+MailOutline.displayName = 'MailOutline';
+MailOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Phone = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -748,6 +801,20 @@ export const Sort = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Sort.displayName = 'Sort';
 Sort.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Unarchive = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M20.55 5.22l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.15.55L3.46 5.22C3.17 5.57 3 6.01 3 6.5V19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.49-.17-.93-.45-1.28zM12 9.5l5.5 5.5H14v2h-4v-2H6.5L12 9.5zM5.12 5l.82-1h12l.93 1H5.12z',
+    }),
+  );
+};
+
+Unarchive.displayName = 'Unarchive';
+Unarchive.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const LocationSearching = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -1086,7 +1153,9 @@ export const Fullscreen = <SvgIconConstructor>function(props: SvgIconProps) {
     'svg',
     props,
     React.createElement('path', {
-      d: 'M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z',
+      transform: 'translate(11.919596, 11.919596) rotate(-45.000000) translate(-11.919596, -11.919596)',
+      d:
+        'M7.11159595,12.7195959 L7.11159595,15.1195959 L3.91959595,11.9195959 L7.11159595,8.71959595 L7.11159595,11.1195959 L16.7275959,11.1195959 L16.7275959,8.71959595 L19.9195959,11.9195959 L16.7275959,15.1195959 L16.7275959,12.7195959 L7.11159595,12.7195959 Z',
     }),
   );
 };
@@ -1098,7 +1167,11 @@ export const FullscreenExit = <SvgIconConstructor>function(props: SvgIconProps) 
   return React.createElement(
     'svg',
     props,
-    React.createElement('path', { d: 'M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z' }),
+    React.createElement('path', {
+      transform: 'translate(12.220116, 12.220116) rotate(-45.000000) translate(-12.220116, -12.220116)',
+      d:
+        'M8.85261633,11.4701163 L3.59511633,11.4701163 L3.59511633,12.9701163 L8.85261633,12.9701163 L8.85261633,15.2201163 L11.8451163,12.2201163 L8.85261633,9.22011633 L8.85261633,11.4701163 L8.85261633,11.4701163 Z M15.5876163,15.2201163 L15.5876163,12.9701163 L20.8451163,12.9701163 L20.8451163,11.4701163 L15.5876163,11.4701163 L15.5876163,9.22011633 L12.5951163,12.2201163 L15.5876163,15.2201163 L15.5876163,15.2201163 Z',
+    }),
   );
 };
 
@@ -1364,3 +1437,101 @@ export const Star = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Star.displayName = 'Star';
 Star.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const FitToWidth = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M14,4 L18.8,8.8 L18.8,18.4 C18.8,19.28 18.08,20 17.2,20 L17.2,20 L7.592,20 C6.712,20 6,19.28 6,18.4 L6,18.4 L6,5.6 C6,4.72 6.72,4 7.6,4 L7.6,4 L14,4 Z M8.68968421,10.6666667 L6.67368421,12.6666667 L8.68968421,14.6666667 L8.68968421,13.1666667 L11.5578947,13.1666667 L11.5578947,12.1666667 L8.68968421,12.1666667 L8.68968421,10.6666667 Z M16.2787368,10.6666667 L16.2787368,12.1666667 L13.4105263,12.1666667 L13.4105263,13.1666667 L16.2787368,13.1666667 L16.2787368,14.6666667 L18.2947368,12.6666667 L16.2787368,10.6666667 Z',
+    }),
+  );
+};
+
+FitToWidth.displayName = 'FitToWidth';
+FitToWidth.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const FitToHeight = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M14,4 L18.8,8.8 L18.8,18.4 C18.8,19.28 18.08,20 17.2,20 L17.2,20 L7.592,20 C6.712,20 6,19.28 6,18.4 L6,18.4 L6,5.6 C6,4.72 6.72,4 7.6,4 L7.6,4 L14,4 Z M12.8,13.3333333 L11.8,13.3333333 L11.8,16.8383333 L10.3,16.8383333 L12.3,18.8333333 L14.3,16.8383333 L12.8,16.8383333 L12.8,13.3333333 Z M12.3,5.33333333 L10.3,7.32833333 L11.8,7.32833333 L11.8,10.8333333 L12.8,10.8333333 L12.8,7.32833333 L14.3,7.32833333 L12.3,5.33333333 Z',
+    }),
+  );
+};
+
+FitToHeight.displayName = 'FitToHeight';
+FitToHeight.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Page = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M14,4 L7.6,4 C6.72,4 6,4.72 6,5.6 L6,18.4 C6,19.28 6.712,20 7.592,20 L17.2,20 C18.08,20 18.8,19.28 18.8,18.4 L18.8,8.8 L14,4 Z',
+    }),
+  );
+};
+
+Page.displayName = 'Page';
+Page.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const PDFFile = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M23.333 3.333l10 10v20c0 1.834-1.5 3.334-3.333 3.334H9.983c-1.833 0-3.316-1.5-3.316-3.334l.016-26.666c0-1.834 1.484-3.334 3.317-3.334h13.333zM14.386 25.33h-2.17V32h1.57v-2.42h.59c.5 0 .5 0 .92-.135.42-.135.42-.135.73-.4s.31-.265.48-.665c.17-.4.17-.4.17-.93 0-.52 0-.52-.17-.92s-.17-.4-.475-.665c-.305-.265-.305-.265-.725-.4-.315-.101-.315-.101-.675-.127l-.245-.008zm5.446 0h-2.06V32h2.11c.74 0 .74 0 1.31-.265.57-.265.57-.265.96-.72.39-.455.39-.455.59-1.07.2-.615.2-.615.2-1.325 0-.75 0-.75-.195-1.355s-.195-.605-.58-1.035c-.385-.43-.385-.43-.97-.665-.488-.196-.488-.196-1.11-.228l-.255-.007zm8.136 0h-3.72V32h1.59v-2.77h2.03v-1.19h-2.03v-1.5h2.13v-1.21zm-8.266 1.21c.47 0 .47 0 .78.165.31.165.31.165.49.45.18.285.18.285.25.665.07.38.07.38.07.8 0 .42 0 .42-.075.81-.075.39-.075.39-.255.695-.18.305-.18.305-.48.485s-.3.18-.74.18h-.38v-4.25h.34zm-5.566-.05c.45 0 .45 0 .69.255.24.255.24.255.24.705 0 .42 0 .42-.215.69-.215.27-.215.27-.675.27h-.4v-1.92h.36zM21.666 15V5.833L30.834 15h-9.166z',
+    }),
+  );
+};
+
+PDFFile.displayName = 'PDFFile';
+PDFFile.defaultProps = { width: '24', height: '24', viewBox: '0 0 40 40' };
+
+export const PDFFileOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M23.333 3.333H10c-1.833 0-3.317 1.5-3.317 3.334l-.016 26.666c0 1.834 1.483 3.334 3.316 3.334H30c1.833 0 3.333-1.5 3.333-3.334v-20l-10-10zM10 33.333V6.667h11.667V15H30v18.333H10zM13.786 32v-2.42h.59c.5 0 .5 0 .92-.135.42-.135.42-.135.73-.4s.31-.265.48-.665c.17-.4.17-.4.17-.93 0-.52 0-.52-.17-.92s-.17-.4-.475-.665c-.305-.265-.305-.265-.725-.4s-.42-.135-.92-.135h-2.17V32h1.57zm.39-3.59h-.4v-1.92h.36c.45 0 .45 0 .69.255.24.255.24.255.24.705 0 .42 0 .42-.215.69-.215.27-.215.27-.675.27zM19.882 32c.74 0 .74 0 1.31-.265.57-.265.57-.265.96-.72.39-.455.39-.455.59-1.07.2-.615.2-.615.2-1.325 0-.75 0-.75-.195-1.355s-.195-.605-.58-1.035c-.385-.43-.385-.43-.97-.665-.585-.235-.585-.235-1.365-.235h-2.06V32zm-.14-1.21h-.38v-4.25h.34c.47 0 .47 0 .78.165.31.165.31.165.49.45.18.285.18.285.25.665.07.38.07.38.07.8 0 .42 0 .42-.075.81-.075.39-.075.39-.255.695-.18.305-.18.305-.48.485s-.3.18-.74.18zM25.838 32v-2.77h2.03v-1.19h-2.03v-1.5h2.13v-1.21h-3.72V32h1.59z',
+    }),
+  );
+};
+
+PDFFileOutline.displayName = 'PDFFileOutline';
+PDFFileOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 40 40' };
+
+export const Video = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M19.1780822,34.1780822 C27.4623534,34.1780822 34.1780822,27.4623534 34.1780822,19.1780822 C34.1780822,10.8938109 27.4623534,4.17808219 19.1780822,4.17808219 C10.8938109,4.17808219 4.17808219,10.8938109 4.17808219,19.1780822 C4.17808219,27.4623534 10.8938109,34.1780822 19.1780822,34.1780822 Z M15.8447489,12.5114155 L25.8447489,19.061799 L15.8447489,25.8447489 L15.8447489,12.5114155 Z',
+    }),
+  );
+};
+
+Video.displayName = 'Video';
+Video.defaultProps = { width: '24', height: '24', viewBox: '0 0 40 40' };
+
+export const VideoOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M19.1780822,4.17808219 C27.4623534,4.17808219 34.1780822,10.8938109 34.1780822,19.1780822 C34.1780822,27.4623534 27.4623534,34.1780822 19.1780822,34.1780822 C10.8938109,34.1780822 4.17808219,27.4623534 4.17808219,19.1780822 C4.17808219,10.8938109 10.8938109,4.17808219 19.1780822,4.17808219 Z M19.1780822,7.51141553 C12.7347601,7.51141553 7.51141553,12.7347601 7.51141553,19.1780822 C7.51141553,25.6214043 12.7347601,30.8447489 19.1780822,30.8447489 C25.6214043,30.8447489 30.8447489,25.6214043 30.8447489,19.1780822 C30.8447489,12.7347601 25.6214043,7.51141553 19.1780822,7.51141553 Z M15.8447489,12.5114155 L25.8447489,19.061799 L15.8447489,25.8447489 L15.8447489,12.5114155 Z',
+    }),
+  );
+};
+
+VideoOutline.displayName = 'VideoOutline';
+VideoOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 40 40' };

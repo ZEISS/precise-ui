@@ -94,7 +94,7 @@ const ListItemInnerContainer = styled.div`
 `;
 
 const ListItemContent = styled.div`
-  flex: 1 0 0px;
+  width: 100%;
 `;
 
 const ListItemContentPadding = styled('div')<ListItemContentProps>`
