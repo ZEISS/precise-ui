@@ -1,5 +1,8 @@
 # Precise UI Changelog
 
+## 1.1.4
+- Add ability to display the files list under the File Uploader
+
 ## 1.1.3
 - Add new icons
 
