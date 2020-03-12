@@ -329,7 +329,7 @@ export class FileUploader extends React.Component<FileUploaderProps> {
         onOpen={this.fileSelect}
         message={message}
         {...additionalProps}>
-        >{children}
+        {children}
       </Dropzone>
     );
   }
