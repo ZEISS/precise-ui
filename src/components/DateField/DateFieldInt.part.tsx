@@ -139,7 +139,7 @@ const excludedReactDatePickerProps = {
 };
 
 export interface DatePickerOnChangeEvent extends InputChangeEvent<string> {
-  date: Date;
+  date?: Date;
 }
 
 export interface DateFieldBasicProps extends FormContextProps, TextInputProps {
@@ -175,7 +175,7 @@ export type DateFieldProps = DateFieldBasicProps &
 
 interface DateFieldState {
   value: string;
-  date: Date;
+  date?: Date;
   error?: React.ReactChild;
 }
 
@@ -234,8 +234,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
 
   private changeValue: ReactDatePickerProps['onChange'] = inputDate => {
     const { dateFormat = DefaultDateFormat, locale } = this.props;
-    const date = inputDate || new Date();
-
+    const date = inputDate || undefined;
     const value = safeDateFormat(date, {
       dateFormat,
       locale,
@@ -256,10 +255,10 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
 
   private parseDate = (value: string) => {
     const { locale, dateFormat = DefaultDateFormat, strictParsing } = this.props;
-    return parseDate(value, dateFormat, locale, strictParsing) || new Date();
+    return parseDate(value, dateFormat, locale, strictParsing) || undefined;
   };
 
-  private change = (date: Date, value: string) => {
+  private change = (date: Date | undefined, value: string) => {
     const { onChange, name = '', form } = this.props;
 
     if (!this.valueControlled) {
