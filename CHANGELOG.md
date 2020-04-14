@@ -1,5 +1,8 @@
 # Precise UI Changelog
 
+## 1.2.0
+- Add the ability to clean datetimepicker
+
 ## 1.1.4
 - Add ability to display the files list under the File Uploader
 
