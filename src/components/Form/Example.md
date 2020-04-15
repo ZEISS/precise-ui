@@ -137,8 +137,8 @@ The `Form` with validation rules
 ```jsx
 const { Form, Button, TextField } = require('precise-ui');
 
-<Form 
-  onSubmit={e => alert(JSON.stringify(e))} 
+<Form
+  onSubmit={e => alert(JSON.stringify(e))}
   validationRules={{
     first: (value) => value && value.length > 10 ? 'Should be less than 10' : undefined,
     last: () => 'Always some error',
@@ -160,3 +160,33 @@ const { Form, Button, TextField } = require('precise-ui');
   </div>
 </Form>
 ```
+
+**Using Prompt with Form**
+
+When form has changes, it is possible to make a prompt, if user wants to leave the page without submitting the form. `Form` component has built-in `Prompt` component.
+
+Simple way to use it is to provide `prompt` prop. It will show browser's system dialog.
+
+```jsx  { "props": { "data-skip": true } }
+const { Form } = require('precise-ui');
+
+<Form prompt="Form has unsaved changes, do you want to leave?">
+{/* other components*/}
+</Form>
+```
+
+It is also possible to provide `Prompt` component, that will show `precise-ui` component instead of system dialog.
+
+```jsx  { "props": { "data-skip": true } }
+const { Form, Prompt } = require('precise-ui');
+
+<Form prompt={(changed: boolean) => {
+  return (
+    <Prompt message="Your form has unsaved messages, are you sure you want to leave the page" when={changed} modalOptions={{ title: 'Do you want to leave' }} />
+  );
+}>
+{/* other components*/}
+</Form>
+```
+
+For more details refer to `Prompt` component examples
