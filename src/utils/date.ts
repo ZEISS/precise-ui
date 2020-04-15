@@ -126,7 +126,7 @@ function formatDate(date: Date, formatStr: string, locale: string | Locale = '')
 }
 
 export function safeDateFormat(
-  date: Date,
+  date: Date | undefined,
   { dateFormat, locale }: { dateFormat: string | Array<string>; locale?: string | Locale },
 ) {
   return (date && formatDate(date, Array.isArray(dateFormat) ? dateFormat[0] : dateFormat, locale)) || '';
