@@ -1,18 +1,28 @@
 # Precise UI Changelog
 
+## 1.3.0
+
+- Update `Form` component to receive `prompt` prop as component
+- Add custom dialog for `Prompt` component
+
 ## 1.2.0
+
 - Add the ability to clean datetimepicker
 
 ## 1.1.4
+
 - Add ability to display the files list under the File Uploader
 
 ## 1.1.3
+
 - Add new icons
 
 ## 1.1.2
+
 - Fix TagBuilder not deleting tags properly with backspace (#223)
 
 ## 1.1.1
+
 - Added new theme object `actionButtonWarning`
 
 ## 1.1.0
