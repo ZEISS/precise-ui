@@ -1,9 +1,12 @@
 # Precise UI Changelog
 
+## 1.3.1
+
+- Add custom dialog for `Prompt` component
+
 ## 1.3.0
 
 - Update `Form` component to receive `prompt` prop as component
-- Add custom dialog for `Prompt` component
 
 ## 1.2.0
 
