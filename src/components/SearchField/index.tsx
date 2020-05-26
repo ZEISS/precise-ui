@@ -6,6 +6,7 @@ import { Icon, IconName } from '../Icon';
 import { light } from '../../themes';
 import { Button } from '../Button';
 import styled from '../../utils/styled';
+import { KeyCodes } from '../../utils/keyCodes';
 
 const SearchContainer = styled.div`
   display: flex;
@@ -50,26 +51,47 @@ export interface SearchFieldProps<T> extends AutocompleteProps<T> {
    */
   onSearch?(ev: SearchEvent): void;
 }
+const defaultDebounceDelay = 200;
+
+type SearchFieldState = SearchEvent;
 
 /**
  * A search field for user search queries.
  */
-export class SearchField<T> extends React.Component<SearchFieldProps<T>> {
+export class SearchField<T> extends React.Component<SearchFieldProps<T>, SearchFieldState> {
   private fireSearch: (q: string) => void;
 
   constructor(props: SearchFieldProps<T>) {
     super(props);
-    const { delay = 200 } = props;
+    const { delay = defaultDebounceDelay } = props;
+    this.state = { query: '' };
+
     this.fireSearch = debounce((query: string) => {
       const { onSearch } = this.props;
-
       typeof onSearch === 'function' && onSearch({ query });
     }, delay);
   }
 
-  private change = (e: InputChangeEvent<string>) => {
-    const { onChange, triggerMode } = this.props;
+  private handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+    e.keyCode === KeyCodes.enter && this.fireSearch(this.state.query);
+  };
 
+  private onSearchClick = () => {
+    const { onSearch } = this.props;
+    typeof onSearch === 'function' && onSearch({ query: this.state.query });
+  };
+
+  private onClear = () => {
+    const { onClear, triggerMode = 'auto' } = this.props;
+    typeof onClear === 'function' && onClear();
+
+    // In case, triggerMode is set to manual, the clear button wouldn't trigger automatically, but this should still be done.
+    triggerMode === 'manual' && this.fireSearch('');
+  };
+
+  private change = (e: InputChangeEvent<string>) => {
+    const { onChange, triggerMode = 'auto' } = this.props;
+    this.setState({ query: e.value });
     typeof onChange === 'function' && onChange(e);
     triggerMode === 'auto' && this.fireSearch(e.value);
   };
@@ -83,9 +105,14 @@ export class SearchField<T> extends React.Component<SearchFieldProps<T>> {
     const searchFieldIcon = <Icon name={icon} color={fieldIconColor} size="22px" />;
     const searchButtonIcon = <Icon name={icon} color={buttonIconColor} size="22px" />;
     return (
-      <SearchContainer>
-        <Autocomplete {...rest} onChange={this.change} icon={autoTrigger ? searchFieldIcon : <></>} />
-        {!autoTrigger && <SearchButton onClick={() => this.fireSearch}>{searchButtonIcon}</SearchButton>}
+      <SearchContainer onKeyDown={this.handleKeyDown}>
+        <Autocomplete
+          {...rest}
+          onClear={this.onClear}
+          onChange={this.change}
+          icon={autoTrigger ? searchFieldIcon : <></>}
+        />
+        {!autoTrigger && <SearchButton onClick={this.onSearchClick}>{searchButtonIcon}</SearchButton>}
       </SearchContainer>
     );
   }
