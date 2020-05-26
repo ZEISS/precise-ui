@@ -21,3 +21,17 @@ const { SearchField } = require('precise-ui');
 
 <SearchField label="Manually Triggered Search" onSearch={value => console.log('Manually triggered:', value)} triggerMode="manual" />
 ```
+
+It is possible to easily combine the `SearchField` with suggestions, even when using the manual mode. 
+However, be aware that when selecting a suggestion, it will also trigger a search.
+
+```jsx
+const { SearchField } = require('precise-ui');
+
+<SearchField
+  suggestions={['one', 'two', 'three']}
+  label="Manually Triggered Search"
+  onSearch={value => console.log('Manually triggered:', value)}
+  triggerMode="manual"
+/>
+```

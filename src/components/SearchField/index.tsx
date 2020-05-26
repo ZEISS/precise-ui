@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Autocomplete, AutocompleteProps } from '../Autocomplete';
+import { Autocomplete, AutocompleteProps, AutosuggestSelectEvent } from '../Autocomplete';
 import { InputChangeEvent } from '../../common';
 import { debounce } from '../../utils/debounce';
 import { Icon, IconName } from '../Icon';
@@ -85,8 +85,16 @@ export class SearchField<T> extends React.Component<SearchFieldProps<T>, SearchF
     const { onClear, triggerMode = 'auto' } = this.props;
     typeof onClear === 'function' && onClear();
 
-    // In case, triggerMode is set to manual, the clear button wouldn't trigger automatically, but this should still be done.
+    // In case, triggerMode is set to manual, clicking on clear should also trigger the search.
     triggerMode === 'manual' && this.fireSearch('');
+  };
+
+  private onSuggestionSelected = (e: AutosuggestSelectEvent<T>) => {
+    const { onSuggestionSelected, triggerMode = 'auto' } = this.props;
+    typeof onSuggestionSelected === 'function' && onSuggestionSelected(e);
+
+    // In case, triggerMode is set to manual, selecting a suggestion should also trigger the search.
+    triggerMode === 'manual' && this.fireSearch(String(e.value));
   };
 
   private change = (e: InputChangeEvent<string>) => {
@@ -110,6 +118,7 @@ export class SearchField<T> extends React.Component<SearchFieldProps<T>, SearchF
           {...rest}
           onClear={this.onClear}
           onChange={this.change}
+          onSuggestionSelected={this.onSuggestionSelected}
           icon={autoTrigger ? searchFieldIcon : <></>}
         />
         {!autoTrigger && <SearchButton onClick={this.onSearchClick}>{searchButtonIcon}</SearchButton>}
