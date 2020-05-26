@@ -71,6 +71,7 @@ export interface AutocompleteState {
 
 const AutocompleteWrapper = styled.div`
   position: relative;
+  width: 100%;
 `;
 
 const StyledInteractiveList = styled(InteractiveList)`
@@ -106,7 +107,7 @@ const StyledAutosuggestWrapper = styled.ul<StyledAutosuggestWrapperProps>(
 );
 
 function defaultSuggestionRenderer<T>(suggestion: T): AutosuggestItem {
-  const value = suggestion && suggestion.toString();
+  const value = String(suggestion);
   return {
     content: value,
     key: value || '',
@@ -117,10 +118,9 @@ function defaultInputRenderer(props: AutocompleteInputProps): JSX.Element {
   return <TextField {...props} />;
 }
 
-// tslint:disable-next-line
-const NotOpenComponent = null;
+const NotOpenComponent = <></>;
 
-const AutosuggestWrapper: React.SFC<InteractiveListWrapperProps> = ({ border: _0, open, ...props }) =>
+const AutosuggestWrapper: React.FC<InteractiveListWrapperProps> = ({ border: _0, open, ...props }) =>
   open ? <StyledAutosuggestWrapper {...props} /> : NotOpenComponent;
 AutosuggestWrapper.displayName = 'AutosuggestWrapper';
 
@@ -307,33 +307,29 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
     const { open, listFocus, value, error } = this.state;
     const isListOpen = open && (!!suggestions.length || !!noSuggestionsMessage);
     return (
-      <div onKeyDown={this.handleKeyDown} onFocus={this.handleFocus} onBlur={this.handleBlur}>
-        <AutocompleteWrapper>
-          {inputRenderer({
-            ...props,
-            info: isListOpen ? undefined : info,
-            onChange: this.changed,
-            clearable: true,
-            inputRef: this.setNode,
-            value: value,
-            error: error,
-          })}
-          <StyledInteractiveList
-            data={
-              suggestions.length
-                ? suggestions.map(renderSuggestion)
-                : [{ key: 'default', content: noSuggestionsMessage }]
-            }
-            disabled={suggestions.length === 0}
-            customWrapper={AutosuggestWrapper}
-            focus={listFocus}
-            onChange={this.handleListChange}
-            autoPosition
-            open={isListOpen}
-          />
-          {isListOpen && info && <div>{info}</div>}
-        </AutocompleteWrapper>
-      </div>
+      <AutocompleteWrapper onKeyDown={this.handleKeyDown} onFocus={this.handleFocus} onBlur={this.handleBlur}>
+        {inputRenderer({
+          ...props,
+          info: isListOpen ? undefined : info,
+          onChange: this.changed,
+          clearable: true,
+          inputRef: this.setNode,
+          value: value,
+          error: error,
+        })}
+        <StyledInteractiveList
+          data={
+            suggestions.length ? suggestions.map(renderSuggestion) : [{ key: 'default', content: noSuggestionsMessage }]
+          }
+          disabled={suggestions.length === 0}
+          customWrapper={AutosuggestWrapper}
+          focus={listFocus}
+          onChange={this.handleListChange}
+          autoPosition
+          open={isListOpen}
+        />
+        {isListOpen && info && <div>{info}</div>}
+      </AutocompleteWrapper>
     );
   }
 }
