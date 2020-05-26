@@ -50,6 +50,11 @@ export interface SearchFieldProps<T> extends AutocompleteProps<T> {
    * The event fired when the search is triggered.
    */
   onSearch?(ev: SearchEvent): void;
+  /**
+   * Always `true` on Searchfield components.
+   * @ignore
+   */
+  clearable?: boolean;
 }
 const defaultDebounceDelay = 200;
 

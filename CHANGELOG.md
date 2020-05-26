@@ -3,7 +3,8 @@
 ## 1.4.0
 
 - Improve documentation of breakpoint types
-- Add trigger mode `onClick` for `SearchField`
+- Add trigger mode `manual` for `SearchField`
+- Removing clearable from Autocomplete docs
 
 ## 1.3.0
 
