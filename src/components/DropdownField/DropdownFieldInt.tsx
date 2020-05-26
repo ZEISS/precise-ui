@@ -26,10 +26,7 @@ import {
   StyledIconContainer,
 } from '../../quarks';
 import { getFontStyle } from '../../textStyles';
-import {
-  DropdownFieldItem,
-  DropdownFieldProps,
-} from './DropdownField.types.part';
+import { DropdownFieldItem, DropdownFieldProps } from './DropdownField.types.part';
 
 const DropdownContainer = styled.div`
   position: relative;
