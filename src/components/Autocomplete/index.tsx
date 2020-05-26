@@ -210,11 +210,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       this.updateValue(suggestion, true);
     }
 
-    if (typeof onSuggestionSelected === 'function') {
-      onSuggestionSelected({
-        value: suggestion,
-      });
-    }
+    typeof onSuggestionSelected === 'function' && onSuggestionSelected({ value: suggestion });
   }
 
   private show = () => {
@@ -222,14 +218,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
   };
 
   private hide = () => {
-    const { onBlur } = this.props;
-
-    this.setState(
-      () => ({
-        open: false,
-      }),
-      onBlur,
-    );
+    this.setState(() => ({ open: false }), this.props.onBlur);
   };
 
   private handleFocus = () => {
@@ -237,14 +226,9 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
     cancelAnimationFrame(this.delayedBlur);
 
     this.show();
-    this.setState(() => ({
-      focus: true,
-      listFocus: false,
-    }));
+    this.setState(() => ({ focus: true, listFocus: false }));
 
-    if (typeof onFocus === 'function') {
-      onFocus();
-    }
+    typeof onFocus === 'function' && onFocus();
   };
 
   private handleBlur = () => {
@@ -267,11 +251,9 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
 
   private setNode = (node: HTMLElement | null) => {
     this._element = node;
-
     const { inputRef } = this.props;
-    if (typeof inputRef === 'function') {
-      inputRef(node);
-    }
+
+    typeof inputRef === 'function' && inputRef(node);
   };
 
   render() {
@@ -287,6 +269,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       onFocus: _5,
       defaultValue: _6,
       inputRef: _7,
+      onSuggestionSelected: _8,
       info,
       ...props
     } = this.props;
@@ -300,8 +283,8 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
           onChange: this.changed,
           clearable: true,
           inputRef: this.setNode,
-          value: value,
-          error: error,
+          value,
+          error,
         })}
         <StyledInteractiveList
           data={
