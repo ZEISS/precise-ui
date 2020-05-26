@@ -126,7 +126,11 @@ export class SearchField<T> extends React.Component<SearchFieldProps<T>, SearchF
           onSuggestionSelected={this.onSuggestionSelected}
           icon={autoTrigger ? searchFieldIcon : <></>}
         />
-        {!autoTrigger && <SearchButton onClick={this.onSearchClick}>{searchButtonIcon}</SearchButton>}
+        {!autoTrigger && (
+          <SearchButton disabled={rest.disabled} onClick={this.onSearchClick}>
+            {searchButtonIcon}
+          </SearchButton>
+        )}
       </SearchContainer>
     );
   }
