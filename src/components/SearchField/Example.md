@@ -19,5 +19,5 @@ There is also an option to have a search button instead of firing the search eve
 ```jsx
 const { SearchField } = require('precise-ui');
 
-<SearchField label="Search" onSearch={value => console.log(value)} triggerMode="manual" />
+<SearchField label="Manually Triggered Search" onSearch={value => console.log('Manually triggered:', value)} triggerMode="manual" />
 ```

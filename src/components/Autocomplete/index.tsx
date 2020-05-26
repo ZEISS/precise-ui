@@ -169,25 +169,11 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
     const { onChange, name = '', form } = this.props;
 
     if (!this.state.controlled) {
-      if (form) {
-        form.change({
-          name,
-          value,
-        });
-      } else {
-        this.setState({
-          value,
-        });
-      }
+      form ? form.change({ name, value }) : this.setState({ value });
     }
 
     suggestionSelected ? this.hide() : this.show();
-
-    if (typeof onChange === 'function') {
-      onChange({
-        value,
-      });
-    }
+    typeof onChange === 'function' && onChange({ value });
   }
 
   private handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {

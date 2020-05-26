@@ -2,7 +2,7 @@ import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
 import { KeyCodes } from '../../utils/keyCodes';
 import { showInputInfo } from '../../utils/input';
-import { LabeledInputProps, InputChangeEvent, ScreenSize } from '../../common';
+import { ScreenSize } from '../../common';
 import { InputIcon } from '../InputIcon';
 import { FormContextProps } from '../../hoc/withFormContext';
 import { transparent } from '../../colors';
@@ -17,7 +17,6 @@ import {
   InteractiveListWrapperProps,
   InteractiveListDirection,
   InteractiveListBorderType,
-  InteractiveListProps,
 } from '../InteractiveList';
 import {
   StyledInputRow,
@@ -27,10 +26,7 @@ import {
   StyledIconContainer,
 } from '../../quarks';
 import { getFontStyle } from '../../textStyles';
-import onClickOutside from 'react-onclickoutside';
 import {
-  DropdownFieldToggleEvent,
-  DropdownFieldChangeEvent,
   DropdownFieldItem,
   DropdownFieldProps,
 } from './DropdownField.types.part';
