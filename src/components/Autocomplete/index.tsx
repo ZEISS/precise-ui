@@ -9,7 +9,7 @@ import {
   InteractiveListChangeEvent,
 } from '../InteractiveList';
 import { KeyCodes } from '../../utils/keyCodes';
-import { InputChangeEvent } from '../../common';
+import { InputChangeEvent, Omit } from '../../common';
 
 export interface AutosuggestItem {
   key: string;
@@ -55,10 +55,17 @@ export interface AutocompleteProps<T> extends TextFieldProps {
    */
   inputRenderer?(props: AutocompleteInputProps): JSX.Element;
   /**
+   * Always `true` on Autocomplete components.
+   * @ignore
+   */
+  clearable?: boolean;
+  /**
    * @ignore
    */
   inputRef?(instance: HTMLElement | null): void;
 }
+
+export type SupportedAutocompleteProps<T> = Omit<AutocompleteProps<T>, 'clearable'>;
 
 export interface AutocompleteState {
   controlled: boolean;
@@ -124,7 +131,7 @@ const AutosuggestWrapper: React.FC<InteractiveListWrapperProps> = ({ border: _0,
   open ? <StyledAutosuggestWrapper {...props} /> : NotOpenComponent;
 AutosuggestWrapper.displayName = 'AutosuggestWrapper';
 
-class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormContextProps, AutocompleteState> {
+class AutocompleteInt<T> extends React.Component<SupportedAutocompleteProps<T> & FormContextProps, AutocompleteState> {
   private delayedBlur: number;
   private _element: HTMLElement | null;
 
@@ -279,9 +286,9 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       <AutocompleteWrapper onKeyDown={this.handleKeyDown} onFocus={this.handleFocus} onBlur={this.handleBlur}>
         {inputRenderer({
           ...props,
+          clearable: true,
           info: isListOpen ? undefined : info,
           onChange: this.changed,
-          clearable: true,
           inputRef: this.setNode,
           value,
           error,
