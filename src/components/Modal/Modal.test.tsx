@@ -25,7 +25,7 @@ describe('<Modal />', () => {
   });
 
   it('should trigger onBeforeClose callback when clicking close button', () => {
-    const closeMockCallback = () => { };
+    const closeMockCallback = () => {};
     const beforeCloseMockCallback = jest.fn();
     const wrapper = enzyme.mount(
       <Modal open onClose={closeMockCallback} onBeforeClose={beforeCloseMockCallback}>
