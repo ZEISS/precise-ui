@@ -117,7 +117,7 @@ function defaultSuggestionRenderer<T>(suggestion: T): AutosuggestItem {
   const value = String(suggestion);
   return {
     content: value,
-    key: value,
+    key: value || '',
   };
 }
 
