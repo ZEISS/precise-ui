@@ -1,7 +1,19 @@
 export interface Breakpoints {
+  /**
+   * Tablet: 740px
+   */
   medium: number;
+  /**
+   * Desktop: 980px
+   */
   large: number;
+  /**
+   * Desktop HD: 1200px
+   */
   xLarge: number;
+  /**
+   * Desktop Full HD: 1800px
+   */
   max: number;
 }
 
