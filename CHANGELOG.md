@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 1.4.1
+
+- Fix compatibility issue with improvements on SearchField
+
 ## 1.4.0
 
 - Improve documentation of breakpoint types
