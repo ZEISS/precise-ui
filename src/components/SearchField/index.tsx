@@ -11,7 +11,6 @@ import { KeyCodes } from '../../utils/keyCodes';
 const SearchContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
 `;
 
 const SearchButton = styled(Button)`
