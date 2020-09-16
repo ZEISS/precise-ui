@@ -39,8 +39,8 @@ export interface ButtonProps extends AnchorProps {
    */
   buttonStyle?: ButtonStyle;
   /**
-   * Sets the button type. By default submit.
-   * @default submit
+   * Sets the button type. By default "submit".
+   * @see [W3C](https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#attr-button-type)
    */
   type?: ButtonType;
   /**
