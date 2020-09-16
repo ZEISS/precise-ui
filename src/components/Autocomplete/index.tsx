@@ -9,6 +9,7 @@ import {
   InteractiveListChangeEvent,
 } from '../InteractiveList';
 import { KeyCodes } from '../../utils/keyCodes';
+import { InputChangeEvent, Omit } from '../../common';
 
 export interface AutosuggestItem {
   key: string;
@@ -17,6 +18,15 @@ export interface AutosuggestItem {
 
 export interface AutosuggestSelectEvent<T> {
   value: T;
+}
+
+export interface AutocompleteInputProps {
+  onChange(e: InputChangeEvent<string>): void;
+  clearable: boolean;
+  inputRef?(instance: HTMLElement | null): void;
+  value: string;
+  error: any;
+  [index: string]: any;
 }
 
 export interface AutocompleteProps<T> extends TextFieldProps {
@@ -41,10 +51,21 @@ export interface AutocompleteProps<T> extends TextFieldProps {
    */
   getSuggestionValue?(item: T): string;
   /**
+   * The renderer of input field.
+   */
+  inputRenderer?(props: AutocompleteInputProps): JSX.Element;
+  /**
+   * Always `true` on Autocomplete components.
+   * @ignore
+   */
+  clearable?: boolean;
+  /**
    * @ignore
    */
   inputRef?(instance: HTMLElement | null): void;
 }
+
+export type SupportedAutocompleteProps<T> = Omit<AutocompleteProps<T>, 'clearable'>;
 
 export interface AutocompleteState {
   controlled: boolean;
@@ -52,10 +73,16 @@ export interface AutocompleteState {
   focus: boolean;
   open: boolean;
   value: string;
+  error?: React.ReactChild;
 }
 
 const AutocompleteWrapper = styled.div`
   position: relative;
+  width: 100%;
+`;
+
+const StyledInteractiveList = styled(InteractiveList)`
+  position: static;
 `;
 
 interface StyledAutosuggestWrapperProps {
@@ -78,7 +105,7 @@ const StyledAutosuggestWrapper = styled.ul<StyledAutosuggestWrapperProps>(
         : 'border-bottom-color: transparent'};
       max-height: 50vh;
       position: absolute;
-      top: ${direction === InteractiveListDirection.normal ? '0' : '-100%'};
+      top: ${direction === InteractiveListDirection.normal ? '100%' : '0px'};
       transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
       overflow-y: auto;
       z-index: 100;
@@ -87,21 +114,24 @@ const StyledAutosuggestWrapper = styled.ul<StyledAutosuggestWrapperProps>(
 );
 
 function defaultSuggestionRenderer<T>(suggestion: T): AutosuggestItem {
-  const value = suggestion && suggestion.toString();
+  const value = String(suggestion);
   return {
     content: value,
-    key: value || '',
+    key: value,
   };
 }
 
-// tslint:disable-next-line
-const NotOpenComponent = null;
+function defaultInputRenderer(props: AutocompleteInputProps): JSX.Element {
+  return <TextField {...props} />;
+}
 
-const AutosuggestWrapper: React.SFC<InteractiveListWrapperProps> = ({ border: _0, open, ...props }) =>
+const NotOpenComponent = <></>;
+
+const AutosuggestWrapper: React.FC<InteractiveListWrapperProps> = ({ border: _0, open, ...props }) =>
   open ? <StyledAutosuggestWrapper {...props} /> : NotOpenComponent;
 AutosuggestWrapper.displayName = 'AutosuggestWrapper';
 
-class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormContextProps, AutocompleteState> {
+class AutocompleteInt<T> extends React.Component<SupportedAutocompleteProps<T> & FormContextProps, AutocompleteState> {
   private delayedBlur: number;
   private _element: HTMLElement | null;
 
@@ -113,15 +143,15 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       open: false,
       listFocus: false,
       focus: false,
+      error: props.error,
     };
   }
 
-  componentWillReceiveProps(nextProps: AutocompleteProps<T>) {
+  componentWillReceiveProps({ value = '', error }: AutocompleteProps<T>) {
     if (this.state.controlled) {
-      this.setState({
-        value: nextProps.value || '',
-      });
+      this.setState({ value });
     }
+    this.setState({ error });
   }
 
   componentDidMount() {
@@ -146,29 +176,11 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
     const { onChange, name = '', form } = this.props;
 
     if (!this.state.controlled) {
-      if (form) {
-        form.change({
-          name,
-          value,
-        });
-      } else {
-        this.setState({
-          value,
-        });
-      }
-    }
-
-    if (this._element) {
-      this._element.focus();
+      form ? form.change({ name, value }) : this.setState({ value });
     }
 
     suggestionSelected ? this.hide() : this.show();
-
-    if (typeof onChange === 'function') {
-      onChange({
-        value,
-      });
-    }
+    typeof onChange === 'function' && onChange({ value });
   }
 
   private handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
@@ -205,42 +217,25 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       this.updateValue(suggestion, true);
     }
 
-    if (typeof onSuggestionSelected === 'function') {
-      onSuggestionSelected({
-        value: suggestion,
-      });
-    }
+    typeof onSuggestionSelected === 'function' && onSuggestionSelected({ value: suggestion });
   }
 
   private show = () => {
-    const { onFocus } = this.props;
-
-    this.setState(
-      () => ({
-        open: true,
-      }),
-      onFocus,
-    );
+    this.setState({ open: true });
   };
 
   private hide = () => {
-    const { onBlur } = this.props;
-
-    this.setState(
-      () => ({
-        open: false,
-      }),
-      onBlur,
-    );
+    this.setState(() => ({ open: false }), this.props.onBlur);
   };
 
   private handleFocus = () => {
+    const { onFocus } = this.props;
     cancelAnimationFrame(this.delayedBlur);
+
     this.show();
-    this.setState(() => ({
-      focus: true,
-      listFocus: false,
-    }));
+    this.setState(() => ({ focus: true, listFocus: false }));
+
+    typeof onFocus === 'function' && onFocus();
   };
 
   private handleBlur = () => {
@@ -263,6 +258,9 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
 
   private setNode = (node: HTMLElement | null) => {
     this._element = node;
+    const { inputRef } = this.props;
+
+    typeof inputRef === 'function' && inputRef(node);
   };
 
   render() {
@@ -270,6 +268,7 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       suggestions = [],
       noSuggestionsMessage,
       renderSuggestion = defaultSuggestionRenderer,
+      inputRenderer = defaultInputRenderer,
       getSuggestionValue: _1,
       onChange: _2,
       children: _3,
@@ -277,34 +276,36 @@ class AutocompleteInt<T> extends React.Component<AutocompleteProps<T> & FormCont
       onFocus: _5,
       defaultValue: _6,
       inputRef: _7,
+      onSuggestionSelected: _8,
+      info,
       ...props
     } = this.props;
-    const { open, listFocus, value } = this.state;
-
+    const { open, listFocus, value, error } = this.state;
+    const isListOpen = open && (!!suggestions.length || !!noSuggestionsMessage);
     return (
-      <div onKeyDown={this.handleKeyDown} onFocus={this.handleFocus} onBlur={this.handleBlur}>
-        <AutocompleteWrapper>
-          <TextField onChange={this.changed} clearable value={value} inputRef={this.setNode} {...props} />
-          {open &&
-            (suggestions.length || noSuggestionsMessage ? (
-              <InteractiveList
-                data={
-                  suggestions.length
-                    ? suggestions.map(renderSuggestion)
-                    : [{ key: 'default', content: noSuggestionsMessage }]
-                }
-                disabled={suggestions.length === 0}
-                customWrapper={AutosuggestWrapper}
-                focus={listFocus}
-                onChange={this.handleListChange}
-                autoPosition
-                open
-              />
-            ) : (
-              undefined
-            ))}
-        </AutocompleteWrapper>
-      </div>
+      <AutocompleteWrapper onKeyDown={this.handleKeyDown} onFocus={this.handleFocus} onBlur={this.handleBlur}>
+        {inputRenderer({
+          ...props,
+          clearable: true,
+          info: isListOpen ? undefined : info,
+          onChange: this.changed,
+          inputRef: this.setNode,
+          value,
+          error,
+        })}
+        <StyledInteractiveList
+          data={
+            suggestions.length ? suggestions.map(renderSuggestion) : [{ key: 'default', content: noSuggestionsMessage }]
+          }
+          disabled={suggestions.length === 0}
+          customWrapper={AutosuggestWrapper}
+          focus={listFocus}
+          onChange={this.handleListChange}
+          autoPosition
+          open={isListOpen}
+        />
+        {isListOpen && info && <div>{info}</div>}
+      </AutocompleteWrapper>
     );
   }
 }

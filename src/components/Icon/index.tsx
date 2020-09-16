@@ -33,6 +33,10 @@ export interface IconProps extends StandardProps {
    * Event emitted when the icon is clicked.
    */
   onClick?(): void;
+  /**
+   * Event emitted when the mouse down on the icon.
+   */
+  onMouseDown?(e: React.MouseEvent): void;
 }
 
 const StyledIcon = styled.i`
@@ -46,7 +50,7 @@ const StyledIcon = styled.i`
 /**
  * The icon component displays an icon from the given set of icons.
  */
-export const Icon: React.SFC<IconProps> = ({ size = 1, name, stroke, color, ...rest }) => {
+export const Icon: React.FC<IconProps> = ({ size = 1, name, stroke, color, ...rest }) => {
   const dim = typeof size === 'number' ? `${size}em` : size;
   const SvgIcon = icons[name] || getIcon(name);
 

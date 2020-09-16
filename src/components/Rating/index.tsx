@@ -6,7 +6,6 @@ import { InputProps, PreciseTheme } from '../../common';
 import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
 import { brightLemon, white, ocean } from '../../colors';
 import { distance } from '../../distance';
-import { light } from '../../themes';
 
 export interface RatingProps extends InputProps<number> {
   /**
@@ -33,6 +32,7 @@ export interface RatingProps extends InputProps<number> {
 export interface RatingState {
   controlled: boolean;
   value: number;
+  error?: React.ReactChild;
   hover: number;
   changers: Array<() => void>;
   hovers: Array<() => void>;
@@ -104,6 +104,27 @@ function getAnimation(i: number, value: number) {
   return 'none';
 }
 
+interface RatingIconProps {
+  disabled?: boolean;
+  index: number;
+  value: number;
+  hover: number;
+  size: string;
+}
+
+const RatingIconInt: React.FC<RatingIconProps> = ({ disabled, index, value, hover, size, ...props }) => (
+  <icons.Star {...props} />
+);
+
+const RatingIcon = styled(RatingIconInt)(
+  ({ theme, disabled, index, value, hover, size }) => css`
+    fill: ${getColor(theme, disabled, index, value, hover)};
+    animation: ${getAnimation(index, value)};
+    width: ${size};
+    height: ${size};
+  `,
+);
+
 class RatingInt extends React.Component<RatingProps & FormContextProps, RatingState> {
   constructor(props: RatingProps) {
     super(props);
@@ -119,6 +140,7 @@ class RatingInt extends React.Component<RatingProps & FormContextProps, RatingSt
     this.state = {
       controlled: value !== undefined,
       value: value || defaultValue || 0,
+      error: props.error,
       hover: -1,
       changers,
       hovers,
@@ -129,6 +151,7 @@ class RatingInt extends React.Component<RatingProps & FormContextProps, RatingSt
     if (this.state.controlled) {
       this.setState({
         value: nextProps.value || 0,
+        error: nextProps.error,
       });
     }
   }
@@ -193,15 +216,14 @@ class RatingInt extends React.Component<RatingProps & FormContextProps, RatingSt
       value: _2,
       defaultValue: _3,
       onChange: _4,
+      onInput: _5,
       disabled,
       size = 'medium',
       icon = 'Star',
       ...props
     } = this.props;
     const { value, changers, hover, hovers } = this.state;
-    const theme = props.theme || light;
     const dim = size === 'medium' ? '32px' : '22px';
-    const Icon = icons[icon];
 
     return (
       <RatingContainer {...props}>
@@ -213,11 +235,7 @@ class RatingInt extends React.Component<RatingProps & FormContextProps, RatingSt
             disabled={disabled}
             onMouseEnter={hovers[i]}
             onMouseLeave={this.hoverVoid}>
-            <Icon
-              width={dim}
-              height={dim}
-              style={{ fill: getColor(theme, disabled, i, value, hover), animation: getAnimation(i, value) as any }}
-            />
+            <RatingIcon index={i} disabled={disabled} value={value} hover={hover} size={dim} as={icons[icon]} />
           </RatingElement>
         ))}
       </RatingContainer>

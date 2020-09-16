@@ -1,14 +1,15 @@
 # <img src="docs/assets/precise-logo.svg" width="240">
 
-[![Website Build Status](https://zeissgroup.visualstudio.com/DCC/_apis/build/status/Tool/Precise-UI?branchName=master)](https://zeissgroup.visualstudio.com/DCC/_build/latest?definitionId=1073?branchName=master)
+[![Website Build status](https://dev.azure.com/ZEISSgroup/SIP_UI_Library/_apis/build/status/Precise-CI)](https://dev.azure.com/ZEISSgroup/SIP_UI_Library/_build/latest?definitionId=1106)
 [![Package Build Status](https://travis-ci.org/ZEISS/precise-ui.svg?branch=master)](https://travis-ci.org/ZEISS/precise-ui)
 [![NPM](https://img.shields.io/npm/v/precise-ui.svg)](https://www.npmjs.com/package/precise-ui)
 [![Node](https://img.shields.io/node/v/precise-ui.svg)](https://www.npmjs.com/package/precise-ui)
 [![GitHub Tag](https://img.shields.io/github/tag/ZEISS/precise-ui.svg)](https://github.com/ZEISS/precise-ui/releases)
 [![GitHub Issues](https://img.shields.io/github/issues/ZEISS/precise-ui.svg)](https://github.com/ZEISS/precise-ui/issues)
 [![CLA Assistant](https://cla-assistant.io/readme/badge/ZEISS/precise-ui)](https://cla-assistant.io/ZEISS/precise-ui)
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/ZEISS/precise-ui)
 
-A complete opinionated React component library with minimal dependencies powered ZEISS.
+A complete opinionated React component library with minimal dependencies powered by ZEISS.
 
 The UI component library contains both, very low-level design elements as well as combined high-level design elements. In general, the intention of the library is to simplify development by exposing components that satisfy design specifications and provide ease of programming. Repeatable UI designs should therefore only take minutes instead of hours.
 
@@ -158,6 +159,38 @@ npm run test:unit --coverage
 ```
 
 For unit tests we use Jest. We recommend using snapshot tests (which are done via enzyme and some JSON snapshot serializer).
+
+#### Visual testing
+
+Visual snapshots are located in `/integration/__image_snapshots__`.
+
+When the testing runs it renders components from `[componentName]/Example.md`, makes screenshots and compares them to the previous version screenshots.
+
+To run the testing locally Docker should be installed.
+
+```sh
+npm run test:visual
+```
+
+Once a component was changed, added or removed then snapshots should be updated.
+To update snapshots:
+```sh
+npm run test:visual -- -u
+```
+
+In some cases (i.e components with animations) it's needed to skip the test. It can be done in the next way: update Example.md file:
+```
+```js { "props": { "data-skip": true } }
+
+<Component />
+```
+In some cases it's needed to tell visual test to wait before doing a snapshot. It can be done in the next way: update Example.md file:
+
+```
+```js { "props": { "data-wait": 500 } }
+
+<Component />
+```
 
 #### Adding new icons
 

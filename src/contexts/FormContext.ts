@@ -7,7 +7,8 @@ export interface FormValueNotifier {
   props: {
     name?: string;
   };
-  setState(state: { value: any }): void;
+  setState(state: { value: any; error?: React.ReactChild }): void;
+  setState(state: { error?: React.ReactChild }): void;
 }
 
 export interface FormValueChange {

@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const createInnerJsxTransformer = require('typescript-plugin-inner-jsx').default;
+
 const env = process.env.NODE_ENV || 'development';
 const develop = env === 'development';
 const test = env === 'test';
@@ -68,7 +69,36 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /node_modules[\/\\]((date-fns|ansi-styles|strip-ansi|ansi-regex|react-dev-utils|chalk|typescript-plugin-inner-jsx)[\/\\]).*/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+            presets: [
+              [
+                '@babel/preset-env',
+                {
+                  targets: {
+                    ie: 11,
+                    esmodules: true,
+                  },
+                  modules: 'commonjs',
+                },
+              ],
+              '@babel/preset-typescript',
+              '@babel/preset-react',
+            ],
+            plugins: [
+              ['@babel/plugin-proposal-decorators', { legacy: true }],
+              ['@babel/plugin-proposal-class-properties', { loose: true }],
+              '@babel/plugin-transform-runtime',
+            ],
+          },
+        },
+      },
+      {
         test: /\.tsx$/,
+        exclude: /node_modules/,
         loader: 'awesome-typescript-loader',
         options: {
           getCustomTransformers: () => ({ before: [innerJsxTransformer] }),
@@ -76,17 +106,17 @@ module.exports = {
       },
       {
         test: /\.ts$/,
+        exclude: /node_modules/,
         loader: 'awesome-typescript-loader',
+        options: {
+          silent: true
+        }
       },
       {
         enforce: 'pre',
+        exclude: /node_modules/,
         test: /\.js$/,
         loader: 'source-map-loader',
-      },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ['style-loader', 'css-loader', 'sass-loader?sourceMap'],
       },
     ],
   },

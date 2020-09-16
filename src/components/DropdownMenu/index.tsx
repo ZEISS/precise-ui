@@ -8,7 +8,7 @@ import { StandardProps } from '../../common';
 import { KeyCodes } from '../../utils/keyCodes';
 import { distance } from '../../distance';
 import { Flyout } from '../Flyout';
-import { getFontStyle } from '../../textStyles';
+import { FontSize, getFontStyle } from '../../textStyles';
 
 export interface DropdownMenuChangeEvent {
   /**
@@ -41,7 +41,7 @@ export interface DropdownMenuProps extends StandardProps {
    * Defines the size of the menu.
    * @default 'normal
    */
-  menuSize?: 'normal' | 'small';
+  menuSize?: FontSize;
   /**
    * Should the menu be kept open when losing focus.
    */
@@ -70,7 +70,7 @@ export interface DropdownMenuState {
 
 interface DropdownButtonProps {
   open: boolean;
-  menuSize: 'normal' | 'small';
+  menuSize: FontSize;
 }
 
 const RootContainer = styled.div`
@@ -92,7 +92,7 @@ const StyledInteractiveList = styled(InteractiveList)`
 
 const DropdownButton = styled.div<DropdownButtonProps>`
   color: ${props => (props.open ? colors.cyan : colors.grey2)};
-  font-size: ${({ menuSize }) => getFontStyle({ size: menuSize === 'small' ? 'small' : 'medium' })};
+  ${({ menuSize }) => getFontStyle({ size: menuSize })};
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -175,7 +175,15 @@ class DropdownMenuInt extends React.PureComponent<DropdownMenuProps, DropdownMen
   };
 
   render() {
-    const { items = [], text = '', icon, onChange: _0, menuSize = 'normal', iconSize = 1, ...rest } = this.props;
+    const {
+      items = [],
+      text = '',
+      icon,
+      onChange: _0,
+      menuSize = 'normal' as FontSize,
+      iconSize = 1,
+      ...rest
+    } = this.props;
     const { open } = this.state;
 
     return (

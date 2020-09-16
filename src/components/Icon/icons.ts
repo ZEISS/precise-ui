@@ -49,6 +49,57 @@ export const AccountCircle = <SvgIconConstructor>function(props: SvgIconProps) {
 AccountCircle.displayName = 'AccountCircle';
 AccountCircle.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Announcement = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d: 'M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 9h-2V5h2v6zm0 4h-2v-2h2v2z',
+    }),
+  );
+};
+
+Announcement.displayName = 'Announcement';
+Announcement.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Bookmark = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', { d: 'M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z' }),
+  );
+};
+
+Bookmark.displayName = 'Bookmark';
+Bookmark.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Book = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d: 'M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z',
+    }),
+  );
+};
+
+Book.displayName = 'Book';
+Book.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Build = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z',
+    }),
+  );
+};
+
+Build.displayName = 'Build';
+Build.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Cached = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -113,6 +164,20 @@ export const Delete = <SvgIconConstructor>function(props: SvgIconProps) {
 Delete.displayName = 'Delete';
 Delete.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Description = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z',
+    }),
+  );
+};
+
+Description.displayName = 'Description';
+Description.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Done = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -123,6 +188,34 @@ export const Done = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Done.displayName = 'Done';
 Done.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Event = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z',
+    }),
+  );
+};
+
+Event.displayName = 'Event';
+Event.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const ExitToApp = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z',
+    }),
+  );
+};
+
+ExitToApp.displayName = 'ExitToApp';
+ExitToApp.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Favorite = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -179,6 +272,27 @@ export const HelpOutline = <SvgIconConstructor>function(props: SvgIconProps) {
 HelpOutline.displayName = 'HelpOutline';
 HelpOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Home = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement('svg', props, React.createElement('path', { d: 'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z' }));
+};
+
+Home.displayName = 'Home';
+Home.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const ImportantDevices = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M23 11.01L18 11c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5c.55 0 1-.45 1-1v-9c0-.55-.45-.99-1-.99zM23 20h-5v-7h5v7zM20 2H2C.89 2 0 2.89 0 4v12c0 1.1.89 2 2 2h7v2H7v2h8v-2h-2v-2h2v-2H2V4h18v5h2V4c0-1.11-.9-2-2-2zm-8.03 7L11 6l-.97 3H7l2.47 1.76-.94 2.91 2.47-1.8 2.47 1.8-.94-2.91L15 9h-3.03z',
+    }),
+  );
+};
+
+ImportantDevices.displayName = 'ImportantDevices';
+ImportantDevices.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Info = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -219,6 +333,20 @@ export const Label = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Label.displayName = 'Label';
 Label.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const LabelOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16zM16 17H5V7h11l3.55 5L16 17z',
+    }),
+  );
+};
+
+LabelOutline.displayName = 'LabelOutline';
+LabelOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Language = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -385,6 +513,42 @@ export const Update = <SvgIconConstructor>function(props: SvgIconProps) {
 Update.displayName = 'Update';
 Update.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const VerifiedUser = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z',
+    }),
+  );
+};
+
+VerifiedUser.displayName = 'VerifiedUser';
+VerifiedUser.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const ViewCarousel = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', { d: 'M7 19h10V4H7v15zm-5-2h4V6H2v11zM18 6v11h4V6h-4z' }),
+  );
+};
+
+ViewCarousel.displayName = 'ViewCarousel';
+ViewCarousel.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const ViewColumn = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', { d: 'M10 18h5V5h-5v13zm-6 0h5V5H4v13zM16 5v13h5V5h-5z' }),
+  );
+};
+
+ViewColumn.displayName = 'ViewColumn';
+ViewColumn.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Visibility = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -437,6 +601,13 @@ export const Warning = <SvgIconConstructor>function(props: SvgIconProps) {
 Warning.displayName = 'Warning';
 Warning.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const PlayArrow = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement('svg', props, React.createElement('path', { d: 'M8 5v14l11-7z' }));
+};
+
+PlayArrow.displayName = 'PlayArrow';
+PlayArrow.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Replay = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -449,6 +620,20 @@ export const Replay = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Replay.displayName = 'Replay';
 Replay.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const VideoLibrary = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8 12.5v-9l6 4.5-6 4.5z',
+    }),
+  );
+};
+
+VideoLibrary.displayName = 'VideoLibrary';
+VideoLibrary.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Email = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -463,6 +648,34 @@ export const Email = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Email.displayName = 'Email';
 Email.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const MailOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z',
+    }),
+  );
+};
+
+MailOutline.displayName = 'MailOutline';
+MailOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Phone = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z',
+    }),
+  );
+};
+
+Phone.displayName = 'Phone';
+Phone.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const Add = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement('svg', props, React.createElement('path', { d: 'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z' }));
@@ -589,6 +802,20 @@ export const Sort = <SvgIconConstructor>function(props: SvgIconProps) {
 Sort.displayName = 'Sort';
 Sort.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Unarchive = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M20.55 5.22l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.15.55L3.46 5.22C3.17 5.57 3 6.01 3 6.5V19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.49-.17-.93-.45-1.28zM12 9.5l5.5 5.5H14v2h-4v-2H6.5L12 9.5zM5.12 5l.82-1h12l.93 1H5.12z',
+    }),
+  );
+};
+
+Unarchive.displayName = 'Unarchive';
+Unarchive.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const LocationSearching = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -630,6 +857,20 @@ export const BorderClear = <SvgIconConstructor>function(props: SvgIconProps) {
 BorderClear.displayName = 'BorderClear';
 BorderClear.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const CreateNewFolder = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M20 6h-8l-2-2H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-1 8h-3v3h-2v-3h-3v-2h3V9h2v3h3v2z',
+    }),
+  );
+};
+
+CreateNewFolder.displayName = 'CreateNewFolder';
+CreateNewFolder.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const FileDownload = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -647,6 +888,46 @@ export const FileUpload = <SvgIconConstructor>function(props: SvgIconProps) {
 
 FileUpload.displayName = 'FileUpload';
 FileUpload.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Folder = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d: 'M10 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2h-8l-2-2z',
+    }),
+  );
+};
+
+Folder.displayName = 'Folder';
+Folder.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const FolderOpen = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d: 'M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z',
+    }),
+  );
+};
+
+FolderOpen.displayName = 'FolderOpen';
+FolderOpen.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const FolderShared = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z',
+    }),
+  );
+};
+
+FolderShared.displayName = 'FolderShared';
+FolderShared.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
 export const KeyboardArrowDown = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
@@ -748,6 +1029,34 @@ export const FilterNone = <SvgIconConstructor>function(props: SvgIconProps) {
 FilterNone.displayName = 'FilterNone';
 FilterNone.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const LocalOffer = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z',
+    }),
+  );
+};
+
+LocalOffer.displayName = 'LocalOffer';
+LocalOffer.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const MyLocation = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z',
+    }),
+  );
+};
+
+MyLocation.displayName = 'MyLocation';
+MyLocation.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Place = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -801,6 +1110,20 @@ export const ArrowForward = <SvgIconConstructor>function(props: SvgIconProps) {
 ArrowForward.displayName = 'ArrowForward';
 ArrowForward.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Cancel = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z',
+    }),
+  );
+};
+
+Cancel.displayName = 'Cancel';
+Cancel.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const Check = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -830,7 +1153,9 @@ export const Fullscreen = <SvgIconConstructor>function(props: SvgIconProps) {
     'svg',
     props,
     React.createElement('path', {
-      d: 'M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z',
+      transform: 'translate(11.919596, 11.919596) rotate(-45.000000) translate(-11.919596, -11.919596)',
+      d:
+        'M7.11159595,12.7195959 L7.11159595,15.1195959 L3.91959595,11.9195959 L7.11159595,8.71959595 L7.11159595,11.1195959 L16.7275959,11.1195959 L16.7275959,8.71959595 L19.9195959,11.9195959 L16.7275959,15.1195959 L16.7275959,12.7195959 L7.11159595,12.7195959 Z',
     }),
   );
 };
@@ -842,7 +1167,11 @@ export const FullscreenExit = <SvgIconConstructor>function(props: SvgIconProps) 
   return React.createElement(
     'svg',
     props,
-    React.createElement('path', { d: 'M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z' }),
+    React.createElement('path', {
+      transform: 'translate(12.220116, 12.220116) rotate(-45.000000) translate(-12.220116, -12.220116)',
+      d:
+        'M8.85261633,11.4701163 L3.59511633,11.4701163 L3.59511633,12.9701163 L8.85261633,12.9701163 L8.85261633,15.2201163 L11.8451163,12.2201163 L8.85261633,9.22011633 L8.85261633,11.4701163 L8.85261633,11.4701163 Z M15.5876163,15.2201163 L15.5876163,12.9701163 L20.8451163,12.9701163 L20.8451163,11.4701163 L15.5876163,11.4701163 L15.5876163,9.22011633 L12.5951163,12.2201163 L15.5876163,15.2201163 L15.5876163,15.2201163 Z',
+    }),
   );
 };
 
@@ -1014,6 +1343,20 @@ export const Public = <SvgIconConstructor>function(props: SvgIconProps) {
 Public.displayName = 'Public';
 Public.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
+export const Share = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z',
+    }),
+  );
+};
+
+Share.displayName = 'Share';
+Share.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
 export const CheckBox = <SvgIconConstructor>function(props: SvgIconProps) {
   return React.createElement(
     'svg',
@@ -1094,3 +1437,101 @@ export const Star = <SvgIconConstructor>function(props: SvgIconProps) {
 
 Star.displayName = 'Star';
 Star.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const FitToWidth = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M14,4 L18.8,8.8 L18.8,18.4 C18.8,19.28 18.08,20 17.2,20 L17.2,20 L7.592,20 C6.712,20 6,19.28 6,18.4 L6,18.4 L6,5.6 C6,4.72 6.72,4 7.6,4 L7.6,4 L14,4 Z M8.68968421,10.6666667 L6.67368421,12.6666667 L8.68968421,14.6666667 L8.68968421,13.1666667 L11.5578947,13.1666667 L11.5578947,12.1666667 L8.68968421,12.1666667 L8.68968421,10.6666667 Z M16.2787368,10.6666667 L16.2787368,12.1666667 L13.4105263,12.1666667 L13.4105263,13.1666667 L16.2787368,13.1666667 L16.2787368,14.6666667 L18.2947368,12.6666667 L16.2787368,10.6666667 Z',
+    }),
+  );
+};
+
+FitToWidth.displayName = 'FitToWidth';
+FitToWidth.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const FitToHeight = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M14,4 L18.8,8.8 L18.8,18.4 C18.8,19.28 18.08,20 17.2,20 L17.2,20 L7.592,20 C6.712,20 6,19.28 6,18.4 L6,18.4 L6,5.6 C6,4.72 6.72,4 7.6,4 L7.6,4 L14,4 Z M12.8,13.3333333 L11.8,13.3333333 L11.8,16.8383333 L10.3,16.8383333 L12.3,18.8333333 L14.3,16.8383333 L12.8,16.8383333 L12.8,13.3333333 Z M12.3,5.33333333 L10.3,7.32833333 L11.8,7.32833333 L11.8,10.8333333 L12.8,10.8333333 L12.8,7.32833333 L14.3,7.32833333 L12.3,5.33333333 Z',
+    }),
+  );
+};
+
+FitToHeight.displayName = 'FitToHeight';
+FitToHeight.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const Page = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M14,4 L7.6,4 C6.72,4 6,4.72 6,5.6 L6,18.4 C6,19.28 6.712,20 7.592,20 L17.2,20 C18.08,20 18.8,19.28 18.8,18.4 L18.8,8.8 L14,4 Z',
+    }),
+  );
+};
+
+Page.displayName = 'Page';
+Page.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
+
+export const PDFFile = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M23.333 3.333l10 10v20c0 1.834-1.5 3.334-3.333 3.334H9.983c-1.833 0-3.316-1.5-3.316-3.334l.016-26.666c0-1.834 1.484-3.334 3.317-3.334h13.333zM14.386 25.33h-2.17V32h1.57v-2.42h.59c.5 0 .5 0 .92-.135.42-.135.42-.135.73-.4s.31-.265.48-.665c.17-.4.17-.4.17-.93 0-.52 0-.52-.17-.92s-.17-.4-.475-.665c-.305-.265-.305-.265-.725-.4-.315-.101-.315-.101-.675-.127l-.245-.008zm5.446 0h-2.06V32h2.11c.74 0 .74 0 1.31-.265.57-.265.57-.265.96-.72.39-.455.39-.455.59-1.07.2-.615.2-.615.2-1.325 0-.75 0-.75-.195-1.355s-.195-.605-.58-1.035c-.385-.43-.385-.43-.97-.665-.488-.196-.488-.196-1.11-.228l-.255-.007zm8.136 0h-3.72V32h1.59v-2.77h2.03v-1.19h-2.03v-1.5h2.13v-1.21zm-8.266 1.21c.47 0 .47 0 .78.165.31.165.31.165.49.45.18.285.18.285.25.665.07.38.07.38.07.8 0 .42 0 .42-.075.81-.075.39-.075.39-.255.695-.18.305-.18.305-.48.485s-.3.18-.74.18h-.38v-4.25h.34zm-5.566-.05c.45 0 .45 0 .69.255.24.255.24.255.24.705 0 .42 0 .42-.215.69-.215.27-.215.27-.675.27h-.4v-1.92h.36zM21.666 15V5.833L30.834 15h-9.166z',
+    }),
+  );
+};
+
+PDFFile.displayName = 'PDFFile';
+PDFFile.defaultProps = { width: '24', height: '24', viewBox: '0 0 40 40' };
+
+export const PDFFileOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M23.333 3.333H10c-1.833 0-3.317 1.5-3.317 3.334l-.016 26.666c0 1.834 1.483 3.334 3.316 3.334H30c1.833 0 3.333-1.5 3.333-3.334v-20l-10-10zM10 33.333V6.667h11.667V15H30v18.333H10zM13.786 32v-2.42h.59c.5 0 .5 0 .92-.135.42-.135.42-.135.73-.4s.31-.265.48-.665c.17-.4.17-.4.17-.93 0-.52 0-.52-.17-.92s-.17-.4-.475-.665c-.305-.265-.305-.265-.725-.4s-.42-.135-.92-.135h-2.17V32h1.57zm.39-3.59h-.4v-1.92h.36c.45 0 .45 0 .69.255.24.255.24.255.24.705 0 .42 0 .42-.215.69-.215.27-.215.27-.675.27zM19.882 32c.74 0 .74 0 1.31-.265.57-.265.57-.265.96-.72.39-.455.39-.455.59-1.07.2-.615.2-.615.2-1.325 0-.75 0-.75-.195-1.355s-.195-.605-.58-1.035c-.385-.43-.385-.43-.97-.665-.585-.235-.585-.235-1.365-.235h-2.06V32zm-.14-1.21h-.38v-4.25h.34c.47 0 .47 0 .78.165.31.165.31.165.49.45.18.285.18.285.25.665.07.38.07.38.07.8 0 .42 0 .42-.075.81-.075.39-.075.39-.255.695-.18.305-.18.305-.48.485s-.3.18-.74.18zM25.838 32v-2.77h2.03v-1.19h-2.03v-1.5h2.13v-1.21h-3.72V32h1.59z',
+    }),
+  );
+};
+
+PDFFileOutline.displayName = 'PDFFileOutline';
+PDFFileOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 40 40' };
+
+export const Video = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M19.1780822,34.1780822 C27.4623534,34.1780822 34.1780822,27.4623534 34.1780822,19.1780822 C34.1780822,10.8938109 27.4623534,4.17808219 19.1780822,4.17808219 C10.8938109,4.17808219 4.17808219,10.8938109 4.17808219,19.1780822 C4.17808219,27.4623534 10.8938109,34.1780822 19.1780822,34.1780822 Z M15.8447489,12.5114155 L25.8447489,19.061799 L15.8447489,25.8447489 L15.8447489,12.5114155 Z',
+    }),
+  );
+};
+
+Video.displayName = 'Video';
+Video.defaultProps = { width: '24', height: '24', viewBox: '0 0 40 40' };
+
+export const VideoOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+  return React.createElement(
+    'svg',
+    props,
+    React.createElement('path', {
+      d:
+        'M19.1780822,4.17808219 C27.4623534,4.17808219 34.1780822,10.8938109 34.1780822,19.1780822 C34.1780822,27.4623534 27.4623534,34.1780822 19.1780822,34.1780822 C10.8938109,34.1780822 4.17808219,27.4623534 4.17808219,19.1780822 C4.17808219,10.8938109 10.8938109,4.17808219 19.1780822,4.17808219 Z M19.1780822,7.51141553 C12.7347601,7.51141553 7.51141553,12.7347601 7.51141553,19.1780822 C7.51141553,25.6214043 12.7347601,30.8447489 19.1780822,30.8447489 C25.6214043,30.8447489 30.8447489,25.6214043 30.8447489,19.1780822 C30.8447489,12.7347601 25.6214043,7.51141553 19.1780822,7.51141553 Z M15.8447489,12.5114155 L25.8447489,19.061799 L15.8447489,25.8447489 L15.8447489,12.5114155 Z',
+    }),
+  );
+};
+
+VideoOutline.displayName = 'VideoOutline';
+VideoOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 40 40' };

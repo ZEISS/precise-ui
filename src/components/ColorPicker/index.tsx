@@ -8,6 +8,8 @@ import { rgbToHsv, hsvToRgb, parseColor } from '../../utils/colors';
 import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
 import { showInputInfo } from '../../utils/input';
 import { distance } from '../../distance';
+import { PaddedContainer } from '../PaddedContainer';
+import { InputNotification } from '../InputNotification';
 
 export interface ColorChangeEvent {
   /**
@@ -75,6 +77,7 @@ export interface ColorPickerProps extends InputProps<FullColor | RgbaColor | str
 export interface ColorPickerState {
   controlled: boolean;
   value: FullColor;
+  error?: React.ReactChild;
   base: RgbaColor;
   active: boolean;
 }
@@ -206,12 +209,13 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
         v: hsv.v,
       },
       base,
+      error: props.error,
     };
   }
 
-  componentWillReceiveProps(nextProps: ColorPickerProps) {
-    if (nextProps.value && nextProps.value !== this.state.value) {
-      const { hsv, color, base } = computeColor(nextProps.value || this.state.value);
+  componentWillReceiveProps({ value, error }: ColorPickerProps) {
+    if (value && value !== this.state.value) {
+      const { hsv, color, base } = computeColor(value || this.state.value);
 
       this.setState({
         value: {
@@ -224,6 +228,7 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
         base,
       });
     }
+    this.setState({ error });
   }
 
   componentDidMount() {
@@ -338,16 +343,16 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
   };
 
   render() {
-    const { value, active, base } = this.state;
+    const { value, active, base, error } = this.state;
     const {
       defaultValue: _0,
       value: _1,
       onChange: _2,
+      onInput: _3,
       allowOpacity,
       hideBar,
       width = '100%',
       height = '200px',
-      error,
       info,
       ...props
     } = this.props;
@@ -358,6 +363,7 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
       width,
       height,
     };
+
     return (
       <PickerContainer {...props}>
         <PickerSurface {...surface} onChange={this.changeColor}>
@@ -367,7 +373,11 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
         </PickerSurface>
         {!hideBar && <ColorSlider onChange={this.changeBackground} value={value.h} color={baseRgb} />}
         {allowOpacity && <OpacitySlider onChange={this.changeOpacity} value={value.a} />}
-        {showInputInfo(error, info)}
+        {(error || info) && (
+          <PaddedContainer top="small" bottom="xsmall">
+            <InputNotification error={error} info={info} />
+          </PaddedContainer>
+        )}
       </PickerContainer>
     );
   }

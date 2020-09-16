@@ -45,6 +45,7 @@ function getFiles(target: Array<File>, files: any = []) {
 
 export interface DropzoneState {
   value: Array<File>;
+  error?: React.ReactChild;
   controlled: boolean;
   over: boolean;
   previews: Array<FileImagePreview>;
@@ -123,6 +124,7 @@ class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, Drop
       controlled: props.value !== undefined,
       value,
       previews: [],
+      error: props.error,
     };
   }
 
@@ -151,6 +153,7 @@ class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, Drop
       this.setState(() => ({
         value: e.value || [],
         previews: [],
+        error: e.error,
       }));
     }
   }
@@ -324,11 +327,10 @@ class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, Drop
   }
 
   render() {
-    const { value, over } = this.state;
+    const { value, over, error } = this.state;
     const {
       message = 'Drop files here to upload',
       multiple,
-      error,
       info,
       icon = 'FileDownload',
       theme,
@@ -337,6 +339,7 @@ class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, Drop
       disabled,
       onChange: _2,
       preview: _3,
+      onInput: _5,
       children,
       ...props
     } = this.props;

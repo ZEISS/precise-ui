@@ -81,18 +81,15 @@ const StyledIcon = styled(StyledIconInt)<StyledArrowProps>`
 function defaultGroupRenderer<T>(e: AccordionGroupRenderEvent<T>): React.ReactChild {
   return (
     <>
-      {e.group} ({e.items.length})
+      {e.group ? e.group.toString() : e.group} ({e.items.length})
     </>
   );
-}
-
-function getGroupItems<T>(data: Array<T>, groupBy?: keyof T, group?: any) {
-  return groupBy ? data.filter(m => m[groupBy] === group) : [];
 }
 
 export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<T>, AccordionTableBasicState> {
   static defaultProps = {
     multiple: false,
+    noValueGroupLabel: '—',
   };
 
   constructor(props: AccordionTableProps<T>) {
@@ -124,6 +121,43 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
     return state;
   }
 
+  private getGroupItems<T>(data: Array<T>, groupBy?: keyof T, group?: any) {
+    const { noValueGroupLabel } = this.props;
+
+    if (groupBy) {
+      if (group === noValueGroupLabel) {
+        return data.filter(m => {
+          const value = m[groupBy];
+
+          // the number '0' shouldn't be in the no-value-group.
+          if (typeof value === 'number' && value === 0) {
+            return false;
+          } else {
+            // empty arrays should be in the no-value-group
+            return !value || (Array.isArray(value) && value.length === 0);
+          }
+        });
+      } else {
+        return data.filter(m => {
+          const value = m[groupBy];
+
+          if (value === group) {
+            return true;
+          } else {
+            // special handling for arrays is needed because '===' doesn't work for arrays
+            if (Array.isArray(value) && Array.isArray(group)) {
+              return value.toString() === group.toString();
+            } else {
+              return false;
+            }
+          }
+        });
+      }
+    }
+
+    return [];
+  }
+
   private handleClick(target: number, data: T) {
     const { onChange, multiple } = this.props;
     const { controlledIndex, selectedIndex } = this.state;
@@ -152,7 +186,7 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
       onToggleGroup({
         group,
         type: 'expand',
-        items: getGroupItems(data, groupBy, group),
+        items: this.getGroupItems(data, groupBy, group),
       });
     }
 
@@ -171,7 +205,7 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
 
   private groupRenderer(group: any, count: number, expanded: boolean) {
     const { theme, groupRenderer = defaultGroupRenderer, data, groupBy } = this.props;
-    const items = getGroupItems(data, groupBy, group);
+    const items = this.getGroupItems(data, groupBy, group);
 
     return (
       <>
@@ -186,16 +220,47 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
     );
   }
 
+  private getGroupByValue = (rowData: any) => {
+    const { groupBy, noValueGroupLabel } = this.props;
+
+    if (groupBy) {
+      const rowValue = rowData[groupBy];
+      if (rowValue || rowValue === 0) {
+        if (Array.isArray(rowValue) && rowValue.length === 0) {
+          return noValueGroupLabel;
+        } else {
+          return rowValue;
+        }
+      } else {
+        return noValueGroupLabel;
+      }
+    }
+
+    return undefined;
+  };
+
+  /**
+   * helper method to check if an element is included in an array.
+   * This method has special handling for arrays of arrays. In this case normal strict equality checking (===)
+   * wouldn't work.
+   */
+  private static arrayIncludes<E>(element: E, arr: Array<E>): boolean {
+    return (
+      (Array.isArray(element) ? JSON.stringify(arr).indexOf(JSON.stringify(element)) : arr.indexOf(element)) !== -1
+    );
+  }
+
   private rowRenderer = ({ cells, index, data, key, state }: TableRowEvent<T>) => {
-    const { detailsRenderer, rowRenderer, theme, arrowToggle, groupBy } = this.props;
+    const { detailsRenderer, rowRenderer, theme, arrowToggle } = this.props;
     const { selectedIndex, expandedGroups } = this.state;
     const { groupedRows = [] } = state;
     const active = hasIndex(selectedIndex, index);
     const count = React.Children.count(cells);
-    const col = groupBy && data[groupBy];
-    const open = !col || expandedGroups.indexOf(col) !== -1;
+    const col = this.getGroupByValue(data);
+    const open = !(col || col === 0) || AccordionTableBasic.arrayIncludes(col, expandedGroups);
     const renderData = { cells, index, data, active, key, state };
-    const isNewGroup = col && groupedRows.indexOf(col) === -1;
+
+    const isNewGroup = (col || col === 0) && !AccordionTableBasic.arrayIncludes(col, groupedRows);
 
     if (isNewGroup) {
       state.groupedRows = [...groupedRows, col];

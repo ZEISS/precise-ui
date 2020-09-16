@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Highlight /> should render <Highlight> a single span if no match 1`] = `
+<Fragment>
+  <styled.span
+    key="0"
+  >
+    A
+  </styled.span>
+</Fragment>
+`;
+
+exports[`<Highlight /> should render <Highlight> matching the indices 1`] = `
+<Fragment>
+  <span>
+    H
+  </span>
+  <styled.span>
+    el
+  </styled.span>
+  <span>
+    lo 
+  </span>
+  <styled.span>
+    World!
+  </styled.span>
+  <span>
+     Searching for World!
+  </span>
+</Fragment>
+`;
+
+exports[`<Highlight /> should render <Highlight> should escape \\ 1`] = `
+<Fragment>
+  <span
+    key="0"
+  >
+    Hello World!
+  </span>
+</Fragment>
+`;
+
+exports[`<Highlight /> should render <Highlight> treating regex patterns as text 1`] = `
+<Fragment>
+  <span
+    key="0"
+  >
+    Hello 
+  </span>
+  <styled.span
+    key="1"
+  >
+    (?)
+  </styled.span>
+  <span
+    key="2"
+  >
+    World!
+  </span>
+</Fragment>
+`;
+
+exports[`<Highlight /> should render <Highlight> with background color on search term 1`] = `
+<Fragment>
+  <span
+    key="0"
+  >
+    Hello 
+  </span>
+  <styled.span
+    key="1"
+  >
+    World
+  </styled.span>
+  <span
+    key="2"
+  >
+    !
+  </span>
+</Fragment>
+`;
+
+exports[`<Highlight /> should render <Highlight> with exact match on case 1`] = `
+<Fragment>
+  <span
+    key="0"
+  >
+    Hello 
+  </span>
+  <styled.span
+    key="1"
+  >
+    World
+  </styled.span>
+  <span
+    key="2"
+  >
+    !
+  </span>
+</Fragment>
+`;
+
+exports[`<Highlight /> should render <Highlight> with no exact match on case 1`] = `
+<Fragment>
+  <span
+    key="0"
+  >
+    Hello World!
+  </span>
+</Fragment>
+`;
+
+exports[`<Highlight /> should render <Highlight> with no matched search term 1`] = `
+<Fragment>
+  <span
+    key="0"
+  >
+    Hello World!
+  </span>
+</Fragment>
+`;
+
+exports[`<Highlight /> should render <Highlight> without leading empty span 1`] = `
+<Fragment>
+  <styled.span
+    key="0"
+  >
+    H
+  </styled.span>
+  <span
+    key="1"
+  >
+    ello World!
+  </span>
+</Fragment>
+`;
+
+exports[`<Highlight /> should render <Highlight> without trailing empty span 1`] = `
+<Fragment>
+  <span
+    key="0"
+  >
+    Hello World
+  </span>
+  <styled.span
+    key="1"
+  >
+    !
+  </styled.span>
+</Fragment>
+`;

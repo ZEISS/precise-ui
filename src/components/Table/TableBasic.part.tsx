@@ -1,7 +1,6 @@
 import * as React from 'react';
 import memoize from 'memoize-one';
 import styled, { themed, css } from '../../utils/styled';
-import { remCalc } from '../../utils/remCalc';
 import { sortObjectList } from '../../utils/sort';
 import { distance } from '../../distance';
 import { RefProps, StandardProps } from '../../common';
@@ -15,7 +14,8 @@ import {
   StyledTableFoot,
   defaultBodyRenderer,
   getColumns,
-  defaultHeaderCellRenderer,
+  getDefaultHeaderCellRenderer,
+  handleDataClickedEvent,
 } from './TableShared.part';
 
 import { getFontStyle } from '../../textStyles';
@@ -143,7 +143,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
   }
 
   private headerClicked(e: React.MouseEvent<HTMLTableCellElement>, column: number, key: string) {
-    const { onHeaderClick, data = [], columns } = this.props;
+    const { onHeaderClick, onSort, data = [], columns } = this.props;
     e.preventDefault();
 
     if (typeof onHeaderClick === 'function') {
@@ -153,21 +153,31 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
         row: -1,
       });
     } else if (this.isSortable(key, getColumns(data, columns))) {
-      const { sorting } = this.state;
-      const isAscending = sorting && sorting.order === 'descending' && sorting.columnKey === key;
+      this.setState(
+        ({ sorting }) => {
+          const isAscending = sorting && sorting.order === 'descending' && sorting.columnKey === key;
+          const order = sorting && sorting.columnKey === key ? 'descending' : 'ascending';
+          let newSortingValue: TableSorting | undefined = undefined;
 
-      if (!isAscending && column !== -1) {
-        this.setState({
-          sorting: {
-            columnKey: key,
-            order: sorting && sorting.columnKey === key ? 'descending' : 'ascending',
-          },
-        });
-      } else {
-        this.setState({
-          sorting: undefined,
-        });
-      }
+          if (!isAscending && column !== -1) {
+            newSortingValue = {
+              columnKey: key,
+              order,
+            };
+          }
+
+          return { sorting: newSortingValue };
+        },
+        () => {
+          if (typeof onSort === 'function') {
+            onSort({
+              column,
+              key,
+              order: this.state.sorting && this.state.sorting.order,
+            });
+          }
+        },
+      );
     }
   }
 
@@ -185,23 +195,29 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     }
   }
 
-  private dataClicked(e: React.MouseEvent<HTMLTableCellElement>, row: number, column: number, key: string) {
-    const { onDataClick, data } = this.props;
-    e.preventDefault();
-
-    if (typeof onDataClick === 'function') {
-      const d = data[row];
-      onDataClick({
-        row,
-        column,
-        key,
-        data: d,
-        value: d && (column === -1 ? row + 1 : d[key]),
-      });
-    }
-  }
-
   private defaultHeadRenderer = ({ columns, sortBy, keys }: TableSectionRenderEvent<T>) => {
+    const { onSort } = this.props;
+
+    const defaultHeaderCellRenderer = getDefaultHeaderCellRenderer((columnKey, order) => {
+      this.setState(
+        {
+          sorting: {
+            columnKey,
+            order,
+          },
+        },
+        () => {
+          if (typeof onSort === 'function') {
+            onSort({
+              column: keys.indexOf(columnKey),
+              key: columnKey,
+              order,
+            });
+          }
+        },
+      );
+    });
+
     const { indexed, theme, headerCellRenderer = defaultHeaderCellRenderer } = this.props;
 
     return (
@@ -310,16 +326,19 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
   };
 
   private renderCells(keys: Array<string>, rowIndex: number) {
-    const { data = [], cellRenderer = defaultCellRenderer, indexed, theme, columns } = this.props;
+    const { data = [], cellRenderer = defaultCellRenderer, indexed, theme, columns, onDataClick } = this.props;
     const cols = getColumns(data, columns);
+    const row = data[rowIndex];
     const cells = keys.map((key, cell) => {
       const column = cols[key];
       const hidden = typeof column !== 'string' && column.hidden;
 
       if (!hidden) {
-        const row = data[rowIndex];
         return (
-          <StyledTableCell key={key} onClick={e => this.dataClicked(e, rowIndex, cell, key)} theme={theme}>
+          <StyledTableCell
+            key={key}
+            onClick={handleDataClickedEvent({ row: rowIndex, column: cell, key, data: row }, onDataClick)}
+            theme={theme}>
             {cellRenderer({
               column: cell,
               key,
@@ -337,7 +356,10 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
 
     if (indexed) {
       cells.unshift(
-        <StyledTableCell key="index#" onClick={e => this.dataClicked(e, rowIndex, -1, '__indexed')} theme={theme}>
+        <StyledTableCell
+          key="index#"
+          onClick={handleDataClickedEvent({ row: rowIndex, column: -1, key: '__indexed', data: row }, onDataClick)}
+          theme={theme}>
           {rowIndex + 1}
         </StyledTableCell>,
       );
@@ -426,6 +448,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
       footRenderer: _11,
       headerCellRenderer: _12,
       footerCellRenderer: _13,
+      onSort: _14,
       ...props
     } = this.props;
     const cols = getColumns(data, columns);

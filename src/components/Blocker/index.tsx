@@ -1,8 +1,7 @@
 import * as React from 'react';
 import styled from '../../utils/styled';
 import { StandardProps } from '../../common';
-import { transparentize } from '../../utils/colors';
-import { KeyCodes } from '../../utils/keyCodes';
+import { KeyCodes, transparentize } from '../../utils';
 import { dark } from '../../colors';
 
 export interface BlockerProps extends StandardProps {
@@ -108,9 +107,16 @@ export class Blocker extends React.Component<BlockerProps> {
   private onContainerClick = (e: React.MouseEvent<HTMLElement>) => {
     e.stopPropagation();
 
-    if (e.target === e.currentTarget) {
+    if (
+      !this.onScrollbarClick(e) &&
+      (e.target === e.currentTarget || (e.target instanceof HTMLElement && e.target.parentElement === e.currentTarget))
+    ) {
       this.notifyClose(e);
     }
+  };
+
+  private onScrollbarClick = (e: React.MouseEvent<HTMLElement>) => {
+    return e.target instanceof HTMLElement && e.target.offsetLeft + e.target.scrollWidth < e.clientX;
   };
 
   private onKeyPress = (e: React.KeyboardEvent<HTMLElement>) => {
@@ -124,7 +130,11 @@ export class Blocker extends React.Component<BlockerProps> {
 
     return (
       <>
-        <FixedContainer ref={this.setElement} onClick={this.onContainerClick} onKeyDown={this.onKeyPress} {...props}>
+        <FixedContainer
+          ref={this.setElement}
+          onMouseDown={this.onContainerClick}
+          onKeyDown={this.onKeyPress}
+          {...props}>
           <FocusKeeper href="#" onFocus={this.keepLastFocus} />
           {children}
           <FocusKeeper href="#" onFocus={this.keepFirstFocus} />

@@ -18,6 +18,7 @@ import { getFontStyle } from '../../textStyles';
 interface ListItemProps {
   selected: boolean;
   hovered: boolean;
+  disabled?: boolean;
   onClick?(e: React.MouseEvent): void;
   onMouseMove?(e: React.MouseEvent): void;
 }
@@ -60,14 +61,15 @@ const ListWrapper = styled('ul')<InteractiveListWrapperProps>(
 
 const ListItem = styled.li<ListItemProps>(
   themed(
-    ({ hovered, theme: { ui3, text2 } }) => css`
+    ({ hovered, theme: { ui3, text2 }, disabled }) => css`
       ${getFontStyle({ size: 'medium' })}
       
       background: ${hovered ? ui3 : transparent};
       color: ${text2};
       list-style: none;
       box-sizing: border-box;
-      cursor: pointer;
+      opacity: ${disabled ? '0.5' : '1.0'};
+      cursor: ${disabled ? 'not-allowed' : 'pointer'};
       display: block;
       width: 100%;
       height: auto;
@@ -92,7 +94,7 @@ const ListItemInnerContainer = styled.div`
 `;
 
 const ListItemContent = styled.div`
-  flex-grow: 1;
+  width: 100%;
 `;
 
 const ListItemContentPadding = styled('div')<ListItemContentProps>`
@@ -105,6 +107,10 @@ const ListItemContentComponentPadding = styled('div')<ListItemContentProps>`
     padding: ${props => (props.condensed ? `${distance.small} ${distance.medium}` : distance.medium)};
     ${props => (props.showTick ? 'padding-right: 0;' : '')};
   }
+`;
+
+const StyledCheckbox = styled(Checkbox)`
+  display: block;
 `;
 
 const ListItemIconPadding = styled('div')<ListItemIconProps>`
@@ -190,11 +196,11 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       value: props.indices || getIndices(props.data || [], value, props.multiple),
       controlled: props.indices !== undefined || props.value !== undefined,
       selected: undefined,
-      direction: InteractiveListDirection.normal,
+      direction: props.direction || InteractiveListDirection.normal,
     };
   }
 
-  handleClickOutside = () => {
+  private defaultHandleClickOutside = () => {
     const { open, onBlur } = this.props;
 
     if (open) {
@@ -205,6 +211,12 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       this.setState({
         selected: undefined,
       });
+    }
+  };
+
+  handleClickOutside = () => {
+    if (this.props.open) {
+      this.props.onClickOutside ? this.props.onClickOutside() : this.defaultHandleClickOutside();
     }
   };
 
@@ -219,7 +231,10 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       });
     }
 
-    if (nextProps.focus !== focus && nextProps.focus) {
+    const componentIsNotFocused =
+      nextProps.focus !== focus || (this.interactiveList && document.activeElement !== this.interactiveList);
+
+    if (componentIsNotFocused && nextProps.focus) {
       if (open && nextProps.open) {
         this.interactiveList && this.interactiveList.focus();
         this.setState({
@@ -356,7 +371,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
     e.preventDefault();
   };
 
-  private createSingleItem = (item: InteractiveListItem, index: number) => {
+  private getItemDetails = (item: InteractiveListItem) => {
     let key = '';
     let content: React.ReactChild;
 
@@ -367,32 +382,43 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       key = item.key;
       content = item.content || item.key;
     }
+
+    return {
+      key,
+      content,
+    };
+  };
+
+  private createSingleItem = (item: InteractiveListItem, index: number) => {
+    const { key, content } = this.getItemDetails(item);
 
     return this.createItem(key, index, content);
   };
 
   private createMultipleItem = (item: InteractiveListItem, index: number) => {
+    const { disabledItems } = this.props;
     const { value } = this.state;
-    let key = '';
-    let content: React.ReactChild;
+    const { key, content } = this.getItemDetails(item);
 
-    if (typeof item === 'string') {
-      key = item;
-      content = item;
-    } else {
-      key = item.key;
-      content = item.content || item.key;
-    }
+    const isItemDisabled = disabledItems && disabledItems.indexOf(key) !== -1;
 
-    const newContent = <Checkbox value={value.indexOf(index) >= 0}>{content}</Checkbox>;
+    const newContent = (
+      <StyledCheckbox value={value.indexOf(index) >= 0} disabled={isItemDisabled}>
+        {content}
+      </StyledCheckbox>
+    );
     return this.createItem(key, index, newContent);
   };
 
   private done = () => {
-    const { multiple, onChange, disabled } = this.props;
+    const { multiple, onChange, disabled, data, disabledItems = [] } = this.props;
     const { value, controlled, selected } = this.state;
 
-    if (!disabled && selected !== undefined) {
+    const item = data && selected !== undefined && data[selected];
+    const key = item && this.getItemDetails(item).key;
+    const isItemDisabled = key && disabledItems.indexOf(key) !== -1;
+
+    if (!disabled && !isItemDisabled && selected !== undefined) {
       const newValue = multiple
         ? value.indexOf(selected) === -1
           ? [...value, selected]
@@ -415,7 +441,8 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
 
   private createItem(key: string, index: number, content: React.ReactChild) {
     const { value, selected } = this.state;
-    const { disabled, showTick = false, multiple = false, condensed = false } = this.props;
+    const { disabled, showTick = false, multiple = false, condensed = false, disabledItems } = this.props;
+    const isItemDisabled = disabledItems && disabledItems.indexOf(key) !== -1;
     const isHovered = !disabled && selected === index;
     const isSelected = value.indexOf(index) >= 0;
     const selects = this.selects;
@@ -432,6 +459,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
         onMouseMove={selects[index]}
         selected={isSelected}
         hovered={isHovered}
+        disabled={isItemDisabled}
         ref={(node: HTMLLIElement) => {
           this.elements[index] = node;
 
@@ -488,6 +516,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       indices: _1,
       disabled: _2,
       onKeyDown: _3,
+      onClickOutside: _4,
       data = [],
       theme,
       borderless = false,

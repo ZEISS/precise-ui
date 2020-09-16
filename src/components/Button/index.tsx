@@ -4,8 +4,8 @@ import { StandardProps, ButtonThemeSettings, PreciseFullTheme } from '../../comm
 import { Anchor, AnchorProps } from '../Anchor';
 import { IconName, Icon, IconProps } from '../Icon';
 import { distance } from '../../distance';
-import { displayTo } from '../../utils/displayTo';
-import { getFontStyle, getFontSize } from '../../textStyles';
+import { displayUpTo } from '../../utils/';
+import { getFontSize } from '../../textStyles';
 
 /**
  * Button style name.
@@ -149,7 +149,7 @@ const StyledButton = styled(AnchorInt)<StyledButtonProps>(
       display: ${props.block ? 'block' : 'inline-block'};
       cursor: ${props.disabled ? 'not-allowed' : 'pointer'};
       ${!props.disabled ? PseudoButtonStyle(themeSettings) : ''};
-      ${displayTo('smallAndMedium')`
+      ${displayUpTo('medium')`
         width: 100%;
         margin: ${distance.small} 0;
       `};

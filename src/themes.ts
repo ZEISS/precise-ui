@@ -6,6 +6,7 @@ import {
   FlyoutStyling,
   MetroInfoTileStyling,
   AccordionCardStyling,
+  ActionButtonThemeSettings,
 } from './common';
 import { distance } from './distance';
 import { remCalc } from './utils/remCalc';
@@ -26,6 +27,8 @@ const colorCycle = [
 export const breakpoints: Breakpoints = {
   medium: 740, // tablet
   large: 980, // desktop
+  xLarge: 1200, // hd desktop
+  max: 1800, // full hd desktop
 };
 
 export const buttonPrimary: ButtonThemeSettings = {
@@ -60,6 +63,12 @@ export const buttonSecondary: ButtonThemeSettings = {
   disabledBorder: `1px solid ${colors.pinkSwan}`,
   lineHeightMedium: '20px',
   lineHeightSmall: '16px',
+};
+
+export const actionButtonWarning: ActionButtonThemeSettings = {
+  iconBackground: colors.purpleRed,
+  hoverIconBackground: colors.purpleRed5,
+  focusIconBackground: colors.purpleRed6,
 };
 
 export const flyout: FlyoutStyling = {
@@ -108,6 +117,7 @@ export const light: PreciseFullTheme = {
   text7: colors.white,
   buttonPrimary,
   buttonSecondary,
+  actionButtonWarning,
   buttonIconPosition: 'right',
   primary: colors.pacificBlue,
   secondary: colors.lighterGray,
@@ -143,4 +153,5 @@ export const light: PreciseFullTheme = {
   notificationTextFontSize: remCalc('16px'),
   notificationTextLineHeight: `22px`,
   notificationIconMarginRight: distance.medium,
+  highlightColor: colors.brightLemon,
 };

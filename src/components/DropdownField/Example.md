@@ -20,6 +20,16 @@ const items = [
 <DropdownField data={items} defaultValue="Value 1" label="Select item"/>
 ```
 
+**Positioning**
+
+By default the list is positioned automatically based on the screen size (whether towards the top or bottom, depending on available space on the screen). There is an option to override this behavior by `direction` prop (`0` - bottom, `1` - top).
+
+```jsx
+const { DropdownField } = require('precise-ui');
+
+<DropdownField data={['first', 'second']} direction={0} label="Select item"/>
+```
+
 **Decoration Options**
 
 The given items can also be more than just values. We can provide complex objects that contain further information such as an optional item type (e.g., `divider`, `header`) or some fixed content.
@@ -106,4 +116,81 @@ class MyDropdown extends React.Component {
 }
 
 <MyDropdown />
+```
+
+**Disable specific options**
+
+To disable specific options pass an array of strings (matching the strings if plain strings are used or the `key` 
+field if objects are used as `data`). This prevents those options from being selected by the user.
+
+Example with single selection:
+
+```jsx
+const { DropdownField } = require('precise-ui');
+
+const items = [
+  {
+    key: "1",
+    content: "Option 1"
+  },
+  {
+    key: "2",
+    content: "Option 2"
+  },
+  {
+    key: "3",
+    content: "Option 3"
+  },
+  {
+    key: "4",
+    content: "Option 4"
+  },
+  {
+    key: "5",
+    content: "Option 5"
+  },
+]
+
+const disabledItems = [
+  "1",
+  "3"
+];
+
+<DropdownField data={items} disabledItems={disabledItems} />
+```
+
+Example with multiple selection:
+
+```jsx
+const { DropdownField } = require('precise-ui');
+
+const items = [
+  {
+    key: "1",
+    content: "Option 1"
+  },
+  {
+    key: "2",
+    content: "Option 2"
+  },
+  {
+    key: "3",
+    content: "Option 3"
+  },
+  {
+    key: "4",
+    content: "Option 4"
+  },
+  {
+    key: "5",
+    content: "Option 5"
+  },
+]
+
+const disabledItems = [
+  "1",
+  "3"
+];
+
+<DropdownField data={items} disabledItems={disabledItems} multiple/>
 ```

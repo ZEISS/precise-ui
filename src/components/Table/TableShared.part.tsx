@@ -1,8 +1,20 @@
 import * as React from 'react';
-import { TableRowEvent, TableBodyRenderEvent, Column, TableColumns, TableCellRenderEvent } from './Table.types.part';
+import {
+  TableBodyRenderEvent,
+  Column,
+  TableColumns,
+  TableCellRenderEvent,
+  TableCellEvent,
+  TableProps,
+} from './Table.types.part';
 import styled, { themed, css } from '../../utils/styled';
-import { distance } from '../../distance';
 import { getFontStyle } from '../../textStyles';
+import { IncreaseDecrease } from '../IncreaseDecrease';
+import { distance } from '../../distance';
+
+const StyledIncreaseDecrease = styled(IncreaseDecrease)`
+  margin-left: ${distance.xsmall};
+`;
 
 const HeaderLabel = styled.div`
   font-size: 0;
@@ -14,56 +26,6 @@ const HeaderLabel = styled.div`
     display: inline-block;
     vertical-align: middle;
   }
-`;
-
-const WithArrowUp = css`
-  &:after {
-    border-top: 4px solid ${themed(({ theme }) => theme.ui5)};
-  }
-`;
-
-const WithArrowDown = css`
-  &:before {
-    border-bottom: 4px solid ${themed(({ theme }) => theme.ui5)};
-  }
-`;
-
-interface SortIconProps {
-  currentDirection?: 'ArrowDropDown' | 'ArrowDropUp' | false;
-  sortable?: boolean;
-}
-
-const SortIcon = styled('span')<SortIconProps>`
-  position: relative;
-  margin-left: ${distance.xsmall};
-  width: 18px;
-  height: 18px;
-
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    pointer-events: none;
-    margin: 0 auto;
-  }
-  &:before {
-    top: 50%;
-    margin-top: -5px;
-    border-bottom: 4px solid ${themed(({ theme }) => theme.ui4)};
-  }
-  &:after {
-    bottom: 50%;
-    margin-bottom: -7px;
-    border-top: 4px solid ${themed(({ theme }) => theme.ui4)};
-  }
-  ${({ currentDirection }) =>
-    currentDirection ? (currentDirection === 'ArrowDropDown' ? WithArrowUp : WithArrowDown) : ''};
 `;
 
 export const StyledTableHead = styled.thead`
@@ -104,20 +66,37 @@ export const StyledTableHeader = styled('th')<TableHeaderProps>`
   ${({ width }) => (width && `width: ${width}`) || ''};
 `;
 
-export function defaultHeaderCellRenderer<T>({ value, sorting, column }: TableCellRenderEvent<T>): React.ReactNode {
+export const getDefaultHeaderCellRenderer = (sort: (key: string, order: 'ascending' | 'descending') => void) => <
+  T extends {}
+>({
+  value,
+  sorting,
+  column,
+  key,
+}: TableCellRenderEvent<T>): React.ReactNode => {
   if (column !== -1) {
     return (
       <HeaderLabel>
         <span>{value}</span>
         {sorting !== false && (
-          <SortIcon currentDirection={sorting && (sorting === 'descending' ? 'ArrowDropDown' : 'ArrowDropUp')} />
+          <StyledIncreaseDecrease
+            value={sorting ? (sorting === 'descending' ? 'decrease' : 'increase') : undefined}
+            onIncrease={e => {
+              e.stopPropagation();
+              sort(key, 'ascending');
+            }}
+            onDecrease={e => {
+              e.stopPropagation();
+              sort(key, 'descending');
+            }}
+          />
         )}
       </HeaderLabel>
     );
   }
 
   return value;
-}
+};
 
 export function defaultCellRenderer<T>({ value }: TableCellRenderEvent<T>): React.ReactNode {
   switch (typeof value) {
@@ -151,4 +130,18 @@ export function getColumns<T>(data: Array<T>, columns?: TableColumns) {
       return columns;
     }, {})
   );
+}
+
+export function handleDataClickedEvent<T>(tableCellEvent: TableCellEvent<T>, handler?: TableProps<T>['onDataClick']) {
+  return <E extends HTMLElement = HTMLElement>(e: React.MouseEvent<E>) => {
+    e.preventDefault();
+    const { row, column, key, data } = tableCellEvent;
+
+    if (typeof handler === 'function') {
+      handler({
+        ...tableCellEvent,
+        value: data && (column === -1 ? row + 1 : data[key]),
+      });
+    }
+  };
 }

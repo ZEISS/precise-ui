@@ -1,6 +1,20 @@
 export interface Breakpoints {
+  /**
+   * Tablet: 740px
+   */
   medium: number;
+  /**
+   * Desktop: 980px
+   */
   large: number;
+  /**
+   * Desktop HD: 1200px
+   */
+  xLarge: number;
+  /**
+   * Desktop Full HD: 1800px
+   */
+  max: number;
 }
 
 export interface AccordionCardStyling {
@@ -127,6 +141,21 @@ export interface ButtonThemeSettings {
   lineHeightSmall: string;
 }
 
+export interface ActionButtonThemeSettings {
+  /**
+   * Color of icon background.
+   */
+  iconBackground: string;
+  /**
+   * Color of icon background when hovered.
+   */
+  hoverIconBackground: string;
+  /**
+   * Color of icon background when focused.
+   */
+  focusIconBackground: string;
+}
+
 export type PreciseThemeColors = {
   /**
    * Theme color UI0.
@@ -219,6 +248,10 @@ export interface PreciseFullTheme extends PreciseThemeColors {
    * Colors of the secondary button.
    */
   buttonSecondary: ButtonThemeSettings;
+  /**
+   * Colors of the warning action button.
+   */
+  actionButtonWarning: ActionButtonThemeSettings;
   /**
    * Position of the icon when place inside a button.
    */
@@ -359,6 +392,10 @@ export interface PreciseFullTheme extends PreciseThemeColors {
    * Specific AccordionCard theme settings.
    */
   accordionCard: AccordionCardStyling;
+  /**
+   * Color of highlighted text
+   */
+  highlightColor: string;
 }
 
 export type PreciseTheme = { [T in keyof PreciseFullTheme]?: Partial<PreciseFullTheme[T]> };
@@ -383,6 +420,10 @@ export interface InputChangeEvent<T> {
    * The current value of the input field.
    */
   value: T;
+  /**
+   * Original change event
+   */
+  originalEvent?: React.ChangeEvent<any>;
 }
 
 export interface InputProps<T> extends StandardProps {
@@ -413,7 +454,7 @@ export interface InputProps<T> extends StandardProps {
   /**
    * Event triggered when a key was pressed.
    */
-  onInput?(): void;
+  onInput?(e?: InputChangeEvent<string>): void;
   /**
    * Optional name if to be used within a form context.
    */
@@ -435,6 +476,14 @@ export interface InputProps<T> extends StandardProps {
    * Sets the autocomplete mode of the input.
    */
   autoComplete?: 'on' | 'off';
+  /**
+   * Sets type on the input field.
+   */
+  type?: string;
+  /**
+   * Sets maximum lenngth of input field.
+   */
+  maxLength?: number;
 }
 
 export interface LabeledInputProps<T> extends InputProps<T> {
@@ -482,7 +531,8 @@ export interface RefProps {
   innerRef?(node: HTMLElement | null): void;
 }
 
-export type ScreenSize = 'small' | 'smallAndMedium' | 'medium' | 'mediumAndLarge' | 'large';
+export const ScreenSizeList = stringLiteralArray(['small', 'medium', 'large', 'xLarge', 'max']);
+export type ScreenSize = typeof ScreenSizeList[number];
 
 // Helper type operators
 export type KeyofBase = keyof any;
@@ -490,3 +540,7 @@ export type Diff<T extends KeyofBase, U extends KeyofBase> = ({ [P in T]: P } &
   { [P in U]: never } & { [x: string]: never })[T];
 export type Omit<T, K extends keyof T> = Pick<T, Diff<keyof T, K>>;
 export type Component<P> = React.ComponentClass<P> | React.StatelessComponent<P>;
+// Helper type functions
+function stringLiteralArray<T extends string>(val: Array<T>) {
+  return val;
+}

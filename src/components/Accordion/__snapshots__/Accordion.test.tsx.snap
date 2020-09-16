@@ -1,6 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordion /> should render a <Accordion> component with several tabs 1`] = `
+.c5 {
+  display: inline-block;
+}
+
+.c5 > svg {
+  float: left;
+}
+
+.c0 {
+  padding: 0;
+  list-style: none;
+}
+
+.c1 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  text-align: left;
+  overflow: visible;
+  border-top: 1px solid rgba(211,211,211,1);
+  box-sizing: border-box;
+  color: rgba(62,62,62,1);
+}
+
+.c1:last-child {
+  border-bottom: 1px solid rgba(211,211,211,1);
+}
+
+.c2 {
+  -webkit-transition: background-color 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background-color 0.3s cubic-bezier(0,0,0.25,1);
+  background-color: rgba(255,255,255,1);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: pre-wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.c4 {
+  font-size: 1.125rem;
+  margin-right: 1rem;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0,0,0.25,1);
+  -webkit-transition: transform 0.2s cubic-bezier(0,0,0.25,1);
+  transition: transform 0.2s cubic-bezier(0,0,0.25,1);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
 <Responsive>
   <ModeProvider
     dimensions={
@@ -58,7 +119,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
               forwardedRef={null}
             >
               <div
-                className="sc-htpNat KtFsv"
+                className=""
               >
                 <styled.ul>
                   <StyledComponent
@@ -69,7 +130,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bxivhb",
                           "isStatic": true,
-                          "lastClassName": "gXAmgN",
+                          "lastClassName": "c0",
                           "rules": Array [
                             "
   padding: 0;
@@ -90,7 +151,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                     forwardedRef={null}
                   >
                     <ul
-                      className="sc-bxivhb gXAmgN"
+                      className="c0"
                     >
                       <styled.li
                         key="item-0"
@@ -103,7 +164,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "flsVJf",
+                                "lastClassName": "c1",
                                 "rules": Array [
                                   "
   ",
@@ -155,7 +216,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX flsVJf"
+                            className="c1"
                           >
                             <styled.div
                               active={false}
@@ -169,7 +230,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
                                       "isStatic": false,
-                                      "lastClassName": "gABgLv",
+                                      "lastClassName": "c2",
                                       "rules": Array [
                                         "
   transition: background-color ",
@@ -196,7 +257,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                 forwardedRef={null}
                               >
                                 <div
-                                  className="sc-EHOje gABgLv"
+                                  className="c2"
                                 >
                                   <styled.div
                                     onClick={[Function]}
@@ -209,10 +270,11 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bZQynM",
                                             "isStatic": false,
-                                            "lastClassName": "cfpJkI",
+                                            "lastClassName": "c3",
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -235,7 +297,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                       onClick={[Function]}
                                     >
                                       <div
-                                        className="sc-bZQynM cfpJkI"
+                                        className="c3"
                                         onClick={[Function]}
                                       >
                                         <Styled(Icon)
@@ -250,7 +312,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-gzVnrw",
                                                   "isStatic": false,
-                                                  "lastClassName": "tmBcj",
+                                                  "lastClassName": "c4",
                                                   "rules": Array [
                                                     "
   font-size: ",
@@ -283,16 +345,16 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                             name="KeyboardArrowRight"
                                           >
                                             <Icon
-                                              className="sc-gzVnrw tmBcj"
+                                              className="c4"
                                               isRotated={false}
                                               name="KeyboardArrowRight"
                                             >
                                               <styled.i
-                                                className="sc-gzVnrw tmBcj"
+                                                className="c4"
                                                 isRotated={false}
                                               >
                                                 <StyledComponent
-                                                  className="sc-gzVnrw tmBcj"
+                                                  className="c4"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -300,7 +362,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
                                                         "isStatic": true,
-                                                        "lastClassName": "cIqOZO",
+                                                        "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
   display: inline-block;
@@ -325,7 +387,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                   isRotated={false}
                                                 >
                                                   <i
-                                                    className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                                    className="c4 c5"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
@@ -386,7 +448,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "flsVJf",
+                                "lastClassName": "c1",
                                 "rules": Array [
                                   "
   ",
@@ -438,7 +500,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX flsVJf"
+                            className="c1"
                           >
                             <styled.div
                               active={false}
@@ -452,7 +514,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
                                       "isStatic": false,
-                                      "lastClassName": "gABgLv",
+                                      "lastClassName": "c2",
                                       "rules": Array [
                                         "
   transition: background-color ",
@@ -479,7 +541,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                 forwardedRef={null}
                               >
                                 <div
-                                  className="sc-EHOje gABgLv"
+                                  className="c2"
                                 >
                                   <styled.div
                                     onClick={[Function]}
@@ -492,10 +554,11 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bZQynM",
                                             "isStatic": false,
-                                            "lastClassName": "cfpJkI",
+                                            "lastClassName": "c3",
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -518,7 +581,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                       onClick={[Function]}
                                     >
                                       <div
-                                        className="sc-bZQynM cfpJkI"
+                                        className="c3"
                                         onClick={[Function]}
                                       >
                                         <Styled(Icon)
@@ -533,7 +596,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-gzVnrw",
                                                   "isStatic": false,
-                                                  "lastClassName": "tmBcj",
+                                                  "lastClassName": "c4",
                                                   "rules": Array [
                                                     "
   font-size: ",
@@ -566,16 +629,16 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                             name="KeyboardArrowRight"
                                           >
                                             <Icon
-                                              className="sc-gzVnrw tmBcj"
+                                              className="c4"
                                               isRotated={false}
                                               name="KeyboardArrowRight"
                                             >
                                               <styled.i
-                                                className="sc-gzVnrw tmBcj"
+                                                className="c4"
                                                 isRotated={false}
                                               >
                                                 <StyledComponent
-                                                  className="sc-gzVnrw tmBcj"
+                                                  className="c4"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -583,7 +646,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
                                                         "isStatic": true,
-                                                        "lastClassName": "cIqOZO",
+                                                        "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
   display: inline-block;
@@ -608,7 +671,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                   isRotated={false}
                                                 >
                                                   <i
-                                                    className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                                    className="c4 c5"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
@@ -669,7 +732,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "flsVJf",
+                                "lastClassName": "c1",
                                 "rules": Array [
                                   "
   ",
@@ -721,7 +784,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX flsVJf"
+                            className="c1"
                           >
                             <styled.div
                               active={false}
@@ -735,7 +798,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
                                       "isStatic": false,
-                                      "lastClassName": "gABgLv",
+                                      "lastClassName": "c2",
                                       "rules": Array [
                                         "
   transition: background-color ",
@@ -762,7 +825,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                 forwardedRef={null}
                               >
                                 <div
-                                  className="sc-EHOje gABgLv"
+                                  className="c2"
                                 >
                                   <styled.div
                                     onClick={[Function]}
@@ -775,10 +838,11 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bZQynM",
                                             "isStatic": false,
-                                            "lastClassName": "cfpJkI",
+                                            "lastClassName": "c3",
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -801,7 +865,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                       onClick={[Function]}
                                     >
                                       <div
-                                        className="sc-bZQynM cfpJkI"
+                                        className="c3"
                                         onClick={[Function]}
                                       >
                                         <Styled(Icon)
@@ -816,7 +880,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-gzVnrw",
                                                   "isStatic": false,
-                                                  "lastClassName": "tmBcj",
+                                                  "lastClassName": "c4",
                                                   "rules": Array [
                                                     "
   font-size: ",
@@ -849,16 +913,16 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                             name="KeyboardArrowRight"
                                           >
                                             <Icon
-                                              className="sc-gzVnrw tmBcj"
+                                              className="c4"
                                               isRotated={false}
                                               name="KeyboardArrowRight"
                                             >
                                               <styled.i
-                                                className="sc-gzVnrw tmBcj"
+                                                className="c4"
                                                 isRotated={false}
                                               >
                                                 <StyledComponent
-                                                  className="sc-gzVnrw tmBcj"
+                                                  className="c4"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -866,7 +930,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
                                                         "isStatic": true,
-                                                        "lastClassName": "cIqOZO",
+                                                        "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
   display: inline-block;
@@ -891,7 +955,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                   isRotated={false}
                                                 >
                                                   <i
-                                                    className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                                    className="c4 c5"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
@@ -952,7 +1016,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "flsVJf",
+                                "lastClassName": "c1",
                                 "rules": Array [
                                   "
   ",
@@ -1004,7 +1068,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX flsVJf"
+                            className="c1"
                           >
                             <styled.div
                               active={false}
@@ -1018,7 +1082,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
                                       "isStatic": false,
-                                      "lastClassName": "gABgLv",
+                                      "lastClassName": "c2",
                                       "rules": Array [
                                         "
   transition: background-color ",
@@ -1045,7 +1109,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                 forwardedRef={null}
                               >
                                 <div
-                                  className="sc-EHOje gABgLv"
+                                  className="c2"
                                 >
                                   <styled.div
                                     onClick={[Function]}
@@ -1058,10 +1122,11 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bZQynM",
                                             "isStatic": false,
-                                            "lastClassName": "cfpJkI",
+                                            "lastClassName": "c3",
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -1084,7 +1149,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                       onClick={[Function]}
                                     >
                                       <div
-                                        className="sc-bZQynM cfpJkI"
+                                        className="c3"
                                         onClick={[Function]}
                                       >
                                         <Styled(Icon)
@@ -1099,7 +1164,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-gzVnrw",
                                                   "isStatic": false,
-                                                  "lastClassName": "tmBcj",
+                                                  "lastClassName": "c4",
                                                   "rules": Array [
                                                     "
   font-size: ",
@@ -1132,16 +1197,16 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                             name="KeyboardArrowRight"
                                           >
                                             <Icon
-                                              className="sc-gzVnrw tmBcj"
+                                              className="c4"
                                               isRotated={false}
                                               name="KeyboardArrowRight"
                                             >
                                               <styled.i
-                                                className="sc-gzVnrw tmBcj"
+                                                className="c4"
                                                 isRotated={false}
                                               >
                                                 <StyledComponent
-                                                  className="sc-gzVnrw tmBcj"
+                                                  className="c4"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -1149,7 +1214,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
                                                         "isStatic": true,
-                                                        "lastClassName": "cIqOZO",
+                                                        "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
   display: inline-block;
@@ -1174,7 +1239,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                   isRotated={false}
                                                 >
                                                   <i
-                                                    className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                                    className="c4 c5"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
@@ -1238,6 +1303,95 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
 `;
 
 exports[`<Accordion /> should render a <Accordion> component with several tabs in and selectedIndex 1`] = `
+.c5 {
+  display: inline-block;
+}
+
+.c5 > svg {
+  float: left;
+}
+
+.c8 {
+  overflow: hidden;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  height: 0;
+}
+
+.c0 {
+  padding: 0;
+  list-style: none;
+}
+
+.c1 {
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  text-align: left;
+  overflow: visible;
+  border-top: 1px solid rgba(211,211,211,1);
+  box-sizing: border-box;
+  color: rgba(62,62,62,1);
+}
+
+.c1:last-child {
+  border-bottom: 1px solid rgba(211,211,211,1);
+}
+
+.c2 {
+  -webkit-transition: background-color 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background-color 0.3s cubic-bezier(0,0,0.25,1);
+  background-color: rgba(255,255,255,1);
+}
+
+.c6 {
+  -webkit-transition: background-color 0.3s cubic-bezier(0,0,0.25,1);
+  transition: background-color 0.3s cubic-bezier(0,0,0.25,1);
+  background-color: rgba(248,248,248,1);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: pre-wrap;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.c4 {
+  font-size: 1.125rem;
+  margin-right: 1rem;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0,0,0.25,1);
+  -webkit-transition: transform 0.2s cubic-bezier(0,0,0.25,1);
+  transition: transform 0.2s cubic-bezier(0,0,0.25,1);
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.c7 {
+  font-size: 1.125rem;
+  margin-right: 1rem;
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0,0,0.25,1);
+  -webkit-transition: transform 0.2s cubic-bezier(0,0,0.25,1);
+  transition: transform 0.2s cubic-bezier(0,0,0.25,1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.c9 {
+  padding: 0.5rem 1rem 2rem 3.125rem;
+}
+
 <Responsive
   selectedIndex={1}
 >
@@ -1300,7 +1454,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
               forwardedRef={null}
             >
               <div
-                className="sc-htpNat KtFsv"
+                className=""
               >
                 <styled.ul>
                   <StyledComponent
@@ -1311,7 +1465,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bxivhb",
                           "isStatic": true,
-                          "lastClassName": "gXAmgN",
+                          "lastClassName": "c0",
                           "rules": Array [
                             "
   padding: 0;
@@ -1332,7 +1486,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                     forwardedRef={null}
                   >
                     <ul
-                      className="sc-bxivhb gXAmgN"
+                      className="c0"
                     >
                       <styled.li
                         key="item-0"
@@ -1345,7 +1499,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "flsVJf",
+                                "lastClassName": "c1",
                                 "rules": Array [
                                   "
   ",
@@ -1397,7 +1551,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX flsVJf"
+                            className="c1"
                           >
                             <styled.div
                               active={false}
@@ -1411,7 +1565,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
                                       "isStatic": false,
-                                      "lastClassName": "gABgLv",
+                                      "lastClassName": "c2",
                                       "rules": Array [
                                         "
   transition: background-color ",
@@ -1438,7 +1592,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                 forwardedRef={null}
                               >
                                 <div
-                                  className="sc-EHOje gABgLv"
+                                  className="c2"
                                 >
                                   <styled.div
                                     onClick={[Function]}
@@ -1451,10 +1605,11 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bZQynM",
                                             "isStatic": false,
-                                            "lastClassName": "cfpJkI",
+                                            "lastClassName": "c3",
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -1477,7 +1632,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                       onClick={[Function]}
                                     >
                                       <div
-                                        className="sc-bZQynM cfpJkI"
+                                        className="c3"
                                         onClick={[Function]}
                                       >
                                         <Styled(Icon)
@@ -1492,7 +1647,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-gzVnrw",
                                                   "isStatic": false,
-                                                  "lastClassName": "tmBcj",
+                                                  "lastClassName": "c4",
                                                   "rules": Array [
                                                     "
   font-size: ",
@@ -1525,16 +1680,16 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                             name="KeyboardArrowRight"
                                           >
                                             <Icon
-                                              className="sc-gzVnrw tmBcj"
+                                              className="c4"
                                               isRotated={false}
                                               name="KeyboardArrowRight"
                                             >
                                               <styled.i
-                                                className="sc-gzVnrw tmBcj"
+                                                className="c4"
                                                 isRotated={false}
                                               >
                                                 <StyledComponent
-                                                  className="sc-gzVnrw tmBcj"
+                                                  className="c4"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -1542,7 +1697,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
                                                         "isStatic": true,
-                                                        "lastClassName": "cIqOZO",
+                                                        "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
   display: inline-block;
@@ -1567,7 +1722,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                   isRotated={false}
                                                 >
                                                   <i
-                                                    className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                                    className="c4 c5"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
@@ -1628,7 +1783,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "flsVJf",
+                                "lastClassName": "c1",
                                 "rules": Array [
                                   "
   ",
@@ -1680,7 +1835,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX flsVJf"
+                            className="c1"
                           >
                             <styled.div
                               active={true}
@@ -1694,7 +1849,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
                                       "isStatic": false,
-                                      "lastClassName": "gABgLv",
+                                      "lastClassName": "c2",
                                       "rules": Array [
                                         "
   transition: background-color ",
@@ -1721,7 +1876,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                 forwardedRef={null}
                               >
                                 <div
-                                  className="sc-EHOje cMsOjn"
+                                  className="c6"
                                 >
                                   <styled.div
                                     onClick={[Function]}
@@ -1734,10 +1889,11 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bZQynM",
                                             "isStatic": false,
-                                            "lastClassName": "cfpJkI",
+                                            "lastClassName": "c3",
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -1760,7 +1916,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                       onClick={[Function]}
                                     >
                                       <div
-                                        className="sc-bZQynM cfpJkI"
+                                        className="c3"
                                         onClick={[Function]}
                                       >
                                         <Styled(Icon)
@@ -1775,7 +1931,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-gzVnrw",
                                                   "isStatic": false,
-                                                  "lastClassName": "tmBcj",
+                                                  "lastClassName": "c4",
                                                   "rules": Array [
                                                     "
   font-size: ",
@@ -1808,16 +1964,16 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                             name="KeyboardArrowRight"
                                           >
                                             <Icon
-                                              className="sc-gzVnrw hZquvk"
+                                              className="c7"
                                               isRotated={true}
                                               name="KeyboardArrowRight"
                                             >
                                               <styled.i
-                                                className="sc-gzVnrw hZquvk"
+                                                className="c7"
                                                 isRotated={true}
                                               >
                                                 <StyledComponent
-                                                  className="sc-gzVnrw hZquvk"
+                                                  className="c7"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -1825,7 +1981,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
                                                         "isStatic": true,
-                                                        "lastClassName": "cIqOZO",
+                                                        "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
   display: inline-block;
@@ -1850,7 +2006,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                   isRotated={true}
                                                 >
                                                   <i
-                                                    className="sc-gzVnrw hZquvk sc-bdVaJa cIqOZO"
+                                                    className="c7 c5"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
@@ -1916,7 +2072,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-bwzfXH",
                                         "isStatic": false,
-                                        "lastClassName": "jHSKKd",
+                                        "lastClassName": "c8",
                                         "rules": Array [
                                           [Function],
                                         ],
@@ -1941,7 +2097,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                   timeout={300}
                                 >
                                   <div
-                                    className="sc-bwzfXH jHSKKd"
+                                    className="c8"
                                     style={
                                       Object {
                                         "minHeight": undefined,
@@ -1958,7 +2114,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                               "componentStyle": ComponentStyle {
                                                 "componentId": "sc-htoDjs",
                                                 "isStatic": false,
-                                                "lastClassName": "fpYVDN",
+                                                "lastClassName": "c9",
                                                 "rules": Array [
                                                   "
   padding: ",
@@ -1980,7 +2136,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                           forwardedRef={null}
                                         >
                                           <div
-                                            className="sc-htoDjs fpYVDN"
+                                            className="c9"
                                           >
                                             <AccordionTab
                                               header="Second"
@@ -2011,7 +2167,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-ifAKCX",
                                 "isStatic": false,
-                                "lastClassName": "flsVJf",
+                                "lastClassName": "c1",
                                 "rules": Array [
                                   "
   ",
@@ -2063,7 +2219,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                           forwardedRef={null}
                         >
                           <li
-                            className="sc-ifAKCX flsVJf"
+                            className="c1"
                           >
                             <styled.div
                               active={false}
@@ -2077,7 +2233,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
                                       "isStatic": false,
-                                      "lastClassName": "gABgLv",
+                                      "lastClassName": "c2",
                                       "rules": Array [
                                         "
   transition: background-color ",
@@ -2104,7 +2260,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                 forwardedRef={null}
                               >
                                 <div
-                                  className="sc-EHOje gABgLv"
+                                  className="c2"
                                 >
                                   <styled.div
                                     onClick={[Function]}
@@ -2117,10 +2273,11 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bZQynM",
                                             "isStatic": false,
-                                            "lastClassName": "cfpJkI",
+                                            "lastClassName": "c3",
                                             "rules": Array [
                                               "
   display: flex;
+  white-space: pre-wrap;
   align-items: center;
   cursor: pointer;
   padding: ",
@@ -2143,7 +2300,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                       onClick={[Function]}
                                     >
                                       <div
-                                        className="sc-bZQynM cfpJkI"
+                                        className="c3"
                                         onClick={[Function]}
                                       >
                                         <Styled(Icon)
@@ -2158,7 +2315,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-gzVnrw",
                                                   "isStatic": false,
-                                                  "lastClassName": "tmBcj",
+                                                  "lastClassName": "c4",
                                                   "rules": Array [
                                                     "
   font-size: ",
@@ -2191,16 +2348,16 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                             name="KeyboardArrowRight"
                                           >
                                             <Icon
-                                              className="sc-gzVnrw tmBcj"
+                                              className="c4"
                                               isRotated={false}
                                               name="KeyboardArrowRight"
                                             >
                                               <styled.i
-                                                className="sc-gzVnrw tmBcj"
+                                                className="c4"
                                                 isRotated={false}
                                               >
                                                 <StyledComponent
-                                                  className="sc-gzVnrw tmBcj"
+                                                  className="c4"
                                                   forwardedComponent={
                                                     Object {
                                                       "$$typeof": Symbol(react.forward_ref),
@@ -2208,7 +2365,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
                                                         "isStatic": true,
-                                                        "lastClassName": "cIqOZO",
+                                                        "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
   display: inline-block;
@@ -2233,7 +2390,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                   isRotated={false}
                                                 >
                                                   <i
-                                                    className="sc-gzVnrw tmBcj sc-bdVaJa cIqOZO"
+                                                    className="c4 c5"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"

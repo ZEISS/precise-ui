@@ -1,11 +1,12 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
 import { InputProps, InputChangeEvent } from '../../common';
-import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
-import { showInputInfo } from '../../utils/input';
+import { withFormContext, FormContextProps } from '../../hoc';
 import { distance } from '../../distance';
 import { IndicatorKnob } from '../IndicatorKnob';
 import { getFontStyle } from '../../textStyles';
+import { InputNotification } from '../InputNotification';
+import { PaddedContainer } from '../PaddedContainer';
 
 export type ToggleChangeEvent = InputChangeEvent<boolean>;
 
@@ -23,6 +24,7 @@ export interface ToggleProps extends InputProps<boolean> {
 
 export interface ToggleState {
   value: boolean;
+  error?: React.ReactChild;
   controlled: boolean;
   focused: boolean;
 }
@@ -40,7 +42,7 @@ const transitionDuration = '0.3s';
 const transitionEase = 'cubic-bezier(0, 0, 0.25, 1)';
 
 const ToggleContainer = styled('div')<ToggleContainerProps>`
-  ${getFontStyle({ size: 'medium' })}
+  ${getFontStyle({ size: 'medium' })};
   position: relative;
   display: inline-block;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
@@ -93,6 +95,7 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
       controlled: typeof props.value !== 'undefined',
       value: props.value || props.defaultValue || false,
       focused: false,
+      error: props.error,
     };
   }
 
@@ -114,12 +117,11 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
     }
   }
 
-  componentWillReceiveProps(nextProps: ToggleProps) {
+  componentWillReceiveProps({ value = false, error }: ToggleProps) {
     if (this.state.controlled) {
-      this.setState({
-        value: nextProps.value || false,
-      });
+      this.setState({ value });
     }
+    this.setState({ error });
   }
 
   private changeValue() {
@@ -179,12 +181,12 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
       value: _0,
       defaultValue: _1,
       onChange: _2,
+      onInput: _3,
       info,
-      error,
       label,
       ...props
     } = this.props;
-    const { value, focused } = this.state;
+    const { value, focused, error } = this.state;
     const containerProps = {
       ...props,
       theme,
@@ -218,7 +220,11 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
           </ToggleBox>
         </ToggleBoxWrapper>
         {children && <StyledDesc>{children}</StyledDesc>}
-        {showInputInfo(error, info)}
+        {(error || info) && (
+          <PaddedContainer top="xsmall" bottom="xsmall">
+            <InputNotification error={error} info={info} />
+          </PaddedContainer>
+        )}
       </ToggleContainer>
     );
   }

@@ -83,6 +83,6 @@ const defaultType: TagType = 'primary';
  * The tag component represents a simple block with a typed color and content.
  */
 export const Tag: React.SFC<TagProps> = ({ type = defaultType, ...props }) => (
-  <StyledTag {...props} theme={getStyle(type)} />
+  <StyledTag theme={getStyle(type)} {...props} />
 );
 Tag.displayName = 'Tag';

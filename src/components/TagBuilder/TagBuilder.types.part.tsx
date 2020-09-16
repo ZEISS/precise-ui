@@ -1,4 +1,4 @@
-import { LabeledInputProps } from '../../common';
+import { LabeledInputProps, InputChangeEvent } from '../../common';
 
 /**
  * Event for tracking user input.
@@ -39,10 +39,6 @@ export interface TagBuilderProps extends LabeledInputProps<Array<string>> {
    */
   borderless?: boolean;
   /**
-   * @ignore
-   */
-  children?: void;
-  /**
    * Event fired allowing user to control tag adding process.
    */
   shouldFinishTag?(e: TagBuilderKeyboardChangeEvent): boolean;
@@ -50,4 +46,22 @@ export interface TagBuilderProps extends LabeledInputProps<Array<string>> {
    * Custom tag renderer for the component.
    */
   tagRenderer?(e: TagBuilderRenderEvent): React.ReactChild;
+  /**
+   * The event fires on an attempt of tag removing.
+   * @ignore
+   */
+  onBeforeTagRemove?(index: number): void;
+  /**
+   * Input value.
+   * @ignore
+   */
+  inputValue?: string;
+  /**
+   * @ignore
+   */
+  inputRef?(instance: HTMLElement | null): void;
+  /**
+   * If set, the current input value will be added as a tag on blur.
+   */
+  appendTagOnBlur?: boolean;
 }

@@ -1,20 +1,13 @@
 import * as React from 'react';
 import styled, { themed } from '../../utils/styled';
-import { StandardProps } from '../../common';
-import { distance } from '../../distance';
 import { getFontStyle } from '../../textStyles';
+import { StandardProps } from '../../common';
 
-export interface InputInfoProps extends StandardProps {
-  /**
-   * The content of input info (text to display).
-   */
-  children?: React.ReactNode;
-}
+export interface InputInfoProps extends StandardProps {}
 
-const StyledInfo = styled('div')<InputInfoProps>`
-  ${getFontStyle({ size: 'xSmall' })}
+const StyledInfo = styled.div`
+  ${getFontStyle({ size: 'xSmall' })};
   color: ${themed(props => props.theme.text2)};
-  padding: ${distance.xsmall} 0;
 `;
 
 /**

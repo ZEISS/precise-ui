@@ -287,6 +287,7 @@ interface StyledFlyoutArrowProps extends Position {
 const StyledFlyoutArrow = styled('div')<StyledFlyoutArrowProps>(
   themed(
     ({ top, left, bottom, right, rotate, theme }) => css`
+      pointer-events: none;
       position: absolute;
       z-index: 101;
       width: ${toolTipArrowSize}px;
@@ -396,10 +397,12 @@ export class FlyoutWindowInt extends React.Component<FlyoutWindowProps, FlyoutWi
         this.updateMeasurements();
       }
 
-      this.flyoutContainer.scrollTo({
-        top: this.scrollPosition.top,
-        left: this.scrollPosition.left,
-      });
+      if (this.flyoutContainer.scroll) {
+        this.flyoutContainer.scroll({
+          top: this.scrollPosition.top,
+          left: this.scrollPosition.left,
+        });
+      }
     }
   }
 

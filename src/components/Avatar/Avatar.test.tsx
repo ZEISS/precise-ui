@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
 import { Avatar } from './';
-import 'jest-styled-components';
 
 describe('<Avatar />', () => {
   it('should render an empty <Avatar> component', () => {

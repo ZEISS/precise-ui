@@ -52,12 +52,23 @@ const initialState: FileUploaderDetailsState = {
 };
 
 const StyledUploaderHost = styled.div`
-  box-sizing: border-box;
   z-index: 10001;
-  position: fixed;
-  bottom: ${distance.large};
-  left: 0;
   width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: ${distance.large};
+  height: 0px;
+  overflow: visible;
+  display: flex;
+  align-items: flex-end;
+`;
+
+const StyledDetailsHost = styled.div`
+  // We override the 'z-index' of the styled component 'FixedContainer' of 'Blocker' (which is called by 'Modal').
+  // This fixes the problem of showing 'UploadProgressDetails' behind modal in IE.
+  & > div:first-child {
+    z-index: 10001;
+  }
 `;
 
 /**
@@ -83,6 +94,7 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
     em.on(FileUploadActions.uploadFailure, this.onChange);
     em.on(FileUploadActions.showUploads, this.showDetails);
     em.on(FileUploadActions.clearUploads, this.onClear);
+    em.on(FileUploadActions.deleteUploads, this.onDelete);
     eventManagers.push(em);
   }
 
@@ -94,6 +106,7 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
     em.off(FileUploadActions.uploadFailure, this.onChange);
     em.off(FileUploadActions.showUploads, this.showDetails);
     em.off(FileUploadActions.clearUploads, this.onClear);
+    em.off(FileUploadActions.deleteUploads, this.onDelete);
     eventManagers.splice(eventManagers.lastIndexOf(em), 1);
   }
 
@@ -187,15 +200,17 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
     return (
       show && (
         <>
-          <UploaderProgressDetails
-            {...props}
-            open={showDetails}
-            files={files}
-            onCancel={this.onCancel}
-            onDelete={this.onDelete}
-            onHide={this.hideDetails}
-            progressValue={totalProgress}
-          />
+          <StyledDetailsHost>
+            <UploaderProgressDetails
+              {...props}
+              open={showDetails}
+              files={files}
+              onCancel={this.onCancel}
+              onDelete={this.onDelete}
+              onHide={this.hideDetails}
+              progressValue={totalProgress}
+            />
+          </StyledDetailsHost>
           {!showDetails && (
             <StyledUploaderHost>
               <UploaderProgressBar
