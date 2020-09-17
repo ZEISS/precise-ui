@@ -39,8 +39,8 @@ export interface ButtonProps extends AnchorProps {
    */
   buttonStyle?: ButtonStyle;
   /**
-   * Sets the button type. By default button.
-   * @default button
+   * Sets the button type. By default "submit".
+   * @see [W3C](https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#attr-button-type)
    */
   type?: ButtonType;
   /**
@@ -177,7 +177,7 @@ const StyledIcon = styled(Icon)<IconWrapperProps & IconProps>`
 /**
  * The button component renders a simple button optionally with an icon.
  */
-export const Button: React.SFC<ButtonProps> = ({ children, icon, size, theme, ...rest }) => {
+export const Button: React.FC<ButtonProps> = ({ children, icon, size, theme, ...rest }) => {
   const Wrapper = icon ? WithIconWrapper : DefaultWrapper;
 
   return (

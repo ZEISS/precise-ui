@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 1.4.2
+
+- Fix button documentation
+
 ## 1.4.1
 
 - Fix compatibility issue with improvements on SearchField
