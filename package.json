@@ -1,6 +1,6 @@
 {
   "name": "precise-ui",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "Precise UI React component library powered by Styled Components.",
   "main": "dist/es6",
   "typings": "dist/es6",

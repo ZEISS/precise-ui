@@ -3,6 +3,7 @@
 ## 1.5.0
 
 - Add `closeable` property for `Notification` component
+- Add `disableMobileFullWidth` property for `Button` component
 
 ## 1.4.2
 
