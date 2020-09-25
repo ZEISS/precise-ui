@@ -6,6 +6,7 @@ import { IconName, Icon, IconProps } from '../Icon';
 import { distance } from '../../distance';
 import { displayUpTo } from '../../utils/';
 import { getFontSize } from '../../textStyles';
+import { ProgressBar } from '../ProgressBar';
 
 /**
  * Button style name.
@@ -18,7 +19,7 @@ export type ButtonStyle = 'primary' | 'secondary';
 export type ButtonType = 'submit' | 'reset' | 'button';
 
 /**
- * Button size.
+ * Overall size of the button.
  */
 export type ButtonSize = 'small' | 'medium';
 
@@ -52,15 +53,24 @@ export interface ButtonProps extends AnchorProps {
    * The name of the icon to display. By default no icon is display.
    */
   icon?: IconName;
+  /**
+   * Disables changing the width of the button to 100% for mobile screens (narrower than 980px)
+   * @default false
+   */
+  disableMobileFullWidth?: boolean;
+  /**
+   * Disables the button and shows a loading indicator
+   * @default false
+   */
+  loading?: boolean;
 }
 
 export interface StyledButtonProps extends AnchorProps {
   block?: boolean;
   buttonStyle?: ButtonStyle;
   size?: ButtonSize;
+  disableMobileFullWidth?: boolean;
 }
-
-export interface IconWrapperProps extends StandardProps {}
 
 function getThemeSettings(theme: PreciseFullTheme, buttonStyle?: ButtonStyle) {
   switch (buttonStyle) {
@@ -125,31 +135,42 @@ const PseudoButtonStyle = (colorTheme: ButtonThemeSettings) => css`
   }
 `;
 
-const AnchorInt: React.SFC<StyledButtonProps> = ({ buttonStyle, ...props }) => <Anchor {...props} />;
+const AnchorInt: React.FC<StyledButtonProps> = ({ buttonStyle, ...props }) => <Anchor {...props} />;
 const StyledButton = styled(AnchorInt)<StyledButtonProps>(
   themed(props => {
     const themeSettings = getThemeSettings(props.theme, props.buttonStyle);
     return css`
+      display: ${props.block ? 'block' : 'inline-block'};
       box-sizing: border-box;
+      padding: 0;
+      margin: ${distance.small};
+
       outline: none;
       border-radius: 0;
-      margin: ${distance.small};
+      border: ${themeSettings.border};
+
+      background-color: ${themeSettings.background};
+      color: ${themeSettings.text};
+      font-family: ${props.theme.fontFamily};
+      ${getButtonFontStyle(themeSettings, props.size)};
+
       &:first-of-type {
         margin-left: 0;
       }
       &:last-of-type {
         margin-right: 0;
       }
-      border: ${props.disabled ? `${themeSettings.disabledBorder}` : `${themeSettings.border}`};
-      background-color: ${props.disabled ? themeSettings.disabledBackground : themeSettings.background};
-      color: ${props.disabled ? themeSettings.disabledText : themeSettings.text};
-      font-family: ${props.theme.fontFamily};
-      ${getButtonFontStyle(themeSettings, props.size)};
-      padding: ${getButtonPadding(props.size)};
-      display: ${props.block ? 'block' : 'inline-block'};
-      cursor: ${props.disabled ? 'not-allowed' : 'pointer'};
+      ${props.disabled &&
+        `
+          border: ${themeSettings.disabledBorder};
+          background-color: ${themeSettings.disabledBackground};
+          color: ${themeSettings.disabledText};
+          cursor: 'not-allowed';
+        `}
       ${!props.disabled ? PseudoButtonStyle(themeSettings) : ''};
-      ${displayUpTo('medium')`
+
+      ${!props.disableMobileFullWidth &&
+        displayUpTo('medium')`
         width: 100%;
         margin: ${distance.small} 0;
       `};
@@ -157,35 +178,35 @@ const StyledButton = styled(AnchorInt)<StyledButtonProps>(
   }),
 );
 
-const DefaultWrapper = styled.div``;
-
-const WithIconWrapper = styled('div')<IconWrapperProps>`
-  ${props =>
-    props.theme.buttonIconPosition === 'left'
-      ? `padding-left: ${distance.xlarge}`
-      : `padding-right: ${distance.xlarge}`};
-  position: relative;
+const Content = styled.div<StyledButtonProps>`
+  padding: ${props => getButtonPadding(props.size)};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-const StyledIcon = styled(Icon)<IconWrapperProps & IconProps>`
-  ${props => (props.theme.buttonIconPosition === 'left' ? 'left: 0' : 'right: 0')};
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+const Text = styled.span<{ iconPosition?: 'left' | 'right' }>`
+  ${props => `margin-${props.iconPosition}: ${distance.small};`}
+`;
+
+// This is needed to make sure the button height does not change when loading is shown.
+const LoadingBar = styled(ProgressBar)`
+  margin-top: -4px;
 `;
 
 /**
  * The button component renders a simple button optionally with an icon.
  */
-export const Button: React.FC<ButtonProps> = ({ children, icon, size, theme, ...rest }) => {
-  const Wrapper = icon ? WithIconWrapper : DefaultWrapper;
-
+export const Button: React.FC<ButtonProps> = ({ children, icon, size, loading, theme, ...rest }) => {
+  const iconPosition = (theme && theme.buttonIconPosition) || (icon && 'right');
   return (
-    <StyledButton tagName="button" theme={theme} size={size} {...rest}>
-      <Wrapper theme={theme}>
-        {children}
-        {icon && <StyledIcon name={icon} theme={theme} size={getIconSize(size)} />}
-      </Wrapper>
+    <StyledButton tagName="button" theme={theme} size={size} disabled={loading} {...rest}>
+      <Content theme={theme} size={size}>
+        {icon && iconPosition === 'left' && <Icon name={icon} size={getIconSize(size)} />}
+        <Text iconPosition={iconPosition}>{children}</Text>
+        {icon && iconPosition === 'right' && <Icon name={icon} size={getIconSize(size)} />}
+      </Content>
+      {loading && <LoadingBar animate="spinning" type="secondary" />}
     </StyledButton>
   );
 };

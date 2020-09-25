@@ -6,9 +6,11 @@ exports[`<Button /> should render a <Button> with some content component 1`] = `
   tagName="button"
 >
   <styled.div>
-    <div>
-      Content
-    </div>
+    <styled.span>
+      <div>
+        Content
+      </div>
+    </styled.span>
   </styled.div>
 </Styled(AnchorInt)>
 `;
@@ -19,7 +21,9 @@ exports[`<Button /> should render an active <Button> with some content 1`] = `
   tagName="button"
 >
   <styled.div>
-    Content
+    <styled.span>
+      Content
+    </styled.span>
   </styled.div>
 </Styled(AnchorInt)>
 `;
@@ -31,7 +35,9 @@ exports[`<Button /> should render an active disabled <Button> with some content 
   tagName="button"
 >
   <styled.div>
-    Content
+    <styled.span>
+      Content
+    </styled.span>
   </styled.div>
 </Styled(AnchorInt)>
 `;
