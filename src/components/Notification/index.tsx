@@ -19,6 +19,7 @@ export interface NotificationProps extends StandardProps {
   title?: string;
   /**
    * Optionally provides a custom way for rendering an action control.
+   * If `closeable` is set to `true`, clicking on the action element will also trigger an `onClose` event.
    */
   actionRenderer?(): React.ReactChild;
   /**
@@ -26,6 +27,11 @@ export interface NotificationProps extends StandardProps {
    * want notification to self-close after event was played.
    */
   onClose?(e: React.MouseEvent): boolean | void;
+  /**
+   * Sets if the notification can be closed or not.
+   * @default true
+   */
+  closeable?: boolean;
 }
 
 export interface NotificationState {
@@ -188,10 +194,14 @@ export class Notification extends React.Component<NotificationProps, Notificatio
     };
   }
 
-  private onCloseHandler = (e: React.MouseEvent) => {
-    const { onClose } = this.props;
+  static defaultProps = {
+    closeable: true,
+  };
 
-    if (typeof onClose === 'function') {
+  private onCloseHandler = (e: React.MouseEvent) => {
+    const { onClose, closeable } = this.props;
+
+    if (typeof onClose === 'function' && closeable) {
       const selfClose = onClose(e);
       if (selfClose === false) {
         return;
@@ -202,7 +212,7 @@ export class Notification extends React.Component<NotificationProps, Notificatio
   };
 
   render() {
-    const { type = 'none', children, title, actionRenderer, theme, style, ...other } = this.props;
+    const { type = 'none', children, title, actionRenderer, theme, style, closeable, ...other } = this.props;
     const { closed } = this.state;
     const isInline = !title;
 
@@ -220,7 +230,7 @@ export class Notification extends React.Component<NotificationProps, Notificatio
             <ContentWrapper onClick={this.onCloseHandler}>{actionRenderer && actionRenderer()}</ContentWrapper>
           </ActionContainer>
         </ContentContainer>
-        <CloseButton onClick={this.onCloseHandler} icon="Close" />
+        {closeable && <CloseButton onClick={this.onCloseHandler} icon="Close" />}
       </StyledNotification>
     );
   }
