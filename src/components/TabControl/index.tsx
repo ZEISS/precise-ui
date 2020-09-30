@@ -73,7 +73,7 @@ export class TabControl extends React.PureComponent<TabControlProps, TabControlS
     };
   }
 
-  componentWillReceiveProps(nextProps: TabControlProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: TabControlProps) {
     const selectedIndex = nextProps.selectedIndex;
 
     if (this.state.controlled && typeof selectedIndex === 'number') {

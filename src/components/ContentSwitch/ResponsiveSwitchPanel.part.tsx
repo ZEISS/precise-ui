@@ -35,7 +35,7 @@ class ContentSwitchInt extends React.Component<ContentSwitchProps, ContentSwitch
     this.updateOverflow(this.state);
   }
 
-  componentWillReceiveProps(prevProps: ContentSwitchProps) {
+  UNSAFE_componentWillReceiveProps(prevProps: ContentSwitchProps) {
     const { orientation = defaultOrientation, items } = prevProps;
     const { container, headers } = this;
 

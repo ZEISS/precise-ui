@@ -267,7 +267,7 @@ export class Grid extends React.PureComponent<GridProps, GridState> {
     };
   }
 
-  componentWillReceiveProps(nextProps: GridProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: GridProps) {
     const currLayout = this.state.layout;
     const nextLayout = computeAllocations(nextProps);
 
