@@ -4,6 +4,7 @@
 
 - Add `closeable` property for `Notification` component
 - Add `disableMobileFullWidth` property for `Button` component
+- Add UNSAFE_ prefix for deprecated lifecycle hooks
 
 ## 1.4.2
 
