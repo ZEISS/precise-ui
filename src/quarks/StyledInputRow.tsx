@@ -3,6 +3,7 @@ import styled, { themed } from '../utils/styled';
 import { distance } from '../distance';
 import { purpleRed } from '../colors';
 import { remCalc } from '../utils/remCalc';
+import { getFontSize, getFontLineHeight } from '../textStyles';
 
 const TextFieldBoxWithLabelWrapper = styled.div`
   flex-grow: 1;
@@ -29,14 +30,13 @@ const TextFieldLabelText = styled('span')<TextFieldLabelProps>`
   display: block;
   font-size: ${remCalc('12px')};
   line-height: ${remCalc('16px')};
-  max-width: 66.66%;
+  max-width: 100%;
   box-sizing: border-box;
   cursor: text;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   transform-origin: left bottom;
-  transform: ${props => (props.active || props.filled ? 'none' : 'translate(0, 0.85rem) scale(1.33)')};
   color: ${themed(({ theme, active, filled, error }) =>
     error ? purpleRed : active || filled ? theme.ui0 : theme.text2,
   )};
@@ -47,6 +47,15 @@ const TextFieldLabelText = styled('span')<TextFieldLabelProps>`
   right: 0;
   padding-top: ${distance.small};
   background: ${themed(({ multiline, theme }) => (multiline ? theme.ui2 : 'transparent'))};
+
+  ${props =>
+    !(props.active || props.filled) &&
+    `
+    transform: translate(0, 0.85rem);
+    font-size: ${remCalc('16px')}
+    line-height: 1.75rem;
+    padding-top: 0;
+  `};
 
   > span {
     display: ${props => (props.active || props.filled ? 'none' : '')};
@@ -63,7 +72,7 @@ export interface StyledInputRowProps extends React.HTMLAttributes<HTMLDivElement
   multiline?: boolean;
 }
 
-export const StyledInputRow: React.SFC<StyledInputRowProps> = ({
+export const StyledInputRow: React.FC<StyledInputRowProps> = ({
   children,
   label,
   focused = false,
