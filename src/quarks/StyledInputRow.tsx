@@ -1,9 +1,8 @@
 import * as React from 'react';
 import styled, { themed } from '../utils/styled';
 import { distance } from '../distance';
-import { purpleRed } from '../colors';
+import { purpleRed, white } from '../colors';
 import { remCalc } from '../utils/remCalc';
-import { getFontSize, getFontLineHeight } from '../textStyles';
 
 const TextFieldBoxWithLabelWrapper = styled.div`
   flex-grow: 1;
@@ -26,7 +25,7 @@ export interface TextFieldLabelProps {
   multiline: boolean;
 }
 
-const TextFieldLabelText = styled('span')<TextFieldLabelProps>`
+const TextFieldLabelText = styled('div')<TextFieldLabelProps>`
   display: block;
   font-size: ${remCalc('12px')};
   line-height: ${remCalc('16px')};
@@ -46,7 +45,7 @@ const TextFieldLabelText = styled('span')<TextFieldLabelProps>`
   left: ${distance.medium};
   right: 0;
   padding-top: ${distance.small};
-  background: ${themed(({ multiline, theme }) => (multiline ? theme.ui2 : 'transparent'))};
+  background: rgba(0, 0, 0, 0);
 
   ${props =>
     !(props.active || props.filled) &&
@@ -57,7 +56,7 @@ const TextFieldLabelText = styled('span')<TextFieldLabelProps>`
     padding-top: 0;
   `};
 
-  > span {
+  > div {
     display: ${props => (props.active || props.filled ? 'none' : '')};
     transition: inherit;
   }
