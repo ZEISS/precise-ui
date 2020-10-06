@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { themed } from '../utils/styled';
 import { distance } from '../distance';
-import { purpleRed, white } from '../colors';
+import { purpleRed } from '../colors';
 import { remCalc } from '../utils/remCalc';
 
 const TextFieldBoxWithLabelWrapper = styled.div`
