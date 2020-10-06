@@ -25,7 +25,7 @@ export interface TextFieldLabelProps {
   multiline: boolean;
 }
 
-const TextFieldLabelText = styled('div')<TextFieldLabelProps>`
+const TextFieldLabelText = styled('span')<TextFieldLabelProps>`
   display: block;
   font-size: ${remCalc('12px')};
   line-height: ${remCalc('16px')};
@@ -56,7 +56,7 @@ const TextFieldLabelText = styled('div')<TextFieldLabelProps>`
     padding-top: 0;
   `};
 
-  > div {
+  > span {
     display: ${props => (props.active || props.filled ? 'none' : '')};
     transition: inherit;
   }
