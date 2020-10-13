@@ -225,14 +225,18 @@ export class UploadData {
     const names = this.files.map(item => (item.status !== 'canceled' ? item.name : ''));
     const newUploadFiles: Array<FileItem> = [];
 
+    const isAppleMobileNewPictureUpload =
+      (window.clientInformation.platform === 'iPhone' || window.clientInformation.platform === 'iPad') &&
+      files[0].name === 'image.jpg';
+
     for (const file of files) {
-      if (names.indexOf(file.name) === -1) {
+      if (names.indexOf(file.name) === -1 || isAppleMobileNewPictureUpload) {
         const id = generateId();
         const added = new Date();
         const data = {};
 
         newUploadFiles.push({
-          name: file.name,
+          name: isAppleMobileNewPictureUpload ? `${file.lastModified}.jpg` : file.name,
           fileId: id,
           content: file,
           type: file.type,
