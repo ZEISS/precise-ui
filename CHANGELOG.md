@@ -4,6 +4,7 @@
 
 - Add `closeable` property for `Notification` component
 - Add `disableMobileFullWidth` property for `Button` component
+- Fix word breaking in `TextField`
 
 ## 1.4.2
 
