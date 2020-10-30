@@ -145,7 +145,7 @@ Finally, multi-line input is also supported. Once we go into multi-line mode the
 ```jsx
 const { TextField } = require('precise-ui');
 
-<TextField multiline resizable />
+<TextField multiline resizable defaultValue="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pellentesque quam vel velit. Duis pulvinar. Vivamus porttitor turpisacleo. Curabitur bibendum justo non orci. Integer lacinia."/>
 ```
 
 You can also add the `label` prop to multiline textfields
