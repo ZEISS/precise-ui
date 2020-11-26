@@ -28,12 +28,12 @@ const { Form, Button, TextField } = require('precise-ui');
 
 **Managed Mode**
 
-Like the input fields the `form` can be also controlled and managed. The managed version already gives us an easy way to observe changes:
+Like the input fields the `Form` can be also controlled and managed. The managed version already gives us an easy way to observe changes:
 
 ```jsx
 const { Form, Button, DropdownField, TextField } = require('precise-ui');
 
-<Form onSubmit={e => alert(JSON.stringify(e.data))} defaultValue={{ first: 'Your', last: 'Name' }} onChange={e => console.log(e)}>
+<Form onSubmit={e => alert(JSON.stringify(e.data))} defaultValue={{ first: 'Your', last: 'Name', taste: [0] }} onChange={e => console.log(e)}>
   <div>
     First:
   </div>
@@ -163,9 +163,9 @@ const { Form, Button, TextField } = require('precise-ui');
 
 **Using Prompt with Form**
 
-When form has changes, it is possible to make a prompt, if user wants to leave the page without submitting the form. `Form` component has built-in `Prompt` component.
+When the `Form` has changes, it is possible to make a prompt, if the user wants to leave the page without submitting it.
 
-Simple way to use it is to provide `prompt` prop. It will show browser's system dialog.
+The `Form` component has a built-in `Prompt` component. To use it, provide the `prompt` prop. It will show the browser's system dialog.
 
 ```jsx  { "props": { "data-skip": true } }
 const { Form } = require('precise-ui');
@@ -175,18 +175,18 @@ const { Form } = require('precise-ui');
 </Form>
 ```
 
-It is also possible to provide `Prompt` component, that will show `precise-ui` component instead of system dialog.
+It is also possible to provide a `precise-ui` `Prompt` component instead of the system dialog.
 
 ```jsx  { "props": { "data-skip": true } }
 const { Form, Prompt } = require('precise-ui');
 
-<Form prompt={(changed: boolean) => {
+<Form prompt={(changed) => {
   return (
     <Prompt message="Your form has unsaved messages, are you sure you want to leave the page" when={changed} modalOptions={{ title: 'Do you want to leave' }} />
   );
-}>
+}}>
 {/* other components*/}
 </Form>
 ```
 
-For more details refer to `Prompt` component examples
+For more details refer to the [`Prompt`](#/Components/Prompt) component examples.

@@ -1,5 +1,16 @@
 # Precise UI Changelog
 
+## 1.5.0
+
+- Add `closeable` property for `Notification` component
+- Add `disableMobileFullWidth` property for `Button` component
+- Fix word breaking in `TextField`
+- Hold Tab/ContentSwitch inner component state while switching between screen sizes
+
+## 1.4.2
+
+- Fix button documentation
+
 ## 1.4.1
 
 - Fix compatibility issue with improvements on SearchField
