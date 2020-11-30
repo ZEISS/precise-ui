@@ -1,6 +1,7 @@
 # Precise UI Changelog
 
 ## 1.5.1
+
 - Fix marking selected date in Datepicker of `DateField`
 
 ## 1.5.0
