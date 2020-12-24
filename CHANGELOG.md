@@ -1,5 +1,11 @@
 # Precise UI Changelog
 
+## 1.5.2
+
+- Remove unused dependencies (`css-loader`,`file-loader`,`html-webpack-plugin`,`postcss-loader`,`sass-loader`,`style-loader`)
+- Upgrade `memoize-one` dependency and remove no longer maintained `@types/memoize-one`
+- Sort package.json using `npx sort-package-json` command
+
 ## 1.5.1
 
 - Fix marking selected date in Datepicker of `DateField`
@@ -55,8 +61,6 @@
 - Add `borderless` and `tagRenderer` props to AutocompleteTagBuilder
 - Remove refocus of component(Autocomplete) on every value change, remove corresponding test
 - Enable `date-fns` tree-shaking
-- Remove unused dependencies (`css-loader`,`file-loader`,`html-webpack-plugin`,`postcss-loader`,`sass-loader`,`style-loader`)
-- Upgrade `memoize-one` dependency and remove no longer maintained `@types/memoize-one`.
 
 ## 1.0.2
 - Fix opening file selection of `FileUploader` for single file upload (#243)

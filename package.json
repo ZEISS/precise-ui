@@ -1,29 +1,7 @@
 {
   "name": "precise-ui",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Precise UI React component library powered by Styled Components.",
-  "main": "dist/es6",
-  "typings": "dist/es6",
-  "scripts": {
-    "start": "styleguidist server",
-    "serve": "pushstate-server -d styleguide -p 6060",
-    "serve:test": "pushstate-server -d integration/styleguide -p 6065",
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --project tsconfig.json",
-    "test": "npm run lint && npm run test:unit",
-    "test:visual": "PUPPETEER_CHROMIUM_REVISION=736695 jest -c integration/jest.config.js --noStackTrace --runInBand",
-    "test:visual:update": "npm run test:visual -- -u",
-    "test:unit": "cross-env NODE_ENV=test jest",
-    "test:watch": "npm run test:unit -- --watch",
-    "prettier": "prettier --config prettier.config.js --write 'src/**/*.{ts,tsx}'",
-    "build": "rimraf dist && npm run build:bundle && npm run build:es5 && npm run build:es6",
-    "build:bundle": "cross-env NODE_ENV=production webpack -p",
-    "build:es5": "build-with-transform-jsx -t es5 --outDir dist/es5 --declaration --inlineSourceMap --inlineSources --config ./tsconfig.json",
-    "build:es6": "build-with-transform-jsx -t es6 -m es6 --outDir dist/es6 --declaration --inlineSourceMap --inlineSources --config ./tsconfig.json",
-    "build:demo": "cross-env NODE_ENV=production styleguidist build",
-    "build:demo:test": "cross-env NODE_ENV=test styleguidist build",
-    "webpack:analyzer": "npm run build:bundle -- --config ./tools/bundle-analyzer.js",
-    "icongen": "node tools/convert-icons.js"
-  },
   "keywords": [
     "react",
     "ui library",
@@ -57,6 +35,11 @@
     "test:visual": "jest -c integration/jest.config.js --noStackTrace --runInBand",
     "test:watch": "npm run test:unit -- --watch",
     "webpack:analyzer": "npm run build:bundle -- --config ./tools/bundle-analyzer.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run test & npm run build"
+    }
   },
   "dependencies": {
     "@types/react-datepicker": "^2.8.0",
@@ -129,9 +112,12 @@
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
   },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run test & npm run build"
-    }
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8",
+    "styled-components": "^4.x"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }
