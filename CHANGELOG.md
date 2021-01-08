@@ -4,6 +4,7 @@
 
 - Remove unused dependencies (`css-loader`,`file-loader`,`html-webpack-plugin`,`postcss-loader`,`sass-loader`,`style-loader`)
 - Upgrade `memoize-one` dependency and remove no longer maintained `@types/memoize-one`
+- Bump up `jest-puppeteer-docker` to `1.4.2`
 - Sort package.json using `npx sort-package-json` command
 
 ## 1.5.1
