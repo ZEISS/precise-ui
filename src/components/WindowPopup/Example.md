@@ -3,7 +3,7 @@
 Creates a popup with a full window size. This is ideal on mobile or to completely hide what's underneath.
 
 ```jsx
-const { WindowPopup, Button } = require('precise-ui');
+import { WindowPopup, Button } from 'precise-ui';
 
 class Component extends React.Component {
   constructor(props) {

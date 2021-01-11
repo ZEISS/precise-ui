@@ -3,7 +3,7 @@
 We can use the (default) auto placement to just show a simple flyout on its ideal position. The component supports two modes - managed and controlled. By default, the managed mode is selected.
 
 ```jsx
-const { Flyout } = require('precise-ui');
+import { Flyout } from 'precise-ui';
 
 <Flyout content={'Flyout content'}>
   Wrapped element
@@ -15,7 +15,7 @@ const { Flyout } = require('precise-ui');
 Flyout different placements example in controlled mode. The controlled mode is triggered by explicitly setting the `open` prop.
 
 ```jsx
-const { Tag, Flyout } = require('precise-ui');
+import { Tag, Flyout } from 'precise-ui';
 
 <div style={{width: '100%', display: 'flex', justifyContent: 'space-between'}}>
   <Flyout open position={'right'} content="Right">
@@ -39,7 +39,7 @@ const { Tag, Flyout } = require('precise-ui');
 In this example a combination of `Button` and `Flyout` is used.
 
 ```jsx
-const { Flyout, Button } = require('precise-ui');
+import { Flyout, Button } from 'precise-ui';
 
 const positions = ['top', 'right', 'bottom', 'left', 'top-left', 'top-right', 'bottom-left', 'bottom-right', 'right-top', 'right-bottom', 'left-top', 'left-bottom'];
 
@@ -85,7 +85,7 @@ class RandomFlyout extends React.Component {
 Example of `InteractiveList` component usage together with flyout.
 
 ```jsx
-const { Flyout, Button, InteractiveList } = require('precise-ui');
+import { Flyout, Button, InteractiveList } from 'precise-ui';
 
 const CustomWrapper = function (props) {
   const { children, ...rest } = props;
@@ -129,7 +129,7 @@ class ListFlyout extends React.Component {
 Likewise the next example.
 
 ```jsx
-const { Flyout, Button, Avatar, InteractiveList } = require('precise-ui');
+import { Flyout, Button, Avatar, InteractiveList } from 'precise-ui';
 
 const CustomWrapper = function (props) {
   const { children, ...rest } = props;
@@ -173,7 +173,7 @@ class ListFlyout extends React.Component {
 A little playground for the various options.
 
 ```jsx
-const { Flyout, RadioButton, StackPanel, StackItem } = require('precise-ui');
+import { Button, Flyout, RadioButton, StackPanel, StackItem } from 'precise-ui';
 
 const positions = [
   'top',

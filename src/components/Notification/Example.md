@@ -3,7 +3,7 @@
 The notification component can be used to just render a notification without much ceremony.
 
 ```jsx
-const { Notification, NotificationType } = require('precise-ui');
+import { Notification, NotificationType } from 'precise-ui';
 
 <Notification title="Example" type="info">
   This is a notification.
@@ -13,7 +13,7 @@ const { Notification, NotificationType } = require('precise-ui');
 The component can be rendered as a simple text without a title.
 
 ```jsx
-const { Notification, NotificationType } = require('precise-ui');
+import { Notification, NotificationType } from 'precise-ui';
 
 <Notification type="info">
   Just a text.
@@ -25,7 +25,7 @@ const { Notification, NotificationType } = require('precise-ui');
 The are several types of notifications: `none`, `info`, `success`, `error`, `warning` for different possible purposes:
 
 ```jsx
-const { Notification, NotificationType } = require('precise-ui');
+import { Notification, NotificationType } from 'precise-ui';
 
 <div>
   <Notification title="None">
@@ -53,6 +53,8 @@ const { Notification, NotificationType } = require('precise-ui');
 Also, `onClose` handler could be attached to every notification.
 
 ```jsx
+import { Notification, ActionLink } from 'precise-ui';
+
 <Notification type="warning" actionRenderer={() => <ActionLink onClick={() => alert('Action confirmed')}>Yes</ActionLink>} onClose={() => alert("Notification closed")}>
   Confirm action?
 </Notification>
@@ -61,6 +63,8 @@ Also, `onClose` handler could be attached to every notification.
 Permanent notifications can also be used to show warnings / errors that should not be closed by the user.
 
 ```jsx
+import { Notification } from 'precise-ui';
+
 <Notification type="warning" closeable={false}>
   This browser is not supported anymore. We recommend upgrading to the new version of Copper, Waterfox or Corner to use this website.
 </Notification>
@@ -71,7 +75,7 @@ Permanent notifications can also be used to show warnings / errors that should n
 A custom action renderer could be assigned to the notification.
 
 ```jsx
-const { Notification, NotificationType, ActionLink, Button } = require('precise-ui');
+import { Notification, NotificationType, ActionLink, Button } from 'precise-ui';
 
 <div>
   <Notification title="None" type="success" actionRenderer={() => <ActionLink onClick={() => alert('Clicked')}>Show alert</ActionLink>} >

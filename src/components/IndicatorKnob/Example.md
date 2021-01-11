@@ -3,7 +3,7 @@
 The following example shows some of the possible variations of the indicator knob.
 
 ```jsx
-const { IndicatorKnob } = require('precise-ui');
+import { IndicatorKnob } from 'precise-ui';
 const style = { position: 'relative', height: '30px' };
 
 <table width="100%">

@@ -3,7 +3,7 @@
 Using the stack panel with the default options.
 
 ```jsx
-const { StackPanel, StackItem } = require('precise-ui');
+import { StackPanel, StackItem } from 'precise-ui';
 const style = { background: 'gray', padding: '5px', margin: '5px' };
 
 <StackPanel>
@@ -18,7 +18,7 @@ const style = { background: 'gray', padding: '5px', margin: '5px' };
 The widths of the boxes can be varied with an optional wrapping option to prevent some overflow. Note that the given layout is already responsive by nature.
 
 ```jsx
-const { StackPanel, StackItem } = require('precise-ui');
+import { StackPanel, StackItem } from 'precise-ui';
 const style = { background: 'gray', padding: '5px', margin: '5px' };
 
 <StackPanel wrap>
@@ -31,7 +31,7 @@ const style = { background: 'gray', padding: '5px', margin: '5px' };
 The row is not necessarily filled up. We can tell individual items to not fill (i.e., divide) the remaining space. If all items are set to `nofill` then the remaining space will be left unused.
 
 ```jsx
-const { StackPanel, StackItem } = require('precise-ui');
+import { StackPanel, StackItem } from 'precise-ui';
 const style = { background: 'gray', padding: '5px', margin: '5px' };
 
 <StackPanel>
@@ -43,7 +43,7 @@ const style = { background: 'gray', padding: '5px', margin: '5px' };
 The stack panel can also be used to create flexible layouts. For instance, the following example uses a top-down layout.
 
 ```jsx
-const { StackPanel, StackItem } = require('precise-ui');
+import { StackPanel, StackItem } from 'precise-ui';
 const style = { background: 'gray', padding: '5px', margin: '5px' };
 
 <StackPanel direction="top" style={{ height: '400px' }}>

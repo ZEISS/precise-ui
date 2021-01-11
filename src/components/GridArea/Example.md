@@ -3,7 +3,7 @@
 The grid area provides a TypeScript friendly way of defining grid cell content. It fills the available cell space.
 
 ```jsx
-const { Grid, GridArea } = require('precise-ui');
+import { Grid, GridArea } from 'precise-ui';
 
 <div style={{ height: '200px' }}>
   <Grid rows={['100px', '1fr', '50px']} columns={['10em', '1fr']}>

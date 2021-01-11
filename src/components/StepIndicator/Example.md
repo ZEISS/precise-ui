@@ -5,7 +5,7 @@ The `StepIndicator` is a simple component to create a simple step indicator for 
 Simply put down some steps in the `steps` prop to tell the component what steps to render.
 
 ```jsx
-const { StepIndicator } = require('precise-ui');
+import { StepIndicator } from 'precise-ui';
 
 <StepIndicator steps={['1. First', '2. Second']} />
 ```
@@ -15,7 +15,7 @@ const { StepIndicator } = require('precise-ui');
 The currently active step can be set using the `current` prop. Furthermore, if we do not only want headers but also content we can use children with the `StepIndicatorStep` component instead.
 
 ```jsx
-const { StepIndicator, StepIndicatorStep } = require('precise-ui');
+import { StepIndicator, StepIndicatorStep } from 'precise-ui';
 
 <StepIndicator current={1}>
   <StepIndicatorStep header="1. First" />
@@ -35,7 +35,7 @@ const { StepIndicator, StepIndicatorStep } = require('precise-ui');
 We can change to the vertical mode explicitly as well.
 
 ```jsx
-const { StepIndicator, StepIndicatorStep } = require('precise-ui');
+import { StepIndicator, StepIndicatorStep } from 'precise-ui';
 
 <StepIndicator mode="vertical" current={1}>
   <StepIndicatorStep header="1. First" />
@@ -53,7 +53,7 @@ const { StepIndicator, StepIndicatorStep } = require('precise-ui');
 We can also set `numbered` to a step indicator to make our steps numbered.
 
 ```jsx
-const { StepIndicator, StepIndicatorStep } = require('precise-ui');
+import { StepIndicator, StepIndicatorStep } from 'precise-ui';
 
 <StepIndicator mode="vertical" numbered current={1}>
   <StepIndicatorStep header="First">

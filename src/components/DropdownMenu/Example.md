@@ -3,7 +3,7 @@
 A simple dropdown menu for displaying menu items.
 
 ```jsx
-const { DropdownMenu } = require('precise-ui');
+import { DropdownMenu } from 'precise-ui';
 
 <DropdownMenu icon="Favorite" text="Menu" items={['One', 'Two', 'Three']} />
 ```
@@ -11,7 +11,7 @@ const { DropdownMenu } = require('precise-ui');
 You can add `InteractiveListItem` objects.
 
 ```jsx
-const { DropdownMenu } = require('precise-ui');
+import { Anchor, DropdownMenu } from 'precise-ui';
 
 <DropdownMenu icon="Menu" text="Menu" items={[
   {

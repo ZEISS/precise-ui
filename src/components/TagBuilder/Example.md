@@ -3,7 +3,7 @@
 Basic usage of TagBuilder component. When *Comma*, *Semicolon*, *Space* or *Enter* key is pressed, current text is added as a tag to TagBuilder. Tags could be removed by pressing on tag close button or by hitting *Backspace* or *Delete* key. Navigation between tags could be done via *Left*, *Right*, *Home*, *End* buttons.
 
 ```jsx
-const { TagBuilder } = require('precise-ui');
+import { TagBuilder } from 'precise-ui';
 
 <TagBuilder />
 ```
@@ -13,7 +13,7 @@ const { TagBuilder } = require('precise-ui');
 When the `value` prop set manually, component switches to controlled mode. In this mode the component is controlled via the parent only.
 
 ```jsx
-const { TagBuilder } = require('precise-ui');
+import { TagBuilder } from 'precise-ui';
 
 <TagBuilder value={['hello', 'world', '!']} />
 ```
@@ -21,7 +21,7 @@ const { TagBuilder } = require('precise-ui');
 TagBuilder can be used with `Form` component.
 
 ```jsx
-const { TagBuilder, Form } = require('precise-ui');
+import { TagBuilder, Form } from 'precise-ui';
 
 <Form defaultValue={{tags: ['these', 'values', 'are', 'from', 'form']}}>
   <TagBuilder name="tags" />
@@ -31,7 +31,7 @@ const { TagBuilder, Form } = require('precise-ui');
 The component supports standard input events like `onChange`, `onFocus` and `onBlur` are supported. The following example illustrates `info` prop usage.
 
 ```jsx
-const { TagBuilder } = require('precise-ui');
+import { TagBuilder } from 'precise-ui';
 
 <TagBuilder
   info='Console used to display component events'
@@ -44,7 +44,7 @@ const { TagBuilder } = require('precise-ui');
 This component is configured to add tag only when *a* or *b* keys are down. Also, `error` property is set.
 
 ```jsx
-const { TagBuilder } = require('precise-ui');
+import { TagBuilder } from 'precise-ui';
 
 <TagBuilder
   shouldFinishTag={e => e.key === 'a' || e.key === 'b'}
@@ -57,7 +57,7 @@ const { TagBuilder } = require('precise-ui');
 The following is an example of using of `defaultValue`. With `defaultValue` set component hold non-controlled mode. Additionally, this example demonstrates the usage of different colors via its `theme`.
 
 ```jsx
-const { TagBuilder } = require('precise-ui');
+import { TagBuilder } from 'precise-ui';
 const theme = { tagBackground: 'lightgreen', tagColor: 'blue', iconColor: 'red', iconBackground: 'yellow' };
 
 <TagBuilder
@@ -69,7 +69,7 @@ const theme = { tagBackground: 'lightgreen', tagColor: 'blue', iconColor: 'red',
 Here you can see a demo of custom tag building with help of `tagRenderer` method.
 
 ```jsx
-const { TagBuilder, themes } = require('precise-ui');
+import { TagBuilder, themes } from 'precise-ui';
 const tagRenderer = e => (<Button type={e.index % 2 === 0 ? "primary" : "secondary"}>{e.item}</Button>);
 
 <TagBuilder
@@ -80,7 +80,7 @@ const tagRenderer = e => (<Button type={e.index % 2 === 0 ? "primary" : "seconda
 TagBuilder component is also capable of handling a large amount of tags.
 
 ```jsx
-const { TagBuilder } = require('precise-ui');
+import { TagBuilder } from 'precise-ui';
 
 <TagBuilder defaultValue={['Velit','irure','proident','occaecat','eu','excepteur','proident','dolor','ad','cillum','amet','consequat','in.','Reprehenderit','irure','officia','excepteur','et','laborum','proident','veniam','tempor.','Ad','quis','est','commodo','minim','sunt','incididunt','aute','amet','minim','incididunt','irure','cupidatat','officia','irure.','Dolor','adipisicing','occaecat','quis','ut','nulla','aliquip','esse']}/>
 ```

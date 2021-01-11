@@ -9,7 +9,7 @@
 By default, `Prompt` component will display browser's dialog window with custom message.
 
 ```jsx { "props": { "data-skip": true } }
-const { Prompt } = require('precise-ui');
+import { Prompt } from 'precise-ui';
 
 <Prompt message="Hey, are you sure you want to leave the page" />
 ```
@@ -20,7 +20,7 @@ const { Prompt } = require('precise-ui');
 
 
 ```jsx { "props": { "data-skip": true } }
-const { Prompt } = require('precise-ui');
+import { Prompt } from 'precise-ui';
 
 <Prompt message="Hey, are you sure you want to leave the page" modalOptions={{title: "Leaving page..."}}/>
 ```
@@ -37,7 +37,7 @@ As stated above, usual use case for using `Prompt` component is together `Form` 
 Simple `Prompt` component uses `react-router`'s history object from context. However, of there is no context, then `history` can be passed in directly.
 
 ```jsx { "props": { "data-skip": true } }
-const { PromptModal, Button, Checkbox} = require('precise-ui');
+import { ActionLink, PromptModal, Button, Checkbox } from 'precise-ui';
 
 /* Simulation of the react-router's history object */
 let cb;

@@ -3,7 +3,7 @@
 The `Rating` component provides the ability to gather ratings from user in a common way. By default 5 hearts are displayed to signal the rating from 1 to 5.
 
 ```jsx
-const { Rating } = require('precise-ui');
+import { Rating } from 'precise-ui';
 
 <Rating />
 ```
@@ -11,7 +11,7 @@ const { Rating } = require('precise-ui');
 Alternatively, the name of the icon and the number of levels can be set.
 
 ```jsx
-const { Rating } = require('precise-ui');
+import { Rating } from 'precise-ui';
 
 <Rating levels={10} icon="CheckCircle" />
 ```
@@ -21,7 +21,7 @@ const { Rating } = require('precise-ui');
 Or we can transform the `Rating` into a standard "like" Button.
 
 ```jsx
-const { Rating } = require('precise-ui');
+import { Rating } from 'precise-ui';
 
 class MyRating extends React.Component {
 	constructor(props) {

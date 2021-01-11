@@ -3,7 +3,7 @@
 Basic usage of the Card defaults the layout property to `[0, ..., 0]`, meaning that the child elements want be resized, and the card orientation is set to be vertical.
 
 ```jsx
-const { Card, CardBody, Image, Button } = require('precise-ui');
+import { Card, CardBody, Image, Button } from 'precise-ui';
 
 <Card>
   <Image src="/pexels-photo-248797.jpeg" alt="image" />
@@ -22,7 +22,7 @@ const { Card, CardBody, Image, Button } = require('precise-ui');
 Cards could be layed-out vertically by setting the `orientation="vertical"`, which is default behaviour, and horizontally  `orientation="horizontal"`.
 
 ```jsx
-const { Card, CardBody, Image, Headline} = require('precise-ui');
+import { Card, CardBody, Image, Headline } from 'precise-ui';
 
 <Card orientation="horizontal" style={{ maxHeight: '250px' }} layout={[2, 1, 2]}>
   <Image src="/pexels-photo-248797.jpeg" alt="image" />
@@ -36,7 +36,7 @@ const { Card, CardBody, Image, Headline} = require('precise-ui');
 When using `Sticky` component inside the `Card`, the layout property for that component will not want be taken into calculation, since it's absolutely positioned.
 
 ```jsx
-const { Card, CardBody, Sticky, Image, Headline, Button} = require('precise-ui');
+import { Card, CardBody, Sticky, Image, Headline, Button } from 'precise-ui';
 
 <Card orientation="horizontal" style={{ maxHeight: '250px' }} layout={[2, 1, 2]}>
   <Image src="/pexels-photo-248797.jpeg" alt="image" />

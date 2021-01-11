@@ -3,7 +3,7 @@
 Using a regular dropdown with some options.
 
 ```jsx
-const { DropdownField } = require('precise-ui');
+import { DropdownField } from 'precise-ui';
 const items = [
   "Value 1",
   "Value 2",
@@ -25,7 +25,7 @@ const items = [
 By default the list is positioned automatically based on the screen size (whether towards the top or bottom, depending on available space on the screen). There is an option to override this behavior by `direction` prop (`0` - bottom, `1` - top).
 
 ```jsx
-const { DropdownField } = require('precise-ui');
+import { DropdownField } from 'precise-ui';
 
 <DropdownField data={['first', 'second']} direction={0} label="Select item"/>
 ```
@@ -35,7 +35,7 @@ const { DropdownField } = require('precise-ui');
 The given items can also be more than just values. We can provide complex objects that contain further information such as an optional item type (e.g., `divider`, `header`) or some fixed content.
 
 ```jsx
-const { DropdownField, Icon } = require('precise-ui');
+import { DropdownField, Icon } from 'precise-ui';
 const items = [
   { key: "group1", content: 'Group 1', type: 'header' },
   { key: "Value1", content: <div><b>Value <i>one</i></b></div>, searchText: 'Value one' },
@@ -51,7 +51,7 @@ const items = [
 Errors can also be shown, like for other input components.
 
 ```jsx
-const { DropdownField } = require('precise-ui');
+import { DropdownField } from 'precise-ui';
 const items = [
   "Apple",
   "Orange",
@@ -66,7 +66,7 @@ const items = [
 Likewise, we can have a multi-select dropdown. The placeholder can be used to display a message shown when no value is currently selected.
 
 ```jsx
-const { DropdownField } = require('precise-ui');
+import { DropdownField } from 'precise-ui';
 const items = [
   "Value 1",
   "Value 2",
@@ -87,7 +87,7 @@ const items = [
 The `Dropdown` can also be used in a controlled way.
 
 ```jsx
-const { DropdownField } = require('precise-ui');
+import { DropdownField } from 'precise-ui';
 const items = [
   "Apple",
   "Orange",
@@ -120,13 +120,13 @@ class MyDropdown extends React.Component {
 
 **Disable specific options**
 
-To disable specific options pass an array of strings (matching the strings if plain strings are used or the `key` 
+To disable specific options pass an array of strings (matching the strings if plain strings are used or the `key`
 field if objects are used as `data`). This prevents those options from being selected by the user.
 
 Example with single selection:
 
 ```jsx
-const { DropdownField } = require('precise-ui');
+import { DropdownField } from 'precise-ui';
 
 const items = [
   {
@@ -162,7 +162,7 @@ const disabledItems = [
 Example with multiple selection:
 
 ```jsx
-const { DropdownField } = require('precise-ui');
+import { DropdownField } from 'precise-ui';
 
 const items = [
   {

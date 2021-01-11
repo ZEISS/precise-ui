@@ -4,19 +4,19 @@ Precise UI can be easily integrated in your frontend project by using npm or Yar
 
 1. Firstly, you have to install it:
 
-  ```sh
+  ```bash
   npm i precise-ui
   ```
 
   or alternatively, using Yarn
 
-  ```sh
+  ```bash
   yarn add precise-ui
   ```
 
 2. Then, make sure that you have also all peer dependencies installed:
 
-  ```sh
+  ```bash
   npm i react@16 styled-components@2
   ```
 

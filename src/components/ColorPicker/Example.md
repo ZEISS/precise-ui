@@ -3,7 +3,7 @@
 Using the Color Picker directly without any options.
 
 ```jsx
-const { ColorPicker } = require('precise-ui');
+import { ColorPicker } from 'precise-ui';
 
 <ColorPicker />
 ```
@@ -13,7 +13,7 @@ const { ColorPicker } = require('precise-ui');
 Setting the initial color of the picker. Also hiding the wheel bar.
 
 ```jsx
-const { ColorPicker } = require('precise-ui');
+import { ColorPicker } from 'precise-ui';
 
 <ColorPicker defaultValue={{ r: 133, g: 183, b: 221 }} hideBar />
 ```
@@ -21,7 +21,7 @@ const { ColorPicker } = require('precise-ui');
 Allowing also to set the transparency. Furthermore, we can set a new height (and width). By default the full width of the container is being used with the height set to 200px.
 
 ```jsx
-const { ColorPicker } = require('precise-ui');
+import { ColorPicker } from 'precise-ui';
 
 <ColorPicker defaultValue="#FFFF00" height="300px" allowOpacity />
 ```
@@ -31,7 +31,7 @@ const { ColorPicker } = require('precise-ui');
 Controlling the picked color of the component. In this example we put a constraint on the opacity of the color, which has to be between 30 and 80 percent.
 
 ```jsx
-const { ColorPicker } = require('precise-ui');
+import { ColorPicker } from 'precise-ui';
 
 class MyColorPicker extends React.Component {
   constructor(props) {
@@ -63,7 +63,7 @@ class MyColorPicker extends React.Component {
 Using the contained color information to display some useful information about the selected value.
 
 ```jsx
-const { ColorPicker } = require('precise-ui');
+import { ColorPicker } from 'precise-ui';
 
 class SuperColorPicker extends React.Component {
   constructor(props) {

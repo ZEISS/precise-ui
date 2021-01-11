@@ -3,7 +3,7 @@
 Various versions of the text field. By default, we get a plain text field that is managed and enabled. No placeholder is shown. The width of the text field is the width of the parent container.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField />
 ```
@@ -13,7 +13,7 @@ const { TextField } = require('precise-ui');
 The `label` prop is used to determine what text should be shown as a label.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField label="Label" />
 ```
@@ -21,7 +21,7 @@ const { TextField } = require('precise-ui');
 The `placeholder` prop is used to determine what text should be shown as a placeholder (for the empty text field).
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField label="With label" placeholder="With placeholder" />
 ```
@@ -29,7 +29,7 @@ const { TextField } = require('precise-ui');
 The `disabled` prop is indicating that the value cannot be edited, because the control is disabled. There is no `readonly` prop, as such a prop is given indirectly via not updating the `value` prop in controlled mode.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField disabled placeholder="disabled"/>
 ```
@@ -37,7 +37,7 @@ const { TextField } = require('precise-ui');
 The `clearable` prop is showing a little icon to reset the `TextField` as soon as the user enters data.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField clearable placeholder="Enter something ..."/>
 ```
@@ -47,7 +47,7 @@ const { TextField } = require('precise-ui');
 The controlled mode is triggered via the `value` prop.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField value="With value" placeholder="With value"/>
 ```
@@ -55,7 +55,7 @@ const { TextField } = require('precise-ui');
 You can also add a callback to the clear button by using the `onClear` prop.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField value="With value" placeholder="With value" clearable onClear={() => alert('Clear Pressed')}/>
 ```
@@ -63,7 +63,7 @@ const { TextField } = require('precise-ui');
 This enables us to also fully utilize a controlled mode. Note, that not only the `onClear` is fired when clearing, but also the `onChange` as we want to change to a new value.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 class ControlledClearableTextField extends React.Component {
   constructor(props) {
@@ -89,7 +89,7 @@ class ControlledClearableTextField extends React.Component {
 Likewise, we can stay in managed mode by using the `defaultValue` instead.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField defaultValue="With value" placeholder="With default value"/>
 ```
@@ -99,7 +99,7 @@ const { TextField } = require('precise-ui');
 The text field can be decorated with several options, e.g., adding a `prefix` or `suffix`.
 
 ```jsx
-const { TextField, Icon } = require('precise-ui');
+import { TextField, Icon } from 'precise-ui';
 
 <div>
   <TextField label="Full Name" prefix={<Icon name="Person" width="100%" height="100%" />} />
@@ -113,7 +113,7 @@ const { TextField, Icon } = require('precise-ui');
 We can also indicate errors by placing some text on the `error` prop.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 class MyInputForm extends React.Component {
   constructor(props) {
@@ -143,7 +143,7 @@ class MyInputForm extends React.Component {
 Finally, multi-line input is also supported. Once we go into multi-line mode the `prefix` and `suffix` props are no longer supported. By default, the multi-line input is not resizable. This can be changed, however, with the `resizable` prop.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField multiline resizable defaultValue="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer pellentesque quam vel velit. Duis pulvinar. Vivamus porttitor turpisacleo. Curabitur bibendum justo non orci. Integer lacinia."/>
 ```
@@ -151,7 +151,7 @@ const { TextField } = require('precise-ui');
 You can also add the `label` prop to multiline textfields
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField multiline resizable label="Test label" />
 ```
@@ -159,7 +159,7 @@ const { TextField } = require('precise-ui');
 You can also add the `label` prop in addition to the placeholder
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField multiline resizable label="Test label" placeholder="Test placeholder" />
 ```
@@ -167,7 +167,7 @@ const { TextField } = require('precise-ui');
 The resizable can also be restricted to vertical and horizontal.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField multiline resizable="vertical" />
 ```
@@ -175,7 +175,7 @@ const { TextField } = require('precise-ui');
 The `multiline` prop can be specified as a number, indicating the number of rows initially shown.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField multiline={4} value="My text here" disabled />
 ```
@@ -183,7 +183,7 @@ const { TextField } = require('precise-ui');
 Last, but not least we can use the `resizable` prop with the `auto` value to automatically adjust the height of the input.
 
 ```jsx
-const { TextField } = require('precise-ui');
+import { TextField } from 'precise-ui';
 
 <TextField multiline resizable="auto" defaultValue="My text here" />
 ```

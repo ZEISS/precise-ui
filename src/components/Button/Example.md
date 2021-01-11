@@ -3,7 +3,7 @@
 A simple anchor button.
 
 ```jsx
-const { Button } = require('precise-ui');
+import { Button } from 'precise-ui';
 
 <Button href="#🍕">Click me</Button>
 ```
@@ -11,7 +11,7 @@ const { Button } = require('precise-ui');
 Custom interaction after clicking the button.
 
 ```jsx
-const { Button } = require('precise-ui');
+import { Button } from 'precise-ui';
 
 <Button onClick={() => alert('Hi')}>Click me</Button>
 ```
@@ -21,7 +21,7 @@ const { Button } = require('precise-ui');
 There are two types of buttons with their own color themes: `primary` (default) and `secondary`.
 
 ```jsx
-const { Button } = require('precise-ui');
+import { Button } from 'precise-ui';
 
 <div>
   <div>
@@ -36,7 +36,7 @@ const { Button } = require('precise-ui');
 Button size could be changed with help of `size` property. The following example demonstrates small buttons.
 
 ```jsx
-const { Button } = require('precise-ui');
+import { Button } from 'precise-ui';
 
   <div>
     <Button size='small' buttonStyle="primary">Primary</Button>
@@ -47,7 +47,7 @@ const { Button } = require('precise-ui');
 With icons on either position.
 
 ```jsx
-const { Button } = require('precise-ui');
+import { Button } from 'precise-ui';
 
 <div>
   <Button href="#🍕" icon="Close" theme={{ buttonIconPosition: 'left'}} buttonStyle='secondary'>Abort</Button>
@@ -59,7 +59,7 @@ const { Button } = require('precise-ui');
 Non-responsive Button: it does not change to full-width and remove marings on screens with less than 980px width.
 
 ```jsx
-const { Button } = require('precise-ui');
+import { Button } from 'precise-ui';
 
   <div>
     <Button disableMobileFullWidth>Non-responsive Button 1</Button>

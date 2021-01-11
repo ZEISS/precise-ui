@@ -3,7 +3,7 @@
 The `Form` is a simple form container that gives us an easy abstraction over controlling single form fields.
 
 ```jsx
-const { Form, Button, TextField } = require('precise-ui');
+import { Form, Button, TextField } from 'precise-ui';
 
 <Form onSubmit={e => alert(JSON.stringify(e.data))}>
   <div>
@@ -31,7 +31,7 @@ const { Form, Button, TextField } = require('precise-ui');
 Like the input fields the `Form` can be also controlled and managed. The managed version already gives us an easy way to observe changes:
 
 ```jsx
-const { Form, Button, DropdownField, TextField } = require('precise-ui');
+import { Form, Button, DropdownField, TextField } from 'precise-ui';
 
 <Form onSubmit={e => alert(JSON.stringify(e.data))} defaultValue={{ first: 'Your', last: 'Name', taste: [0] }} onChange={e => console.log(e)}>
   <div>
@@ -63,7 +63,7 @@ const { Form, Button, DropdownField, TextField } = require('precise-ui');
 In controlled mode we can also prevent certain changes etc.
 
 ```jsx
-const { Form, Button, Checkbox, RadioButton, RadioButtonGroup, DropdownField, FileSelect, ColorPicker, Toggle, Slider } = require('precise-ui');
+import { Form, Button, Checkbox, RadioButton, RadioButtonGroup, DropdownField, FileSelect, ColorPicker, Toggle, Slider } from 'precise-ui';
 
 class MyForm extends React.Component {
   constructor(props) {
@@ -135,7 +135,7 @@ class MyForm extends React.Component {
 The `Form` with validation rules
 
 ```jsx
-const { Form, Button, TextField } = require('precise-ui');
+import { Form, Button, TextField } from 'precise-ui';
 
 <Form
   onSubmit={e => alert(JSON.stringify(e))}
@@ -168,7 +168,7 @@ When the `Form` has changes, it is possible to make a prompt, if the user wants 
 The `Form` component has a built-in `Prompt` component. To use it, provide the `prompt` prop. It will show the browser's system dialog.
 
 ```jsx  { "props": { "data-skip": true } }
-const { Form } = require('precise-ui');
+import { Form } from 'precise-ui';
 
 <Form prompt="Form has unsaved changes, do you want to leave?">
 {/* other components*/}
@@ -178,7 +178,7 @@ const { Form } = require('precise-ui');
 It is also possible to provide a `precise-ui` `Prompt` component instead of the system dialog.
 
 ```jsx  { "props": { "data-skip": true } }
-const { Form, Prompt } = require('precise-ui');
+import { Form, Prompt } from 'precise-ui';
 
 <Form prompt={(changed) => {
   return (

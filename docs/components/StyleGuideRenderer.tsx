@@ -5,9 +5,9 @@ import { HomePage } from './HomePage';
 import { AppState } from './context';
 
 // @ts-ignore
-import Ribbon from 'react-styleguidist/lib/rsg-components/Ribbon';
+import Ribbon from 'rsg-components/Ribbon';
 // @ts-ignore
-import Logo from 'react-styleguidist/lib/rsg-components/Logo';
+import Logo from 'rsg-components/Logo';
 import { createGlobalStyle } from '../../src';
 
 interface StyleGuideRendererProps {
@@ -39,7 +39,7 @@ function useTheme() {
 }
 
 /*
-  CSS animations should be disabled to ensure that animations don't 
+  CSS animations should be disabled to ensure that animations don't
   affect `react-styleguidist-visual` screenshots
 */
 const GlobalStyle = createGlobalStyle`

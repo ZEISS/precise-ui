@@ -3,7 +3,8 @@
 Just presenting some data without any customization for headers. Since neither the columns nor the sorting is determined the component is in automatic mode where sorting is set intrinsically.
 
 ```jsx
-const { Table } = require('precise-ui');
+import { Table } from 'precise-ui';
+
 const data = [{
   name: 'A',
   age: 21,
@@ -26,7 +27,8 @@ const data = [{
 Simple tabular view using a straight forward mapping of fields to headers.
 
 ```jsx
-const { Table } = require('precise-ui');
+import { Table } from 'precise-ui';
+
 const data = [{
   name: 'First Entry',
   age: 21,
@@ -45,7 +47,8 @@ const columns = {
 Shuffling the column order to change the appearance.
 
 ```jsx
-const { Table } = require('precise-ui');
+import { Table } from 'precise-ui';
+
 const data = [{
   name: 'First Entry',
   age: 21,
@@ -64,7 +67,8 @@ const columns = {
 We can also provide some summary in the optional footer of each column.
 
 ```jsx
-const { Table } = require('precise-ui');
+import { Table } from 'precise-ui';
+
 const data = [{
   name: 'First Entry',
   age: 21,
@@ -88,7 +92,8 @@ const columns = {
 Condensed table with smaller spacings via the `condensed` option.
 
 ```jsx
-const { Table } = require('precise-ui');
+import { Table } from 'precise-ui';
+
 const data = [{
   name: 'First Entry',
   age: 21,
@@ -107,7 +112,8 @@ const columns = {
 Borderless condensed table by also specifying the `borderless` option.
 
 ```jsx
-const { Table } = require('precise-ui');
+import { Table } from 'precise-ui';
+
 const data = [{
   name: 'First Entry',
   age: 21,
@@ -126,7 +132,9 @@ const columns = {
 Overriding the default renderer to display the custom objects.
 
 ```jsx
-const { Table, Icon } = require('precise-ui');
+import { Table, Icon } from 'precise-ui';
+
+
 const data = [{
   name: {
     first: 'First',
@@ -201,7 +209,8 @@ function render(e) {
 Overriding the default renderer to display the custom objects.
 
 ```jsx
-const { Table, Link, Icon, distance } = require('precise-ui');
+import { ActionLink, Table, Link, Icon, distance } from 'precise-ui';
+
 const data = [{
   name: 'First Entry',
   age: 21,
@@ -263,7 +272,8 @@ function render(e) {
 With a custom header renderer.
 
 ```jsx
-const { Table, colors } = require('precise-ui');
+import { Table, colors } from 'precise-ui';
+
 const data = [{
   name: 'A',
   age: 21,
@@ -296,7 +306,7 @@ const renderHead = columns => (
 Using the `Table` component with dynamic data is also possible. Here we should add a custom function for deriving the row key.
 
 ```jsx
-const { Table, Button } = require('precise-ui');
+import { Table, Button } from 'precise-ui';
 
 class DynamicTable extends React.Component {
   constructor(props) {
@@ -339,7 +349,8 @@ class DynamicTable extends React.Component {
 Adding an optional index and no-data message. Sorting by age.
 
 ```jsx
-const { Table } = require('precise-ui');
+import { Table } from 'precise-ui';
+
 const data = [{
   name: 'First Entry',
   age: 21,
@@ -371,7 +382,8 @@ const columns = {
 Displaying no data.
 
 ```jsx
-const { Table } = require('precise-ui');
+import { Table } from 'precise-ui';
+
 const data = [];
 const columns = {
   name: 'Name',
@@ -391,7 +403,8 @@ const columns = {
 Grouping works similar to sorting. If we sorting and grouping is done by the same key, then sorting has preference.
 
 ```jsx
-const { Table } = require('precise-ui');
+import { Table } from 'precise-ui';
+
 const data = [{
   name: 'A',
   age: 21,
@@ -423,7 +436,8 @@ const data = [{
 Providing an `onSort` callback allows you to react to the table being sorted.
 
 ```jsx { "props": { "data-skip": true } }
-const { Table } = require('precise-ui');
+import { Table } from 'precise-ui';
+
 const data = [{
   name: 'A',
   age: 21,

@@ -4,6 +4,8 @@ The following colors are available. Feel free to change them.
 
 ```jsx
 const {
+  ColorPicker,
+  MetroInfoTile,
   colors,
   clipboardCopy,
   notify,

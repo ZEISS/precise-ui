@@ -3,7 +3,7 @@
 Example of the basic `Carousel` component usage. To specify children pages for a carousel use any kind of components.
 
 ```jsx
-const { Carousel } = require('precise-ui');
+import { Carousel } from 'precise-ui';
 
 <Carousel infinite>
   <div style={{ height: '150px', width: '100%', backgroundColor: '#f3a', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
@@ -23,7 +23,7 @@ const { Carousel } = require('precise-ui');
 An example with controlled mode and page open by default. In this mode component behavior is controlled by code exclusively.
 
 ```jsx
-const { Carousel } = require('precise-ui');
+import { Carousel } from 'precise-ui';
 
 <Carousel selectedIndex={1}>
   <div>
@@ -43,7 +43,7 @@ const { Carousel } = require('precise-ui');
 Example with arrows by using the `arrows` option. Furthermore, the `infinite` option removes the natural boundaries.
 
 ```jsx
-const { Carousel } = require('precise-ui');
+import { Carousel } from 'precise-ui';
 
 <Carousel arrows infinite>
   <div style={{ height: '150px', width: '100%', backgroundColor: '#f3a', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>

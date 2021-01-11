@@ -3,7 +3,7 @@
 The standard usage of `Dropzone` component.
 
 ```jsx
-const { Dropzone } = require('precise-ui');
+import { Dropzone } from 'precise-ui';
 
 <Dropzone>Choose File</Dropzone>
 ```
@@ -13,7 +13,7 @@ const { Dropzone } = require('precise-ui');
 Disabled:
 
 ```jsx
-const { Dropzone } = require('precise-ui');
+import { Dropzone } from 'precise-ui';
 
 <Dropzone disabled>Choose File</Dropzone>
 ```
@@ -21,7 +21,7 @@ const { Dropzone } = require('precise-ui');
 You can drop multiple files with preview:
 
 ```jsx
-const { Dropzone } = require('precise-ui');
+import { Dropzone } from 'precise-ui';
 
 <Dropzone multiple preview>Choose File</Dropzone>
 ```
