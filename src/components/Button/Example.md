@@ -55,3 +55,14 @@ const { Button } = require('precise-ui');
   <Button href="#🍕" icon="Check" size="small">Accept small</Button>
 </div>
 ```
+
+Non-responsive Button: it does not change to full-width and remove marings on screens with less than 980px width.
+
+```jsx
+const { Button } = require('precise-ui');
+
+  <div>
+    <Button disableMobileFullWidth>Non-responsive Button 1</Button>
+    <Button disableMobileFullWidth>Non-responsive Button 2</Button>
+  </div>
+```

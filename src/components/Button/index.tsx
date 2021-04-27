@@ -52,12 +52,18 @@ export interface ButtonProps extends AnchorProps {
    * The name of the icon to display. By default no icon is display.
    */
   icon?: IconName;
+  /**
+   * Disables changing the width of the button to 100% for mobile screens (narrower than 980px)
+   * @default false
+   */
+  disableMobileFullWidth?: boolean;
 }
 
 export interface StyledButtonProps extends AnchorProps {
   block?: boolean;
   buttonStyle?: ButtonStyle;
   size?: ButtonSize;
+  disableMobileFullWidth?: boolean;
 }
 
 export interface IconWrapperProps extends StandardProps {}
@@ -149,7 +155,8 @@ const StyledButton = styled(AnchorInt)<StyledButtonProps>(
       display: ${props.block ? 'block' : 'inline-block'};
       cursor: ${props.disabled ? 'not-allowed' : 'pointer'};
       ${!props.disabled ? PseudoButtonStyle(themeSettings) : ''};
-      ${displayUpTo('medium')`
+      ${!props.disableMobileFullWidth &&
+        displayUpTo('medium')`
         width: 100%;
         margin: ${distance.small} 0;
       `};
