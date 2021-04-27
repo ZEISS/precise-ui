@@ -41,14 +41,14 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
   }
 
   setState<K extends keyof RadioButtonGroupState>(state: Pick<RadioButtonGroupState, K>) {
-    const value = (state as Pick<RadioButtonGroupState, 'value'>).value;
+    const { value, ...rest } = state as Pick<RadioButtonGroupState, 'value'>;
     if (value) {
       for (const button of this.buttons) {
         const selected =
           Array.isArray(value) && button.name ? value.indexOf(button.name) !== -1 : button.name === value;
         button.setValue(selected);
       }
-      super.setState({ ...state, value });
+      super.setState({ ...rest, value });
     }
     super.setState(state);
   }

@@ -132,7 +132,7 @@ const StyledContent = styled.div<LayoutProps>(
   ),
 );
 
-const ActionContainer = styled('div')<LayoutProps>`
+const ActionContainer = styled.div<LayoutProps>`
   display: ${props => (props.inline ? 'inline' : 'block')};
 `;
 
@@ -176,10 +176,10 @@ interface StyledIconProps extends IconProps {
   type: NotificationType;
 }
 
-const StyledIconInt: React.SFC<StyledIconProps> = ({ type: _0, ...props }) => <Icon {...props} />;
+const StyledIconInt: React.FC<StyledIconProps> = ({ type: _0, ...props }) => <Icon {...props} />;
 
-const StyledIcon = styled(StyledIconInt)<StyledIconProps>`
-  color: ${themed(props => getNotificationColor(props.type, props.theme))};
+const StyledIcon = styled(StyledIconInt)`
+  color: ${themed<StyledIconProps>(props => getNotificationColor(props.type, props.theme))};
 `;
 
 /**

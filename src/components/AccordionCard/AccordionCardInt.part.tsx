@@ -18,7 +18,7 @@ export interface ActiveProps {
   onClick?(e: React.MouseEvent): void;
 }
 
-const StyledContainer = styled('div')<ActiveProps>(
+const StyledContainer = styled.div<ActiveProps>(
   themed(
     ({
       open,
@@ -28,7 +28,7 @@ const StyledContainer = styled('div')<ActiveProps>(
       },
     }) => `
     ${getFontStyle({ size: 'medium' })}
-    
+
     position: relative;
     color: ${text1};
     border: 1px solid ${open ? openedBorderColor : borderColor};
@@ -36,7 +36,7 @@ const StyledContainer = styled('div')<ActiveProps>(
   ),
 );
 
-const StyledHeaderContainer = styled('div')<ActiveProps>(
+const StyledHeaderContainer = styled.div<ActiveProps>(
   themed(
     ({
       open,
@@ -65,7 +65,7 @@ export const StyledActionContainer = styled.div<ActiveProps>(
   ),
 );
 
-const StyledDetailsContainerAnimator = styled('div')<ActiveProps>`
+const StyledDetailsContainerAnimator = styled.div<ActiveProps>`
   transition: all ${animationDuration} ${animationFunction};
   max-height: ${({ open }) => (open ? '10000px' : '0')};
   opacity: ${({ open }) => (open ? '1' : '0')};

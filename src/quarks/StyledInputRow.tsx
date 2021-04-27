@@ -25,7 +25,7 @@ export interface TextFieldLabelProps {
   multiline: boolean;
 }
 
-const TextFieldLabelText = styled('span')<TextFieldLabelProps>`
+const TextFieldLabelText = styled.span<TextFieldLabelProps>`
   display: block;
   font-size: ${remCalc('12px')};
   line-height: ${remCalc('16px')};
@@ -37,7 +37,7 @@ const TextFieldLabelText = styled('span')<TextFieldLabelProps>`
   text-overflow: ellipsis;
   transform-origin: left bottom;
   transform: ${props => (props.active || props.filled ? 'none' : 'translate(0, 0.85rem) scale(1.33)')};
-  color: ${themed(({ theme, active, filled, error }) =>
+  color: ${themed<TextFieldLabelProps>(({ theme, active, filled, error }) =>
     error ? purpleRed : active || filled ? theme.ui0 : theme.text2,
   )};
   transition: all 0.2s;
@@ -46,7 +46,7 @@ const TextFieldLabelText = styled('span')<TextFieldLabelProps>`
   left: ${distance.medium};
   right: 0;
   padding-top: ${distance.small};
-  background: ${themed(({ multiline, theme }) => (multiline ? theme.ui2 : 'transparent'))};
+  background: ${themed<TextFieldLabelProps>(({ multiline, theme }) => (multiline ? theme.ui2 : 'transparent'))};
 
   > span {
     display: ${props => (props.active || props.filled ? 'none' : '')};

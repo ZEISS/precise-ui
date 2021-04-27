@@ -61,7 +61,7 @@ const avatarFontSize = {
   'x-large': remCalc('28px'),
 };
 
-const AvatarContainer = styled('div')<SizeProp>`
+const AvatarContainer = styled.div<SizeProp>`
   position: relative;
   overflow: hidden;
   ${({ size }) => `
@@ -84,7 +84,7 @@ const AvatarContent = styled('div')<SizeProp>`
   `};
 `;
 
-const AvatarInitials = styled('div')<SizeProp & AvatarInitialsBaseProps>`
+const AvatarInitials = styled.div<SizeProp & AvatarInitialsBaseProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,7 +127,7 @@ const avatarBadgeFontSize = {
   'x-large': '10px',
 };
 
-const AvatarBadge = styled('div')<SizeProp>`
+const AvatarBadge = styled.div<SizeProp>`
   position: absolute;
   overflow: hidden;
   border-radius: 50%;

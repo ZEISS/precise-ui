@@ -131,9 +131,9 @@ const PseudoButtonStyle = (colorTheme: ButtonThemeSettings) => css`
   }
 `;
 
-const AnchorInt: React.SFC<StyledButtonProps> = ({ buttonStyle, ...props }) => <Anchor {...props} />;
-const StyledButton = styled(AnchorInt)<StyledButtonProps>(
-  themed(props => {
+const AnchorInt: React.FC<StyledButtonProps> = ({ buttonStyle, ...props }) => <Anchor {...props} />;
+const StyledButton = styled(AnchorInt)(
+  themed<StyledButtonProps>(props => {
     const themeSettings = getThemeSettings(props.theme, props.buttonStyle);
     return css`
       box-sizing: border-box;
@@ -166,7 +166,7 @@ const StyledButton = styled(AnchorInt)<StyledButtonProps>(
 
 const DefaultWrapper = styled.div``;
 
-const WithIconWrapper = styled('div')<IconWrapperProps>`
+const WithIconWrapper = styled.div<IconWrapperProps>`
   ${props =>
     props.theme.buttonIconPosition === 'left'
       ? `padding-left: ${distance.xlarge}`

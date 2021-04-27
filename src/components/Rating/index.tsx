@@ -116,7 +116,7 @@ const RatingIconInt: React.FC<RatingIconProps> = ({ disabled, index, value, hove
   <icons.Star {...props} />
 );
 
-const RatingIcon = styled(RatingIconInt)(
+const RatingIcon = styled(RatingIconInt)<RatingIconProps>(
   ({ theme, disabled, index, value, hover, size }) => css`
     fill: ${getColor(theme, disabled, index, value, hover)};
     animation: ${getAnimation(index, value)};

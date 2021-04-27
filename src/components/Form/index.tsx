@@ -180,7 +180,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
     }
   }
 
-  private getError(name: string, value: any) {
+  private getError(name: keyof Values, value: any) {
     const validator = this.props.validationRules && this.props.validationRules[name];
     const validationResult = validator ? validator(value) : true;
     const error = validationResult === true ? undefined : validationResult;
@@ -204,7 +204,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
   }
 
   private setErrors(current: Values) {
-    const keys = Object.keys(current);
+    const keys = Object.keys(current) as [keyof Values];
     const errors = { ...this.state.errors };
 
     for (const key of keys) {
@@ -257,7 +257,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
             });
           } else {
             const value = field.state.value;
-            current[name] = value;
+            current[(name as unknown) as keyof Values] = value;
             error = this.getError(name, value);
           }
 

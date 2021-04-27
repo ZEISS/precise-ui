@@ -283,11 +283,11 @@ export interface TableSectionRenderEvent<T> {
   /**
    * The currently used sorting.
    */
-  sortBy: TableSorting | undefined;
+  sortBy?: TableSorting;
   /**
    * The currently defined grouping.
    */
-  groupBy: keyof T | undefined;
+  groupBy?: keyof T;
   /**
    * The column keys.
    */

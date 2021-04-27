@@ -30,7 +30,7 @@ export interface PaddedContainerProps {
   as?: keyof JSX.IntrinsicElements;
 }
 
-const StyledContainer = styled('div')<PaddedContainerProps>(
+export const PaddedContainer: React.FC<PaddedContainerProps> = styled.div<PaddedContainerProps>(
   ({ top, left, bottom, right, gutter }) => css`
     ${top ? `padding-top: ${distance[top]};` : ''}
     ${left ? `padding-left: ${distance[left]};` : ''}
@@ -39,7 +39,3 @@ const StyledContainer = styled('div')<PaddedContainerProps>(
     ${gutter ? `padding: ${distance[gutter]};` : ''}
   `,
 );
-
-export const PaddedContainer: React.FC<PaddedContainerProps> = props => {
-  return <StyledContainer {...props} />;
-};

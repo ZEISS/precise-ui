@@ -61,7 +61,7 @@ const ContentContainer = styled.div<ActiveProps>(
   ),
 );
 
-const DetailsContainerAnimator = styled('div')<ActiveProps>`
+const DetailsContainerAnimator = styled.div<ActiveProps>`
   transition: all ${animationDuration} ${animationFunction};
   max-height: ${({ open }) => (open ? '10000px' : '0')};
   opacity: ${({ open }) => (open ? '1' : '0')};

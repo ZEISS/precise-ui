@@ -96,7 +96,7 @@ const ProgressIndicator = styled.div`
   width: 0;
 `;
 
-const ProgressStop = styled('div')<StopProps & React.HTMLProps<HTMLInputElement>>`
+const ProgressStop = styled.div<StopProps & React.HTMLProps<HTMLInputElement>>`
   border-radius: ${distance.small};
   position: absolute;
   width: ${distance.small};

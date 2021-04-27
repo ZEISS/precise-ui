@@ -46,13 +46,18 @@ const StyledCardChildWrapper = styled.div<StyledCardChildProps>`
       : ''};
 `;
 
-export const Card: React.SFC<CardProps> = ({ orientation = 'vertical', children, layout: propsLayout, ...rest }) => {
+export const Card: React.FC<CardProps> = ({ orientation = 'vertical', children, layout: propsLayout, ...rest }) => {
   const layout = propsLayout || React.Children.map(children, _ => 0);
   const cardChildComponents: Array<any> = [];
   React.Children.forEach(children, (child: React.ComponentElement<any, any>, index) => {
     if (!child) {
       return;
     }
+
+    if (!layout) {
+      return;
+    }
+
     const { children: grandChildren, ...childProps } = child.props;
     const sticky = children && child.type && child.type.displayName === 'Sticky';
     cardChildComponents.push(

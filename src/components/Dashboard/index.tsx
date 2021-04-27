@@ -185,8 +185,7 @@ function notEqual(a: Array<DashboardTile>, b: Array<DashboardTile>) {
 }
 
 function resetStyle(node: HTMLElement) {
-  // tslint:disable-next-line
-  const defaultValue = null;
+  const defaultValue = 'auto';
   const style = node.style;
   style.position = 'static';
   style.cursor = defaultValue;

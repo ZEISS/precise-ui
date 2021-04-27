@@ -62,7 +62,7 @@ interface StyledInputProps {
   valid?: boolean;
 }
 
-const StyledInput = styled('input')<StyledInputProps>`
+const StyledInput = styled.input<StyledInputProps>`
   ${getFontSize('medium')}
   box-sizing: content-box;
   box-shadow: none;
@@ -86,7 +86,7 @@ interface InputContainerProps {
   tagRenderer: boolean;
 }
 
-const InputContainer = styled('div')<InputContainerProps>`
+const InputContainer = styled.div<InputContainerProps>`
   display: inline;
   padding-bottom: ${({ tagRenderer }) => (!tagRenderer ? `${distance.small}` : '0')};
 `;
@@ -102,7 +102,7 @@ interface CloseIconProps {
   theme?: PreciseTheme;
 }
 
-const CloseIcon: React.SFC<CloseIconProps> = ({ theme, onClick, onMouseDown }) => (
+const CloseIcon: React.FC<CloseIconProps> = ({ theme, onClick, onMouseDown }) => (
   <StyledIcon theme={theme} name="Close" onClick={onClick} onMouseDown={onMouseDown} />
 );
 

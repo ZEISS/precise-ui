@@ -18,8 +18,8 @@ interface SectionRendererProps {
   pagePerSection: boolean;
 }
 
-const SectionRenderer: React.SFC<SectionRendererProps> = props => {
-  const { description, content, sections, components, depth, slug, pagePerSection } = props;
+const SectionRenderer: React.FC<SectionRendererProps> = props => {
+  const { description, content, sections, components, depth, slug, pagePerSection, name } = props;
 
   return (
     <section>

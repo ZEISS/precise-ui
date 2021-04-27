@@ -223,7 +223,7 @@ function computeAllocations(props: GridProps): GridLayout {
     }
 
     return undefined;
-  });
+  }) as Array<JSX.Element | undefined>;
 
   return {
     allocation,

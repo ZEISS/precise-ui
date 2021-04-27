@@ -26,9 +26,9 @@ const Bordered = css`
   border: 1px solid rgba(0, 0, 0, 0.125);
 `;
 
-const StyledListItem = styled('li')<ListItemProps>`
+const StyledListItem = styled.li<ListItemProps>`
   background-color: ${themed(props => props.theme.ui1)};
-  color: ${themed(props => (props.active ? props.theme.primary : props.theme.text6))};
+  color: ${themed<ListItemProps>(props => (props.active ? props.theme.primary : props.theme.text6))};
   ${props => (props.border ? Bordered : '')};
   margin-bottom: -1px;
   padding: ${props => (props.disablePadding ? '0' : remCalc(['12', '20']))};
@@ -40,7 +40,7 @@ const StyledListItem = styled('li')<ListItemProps>`
   }
 `;
 
-export const ListItem: React.SFC<ListItemProps> = ({ border = true, ...props }) => (
+export const ListItem: React.FC<ListItemProps> = ({ border = true, ...props }) => (
   <StyledListItem {...props} border={border} />
 );
 ListItem.displayName = 'ListItem';

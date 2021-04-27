@@ -35,15 +35,15 @@ interface CheckboxBoxProps {
   theme: any;
 }
 
-const CheckboxContainer = styled('div')<CheckboxContainerProps>`
+const CheckboxContainer = styled.div<CheckboxContainerProps>`
   position: relative;
   display: inline-block;
   opacity: ${props => (props.disabled ? '0.5' : '1.0')};
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
-const CheckboxBox = styled('div')<CheckboxBoxProps>(
-  themed(
+const CheckboxBox = styled.div(
+  themed<CheckboxBoxProps>(
     ({ disabled, checked, theme: { ui0, ui1, ui4, ui5 } }) => css`
       outline: 0;
       flex: 0 0 1.0625em;

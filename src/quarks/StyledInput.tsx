@@ -17,7 +17,7 @@ export const StyledInput = styled.input<StyledInputProps>`
     display: none;
   }
 
-  color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text1))};
+  color: ${themed<StyledInputProps>(({ theme, disabled }) => (disabled ? theme.text3 : theme.text1))};
   background: none;
   border: none;
   border-radius: 0;
@@ -34,7 +34,7 @@ export const StyledInput = styled.input<StyledInputProps>`
   transition: all 0.2s;
 
   &::placeholder {
-    color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text2))};
+    color: ${themed<StyledInputProps>(({ theme, disabled }) => (disabled ? theme.text3 : theme.text2))};
     opacity: ${props => (props.labelShown ? '0' : '1')};
     transition: inherit;
   }

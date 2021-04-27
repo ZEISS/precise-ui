@@ -30,8 +30,8 @@ interface StyledTableProps {
   borderless?: boolean;
 }
 
-const StyledTable = styled.table<StyledTableProps>(
-  themed(
+const StyledTable = styled.table(
+  themed<StyledTableProps>(
     ({ theme, borderless, condensed }) => css`
     ${getFontStyle({ size: 'small', lineHeight: 'xSmall' })}
 
@@ -60,7 +60,7 @@ interface TableHostProps extends StandardProps {
   foot: React.ReactNode;
 }
 
-const TableHost: React.SFC<TableHostProps> = ({ head, foot, theme, children, ...props }) => (
+const TableHost: React.FC<TableHostProps> = ({ head, foot, theme, children, ...props }) => (
   <StyledTable theme={theme} {...props}>
     {head}
     <StyledTableBody theme={theme}>{children}</StyledTableBody>
@@ -117,7 +117,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     };
   }
 
-  static getDerivedStateFromProps(props: TableProps<any>, state: TableBasicState) {
+  static getDerivedStateFromProps(props: TableProps<unknown>, state: TableBasicState) {
     const controlledSorting = props.sortBy !== undefined || state.controlledSorting;
 
     if (controlledSorting) {

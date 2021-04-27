@@ -46,7 +46,7 @@ const StyledTableRowCollapse = styled.tr<AccordionTableItemProps>(
   ),
 );
 
-const StyledCollapseAnimator = styled('div')<AccordionTableItemProps>`
+const StyledCollapseAnimator = styled.div<AccordionTableItemProps>`
   transition: all ${animationDuration} ${animationFunction};
   max-height: ${({ active }) => (active ? '10000px' : '0')};
   opacity: ${({ active }) => (active ? '1' : '0')};

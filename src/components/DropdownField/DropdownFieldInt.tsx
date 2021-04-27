@@ -21,6 +21,7 @@ import {
 import {
   StyledInputRow,
   StyledInputBox,
+  StyledInputBoxProps,
   getTextFieldBorderType,
   StyledTagItem,
   StyledIconContainer,
@@ -42,7 +43,7 @@ interface DropDownOptionsTextProps {
   disabled?: boolean;
 }
 
-const DropdownInputBox = styled(StyledInputBox)`
+const DropdownInputBox = styled(StyledInputBox)<StyledInputBoxProps>`
   border: 1px solid ${themed(({ focused, theme: { ui4 } }) => (focused ? ui4 : transparent))};
 `;
 
@@ -74,7 +75,7 @@ interface StyledStandardWrapperProps {
   border: InteractiveListBorderType;
 }
 
-const StyledStandardWrapper = styled('ul')<StyledStandardWrapperProps>`
+const StyledStandardWrapper = styled.ul<StyledStandardWrapperProps>`
   list-style: none;
   width: 100%;
   position: absolute;

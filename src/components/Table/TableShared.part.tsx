@@ -9,10 +9,10 @@ import {
 } from './Table.types.part';
 import styled, { themed, css } from '../../utils/styled';
 import { getFontStyle } from '../../textStyles';
-import { IncreaseDecrease } from '../IncreaseDecrease';
+import { IncreaseDecrease, IncreaseDecreaseProps } from '../IncreaseDecrease';
 import { distance } from '../../distance';
 
-const StyledIncreaseDecrease = styled(IncreaseDecrease)`
+const StyledIncreaseDecrease = styled(IncreaseDecrease)<IncreaseDecreaseProps>`
   margin-left: ${distance.xsmall};
 `;
 
@@ -30,7 +30,7 @@ const HeaderLabel = styled.div`
 
 export const StyledTableHead = styled.thead`
   ${getFontStyle({ weight: 'bold' })}
-  
+
   color: ${themed(({ theme }) => theme.text6 || theme.text1)};
 `;
 
@@ -58,7 +58,7 @@ export interface TableHeaderProps {
   width?: string;
 }
 
-export const StyledTableHeader = styled('th')<TableHeaderProps>`
+export const StyledTableHeader = styled.th<TableHeaderProps>`
   text-align: left;
   border-bottom: 1px solid ${themed(({ theme }) => theme.ui5)};
   cursor: ${({ sortable }) => (sortable ? 'pointer' : 'default')};

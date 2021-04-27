@@ -89,8 +89,8 @@ interface StyledAutosuggestWrapperProps {
   direction: InteractiveListDirection;
 }
 
-const StyledAutosuggestWrapper = styled.ul<StyledAutosuggestWrapperProps>(
-  themed(
+const StyledAutosuggestWrapper = styled.ul(
+  themed<StyledAutosuggestWrapperProps>(
     ({ direction, theme: { ui1, ui4 } }) => css`
       list-style: none;
       width: 100%;

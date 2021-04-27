@@ -14,8 +14,8 @@ export {
   TableProps,
 } from './Table.types.part';
 
-export interface TableType extends React.SFC<TableProps<any>> {
-  <T = {}>(props: TableProps<T> & { children?: React.ReactNode }, context?: any): JSX.Element;
+export interface TableType extends React.FC<TableProps<any>> {
+  <T = {}>(props: TableProps<T> & { children?: React.ReactNode }, context?: unknown): JSX.Element;
 }
 
 /**
@@ -23,6 +23,6 @@ export interface TableType extends React.SFC<TableProps<any>> {
  * where the shape of the objects has no constraints other than it must be same for each element of the
  * array.
  */
-export const Table: TableType = withResponsiveMode<TableMode>(width =>
+export const Table: TableType = (withResponsiveMode<TableMode>(width =>
   !width || width > breakpoints.medium ? 'table' : 'card',
-)(TableInt) as any;
+)<any>(TableInt) as unknown) as TableType;

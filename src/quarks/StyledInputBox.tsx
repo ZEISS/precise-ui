@@ -28,7 +28,7 @@ export interface StyledInputBoxProps {
   theme?: PreciseTheme;
 }
 
-export const StyledInputBox = styled('div')<StyledInputBoxProps>(
+export const StyledInputBox = styled.div<StyledInputBoxProps>(
   themed(
     ({ border, disabled, focused, hasValue, theme: { ui0, ui2, ui3, ui5 } }) => `
       box-sizing: border-box;

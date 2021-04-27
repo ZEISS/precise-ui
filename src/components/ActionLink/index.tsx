@@ -32,7 +32,7 @@ const PseudoLinkStyle = css`
 const StyledActionLink = styled(Anchor)<StyledActionLink>`
   ${getFontStyle({ weight: 'medium' })}
   text-decoration: none;
-  color: ${themed(props => (props.disabled ? props.theme.text3 : props.theme.ui0))};
+  color: ${themed<StyledActionLink>(props => (props.disabled ? props.theme.text3 : props.theme.ui0))};
   display: ${props => (props.block ? 'block' : 'inline-block')};
   cursor: ${props => (props.disabled ? 'default' : 'pointer')};
   ${props => (!props.disabled ? PseudoLinkStyle : '')};
