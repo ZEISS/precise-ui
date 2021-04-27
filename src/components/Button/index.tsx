@@ -39,8 +39,8 @@ export interface ButtonProps extends AnchorProps {
    */
   buttonStyle?: ButtonStyle;
   /**
-   * Sets the button type. By default button.
-   * @default button
+   * Sets the button type. By default "submit".
+   * @see [W3C](https://www.w3.org/TR/2011/WD-html5-20110525/the-button-element.html#attr-button-type)
    */
   type?: ButtonType;
   /**
@@ -52,12 +52,18 @@ export interface ButtonProps extends AnchorProps {
    * The name of the icon to display. By default no icon is display.
    */
   icon?: IconName;
+  /**
+   * Disables changing the width of the button to 100% for mobile screens (narrower than 980px)
+   * @default false
+   */
+  disableMobileFullWidth?: boolean;
 }
 
 export interface StyledButtonProps extends AnchorProps {
   block?: boolean;
   buttonStyle?: ButtonStyle;
   size?: ButtonSize;
+  disableMobileFullWidth?: boolean;
 }
 
 export interface IconWrapperProps extends StandardProps {}
@@ -149,7 +155,8 @@ const StyledButton = styled(AnchorInt)<StyledButtonProps>(
       display: ${props.block ? 'block' : 'inline-block'};
       cursor: ${props.disabled ? 'not-allowed' : 'pointer'};
       ${!props.disabled ? PseudoButtonStyle(themeSettings) : ''};
-      ${displayUpTo('medium')`
+      ${!props.disableMobileFullWidth &&
+        displayUpTo('medium')`
         width: 100%;
         margin: ${distance.small} 0;
       `};
@@ -177,7 +184,7 @@ const StyledIcon = styled(Icon)<IconWrapperProps & IconProps>`
 /**
  * The button component renders a simple button optionally with an icon.
  */
-export const Button: React.SFC<ButtonProps> = ({ children, icon, size, theme, ...rest }) => {
+export const Button: React.FC<ButtonProps> = ({ children, icon, size, theme, ...rest }) => {
   const Wrapper = icon ? WithIconWrapper : DefaultWrapper;
 
   return (
