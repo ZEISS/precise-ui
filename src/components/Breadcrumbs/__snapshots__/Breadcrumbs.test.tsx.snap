@@ -49,7 +49,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
               "
   ",
               "
-  
+
   color: ",
               [Function],
               ";
@@ -85,7 +85,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
                         "
@@ -128,7 +128,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-hMqMXs",
-                    "isStatic": true,
+                    "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
                       "
@@ -177,7 +177,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
                         "
@@ -220,7 +220,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-hMqMXs",
-                    "isStatic": true,
+                    "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
                       "
@@ -269,7 +269,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
                         "
@@ -312,7 +312,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-hMqMXs",
-                    "isStatic": true,
+                    "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
                       "
@@ -361,7 +361,7 @@ exports[`<Breadcrumbs /> should render a <Breadcrumbs> component with several ch
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
                         "

@@ -180,7 +180,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
             "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-iAyFgw",
-              "isStatic": true,
+              "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
                 "
@@ -198,7 +198,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                 "
   ",
                 "
-  
+
   color: ",
                 "rgba(64,64,64,1)",
                 ";
@@ -249,7 +249,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-kkGfuU",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
                         "
@@ -296,7 +296,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-hMqMXs",
-                              "isStatic": true,
+                              "isStatic": false,
                               "lastClassName": "c2",
                               "rules": Array [
                                 "
@@ -329,7 +329,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-eNQAEJ",
-                                    "isStatic": true,
+                                    "isStatic": false,
                                     "lastClassName": "c3",
                                     "rules": Array [
                                       "
@@ -388,7 +388,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                     forwardedRef={null}
                                   >
                                     <div
-                                      className="c3 c4"
+                                      className="c4 c3"
                                     >
                                       1 of 1 pages
                                     </div>
@@ -504,7 +504,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bdVaJa",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c6",
                                             "rules": Array [
                                               "
@@ -632,7 +632,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kgoBCf",
-                                        "isStatic": true,
+                                        "isStatic": false,
                                         "lastClassName": "c7",
                                         "rules": Array [
                                           "
@@ -675,7 +675,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kGXeez",
-                                              "isStatic": true,
+                                              "isStatic": false,
                                               "lastClassName": "c8",
                                               "rules": Array [
                                                 "
@@ -718,7 +718,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                                     "attrs": Array [],
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "sc-bdVaJa",
-                                                      "isStatic": true,
+                                                      "isStatic": false,
                                                       "lastClassName": "c6",
                                                       "rules": Array [
                                                         "
@@ -867,7 +867,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-dnqmqq",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c9",
                                                   "rules": Array [
                                                     "
@@ -1081,7 +1081,7 @@ exports[`<Pagination /> should be able to use a custom host 1`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bdVaJa",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c6",
                                             "rules": Array [
                                               "
@@ -1337,7 +1337,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
             "attrs": Array [],
             "componentStyle": ComponentStyle {
               "componentId": "sc-iAyFgw",
-              "isStatic": true,
+              "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
                 "
@@ -1355,7 +1355,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                 "
   ",
                 "
-  
+
   color: ",
                 "rgba(64,64,64,1)",
                 ";
@@ -1401,7 +1401,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-kkGfuU",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "c1",
                       "rules": Array [
                         "
@@ -1448,7 +1448,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
                               "componentId": "sc-hMqMXs",
-                              "isStatic": true,
+                              "isStatic": false,
                               "lastClassName": "c2",
                               "rules": Array [
                                 "
@@ -1481,7 +1481,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
                                     "componentId": "sc-eNQAEJ",
-                                    "isStatic": true,
+                                    "isStatic": false,
                                     "lastClassName": "c3",
                                     "rules": Array [
                                       "
@@ -1540,7 +1540,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                     forwardedRef={null}
                                   >
                                     <div
-                                      className="c3 c4"
+                                      className="c4 c3"
                                     >
                                       1 of 1 pages
                                     </div>
@@ -1656,7 +1656,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bdVaJa",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c6",
                                             "rules": Array [
                                               "
@@ -1784,7 +1784,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kgoBCf",
-                                        "isStatic": true,
+                                        "isStatic": false,
                                         "lastClassName": "c7",
                                         "rules": Array [
                                           "
@@ -1827,7 +1827,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kGXeez",
-                                              "isStatic": true,
+                                              "isStatic": false,
                                               "lastClassName": "c8",
                                               "rules": Array [
                                                 "
@@ -1870,7 +1870,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                                     "attrs": Array [],
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "sc-bdVaJa",
-                                                      "isStatic": true,
+                                                      "isStatic": false,
                                                       "lastClassName": "c6",
                                                       "rules": Array [
                                                         "
@@ -2019,7 +2019,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                                 "attrs": Array [],
                                                 "componentStyle": ComponentStyle {
                                                   "componentId": "sc-dnqmqq",
-                                                  "isStatic": true,
+                                                  "isStatic": false,
                                                   "lastClassName": "c9",
                                                   "rules": Array [
                                                     "
@@ -2233,7 +2233,7 @@ exports[`<Pagination /> should be able to use an in-built host 1`] = `
                                           "attrs": Array [],
                                           "componentStyle": ComponentStyle {
                                             "componentId": "sc-bdVaJa",
-                                            "isStatic": true,
+                                            "isStatic": false,
                                             "lastClassName": "c6",
                                             "rules": Array [
                                               "

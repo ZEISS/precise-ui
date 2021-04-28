@@ -20,30 +20,30 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               tag
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               A
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               value
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Alpha
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               team
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Alpha team
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -56,30 +56,30 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               tag
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               B
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               value
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Bravo
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               team
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Bravo team
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -96,30 +96,30 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               tag
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               C
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               value
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Charlie
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               team
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Charlie team
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -132,30 +132,30 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               tag
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               D
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               value
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Delta
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               team
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Delta team
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -173,30 +173,30 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               tag
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               C
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               value
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Charlie
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               team
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Charlie team
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -209,30 +209,30 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               tag
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               D
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               value
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Delta
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               team
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Delta team
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -245,30 +245,30 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               tag
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               E
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               value
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Echo
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               team
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               Echo team
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -286,14 +286,14 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               C
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               5
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -306,14 +306,14 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               C
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               10
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -331,14 +331,14 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               c
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               15
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -351,14 +351,14 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               c
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               10
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -376,22 +376,22 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               A
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               B
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -404,22 +404,22 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
     <AccordionCard
       header={
         Array [
-          <ForwardRef>
-            <ForwardRef>
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               A
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               
-            </ForwardRef>
-          </ForwardRef>,
-          <ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
+          <ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               B
-            </ForwardRef>
-            <ForwardRef>
+            </ForwardRef(styled.div)>
+            <ForwardRef(styled.div)>
               
-            </ForwardRef>
-          </ForwardRef>,
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.div)>,
         ]
       }
       onActionClick={[Function]}
@@ -429,9 +429,7 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
 </AccordionTableCardHost>
 `;
 
-exports[
-  `<AccordionTableCard /> should render a <AccordionTableCard> component without data and custom placeholder 1`
-] = `
+exports[`<AccordionTableCard /> should render a <AccordionTableCard> component without data and custom placeholder 1`] = `
 <AccordionTableCardHost>
   <Styled(ListItem)
     key="0"

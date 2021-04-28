@@ -77,7 +77,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -232,7 +232,7 @@ exports[`<Slider /> should render <Slider> 1`] = `
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -444,7 +444,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -599,7 +599,7 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -876,7 +876,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -1031,7 +1031,7 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -1337,7 +1337,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -1492,7 +1492,7 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -1702,7 +1702,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -1857,7 +1857,7 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -2279,7 +2279,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -2434,7 +2434,7 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -2714,7 +2714,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -2869,7 +2869,7 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -3187,7 +3187,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -3342,7 +3342,7 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -3627,7 +3627,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -3782,7 +3782,7 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -4054,7 +4054,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -4212,7 +4212,7 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -4429,7 +4429,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -4589,7 +4589,7 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
                   orientation="horizontal"
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -4870,7 +4870,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -5025,7 +5025,7 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
                   onTouchStartCapture={[Function]}
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}
@@ -5436,7 +5436,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-iwsKbI",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -5596,7 +5596,7 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
                   orientation="vertical"
                 >
                   <div
-                    className="c1 c2"
+                    className="c2 c1"
                     onClickCapture={[Function]}
                     onMouseDownCapture={[Function]}
                     onTouchStartCapture={[Function]}

@@ -257,7 +257,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-csuQGl",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -295,7 +295,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-Rmtcm",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -380,7 +380,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-VigVT",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
                                   "
@@ -533,7 +533,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
                               "componentId": "c6",
-                              "isStatic": true,
+                              "isStatic": false,
                               "lastClassName": "c7",
                               "rules": Array [
                                 "
@@ -579,7 +579,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c8",
                                       "rules": Array [
                                         "
@@ -746,7 +746,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-eHgmQL",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c9",
                         "rules": Array [
                           "
@@ -785,7 +785,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                       open={true}
                     >
                       <Styled(WindowPopup)
-                        label={<ForwardRef />}
+                        label={<ForwardRef(styled.div) />}
                         onClose={[Function]}
                       >
                         <StyledComponent
@@ -795,7 +795,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-dVhcbM",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c10",
                                 "rules": Array [
                                   "
@@ -814,12 +814,12 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                             }
                           }
                           forwardedRef={null}
-                          label={<ForwardRef />}
+                          label={<ForwardRef(styled.div) />}
                           onClose={[Function]}
                         >
                           <WindowPopup
                             className="c10"
-                            label={<ForwardRef />}
+                            label={<ForwardRef(styled.div) />}
                             onClose={[Function]}
                           >
                             <Blocker
@@ -839,7 +839,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kgoBCf",
-                                        "isStatic": true,
+                                        "isStatic": false,
                                         "lastClassName": "c11",
                                         "rules": Array [
                                           "
@@ -869,7 +869,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                   onMouseDown={[Function]}
                                 >
                                   <div
-                                    className="c10 c11"
+                                    className="c11 c10"
                                     onKeyDown={[Function]}
                                     onMouseDown={[Function]}
                                   >
@@ -884,7 +884,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kGXeez",
-                                              "isStatic": true,
+                                              "isStatic": false,
                                               "lastClassName": "c12",
                                               "rules": Array [
                                                 "
@@ -1020,7 +1020,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-fMiknA",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c15",
                                                           "rules": Array [
                                                             "
@@ -1063,7 +1063,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                     "attrs": Array [],
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "sc-dxgOiQ",
-                                                      "isStatic": true,
+                                                      "isStatic": false,
                                                       "lastClassName": "c16",
                                                       "rules": Array [
                                                         "
@@ -1137,7 +1137,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                             "attrs": Array [],
                                                             "componentStyle": ComponentStyle {
                                                               "componentId": "sc-bxivhb",
-                                                              "isStatic": true,
+                                                              "isStatic": false,
                                                               "lastClassName": "c8",
                                                               "rules": Array [
                                                                 "
@@ -1207,7 +1207,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "sc-jKJlTe",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c17",
                                                     "rules": Array [
                                                       "
@@ -1281,7 +1281,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-brqgnP",
-                                                                "isStatic": true,
+                                                                "isStatic": false,
                                                                 "lastClassName": "c19",
                                                                 "rules": Array [
                                                                   "
@@ -1313,7 +1313,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
                                                                       "componentId": "sc-cMljjf",
-                                                                      "isStatic": true,
+                                                                      "isStatic": false,
                                                                       "lastClassName": "c20",
                                                                       "rules": Array [
                                                                         "
@@ -1440,7 +1440,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-brqgnP",
-                                                                "isStatic": true,
+                                                                "isStatic": false,
                                                                 "lastClassName": "c19",
                                                                 "rules": Array [
                                                                   "
@@ -1472,7 +1472,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
                                                                       "componentId": "sc-cMljjf",
-                                                                      "isStatic": true,
+                                                                      "isStatic": false,
                                                                       "lastClassName": "c20",
                                                                       "rules": Array [
                                                                         "
@@ -1566,7 +1566,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kGXeez",
-                                              "isStatic": true,
+                                              "isStatic": false,
                                               "lastClassName": "c12",
                                               "rules": Array [
                                                 "
@@ -1611,7 +1611,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kpOJdX",
-                                        "isStatic": true,
+                                        "isStatic": false,
                                         "lastClassName": "c22",
                                         "rules": Array [
                                           "
@@ -1648,7 +1648,7 @@ exports[`<DropdownField /> should be opened <DropdownField open> 1`] = `
                                   forwardedRef={null}
                                 >
                                   <div
-                                    className="c10 c22"
+                                    className="c22 c10"
                                   />
                                 </StyledComponent>
                               </Styled(styled.div)>
@@ -1929,7 +1929,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-csuQGl",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -1968,7 +1968,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-Rmtcm",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -2053,7 +2053,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-VigVT",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
                                   "
@@ -2206,7 +2206,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
                               "componentId": "c6",
-                              "isStatic": true,
+                              "isStatic": false,
                               "lastClassName": "c7",
                               "rules": Array [
                                 "
@@ -2252,7 +2252,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c8",
                                       "rules": Array [
                                         "
@@ -2423,7 +2423,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-eHgmQL",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c9",
                         "rules": Array [
                           "
@@ -2463,7 +2463,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                       open={true}
                     >
                       <Styled(WindowPopup)
-                        label={<ForwardRef />}
+                        label={<ForwardRef(styled.div) />}
                         onClose={[Function]}
                       >
                         <StyledComponent
@@ -2473,7 +2473,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-dVhcbM",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c10",
                                 "rules": Array [
                                   "
@@ -2492,12 +2492,12 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                             }
                           }
                           forwardedRef={null}
-                          label={<ForwardRef />}
+                          label={<ForwardRef(styled.div) />}
                           onClose={[Function]}
                         >
                           <WindowPopup
                             className="c10"
-                            label={<ForwardRef />}
+                            label={<ForwardRef(styled.div) />}
                             onClose={[Function]}
                           >
                             <Blocker
@@ -2517,7 +2517,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kgoBCf",
-                                        "isStatic": true,
+                                        "isStatic": false,
                                         "lastClassName": "c11",
                                         "rules": Array [
                                           "
@@ -2547,7 +2547,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                   onMouseDown={[Function]}
                                 >
                                   <div
-                                    className="c10 c11"
+                                    className="c11 c10"
                                     onKeyDown={[Function]}
                                     onMouseDown={[Function]}
                                   >
@@ -2562,7 +2562,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kGXeez",
-                                              "isStatic": true,
+                                              "isStatic": false,
                                               "lastClassName": "c12",
                                               "rules": Array [
                                                 "
@@ -2698,7 +2698,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-fMiknA",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c15",
                                                           "rules": Array [
                                                             "
@@ -2741,7 +2741,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                     "attrs": Array [],
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "sc-dxgOiQ",
-                                                      "isStatic": true,
+                                                      "isStatic": false,
                                                       "lastClassName": "c16",
                                                       "rules": Array [
                                                         "
@@ -2815,7 +2815,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                             "attrs": Array [],
                                                             "componentStyle": ComponentStyle {
                                                               "componentId": "sc-bxivhb",
-                                                              "isStatic": true,
+                                                              "isStatic": false,
                                                               "lastClassName": "c8",
                                                               "rules": Array [
                                                                 "
@@ -2885,7 +2885,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "sc-jKJlTe",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c17",
                                                     "rules": Array [
                                                       "
@@ -2959,7 +2959,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-brqgnP",
-                                                                "isStatic": true,
+                                                                "isStatic": false,
                                                                 "lastClassName": "c19",
                                                                 "rules": Array [
                                                                   "
@@ -2991,7 +2991,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
                                                                       "componentId": "sc-cMljjf",
-                                                                      "isStatic": true,
+                                                                      "isStatic": false,
                                                                       "lastClassName": "c20",
                                                                       "rules": Array [
                                                                         "
@@ -3118,7 +3118,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-brqgnP",
-                                                                "isStatic": true,
+                                                                "isStatic": false,
                                                                 "lastClassName": "c19",
                                                                 "rules": Array [
                                                                   "
@@ -3150,7 +3150,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
                                                                       "componentId": "sc-cMljjf",
-                                                                      "isStatic": true,
+                                                                      "isStatic": false,
                                                                       "lastClassName": "c20",
                                                                       "rules": Array [
                                                                         "
@@ -3244,7 +3244,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kGXeez",
-                                              "isStatic": true,
+                                              "isStatic": false,
                                               "lastClassName": "c12",
                                               "rules": Array [
                                                 "
@@ -3289,7 +3289,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kpOJdX",
-                                        "isStatic": true,
+                                        "isStatic": false,
                                         "lastClassName": "c22",
                                         "rules": Array [
                                           "
@@ -3326,7 +3326,7 @@ exports[`<DropdownField /> should be opened towards the bottom <DropdownField op
                                   forwardedRef={null}
                                 >
                                   <div
-                                    className="c10 c22"
+                                    className="c22 c10"
                                   />
                                 </StyledComponent>
                               </Styled(styled.div)>
@@ -3607,7 +3607,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-csuQGl",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -3646,7 +3646,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-Rmtcm",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -3731,7 +3731,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-VigVT",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
                                   "
@@ -3884,7 +3884,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
                               "componentId": "c6",
-                              "isStatic": true,
+                              "isStatic": false,
                               "lastClassName": "c7",
                               "rules": Array [
                                 "
@@ -3930,7 +3930,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c8",
                                       "rules": Array [
                                         "
@@ -4101,7 +4101,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-eHgmQL",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c9",
                         "rules": Array [
                           "
@@ -4141,7 +4141,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                       open={true}
                     >
                       <Styled(WindowPopup)
-                        label={<ForwardRef />}
+                        label={<ForwardRef(styled.div) />}
                         onClose={[Function]}
                       >
                         <StyledComponent
@@ -4151,7 +4151,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-dVhcbM",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c10",
                                 "rules": Array [
                                   "
@@ -4170,12 +4170,12 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                             }
                           }
                           forwardedRef={null}
-                          label={<ForwardRef />}
+                          label={<ForwardRef(styled.div) />}
                           onClose={[Function]}
                         >
                           <WindowPopup
                             className="c10"
-                            label={<ForwardRef />}
+                            label={<ForwardRef(styled.div) />}
                             onClose={[Function]}
                           >
                             <Blocker
@@ -4195,7 +4195,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kgoBCf",
-                                        "isStatic": true,
+                                        "isStatic": false,
                                         "lastClassName": "c11",
                                         "rules": Array [
                                           "
@@ -4225,7 +4225,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                   onMouseDown={[Function]}
                                 >
                                   <div
-                                    className="c10 c11"
+                                    className="c11 c10"
                                     onKeyDown={[Function]}
                                     onMouseDown={[Function]}
                                   >
@@ -4240,7 +4240,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kGXeez",
-                                              "isStatic": true,
+                                              "isStatic": false,
                                               "lastClassName": "c12",
                                               "rules": Array [
                                                 "
@@ -4376,7 +4376,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                         "attrs": Array [],
                                                         "componentStyle": ComponentStyle {
                                                           "componentId": "sc-fMiknA",
-                                                          "isStatic": true,
+                                                          "isStatic": false,
                                                           "lastClassName": "c15",
                                                           "rules": Array [
                                                             "
@@ -4419,7 +4419,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                     "attrs": Array [],
                                                     "componentStyle": ComponentStyle {
                                                       "componentId": "sc-dxgOiQ",
-                                                      "isStatic": true,
+                                                      "isStatic": false,
                                                       "lastClassName": "c16",
                                                       "rules": Array [
                                                         "
@@ -4493,7 +4493,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                             "attrs": Array [],
                                                             "componentStyle": ComponentStyle {
                                                               "componentId": "sc-bxivhb",
-                                                              "isStatic": true,
+                                                              "isStatic": false,
                                                               "lastClassName": "c8",
                                                               "rules": Array [
                                                                 "
@@ -4563,7 +4563,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                   "attrs": Array [],
                                                   "componentStyle": ComponentStyle {
                                                     "componentId": "sc-jKJlTe",
-                                                    "isStatic": true,
+                                                    "isStatic": false,
                                                     "lastClassName": "c17",
                                                     "rules": Array [
                                                       "
@@ -4637,7 +4637,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-brqgnP",
-                                                                "isStatic": true,
+                                                                "isStatic": false,
                                                                 "lastClassName": "c19",
                                                                 "rules": Array [
                                                                   "
@@ -4669,7 +4669,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
                                                                       "componentId": "sc-cMljjf",
-                                                                      "isStatic": true,
+                                                                      "isStatic": false,
                                                                       "lastClassName": "c20",
                                                                       "rules": Array [
                                                                         "
@@ -4796,7 +4796,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                               "attrs": Array [],
                                                               "componentStyle": ComponentStyle {
                                                                 "componentId": "sc-brqgnP",
-                                                                "isStatic": true,
+                                                                "isStatic": false,
                                                                 "lastClassName": "c19",
                                                                 "rules": Array [
                                                                   "
@@ -4828,7 +4828,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                                                     "attrs": Array [],
                                                                     "componentStyle": ComponentStyle {
                                                                       "componentId": "sc-cMljjf",
-                                                                      "isStatic": true,
+                                                                      "isStatic": false,
                                                                       "lastClassName": "c20",
                                                                       "rules": Array [
                                                                         "
@@ -4922,7 +4922,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                             "attrs": Array [],
                                             "componentStyle": ComponentStyle {
                                               "componentId": "sc-kGXeez",
-                                              "isStatic": true,
+                                              "isStatic": false,
                                               "lastClassName": "c12",
                                               "rules": Array [
                                                 "
@@ -4967,7 +4967,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-kpOJdX",
-                                        "isStatic": true,
+                                        "isStatic": false,
                                         "lastClassName": "c22",
                                         "rules": Array [
                                           "
@@ -5004,7 +5004,7 @@ exports[`<DropdownField /> should be opened towards the top <DropdownField open 
                                   forwardedRef={null}
                                 >
                                   <div
-                                    className="c10 c22"
+                                    className="c22 c10"
                                   />
                                 </StyledComponent>
                               </Styled(styled.div)>
@@ -5160,7 +5160,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-csuQGl",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -5196,7 +5196,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-Rmtcm",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -5282,7 +5282,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-VigVT",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
                                   "
@@ -5509,7 +5509,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
                               "componentId": "c6",
-                              "isStatic": true,
+                              "isStatic": false,
                               "lastClassName": "c7",
                               "rules": Array [
                                 "
@@ -5555,7 +5555,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c8",
                                       "rules": Array [
                                         "
@@ -5725,7 +5725,7 @@ exports[`<DropdownField /> should render a <DropdownField> that does not render 
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-eHgmQL",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c9",
                         "rules": Array [
                           "
@@ -5891,7 +5891,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-csuQGl",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -5927,7 +5927,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-Rmtcm",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -6013,7 +6013,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-VigVT",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
                                   "
@@ -6125,7 +6125,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
                               "componentId": "c5",
-                              "isStatic": true,
+                              "isStatic": false,
                               "lastClassName": "c6",
                               "rules": Array [
                                 "
@@ -6171,7 +6171,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c7",
                                       "rules": Array [
                                         "
@@ -6331,7 +6331,7 @@ exports[`<DropdownField /> should render a <DropdownField> that renders a placeh
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-eHgmQL",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c8",
                         "rules": Array [
                           "
@@ -6511,7 +6511,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-csuQGl",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -6547,7 +6547,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-Rmtcm",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -6632,7 +6632,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-VigVT",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
                                   "
@@ -6743,7 +6743,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "c5",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c6",
                                 "rules": Array [
                                   "
@@ -6789,7 +6789,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-bxivhb",
-                                        "isStatic": true,
+                                        "isStatic": false,
                                         "lastClassName": "c7",
                                         "rules": Array [
                                           "
@@ -6859,7 +6859,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
                               "componentId": "c5",
-                              "isStatic": true,
+                              "isStatic": false,
                               "lastClassName": "c6",
                               "rules": Array [
                                 "
@@ -6905,7 +6905,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c7",
                                       "rules": Array [
                                         "
@@ -7063,7 +7063,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-eHgmQL",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c8",
                         "rules": Array [
                           "
@@ -7105,108 +7105,102 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 1`] = `
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <Component
+        <styled.div
           bottom="xsmall"
           left="medium"
           top="xsmall"
         >
-          <styled.div
+          <StyledComponent
             bottom="xsmall"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htpNat",
+                  "isStatic": false,
+                  "lastClassName": "c9",
+                  "rules": Array [
+                    [Function],
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htpNat",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
             left="medium"
             top="xsmall"
           >
-            <StyledComponent
-              bottom="xsmall"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-htpNat",
-                    "isStatic": false,
-                    "lastClassName": "c9",
-                    "rules": Array [
-                      [Function],
-                    ],
-                  },
-                  "displayName": "styled.div",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-htpNat",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-              left="medium"
-              top="xsmall"
+            <div
+              className="c9"
             >
-              <div
-                className="c9"
+              <Component
+                error="You need to select a field"
               >
-                <Component
-                  error="You need to select a field"
-                >
-                  <InputError>
-                    <styled.div>
-                      <StyledComponent
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-bdVaJa",
-                              "isStatic": false,
-                              "lastClassName": "c10",
-                              "rules": Array [
-                                "
+                <InputError>
+                  <styled.div>
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bdVaJa",
+                            "isStatic": false,
+                            "lastClassName": "c10",
+                            "rules": Array [
+                              "
   ",
-                                "
+                              "
     ",
-                                "font-size: 0.75rem;
+                              "font-size: 0.75rem;
   ",
-                                "
+                              "
     ",
-                                "line-height: 0.875rem;
+                              "line-height: 0.875rem;
   ",
-                                "
+                              "
     ",
-                                "
+                              "
   ",
-                                ";
+                              ";
   color: ",
-                                [Function],
-                                ";
+                              [Function],
+                              ";
 ",
-                              ],
-                            },
-                            "displayName": "styled.div",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "sc-bdVaJa",
-                            "target": "div",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bdVaJa",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
                         }
-                        forwardedRef={null}
+                      }
+                      forwardedRef={null}
+                    >
+                      <div
+                        className="c10"
                       >
-                        <div
-                          className="c10"
-                        >
-                          You need to select a field
-                        </div>
-                      </StyledComponent>
-                    </styled.div>
-                  </InputError>
-                </Component>
-              </div>
-            </StyledComponent>
-          </styled.div>
-        </Component>
+                        You need to select a field
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                </InputError>
+              </Component>
+            </div>
+          </StyledComponent>
+        </styled.div>
       </div>
     </StyledComponent>
   </styled.div>
@@ -7345,7 +7339,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-csuQGl",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -7381,7 +7375,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-Rmtcm",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -7466,7 +7460,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-VigVT",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
                                   "
@@ -7577,7 +7571,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "c5",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c6",
                                 "rules": Array [
                                   "
@@ -7623,7 +7617,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
                                         "componentId": "sc-bxivhb",
-                                        "isStatic": true,
+                                        "isStatic": false,
                                         "lastClassName": "c7",
                                         "rules": Array [
                                           "
@@ -7693,7 +7687,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
                               "componentId": "c5",
-                              "isStatic": true,
+                              "isStatic": false,
                               "lastClassName": "c6",
                               "rules": Array [
                                 "
@@ -7739,7 +7733,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c7",
                                       "rules": Array [
                                         "
@@ -7897,7 +7891,7 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-eHgmQL",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c8",
                         "rules": Array [
                           "
@@ -7939,108 +7933,102 @@ exports[`<DropdownField /> should render a <DropdownField> with an error 2`] = `
             </InteractiveListInt>
           </InteractiveList>
         </Responsive>
-        <Component
+        <styled.div
           bottom="xsmall"
           left="medium"
           top="xsmall"
         >
-          <styled.div
+          <StyledComponent
             bottom="xsmall"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-htpNat",
+                  "isStatic": false,
+                  "lastClassName": "c9",
+                  "rules": Array [
+                    [Function],
+                  ],
+                },
+                "displayName": "styled.div",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-htpNat",
+                "target": "div",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
             left="medium"
             top="xsmall"
           >
-            <StyledComponent
-              bottom="xsmall"
-              forwardedComponent={
-                Object {
-                  "$$typeof": Symbol(react.forward_ref),
-                  "attrs": Array [],
-                  "componentStyle": ComponentStyle {
-                    "componentId": "sc-htpNat",
-                    "isStatic": false,
-                    "lastClassName": "c9",
-                    "rules": Array [
-                      [Function],
-                    ],
-                  },
-                  "displayName": "styled.div",
-                  "foldedComponentIds": Array [],
-                  "render": [Function],
-                  "styledComponentId": "sc-htpNat",
-                  "target": "div",
-                  "toString": [Function],
-                  "warnTooManyClasses": [Function],
-                  "withComponent": [Function],
-                }
-              }
-              forwardedRef={null}
-              left="medium"
-              top="xsmall"
+            <div
+              className="c9"
             >
-              <div
-                className="c9"
+              <Component
+                error="You need to select a field"
               >
-                <Component
-                  error="You need to select a field"
-                >
-                  <InputError>
-                    <styled.div>
-                      <StyledComponent
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-bdVaJa",
-                              "isStatic": false,
-                              "lastClassName": "c10",
-                              "rules": Array [
-                                "
+                <InputError>
+                  <styled.div>
+                    <StyledComponent
+                      forwardedComponent={
+                        Object {
+                          "$$typeof": Symbol(react.forward_ref),
+                          "attrs": Array [],
+                          "componentStyle": ComponentStyle {
+                            "componentId": "sc-bdVaJa",
+                            "isStatic": false,
+                            "lastClassName": "c10",
+                            "rules": Array [
+                              "
   ",
-                                "
+                              "
     ",
-                                "font-size: 0.75rem;
+                              "font-size: 0.75rem;
   ",
-                                "
+                              "
     ",
-                                "line-height: 0.875rem;
+                              "line-height: 0.875rem;
   ",
-                                "
+                              "
     ",
-                                "
+                              "
   ",
-                                ";
+                              ";
   color: ",
-                                [Function],
-                                ";
+                              [Function],
+                              ";
 ",
-                              ],
-                            },
-                            "displayName": "styled.div",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "sc-bdVaJa",
-                            "target": "div",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
+                            ],
+                          },
+                          "displayName": "styled.div",
+                          "foldedComponentIds": Array [],
+                          "render": [Function],
+                          "styledComponentId": "sc-bdVaJa",
+                          "target": "div",
+                          "toString": [Function],
+                          "warnTooManyClasses": [Function],
+                          "withComponent": [Function],
                         }
-                        forwardedRef={null}
+                      }
+                      forwardedRef={null}
+                    >
+                      <div
+                        className="c10"
                       >
-                        <div
-                          className="c10"
-                        >
-                          You need to select a field
-                        </div>
-                      </StyledComponent>
-                    </styled.div>
-                  </InputError>
-                </Component>
-              </div>
-            </StyledComponent>
-          </styled.div>
-        </Component>
+                        You need to select a field
+                      </div>
+                    </StyledComponent>
+                  </styled.div>
+                </InputError>
+              </Component>
+            </div>
+          </StyledComponent>
+        </styled.div>
       </div>
     </StyledComponent>
   </styled.div>
@@ -8172,7 +8160,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-csuQGl",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -8208,7 +8196,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-Rmtcm",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -8293,7 +8281,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-VigVT",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
                                   "
@@ -8446,7 +8434,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
                               "componentId": "c6",
-                              "isStatic": true,
+                              "isStatic": false,
                               "lastClassName": "c7",
                               "rules": Array [
                                 "
@@ -8492,7 +8480,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c8",
                                       "rules": Array [
                                         "
@@ -8658,7 +8646,7 @@ exports[`<DropdownField /> should render a borderless <DropdownField> 1`] = `
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-eHgmQL",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c9",
                         "rules": Array [
                           "
@@ -8831,7 +8819,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-csuQGl",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -8867,7 +8855,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-Rmtcm",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -8955,7 +8943,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                               "attrs": Array [],
                               "componentStyle": ComponentStyle {
                                 "componentId": "sc-VigVT",
-                                "isStatic": true,
+                                "isStatic": false,
                                 "lastClassName": "c3",
                                 "rules": Array [
                                   "
@@ -9112,7 +9100,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                             "attrs": Array [],
                             "componentStyle": ComponentStyle {
                               "componentId": "c6",
-                              "isStatic": true,
+                              "isStatic": false,
                               "lastClassName": "c7",
                               "rules": Array [
                                 "
@@ -9158,7 +9146,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-bxivhb",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c8",
                                       "rules": Array [
                                         "
@@ -9324,7 +9312,7 @@ exports[`<DropdownField /> should render a disabled <DropdownField> 1`] = `
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
                         "componentId": "sc-eHgmQL",
-                        "isStatic": true,
+                        "isStatic": false,
                         "lastClassName": "c9",
                         "rules": Array [
                           "

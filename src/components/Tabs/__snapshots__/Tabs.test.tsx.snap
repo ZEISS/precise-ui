@@ -222,7 +222,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-bwzfXH",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "c0",
                       "rules": Array [
                         "
@@ -772,7 +772,7 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                     "attrs": Array [],
                     "componentStyle": ComponentStyle {
                       "componentId": "sc-htpNat",
-                      "isStatic": true,
+                      "isStatic": false,
                       "lastClassName": "KtFsv",
                       "rules": Array [],
                     },

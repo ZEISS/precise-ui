@@ -81,7 +81,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages 1`
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-htpNat",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -116,7 +116,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages 1`
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gzVnrw",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -246,7 +246,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages 1`
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "
@@ -285,7 +285,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages 1`
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "
@@ -324,7 +324,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages 1`
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "
@@ -363,7 +363,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages 1`
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "
@@ -410,7 +410,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages 1`
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bxivhb",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c5",
                   "rules": Array [
                     "
@@ -755,7 +755,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages in
           "attrs": Array [],
           "componentStyle": ComponentStyle {
             "componentId": "sc-htpNat",
-            "isStatic": true,
+            "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
               "
@@ -790,7 +790,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages in
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-gzVnrw",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
                     "
@@ -920,7 +920,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages in
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "
@@ -959,7 +959,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages in
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "
@@ -998,7 +998,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages in
                                     "attrs": Array [],
                                     "componentStyle": ComponentStyle {
                                       "componentId": "sc-EHOje",
-                                      "isStatic": true,
+                                      "isStatic": false,
                                       "lastClassName": "c4",
                                       "rules": Array [
                                         "
@@ -1045,7 +1045,7 @@ exports[`<Carousel /> should render a <Carousel> component with several pages in
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
                   "componentId": "sc-bxivhb",
-                  "isStatic": true,
+                  "isStatic": false,
                   "lastClassName": "c5",
                   "rules": Array [
                     "

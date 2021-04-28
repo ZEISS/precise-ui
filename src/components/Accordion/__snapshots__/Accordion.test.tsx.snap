@@ -102,7 +102,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-htpNat",
-                    "isStatic": true,
+                    "isStatic": false,
                     "lastClassName": "KtFsv",
                     "rules": Array [],
                   },
@@ -129,7 +129,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bxivhb",
-                          "isStatic": true,
+                          "isStatic": false,
                           "lastClassName": "c0",
                           "rules": Array [
                             "
@@ -361,7 +361,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
@@ -387,7 +387,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                   isRotated={false}
                                                 >
                                                   <i
-                                                    className="c4 c5"
+                                                    className="c5 c4"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
@@ -645,7 +645,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
@@ -671,7 +671,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                   isRotated={false}
                                                 >
                                                   <i
-                                                    className="c4 c5"
+                                                    className="c5 c4"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
@@ -929,7 +929,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
@@ -955,7 +955,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                   isRotated={false}
                                                 >
                                                   <i
-                                                    className="c4 c5"
+                                                    className="c5 c4"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
@@ -1213,7 +1213,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
@@ -1239,7 +1239,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs 1
                                                   isRotated={false}
                                                 >
                                                   <i
-                                                    className="c4 c5"
+                                                    className="c5 c4"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
@@ -1437,7 +1437,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
                     "componentId": "sc-htpNat",
-                    "isStatic": true,
+                    "isStatic": false,
                     "lastClassName": "KtFsv",
                     "rules": Array [],
                   },
@@ -1464,7 +1464,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                         "attrs": Array [],
                         "componentStyle": ComponentStyle {
                           "componentId": "sc-bxivhb",
-                          "isStatic": true,
+                          "isStatic": false,
                           "lastClassName": "c0",
                           "rules": Array [
                             "
@@ -1696,7 +1696,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
@@ -1722,7 +1722,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                   isRotated={false}
                                                 >
                                                   <i
-                                                    className="c4 c5"
+                                                    className="c5 c4"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
@@ -1980,7 +1980,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
@@ -2006,7 +2006,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                   isRotated={true}
                                                 >
                                                   <i
-                                                    className="c7 c5"
+                                                    className="c5 c7"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
@@ -2364,7 +2364,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                       "attrs": Array [],
                                                       "componentStyle": ComponentStyle {
                                                         "componentId": "sc-bdVaJa",
-                                                        "isStatic": true,
+                                                        "isStatic": false,
                                                         "lastClassName": "c5",
                                                         "rules": Array [
                                                           "
@@ -2390,7 +2390,7 @@ exports[`<Accordion /> should render a <Accordion> component with several tabs i
                                                   isRotated={false}
                                                 >
                                                   <i
-                                                    className="c4 c5"
+                                                    className="c5 c4"
                                                   >
                                                     <KeyboardArrowRight
                                                       height="1em"
