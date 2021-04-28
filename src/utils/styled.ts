@@ -1,3 +1,4 @@
+/* tslint:disable:import-blacklist */
 import * as styledComponents from 'styled-components';
 import {
   ThemedStyledComponentsModule,
