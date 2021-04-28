@@ -62,7 +62,7 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
     const { value } = this.state;
     const key = this.getSuggestionKey(suggestion);
 
-    const suggestionAlreadyAdded = value.some(x => this.getSuggestionKey(x) === key);
+    const suggestionAlreadyAdded = value.some((x) => this.getSuggestionKey(x) === key);
     if (!suggestionAlreadyAdded) {
       const newValue = [...value];
       newValue.push(suggestion);
@@ -142,7 +142,7 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
   }
 
   private getTagsArray = memoize((value: Array<T>) => {
-    return value.map(x => this.getSuggestionValue(x));
+    return value.map((x) => this.getSuggestionValue(x));
   });
 
   private defaultSuggestionRenderer(suggestion: T) {

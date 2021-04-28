@@ -75,15 +75,15 @@ const StyledCustomWrapper = styled.div<InteractiveListWrapperProps>`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   position: absolute;
   z-index: 2;
-  top: ${props => (props.direction === InteractiveListDirection.normal ? 8 : -30)}px;
-  transform: translateY(${props => (props.direction === InteractiveListDirection.normal ? 0 : -100)}%);
+  top: ${(props) => (props.direction === InteractiveListDirection.normal ? 8 : -30)}px;
+  transform: translateY(${(props) => (props.direction === InteractiveListDirection.normal ? 0 : -100)}%);
   background: ${white};
   border: 1px solid #dfe3e6;
   max-height: 50vh;
   overflow-y: auto;
 `;
 
-const CustomWrapper: React.SFC<InteractiveListWrapperProps> = props => {
+const CustomWrapper: React.SFC<InteractiveListWrapperProps> = (props) => {
   return <StyledCustomWrapper {...props} />;
 };
 

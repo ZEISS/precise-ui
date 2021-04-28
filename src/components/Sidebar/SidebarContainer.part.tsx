@@ -76,7 +76,7 @@ function getPositionStyles(position: PositionType, open: boolean, size: string) 
 
   return (
     Object.keys(positionValue)
-      .map(positionName => `${positionName}: ${positionValue[positionName]}`)
+      .map((positionName) => `${positionName}: ${positionValue[positionName]}`)
       .join(';') + ';'
   );
 }

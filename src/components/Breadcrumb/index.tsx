@@ -16,7 +16,7 @@ export interface BreadcrumbProps extends AnchorProps {
 
 const StyledLink = styled(Anchor)`
   text-decoration: none;
-  color: ${themed(props => props.theme.ui0)};
+  color: ${themed((props) => props.theme.ui0)};
   display: inline-block;
   font-size: inherit;
   white-space: nowrap;
@@ -34,7 +34,7 @@ const StyledText = styled.span`
 /**
  * Represents a single Breadcrumb which is a special version of a link.
  */
-export const Breadcrumb: React.SFC<BreadcrumbProps> = props => {
+export const Breadcrumb: React.SFC<BreadcrumbProps> = (props) => {
   const { title, to, href, onClick, ...rest } = props;
 
   if (!to && !href && !onClick) {

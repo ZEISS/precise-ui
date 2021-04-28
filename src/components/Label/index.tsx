@@ -29,7 +29,7 @@ const BlockLabel = css`
 `;
 
 const Styledlabel = styled.label<LabelProps>`
-  ${props => (props.attached ? AttachedLabel : BlockLabel)};
+  ${(props) => (props.attached ? AttachedLabel : BlockLabel)};
 `;
 
 /**

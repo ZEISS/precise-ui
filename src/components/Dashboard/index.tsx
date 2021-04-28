@@ -222,7 +222,7 @@ const defaultActiveTile = {
 function changeTile(oldTiles: Array<DashboardTile>, newTile: DashboardTile) {
   let changed = false;
 
-  const newTiles = oldTiles.map(tile => {
+  const newTiles = oldTiles.map((tile) => {
     if (tile.id === newTile.id) {
       changed =
         changed ||
@@ -441,7 +441,7 @@ export class Dashboard extends React.Component<DashboardProps, DashboardState> {
             const setters = this.setters;
 
             if (setters[index] === undefined) {
-              setters[index] = e => this.setActiveTile(e, index);
+              setters[index] = (e) => this.setActiveTile(e, index);
             }
 
             return (

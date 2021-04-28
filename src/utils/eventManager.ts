@@ -22,7 +22,7 @@ export class SimpleEventManager implements EventManager {
 
   off<T>(type: string, callback: (arg: T) => void) {
     const callbacks = this.eventListeners[type] || [];
-    this.eventListeners[type] = callbacks.filter(cb => cb !== callback);
+    this.eventListeners[type] = callbacks.filter((cb) => cb !== callback);
   }
 
   emit<T>(type: string, arg: T) {

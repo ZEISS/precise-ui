@@ -33,7 +33,7 @@ const PageControlsStyled = styled.div`
 const ChangePage = styled.button<ChangePageProps>`
   ${getFontStyle({ size: 'xLarge' })}
   position: relative;
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
   outline: none;
   display: flex;
   background: transparent;
@@ -41,7 +41,7 @@ const ChangePage = styled.button<ChangePageProps>`
   align-items: center;
   padding: ${distance.small};
   margin: 0 ${distance.small};
-  color: ${props => (!props.disabled ? cyan : grey1)};
+  color: ${(props) => (!props.disabled ? cyan : grey1)};
   &:before,
   &:after {
     content: '';

@@ -3,7 +3,12 @@ import { usePrompt } from './usePrompt';
 import { PromptBasicProps, PromptMessageCallback } from './Prompt.types';
 
 export const PromptBasic: React.FC<PromptBasicProps> = ({ history, when, message }) => {
-  usePrompt(() => getMessage(message), () => getMessage(message), history, when);
+  usePrompt(
+    () => getMessage(message),
+    () => getMessage(message),
+    history,
+    when,
+  );
 
   // tslint:disable-next-line
   return null;

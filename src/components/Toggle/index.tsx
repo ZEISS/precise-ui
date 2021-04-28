@@ -45,8 +45,8 @@ const ToggleContainer = styled('div')<ToggleContainerProps>`
   ${getFontStyle({ size: 'medium' })};
   position: relative;
   display: inline-block;
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
-  color: ${themed(props => props.theme.text1)};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  color: ${themed((props) => props.theme.text1)};
 `;
 
 const ToggleBoxWrapper = styled.div`
@@ -69,7 +69,7 @@ const ToggleBox = styled('div')<ToggleBoxProps>`
   height: ${distance.medium};
   border-radius: ${distance.small};
   position: relative;
-  background: ${themed(props => props.theme.ui4)};
+  background: ${themed((props) => props.theme.ui4)};
   transition: all ${transitionDuration} ${transitionEase};
 `;
 

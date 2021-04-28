@@ -29,16 +29,16 @@ export const Headers = styled('ul')<HeadersProps>`
 export const Content = styled.div``;
 
 const ActiveTab = css`
-  color: ${themed(props => props.theme.text4)};
-  background: ${themed(props => props.theme.ui5)};
+  color: ${themed((props) => props.theme.text4)};
+  background: ${themed((props) => props.theme.ui5)};
 `;
 
 const InactiveTab = css`
-  color: ${themed(props => props.theme.text2)};
+  color: ${themed((props) => props.theme.text2)};
   background: ${white};
 
   &:hover {
-    border-color: ${themed(props => props.theme.ui5)};
+    border-color: ${themed((props) => props.theme.ui5)};
   }
 `;
 
@@ -51,8 +51,8 @@ export const Header = styled('li')<TabHeaderProps>`
   cursor: pointer;
   white-space: nowrap;
   box-sizing: border-box;
-  ${props => (props.active ? ActiveTab : InactiveTab)};
-  border: 1px solid ${themed(props => props.theme.ui4)};
+  ${(props) => (props.active ? ActiveTab : InactiveTab)};
+  border: 1px solid ${themed((props) => props.theme.ui4)};
 `;
 
 export interface TabItemProps {
@@ -60,7 +60,7 @@ export interface TabItemProps {
 }
 
 export const ContentItem = styled.div<TabItemProps>`
-  ${props => (props.active ? '' : 'display: none;')};
+  ${(props) => (props.active ? '' : 'display: none;')};
 `;
 
 export const OverflowItems = styled.div`

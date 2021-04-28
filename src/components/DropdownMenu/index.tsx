@@ -86,12 +86,12 @@ const StyledInteractiveList = styled(InteractiveList)`
   white-space: nowrap;
 
   ul {
-    background: ${themed(props => props.theme.ui1)};
+    background: ${themed((props) => props.theme.ui1)};
   }
 `;
 
 const DropdownButton = styled.div<DropdownButtonProps>`
-  color: ${props => (props.open ? colors.cyan : colors.grey2)};
+  color: ${(props) => (props.open ? colors.cyan : colors.grey2)};
   ${({ menuSize }) => getFontStyle({ size: menuSize })};
   cursor: pointer;
   display: flex;

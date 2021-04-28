@@ -62,7 +62,7 @@ const SpinnerAnimation = keyframes`
 
 const SpinningContainer = styled.div<{ hidden?: boolean }>`
   text-align: center;
-  visibility: ${props => (props.hidden ? 'hidden' : 'visible')};
+  visibility: ${(props) => (props.hidden ? 'hidden' : 'visible')};
 `;
 
 export interface SpinningLabelProps {
@@ -70,18 +70,18 @@ export interface SpinningLabelProps {
 }
 
 const SpinningLabel = styled('label')<SpinningLabelProps>`
-  color: ${themed(props => props.theme.text6)};
-  display: ${props => (strToSize(props.size) >= 20 ? 'block' : 'inline-block')};
+  color: ${themed((props) => props.theme.text6)};
+  display: ${(props) => (strToSize(props.size) >= 20 ? 'block' : 'inline-block')};
   margin: ${distance.xsmall};
-  color: ${themed(props => props.theme.textDisabled)};
-  font-size: ${props => strToFontSize(props.size)};
+  color: ${themed((props) => props.theme.textDisabled)};
+  font-size: ${(props) => strToFontSize(props.size)};
 `;
 
 const Cubes = styled.div<{ size?: string }>`
-  width: ${props => strToSize(props.size) * 4.6}px;
-  height: ${props => strToSize(props.size) * 4.6}px;
+  width: ${(props) => strToSize(props.size) * 4.6}px;
+  height: ${(props) => strToSize(props.size) * 4.6}px;
   position: relative;
-  font-size: ${props => strToSize(props.size)}px;
+  font-size: ${(props) => strToSize(props.size)}px;
   margin: auto;
 `;
 

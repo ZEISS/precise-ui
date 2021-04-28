@@ -17,7 +17,7 @@ interface StyledWrapperProps {
 const StyledWrapper = styled.div<StyledWrapperProps>`
   box-sizing: border-box;
   box-shadow: none;
-  margin: 0 0 ${props => (props.open ? '10px' : '0')} 0;
+  margin: 0 0 ${(props) => (props.open ? '10px' : '0')} 0;
   padding: 0;
   border: 1px solid ${themed<StyledWrapperProps>(({ theme, open }) => (open ? theme.ui0 : transparent))};
 `;
@@ -130,5 +130,5 @@ export interface TabItemProps {
 }
 
 export const TabItem = styled.div<TabItemProps>`
-  ${props => (props.active ? '' : 'display: none;')};
+  ${(props) => (props.active ? '' : 'display: none;')};
 `;

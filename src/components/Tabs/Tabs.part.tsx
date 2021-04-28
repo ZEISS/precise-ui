@@ -62,6 +62,6 @@ export interface ResponsiveTabsType extends React.FC<TabIntProps> {
   (props: TabIntProps & { children?: React.ReactNode }, context?: any): JSX.Element;
 }
 
-export const ResponsiveTabs: ResponsiveTabsType = withResponsiveMode<'tab' | 'dropdown'>(width =>
+export const ResponsiveTabs: ResponsiveTabsType = withResponsiveMode<'tab' | 'dropdown'>((width) =>
   !width || width > breakpoints.medium ? 'tab' : 'dropdown',
 )(TabInt) as any;

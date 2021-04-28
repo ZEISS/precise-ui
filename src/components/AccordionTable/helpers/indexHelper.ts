@@ -13,7 +13,7 @@ export function normalizeIndex(indexes: SelectedIndex = []): NormalizedSelectedI
 
 export function toggleIndex(indexes: NormalizedSelectedIndex, target: number, multiple = false) {
   if (hasIndex(indexes, target)) {
-    return indexes.filter(value => value !== target);
+    return indexes.filter((value) => value !== target);
   } else {
     return multiple ? [...indexes, target] : [target];
   }

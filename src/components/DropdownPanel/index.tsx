@@ -53,7 +53,7 @@ export const DropdownPanel: React.SFC<DropdownPanelProps> = ({ theme, data, chil
       <SlideDownTabs
         data={slideDownTabHeaders}
         selectedIndex={selectedIndex}
-        onChange={index => {
+        onChange={(index) => {
           const item = data[index];
           item && item.onSelect();
         }}

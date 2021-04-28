@@ -63,7 +63,7 @@ function getStyledHeadline(level: number) {
   if (!Headline) {
     const NewHeadline = styled(component as 'h1')(
       themed<StyledHeadlineProps>(
-        props => css`
+        (props) => css`
           ${getHeadlineStyle(props.level)}
 
           margin: 0;

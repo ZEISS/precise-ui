@@ -81,11 +81,11 @@ export const getDefaultHeaderCellRenderer = (sort: (key: string, order: 'ascendi
         {sorting !== false && (
           <StyledIncreaseDecrease
             value={sorting ? (sorting === 'descending' ? 'decrease' : 'increase') : undefined}
-            onIncrease={e => {
+            onIncrease={(e) => {
               e.stopPropagation();
               sort(key, 'ascending');
             }}
-            onDecrease={e => {
+            onDecrease={(e) => {
               e.stopPropagation();
               sort(key, 'descending');
             }}

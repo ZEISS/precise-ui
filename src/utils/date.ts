@@ -35,7 +35,7 @@ export function parseDate(
   const localeObject = getLocaleObject(locale || '') || getDefaultLocale();
   let strictParsingValueMatch = true;
   if (Array.isArray(dateFormat)) {
-    dateFormat.forEach(df => {
+    dateFormat.forEach((df) => {
       const tryParseDate = parse(value, df, new Date(), { locale: localeObject });
       if (strictParsing) {
         strictParsingValueMatch = isValid(tryParseDate) && value === format(tryParseDate, df);
@@ -55,7 +55,7 @@ export function parseDate(
     const match = dateFormat.match(longFormattingTokensRegExp);
     const updatedDateFormat = match
       ? match
-          .map(substring => {
+          .map((substring) => {
             const firstCharacter = substring[0];
             if (firstCharacter === 'p' || firstCharacter === 'P') {
               const longFormatter = longFormatters[firstCharacter];

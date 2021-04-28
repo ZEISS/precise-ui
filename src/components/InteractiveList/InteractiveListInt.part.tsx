@@ -98,14 +98,14 @@ const ListItemContent = styled.div`
 `;
 
 const ListItemContentPadding = styled('div')<ListItemContentProps>`
-  padding: ${props => (props.condensed ? `${distance.small} ${distance.medium}` : distance.medium)};
-  ${props => (props.showTick ? 'padding-right: 0;' : '')};
+  padding: ${(props) => (props.condensed ? `${distance.small} ${distance.medium}` : distance.medium)};
+  ${(props) => (props.showTick ? 'padding-right: 0;' : '')};
 `;
 
 const ListItemContentComponentPadding = styled('div')<ListItemContentProps>`
   > * {
-    padding: ${props => (props.condensed ? `${distance.small} ${distance.medium}` : distance.medium)};
-    ${props => (props.showTick ? 'padding-right: 0;' : '')};
+    padding: ${(props) => (props.condensed ? `${distance.small} ${distance.medium}` : distance.medium)};
+    ${(props) => (props.showTick ? 'padding-right: 0;' : '')};
   }
 `;
 
@@ -124,7 +124,7 @@ const ListItemIconPadding = styled('div')<ListItemIconProps>`
 const ListDivider = styled.hr`
   margin: ${distance.xsmall} ${distance.small};
   border: none;
-  border-top: 1px solid ${themed(props => props.theme.textDisabled)};
+  border-top: 1px solid ${themed((props) => props.theme.textDisabled)};
 `;
 
 const ListHeader = styled.span`
@@ -136,7 +136,7 @@ const ListHeader = styled.span`
   height: auto;
   min-height: 1em;
   box-sizing: border-box;
-  color: ${themed(props => props.theme.primary)};
+  color: ${themed((props) => props.theme.primary)};
 `;
 
 function getChosen(selected: string | Array<string>, multiple?: boolean) {
@@ -422,7 +422,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
       const newValue = multiple
         ? value.indexOf(selected) === -1
           ? [...value, selected]
-          : value.filter(i => i !== selected)
+          : value.filter((i) => i !== selected)
         : [selected];
 
       if (!controlled) {

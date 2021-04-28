@@ -32,7 +32,7 @@ export const StyledSidebarBlocker = styled(Blocker)<{ closing: boolean }>(
   `,
 );
 
-export const SidebarBlocker: React.FC<SidebarBlockerProps> = props => {
+export const SidebarBlocker: React.FC<SidebarBlockerProps> = (props) => {
   const [closed, setClosed] = React.useState(!props.open);
 
   React.useEffect(() => {

@@ -9,8 +9,8 @@ import { getFontStyle } from '../../textStyles';
 
 const BreadcrumbContainer = styled.div`
   ${getFontStyle({ size: 'small' })}
-  
-  color: ${themed(props => props.theme.ui8)};
+
+  color: ${themed((props) => props.theme.ui8)};
 `;
 
 const BreadcrumbSeparator = styled.span`
@@ -56,7 +56,7 @@ export const Breadcrumbs: React.SFC<BreadcrumbsProps> = ({ size = 5, children, .
   const displayElements: Array<React.ReactChild> = [];
   const count = Math.max(size, 1);
 
-  React.Children.forEach(children, child => {
+  React.Children.forEach(children, (child) => {
     if (child) {
       displayElements.push(child as React.ReactChild);
     }

@@ -20,6 +20,6 @@ export interface AccordionTableType extends React.FC<AccordionTableProps<any>> {
 /**
  * The accordion table component is used to define a special table with expandable rows.
  */
-export const AccordionTable: AccordionTableType = (withResponsiveMode<TableMode>(width =>
+export const AccordionTable: AccordionTableType = (withResponsiveMode<TableMode>((width) =>
   !width || width > breakpoints.medium ? 'table' : 'card',
 )<any>(AccordionTableInt) as unknown) as AccordionTableType;

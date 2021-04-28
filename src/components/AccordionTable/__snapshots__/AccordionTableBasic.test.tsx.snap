@@ -187,7 +187,9 @@ exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component
 />
 `;
 
-exports[`<AccordionTableBasic /> should render a <AccordionTableBasic> component without data and custom placeholder 1`] = `
+exports[
+  `<AccordionTableBasic /> should render a <AccordionTableBasic> component without data and custom placeholder 1`
+] = `
 <Styled(Responsive)
   cellRenderer={[Function]}
   columns={Object {}}

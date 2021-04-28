@@ -14,7 +14,7 @@ export function withGroupContext<TProps extends InputProps<any>>(
     (props: TProps) =>
       props.name ? (
         <RadioButtonGroupContext.Consumer>
-          {ctx => <Component group={ctx} {...props} />}
+          {(ctx) => <Component group={ctx} {...props} />}
         </RadioButtonGroupContext.Consumer>
       ) : (
         <Component {...props} />

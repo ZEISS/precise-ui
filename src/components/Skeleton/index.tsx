@@ -64,7 +64,7 @@ const randomInt = (min: number, max: number) => Math.floor(Math.random() * (max 
 /**
  * The `Sekeleton` component displays a low fidelity UI into which information will be gradually loaded.
  */
-export const Skeleton: React.FC<SkeletonProps> = props => {
+export const Skeleton: React.FC<SkeletonProps> = (props) => {
   const { count = 1, duration = 1.2, width = '100%', height = '100%', isCircle, isText, isPulsing = true } = props;
   const skeletons = [];
 
@@ -79,10 +79,10 @@ export const Skeleton: React.FC<SkeletonProps> = props => {
       height: ${typeof height === 'number' ? `${height}px` : height};
 
       ${height &&
-        width &&
-        isCircle && {
-          borderRadius: '50%',
-        }};
+      width &&
+      isCircle && {
+        borderRadius: '50%',
+      }};
     `;
 
     skeletons.push(

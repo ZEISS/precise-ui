@@ -7,7 +7,7 @@ export interface InputInfoProps extends StandardProps {}
 
 const StyledInfo = styled.div`
   ${getFontStyle({ size: 'xSmall' })};
-  color: ${themed(props => props.theme.text2)};
+  color: ${themed((props) => props.theme.text2)};
 `;
 
 /**

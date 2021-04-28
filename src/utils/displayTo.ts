@@ -5,7 +5,7 @@ import { breakpoints } from '../themes';
 export type WidthBreakpoints = { min?: number; max?: number };
 
 export function getMediaQueries(breakpoints: Breakpoints) {
-  return ScreenSizeList.map(x => ({ screen: x, breakpoints: getScreenSizeBreakpoints(x, breakpoints) })).reduce(
+  return ScreenSizeList.map((x) => ({ screen: x, breakpoints: getScreenSizeBreakpoints(x, breakpoints) })).reduce(
     (acc, next) => (next.breakpoints ? { ...acc, [next.screen]: getWidthBreakpointsQuery(next.breakpoints) } : acc),
     {},
   );

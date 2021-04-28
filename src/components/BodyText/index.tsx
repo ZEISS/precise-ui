@@ -18,8 +18,8 @@ export interface BodyTextProps extends StandardProps {
 }
 
 const StyledBodyText = styled.p<{ align: TextAlign }>`
-  text-align: ${props => props.align};
-  font-family: ${themed(props => props.theme.fontFamily)};
+  text-align: ${(props) => props.align};
+  font-family: ${themed((props) => props.theme.fontFamily)};
   margin-bottom: ${distance.medium};
   font-size: inherit;
   line-height: 1.6;

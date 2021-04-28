@@ -20,8 +20,8 @@ const StyledIcon = styled(Icon)`
 
   cursor: pointer;
   vertical-align: middle;
-  color: ${themed(props => props.theme.ui5)};
-  font-family: ${themed(props => props.theme.fontFamily)};
+  color: ${themed((props) => props.theme.ui5)};
+  font-family: ${themed((props) => props.theme.fontFamily)};
   margin-left: ${distance.small};
 `;
 
@@ -72,9 +72,9 @@ const StyledInput = styled.input<StyledInputProps>`
   outline: none;
   outline-color: transparent !important;
   background: ${transparent};
-  width: ${props => (props.value.length > 2 ? props.value.length * 10 + 'px' : '20px')};
+  width: ${(props) => (props.value.length > 2 ? props.value.length * 10 + 'px' : '20px')};
   color: ${themed(({ disabled, theme, valid }) => (valid ? (disabled ? theme.textDisabled : dark) : purpleRed))};
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'auto')};
   font-family: inherit;
 `;
 

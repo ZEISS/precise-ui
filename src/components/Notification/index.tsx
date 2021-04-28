@@ -133,7 +133,7 @@ const StyledContent = styled.div<LayoutProps>(
 );
 
 const ActionContainer = styled.div<LayoutProps>`
-  display: ${props => (props.inline ? 'inline' : 'block')};
+  display: ${(props) => (props.inline ? 'inline' : 'block')};
 `;
 
 const CloseButton = styled(IconLink)`
@@ -159,7 +159,7 @@ const LayoutInline = css`
 `;
 
 const ContentContainer = styled.div<LayoutProps>`
-  ${props => (props.inline ? LayoutInline : LayoutVertical)};
+  ${(props) => (props.inline ? LayoutInline : LayoutVertical)};
   margin-right: ${distance.medium};
   width: 100%;
 `;
@@ -179,7 +179,7 @@ interface StyledIconProps extends IconProps {
 const StyledIconInt: React.FC<StyledIconProps> = ({ type: _0, ...props }) => <Icon {...props} />;
 
 const StyledIcon = styled(StyledIconInt)`
-  color: ${themed<StyledIconProps>(props => getNotificationColor(props.type, props.theme))};
+  color: ${themed<StyledIconProps>((props) => getNotificationColor(props.type, props.theme))};
 `;
 
 /**

@@ -12,7 +12,7 @@ const StyledMobileDropdownWrapper = styled.div`
   box-sizing: border-box;
   height: 100%;
   overflow-y: auto;
-  background: ${themed(props => props.theme.ui1)};
+  background: ${themed((props) => props.theme.ui1)};
 `;
 
 const StyledMobileWrapper = styled.div`

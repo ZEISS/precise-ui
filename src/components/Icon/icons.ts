@@ -22,7 +22,7 @@ export interface SvgIconConstructor {
   };
 }
 
-export const AccountBalance = <SvgIconConstructor>function(props: SvgIconProps) {
+export const AccountBalance = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -35,7 +35,7 @@ export const AccountBalance = <SvgIconConstructor>function(props: SvgIconProps) 
 AccountBalance.displayName = 'AccountBalance';
 AccountBalance.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const AccountCircle = <SvgIconConstructor>function(props: SvgIconProps) {
+export const AccountCircle = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -49,7 +49,7 @@ export const AccountCircle = <SvgIconConstructor>function(props: SvgIconProps) {
 AccountCircle.displayName = 'AccountCircle';
 AccountCircle.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Announcement = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Announcement = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -62,7 +62,7 @@ export const Announcement = <SvgIconConstructor>function(props: SvgIconProps) {
 Announcement.displayName = 'Announcement';
 Announcement.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Bookmark = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Bookmark = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -73,7 +73,7 @@ export const Bookmark = <SvgIconConstructor>function(props: SvgIconProps) {
 Bookmark.displayName = 'Bookmark';
 Bookmark.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Book = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Book = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -86,7 +86,7 @@ export const Book = <SvgIconConstructor>function(props: SvgIconProps) {
 Book.displayName = 'Book';
 Book.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Build = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Build = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -100,7 +100,7 @@ export const Build = <SvgIconConstructor>function(props: SvgIconProps) {
 Build.displayName = 'Build';
 Build.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Cached = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Cached = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -114,7 +114,7 @@ export const Cached = <SvgIconConstructor>function(props: SvgIconProps) {
 Cached.displayName = 'Cached';
 Cached.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const CheckCircle = <SvgIconConstructor>function(props: SvgIconProps) {
+export const CheckCircle = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -128,7 +128,7 @@ export const CheckCircle = <SvgIconConstructor>function(props: SvgIconProps) {
 CheckCircle.displayName = 'CheckCircle';
 CheckCircle.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Dashboard = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Dashboard = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -139,7 +139,7 @@ export const Dashboard = <SvgIconConstructor>function(props: SvgIconProps) {
 Dashboard.displayName = 'Dashboard';
 Dashboard.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const DateRange = <SvgIconConstructor>function(props: SvgIconProps) {
+export const DateRange = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -153,7 +153,7 @@ export const DateRange = <SvgIconConstructor>function(props: SvgIconProps) {
 DateRange.displayName = 'DateRange';
 DateRange.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Delete = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Delete = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -164,7 +164,7 @@ export const Delete = <SvgIconConstructor>function(props: SvgIconProps) {
 Delete.displayName = 'Delete';
 Delete.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Description = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Description = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -178,7 +178,7 @@ export const Description = <SvgIconConstructor>function(props: SvgIconProps) {
 Description.displayName = 'Description';
 Description.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Done = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Done = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -189,7 +189,7 @@ export const Done = <SvgIconConstructor>function(props: SvgIconProps) {
 Done.displayName = 'Done';
 Done.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Event = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Event = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -203,7 +203,7 @@ export const Event = <SvgIconConstructor>function(props: SvgIconProps) {
 Event.displayName = 'Event';
 Event.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const ExitToApp = <SvgIconConstructor>function(props: SvgIconProps) {
+export const ExitToApp = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -217,7 +217,7 @@ export const ExitToApp = <SvgIconConstructor>function(props: SvgIconProps) {
 ExitToApp.displayName = 'ExitToApp';
 ExitToApp.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Favorite = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Favorite = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -231,7 +231,7 @@ export const Favorite = <SvgIconConstructor>function(props: SvgIconProps) {
 Favorite.displayName = 'Favorite';
 Favorite.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const FavoriteBorder = <SvgIconConstructor>function(props: SvgIconProps) {
+export const FavoriteBorder = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -245,7 +245,7 @@ export const FavoriteBorder = <SvgIconConstructor>function(props: SvgIconProps) 
 FavoriteBorder.displayName = 'FavoriteBorder';
 FavoriteBorder.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Feedback = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Feedback = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -258,7 +258,7 @@ export const Feedback = <SvgIconConstructor>function(props: SvgIconProps) {
 Feedback.displayName = 'Feedback';
 Feedback.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const HelpOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+export const HelpOutline = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -272,14 +272,14 @@ export const HelpOutline = <SvgIconConstructor>function(props: SvgIconProps) {
 HelpOutline.displayName = 'HelpOutline';
 HelpOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Home = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Home = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement('svg', props, React.createElement('path', { d: 'M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z' }));
 };
 
 Home.displayName = 'Home';
 Home.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const ImportantDevices = <SvgIconConstructor>function(props: SvgIconProps) {
+export const ImportantDevices = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -293,7 +293,7 @@ export const ImportantDevices = <SvgIconConstructor>function(props: SvgIconProps
 ImportantDevices.displayName = 'ImportantDevices';
 ImportantDevices.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Info = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Info = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -306,7 +306,7 @@ export const Info = <SvgIconConstructor>function(props: SvgIconProps) {
 Info.displayName = 'Info';
 Info.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const InfoOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+export const InfoOutline = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -320,7 +320,7 @@ export const InfoOutline = <SvgIconConstructor>function(props: SvgIconProps) {
 InfoOutline.displayName = 'InfoOutline';
 InfoOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Label = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Label = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -334,7 +334,7 @@ export const Label = <SvgIconConstructor>function(props: SvgIconProps) {
 Label.displayName = 'Label';
 Label.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const LabelOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+export const LabelOutline = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -348,7 +348,7 @@ export const LabelOutline = <SvgIconConstructor>function(props: SvgIconProps) {
 LabelOutline.displayName = 'LabelOutline';
 LabelOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Language = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Language = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -362,7 +362,7 @@ export const Language = <SvgIconConstructor>function(props: SvgIconProps) {
 Language.displayName = 'Language';
 Language.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Pageview = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Pageview = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -376,7 +376,7 @@ export const Pageview = <SvgIconConstructor>function(props: SvgIconProps) {
 Pageview.displayName = 'Pageview';
 Pageview.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const PowerSettingsNew = <SvgIconConstructor>function(props: SvgIconProps) {
+export const PowerSettingsNew = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -390,7 +390,7 @@ export const PowerSettingsNew = <SvgIconConstructor>function(props: SvgIconProps
 PowerSettingsNew.displayName = 'PowerSettingsNew';
 PowerSettingsNew.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Print = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Print = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -404,7 +404,7 @@ export const Print = <SvgIconConstructor>function(props: SvgIconProps) {
 Print.displayName = 'Print';
 Print.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const QuestionAnswer = <SvgIconConstructor>function(props: SvgIconProps) {
+export const QuestionAnswer = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -418,7 +418,7 @@ export const QuestionAnswer = <SvgIconConstructor>function(props: SvgIconProps) 
 QuestionAnswer.displayName = 'QuestionAnswer';
 QuestionAnswer.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Restore = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Restore = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -432,7 +432,7 @@ export const Restore = <SvgIconConstructor>function(props: SvgIconProps) {
 Restore.displayName = 'Restore';
 Restore.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Search = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Search = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -446,7 +446,7 @@ export const Search = <SvgIconConstructor>function(props: SvgIconProps) {
 Search.displayName = 'Search';
 Search.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Settings = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Settings = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -460,7 +460,7 @@ export const Settings = <SvgIconConstructor>function(props: SvgIconProps) {
 Settings.displayName = 'Settings';
 Settings.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const SwapVert = <SvgIconConstructor>function(props: SvgIconProps) {
+export const SwapVert = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -471,7 +471,7 @@ export const SwapVert = <SvgIconConstructor>function(props: SvgIconProps) {
 SwapVert.displayName = 'SwapVert';
 SwapVert.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const ThumbDown = <SvgIconConstructor>function(props: SvgIconProps) {
+export const ThumbDown = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -485,7 +485,7 @@ export const ThumbDown = <SvgIconConstructor>function(props: SvgIconProps) {
 ThumbDown.displayName = 'ThumbDown';
 ThumbDown.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const ThumbUp = <SvgIconConstructor>function(props: SvgIconProps) {
+export const ThumbUp = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -499,7 +499,7 @@ export const ThumbUp = <SvgIconConstructor>function(props: SvgIconProps) {
 ThumbUp.displayName = 'ThumbUp';
 ThumbUp.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Update = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Update = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -513,7 +513,7 @@ export const Update = <SvgIconConstructor>function(props: SvgIconProps) {
 Update.displayName = 'Update';
 Update.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const VerifiedUser = <SvgIconConstructor>function(props: SvgIconProps) {
+export const VerifiedUser = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -527,7 +527,7 @@ export const VerifiedUser = <SvgIconConstructor>function(props: SvgIconProps) {
 VerifiedUser.displayName = 'VerifiedUser';
 VerifiedUser.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const ViewCarousel = <SvgIconConstructor>function(props: SvgIconProps) {
+export const ViewCarousel = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -538,7 +538,7 @@ export const ViewCarousel = <SvgIconConstructor>function(props: SvgIconProps) {
 ViewCarousel.displayName = 'ViewCarousel';
 ViewCarousel.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const ViewColumn = <SvgIconConstructor>function(props: SvgIconProps) {
+export const ViewColumn = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -549,7 +549,7 @@ export const ViewColumn = <SvgIconConstructor>function(props: SvgIconProps) {
 ViewColumn.displayName = 'ViewColumn';
 ViewColumn.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Visibility = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Visibility = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -563,7 +563,7 @@ export const Visibility = <SvgIconConstructor>function(props: SvgIconProps) {
 Visibility.displayName = 'Visibility';
 Visibility.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const VisibilityOff = <SvgIconConstructor>function(props: SvgIconProps) {
+export const VisibilityOff = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -577,7 +577,7 @@ export const VisibilityOff = <SvgIconConstructor>function(props: SvgIconProps) {
 VisibilityOff.displayName = 'VisibilityOff';
 VisibilityOff.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Error = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Error = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -590,7 +590,7 @@ export const Error = <SvgIconConstructor>function(props: SvgIconProps) {
 Error.displayName = 'Error';
 Error.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Warning = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Warning = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -601,14 +601,14 @@ export const Warning = <SvgIconConstructor>function(props: SvgIconProps) {
 Warning.displayName = 'Warning';
 Warning.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const PlayArrow = <SvgIconConstructor>function(props: SvgIconProps) {
+export const PlayArrow = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement('svg', props, React.createElement('path', { d: 'M8 5v14l11-7z' }));
 };
 
 PlayArrow.displayName = 'PlayArrow';
 PlayArrow.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Replay = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Replay = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -621,7 +621,7 @@ export const Replay = <SvgIconConstructor>function(props: SvgIconProps) {
 Replay.displayName = 'Replay';
 Replay.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const VideoLibrary = <SvgIconConstructor>function(props: SvgIconProps) {
+export const VideoLibrary = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -635,7 +635,7 @@ export const VideoLibrary = <SvgIconConstructor>function(props: SvgIconProps) {
 VideoLibrary.displayName = 'VideoLibrary';
 VideoLibrary.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Email = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Email = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -649,7 +649,7 @@ export const Email = <SvgIconConstructor>function(props: SvgIconProps) {
 Email.displayName = 'Email';
 Email.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const MailOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+export const MailOutline = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -663,7 +663,7 @@ export const MailOutline = <SvgIconConstructor>function(props: SvgIconProps) {
 MailOutline.displayName = 'MailOutline';
 MailOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Phone = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Phone = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -677,14 +677,14 @@ export const Phone = <SvgIconConstructor>function(props: SvgIconProps) {
 Phone.displayName = 'Phone';
 Phone.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Add = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Add = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement('svg', props, React.createElement('path', { d: 'M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z' }));
 };
 
 Add.displayName = 'Add';
 Add.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const AddCircle = <SvgIconConstructor>function(props: SvgIconProps) {
+export const AddCircle = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -697,7 +697,7 @@ export const AddCircle = <SvgIconConstructor>function(props: SvgIconProps) {
 AddCircle.displayName = 'AddCircle';
 AddCircle.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const AddCircleOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+export const AddCircleOutline = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -711,7 +711,7 @@ export const AddCircleOutline = <SvgIconConstructor>function(props: SvgIconProps
 AddCircleOutline.displayName = 'AddCircleOutline';
 AddCircleOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const ContentCopy = <SvgIconConstructor>function(props: SvgIconProps) {
+export const ContentCopy = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -725,7 +725,7 @@ export const ContentCopy = <SvgIconConstructor>function(props: SvgIconProps) {
 ContentCopy.displayName = 'ContentCopy';
 ContentCopy.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Create = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Create = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -739,7 +739,7 @@ export const Create = <SvgIconConstructor>function(props: SvgIconProps) {
 Create.displayName = 'Create';
 Create.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const FilterList = <SvgIconConstructor>function(props: SvgIconProps) {
+export const FilterList = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -750,14 +750,14 @@ export const FilterList = <SvgIconConstructor>function(props: SvgIconProps) {
 FilterList.displayName = 'FilterList';
 FilterList.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Remove = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Remove = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement('svg', props, React.createElement('path', { d: 'M19 13H5v-2h14v2z' }));
 };
 
 Remove.displayName = 'Remove';
 Remove.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const RemoveCircle = <SvgIconConstructor>function(props: SvgIconProps) {
+export const RemoveCircle = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -770,7 +770,7 @@ export const RemoveCircle = <SvgIconConstructor>function(props: SvgIconProps) {
 RemoveCircle.displayName = 'RemoveCircle';
 RemoveCircle.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const RemoveCircleOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+export const RemoveCircleOutline = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -784,14 +784,14 @@ export const RemoveCircleOutline = <SvgIconConstructor>function(props: SvgIconPr
 RemoveCircleOutline.displayName = 'RemoveCircleOutline';
 RemoveCircleOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Send = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Send = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement('svg', props, React.createElement('path', { d: 'M2.01 21L23 12 2.01 3 2 10l15 2-15 2z' }));
 };
 
 Send.displayName = 'Send';
 Send.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Sort = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Sort = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -802,7 +802,7 @@ export const Sort = <SvgIconConstructor>function(props: SvgIconProps) {
 Sort.displayName = 'Sort';
 Sort.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Unarchive = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Unarchive = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -816,7 +816,7 @@ export const Unarchive = <SvgIconConstructor>function(props: SvgIconProps) {
 Unarchive.displayName = 'Unarchive';
 Unarchive.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const LocationSearching = <SvgIconConstructor>function(props: SvgIconProps) {
+export const LocationSearching = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -830,7 +830,7 @@ export const LocationSearching = <SvgIconConstructor>function(props: SvgIconProp
 LocationSearching.displayName = 'LocationSearching';
 LocationSearching.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Widgets = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Widgets = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -843,7 +843,7 @@ export const Widgets = <SvgIconConstructor>function(props: SvgIconProps) {
 Widgets.displayName = 'Widgets';
 Widgets.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const BorderClear = <SvgIconConstructor>function(props: SvgIconProps) {
+export const BorderClear = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -857,7 +857,7 @@ export const BorderClear = <SvgIconConstructor>function(props: SvgIconProps) {
 BorderClear.displayName = 'BorderClear';
 BorderClear.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const CreateNewFolder = <SvgIconConstructor>function(props: SvgIconProps) {
+export const CreateNewFolder = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -871,7 +871,7 @@ export const CreateNewFolder = <SvgIconConstructor>function(props: SvgIconProps)
 CreateNewFolder.displayName = 'CreateNewFolder';
 CreateNewFolder.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const FileDownload = <SvgIconConstructor>function(props: SvgIconProps) {
+export const FileDownload = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -882,14 +882,14 @@ export const FileDownload = <SvgIconConstructor>function(props: SvgIconProps) {
 FileDownload.displayName = 'FileDownload';
 FileDownload.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const FileUpload = <SvgIconConstructor>function(props: SvgIconProps) {
+export const FileUpload = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement('svg', props, React.createElement('path', { d: 'M9 16h6v-6h4l-7-7-7 7h4zm-4 2h14v2H5z' }));
 };
 
 FileUpload.displayName = 'FileUpload';
 FileUpload.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Folder = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Folder = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -902,7 +902,7 @@ export const Folder = <SvgIconConstructor>function(props: SvgIconProps) {
 Folder.displayName = 'Folder';
 Folder.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const FolderOpen = <SvgIconConstructor>function(props: SvgIconProps) {
+export const FolderOpen = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -915,7 +915,7 @@ export const FolderOpen = <SvgIconConstructor>function(props: SvgIconProps) {
 FolderOpen.displayName = 'FolderOpen';
 FolderOpen.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const FolderShared = <SvgIconConstructor>function(props: SvgIconProps) {
+export const FolderShared = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -929,7 +929,7 @@ export const FolderShared = <SvgIconConstructor>function(props: SvgIconProps) {
 FolderShared.displayName = 'FolderShared';
 FolderShared.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const KeyboardArrowDown = <SvgIconConstructor>function(props: SvgIconProps) {
+export const KeyboardArrowDown = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -940,7 +940,7 @@ export const KeyboardArrowDown = <SvgIconConstructor>function(props: SvgIconProp
 KeyboardArrowDown.displayName = 'KeyboardArrowDown';
 KeyboardArrowDown.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const KeyboardArrowLeft = <SvgIconConstructor>function(props: SvgIconProps) {
+export const KeyboardArrowLeft = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -951,7 +951,7 @@ export const KeyboardArrowLeft = <SvgIconConstructor>function(props: SvgIconProp
 KeyboardArrowLeft.displayName = 'KeyboardArrowLeft';
 KeyboardArrowLeft.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const KeyboardArrowRight = <SvgIconConstructor>function(props: SvgIconProps) {
+export const KeyboardArrowRight = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -962,7 +962,7 @@ export const KeyboardArrowRight = <SvgIconConstructor>function(props: SvgIconPro
 KeyboardArrowRight.displayName = 'KeyboardArrowRight';
 KeyboardArrowRight.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const KeyboardArrowUp = <SvgIconConstructor>function(props: SvgIconProps) {
+export const KeyboardArrowUp = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -973,7 +973,7 @@ export const KeyboardArrowUp = <SvgIconConstructor>function(props: SvgIconProps)
 KeyboardArrowUp.displayName = 'KeyboardArrowUp';
 KeyboardArrowUp.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Adjust = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Adjust = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -987,7 +987,7 @@ export const Adjust = <SvgIconConstructor>function(props: SvgIconProps) {
 Adjust.displayName = 'Adjust';
 Adjust.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Edit = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Edit = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1001,7 +1001,7 @@ export const Edit = <SvgIconConstructor>function(props: SvgIconProps) {
 Edit.displayName = 'Edit';
 Edit.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Filter1 = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Filter1 = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1015,7 +1015,7 @@ export const Filter1 = <SvgIconConstructor>function(props: SvgIconProps) {
 Filter1.displayName = 'Filter1';
 Filter1.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const FilterNone = <SvgIconConstructor>function(props: SvgIconProps) {
+export const FilterNone = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1029,7 +1029,7 @@ export const FilterNone = <SvgIconConstructor>function(props: SvgIconProps) {
 FilterNone.displayName = 'FilterNone';
 FilterNone.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const LocalOffer = <SvgIconConstructor>function(props: SvgIconProps) {
+export const LocalOffer = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1043,7 +1043,7 @@ export const LocalOffer = <SvgIconConstructor>function(props: SvgIconProps) {
 LocalOffer.displayName = 'LocalOffer';
 LocalOffer.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const MyLocation = <SvgIconConstructor>function(props: SvgIconProps) {
+export const MyLocation = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1057,7 +1057,7 @@ export const MyLocation = <SvgIconConstructor>function(props: SvgIconProps) {
 MyLocation.displayName = 'MyLocation';
 MyLocation.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Place = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Place = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1071,7 +1071,7 @@ export const Place = <SvgIconConstructor>function(props: SvgIconProps) {
 Place.displayName = 'Place';
 Place.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Apps = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Apps = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1085,21 +1085,21 @@ export const Apps = <SvgIconConstructor>function(props: SvgIconProps) {
 Apps.displayName = 'Apps';
 Apps.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const ArrowDropDown = <SvgIconConstructor>function(props: SvgIconProps) {
+export const ArrowDropDown = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement('svg', props, React.createElement('path', { d: 'M7 10l5 5 5-5z' }));
 };
 
 ArrowDropDown.displayName = 'ArrowDropDown';
 ArrowDropDown.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const ArrowDropUp = <SvgIconConstructor>function(props: SvgIconProps) {
+export const ArrowDropUp = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement('svg', props, React.createElement('path', { d: 'M7 14l5-5 5 5z' }));
 };
 
 ArrowDropUp.displayName = 'ArrowDropUp';
 ArrowDropUp.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const ArrowForward = <SvgIconConstructor>function(props: SvgIconProps) {
+export const ArrowForward = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1110,7 +1110,7 @@ export const ArrowForward = <SvgIconConstructor>function(props: SvgIconProps) {
 ArrowForward.displayName = 'ArrowForward';
 ArrowForward.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Cancel = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Cancel = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1124,7 +1124,7 @@ export const Cancel = <SvgIconConstructor>function(props: SvgIconProps) {
 Cancel.displayName = 'Cancel';
 Cancel.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Check = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Check = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1135,7 +1135,7 @@ export const Check = <SvgIconConstructor>function(props: SvgIconProps) {
 Check.displayName = 'Check';
 Check.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Close = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Close = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1148,7 +1148,7 @@ export const Close = <SvgIconConstructor>function(props: SvgIconProps) {
 Close.displayName = 'Close';
 Close.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Fullscreen = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Fullscreen = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1163,7 +1163,7 @@ export const Fullscreen = <SvgIconConstructor>function(props: SvgIconProps) {
 Fullscreen.displayName = 'Fullscreen';
 Fullscreen.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const FullscreenExit = <SvgIconConstructor>function(props: SvgIconProps) {
+export const FullscreenExit = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1178,7 +1178,7 @@ export const FullscreenExit = <SvgIconConstructor>function(props: SvgIconProps) 
 FullscreenExit.displayName = 'FullscreenExit';
 FullscreenExit.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Menu = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Menu = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1189,7 +1189,7 @@ export const Menu = <SvgIconConstructor>function(props: SvgIconProps) {
 Menu.displayName = 'Menu';
 Menu.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const MoreHoriz = <SvgIconConstructor>function(props: SvgIconProps) {
+export const MoreHoriz = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1203,7 +1203,7 @@ export const MoreHoriz = <SvgIconConstructor>function(props: SvgIconProps) {
 MoreHoriz.displayName = 'MoreHoriz';
 MoreHoriz.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const MoreVert = <SvgIconConstructor>function(props: SvgIconProps) {
+export const MoreVert = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1217,7 +1217,7 @@ export const MoreVert = <SvgIconConstructor>function(props: SvgIconProps) {
 MoreVert.displayName = 'MoreVert';
 MoreVert.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const UnfoldLess = <SvgIconConstructor>function(props: SvgIconProps) {
+export const UnfoldLess = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1231,7 +1231,7 @@ export const UnfoldLess = <SvgIconConstructor>function(props: SvgIconProps) {
 UnfoldLess.displayName = 'UnfoldLess';
 UnfoldLess.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const UnfoldMore = <SvgIconConstructor>function(props: SvgIconProps) {
+export const UnfoldMore = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1245,7 +1245,7 @@ export const UnfoldMore = <SvgIconConstructor>function(props: SvgIconProps) {
 UnfoldMore.displayName = 'UnfoldMore';
 UnfoldMore.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const ConfirmationNumber = <SvgIconConstructor>function(props: SvgIconProps) {
+export const ConfirmationNumber = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1259,7 +1259,7 @@ export const ConfirmationNumber = <SvgIconConstructor>function(props: SvgIconPro
 ConfirmationNumber.displayName = 'ConfirmationNumber';
 ConfirmationNumber.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Sync = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Sync = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1273,7 +1273,7 @@ export const Sync = <SvgIconConstructor>function(props: SvgIconProps) {
 Sync.displayName = 'Sync';
 Sync.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const SyncDisabled = <SvgIconConstructor>function(props: SvgIconProps) {
+export const SyncDisabled = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1287,7 +1287,7 @@ export const SyncDisabled = <SvgIconConstructor>function(props: SvgIconProps) {
 SyncDisabled.displayName = 'SyncDisabled';
 SyncDisabled.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const SyncProblem = <SvgIconConstructor>function(props: SvgIconProps) {
+export const SyncProblem = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1301,7 +1301,7 @@ export const SyncProblem = <SvgIconConstructor>function(props: SvgIconProps) {
 SyncProblem.displayName = 'SyncProblem';
 SyncProblem.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Notifications = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Notifications = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1315,7 +1315,7 @@ export const Notifications = <SvgIconConstructor>function(props: SvgIconProps) {
 Notifications.displayName = 'Notifications';
 Notifications.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Person = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Person = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1329,7 +1329,7 @@ export const Person = <SvgIconConstructor>function(props: SvgIconProps) {
 Person.displayName = 'Person';
 Person.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Public = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Public = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1343,7 +1343,7 @@ export const Public = <SvgIconConstructor>function(props: SvgIconProps) {
 Public.displayName = 'Public';
 Public.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Share = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Share = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1357,7 +1357,7 @@ export const Share = <SvgIconConstructor>function(props: SvgIconProps) {
 Share.displayName = 'Share';
 Share.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const CheckBox = <SvgIconConstructor>function(props: SvgIconProps) {
+export const CheckBox = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1371,7 +1371,7 @@ export const CheckBox = <SvgIconConstructor>function(props: SvgIconProps) {
 CheckBox.displayName = 'CheckBox';
 CheckBox.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const CheckBoxOutlineBlank = <SvgIconConstructor>function(props: SvgIconProps) {
+export const CheckBoxOutlineBlank = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1384,7 +1384,7 @@ export const CheckBoxOutlineBlank = <SvgIconConstructor>function(props: SvgIconP
 CheckBoxOutlineBlank.displayName = 'CheckBoxOutlineBlank';
 CheckBoxOutlineBlank.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const IndeterminateCheckBox = <SvgIconConstructor>function(props: SvgIconProps) {
+export const IndeterminateCheckBox = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1397,7 +1397,7 @@ export const IndeterminateCheckBox = <SvgIconConstructor>function(props: SvgIcon
 IndeterminateCheckBox.displayName = 'IndeterminateCheckBox';
 IndeterminateCheckBox.defaultProps = { viewBox: '0 0 24 24', width: '24', height: '24' };
 
-export const RadioButtonChecked = <SvgIconConstructor>function(props: SvgIconProps) {
+export const RadioButtonChecked = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1411,7 +1411,7 @@ export const RadioButtonChecked = <SvgIconConstructor>function(props: SvgIconPro
 RadioButtonChecked.displayName = 'RadioButtonChecked';
 RadioButtonChecked.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const RadioButtonUnchecked = <SvgIconConstructor>function(props: SvgIconProps) {
+export const RadioButtonUnchecked = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1425,7 +1425,7 @@ export const RadioButtonUnchecked = <SvgIconConstructor>function(props: SvgIconP
 RadioButtonUnchecked.displayName = 'RadioButtonUnchecked';
 RadioButtonUnchecked.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Star = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Star = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1438,7 +1438,7 @@ export const Star = <SvgIconConstructor>function(props: SvgIconProps) {
 Star.displayName = 'Star';
 Star.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const FitToWidth = <SvgIconConstructor>function(props: SvgIconProps) {
+export const FitToWidth = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1452,7 +1452,7 @@ export const FitToWidth = <SvgIconConstructor>function(props: SvgIconProps) {
 FitToWidth.displayName = 'FitToWidth';
 FitToWidth.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const FitToHeight = <SvgIconConstructor>function(props: SvgIconProps) {
+export const FitToHeight = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1466,7 +1466,7 @@ export const FitToHeight = <SvgIconConstructor>function(props: SvgIconProps) {
 FitToHeight.displayName = 'FitToHeight';
 FitToHeight.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const Page = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Page = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1480,7 +1480,7 @@ export const Page = <SvgIconConstructor>function(props: SvgIconProps) {
 Page.displayName = 'Page';
 Page.defaultProps = { width: '24', height: '24', viewBox: '0 0 24 24' };
 
-export const PDFFile = <SvgIconConstructor>function(props: SvgIconProps) {
+export const PDFFile = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1494,7 +1494,7 @@ export const PDFFile = <SvgIconConstructor>function(props: SvgIconProps) {
 PDFFile.displayName = 'PDFFile';
 PDFFile.defaultProps = { width: '24', height: '24', viewBox: '0 0 40 40' };
 
-export const PDFFileOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+export const PDFFileOutline = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1508,7 +1508,7 @@ export const PDFFileOutline = <SvgIconConstructor>function(props: SvgIconProps) 
 PDFFileOutline.displayName = 'PDFFileOutline';
 PDFFileOutline.defaultProps = { width: '24', height: '24', viewBox: '0 0 40 40' };
 
-export const Video = <SvgIconConstructor>function(props: SvgIconProps) {
+export const Video = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,
@@ -1522,7 +1522,7 @@ export const Video = <SvgIconConstructor>function(props: SvgIconProps) {
 Video.displayName = 'Video';
 Video.defaultProps = { width: '24', height: '24', viewBox: '0 0 40 40' };
 
-export const VideoOutline = <SvgIconConstructor>function(props: SvgIconProps) {
+export const VideoOutline = <SvgIconConstructor>function (props: SvgIconProps) {
   return React.createElement(
     'svg',
     props,

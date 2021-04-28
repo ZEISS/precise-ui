@@ -27,11 +27,11 @@ const Bordered = css`
 `;
 
 const StyledListItem = styled.li<ListItemProps>`
-  background-color: ${themed(props => props.theme.ui1)};
-  color: ${themed<ListItemProps>(props => (props.active ? props.theme.primary : props.theme.text6))};
-  ${props => (props.border ? Bordered : '')};
+  background-color: ${themed((props) => props.theme.ui1)};
+  color: ${themed<ListItemProps>((props) => (props.active ? props.theme.primary : props.theme.text6))};
+  ${(props) => (props.border ? Bordered : '')};
   margin-bottom: -1px;
-  padding: ${props => (props.disablePadding ? '0' : remCalc(['12', '20']))};
+  padding: ${(props) => (props.disablePadding ? '0' : remCalc(['12', '20']))};
   position: relative;
   text-decoration: none;
 

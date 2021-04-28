@@ -19,6 +19,6 @@ export interface AccordionType extends React.SFC<AccordionProps> {
  * The accordion component displays a toggling list of content. It features a
  * list of headers that makes selecting different parts of content possible.
  */
-export const Accordion: AccordionType = withResponsiveMode<AccordionMode>(width =>
+export const Accordion: AccordionType = withResponsiveMode<AccordionMode>((width) =>
   !width || width > breakpoints.medium ? 'accordion' : 'card',
 )(AccordionInt) as any;

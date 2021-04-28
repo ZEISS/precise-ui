@@ -7,7 +7,7 @@ type Modes = 'table' | 'card';
 const Test: React.SFC<ModeProviderProps<Modes> & RefProps> = ({ innerRef }) => <div ref={innerRef} />;
 
 describe('withResponsiveMode', () => {
-  const TestWithMode = withResponsiveMode(width => (width > 500 ? 'table' : 'card'))(Test);
+  const TestWithMode = withResponsiveMode((width) => (width > 500 ? 'table' : 'card'))(Test);
 
   it('renders component with correct mode above', () => {
     global.innerWidth = 501;

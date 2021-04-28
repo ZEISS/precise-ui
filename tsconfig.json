@@ -10,7 +10,7 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "module": "commonjs",
-    "target": "es5",
+    "target": "ES2019",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,

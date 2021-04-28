@@ -74,7 +74,9 @@ const TextFieldWrapper = styled(StackPanel)`
 `;
 
 const TextFieldArea = styled.textarea<TextFieldAreaProps>`
-  ::-ms-clear { display: none; }
+  ::-ms-clear {
+    display: none;
+  }
 
   white-space: pre-wrap;
   word-break: break-word;
@@ -83,23 +85,22 @@ const TextFieldArea = styled.textarea<TextFieldAreaProps>`
   color: ${themed<TextFieldAreaProps>(({ theme, disabled }) => (disabled ? theme.text3 : theme.text2))};
   border-radius: 0;
   font-family: inherit;
-  padding: ${props => (props.labelShown ? `${distance.large} ${distance.medium} ${distance.small}` : distance.medium)};
+  padding: ${(props) =>
+    props.labelShown ? `${distance.large} ${distance.medium} ${distance.small}` : distance.medium};
   box-sizing: border-box;
   box-shadow: none;
-  resize: ${props => props.resizable || 'none'};
+  resize: ${(props) => props.resizable || 'none'};
   margin: 0;
   width: 100%;
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'auto')};
   border: none;
   border-bottom: 1px solid
-    ${themed<TextFieldAreaProps>(({ theme, border }) =>
-      border === TextFieldBorderType.error ? purpleRed : theme.ui4,
-    )};
+    ${themed<TextFieldAreaProps>(({ theme, border }) => (border === TextFieldBorderType.error ? purpleRed : theme.ui4))};
   background: ${themed(({ theme }) => theme.ui2)};
 
   &::placeholder {
     color: ${themed<TextFieldAreaProps>(({ theme, disabled }) => (disabled ? theme.text3 : theme.text2))};
-    opacity: ${props => (props.labelShown ? '0' : '1')};
+    opacity: ${(props) => (props.labelShown ? '0' : '1')};
     transition: inherit;
   }
 

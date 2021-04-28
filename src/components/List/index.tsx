@@ -37,8 +37,8 @@ const StyledList = styled.ul<ListProps>`
   margin: 0;
   position: relative;
   overflow-x: hidden;
-  list-style: ${props => props.bullets || 'none'};
-  ${props => (props.bullets && props.bullets !== 'none' ? '' : Bulleted)};
+  list-style: ${(props) => props.bullets || 'none'};
+  ${(props) => (props.bullets && props.bullets !== 'none' ? '' : Bulleted)};
 `;
 
 /**

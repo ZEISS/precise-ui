@@ -95,7 +95,7 @@
     "jest-styled-components": "^6.3.1",
     "material-design-icons": "^3.0.1",
     "postcss-loader": "^3.0.0",
-    "prettier": "^1.15.3",
+    "prettier": "^2.2.1",
     "puppeteer": "^1.13.0",
     "pushstate-server": "^3.0.1",
     "react": "^16.8.0",

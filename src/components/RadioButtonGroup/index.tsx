@@ -86,7 +86,7 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
     const { value } = this.state;
     if (value && Array.isArray(value) && groupItemName) {
       if (value.indexOf(groupItemName) !== -1) {
-        return value.filter(f => f !== groupItemName);
+        return value.filter((f) => f !== groupItemName);
       }
       return [...value, groupItemName];
     }

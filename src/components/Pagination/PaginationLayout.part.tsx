@@ -5,7 +5,7 @@ import { getFontStyle } from '../../textStyles';
 
 const RootContainer = styled.div`
   ${getFontStyle({ size: 'small' })}
-  
+
   color: ${dark};
 `;
 

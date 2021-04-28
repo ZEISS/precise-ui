@@ -9,7 +9,7 @@ interface StyledTextFieldProps extends TextFieldProps {
 }
 
 const StyledTextField = styled(TextField)<StyledTextFieldProps>`
-  font-family: ${props => (props.reveal ? 'inherit' : 'sans-serif')};
+  font-family: ${(props) => (props.reveal ? 'inherit' : 'sans-serif')};
 `;
 
 export interface PasswordFieldProps extends TextInputProps {

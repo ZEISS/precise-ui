@@ -133,7 +133,7 @@ const PseudoButtonStyle = (colorTheme: ButtonThemeSettings) => css`
 
 const AnchorInt: React.FC<StyledButtonProps> = ({ buttonStyle, ...props }) => <Anchor {...props} />;
 const StyledButton = styled(AnchorInt)(
-  themed<StyledButtonProps>(props => {
+  themed<StyledButtonProps>((props) => {
     const themeSettings = getThemeSettings(props.theme, props.buttonStyle);
     return css`
       box-sizing: border-box;
@@ -156,7 +156,7 @@ const StyledButton = styled(AnchorInt)(
       cursor: ${props.disabled ? 'not-allowed' : 'pointer'};
       ${!props.disabled ? PseudoButtonStyle(themeSettings) : ''};
       ${!props.disableMobileFullWidth &&
-        displayUpTo('medium')`
+      displayUpTo('medium')`
         width: 100%;
         margin: ${distance.small} 0;
       `};
@@ -167,7 +167,7 @@ const StyledButton = styled(AnchorInt)(
 const DefaultWrapper = styled.div``;
 
 const WithIconWrapper = styled.div<IconWrapperProps>`
-  ${props =>
+  ${(props) =>
     props.theme.buttonIconPosition === 'left'
       ? `padding-left: ${distance.xlarge}`
       : `padding-right: ${distance.xlarge}`};
@@ -175,7 +175,7 @@ const WithIconWrapper = styled.div<IconWrapperProps>`
 `;
 
 const StyledIcon = styled(Icon)<IconWrapperProps & IconProps>`
-  ${props => (props.theme.buttonIconPosition === 'left' ? 'left: 0' : 'right: 0')};
+  ${(props) => (props.theme.buttonIconPosition === 'left' ? 'left: 0' : 'right: 0')};
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

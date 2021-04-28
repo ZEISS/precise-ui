@@ -9,8 +9,8 @@ export interface StyledTagItemProps {
 
 export const StyledTagItem = styled('span')<StyledTagItemProps>`
   padding: ${distance.xsmall} ${distance.small};
-  background-color: ${themed(props => props.theme.ui4)};
-  color: ${themed(props => props.theme.tagColor)};
+  background-color: ${themed((props) => props.theme.ui4)};
+  color: ${themed((props) => props.theme.tagColor)};
   display: inline-block;
   font-size: 0.8em;
   line-height: 0.8em;

@@ -7,7 +7,7 @@ export interface InputErrorProps extends StandardProps {}
 
 const StyledError = styled.div`
   ${getFontStyle({ size: 'xSmall' })};
-  color: ${themed(props => props.theme.inputError)};
+  color: ${themed((props) => props.theme.inputError)};
 `;
 
 /**

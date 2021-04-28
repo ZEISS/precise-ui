@@ -17,10 +17,10 @@ const Tile = styled(RadioButton)<{ checked: boolean }>`
   user-select: none;
   color: ${colors.black};
   background: ${colors.grey7};
-  ${props => (props.checked ? `outline: ${colors.cyan} solid 4px;` : '')};
+  ${(props) => (props.checked ? `outline: ${colors.cyan} solid 4px;` : '')};
 
   &:hover {
-    ${props => (!props.checked ? `outline: rgba(29, 29, 29, 0.1) solid 4px;` : '')};
+    ${(props) => (!props.checked ? `outline: rgba(29, 29, 29, 0.1) solid 4px;` : '')};
   }
 `;
 

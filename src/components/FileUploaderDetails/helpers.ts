@@ -17,7 +17,7 @@ export function mergeData(newData: Array<FileProgress>, currentData: Array<FileP
     }
   }
 
-  return Object.keys(all).map(key => all[key]);
+  return Object.keys(all).map((key) => all[key]);
 }
 
 export const iconNames: { [x: string]: IconName } = {

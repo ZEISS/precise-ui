@@ -232,7 +232,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
     }
   }
 
-  private changeValue: ReactDatePickerProps['onChange'] = inputDate => {
+  private changeValue: ReactDatePickerProps['onChange'] = (inputDate) => {
     const { dateFormat = DefaultDateFormat, locale } = this.props;
     const date = inputDate || undefined;
     const value = safeDateFormat(date, {
@@ -280,7 +280,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
     }
   };
 
-  private onClickOutside: DateFieldProps['onClickOutside'] = event => {
+  private onClickOutside: DateFieldProps['onClickOutside'] = (event) => {
     const { onClickOutside } = this.props;
     this.onOpenChange(false);
     if (typeof onClickOutside === 'function') {
@@ -324,7 +324,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
 
     const datePickerProps = {} as ReactDatePickerProps;
     const customInputProps = {} as Omit<DateFieldBasicProps, 'onChange' | 'children'>;
-    Object.keys(rest).forEach(propName => {
+    Object.keys(rest).forEach((propName) => {
       if (excludedReactDatePickerProps[propName]) {
         return;
       }

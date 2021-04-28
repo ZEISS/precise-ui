@@ -33,22 +33,22 @@ interface StyledTableProps {
 const StyledTable = styled.table(
   themed<StyledTableProps>(
     ({ theme, borderless, condensed }) => css`
-    ${getFontStyle({ size: 'small', lineHeight: 'xSmall' })}
+      ${getFontStyle({ size: 'small', lineHeight: 'xSmall' })}
 
-    table-layout: ${theme.tableLayout};
-    border-collapse: collapse;
-    width: 100%;
-    color: ${theme.text6};
-    border: ${borderless ? 'none' : theme.tableBorder};
+      table-layout: ${theme.tableLayout};
+      border-collapse: collapse;
+      width: 100%;
+      color: ${theme.text6};
+      border: ${borderless ? 'none' : theme.tableBorder};
 
-    > thead > tr > th,
-    > tbody > tr > td {
-      padding: ${condensed ? `${distance.small} ${distance.large}` : theme.tableHeadPadding};
+      > thead > tr > th,
+      > tbody > tr > td {
+        padding: ${condensed ? `${distance.small} ${distance.large}` : theme.tableHeadPadding};
 
-      &:not(:last-child) {
-        padding-right: 0;
+        &:not(:last-child) {
+          padding-right: 0;
+        }
       }
-    }
     `,
   ),
 );
@@ -224,7 +224,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
       <StyledTableHead theme={theme}>
         <StyledTableHeaderRow theme={theme}>
           {indexed && (
-            <StyledTableHeader onClick={e => this.headerClicked(e, -1, '#')} theme={theme}>
+            <StyledTableHeader onClick={(e) => this.headerClicked(e, -1, '#')} theme={theme}>
               {headerCellRenderer({
                 column: -1,
                 key: '',
@@ -248,7 +248,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
                   sortable={sortable}
                   width={width}
                   key={key}
-                  onClick={e => this.headerClicked(e, cell, key)}
+                  onClick={(e) => this.headerClicked(e, cell, key)}
                   theme={theme}>
                   {headerCellRenderer({
                     column: cell,
@@ -276,7 +276,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
       <StyledTableFoot theme={theme}>
         <StyledTableRow theme={theme}>
           {indexed && (
-            <StyledTableCell onClick={e => this.footerClicked(e, -1, '#')} theme={theme}>
+            <StyledTableCell onClick={(e) => this.footerClicked(e, -1, '#')} theme={theme}>
               {footerCellRenderer({
                 column: -1,
                 key: '',
@@ -295,7 +295,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
             if (!hidden) {
               const name = typeof column === 'string' ? undefined : column.footer;
               return (
-                <StyledTableCell key={key} theme={theme} onClick={e => this.footerClicked(e, i, key)}>
+                <StyledTableCell key={key} theme={theme} onClick={(e) => this.footerClicked(e, i, key)}>
                   {footerCellRenderer({
                     column: i,
                     key,
@@ -393,7 +393,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
           ]
         : [];
     } else {
-      return indices.map(index => {
+      return indices.map((index) => {
         const cells = this.renderCells(keys, index);
         const renderData = { theme, index, cells, data: data[index], key: index.toString(), state };
         renderData.key = getRowKey(renderData);
@@ -454,7 +454,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
     const cols = getColumns(data, columns);
     const keys = Object.keys(cols);
     const showFooter =
-      keys.filter(key => {
+      keys.filter((key) => {
         const col = cols[key];
         return typeof col === 'object' && !!col.footer && !col.hidden;
       }).length > 0;

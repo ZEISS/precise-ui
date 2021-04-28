@@ -148,7 +148,7 @@ const DefaultBullet = styled.div<BulletProps>`
   display: inline-block;
   cursor: pointer;
   margin: ${distance.xsmall};
-  ${props => (props.active ? ActiveBullet : '')};
+  ${(props) => (props.active ? ActiveBullet : '')};
 `;
 
 const PageItem = styled.div`
@@ -163,7 +163,7 @@ const PagesContainer = styled.div<PagesContainerProps>`
   box-sizing: border-box;
   display: flex;
   position: relative;
-  left: ${props => -props.selectedIndex * 100}%;
+  left: ${(props) => -props.selectedIndex * 100}%;
   transition: left ${animationDuration} ${animationFunction};
 `;
 

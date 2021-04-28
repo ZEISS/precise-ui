@@ -64,7 +64,7 @@ interface TableCardHostProps {
   borderless: boolean;
 }
 
-const TableCardHost: React.SFC<TableCardHostProps> = props => <List {...props} />;
+const TableCardHost: React.SFC<TableCardHostProps> = (props) => <List {...props} />;
 
 export class TableCard<T> extends React.Component<TableProps<T>> {
   constructor(props: TableProps<T>) {
@@ -126,7 +126,7 @@ export class TableCard<T> extends React.Component<TableProps<T>> {
 
         return undefined;
       })
-      .filter(m => !!m);
+      .filter((m) => !!m);
   }
 
   render() {

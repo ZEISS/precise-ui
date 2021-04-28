@@ -34,7 +34,7 @@ const StyledMenuListItem = styled('li')<MenuListItemProps>`
   display: flex;
   position: relative;
   align-items: center;
-  color: ${themed(props => props.theme.text6)};
+  color: ${themed((props) => props.theme.text6)};
   text-decoration: none;
   height: ${({ condensed }) => (condensed ? distance.xlarge : distance.xxlarge)};
   padding: 0 0 0 ${distance.large};

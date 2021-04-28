@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as enzyme from 'enzyme';
 import { InfiniteScroll } from './';
 
-const getData = length =>
+const getData = (length) =>
   Array.apply(undefined, { length }).map((item, index) => {
     const x = `X${index}`;
     return (

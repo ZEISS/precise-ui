@@ -21,7 +21,7 @@ const StyledCardBody = styled.div`
   p {
     ${getFontStyle({ size: 'small' })}
 
-    font-family: ${themed(props => props.theme.fontFamily || 'inherit')};
+    font-family: ${themed((props) => props.theme.fontFamily || 'inherit')};
     margin: 0;
   }
 `;
@@ -29,5 +29,5 @@ const StyledCardBody = styled.div`
 /**
  * Represents a simple re-usable card body container.
  */
-export const CardBody: React.SFC<CardBodyProps> = props => <StyledCardBody {...props} />;
+export const CardBody: React.SFC<CardBodyProps> = (props) => <StyledCardBody {...props} />;
 CardBody.displayName = 'CardBody';

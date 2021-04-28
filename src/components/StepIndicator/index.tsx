@@ -11,6 +11,6 @@ export interface StepIndicatorType extends React.SFC<StepIndicatorProps> {
   (props: StepIndicatorProps & { children?: React.ReactNode }, context?: any): JSX.Element;
 }
 
-export const StepIndicator: StepIndicatorType = withResponsiveMode<StepIndicatorMode>(width =>
+export const StepIndicator: StepIndicatorType = withResponsiveMode<StepIndicatorMode>((width) =>
   !width || width > breakpoints.medium ? 'horizontal' : 'vertical',
 )(StepIndicatorInt) as any;

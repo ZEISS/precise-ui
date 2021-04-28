@@ -10,8 +10,8 @@ export interface StyledTileIconProps {
 export const StyledTileIcon = styled('img')<StyledTileIconProps>`
   vertical-align: middle;
   border: none;
-  max-width: ${props => props.width};
-  height: ${props => props.height};
+  max-width: ${(props) => props.width};
+  height: ${(props) => props.height};
   position: absolute;
   top: 50%;
   left: 50%;

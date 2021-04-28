@@ -74,7 +74,7 @@ const AvatarContent = styled('div')<SizeProp>`
   border: 0;
   perspective: 1px;
 
-  color: ${themed(props => props.theme.text7)};
+  color: ${themed((props) => props.theme.text7)};
   border-radius: 50%;
   overflow: hidden;
 
@@ -90,7 +90,7 @@ const AvatarInitials = styled.div<SizeProp & AvatarInitialsBaseProps>`
   justify-content: center;
 
   text-align: center;
-  background-color: ${themed(props => props.color || colorCycle(props.theme.colorCycle, props.initials))};
+  background-color: ${themed((props) => props.color || colorCycle(props.theme.colorCycle, props.initials))};
   ${({ size }) => `
     height: ${avatarSize[size]};
     width: ${avatarSize[size]};
@@ -131,8 +131,8 @@ const AvatarBadge = styled.div<SizeProp>`
   position: absolute;
   overflow: hidden;
   border-radius: 50%;
-  border: solid 2px ${themed(props => props.theme.ui1)};
-  color: ${themed(props => props.theme.text7)};
+  border: solid 2px ${themed((props) => props.theme.ui1)};
+  color: ${themed((props) => props.theme.text7)};
   bottom: -2px;
   right: -2px;
 

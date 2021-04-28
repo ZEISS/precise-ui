@@ -47,8 +47,8 @@ const FluidContainer = css`
 
 const FixedWidthContainer = css<FixedWidthContainerProps>`
   position: relative;
-  ${props => getAlignMargin(props.align)};
-  max-width: ${props => props.maxWidth}px;
+  ${(props) => getAlignMargin(props.align)};
+  max-width: ${(props) => props.maxWidth}px;
   padding: 0 ${distance.medium};
 `;
 

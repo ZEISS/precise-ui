@@ -131,7 +131,7 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
 
     if (typeof onCancel === 'function') {
       onCancel({
-        files: files.filter(item => item.progress < 100 && !item.canceled && !item.error),
+        files: files.filter((item) => item.progress < 100 && !item.canceled && !item.error),
       });
     }
   };
@@ -141,15 +141,15 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
 
     if (typeof onDelete === 'function') {
       onDelete({
-        files: files.filter(item => item.progress >= 100 && !item.canceled && !item.error),
+        files: files.filter((item) => item.progress >= 100 && !item.canceled && !item.error),
       });
     }
   };
 
   private onClear = (uploaderId: string) => {
     const { files: currentFiles } = this.state;
-    const newFiles = currentFiles.filter(item => item.uploaderId !== uploaderId);
-    const oldFiles = currentFiles.filter(item => item.uploaderId === uploaderId);
+    const newFiles = currentFiles.filter((item) => item.uploaderId !== uploaderId);
+    const oldFiles = currentFiles.filter((item) => item.uploaderId === uploaderId);
 
     this.setState(
       {
@@ -190,11 +190,11 @@ export class FileUploaderDetails extends React.Component<FileUploaderDetailsProp
   render() {
     const { events, onCancel, onClose, onDelete, onUpload, ...props } = this.props;
     const { showDetails, showUploader, files } = this.state;
-    const inprogressFiles = files.filter(item => !(item.canceled || item.error)).map(item => item.progress);
-    const errorFiles = files.filter(item => item.canceled || item.error);
+    const inprogressFiles = files.filter((item) => !(item.canceled || item.error)).map((item) => item.progress);
+    const errorFiles = files.filter((item) => item.canceled || item.error);
     const totalProgress =
       inprogressFiles.length > 0 ? inprogressFiles.reduce((acc, curr) => acc + curr, 0) / inprogressFiles.length : 100;
-    const scanning = files.filter(item => item.scanning && !item.canceled).length > 0;
+    const scanning = files.filter((item) => item.scanning && !item.canceled).length > 0;
     const show = showUploader && files.length > 0;
 
     return (

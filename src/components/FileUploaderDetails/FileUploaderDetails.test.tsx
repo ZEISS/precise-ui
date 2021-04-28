@@ -13,7 +13,7 @@ describe('<FileUploaderDetails />', () => {
   const noop = () => {};
   const defaultWrapper = shallow(<FileUploaderDetails events={events} onUpload={onUpload} onCancel={onCancel} />);
 
-  it('should call onUpload function on `Start Upload` event with selected files and show uploader bar', done => {
+  it('should call onUpload function on `Start Upload` event with selected files and show uploader bar', (done) => {
     events.emit(FileUploadActions.startUpload, {
       files: [
         { fileId: '1', name: 'file1.jpg', uploaderId: '1', file: {} },
@@ -27,7 +27,7 @@ describe('<FileUploaderDetails />', () => {
     }, 10);
   });
 
-  it('should store file progress in component state', done => {
+  it('should store file progress in component state', (done) => {
     expect(defaultWrapper.state('files').length).toEqual(0);
     events.emit(FileUploadActions.uploadProgress, {
       files: [
@@ -41,7 +41,7 @@ describe('<FileUploaderDetails />', () => {
     }, 10);
   });
 
-  it('should show progress bar with loading bar on updates', done => {
+  it('should show progress bar with loading bar on updates', (done) => {
     events.emit(FileUploadActions.uploadProgress, {
       files: [
         { fileId: '1', name: 'file1.jpg', uploaderId: '1', progress: 12 },
@@ -50,12 +50,7 @@ describe('<FileUploaderDetails />', () => {
     });
     setTimeout(() => {
       expect(defaultWrapper.state('files').length).toEqual(2);
-      expect(
-        defaultWrapper
-          .update()
-          .find(UploaderProgressBar)
-          .props().progressValue,
-      ).toEqual(9);
+      expect(defaultWrapper.update().find(UploaderProgressBar).props().progressValue).toEqual(9);
       events.emit(FileUploadActions.uploadProgress, {
         files: [
           { fileId: '1', name: 'file1.jpg', uploaderId: '1', progress: 50 },
@@ -63,18 +58,13 @@ describe('<FileUploaderDetails />', () => {
         ],
       });
       setTimeout(() => {
-        expect(
-          defaultWrapper
-            .update()
-            .find(UploaderProgressBar)
-            .props().progressValue,
-        ).toEqual(40);
+        expect(defaultWrapper.update().find(UploaderProgressBar).props().progressValue).toEqual(40);
         done();
       }, 10);
     }, 10);
   });
 
-  it('mergeData function should perform merge correctly', done => {
+  it('mergeData function should perform merge correctly', (done) => {
     const date = new Date();
     const files: Array<FileProgress> = [
       {
@@ -184,7 +174,7 @@ describe('<FileUploaderDetails />', () => {
     done();
   });
 
-  it('should show table when view details has been clicked', done => {
+  it('should show table when view details has been clicked', (done) => {
     const files = [
       { fileId: '1', name: 'file1.jpg', uploaderId: '1', progress: 12 },
       { fileId: '2', name: 'file2.jpg', uploaderId: '2', progress: 6 },

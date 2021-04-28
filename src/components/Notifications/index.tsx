@@ -95,27 +95,27 @@ const getNotificationPositionStyle = (pos: NotificationsPosition) => {
 const AbsoluteContainer = css<AbsoluteContainerProps>`
   z-index: 10001;
   position: fixed;
-  ${props => getNotificationPositionStyle(props.position)};
-  width: ${props => (props.width ? props.width : defaultProps.width)}px;
+  ${(props) => getNotificationPositionStyle(props.position)};
+  width: ${(props) => (props.width ? props.width : defaultProps.width)}px;
   @media (max-width: 480px) {
     width: 100vw;
     padding: 0;
     right: 0;
     margin: 0;
     position: fixed;
-    ${props => (props.position.substring(0, 3) === 'top' ? 'top: 0' : 'bottom: 0')};
+    ${(props) => (props.position.substring(0, 3) === 'top' ? 'top: 0' : 'bottom: 0')};
   }
 `;
 
 const StyledNotifications = styled.div<StyledNotificationsProps>`
   box-sizing: border-box;
-  width: ${props => (!props.width ? 'auto' : `${props.width}px`)};
-  ${props => (props.disablePointer ? `pointer-events: none` : ``)};
+  width: ${(props) => (!props.width ? 'auto' : `${props.width}px`)};
+  ${(props) => (props.disablePointer ? `pointer-events: none` : ``)};
   @media (max-width: 480px) {
     padding: 0;
     margin: 0;
   }
-  ${props => (props.position !== 'relative' ? AbsoluteContainer : '')};
+  ${(props) => (props.position !== 'relative' ? AbsoluteContainer : '')};
 `;
 
 interface NotificationClose {
@@ -155,7 +155,7 @@ export class Notifications extends React.Component<NotificationsProps, Notificat
 
   private removeNotification(id: string) {
     this.setState({
-      notifications: this.state.notifications.filter(v => v !== id),
+      notifications: this.state.notifications.filter((v) => v !== id),
     });
   }
 

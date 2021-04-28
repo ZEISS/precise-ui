@@ -38,8 +38,8 @@ export interface StackLayoutProps {
 
 const StackLayout = styled.div<StackLayoutProps>`
   display: flex;
-  flex-direction: ${props => props.dir};
-  flex-wrap: ${props => props.wrapping};
+  flex-direction: ${(props) => props.dir};
+  flex-wrap: ${(props) => props.wrapping};
   justify-content: flex-start;
 `;
 

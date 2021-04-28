@@ -107,7 +107,7 @@ export class UploadData {
   }
 
   get completedFiles() {
-    return this.files.filter(m => m.status === 'complete');
+    return this.files.filter((m) => m.status === 'complete');
   }
 
   get ready() {
@@ -115,7 +115,7 @@ export class UploadData {
   }
 
   get total() {
-    return this.files.filter(file => file.status !== 'canceled').length;
+    return this.files.filter((file) => file.status !== 'canceled').length;
   }
 
   commit(cb: (completedFiles: Array<UploadFile>) => void) {
@@ -182,10 +182,10 @@ export class UploadData {
   }
 
   private filesChanged = ({ files }: FileUploaderDetailsEvent<FileProgress>) => {
-    const filteredFiles = files.filter(item => item.uploaderId === this.id);
+    const filteredFiles = files.filter((item) => item.uploaderId === this.id);
 
     if (filteredFiles.length > 0) {
-      const ids = filteredFiles.map(item => item.fileId);
+      const ids = filteredFiles.map((item) => item.fileId);
       let changed = false;
 
       for (const file of this.files) {
@@ -222,7 +222,7 @@ export class UploadData {
      * Update `FileSelect` component to assign generated id
      * to a file to enable multiple selection of the same file
      */
-    const names = this.files.map(item => (item.status !== 'canceled' ? item.name : ''));
+    const names = this.files.map((item) => (item.status !== 'canceled' ? item.name : ''));
     const newUploadFiles: Array<FileItem> = [];
 
     for (const file of files) {
@@ -286,7 +286,7 @@ export class FileUploader extends React.Component<FileUploaderProps> {
     if (typeof onChange === 'function') {
       const { files, ready, total } = this.data;
       onChange({
-        files: files.map<UploadFileStatus>(file => ({
+        files: files.map<UploadFileStatus>((file) => ({
           data: file.data,
           id: file.id,
           name: file.name,
@@ -307,10 +307,10 @@ export class FileUploader extends React.Component<FileUploaderProps> {
   private fileSelect = (e: DropzoneOpenEvent) => {
     const { multiple } = this.props;
     const { files, events } = this.data;
-    const notCanceledFiles = files.filter(file => file.status !== 'canceled');
+    const notCanceledFiles = files.filter((file) => file.status !== 'canceled');
 
     if (!multiple && notCanceledFiles.length === 1) {
-      const completedFiles = notCanceledFiles.filter(file => file.status === 'complete');
+      const completedFiles = notCanceledFiles.filter((file) => file.status === 'complete');
       if (completedFiles.length === 0) {
         e.preventDefault();
         events.emit(FileUploadActions.showUploads, {});

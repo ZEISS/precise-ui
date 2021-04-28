@@ -49,7 +49,7 @@ const DropdownInputBox = styled(StyledInputBox)<StyledInputBoxProps>`
 
 const DropdownOptionText = styled.div<DropDownOptionsTextProps>`
   ${getFontStyle({ size: 'medium' })}
-  padding: ${props =>
+  padding: ${(props) =>
     !props.labelShown ? `${distance.medium}` : `${distance.large} ${distance.medium} ${distance.small}`};
   margin: 0;
   width: 100%;
@@ -60,14 +60,14 @@ const DropdownOptionText = styled.div<DropDownOptionsTextProps>`
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'auto')};
 `;
 
 const SingleDropdownItem = styled.span`
   display: inline-block;
   line-height: normal;
   border: 0;
-  color: ${themed(props => props.theme.text6)};
+  color: ${themed((props) => props.theme.text6)};
 `;
 
 interface StyledStandardWrapperProps {
@@ -79,20 +79,20 @@ const StyledStandardWrapper = styled.ul<StyledStandardWrapperProps>`
   list-style: none;
   width: 100%;
   position: absolute;
-  transform: translateY(${props => (props.direction === InteractiveListDirection.normal ? 0 : -100)}%);
+  transform: translateY(${(props) => (props.direction === InteractiveListDirection.normal ? 0 : -100)}%);
   box-sizing: border-box;
   box-shadow: none;
   margin: 0;
   padding: 0;
-  background: ${themed(props => props.theme.ui1)};
+  background: ${themed((props) => props.theme.ui1)};
   border: 1px solid
     ${themed(({ border, theme: { ui0, ui4 } }) => (border === InteractiveListBorderType.none ? ui0 : ui4))};
   max-height: 50vh;
-  ${props =>
+  ${(props) =>
     props.direction === InteractiveListDirection.normal
       ? 'border-top-color: transparent'
       : 'border-bottom-color: transparent'};
-  top: ${props => (props.direction === InteractiveListDirection.normal ? -1 : -53)}px;
+  top: ${(props) => (props.direction === InteractiveListDirection.normal ? -1 : -53)}px;
   overflow-y: auto;
   z-index: 100;
 `;
@@ -134,7 +134,7 @@ function getChosen(selected: string | Array<string>, multiple?: boolean) {
 }
 
 function getKeys(data: Array<string | DropdownFieldItem>, selected: Array<number>) {
-  return selected.map(index => {
+  return selected.map((index) => {
     const item = data[index];
     return typeof item === 'string' ? item : item.key;
   });
@@ -247,12 +247,12 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
   }
 
   private show = () =>
-    new Promise(resolve => {
+    new Promise((resolve) => {
       this.setState({ open: true }, resolve);
     });
 
   private hide = () =>
-    new Promise(resolve => {
+    new Promise((resolve) => {
       this.setState({ open: false }, resolve);
     });
 
@@ -383,7 +383,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
     const getContent = multiple ? getMultipleContent : getSingleContent;
     const hasValue = !!value.length;
     const border = getTextFieldBorderType(borderless, !!error, open);
-    const items = value.map(i => data[i]);
+    const items = value.map((i) => data[i]);
     const th = theme || light;
 
     if (value.length > maxSelectedShown) {
@@ -397,7 +397,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
           <DropdownInputBox disabled={disabled} hasValue={hasValue} border={border} focused={open} theme={theme}>
             <StyledInputRow label={label} placeholder={placeholder} error={!!error} focused={open} hasValue={hasValue}>
               <DropdownOptionText labelShown={label !== undefined} disabled={disabled}>
-                {hasValue || label ? items.map(item => getContent(item, theme)) : placeholder}
+                {hasValue || label ? items.map((item) => getContent(item, theme)) : placeholder}
               </DropdownOptionText>
             </StyledInputRow>
             <InputIcon disabled={disabled} theme={theme} error={error} hasValue={hasValue} />

@@ -22,7 +22,7 @@ export function withFormContext<TProps extends InputProps<any>>(
   return withInner(
     (props: TProps) =>
       props.name ? (
-        <FormContext.Consumer>{ctx => <Component form={ctx} {...props} />}</FormContext.Consumer>
+        <FormContext.Consumer>{(ctx) => <Component form={ctx} {...props} />}</FormContext.Consumer>
       ) : (
         <Component {...props} />
       ),

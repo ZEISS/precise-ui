@@ -429,7 +429,9 @@ exports[`<AccordionTableCard /> should render a <AccordionTableCard> component w
 </AccordionTableCardHost>
 `;
 
-exports[`<AccordionTableCard /> should render a <AccordionTableCard> component without data and custom placeholder 1`] = `
+exports[
+  `<AccordionTableCard /> should render a <AccordionTableCard> component without data and custom placeholder 1`
+] = `
 <AccordionTableCardHost>
   <Styled(ListItem)
     key="0"

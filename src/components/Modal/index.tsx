@@ -196,7 +196,7 @@ export class Modal extends React.PureComponent<ModalProps, ModalState> {
     const { onClose, onBeforeClose } = this.props;
     const closeEvent = { origin };
 
-    this.callOnBeforeCloseHandler(onBeforeClose, closeEvent).then(closePermitted => {
+    this.callOnBeforeCloseHandler(onBeforeClose, closeEvent).then((closePermitted) => {
       if (!closePermitted) {
         return;
       }
@@ -250,7 +250,7 @@ export class Modal extends React.PureComponent<ModalProps, ModalState> {
 /**
  * Styles the body of a modal dialog.
  */
-export const ModalBody: React.FC<StandardProps & { children: React.ReactNode }> = props => (
+export const ModalBody: React.FC<StandardProps & { children: React.ReactNode }> = (props) => (
   <StyledModalBody {...props} />
 );
 ModalBody.displayName = 'ModalBody';
@@ -270,5 +270,5 @@ ModalHeader.displayName = 'ModalHeader';
 /**
  * Styles the footer of a modal dialog.
  */
-export const ModalFooter: React.SFC<StandardProps> = props => <StyledModalFooter {...props} />;
+export const ModalFooter: React.SFC<StandardProps> = (props) => <StyledModalFooter {...props} />;
 ModalFooter.displayName = 'ModalFooter';

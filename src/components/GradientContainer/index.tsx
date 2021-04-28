@@ -18,5 +18,5 @@ const StyledContainer = styled.div`
   }
 `;
 
-export const GradientContainer: React.SFC<StandardProps> = props => <StyledContainer {...props} />;
+export const GradientContainer: React.SFC<StandardProps> = (props) => <StyledContainer {...props} />;
 GradientContainer.displayName = 'GradientContainer';

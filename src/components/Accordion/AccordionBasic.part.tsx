@@ -57,7 +57,7 @@ const AccordionItem = styled.li`
 
 const AccordionItemHeaderContainer = styled.div<AccordionItemProps>`
   transition: background-color ${animationDuration} ${animationFunction};
-  background-color: ${themed(props => (props.active ? props.theme.ui2 : props.theme.ui1))};
+  background-color: ${themed((props) => (props.active ? props.theme.ui2 : props.theme.ui1))};
 `;
 
 const AccordionItemHeader = styled.div`

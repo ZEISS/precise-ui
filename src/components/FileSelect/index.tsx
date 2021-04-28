@@ -108,7 +108,7 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
         });
       } else {
         this.setState(
-          prevState => ({
+          (prevState) => ({
             value: getFiles(multiple ? [...prevState.value] : [], files),
             previews: [],
           }),
@@ -127,19 +127,19 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
       if (form) {
         form.change({
           name,
-          value: this.state.value.filter(file => f !== file),
+          value: this.state.value.filter((file) => f !== file),
         });
       } else {
         this.setState(
-          prevState => ({
-            value: prevState.value.filter(file => f !== file),
-            previews: prevState.previews.filter(preview => preview.file !== f),
+          (prevState) => ({
+            value: prevState.value.filter((file) => f !== file),
+            previews: prevState.previews.filter((preview) => preview.file !== f),
           }),
           () => this.notifyChanges(this.state.value),
         );
       }
     } else {
-      const files = this.state.value.filter(file => f !== file);
+      const files = this.state.value.filter((file) => f !== file);
       this.notifyChanges(files);
     }
   }
@@ -155,7 +155,7 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
   }
 
   private renderPreview(f: File) {
-    const preview = this.state.previews.filter(preview => preview.file === f)[0];
+    const preview = this.state.previews.filter((preview) => preview.file === f)[0];
 
     if (f.size > 1000000 || !f.type.match(/image/)) {
       return this.renderItem(f);
@@ -172,10 +172,10 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
     }
 
     const reader = new FileReader();
-    reader.onload = (file => () => {
+    reader.onload = ((file) => () => {
       const result = reader.result;
       typeof result === 'string' &&
-        this.setState(prevState => ({
+        this.setState((prevState) => ({
           previews: [
             ...prevState.previews,
             {
@@ -237,7 +237,7 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
         <FileInput ref={this.setInputRef} type="file" multiple={multiple} onChange={this.addFileEntries} value="" />
         {value && value.length > 0 && (
           <StyledFileList>
-            {value.map(file => (this.props.preview ? this.renderPreview(file) : this.renderItem(file)))}
+            {value.map((file) => (this.props.preview ? this.renderPreview(file) : this.renderItem(file)))}
           </StyledFileList>
         )}
         {showInputInfo(error, info)}

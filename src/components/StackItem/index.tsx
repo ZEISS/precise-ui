@@ -22,9 +22,9 @@ export interface StackItemProps extends StandardProps {
 }
 
 const StackChild = styled.div<StackItemProps>`
-  flex-grow: ${props => (props.nofill ? '0' : '1')};
-  min-width: ${props => props.width || 'auto'};
-  height: ${props => props.height || 'auto'};
+  flex-grow: ${(props) => (props.nofill ? '0' : '1')};
+  min-width: ${(props) => props.width || 'auto'};
+  height: ${(props) => props.height || 'auto'};
 `;
 
 /**

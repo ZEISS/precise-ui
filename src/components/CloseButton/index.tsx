@@ -28,7 +28,7 @@ const StyledCloseButton = styled.a`
 /**
  * A simple close button as used in Modal dialogs.
  */
-export const CloseButton: React.SFC<React.HTMLAttributes<HTMLAnchorElement>> = props => (
+export const CloseButton: React.SFC<React.HTMLAttributes<HTMLAnchorElement>> = (props) => (
   <StyledCloseButton {...props}>
     <Icon name="Close" size={1.1} />
   </StyledCloseButton>

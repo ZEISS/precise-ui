@@ -140,7 +140,7 @@ export class PaginationBar extends React.Component<PaginationBarProps> {
         {Array.isArray(availableSizes) && availableSizes.length > 0 && (
           <ItemControls
             label={getPropLabel(props, 'itemsPerPageLabel')}
-            data={availableSizes.map(size => size.toString())}
+            data={availableSizes.map((size) => size.toString())}
             value={`${size}`}
             onChange={this.sizeChanged}>
             {itemsInfo(currentItem, Math.min(nextItem, items), items)}

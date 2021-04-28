@@ -117,9 +117,9 @@ const SliderContainer = styled.div`
 
 const SliderBar = styled(InteractiveSurface)<SliderBarProps>`
   position: relative;
-  padding: ${props => (props.orientation === 'vertical' ? `0 ${distance.small}` : `${distance.small} 0`)};
-  height: ${props => (props.orientation === 'vertical' ? '100%' : distance.xsmall)};
-  width: ${props => (props.orientation === 'vertical' ? distance.xsmall : '100%')};
+  padding: ${(props) => (props.orientation === 'vertical' ? `0 ${distance.small}` : `${distance.small} 0`)};
+  height: ${(props) => (props.orientation === 'vertical' ? '100%' : distance.xsmall)};
+  width: ${(props) => (props.orientation === 'vertical' ? distance.xsmall : '100%')};
   box-sizing: content-box;
 
   &:after {
@@ -128,7 +128,7 @@ const SliderBar = styled(InteractiveSurface)<SliderBarProps>`
     border-radius: ${distance.small};
     height: 100%;
     width: 100%;
-    background: ${themed<SliderBarProps>(props =>
+    background: ${themed<SliderBarProps>((props) =>
       props.disabled
         ? props.theme.ui3
         : props.active
@@ -149,25 +149,25 @@ const SliderBar = styled(InteractiveSurface)<SliderBarProps>`
 
 const IndicatorBar = styled.div<IndicatorBarProps>`
   border-radius: ${distance.small};
-  background: ${themed<IndicatorBarProps>(props =>
+  background: ${themed<IndicatorBarProps>((props) =>
     props.disabled ? props.theme.ui4 : props.active ? ocean : transparentize(props.theme.ui5, 0.75),
   )};
   transition: background ${transitionDuration} ${transitionEase};
-  height: ${props => (props.vertical ? '100%' : distance.xsmall)};
-  width: ${props => (props.vertical ? distance.xsmall : 'auto')};
+  height: ${(props) => (props.vertical ? '100%' : distance.xsmall)};
+  width: ${(props) => (props.vertical ? distance.xsmall : 'auto')};
   position: absolute;
   margin: auto;
 `;
 
 const TooltipContainer = styled.div<TooltipContainerProps>`
   position: absolute;
-  ${props => (props.vertical ? `top: ${props.value}` : `left: ${props.value}`)};
-  ${props => (props.vertical ? `left: ${distance.large}` : `top: -${distance.large}`)};
+  ${(props) => (props.vertical ? `top: ${props.value}` : `left: ${props.value}`)};
+  ${(props) => (props.vertical ? `left: ${distance.large}` : `top: -${distance.large}`)};
   width: 0;
   height: 0;
 
   > div {
-    display: ${props => (props.vertical ? `block` : `inline-block`)};
+    display: ${(props) => (props.vertical ? `block` : `inline-block`)};
   }
 `;
 
@@ -219,7 +219,7 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
     const values = this.state.value;
 
     if (Array.isArray(values)) {
-      const dists = values.map(val => Math.abs(val - current));
+      const dists = values.map((val) => Math.abs(val - current));
       const length = dists.length;
       let minIndex = 0;
 

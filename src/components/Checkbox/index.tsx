@@ -38,8 +38,8 @@ interface CheckboxBoxProps {
 const CheckboxContainer = styled.div<CheckboxContainerProps>`
   position: relative;
   display: inline-block;
-  opacity: ${props => (props.disabled ? '0.5' : '1.0')};
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+  opacity: ${(props) => (props.disabled ? '0.5' : '1.0')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
 const CheckboxBox = styled.div(

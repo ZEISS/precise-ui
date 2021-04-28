@@ -33,17 +33,17 @@ describe('<RadioButtonGroup />', () => {
   // });
 
   it('should create context object and pass it to context provider', () => {
-    const TestContextProvider = props => <div />;
+    const TestContextProvider = (props) => <div />;
 
     function getRadioButtonGroupWithContext() {
       jest.doMock('../../contexts/RadioButtonGroupContext', () => ({
         RadioButtonGroupContext: {
-          Provider: props => <TestContextProvider {...props} />,
+          Provider: (props) => <TestContextProvider {...props} />,
         },
       }));
       jest.doMock('../../hoc/withFormContext', () => ({
         withFormContext(Component: React.ComponentType) {
-          return props => <Component {...props}>{props.children}</Component>;
+          return (props) => <Component {...props}>{props.children}</Component>;
         },
       }));
 

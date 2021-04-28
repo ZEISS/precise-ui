@@ -19,22 +19,22 @@ const Indicator = styled.div<IndicatorProps>`
   width: ${distance.large};
   height: ${distance.large};
   position: absolute;
-  border: ${themed<IndicatorProps>(props =>
+  border: ${themed<IndicatorProps>((props) =>
     props.disabled || !props.focus ? 'none' : `${distance.xsmall} solid ${props.active ? midnight : props.theme.text1}`,
   )};
   border-radius: 50%;
-  background: ${themed<IndicatorProps>(props =>
+  background: ${themed<IndicatorProps>((props) =>
     props.disabled ? props.theme.ui3 : props.active ? props.theme.ui0 : props.theme.text2,
   )};
   transform: translate(-50%, -50%);
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
   box-sizing: border-box;
   transition: background ${transitionDuration} ${transitionEase},
     border ${transitionDurationBorder} ${transitionEase}
-      ${props => (props.animate ? `, left ${transitionDuration} ${transitionEase}` : '')};
+      ${(props) => (props.animate ? `, left ${transitionDuration} ${transitionEase}` : '')};
 
   &:hover {
-    border: ${themed<IndicatorProps>(props =>
+    border: ${themed<IndicatorProps>((props) =>
       props.disabled ? 'none' : `${distance.xsmall} solid ${props.active ? ocean : props.theme.ui5}`,
     )};
   }

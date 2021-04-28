@@ -81,7 +81,7 @@ export const StatusTable: React.SFC<StatusTableProps> = ({ theme, files, onCance
     },
   };
 
-  const data = files.map(item => ({
+  const data = files.map((item) => ({
     ...item,
     status: getStatus(item),
   }));

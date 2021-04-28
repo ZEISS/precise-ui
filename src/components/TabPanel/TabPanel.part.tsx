@@ -17,7 +17,7 @@ export const TabContent = styled.div``;
 const ActiveTab = css`
   ${getFontStyle({ weight: 'medium' })}
 
-  color: ${themed(props => props.theme.text6)};
+  color: ${themed((props) => props.theme.text6)};
   border-color: ${dark};
 `;
 
@@ -45,7 +45,7 @@ export const TabHeader = styled('li')<TabHeaderProps>`
   box-sizing: border-box;
   border-bottom: 2px solid transparent;
   margin-right: ${distance.xxlarge};
-  ${props => (props.active ? ActiveTab : InactiveTab)};
+  ${(props) => (props.active ? ActiveTab : InactiveTab)};
 
   &:last-child {
     margin-right: 0;
@@ -57,5 +57,5 @@ export interface TabItemProps {
 }
 
 export const TabItem = styled.div<TabItemProps>`
-  ${props => (props.active ? '' : 'display: none;')};
+  ${(props) => (props.active ? '' : 'display: none;')};
 `;

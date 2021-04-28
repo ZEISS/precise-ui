@@ -1,7 +1,7 @@
 export function debounce(func: (...arg: Array<any>) => void, wait = 1000) {
   let timeout: number | undefined;
 
-  return function(...args: Array<any>) {
+  return function (...args: Array<any>) {
     const context = this;
     const callNow = !wait && !timeout;
 

@@ -97,11 +97,11 @@ function getComparer(exampleValue: any, reverse: boolean): (a: any, b: any) => b
 }
 
 function sorter<T extends {}>(indices: Array<number>, items: Array<T>, key: keyof T, reverse = false) {
-  const values = items.map(item => item[key]);
+  const values = items.map((item) => item[key]);
   const n = values.length;
 
   if (n > 1) {
-    const firstNonFalsyValue = values.find(item => !!item);
+    const firstNonFalsyValue = values.find((item) => !!item);
 
     const comparer = getComparer(firstNonFalsyValue, reverse);
 

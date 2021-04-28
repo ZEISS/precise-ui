@@ -71,8 +71,8 @@ interface RadioButtonCircleProps {
 const RadioButtonContainer = styled('div')<RadioButtonContainerProps>`
   position: relative;
   display: inline-block;
-  opacity: ${props => (props.disabled ? '0.5' : '1.0')};
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+  opacity: ${(props) => (props.disabled ? '0.5' : '1.0')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 
   + div {
     margin-left: ${distance.large};
@@ -108,8 +108,8 @@ const SelectMark = styled('div')<RadioButtonCircleProps>`
   outline: 0;
   background: ${themed(({ theme }) => theme.ui5)};
   transition: all 0.2s;
-  opacity: ${props => (props.selected ? '1' : '0')};
-  transform: ${props => (props.selected ? 'scale(1)' : 'scale(0)')};
+  opacity: ${(props) => (props.selected ? '1' : '0')};
+  transform: ${(props) => (props.selected ? 'scale(1)' : 'scale(0)')};
 `;
 
 const FlexContainer = styled.div<{ withError?: boolean }>`
@@ -125,9 +125,9 @@ export class RadioButton extends React.PureComponent<RadioButtonProps> {
     const { children, ...props } = this.props;
     return (
       <FormContext.Consumer>
-        {form => (
+        {(form) => (
           <RadioButtonGroupContext.Consumer>
-            {ctx => (
+            {(ctx) => (
               <RadioButtonInt group={ctx} form={form} {...props}>
                 {children}
               </RadioButtonInt>

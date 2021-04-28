@@ -151,7 +151,7 @@ const StyledLead = styled.div`
 
 const StyledPin = styled.div`
   ${getFontStyle({ size: 'xxLarge' })}
-  
+
   margin-left: ${distance.medium};
 `;
 
@@ -169,12 +169,12 @@ interface DesktopHeaderProps {
 const DesktopHeader: React.SFC<DesktopHeaderProps> = ({ leads, pins }) => (
   <>
     <StyledLinks>
-      {leads.map(item => (
+      {leads.map((item) => (
         <StyledLead key={item.id}>{item.content}</StyledLead>
       ))}
     </StyledLinks>
     <HeaderStackPanel>
-      {pins.map(item => (
+      {pins.map((item) => (
         <StyledPin key={item.id}>{item.content}</StyledPin>
       ))}
     </HeaderStackPanel>
@@ -196,7 +196,7 @@ const MobileHeader: React.SFC<MobileHeaderProps> = ({ entries, onToggle, open })
     </HeaderStackPanel>
     <StyledMenu onClick={onToggle} className={open ? 'open' : ''}>
       <StyledMenuItems>
-        {entries.map(item => (
+        {entries.map((item) => (
           <StyledMenuItem key={item.id}>{item.content}</StyledMenuItem>
         ))}
       </StyledMenuItems>
@@ -268,12 +268,12 @@ export class NavBar extends React.Component<NavBarProps, NavBarState> {
         {!hidden &&
           (mode === 'full' ? (
             <DesktopHeader
-              leads={items.filter(item => item.display === 'lead')}
-              pins={items.filter(item => item.display === 'pin')}
+              leads={items.filter((item) => item.display === 'lead')}
+              pins={items.filter((item) => item.display === 'pin')}
             />
           ) : mode === 'hamburger' ? (
             <MobileHeader
-              entries={items.filter(item => !item.display || item.display === 'mobile')}
+              entries={items.filter((item) => !item.display || item.display === 'mobile')}
               open={open}
               onToggle={this.toggle}
             />

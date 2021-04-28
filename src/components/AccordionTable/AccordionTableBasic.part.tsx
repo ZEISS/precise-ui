@@ -126,7 +126,7 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
 
     if (groupBy) {
       if (group === noValueGroupLabel) {
-        return data.filter(m => {
+        return data.filter((m) => {
           const value = m[groupBy];
 
           // the number '0' shouldn't be in the no-value-group.
@@ -138,7 +138,7 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
           }
         });
       } else {
-        return data.filter(m => {
+        return data.filter((m) => {
           const value = m[groupBy];
 
           if (value === group) {
@@ -193,7 +193,7 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
     if (!controlledGroups) {
       if (expandedGroups.indexOf(group) !== -1) {
         this.setState({
-          expandedGroups: expandedGroups.filter(m => m !== group),
+          expandedGroups: expandedGroups.filter((m) => m !== group),
         });
       } else {
         this.setState({

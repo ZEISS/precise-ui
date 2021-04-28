@@ -64,13 +64,13 @@ export interface ProgressContainerProps {
 const spinningWidth = 50;
 
 const ProgressContainer = styled.div`
-  color: ${themed(props => props.theme.text6)};
+  color: ${themed((props) => props.theme.text6)};
 `;
 
 const ProgressRail = styled('div')<ProgressContainerProps>`
   position: relative;
   border: 0;
-  background: ${themed(props => props.theme.ui4)};
+  background: ${themed((props) => props.theme.ui4)};
   height: ${({ type }) => (type === 'secondary' ? distance.xsmall : distance.xxsmall)};
 `;
 
@@ -91,7 +91,7 @@ const ProgressDescription = styled.div`
 const ProgressIndicator = styled.div`
   border-radius: inherit;
   border: 0;
-  background: ${themed(props => props.theme.ui0)};
+  background: ${themed((props) => props.theme.ui0)};
   height: 100%;
   width: 0;
 `;
@@ -101,7 +101,7 @@ const ProgressStop = styled.div<StopProps & React.HTMLProps<HTMLInputElement>>`
   position: absolute;
   width: ${distance.small};
   height: ${distance.small};
-  background: ${themed(props => (props.active ? props.theme.ui7 : props.theme.text2))};
+  background: ${themed((props) => (props.active ? props.theme.ui7 : props.theme.text2))};
   top: 50%;
   transform: translateY(-50%);
 `;

@@ -19,10 +19,7 @@ describe('<AutocompleteTagBuilder />', () => {
     );
     // tslint:disable-next-line:no-string-literal
     global['cancelAnimationFrame'] = jest.fn();
-    wrapper
-      .find('div')
-      .at(0)
-      .prop('onFocus')({} as React.FocusEvent);
+    wrapper.find('div').at(0).prop('onFocus')({} as React.FocusEvent);
     expect(wrapper.update().find('li')).toHaveLength(3);
 
     // tslint:disable-next-line:no-string-literal
@@ -35,10 +32,7 @@ describe('<AutocompleteTagBuilder />', () => {
     );
     // tslint:disable-next-line:no-string-literal
     global['cancelAnimationFrame'] = jest.fn();
-    wrapper
-      .find('div')
-      .at(0)
-      .prop('onFocus')({} as React.FocusEvent);
+    wrapper.find('div').at(0).prop('onFocus')({} as React.FocusEvent);
     const suggestions = wrapper.update().find(InteractiveList);
     suggestions.simulate('keyDown', {
       keyCode: KeyCodes.down,

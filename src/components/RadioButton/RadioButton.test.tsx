@@ -6,10 +6,10 @@ import { RadioButtonGroupContextType, RadioButtonGroupNotifier } from '../../con
 function getRadioButtonWithContext(radioGroupCtx?: RadioButtonGroupContextType) {
   jest.doMock('../../contexts', () => ({
     RadioButtonGroupContext: {
-      Consumer: props => props.children(radioGroupCtx),
+      Consumer: (props) => props.children(radioGroupCtx),
     },
     FormContext: {
-      Consumer: props => props.children(),
+      Consumer: (props) => props.children(),
     },
   }));
 
@@ -106,10 +106,7 @@ describe('<RadioButton />', () => {
     };
     const RadioButtonWithContext = getRadioButtonWithContext(radioGroupCtx);
     const wrapper = enzyme.mount(<RadioButtonWithContext name="radio">Value</RadioButtonWithContext>);
-    wrapper
-      .find({ name: 'radio' })
-      .first()
-      .simulate('click');
+    wrapper.find({ name: 'radio' }).first().simulate('click');
     expect(selected).toEqual(true);
   });
 
@@ -130,10 +127,7 @@ describe('<RadioButton />', () => {
         Value
       </RadioButtonWithContext>,
     );
-    wrapper
-      .find({ name: 'radio' })
-      .first()
-      .simulate('click');
+    wrapper.find({ name: 'radio' }).first().simulate('click');
     expect(selected).toEqual(false);
   });
 });

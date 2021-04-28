@@ -54,7 +54,7 @@ const StyledProgressStep = styled.li`
 
   &.step-active {
     ${getFontStyle({ weight: 'medium' })}
-    
+
     color: ${themed(({ theme }) => theme.text1)};
 
     ~ li {

@@ -17,7 +17,7 @@ export function usePrompt(
       if (unblock) {
         unblock();
       }
-      unblock = history.block(loc => {
+      unblock = history.block((loc) => {
         setLocation(loc);
         setCurrentLocation(history.location);
         return onRequestToLeavePage();

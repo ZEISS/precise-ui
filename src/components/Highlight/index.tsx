@@ -23,7 +23,7 @@ export interface HighlightProps extends StandardProps {
 }
 
 const Highlighted = styled.span`
-  background-color: ${themed(props => props.theme.highlightColor)};
+  background-color: ${themed((props) => props.theme.highlightColor)};
 `;
 
 /**
@@ -38,7 +38,7 @@ function validateMatches(matches: Array<Array<number>>) {
     throw Error(`match must be an Array of [start, end], but provided ${JSON.stringify(matches)}`);
   }
 
-  matches.forEach(match => {
+  matches.forEach((match) => {
     if (!Array.isArray(match) || match.length !== 2) {
       throw Error('match must be an Array of [start, end]');
     }

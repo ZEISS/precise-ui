@@ -12,12 +12,12 @@ export interface StickyProps extends StandardProps {
 }
 
 const StyledSticky = styled.div<StickyProps>`
-  ${props => `${props.position}: 0;`} position: absolute;
+  ${(props) => `${props.position}: 0;`} position: absolute;
   box-sizing: border-box;
   flex: 1 1 auto;
 `;
 
-export const Sticky: React.SFC<StickyProps> = props => {
+export const Sticky: React.SFC<StickyProps> = (props) => {
   const { position = 'bottom', ...rest } = props;
   return (
     <StyledSticky position={position} {...rest}>

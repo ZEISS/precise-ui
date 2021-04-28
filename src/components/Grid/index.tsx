@@ -111,11 +111,11 @@ const BasicGridLayout = styled.div<GridLayoutProps>`
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: ${props => props.columns.join(' ')};
-  grid-template-columns: ${props => props.columns.join(' ')};
-  -ms-grid-rows: ${props => computeIeRows(props.rows, props.spacing)};
-  grid-template-rows: ${props => props.rows.join(' ')};
-  grid-gap: ${props => props.spacing.join(' ')};
+  -ms-grid-columns: ${(props) => props.columns.join(' ')};
+  grid-template-columns: ${(props) => props.columns.join(' ')};
+  -ms-grid-rows: ${(props) => computeIeRows(props.rows, props.spacing)};
+  grid-template-rows: ${(props) => props.rows.join(' ')};
+  grid-gap: ${(props) => props.spacing.join(' ')};
 `;
 
 const GridLayout = styled(BasicGridLayout)`
@@ -140,12 +140,12 @@ interface GridCellProps {
 }
 
 const GridCell = styled.div<GridCellProps>`
-  -ms-grid-row: ${props => props.ri + 1};
-  -ms-grid-row-span: ${props => props.rf - props.ri};
-  grid-row: ${props => props.ri + 1} / span ${props => props.rf - props.ri};
-  -ms-grid-column: ${props => props.ci + 1};
-  -ms-grid-column-span: ${props => props.cf - props.ci};
-  grid-column: ${props => props.ci + 1} / span ${props => props.cf - props.ci};
+  -ms-grid-row: ${(props) => props.ri + 1};
+  -ms-grid-row-span: ${(props) => props.rf - props.ri};
+  grid-row: ${(props) => props.ri + 1} / span ${(props) => props.rf - props.ri};
+  -ms-grid-column: ${(props) => props.ci + 1};
+  -ms-grid-column-span: ${(props) => props.cf - props.ci};
+  grid-column: ${(props) => props.ci + 1} / span ${(props) => props.cf - props.ci};
   max-width: 100%;
 `;
 

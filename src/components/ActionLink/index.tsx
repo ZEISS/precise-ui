@@ -21,10 +21,10 @@ export interface StyledActionLink {
 
 const PseudoLinkStyle = css`
   &:hover {
-    color: ${themed(props => props.theme.ui6)};
+    color: ${themed((props) => props.theme.ui6)};
   }
   &:focus {
-    color: ${themed(props => props.theme.ui7)};
+    color: ${themed((props) => props.theme.ui7)};
     outline: none;
   }
 `;
@@ -32,14 +32,14 @@ const PseudoLinkStyle = css`
 const StyledActionLink = styled(Anchor)<StyledActionLink>`
   ${getFontStyle({ weight: 'medium' })}
   text-decoration: none;
-  color: ${themed<StyledActionLink>(props => (props.disabled ? props.theme.text3 : props.theme.ui0))};
-  display: ${props => (props.block ? 'block' : 'inline-block')};
-  cursor: ${props => (props.disabled ? 'default' : 'pointer')};
-  ${props => (!props.disabled ? PseudoLinkStyle : '')};
+  color: ${themed<StyledActionLink>((props) => (props.disabled ? props.theme.text3 : props.theme.ui0))};
+  display: ${(props) => (props.block ? 'block' : 'inline-block')};
+  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
+  ${(props) => (!props.disabled ? PseudoLinkStyle : '')};
 `;
 
 /**
  * The action link component gives a simple text link to be used in call for action scenarios.
  */
-export const ActionLink: React.SFC<ActionLinkProps> = props => <StyledActionLink {...props} />;
+export const ActionLink: React.SFC<ActionLinkProps> = (props) => <StyledActionLink {...props} />;
 ActionLink.displayName = 'ActionLink';
