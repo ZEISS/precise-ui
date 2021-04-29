@@ -204,7 +204,7 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
     }
   }
 
-  componentWillReceiveProps({ value = this.state.value, error, orientation }: SliderProps) {
+  UNSAFE_componentWillReceiveProps({ value = this.state.value, error, orientation }: SliderProps) {
     if (this.state.controlled) {
       this.setState({ value });
     }

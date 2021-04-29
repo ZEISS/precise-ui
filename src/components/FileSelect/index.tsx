@@ -86,7 +86,7 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
     }
   }
 
-  componentWillReceiveProps({ value = [], error }: FileSelectProps) {
+  UNSAFE_componentWillReceiveProps({ value = [], error }: FileSelectProps) {
     if (this.state.controlled && value && this.state.value !== value) {
       this.setState({
         value,

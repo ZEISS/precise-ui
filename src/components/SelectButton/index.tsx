@@ -106,7 +106,7 @@ class SelectButtonInt extends React.PureComponent<SelectButtonProps, SelectButto
     };
   }
 
-  componentWillReceiveProps(nextProps: SelectButtonProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: SelectButtonProps) {
     const { controlled } = this.state;
 
     if (controlled) {

@@ -146,7 +146,7 @@ class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, Drop
     }
   }
 
-  componentWillReceiveProps(e: DropzoneProps) {
+  UNSAFE_componentWillReceiveProps(e: DropzoneProps) {
     const { controlled, value } = this.state;
 
     if (controlled && e.value && value !== e.value) {

@@ -234,7 +234,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
     }
   }
 
-  componentWillReceiveProps({ data = [], value = [], error, multiple }: DropdownFieldProps) {
+  UNSAFE_componentWillReceiveProps({ data = [], value = [], error, multiple }: DropdownFieldProps) {
     const { controlled } = this.state;
 
     if (controlled) {

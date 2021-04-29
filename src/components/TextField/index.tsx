@@ -137,7 +137,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
     };
   }
 
-  componentWillReceiveProps({ value = '', error }: TextFieldProps) {
+  UNSAFE_componentWillReceiveProps({ value = '', error }: TextFieldProps) {
     if (this.state.controlled) {
       this.setState({ value });
     }

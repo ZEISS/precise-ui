@@ -151,7 +151,7 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
     };
   }
 
-  componentWillReceiveProps({ value = false, error }: RadioButtonIntProps) {
+  UNSAFE_componentWillReceiveProps({ value = false, error }: RadioButtonIntProps) {
     if (this.state.controlled) {
       this.setState({ value });
     }

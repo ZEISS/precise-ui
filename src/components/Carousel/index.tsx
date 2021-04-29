@@ -231,7 +231,7 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
     };
   }
 
-  componentWillReceiveProps(nextProps: CarouselProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: CarouselProps) {
     const { selectedIndex } = nextProps;
     const { controlled } = this.state;
 
