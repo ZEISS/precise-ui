@@ -115,9 +115,8 @@ export class Blocker extends React.Component<BlockerProps> {
     }
   };
 
-  private onScrollbarClick = (e: React.MouseEvent<HTMLElement>) => {
-    return e.target instanceof HTMLElement && e.target.offsetLeft + e.target.scrollWidth < e.clientX;
-  };
+  private onScrollbarClick = (e: React.MouseEvent<HTMLElement>) =>
+    e.target instanceof HTMLElement && e.target.offsetLeft + e.target.scrollWidth < e.clientX;
 
   private onKeyPress = (e: React.KeyboardEvent<HTMLElement>) => {
     if (e.keyCode === KeyCodes.escape) {

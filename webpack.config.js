@@ -7,7 +7,7 @@ const env = process.env.NODE_ENV || 'development';
 const develop = env === 'development';
 const test = env === 'test';
 const production = env === 'production';
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 6060;
 
 const dist = path.join(__dirname, 'dist', 'umd');
 const src = path.join(__dirname, 'src');
@@ -63,6 +63,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
       'precise-ui': path.resolve('./src'),
+      process: 'process/browser',
     },
   },
 
@@ -109,8 +110,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'awesome-typescript-loader',
         options: {
-          silent: true
-        }
+          silent: true,
+        },
       },
       {
         enforce: 'pre',
@@ -124,6 +125,9 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(env),
+    }),
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
     }),
     new CircularDependencyPlugin({
       exclude: /node_modules/,

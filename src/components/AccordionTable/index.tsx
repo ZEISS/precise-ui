@@ -14,7 +14,10 @@ export {
 } from './AccordionTable.types.part';
 
 export interface AccordionTableType extends React.FC<AccordionTableProps<any>> {
-  <T = {}>(props: AccordionTableProps<T> & { children?: React.ReactNode }, context?: unknown): JSX.Element;
+  <T = Record<string, unknown>>(
+    props: AccordionTableProps<T> & { children?: React.ReactNode },
+    context?: unknown,
+  ): JSX.Element;
 }
 
 /**

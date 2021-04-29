@@ -17,12 +17,10 @@ describe('<AutocompleteTagBuilder />', () => {
     const wrapper = enzyme.mount(
       <AutocompleteTagBuilder suggestions={['one', 'two', 'three']} defaultValue={['five']} />,
     );
-    // tslint:disable-next-line:no-string-literal
     global['cancelAnimationFrame'] = jest.fn();
     wrapper.find('div').at(0).prop('onFocus')({} as React.FocusEvent);
     expect(wrapper.update().find('li')).toHaveLength(3);
 
-    // tslint:disable-next-line:no-string-literal
     delete global['cancelAnimationFrame'];
   });
 
@@ -30,7 +28,7 @@ describe('<AutocompleteTagBuilder />', () => {
     const wrapper = enzyme.mount(
       <AutocompleteTagBuilder suggestions={['one', 'two', 'three']} defaultValue={['five']} />,
     );
-    // tslint:disable-next-line:no-string-literal
+
     global['cancelAnimationFrame'] = jest.fn();
     wrapper.find('div').at(0).prop('onFocus')({} as React.FocusEvent);
     const suggestions = wrapper.update().find(InteractiveList);
@@ -47,7 +45,6 @@ describe('<AutocompleteTagBuilder />', () => {
 
     expect(wrapper.find('input').getDOMNode()).toBe(document.activeElement);
 
-    // tslint:disable-next-line:no-string-literal
     delete global['cancelAnimationFrame'];
   });
 });

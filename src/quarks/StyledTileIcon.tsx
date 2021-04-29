@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styled from '../utils/styled';
 
 export interface StyledTileIconProps {

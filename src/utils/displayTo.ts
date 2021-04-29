@@ -42,7 +42,7 @@ export function getWidthBreakpointsQuery({ max, min }: WidthBreakpoints) {
   if (min === undefined && max === undefined) {
     throw new Error('Both breakpoints cannot be `undefined`');
   }
-  if (min !== undefined && max != undefined && max < min) {
+  if (min !== undefined && max !== undefined && max < min) {
     throw new Error(`The min(${min}) breakpoint must be less than max(${max})`);
   }
 

@@ -4,11 +4,12 @@ import isAfter from 'date-fns/esm/isAfter';
 import isValidDate from 'date-fns/esm/isValid';
 import parse from 'date-fns/esm/parse';
 
+// eslint-disable-next-line
 const longFormatters = require('date-fns/_lib/format/longFormatters');
 
 declare global {
   interface Window {
-    __localeData__: Object;
+    __localeData__: Record<string, Locale>;
     __localeId__: string;
   }
 }
@@ -30,9 +31,8 @@ export function parseDate(
   locale?: Locale | string,
   strictParsing?: boolean,
 ) {
-  // tslint:disable-next-line
-  let parsedDate = null;
-  const localeObject = getLocaleObject(locale || '') || getDefaultLocale();
+  let parsedDate;
+  const localeObject = getLocaleObject(locale || '');
   let strictParsingValueMatch = true;
   if (Array.isArray(dateFormat)) {
     dateFormat.forEach((df) => {
@@ -75,8 +75,7 @@ export function parseDate(
     }
   }
 
-  // tslint:disable-next-line
-  return isValid(parsedDate) && strictParsingValueMatch ? parsedDate : null;
+  return isValid(parsedDate) && strictParsingValueMatch ? parsedDate : undefined;
 }
 
 export function getIsoDateFormat() {
@@ -86,8 +85,7 @@ export function getIsoDateFormat() {
 function getLocaleObject(localeSpec: string | Locale) {
   if (typeof localeSpec === 'string') {
     // Treat it as a locale name registered by registerLocale
-    // tslint:disable-next-line
-    return window.__localeData__ ? window.__localeData__[localeSpec] : null;
+    return window.__localeData__ ? window.__localeData__[localeSpec] : undefined; /* eslint-disable-line */
   } else {
     // Treat it as a raw date-fns locale object
     return localeSpec;
@@ -95,7 +93,7 @@ function getLocaleObject(localeSpec: string | Locale) {
 }
 
 function getDefaultLocale() {
-  return window.__localeId__;
+  return window.__localeId__; /* eslint-disable-line */
 }
 
 function isValid(date: Date) {
@@ -120,8 +118,7 @@ function formatDate(date: Date, formatStr: string, locale: string | Locale = '')
     localeObj = getLocaleObject(getDefaultLocale());
   }
   return format(date, formatStr, {
-    // tslint:disable-next-line
-    locale: localeObj ? localeObj : null,
+    locale: localeObj ? localeObj : undefined,
   });
 }
 

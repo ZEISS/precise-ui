@@ -15,7 +15,7 @@ export {
 } from './Table.types.part';
 
 export interface TableType extends React.FC<TableProps<any>> {
-  <T = {}>(props: TableProps<T> & { children?: React.ReactNode }, context?: unknown): JSX.Element;
+  <T = Record<string, unknown>>(props: TableProps<T> & { children?: React.ReactNode }, context?: unknown): JSX.Element;
 }
 
 /**

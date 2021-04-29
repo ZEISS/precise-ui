@@ -1,12 +1,12 @@
-function compareGeneralNormal(a: any, b: any) {
+function compareGeneralNormal<T>(a: T, b: T) {
   return a < b;
 }
 
-function compareGeneralReverse(a: any, b: any) {
+function compareGeneralReverse<T>(a: T, b: T) {
   return b < a;
 }
 
-export function compareArrayNormal(a: Array<any> | undefined, b: Array<any> | undefined) {
+export function compareArrayNormal<T>(a: Array<T> | undefined, b: Array<T> | undefined) {
   // treat empty array like undefined
   const aIsUndefined = !a || a.length === 0;
   const bIsUndefined = !b || b.length === 0;
@@ -24,7 +24,7 @@ export function compareArrayNormal(a: Array<any> | undefined, b: Array<any> | un
   }
 }
 
-function compareArrayReverse(a: Array<any> | undefined, b: Array<any> | undefined) {
+function compareArrayReverse<T>(a: Array<T> | undefined, b: Array<T> | undefined) {
   return compareArrayNormal(b, a);
 }
 
@@ -43,17 +43,7 @@ function compareStringNormal(a: string | undefined, b: string | undefined) {
 }
 
 function compareStringReverse(a: string | undefined, b: string | undefined) {
-  if (!a && !b) {
-    return false;
-  } else {
-    if (!b) {
-      return true;
-    } else if (!a) {
-      return false;
-    } else {
-      return b.localeCompare(a) === -1;
-    }
-  }
+  return compareStringNormal(b, a);
 }
 
 export function compareNumberNormal(a: number | undefined, b: number | undefined): boolean {
@@ -79,24 +69,27 @@ export function compareNumberNormal(a: number | undefined, b: number | undefined
 function compareNumberReverse(a: number | undefined, b: number | undefined): boolean {
   return compareNumberNormal(b, a);
 }
+interface Comparer<T> {
+  (a: T | undefined, b: T | undefined): boolean;
+}
 
-function getComparer(exampleValue: any, reverse: boolean): (a: any, b: any) => boolean {
+function getComparer<T>(exampleValue: T, reverse: boolean): Comparer<T> {
   if (typeof exampleValue === 'string') {
-    return reverse ? compareStringReverse : compareStringNormal;
+    return (reverse ? compareStringReverse : compareStringNormal) as Comparer<T>;
   }
 
   if (typeof exampleValue === 'number') {
-    return reverse ? compareNumberReverse : compareNumberNormal;
+    return (reverse ? compareNumberReverse : compareNumberNormal) as Comparer<T>;
   }
 
   if (Array.isArray(exampleValue)) {
-    return reverse ? compareArrayReverse : compareArrayNormal;
+    return (reverse ? compareArrayReverse : compareArrayNormal) as Comparer<T>;
   }
 
   return reverse ? compareGeneralReverse : compareGeneralNormal;
 }
 
-function sorter<T extends {}>(indices: Array<number>, items: Array<T>, key: keyof T, reverse = false) {
+function sorter<T extends unknown>(indices: Array<number>, items: Array<T>, key: keyof T, reverse = false) {
   const values = items.map((item) => item[key]);
   const n = values.length;
 
@@ -119,7 +112,7 @@ function sorter<T extends {}>(indices: Array<number>, items: Array<T>, key: keyo
   }
 }
 
-export function sortObjectList<T extends {}>(
+export function sortObjectList<T extends unknown>(
   items: Array<T>,
   sortBy?: keyof T,
   order: 'ascending' | 'descending' = 'ascending',

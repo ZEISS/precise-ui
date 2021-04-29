@@ -45,6 +45,6 @@ export const SidebarBlocker: React.FC<SidebarBlockerProps> = (props) => {
     }
   }, [props.open]);
 
-  //tslint:disable-next-line
+  // eslint-disable-next-line
   return !closed ? <StyledSidebarBlocker {...props} closing={!props.open} /> : null;
 };

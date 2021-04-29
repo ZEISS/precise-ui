@@ -83,9 +83,7 @@ const StyledCustomWrapper = styled.div<InteractiveListWrapperProps>`
   overflow-y: auto;
 `;
 
-const CustomWrapper: React.SFC<InteractiveListWrapperProps> = (props) => {
-  return <StyledCustomWrapper {...props} />;
-};
+const CustomWrapper: React.SFC<InteractiveListWrapperProps> = (props) => <StyledCustomWrapper {...props} />;
 
 function renderValue(data: Array<string | InteractiveListItem>, value: string) {
   for (const item of data) {
@@ -183,7 +181,7 @@ class SelectButtonInt extends React.PureComponent<SelectButtonProps, SelectButto
           onChange={this.handleChange}
           customWrapper={CustomWrapper}
           value={value}
-          onClickOutside={() => {}}
+          onClickOutside={() => {}} // eslint-disable-line
           autoPosition
           autoFocus
           showTick

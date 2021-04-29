@@ -105,7 +105,7 @@ const DropdownPopup = styled(WindowPopup)`
   border: 2em solid transparent;
 `;
 
-// tslint:disable-next-line
+// eslint-disable-next-line
 const NotOpenComponent = null;
 
 const StandardWrapper: React.SFC<InteractiveListWrapperProps> = ({ open, ...props }) =>
@@ -349,7 +349,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
         onKeyDown={mobile ? this.control : undefined}
         indices={value}
         customWrapper={wrapper}
-        onClickOutside={() => {}}
+        onClickOutside={() => {}} // eslint-disable-line
         direction={direction}
         autoPosition={undefined === direction}
         disabledItems={disabledItems}

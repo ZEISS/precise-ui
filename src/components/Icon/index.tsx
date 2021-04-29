@@ -2,8 +2,8 @@ import * as React from 'react';
 import * as icons from './icons';
 import styled from '../../utils/styled';
 import { StandardProps } from '../../common';
-import { IconName, IconNames } from './icon.types';
-import { getIcon, registerIcons } from './registerIcons';
+import { IconName } from './icon.types';
+import { getIcon } from './registerIcons';
 export * from './icon.types';
 
 export interface IconProps extends StandardProps {
@@ -64,7 +64,7 @@ export const Icon: React.FC<IconProps> = ({ size = 1, name, stroke, color, ...re
     console.error(`An icon with the name ${name} could not be found.`);
   }
 
-  // tslint:disable-next-line
+  // eslint-disable-next-line
   return null;
 };
 Icon.displayName = 'Icon';

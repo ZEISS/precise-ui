@@ -27,8 +27,8 @@ export interface ValidatorState {
  * @returns A constructor function taking a component to be wrapped with the validation.
  */
 export function withValidation<TEventArgs>(validate: (e: TEventArgs) => React.ReactChild | undefined) {
-  return <TProps extends BaseInputProps<TEventArgs>>(Component: React.ComponentType<TProps>) => {
-    return withInner(
+  return <TProps extends BaseInputProps<TEventArgs>>(Component: React.ComponentType<TProps>) =>
+    withInner(
       class Validator extends React.PureComponent<TProps & ValidatorProps, ValidatorState> {
         constructor(props: TProps & ValidatorProps) {
           super(props);
@@ -65,5 +65,4 @@ export function withValidation<TEventArgs>(validate: (e: TEventArgs) => React.Re
       },
       { Component },
     );
-  };
 }

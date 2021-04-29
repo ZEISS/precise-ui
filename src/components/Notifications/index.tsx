@@ -254,7 +254,7 @@ export class Notifications extends React.Component<NotificationsProps, Notificat
     return (
       <div>
         {Object.keys(notificationsToRender).map((position: NotificationsPosition) => {
-          const disablePointer =
+          const disablePointer = // eslint-disable-next-line
             notificationsToRender[position].length === 1 && notificationsToRender[position][0] === null;
 
           return (

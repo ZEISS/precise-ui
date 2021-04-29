@@ -141,9 +141,7 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
     }
   }
 
-  private getTagsArray = memoize((value: Array<T>) => {
-    return value.map((x) => this.getSuggestionValue(x));
-  });
+  private getTagsArray = memoize((value: Array<T>) => value.map((x) => this.getSuggestionValue(x)));
 
   private defaultSuggestionRenderer(suggestion: T) {
     return {

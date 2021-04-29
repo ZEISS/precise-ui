@@ -195,13 +195,13 @@ const ArrowRight = styled(Arrow)`
   right: 8px;
 `;
 
-function calcNextPage(currentPage: number, totalPages: number, infinite: boolean = false) {
+function calcNextPage(currentPage: number, totalPages: number, infinite = false) {
   const maxIndex = totalPages - 1;
   const nextPage = currentPage + 1;
   return infinite && nextPage > maxIndex ? 0 : Math.min(nextPage, maxIndex);
 }
 
-function calcPrevPage(currentPage: number, totalPages: number, infinite: boolean = false) {
+function calcPrevPage(currentPage: number, totalPages: number, infinite = false) {
   const prevPage = currentPage - 1;
   const maxIndex = totalPages - 1;
   return infinite && prevPage < 0 ? maxIndex : Math.max(prevPage, 0);
@@ -354,7 +354,6 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
   private resetInitialStyle(node: HTMLElement) {
     const style = node.style;
 
-    // tslint:disable-next-line
     style.left = 'auto';
     style.transitionProperty = 'left';
     style.transitionDuration = animationDuration;

@@ -47,7 +47,7 @@ const StyledCardChildWrapper = styled.div<StyledCardChildProps>`
 `;
 
 export const Card: React.FC<CardProps> = ({ orientation = 'vertical', children, layout: propsLayout, ...rest }) => {
-  const layout = propsLayout || React.Children.map(children, (_) => 0);
+  const layout = propsLayout || React.Children.map(children, () => 0);
   const cardChildComponents: Array<any> = [];
   React.Children.forEach(children, (child: React.ComponentElement<any, any>, index) => {
     if (!child) {

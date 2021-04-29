@@ -6,7 +6,6 @@ import { IndicatorKnob } from '../IndicatorKnob';
 import { InteractiveSurface, InteractiveSurfaceChangeEvent } from '../InteractiveSurface';
 import { rgbToHsv, hsvToRgb, parseColor } from '../../utils/colors';
 import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
-import { showInputInfo } from '../../utils/input';
 import { distance } from '../../distance';
 import { PaddedContainer } from '../PaddedContainer';
 import { InputNotification } from '../InputNotification';

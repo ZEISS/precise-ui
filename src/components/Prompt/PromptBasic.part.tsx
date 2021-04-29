@@ -10,7 +10,7 @@ export const PromptBasic: React.FC<PromptBasicProps> = ({ history, when, message
     when,
   );
 
-  // tslint:disable-next-line
+  // eslint-disable-next-line
   return null;
 };
 

@@ -26,6 +26,6 @@ export const InputNotification: React.FC<InputNotificationProps> = ({ error, inf
     return <>{info}</>;
   }
 
-  // tslint:disable-next-line
+  // eslint-disable-next-line
   return null;
 };

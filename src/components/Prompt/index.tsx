@@ -13,7 +13,7 @@ export * from './Prompt.types';
  */
 export class Prompt extends React.Component<PromptProps> {
   static contextTypes = {
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     router: () => null,
   };
 

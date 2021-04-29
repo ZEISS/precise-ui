@@ -1,4 +1,4 @@
-import onClickOutside, { OnClickOutProps } from 'react-onclickoutside';
+import onClickOutside from 'react-onclickoutside';
 import { withInner } from 'typescript-plugin-inner-jsx/withInner';
 
 export interface OutsideInjectedProps {
@@ -7,7 +7,7 @@ export interface OutsideInjectedProps {
 }
 
 export interface OutsideAdditionalProps {
-  handleClickOutside?: React.MouseEventHandler<any>;
+  handleClickOutside?: React.MouseEventHandler<HTMLElement>;
   eventTypes?: string | Array<string>;
   outsideClickIgnoreClass?: string;
   preventDefault?: boolean;

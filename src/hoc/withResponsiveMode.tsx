@@ -29,8 +29,8 @@ export interface ModeProviderState<TModes> {
  * by the getMode function.
  */
 export function withResponsiveMode<TModes>(getMode: GetModeType<TModes>) {
-  return <TProps extends ModeProviderProps<TModes>>(Component: React.ComponentType<TProps>) => {
-    return withInner(
+  return <TProps extends ModeProviderProps<TModes>>(Component: React.ComponentType<TProps>) =>
+    withInner(
       withResponsive(
         class ModeProvider extends React.Component<TProps, ModeProviderState<TModes>> {
           constructor(props: TProps) {
@@ -96,5 +96,4 @@ export function withResponsiveMode<TModes>(getMode: GetModeType<TModes>) {
       ),
       { Component },
     );
-  };
 }

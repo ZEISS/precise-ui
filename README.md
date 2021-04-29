@@ -25,19 +25,19 @@ Precise UI can be easily integrated in your frontend project by using npm or yar
 
 1. Firstly, you have to install it:
 
-```sh
+```shell
 npm i precise-ui
 ```
 
 or alternatively, using yarn
 
-```sh
+```shell
 yarn add precise-ui
 ```
 
 2. Then, make sure that you have also all peer dependencies installed:
 
-```sh
+```shell
 npm i react styled-components
 ```
 
@@ -76,13 +76,13 @@ The following sections guide you through the process of developing Precise UI.
 
 For development you will need NPM and Node.js 8+. After cloning the repository install all dependencies via
 
-```sh
+```shell
 npm install
 ```
 
 Here is a quick example to get you started. All you need is to run:
 
-```sh
+```shell
 npm start
 ```
 
@@ -92,13 +92,13 @@ As a result this will start the development server running the kitchen sink (our
 
 Incrementing the version can be done via `npm` as well.
 
-```sh
+```shell
 npm version
 ```
 
 This will show the current version and ask for a new version. As a result the information in the package.json is updated. Additionally, a git tag is created with the information (automatically prefixed using a "v"). The process could also be automated, e.g., by specifying the new version directly. So, for instance if our new version is "1.2.3" we just use the following command:
 
-```sh
+```shell
 npm version --new-version 1.2.3
 ```
 
@@ -138,7 +138,7 @@ Exceptions to this convention can occur due to various reasons (historical, aest
 
 There is not much to write. We use prettier and our build checks if the code has been properly prettified. Just run
 
-```sh
+```shell
 npm run prettier
 ```
 
@@ -148,13 +148,13 @@ if you are in doubt that your code changes fits our desired formatting.
 
 Any change needs to be in company with its respective unit tests. In order to run the tests we use the following command:
 
-```sh
+```shell
 npm run test
 ```
 
 This will also run the linter. The standalone unit tests are available via `test:unit`. Likewise, we can also easily report the code coverage:
 
-```sh
+```shell
 npm run test:unit --coverage
 ```
 
@@ -168,13 +168,13 @@ When the testing runs it renders components from `[componentName]/Example.md`, m
 
 To run the testing locally Docker should be installed.
 
-```sh
+```shell
 npm run test:visual
 ```
 
 Once a component was changed, added or removed then snapshots should be updated.
 To update snapshots:
-```sh
+```shell
 npm run test:visual -- -u
 ```
 

@@ -40,5 +40,5 @@ export const InputIcon: React.SFC<InputIconProps> = ({
     </StyledIconContainer>
   ) : defaultIcon ? (
     <StyledIconContainer onClick={onClick}>{defaultIcon}</StyledIconContainer>
-  ) : //tslint:disable-next-line
+  ) : // eslint-disable-next-line
   null;

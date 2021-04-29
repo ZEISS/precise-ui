@@ -2,7 +2,6 @@ import * as React from 'react';
 import styled, { themed, css } from '../../utils/styled';
 import { StandardProps } from '../../common';
 import { distance } from '../../distance';
-import { cyan } from '../../colors';
 
 export interface MenuListItemProps extends StandardProps {
   /**

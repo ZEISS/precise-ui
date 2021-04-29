@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { css } from '../../utils/styled';
+import styled from '../../utils/styled';
 import { StackPanel } from '../StackPanel';
 import { Anchor } from '../Anchor';
 import { Icon } from '../Icon';
@@ -7,8 +7,6 @@ import { cyan, black, grey2 } from '../../colors';
 import { distance } from '../../distance';
 import { multiply } from '../../utils/multiply';
 import { getFontStyle } from '../../textStyles';
-import { displayTo } from '../../utils/displayTo';
-import { remCalc } from '../../utils/remCalc';
 
 export interface NavBarItem {
   content: React.ReactNode;
@@ -154,12 +152,6 @@ const StyledPin = styled.div`
 
   margin-left: ${distance.medium};
 `;
-
-const breakPoint = 780;
-
-function isFullMode(width: number) {
-  return width > breakPoint;
-}
 
 interface DesktopHeaderProps {
   leads: Array<NavBarItem>;

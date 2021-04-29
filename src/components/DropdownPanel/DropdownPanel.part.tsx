@@ -112,7 +112,7 @@ class SlideDownTabsInt extends React.Component<SlideDownTabsProps, SlideDownTabs
           autoFocus
           onChange={this.onChange}
           customWrapper={CustomWrapper}
-          onClickOutside={() => {}}
+          onClickOutside={() => {}} // eslint-disable-line
         />
       </StyledWrapper>
     );

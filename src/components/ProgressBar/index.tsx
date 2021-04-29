@@ -154,7 +154,7 @@ export const ProgressBar: React.SFC<ProgressBarProps> = ({
   description,
   animate,
   stops = [],
-  type = 'primary' as 'primary',
+  type = 'primary',
   theme,
   ...rest
 }) => {

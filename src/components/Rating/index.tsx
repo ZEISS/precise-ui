@@ -4,7 +4,7 @@ import styled, { keyframes, css } from '../../utils/styled';
 import { IconName } from '../Icon';
 import { InputProps, PreciseTheme } from '../../common';
 import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
-import { brightLemon, white, ocean } from '../../colors';
+import { ocean } from '../../colors';
 import { distance } from '../../distance';
 
 export interface RatingProps extends InputProps<number> {

@@ -1,5 +1,5 @@
 export interface Callback {
-  (arg: any): void;
+  (arg: unknown): void;
 }
 
 export interface EventListeners {

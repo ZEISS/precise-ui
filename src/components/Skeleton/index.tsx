@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled, { keyframes, css, themed } from '../../utils/styled';
+import styled, { keyframes, themed } from '../../utils/styled';
 import { StandardProps } from '../../common';
 
 export interface SkeletonProps extends StandardProps {

@@ -3,7 +3,7 @@ import styled, { themed } from '../../utils/styled';
 import { getFontStyle } from '../../textStyles';
 import { StandardProps } from '../../common';
 
-export interface InputErrorProps extends StandardProps {}
+export type InputErrorProps = StandardProps;
 
 const StyledError = styled.div`
   ${getFontStyle({ size: 'xSmall' })};

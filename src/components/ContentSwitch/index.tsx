@@ -20,12 +20,10 @@ export interface ContentSwitchProps extends TabOptions, StandardProps {
 
 const SwitchPanel = withTabControl(ResponsiveSwitchPanel);
 
-export const ContentSwitch: React.FC<ContentSwitchProps> = ({ theme, orientation, children, ...props }) => {
-  return (
-    <SwitchPanel tabItemRenderer={ContentItem} theme={theme} orientation={orientation} {...props}>
-      {children}
-    </SwitchPanel>
-  );
-};
+export const ContentSwitch: React.FC<ContentSwitchProps> = ({ theme, orientation, children, ...props }) => (
+  <SwitchPanel tabItemRenderer={ContentItem} theme={theme} orientation={orientation} {...props}>
+    {children}
+  </SwitchPanel>
+);
 
 ContentSwitch.displayName = 'ContentSwitch';

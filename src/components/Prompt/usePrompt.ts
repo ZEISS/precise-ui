@@ -7,7 +7,7 @@ export function usePrompt(
   onRequestToLeavePage: PromptCallback,
   onRequestToLeaveApp?: PromptCallback,
   history?: PromptHistory,
-  isEnabled: boolean = false,
+  isEnabled = false,
 ) {
   const [location, setLocation] = useState<PromptLocation>();
   const [currentLocation, setCurrentLocation] = useState<PromptLocation>();

@@ -1,4 +1,4 @@
-/* tslint:disable:import-blacklist */
+/* eslint no-restricted-imports: "off" */
 import * as styledComponents from 'styled-components';
 import {
   ThemedStyledComponentsModule,
@@ -37,7 +37,7 @@ export const themed = <Props>(interpolation: PreciseInterpolationFunc<Props, Pre
 ) => {
   const { theme, ...rest } = props as ThemedStyledProps<Props, PreciseTheme>;
 
-  const hasNestedProps = (prop: object) =>
+  const hasNestedProps = (prop: Record<string, unknown>) =>
     typeof prop === 'object' && !Array.isArray(prop) && Object.keys(prop).length > 0;
 
   const mergedTheme = Object.keys(theme).reduce(

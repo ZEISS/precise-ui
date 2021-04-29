@@ -1,4 +1,4 @@
-export function capitalizeFirst(text: string) {
+export function capitalizeFirst(text: string): string {
   if (text.length < 2) {
     return text.toUpperCase();
   } else {
@@ -6,6 +6,6 @@ export function capitalizeFirst(text: string) {
   }
 }
 
-export function lowerize(text: string) {
+export function lowerize(text: string): string {
   return text.toLowerCase();
 }

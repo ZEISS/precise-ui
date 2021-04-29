@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styled from '../utils/styled';
 import { distance } from '../distance';
 import { PreciseTheme } from '../common';

@@ -72,11 +72,9 @@ export interface IncreaseDecreaseProps {
   value?: 'increase' | 'decrease';
 }
 
-export const IncreaseDecrease: React.FC<IncreaseDecreaseProps> = ({ onIncrease, onDecrease, value, ...props }) => {
-  return (
-    <IncreaseDecreaseContainer {...props}>
-      <IncreaseDecreaseArrowUp onClick={onIncrease} active={value === 'increase'} />
-      <IncreaseDecreaseArrowDown onClick={onDecrease} active={value === 'decrease'} />
-    </IncreaseDecreaseContainer>
-  );
-};
+export const IncreaseDecrease: React.FC<IncreaseDecreaseProps> = ({ onIncrease, onDecrease, value, ...props }) => (
+  <IncreaseDecreaseContainer {...props}>
+    <IncreaseDecreaseArrowUp onClick={onIncrease} active={value === 'increase'} />
+    <IncreaseDecreaseArrowDown onClick={onDecrease} active={value === 'decrease'} />
+  </IncreaseDecreaseContainer>
+);

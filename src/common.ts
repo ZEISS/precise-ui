@@ -415,7 +415,7 @@ export interface StandardProps {
   style?: React.CSSProperties;
 }
 
-export interface InputChangeEvent<T> {
+export interface InputChangeEvent<T, TElement = Element> {
   /**
    * The current value of the input field.
    */
@@ -423,10 +423,10 @@ export interface InputChangeEvent<T> {
   /**
    * Original change event
    */
-  originalEvent?: React.ChangeEvent<any>;
+  originalEvent?: React.ChangeEvent<TElement>;
 }
 
-export interface InputProps<T> extends StandardProps {
+export interface InputProps<T, TElement = Element> extends StandardProps {
   /**
    * Sets the component as disabled.
    */
@@ -442,7 +442,7 @@ export interface InputProps<T> extends StandardProps {
   /**
    * Event emitted once the value changes due to user input.
    */
-  onChange?(e: InputChangeEvent<T>): void;
+  onChange?(e: InputChangeEvent<T, TElement>): void;
   /**
    * Event triggered once the input gets focused.
    */
@@ -454,7 +454,7 @@ export interface InputProps<T> extends StandardProps {
   /**
    * Event triggered when a key was pressed.
    */
-  onInput?(e?: InputChangeEvent<string>): void;
+  onInput?(e?: InputChangeEvent<string, TElement>): void;
   /**
    * Optional name if to be used within a form context.
    */
@@ -535,7 +535,7 @@ export const ScreenSizeList = stringLiteralArray(['small', 'medium', 'large', 'x
 export type ScreenSize = typeof ScreenSizeList[number];
 
 // Helper type operators
-export type KeyofBase = keyof any;
+export type KeyofBase = keyof any; // eslint-disable-line
 export type Diff<T extends KeyofBase, U extends KeyofBase> = ({ [P in T]: P } &
   { [P in U]: never } & { [x: string]: never })[T];
 export type Omit<T, K extends keyof T> = Pick<T, Diff<keyof T, K>>;

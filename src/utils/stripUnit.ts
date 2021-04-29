@@ -4,5 +4,5 @@
  * @returns The same number without unit if value undefined
  */
 export function stripUnit(value: string): number {
-  return +value.replace(/[^0-9\.]+/g, '');
+  return +value.replace(/[^0-9.]+/g, '');
 }

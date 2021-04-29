@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { ActionLink, Expander, styled, distance, Icon, ActionLinkProps } from '../../src';
 
-// @ts-ignore
-import getUrl from 'react-styleguidist/lib/utils/getUrl';
 import { themed } from '../../src';
 
 interface ComponentDefinition {
@@ -134,8 +132,8 @@ const ComponentsList: React.SFC<ComponentsListProps> = ({ items, useRouterLinks 
   return (
     <NavItems>
       {items
-        .filter(item => item.visibleName)
-        .map(item => {
+        .filter((item) => item.visibleName)
+        .map((item) => {
           const Item = item.sectionDepth === undefined ? SubMenuItem : MenuItem;
           return item.components && item.components.length > 0 ? (
             <React.Fragment key={item.name}>
@@ -151,13 +149,7 @@ const ComponentsList: React.SFC<ComponentsListProps> = ({ items, useRouterLinks 
             <Item
               key={item.name}
               selected={item.name === selected}
-              href={getUrl({
-                name: item.name,
-                slug: item.slug,
-                anchor: !useRouterLinks,
-                hashPath: useRouterLinks ? hashPath : false,
-                id: false,
-              })}
+              href={item.href}
               onClick={() => changeSelected(item.name)}>
               {item.visibleName}
             </Item>

@@ -7,7 +7,6 @@ import { FormContext, RadioButtonGroupContext, RadioButtonGroupContextType } fro
 import { FormContextProps } from '../../hoc';
 import { KeyCodes } from '../../utils';
 import { distance } from '../../distance';
-import { InputNotification } from '../InputNotification';
 import { PaddedContainer } from '../PaddedContainer';
 
 export interface RadioButtonChangeEvent {

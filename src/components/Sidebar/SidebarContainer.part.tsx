@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styled from '../../utils/styled';
 import { PositionType } from './SidebarPopup.types.part';
 
@@ -9,8 +8,7 @@ export interface SidebarContainer {
 }
 
 export const SidebarContainer = styled.div<SidebarContainer>(
-  ({ open, position = 'right' as PositionType, size = '275px' }) => {
-    return `
+  ({ open, position = 'right' as PositionType, size = '275px' }) => `
     transition: all 0.3s cubic-bezier(0, 0, 0.25, 1);
     user-select: none;
     position: fixed;
@@ -31,19 +29,18 @@ export const SidebarContainer = styled.div<SidebarContainer>(
     }
     ${getSizeStyles(position, size)}
     ${getPositionStyles(position, open, size)}
-  `;
-  },
+  `,
 );
 
 function getSizeStyles(position: PositionType, size: string) {
   if (position === 'top' || position === 'bottom') {
     return `
-      height: ${size}; 
+      height: ${size};
       width: 100%;
     `;
   } else {
     return `
-      width: ${size}; 
+      width: ${size};
       height: 100%;
     `;
   }
@@ -68,7 +65,7 @@ function getPositionStyles(position: PositionType, open: boolean, size: string) 
   if (!open) {
     const match = size.match(/^(\d+)(.+?)$/);
     if (match) {
-      positionValue[position] = `-${parseInt(match[1], undefined) / 2}${match[2]}`;
+      positionValue[position] = `-${parseInt(match[1], 10) / 2}${match[2]}`;
     } else {
       positionValue[position] = `-50%`;
     }

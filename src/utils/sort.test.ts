@@ -183,7 +183,7 @@ describe('data sorting', () => {
           b: 32,
         },
         {
-          // tslint:disable-next-line
+          // eslint-disable-next-line
           a: null,
           b: 12,
         },
@@ -253,7 +253,7 @@ describe('data sorting', () => {
         },
         {
           a: 'H',
-          // tslint:disable-next-line
+          // eslint-disable-next-line
           b: null,
         },
       ];

@@ -131,7 +131,7 @@ export class AccordionCard extends React.Component<AccordionCardProps, Accordion
     }
   };
 
-  private renderDefaultAction = (_: RenderActionEvent) => {
+  private renderDefaultAction = () => {
     const { theme } = this.props;
     const { opened } = this.state;
 

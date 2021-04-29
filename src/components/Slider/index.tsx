@@ -364,6 +364,7 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
         this.setState({
           active: 0,
         });
+        break;
       case KeyCodes.enter:
       case KeyCodes.space:
       default:

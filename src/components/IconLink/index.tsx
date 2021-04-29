@@ -68,14 +68,13 @@ const AnchorText = styled.span`
 /**
  * The icon link component shows an icon with optional text.
  */
-export const IconLink: React.SFC<IconLinkProps> = ({ icon, theme, disabled, children, block, ...other }) => {
-  return (
-    <StyledAnchor disabled={disabled} display={block ? 'block' : 'inline-block'} {...other}>
-      {icon && (
-        <StyledIcon disabled={disabled} iconOnly={children ? false : true} name={icon} theme={theme} size={'22px'} />
-      )}
-      {children && <AnchorText>{children}</AnchorText>}
-    </StyledAnchor>
-  );
-};
+export const IconLink: React.SFC<IconLinkProps> = ({ icon, theme, disabled, children, block, ...other }) => (
+  <StyledAnchor disabled={disabled} display={block ? 'block' : 'inline-block'} {...other}>
+    {icon && (
+      <StyledIcon disabled={disabled} iconOnly={children ? false : true} name={icon} theme={theme} size={'22px'} />
+    )}
+    {children && <AnchorText>{children}</AnchorText>}
+  </StyledAnchor>
+);
+
 IconLink.displayName = 'IconLink';

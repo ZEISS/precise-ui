@@ -25,11 +25,10 @@ export interface TabsProps extends TabOptions, StandardProps {
  *
  * The component contains an optional automatic selection of the best view.
  */
-export const Tabs: React.FC<TabsProps> = ({ theme, mode, children, ...props }) => {
-  return (
-    <TabControl tabItemRenderer={TabItem} mode={mode} theme={theme} {...props}>
-      {children}
-    </TabControl>
-  );
-};
+export const Tabs: React.FC<TabsProps> = ({ theme, mode, children, ...props }) => (
+  <TabControl tabItemRenderer={TabItem} mode={mode} theme={theme} {...props}>
+    {children}
+  </TabControl>
+);
+
 Tabs.displayName = 'Tabs';

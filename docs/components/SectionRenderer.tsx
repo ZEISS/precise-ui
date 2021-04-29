@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 // @ts-ignore
-import SectionHeading from 'react-styleguidist/lib/rsg-components/SectionHeading';
+import SectionHeading from 'react-styleguidist/lib/client/rsg-components/SectionHeading';
 // @ts-ignore
-import Markdown from 'react-styleguidist/lib/rsg-components/Markdown';
+import Markdown from 'react-styleguidist/lib/client/rsg-components/Markdown';
 
 interface SectionRendererProps {
   name: string;
@@ -18,21 +18,11 @@ interface SectionRendererProps {
   pagePerSection: boolean;
 }
 
-const SectionRenderer: React.FC<SectionRendererProps> = props => {
+const SectionRenderer: React.FC<SectionRendererProps> = (props) => {
   const { description, content, sections, components, depth, slug, pagePerSection, name } = props;
 
   return (
     <section>
-      {name && (
-        <SectionHeading
-          depth={depth}
-          id={slug}
-          slotName="sectionToolbar"
-          pagePerSection={pagePerSection}
-          slotProps={props}>
-          {name}
-        </SectionHeading>
-      )}
       {description && <Markdown text={description} />}
       {content}
       {sections}

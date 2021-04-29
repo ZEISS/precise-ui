@@ -1,4 +1,8 @@
-export type ComponentLabel = string | { (input: any): string };
+interface ComponentLabelFunction<T> {
+  (input?: T): string;
+}
+
+export type ComponentLabel = string | ComponentLabelFunction<unknown>;
 
 interface Labels {
   [key: string]: ComponentLabel;
@@ -107,14 +111,26 @@ export function setLabels(labels: LabelOverwrite) {
   Object.assign(defaultLabels, labels);
 }
 
-export function getLabel(key: string, args?: any) {
-  const label = typeof defaultLabels[key] === 'function' ? (defaultLabels[key] as Function)(args) : defaultLabels[key];
+export function getLabel<T>(key: string, args?: T) {
+  const label =
+    typeof defaultLabels[key] === 'function'
+      ? ((defaultLabels[key] as unknown) as ComponentLabelFunction<T>)(args)
+      : defaultLabels[key];
 
   return (typeof label === 'string' && label) || '';
 }
 
-export function getPropLabel<TProps, TKey extends keyof TProps>(props: TProps, name: TKey & string, value?: any) {
-  const label = typeof props[name] === 'function' ? (props[name] as any)(value) : props[name];
+interface PropLabelFunction<T> {
+  (value?: T): string;
+}
+
+export function getPropLabel<TProps, TKey extends keyof TProps, TValue>(
+  props: TProps,
+  name: TKey & string,
+  value?: TValue,
+) {
+  const label =
+    typeof props[name] === 'function' ? ((props[name] as unknown) as PropLabelFunction<TValue>)(value) : props[name];
 
   if (typeof label === 'string' && label) {
     return label;

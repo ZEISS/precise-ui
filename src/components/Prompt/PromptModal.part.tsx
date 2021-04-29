@@ -49,15 +49,13 @@ const DefaultModal: React.FC<PromptDefaultModalProps> = ({
   onConfirm,
   onCancel,
   open,
-}) => {
-  return (
-    <Modal open={open}>
-      <ModalHeader title={title} />
-      {typeof message === 'string' && <ModalBody>{message}</ModalBody>}
-      <ModalFooter>
-        <StyledActionLink onClick={onCancel}>{cancelText}</StyledActionLink>
-        <Button onClick={onConfirm}>{confirmText}</Button>
-      </ModalFooter>
-    </Modal>
-  );
-};
+}) => (
+  <Modal open={open}>
+    <ModalHeader title={title} />
+    {typeof message === 'string' && <ModalBody>{message}</ModalBody>}
+    <ModalFooter>
+      <StyledActionLink onClick={onCancel}>{cancelText}</StyledActionLink>
+      <Button onClick={onConfirm}>{confirmText}</Button>
+    </ModalFooter>
+  </Modal>
+);

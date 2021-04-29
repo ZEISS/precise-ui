@@ -172,7 +172,7 @@ class AutocompleteInt<T> extends React.Component<SupportedAutocompleteProps<T> &
     }
   }
 
-  private updateValue(value: string, suggestionSelected: boolean = false) {
+  private updateValue(value: string, suggestionSelected = false) {
     const { onChange, name = '', form } = this.props;
 
     if (!this.state.controlled) {
@@ -188,7 +188,7 @@ class AutocompleteInt<T> extends React.Component<SupportedAutocompleteProps<T> &
 
     switch (keyCode) {
       case KeyCodes.down:
-      case KeyCodes.up:
+      case KeyCodes.up: {
         e.preventDefault();
         const { open } = this.state;
         open &&
@@ -197,6 +197,7 @@ class AutocompleteInt<T> extends React.Component<SupportedAutocompleteProps<T> &
             focus: false,
           }));
         break;
+      }
     }
   };
 

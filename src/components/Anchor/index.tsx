@@ -75,7 +75,7 @@ function getHref(link: string | AnchorUrlLocator | undefined) {
 
 export class Anchor extends React.PureComponent<AnchorProps> {
   static contextTypes = {
-    // tslint:disable-next-line
+    // eslint-disable-next-line
     router: () => null,
   };
 

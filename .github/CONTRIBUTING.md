@@ -103,7 +103,7 @@ Hotfix branches are created from the master branch. For example, say version 1.2
 production release running live and causing troubles due to a severe bug. But changes on develop
 are yet unstable. We may then branch off a hotfix branch and start fixing the problem:
 
-```sh
+```shell
 git checkout -b hotfix/1.2.1 master
 npm version patch -m "Upgrade to %s for reasons"
 git commit -a -m "Bumped version number to 1.2.1"
@@ -112,7 +112,7 @@ git commit -a -m "Bumped version number to 1.2.1"
 Don't forget to bump the version number after branching off!
 Then, fix the bug and commit the fix in one or more separate commits.
 
-```sh
+```shell
 git commit -m "Fixed severe production problem"
 ```
 
@@ -126,7 +126,7 @@ Following is a short guide on how to make a valid Pull Request.
    Clone the newly forked repository locally and set up a new remote that points to the original
    project so that you can grab any changes and bring them into your local copy.
 
-   ```sh
+   ```shell
    git remote add upstream git@github.com:ZEISS/precise-ui.git
    ```
 
@@ -144,7 +144,7 @@ Following is a short guide on how to make a valid Pull Request.
 4. Before pushing your code, few more task that need to be preformed:
 
    - Make sure that the test and build scripts run successfully
-     ```sh
+     ```shell
      npm test
      npm run build
      ```
@@ -154,7 +154,7 @@ Following is a short guide on how to make a valid Pull Request.
 
 5. Commit and push the code to the origin.
 
-   ```sh
+   ```shell
    git commit -m "Description of my awesome new feature"
    git push origin HEAD
    ```

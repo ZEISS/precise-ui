@@ -1,4 +1,4 @@
-import { LabeledInputProps, InputChangeEvent } from '../../common';
+import { LabeledInputProps } from '../../common';
 
 /**
  * Event for tracking user input.

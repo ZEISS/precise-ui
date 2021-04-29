@@ -3,7 +3,7 @@ function clamp(n: number) {
 }
 
 export interface UpdatePositionHandler {
-  (h: number, v: number, active: boolean, rect: ClientRect, moved: boolean): Boolean;
+  (h: number, v: number, active: boolean, rect: ClientRect, moved: boolean): boolean;
 }
 
 interface SimpleTouchEvent {

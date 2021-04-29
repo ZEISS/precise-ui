@@ -1,7 +1,7 @@
 import * as icons from './icons';
 
 declare global {
-  interface AdditionalIconNames {}
+  interface AdditionalIconNames {} // eslint-disable-line
 }
 
 export type IconName = keyof typeof icons | keyof AdditionalIconNames;

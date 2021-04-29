@@ -32,8 +32,8 @@ const TableRenderer: React.SFC<TableRendererProps> = ({ rows, columns, getRowKey
         data={rows}
         condensed
         borderless
-        getRowKey={e => getRowKey(rows[e.index])}
-        cellRenderer={e => {
+        getRowKey={(e) => getRowKey(rows[e.index])}
+        cellRenderer={(e) => {
           const col = columns[e.column];
           const row = rows[e.row];
           return col.render(row);
@@ -43,7 +43,7 @@ const TableRenderer: React.SFC<TableRendererProps> = ({ rows, columns, getRowKey
     );
   }
 
-  //tslint:disable-next-line
+  // eslint-disable-next-line
   return null;
 };
 

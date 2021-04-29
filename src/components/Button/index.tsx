@@ -66,7 +66,7 @@ export interface StyledButtonProps extends AnchorProps {
   disableMobileFullWidth?: boolean;
 }
 
-export interface IconWrapperProps extends StandardProps {}
+export type IconWrapperProps = StandardProps;
 
 function getThemeSettings(theme: PreciseFullTheme, buttonStyle?: ButtonStyle) {
   switch (buttonStyle) {

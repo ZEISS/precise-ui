@@ -5,9 +5,9 @@ import { HomePage } from './HomePage';
 import { AppState } from './context';
 
 // @ts-ignore
-import Ribbon from 'react-styleguidist/lib/rsg-components/Ribbon';
+import Ribbon from 'react-styleguidist/lib/client/rsg-components/Ribbon';
 // @ts-ignore
-import Logo from 'react-styleguidist/lib/rsg-components/Logo';
+import Logo from 'react-styleguidist/lib/client/rsg-components/Logo';
 import { createGlobalStyle } from '../../src';
 
 interface StyleGuideRendererProps {
@@ -22,7 +22,7 @@ function useTheme() {
   const [state, setState] = React.useState<AppState>({ theme: themes.light });
 
   React.useEffect(() => {
-    window.setContext = ctx => {
+    window.setContext = (ctx) => {
       const nextState = { ...state, ...ctx };
       setState(nextState);
       window.context = nextState;
@@ -39,7 +39,7 @@ function useTheme() {
 }
 
 /*
-  CSS animations should be disabled to ensure that animations don't 
+  CSS animations should be disabled to ensure that animations don't
   affect `react-styleguidist-visual` screenshots
 */
 const GlobalStyle = createGlobalStyle`
@@ -64,7 +64,7 @@ const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ children, hasS
       {isTest && <GlobalStyle />}
       <ThemeProvider theme={theme}>
         <Responsive
-          render={size => {
+          render={(size) => {
             const Layout = size !== 'small' ? DesktopLayout : MobileLayout;
             return (
               <Layout logo={<Logo />} ribbon={<Ribbon />} {...props} hasSidebar={!isTest && hasSidebar}>

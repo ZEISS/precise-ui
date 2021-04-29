@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Tabs, TabPage, styled, Headline, distance, TabChangeEvent } from '../../src';
 
 // @ts-ignore
-import Pathline from 'react-styleguidist/lib/rsg-components/Pathline';
+import Pathline from 'react-styleguidist/lib/client/rsg-components/Pathline';
 
 interface ReactComponentRendererProps {
   name: string;
@@ -93,7 +93,7 @@ class SingleReactComponent extends React.Component<ReactComponentRendererProps, 
   }
 }
 
-const ReactComponentRenderer: React.SFC<ReactComponentRendererProps> = props => {
+const ReactComponentRenderer: React.SFC<ReactComponentRendererProps> = (props) => {
   return <SingleReactComponent {...props} />;
 };
 
