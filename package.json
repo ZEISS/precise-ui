@@ -16,7 +16,7 @@
     "test:watch": "npm run test:unit -- --watch",
     "prettier": "prettier --config prettier.config.js --write 'src/**/*.{ts,tsx}'",
     "build": "rimraf dist && npm run build:bundle && npm run build:es5 && npm run build:es6",
-    "build:bundle": "cross-env NODE_ENV=production webpack -p",
+    "build:bundle": "cross-env NODE_ENV=production webpack --mode production",
     "build:es5": "build-with-transform-jsx -t es5 --outDir dist/es5 --declaration --inlineSourceMap --inlineSources --config ./tsconfig.json",
     "build:es6": "build-with-transform-jsx -t es6 -m es6 --outDir dist/es6 --declaration --inlineSourceMap --inlineSources --config ./tsconfig.json",
     "build:demo": "cross-env NODE_ENV=production styleguidist build",
