@@ -67,7 +67,7 @@ export const StyledTableHeader = styled.th<TableHeaderProps>`
 `;
 
 export const getDefaultHeaderCellRenderer = (sort: (key: string, order: 'ascending' | 'descending') => void) => <
-  T extends Record<string, unknown>
+  T extends unknown
 >({
   value,
   sorting,

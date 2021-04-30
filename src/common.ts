@@ -415,7 +415,7 @@ export interface StandardProps {
   style?: React.CSSProperties;
 }
 
-export interface InputChangeEvent<T, TElement = Element> {
+export interface InputChangeEvent<T> {
   /**
    * The current value of the input field.
    */
@@ -423,10 +423,10 @@ export interface InputChangeEvent<T, TElement = Element> {
   /**
    * Original change event
    */
-  originalEvent?: React.ChangeEvent<TElement>;
+  originalEvent?: React.ChangeEvent<any>;
 }
 
-export interface InputProps<T, TElement = Element> extends StandardProps {
+export interface InputProps<T> extends StandardProps {
   /**
    * Sets the component as disabled.
    */
@@ -442,7 +442,7 @@ export interface InputProps<T, TElement = Element> extends StandardProps {
   /**
    * Event emitted once the value changes due to user input.
    */
-  onChange?(e: InputChangeEvent<T, TElement>): void;
+  onChange?(e: InputChangeEvent<T>): void;
   /**
    * Event triggered once the input gets focused.
    */
@@ -454,7 +454,7 @@ export interface InputProps<T, TElement = Element> extends StandardProps {
   /**
    * Event triggered when a key was pressed.
    */
-  onInput?(e?: InputChangeEvent<string, TElement>): void;
+  onInput?(e?: InputChangeEvent<string>): void;
   /**
    * Optional name if to be used within a form context.
    */

@@ -1,25 +1,19 @@
-import onClickOutside from 'react-onclickoutside';
+import onClickOutside, {
+  OnClickOutProps,
+  AdditionalProps,
+  ConfigObject,
+  InjectedOnClickOutProps,
+  WrapperClass,
+} from 'react-onclickoutside';
 import { withInner } from 'typescript-plugin-inner-jsx/withInner';
 
-export interface OutsideInjectedProps {
-  disableOnClickOutside(): void;
-  enableOnClickOutside(): void;
-}
+export type OutsideInjectedProps = InjectedOnClickOutProps;
 
-export interface OutsideAdditionalProps {
-  handleClickOutside?: React.MouseEventHandler<HTMLElement>;
-  eventTypes?: string | Array<string>;
-  outsideClickIgnoreClass?: string;
-  preventDefault?: boolean;
-  stopPropagation?: boolean;
-  excludeScrollbar?: boolean;
-}
+export type OutsideAdditionalProps = AdditionalProps;
 
-export interface OutsideClickOptions {
-  excludeScrollbar?: boolean;
-}
+export type OutsideClickOptions = Pick<ConfigObject, 'excludeScrollbar'>;
 
-export type OutsideComponentProps<P> = OutsideAdditionalProps & Pick<P, Exclude<keyof P, keyof OutsideInjectedProps>>;
+export type OutsideComponentProps<P> = OnClickOutProps<P>;
 
 /**
  * Wraps the component with a helper that detects if the wrapped component
@@ -28,10 +22,7 @@ export type OutsideComponentProps<P> = OutsideAdditionalProps & Pick<P, Exclude<
  * @param options The options for configuration.
  * @returns The wrapped component.
  */
-export function withOutsideClick<TProps>(
-  Component: React.ComponentType<TProps>,
-  options: OutsideClickOptions = {},
-): React.ComponentClass<OutsideComponentProps<TProps>> {
+export function withOutsideClick<TProps>(Component: React.ComponentType<TProps>, options: OutsideClickOptions = {}) {
   return withInner(
     onClickOutside(Component, {
       excludeScrollbar: options.excludeScrollbar,

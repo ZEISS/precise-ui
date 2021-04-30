@@ -16,18 +16,23 @@ const defaultMonths = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', '
 function patchLocale(locale: Locale, inputWeekDays = defaultWeekDays, months = defaultMonths): Locale {
   // in react-datepicker week starts from Sunday, not from Monday
   const weekDays = [...inputWeekDays.slice(-1), ...inputWeekDays.slice(0, -1)];
+
   return {
     ...locale,
-    localize: {
-      ...locale.localize,
-      month: (month: number) => months[month],
-      day: (day: number) => weekDays[day],
-    },
-    match: {
-      ...locale.match,
-      month: (month: string) => months.indexOf(month),
-      day: (day: string) => weekDays.indexOf(day),
-    },
+    localize: locale.localize
+      ? {
+          ...locale.localize,
+          month: (...args: Array<any>) => months[args[0]],
+          day: (...args: Array<any>) => weekDays[args[0]],
+        }
+      : undefined,
+    match: locale.match
+      ? {
+          ...locale.match,
+          month: (...args: Array<any>) => months.indexOf(args[0]),
+          day: (...args: Array<any>) => weekDays.indexOf(args[0]),
+        }
+      : undefined,
   };
 }
 
