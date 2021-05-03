@@ -3,7 +3,6 @@ import onClickOutside, {
   AdditionalProps,
   ConfigObject,
   InjectedOnClickOutProps,
-  WrapperClass,
 } from 'react-onclickoutside';
 import { withInner } from 'typescript-plugin-inner-jsx/withInner';
 

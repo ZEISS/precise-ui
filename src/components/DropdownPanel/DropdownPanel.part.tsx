@@ -66,7 +66,7 @@ const CustomWrapper: React.SFC<InteractiveListWrapperProps> = ({ border: _0, dir
   <div {...props} />
 );
 
-class SlideDownTabsInt extends React.Component<SlideDownTabsProps, SlideDownTabsState> {
+export class SlideDownTabsInt extends React.Component<SlideDownTabsProps, SlideDownTabsState> {
   constructor(props: SlideDownTabsProps) {
     super(props);
     this.state = {

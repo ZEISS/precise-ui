@@ -94,8 +94,7 @@ function renderValue(data: Array<string | InteractiveListItem>, value: string) {
 
   return value;
 }
-
-class SelectButtonInt extends React.PureComponent<SelectButtonProps, SelectButtonState> {
+export class SelectButtonInt extends React.PureComponent<SelectButtonProps, SelectButtonState> {
   constructor(props: SelectButtonProps) {
     super(props);
     const controlled = props.value !== undefined;
