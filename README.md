@@ -9,7 +9,7 @@
 [![CLA Assistant](https://cla-assistant.io/readme/badge/ZEISS/precise-ui)](https://cla-assistant.io/ZEISS/precise-ui)
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/ZEISS/precise-ui)
 
-A complete opinionated React component library with minimal dependencies powered ZEISS.
+A complete opinionated React component library with minimal dependencies powered by ZEISS.
 
 The UI component library contains both, very low-level design elements as well as combined high-level design elements. In general, the intention of the library is to simplify development by exposing components that satisfy design specifications and provide ease of programming. Repeatable UI designs should therefore only take minutes instead of hours.
 

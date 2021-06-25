@@ -1,8 +1,76 @@
 # Precise UI Changelog
 
+## 1.5.1
+
+- Fix marking selected date in Datepicker of `DateField`
+
+## 1.5.0
+
+- Add `closeable` property for `Notification` component
+- Add `disableMobileFullWidth` property for `Button` component
+- Fix word breaking in `TextField`
+- Hold Tab/ContentSwitch inner component state while switching between screen sizes
+
+## 1.4.2
+
+- Fix button documentation
+
+## 1.4.1
+
+- Fix compatibility issue with improvements on SearchField
+
+## 1.4.0
+
+- Improve documentation of breakpoint types
+- Add trigger mode `manual` for `SearchField`
+- Removing clearable from Autocomplete docs
+
+## 1.3.0
+
+- Update `Form` component to receive `prompt` prop as component
+- Add custom dialog for `Prompt` component
+
+## 1.2.0
+
+- Add the ability to clean datetimepicker
+
+## 1.1.4
+
+- Add ability to display the files list under the File Uploader
+
+## 1.1.3
+
+- Add new icons
+
+## 1.1.2
+
+- Fix TagBuilder not deleting tags properly with backspace (#223)
+
+## 1.1.1
+
+- Added new theme object `actionButtonWarning`
+
+## 1.1.0
+
+- Add `borderless` and `tagRenderer` props to AutocompleteTagBuilder
+- Remove refocus of component(Autocomplete) on every value change, remove corresponding test
+- Enable `date-fns` tree-shaking
+
+## 1.0.2
+- Fix opening file selection of `FileUploader` for single file upload (#243)
+
+## 1.0.1
+
+- Fix opening `UploaderProgressDetails` behind modal in IE (#225)
+
+## 1.0.0
+
+- Bumped Precise UI to major version 1. From now on, Precise UI follows **semver** guidelines.
+- Fix Accordion not responding when defaultSelectedIndex is set
+
 ## 0.8.3
 
-- `Skeleton` component added
+- Added `Skeleton` component
 - Added onBeforeClose event to Modal
 - Added appendTagOnBlur prop to TagBuilder
 - Added onSort callback to Table

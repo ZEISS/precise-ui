@@ -1,7 +1,10 @@
 import { Locale } from 'date-fns';
+import format from 'date-fns/esm/format';
+import isAfter from 'date-fns/esm/isAfter';
+import isValidDate from 'date-fns/esm/isValid';
+import parse from 'date-fns/esm/parse';
 
 const longFormatters = require('date-fns/_lib/format/longFormatters');
-import { parse, isValid as isValidDate, format, isAfter } from 'date-fns';
 
 declare global {
   interface Window {
@@ -123,7 +126,7 @@ function formatDate(date: Date, formatStr: string, locale: string | Locale = '')
 }
 
 export function safeDateFormat(
-  date: Date,
+  date: Date | undefined,
   { dateFormat, locale }: { dateFormat: string | Array<string>; locale?: string | Locale },
 ) {
   return (date && formatDate(date, Array.isArray(dateFormat) ? dateFormat[0] : dateFormat, locale)) || '';

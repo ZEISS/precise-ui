@@ -322,6 +322,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
 
     if (inputPosition > 0) {
       this.removeTag(inputPosition - 1);
+      this.setState({ inputPosition: inputPosition - 1 });
     }
   }
 

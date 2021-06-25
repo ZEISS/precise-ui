@@ -1,9 +1,12 @@
 import * as React from 'react';
 import { StandardProps } from '../../common';
-import { TabControl, TabOptions } from '../TabControl';
+import { TabOptions, withTabControl } from '../TabControl';
 import { ResponsiveTabs, TabsMode } from './Tabs.part';
+import { TabItem } from '../TabPanel/TabPanel.part';
 
 export { TabsMode };
+
+const TabControl = withTabControl(ResponsiveTabs);
 
 export interface TabsProps extends TabOptions, StandardProps {
   /**
@@ -22,7 +25,11 @@ export interface TabsProps extends TabOptions, StandardProps {
  *
  * The component contains an optional automatic selection of the best view.
  */
-export const Tabs: React.SFC<TabsProps> = ({ theme, mode, ...props }) => (
-  <TabControl render={items => <ResponsiveTabs mode={mode} items={items} />} {...props} />
-);
+export const Tabs: React.FC<TabsProps> = ({ theme, mode, children, ...props }) => {
+  return (
+    <TabControl tabItemRenderer={TabItem} mode={mode} theme={theme} {...props}>
+      {children}
+    </TabControl>
+  );
+};
 Tabs.displayName = 'Tabs';
