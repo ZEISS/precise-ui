@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 1.5.2
+
+- Fix sorting of `Table` and `AccordionTable` when groups are defined
+
 ## 1.5.1
 
 - Fix marking selected date in Datepicker of `DateField`
