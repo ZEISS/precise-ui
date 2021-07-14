@@ -153,7 +153,5 @@ export function sortObjectList<T extends {}>(
     sorter(result, items, groupBy, undefined, order === 'descending');
   }
 
-  console.log('RESULT: ', result);
-
   return result;
 }
