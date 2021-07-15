@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled, Headline, Icon, IconName, Button, BodyText, StackPanel, StackItem, colors } from '../../src';
 
 // @ts-ignore
-import Markdown from 'react-styleguidist/lib/rsg-components/Markdown';
+import Markdown from 'rsg-components/Markdown';
 
 const HeadIcon = styled(Icon)`
   vertical-align: text-bottom;

@@ -3,7 +3,7 @@
 Standard usage of a `FileUploaderDetails` component.
 
 ```jsx
-const { FileUploaderDetails, FileUploader, eventManagers, FileUploadActions } = require('precise-ui');
+import { FileUploaderDetails, FileUploader, eventManagers, FileUploadActions } from 'precise-ui';
 
 class FileUploaderDetailsExample extends React.Component {
   constructor(props) {

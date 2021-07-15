@@ -3,7 +3,7 @@
 Simple tab control.
 
 ```jsx
-const { Tabs, TabPage } = require('precise-ui');
+import { Tabs, TabPage } from 'precise-ui';
 
 <Tabs>
   <TabPage header="First">
@@ -24,7 +24,7 @@ const { Tabs, TabPage } = require('precise-ui');
 Simple tab control starting at a different tab.
 
 ```jsx
-const { Tabs, TabPage } = require('precise-ui');
+import { Tabs, TabPage } from 'precise-ui';
 
 <Tabs defaultIndex={2}>
   <TabPage header="First">
@@ -54,7 +54,7 @@ The latter is automatically active if no value for `selectedIndex` was  (initial
 Let's see the controlled mode in action.
 
 ```jsx
-const { Tabs, TabPage } = require('precise-ui');
+import { Tabs, TabPage } from 'precise-ui';
 
 class MyTabComponent extends React.Component {
   constructor() {

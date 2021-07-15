@@ -3,7 +3,7 @@
 The interactive surface is sensitive to both, touch and mouse events. It reports the x and y coordinates on clicks / drags.
 
 ```jsx
-const { InteractiveSurface } = require('precise-ui');
+import { InteractiveSurface } from 'precise-ui';
 
 class DisplayLastValue extends React.Component {
   constructor(props) {

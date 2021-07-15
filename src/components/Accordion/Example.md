@@ -3,7 +3,7 @@
 Using the `AccordionTab` components used to specify children tabs.
 
 ```jsx
-const { Accordion, AccordionTab } = require('precise-ui');
+import { Accordion, AccordionTab } from 'precise-ui';
 
 <Accordion>
   <AccordionTab header="One">
@@ -21,7 +21,7 @@ const { Accordion, AccordionTab } = require('precise-ui');
 An example with multiple expansions.
 
 ```jsx
-const { Accordion, AccordionTab } = require('precise-ui');
+import { Accordion, AccordionTab } from 'precise-ui';
 
 <Accordion multiple>
     <AccordionTab header="One">
@@ -41,7 +41,7 @@ const { Accordion, AccordionTab } = require('precise-ui');
 Following example demonstrates theme usage for component style adjustments.
 
 ```jsx
-const { Accordion, AccordionTab } = require('precise-ui');
+import { Accordion, AccordionTab } from 'precise-ui';
 
 <Accordion theme={{ accordionPadding: '1em 0', accordionContentPadding: '1em', accordionLine: '1px dashed grey' }}>
   <AccordionTab header="M header">
@@ -61,7 +61,7 @@ const { Accordion, AccordionTab } = require('precise-ui');
 An example with controlled mode and tab open by default. In this mode component behavior is controlled by code exclusively.
 
 ```jsx
-const { Accordion, AccordionTab } = require('precise-ui');
+import { Accordion, AccordionTab } from 'precise-ui';
 
 <Accordion selectedIndex={1}>
     <AccordionTab header="One">
@@ -81,7 +81,7 @@ const { Accordion, AccordionTab } = require('precise-ui');
 You can also set a first state for the `Accordion` without moving it to the controlled mode.
 
 ```jsx
-const { Accordion, AccordionTab } = require('precise-ui');
+import { Accordion, AccordionTab } from 'precise-ui';
 
 <Accordion defaultSelectedIndex={0}>
     <AccordionTab header="One">

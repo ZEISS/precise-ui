@@ -3,7 +3,7 @@
 Simplest example of `Headline` component will render the default h3 tag.
 
 ```jsx
-const { Headline } = require('precise-ui');
+import { Headline } from 'precise-ui';
 
 <Headline>h3 headline</Headline>
 ```
@@ -13,7 +13,7 @@ const { Headline } = require('precise-ui');
 Component is supporting levels from 1-5, setting the `level` property will set the corresponding html tag:
 
 ```jsx
-const { Headline } = require('precise-ui');
+import { Headline } from 'precise-ui';
 
 <Headline level={2}>h2 headline</Headline>
 ```
@@ -21,7 +21,7 @@ const { Headline } = require('precise-ui');
 Headline could also be used as subheader by passing subheader flag.
 
 ```jsx
-const { Headline } = require('precise-ui');
+import { Headline } from 'precise-ui';
 
 <div>
   <Headline>Adipisicing dolore ut sit dolor.</Headline>
@@ -34,7 +34,7 @@ const { Headline } = require('precise-ui');
 Headlines are responsive by nature: they adjust font-size and line-height depending on screen size.
 
 ```jsx
-const { Headline }= require('precise-ui');
+import { Headline } from 'precise-ui';
 
 <div>
   <Headline level={1}>h1 headline</Headline>

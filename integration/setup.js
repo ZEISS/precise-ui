@@ -7,6 +7,8 @@ const buildDemo = () =>
   });
 
 module.exports = async jestConfig => {
-  await buildDemo();
-  await setupPuppeteer(jestConfig);
+  await Promise.all([
+    buildDemo(),
+    setupPuppeteer(jestConfig)
+  ])
 };

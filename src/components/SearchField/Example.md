@@ -7,7 +7,7 @@ It comes with a default icon in form of a search icon, but also allows custom pr
 Furthermore, it provides an event `onSearch` that fires using a debounce. The debounce can be configured using `delay` prop, which is normally set to 200. The time is given in milliseconds.
 
 ```jsx
-const { SearchField } = require('precise-ui');
+import { SearchField } from 'precise-ui';
 
 <SearchField label="Search" onSearch={value => console.log(value)} />
 ```
@@ -17,16 +17,16 @@ const { SearchField } = require('precise-ui');
 There is also an option to have a search button instead of firing the search event on every keystroke (or using a debounce).
 
 ```jsx
-const { SearchField } = require('precise-ui');
+import { SearchField } from 'precise-ui';
 
 <SearchField label="Manually Triggered Search" onSearch={value => console.log('Manually triggered:', value)} triggerMode="manual" />
 ```
 
-It is possible to easily combine the `SearchField` with suggestions, even when using the manual mode. 
+It is possible to easily combine the `SearchField` with suggestions, even when using the manual mode.
 However, be aware that when selecting a suggestion, it will also trigger a search.
 
 ```jsx
-const { SearchField } = require('precise-ui');
+import { SearchField } from 'precise-ui';
 
 <SearchField
   suggestions={['one', 'two', 'three']}

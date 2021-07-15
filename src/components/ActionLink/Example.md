@@ -3,7 +3,7 @@
 A simple call to action link:
 
 ```jsx
-const { ActionLink } = require('precise-ui');
+import { ActionLink } from 'precise-ui';
 
 <ActionLink href="#🍕">Click me</ActionLink>
 ```
@@ -11,7 +11,7 @@ const { ActionLink } = require('precise-ui');
 Custom interaction after clicking the link.
 
 ```jsx
-const { ActionLink } = require('precise-ui');
+import { ActionLink } from 'precise-ui';
 
 <ActionLink onClick={() => alert('Hi')}>Click me</ActionLink>
 ```
@@ -21,7 +21,7 @@ const { ActionLink } = require('precise-ui');
 This is a disabled action link:
 
 ```jsx
-const { ActionLink } = require('precise-ui');
+import { ActionLink } from 'precise-ui';
 
 <ActionLink disabled href="#🍕">Click me</ActionLink>
 ```

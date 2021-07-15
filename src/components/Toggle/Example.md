@@ -3,7 +3,7 @@
 Standard usage of a `Toggle` component.
 
 ```jsx
-const { Toggle } = require('precise-ui');
+import { Toggle } from 'precise-ui';
 
 <Toggle />
 ```
@@ -11,7 +11,7 @@ const { Toggle } = require('precise-ui');
 The `Toggle` could be disabled as well.
 
 ```jsx
-const { Toggle } = require('precise-ui');
+import { Toggle } from 'precise-ui';
 
 <Toggle disabled defaultValue={true} label="Toggle Label">On</Toggle>
 ```
@@ -21,7 +21,7 @@ const { Toggle } = require('precise-ui');
 The component supports two modes - managed and controlled. By default, the managed mode is selected. When we supply a `value` initially we create the component in controlled mode.
 
 ```jsx
-const { Toggle } = require('precise-ui');
+import { Toggle } from 'precise-ui';
 
 class MyToggle extends React.Component {
   constructor(props) {
@@ -50,7 +50,7 @@ class MyToggle extends React.Component {
 Like with all other input components it is possible to annotate the visual realization with an error message.
 
 ```jsx
-const { Toggle } = require('precise-ui');
+import { Toggle } from 'precise-ui';
 
 <Toggle label="Agree to the terms & conditions" error="You need to agree">Agree</Toggle>
 ```

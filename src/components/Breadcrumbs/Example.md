@@ -3,7 +3,7 @@
 Straight forward `Breadcrumb` navigation bar.
 
 ```jsx
-const { Breadcrumbs, Breadcrumb } = require('precise-ui');
+import { Breadcrumbs, Breadcrumb } from 'precise-ui';
 
 <Breadcrumbs>
   <Breadcrumb title="Breadcrumb 1" to="/breadcrumb/1" />
@@ -17,7 +17,7 @@ const { Breadcrumbs, Breadcrumb } = require('precise-ui');
 Once a certain size (by default 5) is reached a part of the elements is collapsed.
 
 ```jsx
-const { Breadcrumbs, Breadcrumb } = require('precise-ui');
+import { Breadcrumbs, Breadcrumb } from 'precise-ui';
 
 <Breadcrumbs>
   <Breadcrumb title="Breadcrumb 1" to="/breadcrumb/1" />
@@ -33,7 +33,7 @@ const { Breadcrumbs, Breadcrumb } = require('precise-ui');
 Alternatively, the maximum size can also be changed.
 
 ```jsx
-const { Breadcrumbs, Breadcrumb } = require('precise-ui');
+import { Breadcrumbs, Breadcrumb } from 'precise-ui';
 
 <Breadcrumbs size={3}>
   <Breadcrumb title="Breadcrumb 1" to="/breadcrumb/1" />
@@ -47,7 +47,7 @@ const { Breadcrumbs, Breadcrumb } = require('precise-ui');
 Omitting typical link items will result in a standard text, e.g., for the last item.
 
 ```jsx
-const { Breadcrumbs, Breadcrumb } = require('precise-ui');
+import { Breadcrumbs, Breadcrumb } from 'precise-ui';
 
 <Breadcrumbs size={3}>
   <Breadcrumb title="Home" to="/home" />

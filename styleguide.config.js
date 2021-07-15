@@ -21,6 +21,7 @@ module.exports = {
   pagePerSection: true,
   compilerConfig: {
     transforms: {
+      moduleImport: false,
       dangerousTaggedTemplateString: true,
     },
     objectAssign: 'Object.assign',

@@ -22,10 +22,10 @@ const PreviewPanel = styled.div`
 const CodePanel = styled.div`
   padding: ${distance.medium};
   background: rgba(75, 78, 82, 0.05);
-
-  div.CodeMirror {
-    background: transparent;
-    padding: ${distance.large} ${distance.xsmall} 0 ${distance.xsmall};
+  
+  textarea,
+  textarea:focus {
+    border: none !important;
   }
 `;
 

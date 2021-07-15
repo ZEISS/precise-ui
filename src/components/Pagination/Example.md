@@ -3,7 +3,7 @@
 Using the `Pagination` component on some arbitrary children.
 
 ```jsx
-const { Pagination } = require('precise-ui');
+import { Pagination } from 'precise-ui';
 
 <Pagination size={2}>
   <div>First</div>
@@ -19,7 +19,7 @@ const { Pagination } = require('precise-ui');
 The `host` prop can be used to define the rendering in greater detail.
 
 ```jsx
-const { Pagination } = require('precise-ui');
+import { Pagination } from 'precise-ui';
 
 <Pagination size={5} host="ul">
   <li>First</li>
@@ -37,7 +37,7 @@ const { Pagination } = require('precise-ui');
 The following example shows that changing the number of elements (e.g., by filtering) still caps the page.
 
 ```jsx
-const { SearchField, Pagination } = require('precise-ui');
+import { SearchField, Pagination } from 'precise-ui';
 
 class Foo extends React.Component {
   constructor(props) {
@@ -71,7 +71,7 @@ class Foo extends React.Component {
 When providing the size property as an array, additional `items per page` pagination control will appear with the option to choose one of the provided sizes.
 
 ```jsx
-const { Pagination } = require('precise-ui');
+import { Pagination } from 'precise-ui';
 const data = Array.apply(null, { length: 250 }).map((a, i) => <div key={i}>Item {i}</div>);
 
 <Pagination size={[20, 50, 100]} host="ul">
@@ -84,7 +84,7 @@ const data = Array.apply(null, { length: 250 }).map((a, i) => <div key={i}>Item 
 The combination of table component and pagination is particularly promising, especially in the scenario of many rows.
 
 ```jsx
-const { Pagination, Table } = require('precise-ui');
+import { Pagination, Table } from 'precise-ui';
 const data = Array.apply(null, { length: 250 }).map((v, i) => ({ X: i, Y: i }));
 const paginate = ({ table, rows, props }) => <Pagination host={table} size={20} {...props}>{rows}</Pagination>;
 

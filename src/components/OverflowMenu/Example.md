@@ -3,7 +3,7 @@
 The `OverflowMenu` provides a simple button hosting a fylout menu with some options.
 
 ```jsx
-const { OverflowMenu } = require('precise-ui');
+import { OverflowMenu } from 'precise-ui';
 
 <OverflowMenu
   items={[
@@ -19,7 +19,7 @@ const { OverflowMenu } = require('precise-ui');
 The button can be freely chosen. Furthermore, the props passed on the flyout and interactive list can be changed as well.
 
 ```jsx
-const { OverflowMenu, IconLink } = require('precise-ui');
+import { OverflowMenu, IconLink } from 'precise-ui';
 
 <OverflowMenu
   button={<IconLink icon="MoreVert" />}

@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 // @ts-ignore
-import SectionHeading from 'react-styleguidist/lib/rsg-components/SectionHeading';
+import SectionHeading from 'rsg-components/SectionHeading';
 // @ts-ignore
-import Markdown from 'react-styleguidist/lib/rsg-components/Markdown';
+import Markdown from 'rsg-components/Markdown';
 
 interface SectionRendererProps {
   name: string;
