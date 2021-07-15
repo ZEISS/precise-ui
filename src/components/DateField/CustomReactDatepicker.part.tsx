@@ -19,8 +19,8 @@ function patchLocale(locale: Locale, inputWeekDays = defaultWeekDays, months = d
   return {
     ...locale,
     localize: {
-      ordinalNumber () {},
-      era () {},
+      ordinalNumber() {},
+      era() {},
       quarter() {},
       dayPeriod() {},
       ...locale.localize,
@@ -28,8 +28,8 @@ function patchLocale(locale: Locale, inputWeekDays = defaultWeekDays, months = d
       day: (day: number) => weekDays[day],
     },
     match: {
-      ordinalNumber () {},
-      era () {},
+      ordinalNumber() {},
+      era() {},
       quarter() {},
       dayPeriod() {},
       ...locale.match,
