@@ -23,12 +23,12 @@ const BasicBadge = styled.div`
   text-align: center;
 `;
 
-const FilledBadge = styled(BasicBadge)`
+const FilledBadge = styled(BasicBadge as any)`
   color: ${themed(({ theme }) => theme.badgeBackground)};
   background: ${themed(({ theme }) => theme.badgeColor)};
 `;
 
-const NormalBadge = styled(BasicBadge)`
+const NormalBadge = styled(BasicBadge as any)`
   ${getFontStyle({ size: 'xSmall' })}
   display: inline-block;
   color: ${themed(({ theme }) => theme.badgeColor)};
@@ -41,6 +41,6 @@ const NormalBadge = styled(BasicBadge)`
 /**
  * The badge component is a simple informative display.
  */
-export const Badge: React.SFC<BadgeProps> = ({ fill = false, ...props }) =>
+export const Badge: React.FC<BadgeProps> = ({ fill = false, ...props }) =>
   fill ? <FilledBadge {...props} /> : <NormalBadge {...props} />;
 Badge.displayName = 'Badge';

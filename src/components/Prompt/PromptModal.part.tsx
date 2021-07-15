@@ -27,11 +27,11 @@ export const PromptModal: React.FC<PromptModalProps> = ({ history, when, message
       onConfirm={() => {
         setShowModal(false);
         handleContinue();
-        modalOptions.onConfirm && modalOptions.onConfirm();
+        typeof modalOptions.onConfirm === 'function' && modalOptions.onConfirm();
       }}
       onCancel={() => {
         setShowModal(false);
-        modalOptions.onConfirm && modalOptions.onCancel();
+        typeof modalOptions.onConfirm === 'function' && modalOptions.onCancel();
       }}
     />
   );

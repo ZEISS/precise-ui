@@ -77,7 +77,7 @@ function getMediaQuery(query: string): ThemedCssFunction<any> {
   return (strings: any, ...interpolations: Array<any>) =>
     css`
       @media ${query} {
-        ${css(strings, ...interpolations)};
+        ${css(strings, ...interpolations) as any};
       }
     `;
 }

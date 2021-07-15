@@ -17,7 +17,7 @@ const StyledSticky = styled.div<StickyProps>`
   flex: 1 1 auto;
 `;
 
-export const Sticky: React.SFC<StickyProps> = props => {
+export const Sticky: React.FC<StickyProps> = props => {
   const { position = 'bottom', ...rest } = props;
   return (
     <StyledSticky position={position} {...rest}>

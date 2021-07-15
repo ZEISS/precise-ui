@@ -95,14 +95,14 @@ const Cube0 = styled.div`
   animation: ${SpinnerAnimation} 1.8s infinite ease-in-out;
 `;
 
-const Cube1 = styled(Cube0)`
+const Cube1 = styled(Cube0 as any)`
   animation-delay: -0.9s;
 `;
 
 /**
  * The spinner component displays a loading spinner optionally equipped with a label text.
  */
-export const Spinner: React.SFC<SpinnerProps> = ({ theme, size = 'medium', children, ...props }) => {
+export const Spinner: React.FC<SpinnerProps> = ({ theme, size = 'medium', children, ...props }) => {
   const spinningProps = { theme, size, hidden: props.hidden };
 
   return (

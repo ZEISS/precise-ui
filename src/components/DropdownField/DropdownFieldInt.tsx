@@ -42,8 +42,8 @@ interface DropDownOptionsTextProps {
   disabled?: boolean;
 }
 
-const DropdownInputBox = styled(StyledInputBox)`
-  border: 1px solid ${themed(({ focused, theme: { ui4 } }) => (focused ? ui4 : transparent))};
+const DropdownInputBox = styled(StyledInputBox as any)`
+  border: 1px solid ${themed(({ focused, theme: { ui4 } }: any) => (focused ? ui4 : transparent))};
 `;
 
 const DropdownOptionText = styled.div<DropDownOptionsTextProps>`
@@ -107,7 +107,7 @@ const DropdownPopup = styled(WindowPopup)`
 // tslint:disable-next-line
 const NotOpenComponent = null;
 
-const StandardWrapper: React.SFC<InteractiveListWrapperProps> = ({ open, ...props }) =>
+const StandardWrapper: React.FC<InteractiveListWrapperProps> = ({ open, ...props }) =>
   open ? <StyledStandardWrapper {...props} /> : NotOpenComponent;
 StandardWrapper.displayName = 'StandardWrapper';
 
@@ -246,12 +246,12 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
   }
 
   private show = () =>
-    new Promise(resolve => {
+    new Promise<void>(resolve => {
       this.setState({ open: true }, resolve);
     });
 
   private hide = () =>
-    new Promise(resolve => {
+    new Promise<void>(resolve => {
       this.setState({ open: false }, resolve);
     });
 

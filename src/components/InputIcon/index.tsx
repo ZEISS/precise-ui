@@ -16,7 +16,7 @@ export interface InputIconProps {
   onClick?(): void;
 }
 
-export const InputIcon: React.SFC<InputIconProps> = ({
+export const InputIcon: React.FC<InputIconProps> = ({
   disabled,
   clearable,
   hasValue,

@@ -99,7 +99,7 @@ module.exports = {
       {
         test: /\.tsx$/,
         exclude: /node_modules/,
-        loader: 'awesome-typescript-loader',
+        loader: 'ts-loader',
         options: {
           getCustomTransformers: () => ({ before: [innerJsxTransformer] }),
         },
@@ -107,7 +107,7 @@ module.exports = {
       {
         test: /\.ts$/,
         exclude: /node_modules/,
-        loader: 'awesome-typescript-loader',
+        loader: 'ts-loader',
         options: {
           silent: true
         }

@@ -15,5 +15,5 @@ export interface TabPageProps extends StandardProps {
 /**
  * The tab page component to define a single tab within a tabs component.
  */
-export const TabPage: React.SFC<TabPageProps> = ({ header: _0, ...props }) => <div {...props} />;
+export const TabPage: React.FC<TabPageProps> = ({ header: _0, ...props }) => <div {...props} />;
 TabPage.displayName = 'TabPage';

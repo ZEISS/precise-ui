@@ -12,7 +12,7 @@ const NavItems = styled.div`
   overflow-y: auto;
 `;
 
-const TableOfContentsRenderer: React.SFC<TableOfContentsRendererProps> = ({
+const TableOfContentsRenderer: React.FC<TableOfContentsRendererProps> = ({
   children,
   searchTerm,
   onSearchTermChange,

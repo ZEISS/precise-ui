@@ -62,7 +62,7 @@ export interface SlideDownTabsState {
   isOpen: boolean;
 }
 
-const CustomWrapper: React.SFC<InteractiveListWrapperProps> = ({ border: _0, direction: _1, open: _2, ...props }) => (
+const CustomWrapper: React.FC<InteractiveListWrapperProps> = ({ border: _0, direction: _1, open: _2, ...props }) => (
   <div {...props} />
 );
 
@@ -119,7 +119,7 @@ class SlideDownTabsInt extends React.Component<SlideDownTabsProps, SlideDownTabs
   }
 }
 
-export const SlideDownTabs = onClickOutside(SlideDownTabsInt);
+export const SlideDownTabs: React.FC<SlideDownTabsProps> = onClickOutside(SlideDownTabsInt) as any;
 
 export const DropdownContainer = styled.div``;
 

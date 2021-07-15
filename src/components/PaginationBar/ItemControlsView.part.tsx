@@ -33,7 +33,7 @@ export interface ItemControlsProps {
   onChange?(attr: SelectButtonChangeEvent): void;
 }
 
-export const ItemControls: React.SFC<ItemControlsProps> = ({ label, data, value, children, onChange }) => (
+export const ItemControls: React.FC<ItemControlsProps> = ({ label, data, value, children, onChange }) => (
   <StyledItemControls>
     {label}
     <SelectButton data={data} value={value} onChange={onChange} />

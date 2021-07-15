@@ -12,7 +12,7 @@ interface TableRendererProps {
   getRowKey(row: Row): string;
 }
 
-const TableRenderer: React.SFC<TableRendererProps> = ({ rows, columns, getRowKey }) => {
+const TableRenderer: React.FC<TableRendererProps> = ({ rows, columns, getRowKey }) => {
   if (rows.length) {
     const cols = {};
     const [row] = rows;

@@ -185,16 +185,14 @@ function notEqual(a: Array<DashboardTile>, b: Array<DashboardTile>) {
 }
 
 function resetStyle(node: HTMLElement) {
-  // tslint:disable-next-line
-  const defaultValue = null;
   const style = node.style;
   style.position = 'static';
-  style.cursor = defaultValue;
-  style.width = defaultValue;
-  style.height = defaultValue;
-  style.left = defaultValue;
-  style.top = defaultValue;
-  style.zIndex = defaultValue;
+  style.removeProperty('cursor');
+  style.removeProperty('width');
+  style.removeProperty('height');
+  style.removeProperty('left');
+  style.removeProperty('top');
+  style.removeProperty('zIndex');
 }
 
 const Preview = styled.div`

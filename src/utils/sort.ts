@@ -98,10 +98,16 @@ function getComparer(exampleValue: any, reverse: boolean): (a: any, b: any) => b
 
 function getCombinedComparer<T>(keyValues: Array<T[keyof T]>, groupValues: Array<T[keyof T]>, reverse: boolean) {
   const hasGroups = groupValues && groupValues.length;
-  const keycomparer = getComparer(keyValues.find(item => !!item), reverse);
+  const keycomparer = getComparer(
+    keyValues.find(item => !!item),
+    reverse,
+  );
 
   if (hasGroups) {
-    const groupcomparer = getComparer(groupValues.find(item => !!item), false); // Group order is always ascending
+    const groupcomparer = getComparer(
+      groupValues.find(item => !!item),
+      false,
+    ); // Group order is always ascending
 
     return (a: number, b: number) =>
       groupcomparer(groupValues[a], groupValues[b]) ||

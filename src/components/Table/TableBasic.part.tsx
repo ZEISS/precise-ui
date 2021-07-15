@@ -32,7 +32,8 @@ interface StyledTableProps {
 
 const StyledTable = styled.table<StyledTableProps>(
   themed(
-    ({ theme, borderless, condensed }) => css`
+    ({ theme, borderless, condensed }) =>
+      css`
     ${getFontStyle({ size: 'small', lineHeight: 'xSmall' })}
 
     table-layout: ${theme.tableLayout};
@@ -49,7 +50,7 @@ const StyledTable = styled.table<StyledTableProps>(
         padding-right: 0;
       }
     }
-    `,
+    ` as any,
   ),
 );
 
@@ -60,7 +61,7 @@ interface TableHostProps extends StandardProps {
   foot: React.ReactNode;
 }
 
-const TableHost: React.SFC<TableHostProps> = ({ head, foot, theme, children, ...props }) => (
+const TableHost: React.FC<TableHostProps> = ({ head, foot, theme, children, ...props }) => (
   <StyledTable theme={theme} {...props}>
     {head}
     <StyledTableBody theme={theme}>{children}</StyledTableBody>
@@ -76,7 +77,7 @@ const StyledTableCell = styled.td`
   text-align: left;
 `;
 
-const StyledPlaceholderCell = styled(StyledTableCell)`
+const StyledPlaceholderCell = styled(StyledTableCell as any)`
   text-align: center;
 `;
 

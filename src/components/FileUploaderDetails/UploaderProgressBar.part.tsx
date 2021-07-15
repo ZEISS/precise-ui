@@ -12,14 +12,15 @@ import { getPropLabel, UploaderProgressBarLabels, ComponentLabel } from '../../u
 
 const ProgressBarWrapper = styled.div(
   themed(
-    ({ theme }) => css`
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-      box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
-      border: solid 1px ${theme.ui4};
-      background-color: ${theme.text4};
-    `,
+    ({ theme }) =>
+      css`
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
+        border: solid 1px ${theme.ui4};
+        background-color: ${theme.text4};
+      ` as any,
   ),
 );
 
@@ -105,7 +106,7 @@ export interface UploaderProgressBarProps extends UploaderProgressBarLabels {
   errors: number;
 }
 
-export const UploaderProgressBar: React.SFC<UploaderProgressBarProps> = ({
+export const UploaderProgressBar: React.FC<UploaderProgressBarProps> = ({
   total,
   onClose,
   onShow,

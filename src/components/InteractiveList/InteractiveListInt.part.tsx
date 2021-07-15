@@ -39,29 +39,31 @@ const InteractiveListContainer = styled.div`
 
 const ListWrapper = styled('ul')<InteractiveListWrapperProps>(
   themed(
-    ({ open, border, direction, theme: { ui4 } }) => css`
-      display: ${open ? 'block' : 'none'};
-      list-style: none;
-      width: 100%;
-      position: relative;
-      transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
-      box-sizing: border-box;
-      box-shadow: none;
-      margin: 0;
-      padding: 0;
-      background: ${transparent};
-      border: 1px solid ${border === InteractiveListBorderType.none ? transparent : ui4};
-      ${direction === InteractiveListDirection.normal ? 'border-top: none' : 'border-bottom: none'};
-      max-height: 100%;
-      overflow-y: auto;
-      z-index: 100;
-    `,
+    ({ open, border, direction, theme: { ui4 } }) =>
+      css`
+        display: ${open ? 'block' : 'none'};
+        list-style: none;
+        width: 100%;
+        position: relative;
+        transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
+        box-sizing: border-box;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        background: ${transparent};
+        border: 1px solid ${border === InteractiveListBorderType.none ? transparent : ui4};
+        ${direction === InteractiveListDirection.normal ? 'border-top: none' : 'border-bottom: none'};
+        max-height: 100%;
+        overflow-y: auto;
+        z-index: 100;
+      ` as any,
   ),
 );
 
 const ListItem = styled.li<ListItemProps>(
   themed(
-    ({ hovered, theme: { ui3, text2 }, disabled }) => css`
+    ({ hovered, theme: { ui3, text2 }, disabled }) =>
+      css`
       ${getFontStyle({ size: 'medium' })}
       
       background: ${hovered ? ui3 : transparent};
@@ -84,7 +86,7 @@ const ListItem = styled.li<ListItemProps>(
           text-decoration: none;
         }
       }
-    `,
+    ` as any,
   ),
 );
 

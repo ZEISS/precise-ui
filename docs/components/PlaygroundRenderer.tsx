@@ -40,7 +40,7 @@ const ToolbarContainer = styled(StackItem)`
   margin-top: -4px;
 `;
 
-const PlaygroundRenderer: React.SFC<PlaygroundRendererProps> = ({
+const PlaygroundRenderer: React.FC<PlaygroundRendererProps> = ({
   preview,
   tabButtons,
   tabBody,

@@ -7,7 +7,7 @@ import { breakpoints } from '../../themes';
 export { StepIndicatorMode, StepIndicatorProps };
 export { StepIndicatorStep } from './StepIndicatorStep.part';
 
-export interface StepIndicatorType extends React.SFC<StepIndicatorProps> {
+export interface StepIndicatorType extends React.FC<StepIndicatorProps> {
   (props: StepIndicatorProps & { children?: React.ReactNode }, context?: any): JSX.Element;
 }
 

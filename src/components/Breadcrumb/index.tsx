@@ -34,7 +34,7 @@ const StyledText = styled.span`
 /**
  * Represents a single Breadcrumb which is a special version of a link.
  */
-export const Breadcrumb: React.SFC<BreadcrumbProps> = props => {
+export const Breadcrumb: React.FC<BreadcrumbProps> = props => {
   const { title, to, href, onClick, ...rest } = props;
 
   if (!to && !href && !onClick) {

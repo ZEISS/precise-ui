@@ -61,7 +61,7 @@ const defaultAlign: ContainerAlignment = 'center';
 /**
  * Represents a simple reusable container for outer layouts.
  */
-export const Container: React.SFC<ContainerProps> = ({
+export const Container: React.FC<ContainerProps> = ({
   align = defaultAlign,
   maxWidth = undefined,
   innerRef,

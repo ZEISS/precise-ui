@@ -28,7 +28,7 @@ const FocusKeeper = styled.a`
   overflow: hidden;
 `;
 
-const StyledModalBackground = styled(FixedContainer)`
+const StyledModalBackground = styled(FixedContainer as any)`
   overflow: hidden;
   z-index: 9999;
   background: ${transparentize(dark, 0.4)};

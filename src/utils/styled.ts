@@ -1,10 +1,8 @@
 /* tslint:disable:import-blacklist */
-import * as React from 'react';
 import * as styledComponents from 'styled-components';
 import {
   ThemedStyledComponentsModule,
   ThemedCssFunction,
-  StyledFunction,
   ThemedStyledProps,
   InterpolationFunction,
 } from 'styled-components';

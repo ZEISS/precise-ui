@@ -59,7 +59,7 @@ interface AccordionTableCardHostProps {
   borderless: boolean;
 }
 
-const AccordionTableCardHost: React.SFC<AccordionTableCardHostProps> = props => <StyledList {...props} />;
+const AccordionTableCardHost: React.FC<AccordionTableCardHostProps> = props => <StyledList {...props} />;
 
 export class AccordionTableCard<T> extends React.Component<AccordionTableProps<T>, AccordionTableCardState> {
   constructor(props: AccordionTableProps<T>) {

@@ -53,19 +53,45 @@ describe('<Highlight />', () => {
   });
 
   it('should render <Highlight> matching the indices', () => {
-    const wrapper = shallow(<Highlight text="Hello World! Searching for World!" matches={[[1, 3], [6, 12]]} />);
+    const wrapper = shallow(
+      <Highlight
+        text="Hello World! Searching for World!"
+        matches={[
+          [1, 3],
+          [6, 12],
+        ]}
+      />,
+    );
     expect(wrapper.children()).toHaveLength(5);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('<Highlight> should throw error when indices are invalid', () => {
-    const build = () => shallow(<Highlight text="Hello World! Searching for World!" matches={[[1, 0], [3, 2]]} />);
+    const build = () =>
+      shallow(
+        <Highlight
+          text="Hello World! Searching for World!"
+          matches={[
+            [1, 0],
+            [3, 2],
+          ]}
+        />,
+      );
     expect(build).toThrowError('[start] must be lower than [end].');
   });
 
   it('<Highlight> should throw error when indices are overlapping', () => {
     const build = () =>
-      shallow(<Highlight text="Hello World! Searching for World!" matches={[[0, 1], [0, 2], [0, 3]]} />);
+      shallow(
+        <Highlight
+          text="Hello World! Searching for World!"
+          matches={[
+            [0, 1],
+            [0, 2],
+            [0, 3],
+          ]}
+        />,
+      );
     expect(build).toThrowError('match indices cannot overlap.');
   });
 

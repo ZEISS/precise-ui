@@ -32,7 +32,7 @@ const defaultAlign: TextAlign = 'left';
 /**
  * Represents the body text component for placing normal text.
  */
-export const BodyText: React.SFC<BodyTextProps> = ({ align = defaultAlign, ...props }) => (
+export const BodyText: React.FC<BodyTextProps> = ({ align = defaultAlign, ...props }) => (
   <StyledBodyText align={align} {...props} />
 );
 BodyText.displayName = 'BodyText';

@@ -131,7 +131,7 @@ const PseudoButtonStyle = (colorTheme: ButtonThemeSettings) => css`
   }
 `;
 
-const AnchorInt: React.SFC<StyledButtonProps> = ({ buttonStyle, ...props }) => <Anchor {...props} />;
+const AnchorInt: React.FC<StyledButtonProps> = ({ buttonStyle, ...props }) => <Anchor {...props} />;
 const StyledButton = styled(AnchorInt)<StyledButtonProps>(
   themed(props => {
     const themeSettings = getThemeSettings(props.theme, props.buttonStyle);
@@ -160,7 +160,7 @@ const StyledButton = styled(AnchorInt)<StyledButtonProps>(
         width: 100%;
         margin: ${distance.small} 0;
       `};
-    `;
+    ` as any;
   }),
 );
 

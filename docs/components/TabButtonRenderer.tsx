@@ -8,7 +8,7 @@ interface TabButtonRendererProps {
   children: React.ReactNode;
 }
 
-const TabButtonRenderer: React.SFC<TabButtonRendererProps> = ({ onClick, active, children }) => {
+const TabButtonRenderer: React.FC<TabButtonRendererProps> = ({ onClick, active, children }) => {
   return (
     <IconLink onClick={onClick} icon={active ? 'KeyboardArrowUp' : 'KeyboardArrowDown'}>
       {children}

@@ -64,7 +64,7 @@ interface HeadProps {
   title: string;
 }
 
-const Head: React.SFC<HeadProps> = ({ icon, title }) => (
+const Head: React.FC<HeadProps> = ({ icon, title }) => (
   <Headline level={5}>
     <HeadIcon name={icon} size={1.3} />
     {title}

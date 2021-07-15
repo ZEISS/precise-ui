@@ -258,7 +258,7 @@ ModalBody.displayName = 'ModalBody';
 /**
  * Styles the header of a modal dialog
  */
-export const ModalHeader: React.SFC<ModalHeaderProps> = ({ title, label, ...rest }) => (
+export const ModalHeader: React.FC<ModalHeaderProps> = ({ title, label, ...rest }) => (
   <StyledModalHeader {...rest}>
     {label && <ModalLabel>{label}</ModalLabel>}
     {title && <Headline level={2}>{title}</Headline>}
@@ -270,5 +270,5 @@ ModalHeader.displayName = 'ModalHeader';
 /**
  * Styles the footer of a modal dialog.
  */
-export const ModalFooter: React.SFC<StandardProps> = props => <StyledModalFooter {...props} />;
+export const ModalFooter: React.FC<StandardProps> = props => <StyledModalFooter {...props} />;
 ModalFooter.displayName = 'ModalFooter';

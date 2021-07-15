@@ -9,13 +9,14 @@ import { getFontStyle } from '../../textStyles';
 
 const Container = styled.div(
   themed(
-    ({ theme: { ui4, text1 } }) => css`
-      ${getFontStyle({ size: 'medium' })}
+    ({ theme: { ui4, text1 } }) =>
+      css`
+        ${getFontStyle({ size: 'medium' })}
 
-      position: relative;
-      border: 1px solid ${ui4};
-      color: ${text1};
-    `,
+        position: relative;
+        border: 1px solid ${ui4};
+        color: ${text1};
+      ` as any,
   ),
 );
 
@@ -64,7 +65,7 @@ interface TableCardHostProps {
   borderless: boolean;
 }
 
-const TableCardHost: React.SFC<TableCardHostProps> = props => <List {...props} />;
+const TableCardHost: React.FC<TableCardHostProps> = props => <List {...props} />;
 
 export class TableCard<T> extends React.Component<TableProps<T>> {
   constructor(props: TableProps<T>) {

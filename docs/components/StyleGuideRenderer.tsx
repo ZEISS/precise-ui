@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const StyleGuideRenderer: React.SFC<StyleGuideRendererProps> = ({ children, hasSidebar, ...props }) => {
+const StyleGuideRenderer: React.FC<StyleGuideRendererProps> = ({ children, hasSidebar, ...props }) => {
   const theme = useTheme();
   const isTest = process.env.NODE_ENV === 'test';
 

@@ -92,7 +92,7 @@ export interface LayoutProps {
   hasSidebar: boolean;
 }
 
-export const MobileLayout: React.SFC<LayoutProps> = ({ toc, ribbon, version, children, logo }) => (
+export const MobileLayout: React.FC<LayoutProps> = ({ toc, ribbon, version, children, logo }) => (
   <MobileContainer>
     <HeadLine>
       <MobileMenu toc={toc} />
@@ -106,7 +106,7 @@ export const MobileLayout: React.SFC<LayoutProps> = ({ toc, ribbon, version, chi
   </MobileContainer>
 );
 
-export const DesktopLayout: React.SFC<LayoutProps> = ({ hasSidebar, title, toc, ribbon, version, children, logo }) => (
+export const DesktopLayout: React.FC<LayoutProps> = ({ hasSidebar, title, toc, ribbon, version, children, logo }) => (
   <DesktopContainer>
     {hasSidebar && (
       <TocColumn>

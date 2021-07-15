@@ -53,15 +53,16 @@ const StyledHeaderContainer = styled('div')<ActiveProps>(
 
 export const StyledActionContainer = styled.div<ActiveProps>(
   themed(
-    ({ open, theme: { ui0, ui1 } }) => css`
-      text-align: center;
-      padding: ${distance.small} ${distance.medium};
-      cursor: pointer;
-      background: ${open ? ui1 : ui0};
-      border: ${open ? `1px solid ${ui0}` : 'none'};
-      margin: -1px -1px -1px -1px;
-      color: ${open ? ui0 : ui1};
-    `,
+    ({ open, theme: { ui0, ui1 } }) =>
+      css`
+        text-align: center;
+        padding: ${distance.small} ${distance.medium};
+        cursor: pointer;
+        background: ${open ? ui1 : ui0};
+        border: ${open ? `1px solid ${ui0}` : 'none'};
+        margin: -1px -1px -1px -1px;
+        color: ${open ? ui0 : ui1};
+      ` as any,
   ),
 );
 

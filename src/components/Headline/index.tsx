@@ -63,14 +63,15 @@ function getStyledHeadline(level: number) {
   if (!Headline) {
     const NewHeadline = styled(component as 'h1')<StyledHeadlineProps>(
       themed(
-        props => css`
-          ${getHeadlineStyle(props.level)}
+        props =>
+          css`
+            ${getHeadlineStyle(props.level)}
 
-          margin: 0;
-          padding: ${props.theme.headingsPadding || `0 ${distance.small} 0 0`};
-          font-family: ${props.theme.fontFamily || 'inherit'};
-          color: ${props.subheader ? props.theme.text5 : 'inherit'};
-        `,
+            margin: 0;
+            padding: ${props.theme.headingsPadding || `0 ${distance.small} 0 0`};
+            font-family: ${props.theme.fontFamily || 'inherit'};
+            color: ${props.subheader ? props.theme.text5 : 'inherit'};
+          ` as any,
       ),
     );
     Headlines[component] = NewHeadline;
@@ -83,7 +84,7 @@ function getStyledHeadline(level: number) {
 /**
  * Headline component with styles for all headline levels.
  */
-export const Headline: React.SFC<HeadlineProps> = ({ level = 3, children, ...rest }) => {
+export const Headline: React.FC<HeadlineProps> = ({ level = 3, children, ...rest }) => {
   const StyledHeadline = getStyledHeadline(level);
   return (
     <StyledHeadline level={level} {...rest}>

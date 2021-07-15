@@ -13,7 +13,7 @@ interface SectionHeadingRendererProps {
   deprecated: boolean;
 }
 
-const SectionHeadingRenderer: React.SFC<SectionHeadingRendererProps> = ({ children, depth }) => {
+const SectionHeadingRenderer: React.FC<SectionHeadingRendererProps> = ({ children, depth }) => {
   return <Headline level={depth as any}>{children}</Headline>;
 };
 

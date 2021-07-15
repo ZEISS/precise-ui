@@ -65,7 +65,7 @@ const ChangePage = styled.button<ChangePageProps>`
   }
 `;
 
-export const PageControls: React.SFC<PageControlsProps> = ({
+export const PageControls: React.FC<PageControlsProps> = ({
   children,
   current,
   total,

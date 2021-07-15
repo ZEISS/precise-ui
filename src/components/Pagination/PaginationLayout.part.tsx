@@ -15,7 +15,7 @@ export interface PaginationProps {
   content: React.ReactNode;
 }
 
-export const PaginationLayout: React.SFC<PaginationProps> = ({ host = 'div', controls, content, ...props }) => {
+export const PaginationLayout: React.FC<PaginationProps> = ({ host = 'div', controls, content, ...props }) => {
   const Content = host;
   return (
     <RootContainer>

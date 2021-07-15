@@ -5,5 +5,5 @@ import { TagBuilderProps } from './TagBuilder.types.part';
 
 export * from './TagBuilder.types.part';
 
-export const TagBuilder: React.SFC<TagBuilderProps> = withFormContext(TagBuilderInt);
+export const TagBuilder: React.FC<TagBuilderProps> = withFormContext(TagBuilderInt);
 TagBuilder.displayName = 'TagBuilder';

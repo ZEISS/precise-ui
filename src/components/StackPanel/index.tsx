@@ -59,7 +59,7 @@ function mapFlex(direction?: StackPanelDirection) {
 /**
  * The stack panel displays a stack of children in a given direction.
  */
-export const StackPanel: React.SFC<StackPanelProps> = ({ theme, direction, wrap, innerRef, ...props }) => {
+export const StackPanel: React.FC<StackPanelProps> = ({ theme, direction, wrap, innerRef, ...props }) => {
   const wrapping = wrap ? 'wrap' : 'nowrap';
   const dir = mapFlex(direction);
   return <StackLayout theme={theme} dir={dir} wrapping={wrapping} ref={innerRef} {...props} />;

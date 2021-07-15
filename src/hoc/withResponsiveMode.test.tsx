@@ -4,7 +4,7 @@ import { withResponsiveMode, ModeProviderProps } from './withResponsiveMode';
 import { RefProps } from '../common';
 
 type Modes = 'table' | 'card';
-const Test: React.SFC<ModeProviderProps<Modes> & RefProps> = ({ innerRef }) => <div ref={innerRef} />;
+const Test: React.FC<ModeProviderProps<Modes> & RefProps> = ({ innerRef }) => <div ref={innerRef} />;
 
 describe('withResponsiveMode', () => {
   const TestWithMode = withResponsiveMode(width => (width > 500 ? 'table' : 'card'))(Test);

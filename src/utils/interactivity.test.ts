@@ -70,7 +70,10 @@ describe('util interactivity', () => {
 
     it('does not react to a touch list with multiple touchpoints', () => {
       const evt = {
-        touches: [{ clientX: 0, clientY: 0 }, { clientX: 0, clientY: 1 }],
+        touches: [
+          { clientX: 0, clientY: 0 },
+          { clientX: 0, clientY: 1 },
+        ],
       };
       let called = false;
       const cb = () => {

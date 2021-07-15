@@ -146,7 +146,7 @@ function spinning(child: React.ReactChild) {
 /**
  * The progress bar component displays a progress indicator ranging from min to max.
  */
-export const ProgressBar: React.SFC<ProgressBarProps> = ({
+export const ProgressBar: React.FC<ProgressBarProps> = ({
   minimum = 0,
   maximum = 100,
   value: propValue,

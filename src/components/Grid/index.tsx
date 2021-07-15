@@ -118,11 +118,11 @@ const BasicGridLayout = styled.div<GridLayoutProps>`
   grid-gap: ${props => props.spacing.join(' ')};
 `;
 
-const GridLayout = styled(BasicGridLayout)`
+const GridLayout = styled(BasicGridLayout as any)`
   opacity: 0.9999;
 `;
 
-const ShadowGrid = styled(BasicGridLayout)`
+const ShadowGrid = styled(BasicGridLayout as any)`
   position: absolute;
 `;
 
@@ -204,26 +204,27 @@ function computeAllocations(props: GridProps): GridLayout {
     columns: typeof columns !== 'string' ? columns : undefined,
   });
 
-  const cells = React.Children.map(children, (child: GridChild, index) => {
-    const position = layout.cells[index];
+  const cells =
+    React.Children.map(children, (child: GridChild, index) => {
+      const position = layout.cells[index];
 
-    if (child && position) {
-      allocation.push(position);
-      const { colSpan, column, row, rowSpan } = position;
+      if (child && position) {
+        allocation.push(position);
+        const { colSpan, column, row, rowSpan } = position;
 
-      if (!colSpan || !rowSpan) {
-        return <HiddenGridCell>{child}</HiddenGridCell>;
+        if (!colSpan || !rowSpan) {
+          return <HiddenGridCell>{child}</HiddenGridCell>;
+        }
+
+        return (
+          <GridCell ci={column} cf={column + colSpan} ri={row} rf={row + rowSpan} key={index}>
+            {child}
+          </GridCell>
+        );
       }
 
-      return (
-        <GridCell ci={column} cf={column + colSpan} ri={row} rf={row + rowSpan} key={index}>
-          {child}
-        </GridCell>
-      );
-    }
-
-    return undefined;
-  });
+      return undefined;
+    }) || [];
 
   return {
     allocation,

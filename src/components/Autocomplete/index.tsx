@@ -91,25 +91,26 @@ interface StyledAutosuggestWrapperProps {
 
 const StyledAutosuggestWrapper = styled.ul<StyledAutosuggestWrapperProps>(
   themed(
-    ({ direction, theme: { ui1, ui4 } }) => css`
-      list-style: none;
-      width: 100%;
-      box-sizing: border-box;
-      box-shadow: none;
-      margin: 0;
-      padding: 0;
-      background: ${ui1};
-      border: 1px solid ${ui4};
-      ${direction === InteractiveListDirection.normal
-        ? 'border-top-color: transparent'
-        : 'border-bottom-color: transparent'};
-      max-height: 50vh;
-      position: absolute;
-      top: ${direction === InteractiveListDirection.normal ? '100%' : '0px'};
-      transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
-      overflow-y: auto;
-      z-index: 100;
-    `,
+    ({ direction, theme: { ui1, ui4 } }) =>
+      css`
+        list-style: none;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        background: ${ui1};
+        border: 1px solid ${ui4};
+        ${direction === InteractiveListDirection.normal
+          ? 'border-top-color: transparent'
+          : 'border-bottom-color: transparent'};
+        max-height: 50vh;
+        position: absolute;
+        top: ${direction === InteractiveListDirection.normal ? '100%' : '0px'};
+        transform: translateY(${direction === InteractiveListDirection.normal ? 0 : -100}%);
+        overflow-y: auto;
+        z-index: 100;
+      ` as any,
   ),
 );
 

@@ -6,13 +6,21 @@ import { SidebarActivatorContainer } from './SidebarActivatorContainer.part';
 import { CloseButton } from '../CloseButton';
 
 function expectHidden(container: any) {
-  [['visibility', 'hidden'], ['opacity', '0'], ['overflow', 'initial']].forEach(([name, value]) => {
+  [
+    ['visibility', 'hidden'],
+    ['opacity', '0'],
+    ['overflow', 'initial'],
+  ].forEach(([name, value]) => {
     expect(container).toHaveStyleRule(name, value);
   });
 }
 
 function expectShown(container: any) {
-  [['visibility', 'visible'], ['opacity', '1'], ['overflow', 'auto']].forEach(([name, value]) => {
+  [
+    ['visibility', 'visible'],
+    ['opacity', '1'],
+    ['overflow', 'auto'],
+  ].forEach(([name, value]) => {
     expect(container).toHaveStyleRule(name, value);
   });
 }

@@ -18,7 +18,7 @@ export interface DropdownPanelProps extends StandardProps {
 /**
  * Represents the mobile layout used for a tab control.
  */
-export const DropdownPanel: React.SFC<DropdownPanelProps> = ({ theme, data, children, ...props }) => {
+export const DropdownPanel: React.FC<DropdownPanelProps> = ({ theme, data, children, ...props }) => {
   const pages: Array<React.ReactChild> = [];
   const slideDownTabHeaders: Array<TabHeaderItem> = [];
   let selectedIndex = -1;

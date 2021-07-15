@@ -43,7 +43,7 @@ export function registerIcons(icons: IconDefinitions) {
   }
 }
 
-export function getIcon(name: string): React.SFC<SvgIconProps> | undefined {
+export function getIcon(name: string): React.FC<SvgIconProps> | undefined {
   if (registeredIcons[name]) {
     return (props: SvgIconProps) => React.cloneElement(registeredIcons[name], props);
   }

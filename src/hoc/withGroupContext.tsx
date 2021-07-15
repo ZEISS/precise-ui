@@ -9,7 +9,7 @@ export interface GroupContextProps {
 
 export function withGroupContext<TProps extends InputProps<any>>(
   Component: React.ComponentType<TProps & GroupContextProps>,
-): React.SFC<TProps> {
+): React.FC<TProps> {
   return withInner(
     (props: TProps) =>
       props.name ? (

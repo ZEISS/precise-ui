@@ -63,7 +63,7 @@ export interface StyledInputRowProps extends React.HTMLAttributes<HTMLDivElement
   multiline?: boolean;
 }
 
-export const StyledInputRow: React.SFC<StyledInputRowProps> = ({
+export const StyledInputRow: React.FC<StyledInputRowProps> = ({
   children,
   label,
   focused = false,

@@ -41,7 +41,7 @@ const StyledMenuListItem = styled('li')<MenuListItemProps>`
   ${({ active }) => (active ? ActiveStyle : '')};
 `;
 
-export const MenuListItem: React.SFC<MenuListItemProps> = ({ active = false, condensed = false, ...props }) => (
+export const MenuListItem: React.FC<MenuListItemProps> = ({ active = false, condensed = false, ...props }) => (
   <StyledMenuListItem {...props} condensed={condensed} active={active} />
 );
 

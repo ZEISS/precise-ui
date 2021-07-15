@@ -44,32 +44,33 @@ const CheckboxContainer = styled('div')<CheckboxContainerProps>`
 
 const CheckboxBox = styled('div')<CheckboxBoxProps>(
   themed(
-    ({ disabled, checked, theme: { ui0, ui1, ui4, ui5 } }) => css`
-      outline: 0;
-      flex: 0 0 1.0625em;
-      max-width: 1.0625em;
-      height: 1.0625em;
-      position: relative;
-      background: ${checked ? ui5 : ui1};
-      transition: all 0.2s cubic-bezier(0, 0, 0.25, 1);
-      overflow: hidden;
-      border-radius: 2px;
-      border: 2px solid ${disabled ? (checked ? ui5 : ui4) : ui5};
-      box-sizing: border-box;
-
-      &:focus {
-        outline: ${ui0} solid 2px;
-      }
-
-      > i {
+    ({ disabled, checked, theme: { ui0, ui1, ui4, ui5 } }) =>
+      css`
+        outline: 0;
+        flex: 0 0 1.0625em;
+        max-width: 1.0625em;
+        height: 1.0625em;
         position: relative;
-        top: -2px;
-        left: -2px;
-        transition: all 0.2s;
-        opacity: ${checked ? '1' : '0'};
-        transform: ${checked ? 'scale(1)' : 'scale(0)'};
-      }
-    `,
+        background: ${checked ? ui5 : ui1};
+        transition: all 0.2s cubic-bezier(0, 0, 0.25, 1);
+        overflow: hidden;
+        border-radius: 2px;
+        border: 2px solid ${disabled ? (checked ? ui5 : ui4) : ui5};
+        box-sizing: border-box;
+
+        &:focus {
+          outline: ${ui0} solid 2px;
+        }
+
+        > i {
+          position: relative;
+          top: -2px;
+          left: -2px;
+          transition: all 0.2s;
+          opacity: ${checked ? '1' : '0'};
+          transform: ${checked ? 'scale(1)' : 'scale(0)'};
+        }
+      ` as any,
   ),
 );
 

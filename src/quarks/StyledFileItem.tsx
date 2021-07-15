@@ -24,7 +24,7 @@ export interface StyledFileItemProps {
   name?: string;
 }
 
-export const StyledFileItem: React.SFC<StyledFileItemProps> = ({ name, children }) => {
+export const StyledFileItem: React.FC<StyledFileItemProps> = ({ name, children }) => {
   return (
     <FileItem>
       {name && <FileName>{name}</FileName>}

@@ -35,5 +35,5 @@ const Styledlabel = styled.label<LabelProps>`
 /**
  * The label component displays an input or general label.
  */
-export const Label: React.SFC<LabelProps> = ({ toolTip, ...props }) => <Styledlabel title={toolTip} {...props} />;
+export const Label: React.FC<LabelProps> = ({ toolTip, ...props }) => <Styledlabel title={toolTip} {...props} />;
 Label.displayName = 'Label';

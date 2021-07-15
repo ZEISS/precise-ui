@@ -18,7 +18,7 @@ export interface FormContextProps {
  */
 export function withFormContext<TProps extends InputProps<any>>(
   Component: React.ComponentType<TProps & FormContextProps>,
-): React.SFC<TProps> {
+): React.FC<TProps> {
   return withInner(
     (props: TProps) =>
       props.name ? (

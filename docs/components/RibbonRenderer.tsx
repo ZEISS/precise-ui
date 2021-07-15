@@ -47,7 +47,7 @@ const GitHubCat = styled('a')(
   ),
 );
 
-const RibbonRenderer: React.SFC<RibbonRendererProps> = ({ url, text }) => {
+const RibbonRenderer: React.FC<RibbonRendererProps> = ({ url, text }) => {
   return (
     <GitHubCat href={url} aria-label={text} title={text}>
       <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">

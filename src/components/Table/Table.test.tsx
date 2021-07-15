@@ -206,7 +206,14 @@ describe('<Table />', () => {
 
     beforeAll(() => {
       wrapper = enzyme.mount(
-        <Table mode="table" data={[{ a: 1, b: 3, c: 5 }, { a: 2, b: 4, c: 8 }]} onDataClick={onDataClickCallback} />,
+        <Table
+          mode="table"
+          data={[
+            { a: 1, b: 3, c: 5 },
+            { a: 2, b: 4, c: 8 },
+          ]}
+          onDataClick={onDataClickCallback}
+        />,
       );
     });
 

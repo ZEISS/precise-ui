@@ -166,9 +166,10 @@ const ContentContainer = styled.div<LayoutProps>`
 
 const IconContainer = styled.div(
   themed(
-    ({ theme: { notificationIconMarginRight } }) => css`
-      margin-right: ${notificationIconMarginRight};
-    `,
+    ({ theme: { notificationIconMarginRight } }) =>
+      css`
+        margin-right: ${notificationIconMarginRight};
+      ` as any,
   ),
 );
 
@@ -176,7 +177,7 @@ interface StyledIconProps extends IconProps {
   type: NotificationType;
 }
 
-const StyledIconInt: React.SFC<StyledIconProps> = ({ type: _0, ...props }) => <Icon {...props} />;
+const StyledIconInt: React.FC<StyledIconProps> = ({ type: _0, ...props }) => <Icon {...props} />;
 
 const StyledIcon = styled(StyledIconInt)<StyledIconProps>`
   color: ${themed(props => getNotificationColor(props.type, props.theme))};

@@ -4,7 +4,7 @@ import styled, { keyframes, css } from '../../utils/styled';
 import { IconName } from '../Icon';
 import { InputProps, PreciseTheme } from '../../common';
 import { withFormContext, FormContextProps } from '../../hoc/withFormContext';
-import { brightLemon, white, ocean } from '../../colors';
+import { ocean } from '../../colors';
 import { distance } from '../../distance';
 
 export interface RatingProps extends InputProps<number> {
@@ -235,7 +235,7 @@ class RatingInt extends React.Component<RatingProps & FormContextProps, RatingSt
             disabled={disabled}
             onMouseEnter={hovers[i]}
             onMouseLeave={this.hoverVoid}>
-            <RatingIcon index={i} disabled={disabled} value={value} hover={hover} size={dim} as={icons[icon]} />
+            <RatingIcon index={i} disabled={disabled} value={value} hover={hover} size={dim} />
           </RatingElement>
         ))}
       </RatingContainer>

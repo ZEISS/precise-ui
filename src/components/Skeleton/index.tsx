@@ -69,7 +69,7 @@ export const Skeleton: React.FC<SkeletonProps> = props => {
   const skeletons = [];
 
   for (let i = 0; i < count; i++) {
-    const StyledSpan = styled(Span)`
+    const StyledSpan = styled(Span as any)`
       animation: ${shine} ${duration}s infinite linear ${!isPulsing ? 'paused' : 'running'};
 
       ${count > 1 && isText

@@ -42,7 +42,7 @@ const StyledAccordionTableRow = styled.tr<AccordionTableRowProps>(
   ),
 );
 
-export const AccordionTableRow: React.SFC<AccordionTableRowProps> = ({
+export const AccordionTableRow: React.FC<AccordionTableRowProps> = ({
   active = false,
   clickable = true,
   children,

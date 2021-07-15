@@ -9,7 +9,7 @@ const TileContainer = styled.div`
   margin: -10px -10px 0;
 `;
 
-export const MetroRadioGroup: React.SFC<RadioButtonGroupProps> = props => (
+export const MetroRadioGroup: React.FC<RadioButtonGroupProps> = props => (
   <TileContainer>
     <RadioButtonGroup {...props} />
   </TileContainer>

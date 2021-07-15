@@ -41,5 +41,5 @@ const StyledActionLink = styled(Anchor)<StyledActionLink>`
 /**
  * The action link component gives a simple text link to be used in call for action scenarios.
  */
-export const ActionLink: React.SFC<ActionLinkProps> = props => <StyledActionLink {...props} />;
+export const ActionLink: React.FC<ActionLinkProps> = props => <StyledActionLink {...props} />;
 ActionLink.displayName = 'ActionLink';

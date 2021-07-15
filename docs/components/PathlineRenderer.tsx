@@ -10,7 +10,7 @@ const StyledIconLink = styled(IconLink)`
   font-family: Consolas, 'Liberation Mono', Menlo, monospace;
 `;
 
-const PathlineRenderer: React.SFC<PathlineRendererProps> = ({ children }) => {
+const PathlineRenderer: React.FC<PathlineRendererProps> = ({ children }) => {
   return (
     <StyledIconLink icon="ContentCopy" onClick={() => clipboardCopy(children as string)}>
       {children}

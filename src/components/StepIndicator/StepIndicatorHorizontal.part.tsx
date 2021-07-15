@@ -17,7 +17,7 @@ const StyledProgressHost = styled.ol`
   padding-left: ${distance.medium};
 `;
 
-const HorizontalNumber = styled(ListItemNumber)`
+const HorizontalNumber = styled(ListItemNumber as any)`
   top: ${distance.small};
   left: -12px;
 `;
@@ -128,7 +128,7 @@ function getContent(children: React.ReactNode, current: number, numbered?: boole
   };
 }
 
-export const StepIndicatorHorizontal: React.SFC<StepIndicatorProps> = ({
+export const StepIndicatorHorizontal: React.FC<StepIndicatorProps> = ({
   theme,
   steps,
   current = 0,

@@ -33,7 +33,7 @@ const getBorderStyle = (position: 'top' | 'bottom', active = false) => css`
   border-${position}: 4px solid ${themed(({ theme }) => (active ? theme.ui5 : theme.ui4))};
 `;
 
-const IncreaseDecreaseArrowUp = styled(IncreaseDecreaseArrow)`
+const IncreaseDecreaseArrowUp = styled(IncreaseDecreaseArrow as any)`
   top: 4px;
 
   &:before {
@@ -45,7 +45,7 @@ const IncreaseDecreaseArrowUp = styled(IncreaseDecreaseArrow)`
   }
 `;
 
-const IncreaseDecreaseArrowDown = styled(IncreaseDecreaseArrow)`
+const IncreaseDecreaseArrowDown = styled(IncreaseDecreaseArrow as any)`
   bottom: 4px;
 
   &:before {

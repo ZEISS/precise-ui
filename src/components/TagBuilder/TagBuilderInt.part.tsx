@@ -78,7 +78,7 @@ const StyledInput = styled('input')<StyledInputProps>`
   font-family: inherit;
 `;
 
-const RestyledTagItem = styled(StyledTagItem)`
+const RestyledTagItem = styled(StyledTagItem as any)`
   margin: 0 ${distance.small} ${distance.small} 0;
 `;
 
@@ -102,7 +102,7 @@ interface CloseIconProps {
   theme?: PreciseTheme;
 }
 
-const CloseIcon: React.SFC<CloseIconProps> = ({ theme, onClick, onMouseDown }) => (
+const CloseIcon: React.FC<CloseIconProps> = ({ theme, onClick, onMouseDown }) => (
   <StyledIcon theme={theme} name="Close" onClick={onClick} onMouseDown={onMouseDown} />
 );
 

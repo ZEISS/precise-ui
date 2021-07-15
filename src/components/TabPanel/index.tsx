@@ -18,7 +18,7 @@ export interface TabPanelProps extends StandardProps {
 /**
  * Represents the default layout used for a tab control.
  */
-export const TabPanel: React.SFC<TabPanelProps> = ({ theme, data, children, ...props }) => {
+export const TabPanel: React.FC<TabPanelProps> = ({ theme, data, children, ...props }) => {
   const headers: Array<React.ReactChild> = [];
   const pages: Array<React.ReactChild> = [];
 

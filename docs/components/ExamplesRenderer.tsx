@@ -4,7 +4,7 @@ interface ExamplesRendererProps {
   children: React.ReactNode;
 }
 
-const ExamplesRenderer: React.SFC<ExamplesRendererProps> = ({ children }) => {
+const ExamplesRenderer: React.FC<ExamplesRendererProps> = ({ children }) => {
   return <div>{children}</div>;
 };
 

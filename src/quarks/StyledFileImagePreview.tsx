@@ -25,7 +25,7 @@ const PreviewImage = styled.img`
   max-height: ${remCalc('96px')};
 `;
 
-export const StyledFileImagePreview: React.SFC<StyledFileImagePreviewProps> = ({ src, children }) => {
+export const StyledFileImagePreview: React.FC<StyledFileImagePreviewProps> = ({ src, children }) => {
   return (
     <PreviewImageWrapper>
       {src && <PreviewImage src={src} />}

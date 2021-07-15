@@ -42,14 +42,15 @@ export const StyledTableHeaderRow = styled.tr``;
 
 export const StyledTableRow = styled.tr(
   themed(
-    ({ theme: { ui3, ui4, text1 } }) => css`
-      border-bottom: 1px solid ${ui4};
-      color: ${text1};
+    ({ theme: { ui3, ui4, text1 } }) =>
+      css`
+        border-bottom: 1px solid ${ui4};
+        color: ${text1};
 
-      &:hover {
-        background: ${ui3};
-      }
-    `,
+        &:hover {
+          background: ${ui3};
+        }
+      ` as any,
   ),
 );
 

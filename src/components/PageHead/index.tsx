@@ -63,7 +63,7 @@ const HelpLabel = styled.span`
   margin-left: ${distance.small};
 `;
 
-export const PageHead: React.SFC<PageHeadProps> = ({ title, breadcrumbs = [], help, onHelp }) => (
+export const PageHead: React.FC<PageHeadProps> = ({ title, breadcrumbs = [], help, onHelp }) => (
   <>
     <Navigation>
       <Breadcrumbs>

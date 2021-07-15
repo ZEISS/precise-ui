@@ -118,7 +118,7 @@ function getContent(children: React.ReactNode, current: number, numbered?: boole
   return items;
 }
 
-export const StepIndicatorVertical: React.SFC<StepIndicatorProps> = ({
+export const StepIndicatorVertical: React.FC<StepIndicatorProps> = ({
   theme,
   steps,
   current = 0,

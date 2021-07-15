@@ -23,13 +23,14 @@ const StyledTable = styled(Table)`
 
 const ProgressTableRow = styled.tr(
   themed(
-    ({ theme }) => css`
-      border-bottom: 1px solid ${theme.ui4};
-      padding: 0;
-      &:hover {
-        background: ${theme.ui3};
-      }
-    `,
+    ({ theme }) =>
+      css`
+        border-bottom: 1px solid ${theme.ui4};
+        padding: 0;
+        &:hover {
+          background: ${theme.ui3};
+        }
+      ` as any,
   ),
 );
 
@@ -51,12 +52,13 @@ export interface StyledTableRowProps {
 
 export const StyledTableRow = styled.tr<StyledTableRowProps>(
   themed(
-    ({ hasProgressBar, theme }) => css`
-      border-bottom: ${hasProgressBar ? 0 : 1}px solid ${theme.ui4};
-      &:hover {
-        background: ${theme.ui4};
-      }
-    `,
+    ({ hasProgressBar, theme }) =>
+      css`
+        border-bottom: ${hasProgressBar ? 0 : 1}px solid ${theme.ui4};
+        &:hover {
+          background: ${theme.ui4};
+        }
+      ` as any,
   ),
 );
 
@@ -66,7 +68,7 @@ export interface StatusTableProps extends StandardProps, StatusTableLabels {
   onDelete(e: FileUploaderDetailsEvent<FileProgress>): void;
 }
 
-export const StatusTable: React.SFC<StatusTableProps> = ({ theme, files, onCancel, onDelete, ...props }) => {
+export const StatusTable: React.FC<StatusTableProps> = ({ theme, files, onCancel, onDelete, ...props }) => {
   const columns = {
     name: {
       header: getPropLabel(props, 'tableHeaderFileLabel'),

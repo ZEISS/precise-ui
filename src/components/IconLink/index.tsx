@@ -29,25 +29,26 @@ export interface StyledIconProps {
 
 const StyledAnchor = styled(Anchor)<StyledAnchorProps>(
   themed(
-    ({ display, disabled, theme: { ui0, ui4 } }) => css`
-      outline: none;
-      text-decoration: none;
-      color: ${disabled ? ui4 : ui0};
-      display: ${display};
-      font-size: 0;
-      vertical-align: middle;
-      cursor: ${disabled ? 'default' : 'pointer'};
+    ({ display, disabled, theme: { ui0, ui4 } }) =>
+      css`
+        outline: none;
+        text-decoration: none;
+        color: ${disabled ? ui4 : ui0};
+        display: ${display};
+        font-size: 0;
+        vertical-align: middle;
+        cursor: ${disabled ? 'default' : 'pointer'};
 
-      &:hover,
-      &:hover * {
-        color: ${disabled ? ui4 : ocean};
-      }
+        &:hover,
+        &:hover * {
+          color: ${disabled ? ui4 : ocean};
+        }
 
-      &:focus,
-      &:focus * {
-        color: ${disabled ? ui4 : midnight};
-      }
-    `,
+        &:focus,
+        &:focus * {
+          color: ${disabled ? ui4 : midnight};
+        }
+      ` as any,
   ),
 );
 
@@ -68,7 +69,7 @@ const AnchorText = styled.span`
 /**
  * The icon link component shows an icon with optional text.
  */
-export const IconLink: React.SFC<IconLinkProps> = ({ icon, theme, disabled, children, block, ...other }) => {
+export const IconLink: React.FC<IconLinkProps> = ({ icon, theme, disabled, children, block, ...other }) => {
   return (
     <StyledAnchor disabled={disabled} display={block ? 'block' : 'inline-block'} {...other}>
       {icon && (

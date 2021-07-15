@@ -188,10 +188,10 @@ const Arrow = styled.button`
     vertical-align: middle;
   }
 `;
-const ArrowLeft = styled(Arrow)`
+const ArrowLeft = styled(Arrow as any)`
   left: 8px;
 `;
-const ArrowRight = styled(Arrow)`
+const ArrowRight = styled(Arrow as any)`
   right: 8px;
 `;
 
@@ -354,8 +354,7 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
   private resetInitialStyle(node: HTMLElement) {
     const style = node.style;
 
-    // tslint:disable-next-line
-    style.left = null;
+    style.removeProperty('left');
     style.transitionProperty = 'left';
     style.transitionDuration = animationDuration;
     style.transitionTimingFunction = animationFunction;

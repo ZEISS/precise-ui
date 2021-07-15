@@ -52,7 +52,7 @@ function insertSeparators(items: Array<React.ReactChild>) {
 /**
  * Display a list of Breadcrumb elements with optional grouping.
  */
-export const Breadcrumbs: React.SFC<BreadcrumbsProps> = ({ size = 5, children, ...props }) => {
+export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ size = 5, children, ...props }) => {
   const displayElements: Array<React.ReactChild> = [];
   const count = Math.max(size, 1);
 

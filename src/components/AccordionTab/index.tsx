@@ -15,5 +15,5 @@ export interface AccordionTabProps extends StandardProps {
 /**
  * The accordion tab is used to define a single tab within a accordion component.
  */
-export const AccordionTab: React.SFC<AccordionTabProps> = ({ header: _0, ...props }) => <div {...props} />;
+export const AccordionTab: React.FC<AccordionTabProps> = ({ header: _0, ...props }) => <div {...props} />;
 AccordionTab.displayName = 'AccordionTab';

@@ -128,7 +128,7 @@ interface ComponentsListProps {
   useHashId: boolean;
 }
 
-const ComponentsList: React.SFC<ComponentsListProps> = ({ items, useRouterLinks = false, hashPath }) => {
+const ComponentsList: React.FC<ComponentsListProps> = ({ items, useRouterLinks = false, hashPath }) => {
   const { selected, changeSelected } = useSelected(items);
 
   return (

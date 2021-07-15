@@ -40,7 +40,7 @@ const StyledListItem = styled('li')<ListItemProps>`
   }
 `;
 
-export const ListItem: React.SFC<ListItemProps> = ({ border = true, ...props }) => (
+export const ListItem: React.FC<ListItemProps> = ({ border = true, ...props }) => (
   <StyledListItem {...props} border={border} />
 );
 ListItem.displayName = 'ListItem';

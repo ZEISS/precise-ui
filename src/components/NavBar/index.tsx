@@ -70,7 +70,7 @@ const HeaderStackPanel = styled(StackPanel)`
   flex-shrink: 0;
 `;
 
-const StyledNavBar = styled(HeaderStackPanel)`
+const StyledNavBar = styled(HeaderStackPanel as any)`
   padding-top: ${distance.xlarge};
   margin-bottom: ${distance.xxxlarge};
   flex-wrap: wrap;
@@ -166,7 +166,7 @@ interface DesktopHeaderProps {
   pins: Array<NavBarItem>;
 }
 
-const DesktopHeader: React.SFC<DesktopHeaderProps> = ({ leads, pins }) => (
+const DesktopHeader: React.FC<DesktopHeaderProps> = ({ leads, pins }) => (
   <>
     <StyledLinks>
       {leads.map(item => (
@@ -187,7 +187,7 @@ interface MobileHeaderProps {
   open: boolean;
 }
 
-const MobileHeader: React.SFC<MobileHeaderProps> = ({ entries, onToggle, open }) => (
+const MobileHeader: React.FC<MobileHeaderProps> = ({ entries, onToggle, open }) => (
   <>
     <HeaderStackPanel>
       <StyledMenuLink onClick={onToggle}>

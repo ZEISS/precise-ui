@@ -11,7 +11,7 @@ export {
   AccordionCardRendererEvent,
 } from './Accordion.types.part';
 
-export interface AccordionType extends React.SFC<AccordionProps> {
+export interface AccordionType extends React.FC<AccordionProps> {
   (props: AccordionProps & { children?: React.ReactNode }, context?: any): JSX.Element;
 }
 

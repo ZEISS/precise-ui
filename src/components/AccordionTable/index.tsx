@@ -13,7 +13,7 @@ export {
   AccordionTableRowEvent,
 } from './AccordionTable.types.part';
 
-export interface AccordionTableType extends React.SFC<AccordionTableProps<any>> {
+export interface AccordionTableType extends React.FC<AccordionTableProps<any>> {
   <T = {}>(props: AccordionTableProps<T> & { children?: React.ReactNode }, context?: any): JSX.Element;
 }
 
@@ -22,4 +22,4 @@ export interface AccordionTableType extends React.SFC<AccordionTableProps<any>> 
  */
 export const AccordionTable: AccordionTableType = withResponsiveMode<TableMode>(width =>
   !width || width > breakpoints.medium ? 'table' : 'card',
-)(AccordionTableInt) as any;
+)(AccordionTableInt as any) as any;

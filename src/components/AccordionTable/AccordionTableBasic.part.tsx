@@ -39,10 +39,11 @@ const StyledTable = styled(Table)`
 
 const StyledTableRowCollapse = styled.tr<AccordionTableItemProps>(
   themed(
-    ({ theme, active }) => css`
-      border: ${active ? `1px solid ${theme.ui5}` : 'none'};
-      ${!active ? 'display: none;' : ''}
-    `,
+    ({ theme, active }) =>
+      css`
+        border: ${active ? `1px solid ${theme.ui5}` : 'none'};
+        ${!active ? 'display: none;' : ''}
+      ` as any,
   ),
 );
 
@@ -67,7 +68,7 @@ const StyledDetailsContainer = styled.td`
   padding: 0 !important;
 `;
 
-const StyledIconInt: React.SFC<StyledArrowProps> = ({ isRotated: _0, ...props }) => <Icon {...props} />;
+const StyledIconInt: React.FC<StyledArrowProps> = ({ isRotated: _0, ...props }) => <Icon {...props} />;
 
 const StyledIcon = styled(StyledIconInt)<StyledArrowProps>`
   display: block;

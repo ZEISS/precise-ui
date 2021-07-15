@@ -49,7 +49,7 @@ export interface MetroInfoTileProps extends AnchorProps {
 /**
  * Provides a simple tile component that gives a flat info appareance.
  */
-export const MetroInfoTile: React.SFC<MetroInfoTileProps> = ({ children, image, title, ...props }) => (
+export const MetroInfoTile: React.FC<MetroInfoTileProps> = ({ children, image, title, ...props }) => (
   <Tile {...props}>
     {image && <StyledTileIcon src={image} width="33%" height="33%" />}
     {title && <TileTitle>{title}</TileTitle>}

@@ -23,7 +23,7 @@ export interface MobileMenuProps {
   toc?: React.ReactNode;
 }
 
-export const MobileMenu: React.SFC<MobileMenuProps> = ({ toc }) => {
+export const MobileMenu: React.FC<MobileMenuProps> = ({ toc }) => {
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {

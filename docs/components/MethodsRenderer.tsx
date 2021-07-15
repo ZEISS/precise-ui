@@ -10,7 +10,7 @@ interface MethodsRendererProps {
   }>;
 }
 
-const MethodsRenderer: React.SFC<MethodsRendererProps> = ({ children }) => {
+const MethodsRenderer: React.FC<MethodsRendererProps> = ({ children }) => {
   return <div>{children}</div>;
 };
 

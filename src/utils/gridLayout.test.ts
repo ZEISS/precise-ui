@@ -3,7 +3,10 @@ import { checkAllocation, findAllocation, updateAllocation } from './gridLayout'
 describe('gridLayout', () => {
   it('checkAllocation should be true if vacant', () => {
     const layout = {
-      allocations: [[false, false], [false, true]],
+      allocations: [
+        [false, false],
+        [false, true],
+      ],
       flexCols: false,
       flexRows: false,
     };
@@ -13,7 +16,10 @@ describe('gridLayout', () => {
 
   it('checkAllocation should be false if directly occupied', () => {
     const layout = {
-      allocations: [[false, false], [false, true]],
+      allocations: [
+        [false, false],
+        [false, true],
+      ],
       flexCols: false,
       flexRows: false,
     };
@@ -23,7 +29,10 @@ describe('gridLayout', () => {
 
   it('checkAllocation should be false if indirectly occupied for column', () => {
     const layout = {
-      allocations: [[false, false], [false, true]],
+      allocations: [
+        [false, false],
+        [false, true],
+      ],
       flexCols: false,
       flexRows: false,
     };
@@ -33,7 +42,10 @@ describe('gridLayout', () => {
 
   it('checkAllocation should be false if indirectly occupied for row', () => {
     const layout = {
-      allocations: [[false, false], [false, true]],
+      allocations: [
+        [false, false],
+        [false, true],
+      ],
       flexCols: false,
       flexRows: false,
     };
@@ -43,7 +55,10 @@ describe('gridLayout', () => {
 
   it('checkAllocation should be false if indirectly occupied for both', () => {
     const layout = {
-      allocations: [[false, false], [false, true]],
+      allocations: [
+        [false, false],
+        [false, true],
+      ],
       flexCols: false,
       flexRows: false,
     };
@@ -53,7 +68,10 @@ describe('gridLayout', () => {
 
   it('findAllocation should return first place for 1x1 block', () => {
     const layout = {
-      allocations: [[true, false], [false, false]],
+      allocations: [
+        [true, false],
+        [false, false],
+      ],
       flexCols: false,
       flexRows: false,
     };
@@ -68,7 +86,10 @@ describe('gridLayout', () => {
 
   it('findAllocation should return second place for 1x2 block', () => {
     const layout = {
-      allocations: [[true, false], [false, false]],
+      allocations: [
+        [true, false],
+        [false, false],
+      ],
       flexCols: false,
       flexRows: false,
     };
@@ -83,7 +104,10 @@ describe('gridLayout', () => {
 
   it('findAllocation should return first place for 2x1 block', () => {
     const layout = {
-      allocations: [[true, false], [false, false]],
+      allocations: [
+        [true, false],
+        [false, false],
+      ],
       flexCols: false,
       flexRows: false,
     };
@@ -98,7 +122,10 @@ describe('gridLayout', () => {
 
   it('findAllocation should return undefined for 2x2 block', () => {
     const layout = {
-      allocations: [[true, false], [false, false]],
+      allocations: [
+        [true, false],
+        [false, false],
+      ],
       flexCols: false,
       flexRows: false,
     };
@@ -108,7 +135,10 @@ describe('gridLayout', () => {
 
   it('findAllocation should return fixed place for fixed block', () => {
     const layout = {
-      allocations: [[true, false], [false, false]],
+      allocations: [
+        [true, false],
+        [false, false],
+      ],
       flexCols: false,
       flexRows: false,
     };
@@ -122,13 +152,19 @@ describe('gridLayout', () => {
   });
 
   it('updateAllocation should mutate the allocations with the placement', () => {
-    const allocations = [[true, false], [false, false]];
+    const allocations = [
+      [true, false],
+      [false, false],
+    ];
     updateAllocation(allocations, {
       ci: 1,
       cf: 2,
       ri: 0,
       rf: 2,
     });
-    expect(allocations).toEqual([[true, true], [false, true]]);
+    expect(allocations).toEqual([
+      [true, true],
+      [false, true],
+    ]);
   });
 });

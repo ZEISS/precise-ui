@@ -83,7 +83,7 @@ const StyledCustomWrapper = styled.div<InteractiveListWrapperProps>`
   overflow-y: auto;
 `;
 
-const CustomWrapper: React.SFC<InteractiveListWrapperProps> = props => {
+const CustomWrapper: React.FC<InteractiveListWrapperProps> = props => {
   return <StyledCustomWrapper {...props} />;
 };
 
@@ -196,4 +196,4 @@ class SelectButtonInt extends React.PureComponent<SelectButtonProps, SelectButto
 /**
  * Represents a select button, which is a kind of dropdown button.
  */
-export const SelectButton = OnClickOut(SelectButtonInt);
+export const SelectButton: React.FC<SelectButtonProps> = OnClickOut(SelectButtonInt) as any;

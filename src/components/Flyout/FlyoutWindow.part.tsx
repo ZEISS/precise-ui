@@ -255,28 +255,29 @@ export interface StyledFlyoutWindowProps {
 
 const StyledFlyoutWindow = styled('div')<StyledFlyoutWindowProps>(
   themed(
-    ({ theme, size, position, noGutter }) => css`
-      ${getFontStyle({ size: 'medium' })}
+    ({ theme, size, position, noGutter }) =>
+      css`
+        ${getFontStyle({ size: 'medium' })}
 
-      position: absolute;
-      z-index: 100;
-      box-sizing: border-box;
-      box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
-      border: 1px solid ${theme.ui4};
-      background: ${theme.flyout.background};
-      color: ${theme.flyout.textColor};
-      max-width: ${theme.flyout.maxWidth};
-      max-height: ${theme.flyout.maxHeight};
-      ${!noGutter ? `padding: ${distance.small} ${distance.medium};` : ''} box-sizing: border-box;
+        position: absolute;
+        z-index: 100;
+        box-sizing: border-box;
+        box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
+        border: 1px solid ${theme.ui4};
+        background: ${theme.flyout.background};
+        color: ${theme.flyout.textColor};
+        max-width: ${theme.flyout.maxWidth};
+        max-height: ${theme.flyout.maxHeight};
+        ${!noGutter ? `padding: ${distance.small} ${distance.medium};` : ''} box-sizing: border-box;
 
-      ${size && size.width !== undefined ? `width: ${size.width}px` : ''};
-      ${size && size.height !== undefined ? `height: ${size.height}px` : ''};
-      ${position && position.top !== undefined ? `top: ${position.top}px` : ''};
-      ${position && position.left !== undefined ? `left: ${position.left}px` : ''};
-      ${position && position.bottom !== undefined ? `bottom: ${position.bottom}px` : ''};
-      ${position && position.right !== undefined ? `right: ${position.right}px` : ''};
-      overflow: auto;
-    `,
+        ${size && size.width !== undefined ? `width: ${size.width}px` : ''};
+        ${size && size.height !== undefined ? `height: ${size.height}px` : ''};
+        ${position && position.top !== undefined ? `top: ${position.top}px` : ''};
+        ${position && position.left !== undefined ? `left: ${position.left}px` : ''};
+        ${position && position.bottom !== undefined ? `bottom: ${position.bottom}px` : ''};
+        ${position && position.right !== undefined ? `right: ${position.right}px` : ''};
+        overflow: auto;
+      ` as any,
   ),
 );
 
@@ -286,40 +287,41 @@ interface StyledFlyoutArrowProps extends Position {
 
 const StyledFlyoutArrow = styled('div')<StyledFlyoutArrowProps>(
   themed(
-    ({ top, left, bottom, right, rotate, theme }) => css`
-      pointer-events: none;
-      position: absolute;
-      z-index: 101;
-      width: ${toolTipArrowSize}px;
-      height: ${toolTipArrowSize}px;
-
-      ${top !== undefined ? `top: ${top}px` : ''};
-      ${left !== undefined ? `left: ${left}px` : ''};
-      ${bottom !== undefined ? `bottom: ${bottom}px` : ''};
-      ${right !== undefined ? `right: ${right}px` : ''};
-      ${rotate !== undefined ? `transform: rotate(${rotate}deg)` : ''};
-
-      :before {
-        content: ' ';
+    ({ top, left, bottom, right, rotate, theme }) =>
+      css`
+        pointer-events: none;
         position: absolute;
-        top: 0;
-        left: 0;
-        border-style: solid;
-        border-width: ${toolTipArrowSize / 2}px;
-        border-color: ${theme.ui4} transparent transparent transparent;
-      }
+        z-index: 101;
+        width: ${toolTipArrowSize}px;
+        height: ${toolTipArrowSize}px;
 
-      :after {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-style: solid;
-        border-width: ${toolTipArrowSize / 2 - 1}px;
-        margin-left: 1px;
-        border-color: ${theme.flyout.background} transparent transparent transparent;
-      }
-    `,
+        ${top !== undefined ? `top: ${top}px` : ''};
+        ${left !== undefined ? `left: ${left}px` : ''};
+        ${bottom !== undefined ? `bottom: ${bottom}px` : ''};
+        ${right !== undefined ? `right: ${right}px` : ''};
+        ${rotate !== undefined ? `transform: rotate(${rotate}deg)` : ''};
+
+        :before {
+          content: ' ';
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-style: solid;
+          border-width: ${toolTipArrowSize / 2}px;
+          border-color: ${theme.ui4} transparent transparent transparent;
+        }
+
+        :after {
+          content: ' ';
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-style: solid;
+          border-width: ${toolTipArrowSize / 2 - 1}px;
+          margin-left: 1px;
+          border-color: ${theme.flyout.background} transparent transparent transparent;
+        }
+      ` as any,
   ),
 );
 

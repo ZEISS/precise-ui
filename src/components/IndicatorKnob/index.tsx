@@ -88,7 +88,7 @@ export interface IndicatorKnobProps extends StandardProps {
 /**
  * The indicator knob is a button like component that is placed in a container to indicate a position.
  */
-export const IndicatorKnob: React.SFC<IndicatorKnobProps> = ({ x, y, color, style, ...props }) => (
+export const IndicatorKnob: React.FC<IndicatorKnobProps> = ({ x, y, color, style, ...props }) => (
   <Indicator
     style={{
       ...style,

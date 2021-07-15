@@ -93,7 +93,7 @@ class SingleReactComponent extends React.Component<ReactComponentRendererProps, 
   }
 }
 
-const ReactComponentRenderer: React.SFC<ReactComponentRendererProps> = props => {
+const ReactComponentRenderer: React.FC<ReactComponentRendererProps> = props => {
   return <SingleReactComponent {...props} />;
 };
 

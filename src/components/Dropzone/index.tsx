@@ -58,25 +58,26 @@ interface StyledDropzoneProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const StyledDropzone = styled.div<StyledDropzoneProps>(
   themed(
-    ({ disabled, active, theme }) => css`
-      width: 100%;
-      height: 100%;
-      min-height: 150px;
-      margin: 0 auto;
-      padding: ${distance.medium};
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      color: ${disabled ? theme.textDisabled : theme.text3};
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      background-color: ${disabled ? theme.ui3 : active ? theme.ui2 : theme.ui1};
-      border: 1px ${disabled ? `solid ${theme.ui1}` : `dashed ${active ? theme.ui0 : theme.ui4}`};
-      cursor: ${disabled ? 'no-drop' : 'pointer'};
-      box-sizing: border-box;
-    `,
+    ({ disabled, active, theme }) =>
+      css`
+        width: 100%;
+        height: 100%;
+        min-height: 150px;
+        margin: 0 auto;
+        padding: ${distance.medium};
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: ${disabled ? theme.textDisabled : theme.text3};
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-color: ${disabled ? theme.ui3 : active ? theme.ui2 : theme.ui1};
+        border: 1px ${disabled ? `solid ${theme.ui1}` : `dashed ${active ? theme.ui0 : theme.ui4}`};
+        cursor: ${disabled ? 'no-drop' : 'pointer'};
+        box-sizing: border-box;
+      ` as any,
   ),
 );
 

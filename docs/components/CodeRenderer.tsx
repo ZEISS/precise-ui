@@ -11,7 +11,7 @@ const CodeBox = styled.code`
   white-space: pre-wrap;
 `;
 
-const CodeRenderer: React.SFC<CodeRendererProps> = ({ children }) => {
+const CodeRenderer: React.FC<CodeRendererProps> = ({ children }) => {
   return <CodeBox dangerouslySetInnerHTML={{ __html: children as any }} />;
 };
 

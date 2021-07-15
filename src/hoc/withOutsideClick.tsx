@@ -1,4 +1,4 @@
-import onClickOutside, { OnClickOutProps } from 'react-onclickoutside';
+import onClickOutside from 'react-onclickoutside';
 import { withInner } from 'typescript-plugin-inner-jsx/withInner';
 
 export interface OutsideInjectedProps {
@@ -37,5 +37,5 @@ export function withOutsideClick<TProps>(
       excludeScrollbar: options.excludeScrollbar,
     }),
     { Component },
-  );
+  ) as any;
 }

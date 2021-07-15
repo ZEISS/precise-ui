@@ -150,7 +150,7 @@ const defaultSize: AvatarSize = 'medium';
  *
  * We must provide either an `image` or an `initials` prop for the Avatar component to work correctly.
  */
-export const Avatar: React.SFC<AvatarProps> = ({ image, description, children, size = defaultSize, ...props }) => (
+export const Avatar: React.FC<AvatarProps> = ({ image, description, children, size = defaultSize, ...props }) => (
   <AvatarContainer {...props} title={description} size={size}>
     <AvatarContent size={size} theme={props.theme}>
       {image ? (
