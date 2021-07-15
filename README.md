@@ -196,6 +196,20 @@ In some cases it's needed to tell visual test to wait before doing a snapshot. I
 
 The list of all imported icons is in `/tools/icongen.config`. After modifying the list you should run `npm run icongen` or it will be run on prepush.
 
+### Making a Release
+
+All releasable code is aggregated in the `develop` branch. To make a release simply create a GitHub release (usually copying over the current entries from the `CHANGELOG.md` file).
+
+A standard workflow thus looks like:
+
+1. Clone the repository
+2. Make a branch
+3. Do the work
+4. Push your changes
+5. Make a PR of your fork / branch to `develop`
+6. Once "enough" features aggregated in `develop` make a GitHub release
+7. For the next changes to `develop` make sure to change / increment the version number
+
 ## License
 
 Precise UI is released using the MIT license. For more information see the [license file](LICENSE).
