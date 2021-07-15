@@ -3,6 +3,7 @@
 ## 1.5.2
 
 - Fix sorting of `Table` and `AccordionTable` when groups are defined
+- Fix `onBlur` and `onFocus` props for `AutocompleteTagBuilder` component
 
 ## 1.5.1
 
