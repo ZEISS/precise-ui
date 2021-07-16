@@ -2,9 +2,9 @@ name: Build CI
 
 on:
   push:
-    branches: [develop]
+    branches: [main]
   pull_request:
-    branches: [develop]
+    branches: [main]
   release:
     types:
       - created

@@ -1,7 +1,7 @@
 # <img src="docs/assets/precise-logo.svg" width="240">
 
 [![Website Build status](https://dev.azure.com/ZEISSgroup/SIP_UI_Library/_apis/build/status/Precise-CI)](https://dev.azure.com/ZEISSgroup/SIP_UI_Library/_build/latest?definitionId=1106)
-[![Package Build Status](https://travis-ci.org/ZEISS/precise-ui.svg?branch=master)](https://travis-ci.org/ZEISS/precise-ui)
+[![Package Build Status](https://travis-ci.org/ZEISS/precise-ui.svg?branch=main)](https://travis-ci.org/ZEISS/precise-ui)
 [![NPM](https://img.shields.io/npm/v/precise-ui.svg)](https://www.npmjs.com/package/precise-ui)
 [![Node](https://img.shields.io/node/v/precise-ui.svg)](https://www.npmjs.com/package/precise-ui)
 [![GitHub Tag](https://img.shields.io/github/tag/ZEISS/precise-ui.svg)](https://github.com/ZEISS/precise-ui/releases)
@@ -209,6 +209,8 @@ A standard workflow thus looks like:
 5. Make a PR of your fork / branch to `develop`
 6. Once "enough" features aggregated in `develop` make a GitHub release
 7. For the next changes to `develop` make sure to change / increment the version number
+
+To find out about the currently released version you have two options. Either you [go to the NPM page](https://www.npmjs.com/package/precise-ui) or you [use the GitHub releases](https://github.com/ZEISS/precise-ui/releases). Both are linked on top of the *README.md*, too.
 
 ## License
 
