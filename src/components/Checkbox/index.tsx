@@ -96,7 +96,7 @@ export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxStat
     };
   }
 
-  componentWillReceiveProps({ value = false, error }: CheckboxProps) {
+  UNSAFE_componentWillReceiveProps({ value = false, error }: CheckboxProps) {
     if (this.state.controlled) {
       this.setState({ value });
     }

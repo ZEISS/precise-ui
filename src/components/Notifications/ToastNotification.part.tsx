@@ -77,7 +77,7 @@ export class ToastNotification extends React.Component<ToastNotificationProps, T
     };
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const { autoClose } = this.props;
 
     if (autoClose) {

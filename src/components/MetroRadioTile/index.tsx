@@ -62,7 +62,7 @@ export class MetroRadioTile extends React.Component<MetroRadioTileProps, MetroRa
     };
   }
 
-  componentWillReceiveProps(props: MetroRadioTileProps) {
+  UNSAFE_componentWillReceiveProps(props: MetroRadioTileProps) {
     if (this.state.controlled) {
       this.setState({
         checked: props.value || false,

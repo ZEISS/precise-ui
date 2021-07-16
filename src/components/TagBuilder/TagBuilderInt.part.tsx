@@ -133,7 +133,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     };
   }
 
-  componentWillReceiveProps({ value, inputValue = '', error }: TagBuilderProps) {
+  UNSAFE_componentWillReceiveProps({ value, inputValue = '', error }: TagBuilderProps) {
     if (this.state.controlled && value !== undefined) {
       this.setState({
         value: [...value],

@@ -71,7 +71,7 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
     }
   }
 
-  componentWillReceiveProps({ value }: RadioButtonGroupProps) {
+  UNSAFE_componentWillReceiveProps({ value }: RadioButtonGroupProps) {
     const { controlled } = this.state;
 
     if (controlled) {

@@ -147,7 +147,7 @@ class AutocompleteInt<T> extends React.Component<SupportedAutocompleteProps<T> &
     };
   }
 
-  componentWillReceiveProps({ value = '', error }: AutocompleteProps<T>) {
+  UNSAFE_componentWillReceiveProps({ value = '', error }: AutocompleteProps<T>) {
     if (this.state.controlled) {
       this.setState({ value });
     }

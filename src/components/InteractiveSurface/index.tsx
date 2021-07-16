@@ -62,7 +62,7 @@ export class InteractiveSurface extends React.Component<InteractiveSurfaceProps>
   private mounted = false;
   private moved = false;
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.mounted = true;
   }
 

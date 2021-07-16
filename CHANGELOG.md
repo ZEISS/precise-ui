@@ -4,6 +4,7 @@
 
 - Updated dependencies
 - Migrated to GitHub actions
+- Add UNSAFE_ prefix for deprecated lifecycle hooks
 
 ## 1.5.2
 

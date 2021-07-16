@@ -49,7 +49,7 @@ export class Sidebar extends React.Component<SidebarProps, SidebarState> {
     };
   }
 
-  componentWillReceiveProps(props: SidebarProps) {
+  UNSAFE_componentWillReceiveProps(props: SidebarProps) {
     if (this.controlled) {
       this.setState({ open: Boolean(props.open) });
     }

@@ -61,7 +61,7 @@ class OverflowMenuInt extends React.Component<OverflowMenuProps, OverflowMenuSta
       });
   };
 
-  componentWillReceiveProps(nextProps: OverflowMenuProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: OverflowMenuProps) {
     this.setState({
       items: getItems(nextProps.items),
     });

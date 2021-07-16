@@ -147,7 +147,7 @@ class RatingInt extends React.Component<RatingProps & FormContextProps, RatingSt
     };
   }
 
-  componentWillReceiveProps(nextProps: RatingProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: RatingProps) {
     if (this.state.controlled) {
       this.setState({
         value: nextProps.value || 0,

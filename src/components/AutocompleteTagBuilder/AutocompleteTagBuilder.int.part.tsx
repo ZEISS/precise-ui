@@ -31,7 +31,7 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
     }, delay);
   }
 
-  public componentWillReceiveProps(nextProps: AutocompleteTagBuilderProps<T>) {
+  public UNSAFE_componentWillReceiveProps(nextProps: AutocompleteTagBuilderProps<T>) {
     if (this.state.controlled) {
       const { value, inputValue } = nextProps;
       this.setState({
