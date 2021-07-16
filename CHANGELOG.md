@@ -3,6 +3,7 @@
 ## 1.6.0
 
 - Updated dependencies
+- Migrated to GitHub actions
 
 ## 1.5.2
 
