@@ -263,6 +263,7 @@ function getContent({index, data}) {
 
 <AccordionTable
   groupBy="tag"
+  columns={{tag:{header: 'tag'}, value: {header: 'value', sortable:  true}, team: {header: 'team'}}}
   detailsRenderer={getContent}
   data={[
     {tag: 'A', value: 'Alpha1', team: 'Alpha team'},

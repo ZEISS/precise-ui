@@ -66,6 +66,10 @@ export interface FileUploaderProps {
    * @default "Drop files here to upload"
    */
   message?: string;
+  /**
+   * Show the file list under the drop zone
+   */
+  showFileList?: boolean;
 }
 
 export interface UploadFile {
@@ -303,18 +307,28 @@ export class FileUploader extends React.Component<FileUploaderProps> {
   private fileSelect = (e: DropzoneOpenEvent) => {
     const { multiple } = this.props;
     const { files, events } = this.data;
+    const notCanceledFiles = files.filter(file => file.status !== 'canceled');
 
-    if (!multiple && files.length === 1) {
-      e.preventDefault();
-      events.emit(FileUploadActions.showUploads, {});
+    if (!multiple && notCanceledFiles.length === 1) {
+      const completedFiles = notCanceledFiles.filter(file => file.status === 'complete');
+      if (completedFiles.length === 0) {
+        e.preventDefault();
+        events.emit(FileUploadActions.showUploads, {});
+      }
     }
   };
 
   render() {
-    const { multiple, message, children } = this.props;
+    const { multiple, message, children, showFileList } = this.props;
+    const additionalProps = !showFileList ? { value: [] } : {};
 
     return (
-      <Dropzone multiple={multiple} value={[]} onChange={this.filesAdded} onOpen={this.fileSelect} message={message}>
+      <Dropzone
+        multiple={multiple}
+        onChange={this.filesAdded}
+        onOpen={this.fileSelect}
+        message={message}
+        {...additionalProps}>
         {children}
       </Dropzone>
     );
