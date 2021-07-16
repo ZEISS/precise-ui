@@ -1,5 +1,65 @@
 # Precise UI Changelog
 
+## 1.6.0
+
+- Updated dependencies
+- Migrated to GitHub actions
+
+## 1.5.2
+
+- Fix sorting of `Table` and `AccordionTable` when groups are defined
+- Fix `onBlur` and `onFocus` props for `AutocompleteTagBuilder` component
+
+## 1.5.1
+
+- Fix marking selected date in Datepicker of `DateField`
+
+## 1.5.0
+
+- Add `closeable` property for `Notification` component
+- Add `disableMobileFullWidth` property for `Button` component
+- Fix word breaking in `TextField`
+- Hold Tab/ContentSwitch inner component state while switching between screen sizes
+
+## 1.4.2
+
+- Fix button documentation
+
+## 1.4.1
+
+- Fix compatibility issue with improvements on SearchField
+
+## 1.4.0
+
+- Improve documentation of breakpoint types
+- Add trigger mode `manual` for `SearchField`
+- Removing clearable from Autocomplete docs
+
+## 1.3.0
+
+- Update `Form` component to receive `prompt` prop as component
+- Add custom dialog for `Prompt` component
+
+## 1.2.0
+
+- Add the ability to clean datetimepicker
+
+## 1.1.4
+
+- Add ability to display the files list under the File Uploader
+
+## 1.1.3
+
+- Add new icons
+
+## 1.1.2
+
+- Fix TagBuilder not deleting tags properly with backspace (#223)
+
+## 1.1.1
+
+- Added new theme object `actionButtonWarning`
+
 ## 1.1.0
 
 - Add `borderless` and `tagRenderer` props to AutocompleteTagBuilder

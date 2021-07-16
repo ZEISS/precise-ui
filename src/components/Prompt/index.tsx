@@ -1,88 +1,36 @@
 import * as React from 'react';
+import { PromptBasic } from './PromptBasic.part';
+import { PromptModal } from './PromptModal.part';
+import { usePrompt } from './usePrompt';
+import { PromptProps } from './Prompt.types';
 
-export interface PromptMessageCallback {
-  (location: any): boolean | string;
-}
-
-export interface PromptProps {
-  /**
-   * Determines if the prompt should be active. By default true.
-   * @default true
-   */
-  when?: boolean;
-  /**
-   * Creates the message to show for the blocked route, if any.
-   */
-  message: string | PromptMessageCallback;
-}
+export { usePrompt, PromptModal };
+export * from './Prompt.types';
 
 /**
  * Component for prompting the user before navigating away
  * from a screen with a form.
  */
 export class Prompt extends React.Component<PromptProps> {
-  private unblock?(): void;
-
   static contextTypes = {
     // tslint:disable-next-line
     router: () => null,
   };
 
   componentDidMount() {
-    if (this.props.when) {
-      this.enable(this.props.message);
-    }
-
-    window.addEventListener('beforeunload', this.handleBeforeUnload);
-  }
-
-  componentWillReceiveProps(nextProps: PromptProps) {
-    if (nextProps.when) {
-      if (!this.props.when || this.props.message !== nextProps.message) {
-        this.enable(nextProps.message);
-      }
-    } else {
-      this.disable();
-    }
-  }
-
-  componentWillUnmount() {
-    this.disable();
-    window.removeEventListener('beforeunload', this.handleBeforeUnload);
-  }
-
-  private enable(message: string | PromptMessageCallback) {
     const history = this.context.router && this.context.router.history;
-
-    if (this.unblock) {
-      this.unblock();
-    }
-
-    if (history) {
-      this.unblock = history.block(message);
+    if (!(history && history.block)) {
+      console.warn('React Router history object is not found. Component cannot be used');
     }
   }
-
-  private disable() {
-    if (this.unblock) {
-      this.unblock();
-      this.unblock = undefined;
-    }
-  }
-
-  private handleBeforeUnload = (ev: BeforeUnloadEvent) => {
-    const { when, message } = this.props;
-
-    if (when) {
-      const msg = typeof message === 'function' ? message(undefined) : message;
-      ev.returnValue = msg;
-      return msg;
-    }
-
-    return undefined;
-  };
 
   render() {
-    return false;
+    const { when = true, modalOptions } = this.props;
+    const history = this.context.router && this.context.router.history;
+
+    if (modalOptions) {
+      return <PromptModal modalOptions={modalOptions} history={history} when={when} message={this.props.message} />;
+    }
+    return <PromptBasic history={history} when={when} message={this.props.message} />;
   }
 }

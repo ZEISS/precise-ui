@@ -58,6 +58,14 @@ Also, `onClose` handler could be attached to every notification.
 </Notification>
 ```
 
+Permanent notifications can also be used to show warnings / errors that should not be closed by the user.
+
+```jsx
+<Notification type="warning" closeable={false}>
+  This browser is not supported anymore. We recommend upgrading to the new version of Copper, Waterfox or Corner to use this website.
+</Notification>
+```
+
 **Presentation Options**
 
 A custom action renderer could be assigned to the notification.

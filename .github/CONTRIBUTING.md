@@ -58,24 +58,22 @@ providing the following information:
 
 ### Main Branches
 
-The central repository holds two main branches with an infinite lifetime:
+The central repository holds one branch with an infinite lifetime:
 
-- **master**
-- **develop**
+- **main**
 
-We consider origin/master to be the main branch where the source code of HEAD always reflects a
-production-ready state, and origin/develop to be the main branch where the source code of HEAD
-always reflects a state with the latest delivered development changes for the next release.
-When the source code in the develop branch reaches a stable point and is ready to be released, all
-of the changes should be merged back into master. Therefore, each time when changes are merged back
-into master, this is a new production release by definition.
+We consider origin/main to be the primary branch where the source code of HEAD always reflects a
+to-be production-ready state, which is delivered for the next release.
+
+When the source code in the main branch reaches a stable point and is ready to be released, a GitHub
+release should be issued, which creates a tag referencing the point in the commit history.
 
 ### Supporting Branches
 
-Next to the main branches master and develop, our development model uses a few of supporting
-branches to aid parallel development between team members, ease tracking of features and to assist
-in quickly fixing live production problems. Unlike the main branches, these branches always have a
-limited life time, since they will be removed eventually.
+Next to the main branch our development model uses a few of supporting branches to aid parallel
+development between team members, ease tracking of features and to assist in quickly fixing live
+production problems. Unlike the main branches, these branches always have a limited life time,
+since they will be removed eventually.
 
 The two main different types of branches we may use are:
 
@@ -84,27 +82,27 @@ The two main different types of branches we may use are:
 
 #### Creating a Feature Branch
 
-- branch **from** -> `develop` -> must merge back **into** -> `develop`
+- branch **from** -> `main` -> must merge back **into** -> `main`
 
 Naming convention:
 
-- anything except `master`, `develop`, `release*`, or `hotfix*`
+- anything except `main`, `release*`, or `hotfix*`
 - preferred `feature/{issueId}-descriptive_feature_title`
 
 #### Creating a hotfix branch
 
-- branch **from** -> `master` -> must merge back **into** -> `master` and `develop`
+- branch **from** -> `main` -> must merge back **into** -> `main`
 
 Naming convention:
 
 - `hotfix/{issueId}-descriptive_issue_title` or `hotfix/{new_patch_version}`
 
-Hotfix branches are created from the master branch. For example, say version 1.2 is the current
-production release running live and causing troubles due to a severe bug. But changes on develop
+Hotfix branches are created from the main branch. For example, say version 1.2 is the current
+production release running live and causing troubles due to a severe bug. But changes on main
 are yet unstable. We may then branch off a hotfix branch and start fixing the problem:
 
 ```sh
-git checkout -b hotfix/1.2.1 master
+git checkout -b hotfix/1.2.1 main
 npm version patch -m "Upgrade to %s for reasons"
 git commit -a -m "Bumped version number to 1.2.1"
 ```

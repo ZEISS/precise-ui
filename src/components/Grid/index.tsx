@@ -205,26 +205,27 @@ function computeAllocations(props: GridProps): GridLayout {
     columns: typeof columns !== 'string' ? columns : undefined,
   });
 
-  const cells = React.Children.map(children, (child: GridChild, index) => {
-    const position = layout.cells[index];
+  const cells =
+    React.Children.map(children, (child: GridChild, index) => {
+      const position = layout.cells[index];
 
-    if (child && position) {
-      allocation.push(position);
-      const { colSpan, column, row, rowSpan } = position;
+      if (child && position) {
+        allocation.push(position);
+        const { colSpan, column, row, rowSpan } = position;
 
-      if (!colSpan || !rowSpan) {
-        return <HiddenGridCell>{child}</HiddenGridCell>;
+        if (!colSpan || !rowSpan) {
+          return <HiddenGridCell>{child}</HiddenGridCell>;
+        }
+
+        return (
+          <GridCell ci={column} cf={column + colSpan} ri={row} rf={row + rowSpan} key={index}>
+            {child}
+          </GridCell>
+        );
       }
 
-      return (
-        <GridCell ci={column} cf={column + colSpan} ri={row} rf={row + rowSpan} key={index}>
-          {child}
-        </GridCell>
-      );
-    }
-
-    return undefined;
-  });
+      return undefined;
+    }) || [];
 
   return {
     allocation,

@@ -42,9 +42,9 @@ export interface FormValidationError {
 export interface FormProps<FormValues> extends StandardProps {
   /**
    * Shows the given message if the user wants to navigate
-   * with changes being made.
+   * with changes being made or renders custom component with message if provided.
    */
-  prompt?: string;
+  prompt?: ((changed: boolean) => React.ReactChild) | string;
   /**
    * The value of the form to be used in controlled mode.
    */
@@ -320,7 +320,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
     const { changed } = this.state;
     return (
       <StyledForm {...rest} onSubmit={this.submit}>
-        {prompt && <Prompt when={changed} message={prompt} />}
+        {prompt && (typeof prompt === 'function' ? prompt(changed) : <Prompt when={changed} message={prompt} />)}
         <FormContext.Provider value={this.ctx}>{children}</FormContext.Provider>
       </StyledForm>
     );
