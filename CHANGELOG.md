@@ -1,5 +1,15 @@
 # Precise UI Changelog
 
+## 1.6.0
+
+- Updated dependencies
+- Migrated to GitHub actions
+
+## 1.5.2
+
+- Fix sorting of `Table` and `AccordionTable` when groups are defined
+- Fix `onBlur` and `onFocus` props for `AutocompleteTagBuilder` component
+
 ## 1.5.1
 
 - Fix marking selected date in Datepicker of `DateField`
