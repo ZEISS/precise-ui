@@ -4,6 +4,7 @@
 
 - Updated dependencies
 - Migrated to GitHub actions
+- Fixed cellRenderer passed key in AccordionTableCard
 
 ## 1.5.2
 
@@ -67,6 +68,7 @@
 - Enable `date-fns` tree-shaking
 
 ## 1.0.2
+
 - Fix opening file selection of `FileUploader` for single file upload (#243)
 
 ## 1.0.1
