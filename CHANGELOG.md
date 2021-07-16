@@ -1,10 +1,26 @@
 # Precise UI Changelog
 
+## 1.6.0
+
+- Updated dependencies
+- Migrated to GitHub actions
+- Add UNSAFE_ prefix for deprecated lifecycle hooks
+
+## 1.5.2
+
+- Fix sorting of `Table` and `AccordionTable` when groups are defined
+- Fix `onBlur` and `onFocus` props for `AutocompleteTagBuilder` component
+
+## 1.5.1
+
+- Fix marking selected date in Datepicker of `DateField`
+
 ## 1.5.0
 
 - Add `closeable` property for `Notification` component
 - Add `disableMobileFullWidth` property for `Button` component
-- Add UNSAFE_ prefix for deprecated lifecycle hooks
+- Fix word breaking in `TextField`
+- Hold Tab/ContentSwitch inner component state while switching between screen sizes
 
 ## 1.4.2
 

@@ -262,19 +262,14 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
     const { onChange, name = '', form } = this.props;
 
     if (!this.valueControlled) {
-      if (form) {
-        form.change({
-          name,
-          value,
-        });
-      } else {
-        this.setState({
-          value,
-          date,
-        });
-
+      this.setState({ value, date }, () => {
+        form &&
+          form.change({
+            name,
+            value,
+          });
         this.onOpenChange(true);
-      }
+      });
     }
 
     if (typeof onChange === 'function') {

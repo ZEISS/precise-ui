@@ -1,12 +1,10 @@
 import { StandardProps } from '../../common';
 import { ResponsiveComponentProps } from '../../hoc/withResponsive';
-import { TabControlItem } from '../TabControl';
+import { TabControlHolderProps } from '../TabControl';
 
 export type ContentSwitchOrientation = 'vertical' | 'horizontal';
 
-export interface ContentSwitchProps extends StandardProps, ResponsiveComponentProps {
-  items: Array<TabControlItem>;
-  children?: void;
+export interface ContentSwitchPropsInt extends StandardProps, ResponsiveComponentProps, TabControlHolderProps {
   /**
    * @default vertical
    */

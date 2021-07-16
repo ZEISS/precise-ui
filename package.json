@@ -1,6 +1,6 @@
 {
   "name": "precise-ui",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Precise UI React component library powered by Styled Components.",
   "main": "dist/es6",
   "typings": "dist/es6",
@@ -120,7 +120,7 @@
     "webpack": "^4.28.1",
     "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-dev-server": "^3.11.2"
   },
   "husky": {
     "hooks": {
