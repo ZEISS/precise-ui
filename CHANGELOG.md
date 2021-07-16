@@ -1,11 +1,18 @@
 # Precise UI Changelog
 
-## 1.5.2
+## 1.6.0
 
+- Updated dependencies
+- Migrated to GitHub actions
 - Remove unused dependencies (`css-loader`,`file-loader`,`html-webpack-plugin`,`postcss-loader`,`sass-loader`,`style-loader`)
 - Upgrade `memoize-one` dependency and remove no longer maintained `@types/memoize-one`
 - Bump up `jest-puppeteer-docker` to `1.4.2`
 - Sort package.json using `npx sort-package-json` command
+
+## 1.5.2
+
+- Fix sorting of `Table` and `AccordionTable` when groups are defined
+- Fix `onBlur` and `onFocus` props for `AutocompleteTagBuilder` component
 
 ## 1.5.1
 

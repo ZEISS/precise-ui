@@ -159,7 +159,10 @@ function useTabControl({ children, selectedIndex, defaultIndex, onTabChange }: U
   }, [selectedIndex]);
 
   const elements = React.useMemo(
-    () => React.Children.map(children, child => (React.isValidElement(child) ? child : undefined)).filter(isTabPage),
+    () =>
+      (React.Children.map(children, child => (React.isValidElement(child) ? child : undefined)) || []).filter(
+        isTabPage,
+      ),
     [children],
   );
   const headers = React.useMemo(() => elements.map(child => child.props.header), [elements]);

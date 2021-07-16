@@ -200,6 +200,8 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
       info,
       borderless = false,
       error,
+      onBlur,
+      onFocus,
     } = this.props;
 
     const { inputValue } = this.state;
@@ -220,6 +222,8 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
         info={info}
         error={error}
         borderless={borderless}
+        onBlur={onBlur}
+        onFocus={onFocus}
       />
     );
   }
