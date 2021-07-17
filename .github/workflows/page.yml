@@ -1,4 +1,4 @@
-name: Build CI
+name: Demo Page CI
 
 on:
   release:
