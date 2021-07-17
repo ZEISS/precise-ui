@@ -4,8 +4,8 @@
 
 - Updated dependencies
 - Migrated to GitHub actions
-- Fixed cellRenderer passed key in AccordionTableCard
-- Add UNSAFE_ prefix for deprecated lifecycle hooks
+- Fixed `cellRenderer` passed key in `AccordionTableCard`
+- Add `UNSAFE_` prefix for deprecated lifecycle hooks
 
 ## 1.5.2
 
