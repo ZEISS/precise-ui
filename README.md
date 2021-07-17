@@ -1,6 +1,5 @@
 # <img src="docs/assets/precise-logo.svg" width="240">
 
-[![Website Build status](https://dev.azure.com/ZEISSgroup/SIP_UI_Library/_apis/build/status/Precise-CI)](https://dev.azure.com/ZEISSgroup/SIP_UI_Library/_build/latest?definitionId=1106)
 [![Build CI](https://github.com/ZEISS/precise-ui/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/ZEISS/precise-ui/actions/workflows/build.yml)
 [![NPM](https://img.shields.io/npm/v/precise-ui.svg)](https://www.npmjs.com/package/precise-ui)
 [![Node](https://img.shields.io/node/v/precise-ui.svg)](https://www.npmjs.com/package/precise-ui)
