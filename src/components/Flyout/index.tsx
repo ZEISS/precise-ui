@@ -42,7 +42,7 @@ class FlyoutInt extends React.Component<FlyoutProps, FlyoutState> {
     this.updateMeasurements();
   }
 
-  componentWillReceiveProps(nextProps: FlyoutProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: FlyoutProps) {
     if (this.state.controlled && nextProps.open !== undefined) {
       this.setOpen(nextProps.open);
     }

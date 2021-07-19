@@ -149,7 +149,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
     };
   }
 
-  componentWillReceiveProps(nextProps: FormProps<Values>) {
+  UNSAFE_componentWillReceiveProps(nextProps: FormProps<Values>) {
     const { controlled, initial } = this.state;
 
     if (controlled) {

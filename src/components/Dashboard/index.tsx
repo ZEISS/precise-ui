@@ -275,7 +275,7 @@ export class Dashboard extends React.Component<DashboardProps, DashboardState> {
     };
   }
 
-  componentWillReceiveProps(nextProps: DashboardProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: DashboardProps) {
     const { defaultTiles: currTiles = [] } = this.props;
     const { defaultTiles: nextTiles = [] } = nextProps;
 

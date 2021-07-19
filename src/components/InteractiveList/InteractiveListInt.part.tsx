@@ -220,7 +220,7 @@ export class InteractiveListInt extends React.PureComponent<InteractiveListProps
     }
   };
 
-  componentWillReceiveProps(nextProps: InteractiveListProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: InteractiveListProps) {
     const { open, autoPosition, focus } = this.props;
 
     if (this.state.controlled) {

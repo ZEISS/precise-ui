@@ -213,7 +213,7 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
     };
   }
 
-  componentWillReceiveProps({ value, error }: ColorPickerProps) {
+  UNSAFE_componentWillReceiveProps({ value, error }: ColorPickerProps) {
     if (value && value !== this.state.value) {
       const { hsv, color, base } = computeColor(value || this.state.value);
 

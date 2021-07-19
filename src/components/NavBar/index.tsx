@@ -219,7 +219,7 @@ export class NavBar extends React.Component<NavBarProps, NavBarState> {
     };
   }
 
-  componentWillReceiveProps(nextProps: NavBarProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: NavBarProps) {
     if (this.state.controlledMode) {
       this.setState({
         mode: nextProps.mode,
