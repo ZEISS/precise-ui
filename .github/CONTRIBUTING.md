@@ -52,7 +52,7 @@ providing the following information:
   part of Precise UI which the suggestion is related to. You can use
   [this tool](https://www.cockos.com/licecap/) to record GIFs on macOS and Windows, and
   [this tool](https://github.com/colinkeenan/silentcast) or
-  [this tool](https://github.com/GNOME/byzanz) on Linux.
+  [this tool](https://download.gnome.org/sources/byzanz/) on Linux.
 
 ## Branching Model
 

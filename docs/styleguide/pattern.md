@@ -16,18 +16,21 @@ Standard: `cubic-bezier(0.5, 0, 0.1, 1)`
 
 This standard easing function is used for the majority of animations. Acceleration and deceleration appear asymmetrically to feel natural and light used, e.g., for opacity .
 
+<!-- markdown-link-check-disable-next-line -->
 ![Standard easing](ease-standard.png)
 
 Ease-out: `cubic-bezier(0, 0, 0.25, 1)`
 
 Mainly used for adding elements to the stage or changing on-screen states at a users' input, e.g., `Modal`, `DropdownField`, `Accordion`.
 
+<!-- markdown-link-check-disable-next-line -->
 ![Outfading ease](ease-out.png)
 
 Ease-in: `cubic-bezier(0.25, 0, 1, 1)`
 
 The ease-in cubic-bezier is used primarily for removing elements from the screen, e.g., toast `Notiﬁcation` or mobile components.
 
+<!-- markdown-link-check-disable-next-line -->
 ![Introducing ease](ease-in.png)
 
 ### Timing

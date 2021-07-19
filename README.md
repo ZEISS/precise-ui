@@ -1,6 +1,5 @@
 # <img src="docs/assets/precise-logo.svg" width="240">
 
-[![Website Build status](https://dev.azure.com/ZEISSgroup/SIP_UI_Library/_apis/build/status/Precise-CI)](https://dev.azure.com/ZEISSgroup/SIP_UI_Library/_build/latest?definitionId=1106)
 [![Build CI](https://github.com/ZEISS/precise-ui/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/ZEISS/precise-ui/actions/workflows/build.yml)
 [![NPM](https://img.shields.io/npm/v/precise-ui.svg)](https://www.npmjs.com/package/precise-ui)
 [![Node](https://img.shields.io/node/v/precise-ui.svg)](https://www.npmjs.com/package/precise-ui)
@@ -55,7 +54,7 @@ You can see a list of all available components on our [website](https://precise-
 
 ## Contributing
 
-Everyone is welcome to make any contribution on Precise UI. However, before you start, make sure you read our [Contribution](/.github/CONTRIBUTING.md) instructions.
+Everyone is welcome to make any contribution on Precise UI. However, before you start, make sure you read our [Contribution](.github/CONTRIBUTING.md) instructions.
 
 If you feel uncertain whether you should contribute or not maybe our [code of conduct](CODE_OF_CONDUCT.md) can help you.
 
@@ -86,6 +85,7 @@ Here is a quick example to get you started. All you need is to run:
 npm start
 ```
 
+<!-- markdown-link-check-disable-next-line -->
 As a result this will start the development server running the kitchen sink (our demo application), which runs locally and can be reached via [localhost:6060](http://localhost:6060). Note: this port can be changed. The available page contains all included components and some hopefully useful documentation for these.
 
 #### Versioning

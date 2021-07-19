@@ -198,7 +198,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
     };
   }
 
-  componentWillReceiveProps({ value = '', error }: DateFieldProps) {
+  UNSAFE_componentWillReceiveProps({ value = '', error }: DateFieldProps) {
     if (this.valueControlled) {
       this.setState({ value, date: this.parseDate(value) });
     }

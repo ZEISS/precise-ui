@@ -37,7 +37,7 @@ export class Tooltip extends React.Component<TooltipProps, TooltipState> {
     this.updateMeasurements();
   }
 
-  componentWillReceiveProps(nextProps: TooltipProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: TooltipProps) {
     if (this.state.controlled && nextProps.open !== undefined) {
       this.setOpen(nextProps.open);
     }

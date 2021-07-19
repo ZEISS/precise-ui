@@ -4,10 +4,12 @@
 
 - Updated dependencies
 - Migrated to GitHub actions
-- Remove unused dependencies (`css-loader`,`file-loader`,`html-webpack-plugin`,`postcss-loader`,`sass-loader`,`style-loader`)
-- Upgrade `memoize-one` dependency and remove no longer maintained `@types/memoize-one`
+- Removed unused dependencies (`css-loader`,`file-loader`,`html-webpack-plugin`,`postcss-loader`,`sass-loader`,`style-loader`)
+- Upgraded `memoize-one` dependency and remove no longer maintained `@types/memoize-one`
 - Bump up `jest-puppeteer-docker` to `1.4.2`
-- Sort package.json using `npx sort-package-json` command
+- Sorted package.json using `npx sort-package-json` command
+- Fixed `cellRenderer` passed key in `AccordionTableCard`
+- Added `UNSAFE_` prefix for deprecated lifecycle hooks
 
 ## 1.5.2
 
@@ -71,6 +73,7 @@
 - Enable `date-fns` tree-shaking
 
 ## 1.0.2
+
 - Fix opening file selection of `FileUploader` for single file upload (#243)
 
 ## 1.0.1
