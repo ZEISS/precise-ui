@@ -6,7 +6,4 @@ const buildDemo = () =>
     exec('npm run build:demo:test', undefined, resolve);
   });
 
-module.exports = async jestConfig => {
-  await buildDemo();
-  await setupPuppeteer(jestConfig);
-};
+module.exports = jestConfig => Promise.all([buildDemo(), setupPuppeteer(jestConfig)]);
