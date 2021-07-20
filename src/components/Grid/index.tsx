@@ -139,8 +139,17 @@ interface GridCellProps {
   cf: number;
 }
 
+// Remark:
+// At PR #258 a fix for "complex content that overflows" was introduced
+// which caused some problem. If this fix should be required in the future
+// again we should bring in something like the following:
+//
+// ```css
+// overflow: auto;
+// margin: -1em;
+// padding: 1em;
+// ```
 const GridCell = styled.div<GridCellProps>`
-  overflow: auto;
   -ms-grid-row: ${props => props.ri + 1};
   -ms-grid-row-span: ${props => props.rf - props.ri};
   grid-row: ${props => props.ri + 1} / span ${props => props.rf - props.ri};
