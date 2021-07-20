@@ -1,11 +1,19 @@
 # Precise UI Changelog
 
+## 1.6.1
+
+- Removed unused dependencies (`css-loader`,`file-loader`,`html-webpack-plugin`,`postcss-loader`,`sass-loader`,`style-loader`)
+- Upgraded `memoize-one` dependency and remove no longer maintained `@types/memoize-one`
+- Bumped `jest-puppeteer-docker` to `1.4.2`
+- Sorted *package.json* using `npx sort-package-json` command
+- Reverted PR#258
+
 ## 1.6.0
 
 - Updated dependencies
 - Migrated to GitHub actions
 - Fixed `cellRenderer` passed key in `AccordionTableCard`
-- Add `UNSAFE_` prefix for deprecated lifecycle hooks
+- Added `UNSAFE_` prefix for deprecated lifecycle hooks
 
 ## 1.5.2
 
