@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 1.6.2
+
+- Change to `flex-base: auto` for `RadioButtonCircle` to work on different box-sizing models
+
 ## 1.6.1
 
 - Removed unused dependencies (`css-loader`,`file-loader`,`html-webpack-plugin`,`postcss-loader`,`sass-loader`,`style-loader`)
