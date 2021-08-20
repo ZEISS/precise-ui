@@ -6,6 +6,8 @@ import {
   RadioButtonGroupContextType,
   RadioButtonGroupNotifier,
 } from '../../contexts/RadioButtonGroupContext';
+import { PaddedContainer } from '../PaddedContainer';
+import { InputError } from '../InputError';
 
 export type RadioButtonGroupChangeEvent = InputChangeEvent<string>;
 
@@ -22,6 +24,7 @@ export type StateValue = Array<string> | string | undefined;
 export interface RadioButtonGroupState {
   controlled: boolean;
   value: StateValue;
+  error?: React.ReactChild;
 }
 
 class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & FormContextProps, RadioButtonGroupState> {
@@ -31,12 +34,13 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
   constructor(props: RadioButtonGroupProps) {
     super(props);
     const controlled = props.value !== undefined;
-    const { value: propValue, defaultValue } = props;
+    const { value: propValue, defaultValue, error } = props;
     const value = controlled ? propValue : defaultValue;
 
     this.state = {
       controlled,
       value,
+      error,
     };
   }
 
@@ -71,7 +75,7 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
     }
   }
 
-  UNSAFE_componentWillReceiveProps({ value }: RadioButtonGroupProps) {
+  UNSAFE_componentWillReceiveProps({ value, error }: RadioButtonGroupProps) {
     const { controlled } = this.state;
 
     if (controlled) {
@@ -79,6 +83,7 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
         value,
       });
     }
+    this.setState({ error });
   }
 
   private getNextValue = (groupItemName?: string) => {
@@ -145,7 +150,20 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
   }
 
   render() {
-    return <RadioButtonGroupContext.Provider value={this.ctx}>{this.props.children}</RadioButtonGroupContext.Provider>;
+    const { error } = this.state;
+
+    const Error = error && (
+      <PaddedContainer top="xsmall" bottom="xsmall">
+        <InputError>{error}</InputError>
+      </PaddedContainer>
+    );
+
+    return (
+      <RadioButtonGroupContext.Provider value={this.ctx}>
+        {this.props.children}
+        {Error}
+      </RadioButtonGroupContext.Provider>
+    );
   }
 }
 

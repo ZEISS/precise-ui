@@ -12,6 +12,18 @@ const { RadioButtonGroup, RadioButton } = require('precise-ui');
 </RadioButtonGroup>
 ```
 
+The `RadioButtonGroup` can also be used to show error massage underneath the radio buttons if you have validation.
+
+```jsx
+const { RadioButtonGroup, RadioButton } = require('precise-ui');
+
+<RadioButtonGroup error="Validation error">
+  <RadioButton>First</RadioButton>
+  <RadioButton>Second</RadioButton>
+  <RadioButton>Third</RadioButton>
+</RadioButtonGroup>
+```
+
 The style of the radio buttons can be varied. Here we use some wrapping to prevent an overflow. Bravo radio button is selected by default.
 
 ```jsx
