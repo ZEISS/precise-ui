@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 1.6.3
+
+- fix(563167): add validation error
+
 ## 1.6.2
 
 - Change to `flex-base: auto` for `RadioButtonCircle` to work on different box-sizing models
