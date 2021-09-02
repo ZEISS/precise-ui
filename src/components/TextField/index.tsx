@@ -92,7 +92,9 @@ const TextFieldArea = styled.textarea<TextFieldAreaProps>`
   cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
   border: none;
   border-bottom: 1px solid
-    ${themed<TextFieldAreaProps>(({ theme, border }) => (border === TextFieldBorderType.error ? purpleRed : theme.ui4))};
+    ${themed<TextFieldAreaProps>(({ theme, border }) =>
+      border === TextFieldBorderType.error ? purpleRed : theme.ui4,
+    )};
   background: ${themed(({ theme }) => theme.ui2)};
 
   &::placeholder {

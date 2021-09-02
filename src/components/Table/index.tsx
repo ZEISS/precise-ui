@@ -23,7 +23,7 @@ export interface TableType extends React.SFC<TableProps<any>> {
  * where the shape of the objects has no constraints other than it must be same for each element of the
  * array.
  */
-export const Table: TableType = withResponsiveMode<TableMode>(width =>
-  !width || width > breakpoints.medium ? 'table' : 'card',
+export const Table: TableType = withResponsiveMode<TableMode>(
+  width => (!width || width > breakpoints.medium ? 'table' : 'card'),
   // @TODO proper typings needed
 )(TableInt as any) as any;

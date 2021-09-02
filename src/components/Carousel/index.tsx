@@ -457,7 +457,9 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
       <RootContainer {...props} onKeyDown={this.handleKeyDown} tabIndex={0}>
         <Mask>
           <InteractiveSurface theme={theme} onChange={this.dragTile} opaque={opaque}>
-            <PagesContainer ref={(node: HTMLDivElement | null) => (this.pagesContainer = node)} selectedIndex={selectedIndex}>
+            <PagesContainer
+              ref={(node: HTMLDivElement | null) => (this.pagesContainer = node)}
+              selectedIndex={selectedIndex}>
               {items}
             </PagesContainer>
           </InteractiveSurface>

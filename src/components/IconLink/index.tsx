@@ -52,7 +52,9 @@ const StyledAnchor = styled(Anchor)<StyledAnchorProps>(
 );
 
 const StyledIcon = styled(Icon)<StyledIconProps & IconProps>`
-  color: ${themed<StyledIconProps & IconProps>(({ disabled, iconOnly, theme: { ui0, ui4, ui5 } }) => (disabled ? ui4 : iconOnly ? ui5 : ui0))};
+  color: ${themed<StyledIconProps & IconProps>(({ disabled, iconOnly, theme: { ui0, ui4, ui5 } }) =>
+    disabled ? ui4 : iconOnly ? ui5 : ui0,
+  )};
   display: inline-block;
   vertical-align: middle;
 `;
