@@ -4,7 +4,6 @@ function wait(ms) {
 
 describe('Visual testing', () => {
   test('Components available', () => expect(components && components.length > 0).toBeTruthy());
-console.log(components)
   if (components && components.length) {
     for (const { identifier, link, skip, wait: waitMs } of components) {
       const testFunction = skip ? test.skip : test;

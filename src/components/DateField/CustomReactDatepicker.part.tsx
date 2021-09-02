@@ -19,6 +19,7 @@ function patchLocale(locale: Locale, inputWeekDays = defaultWeekDays, months = d
   return {
     ...locale,
     localize: {
+      // @TODO Find out if these methods can indeed be missing in the runtime, change Locale type accordingly
       // ordinalNumber() {},
       // era() {},
       // quarter() {},
