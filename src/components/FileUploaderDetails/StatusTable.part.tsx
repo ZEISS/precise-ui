@@ -50,7 +50,7 @@ export interface StyledTableRowProps {
 }
 
 export const StyledTableRow = styled.tr<StyledTableRowProps>(
-  themed(
+  themed<StyledTableRowProps>(
     ({ hasProgressBar, theme }) => css`
       border-bottom: ${hasProgressBar ? 0 : 1}px solid ${theme.ui4};
       &:hover {

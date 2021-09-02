@@ -31,7 +31,7 @@ interface StyledTableProps {
 }
 
 const StyledTable = styled.table<StyledTableProps>(
-  themed(
+  themed<StyledTableProps>(
     ({ theme, borderless, condensed }) => css`
     ${getFontStyle({ size: 'small', lineHeight: 'xSmall' })}
 
@@ -224,7 +224,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
       <StyledTableHead theme={theme}>
         <StyledTableHeaderRow theme={theme}>
           {indexed && (
-            <StyledTableHeader onClick={e => this.headerClicked(e, -1, '#')} theme={theme}>
+            <StyledTableHeader onClick={(e: React.MouseEvent<HTMLTableCellElement>) => this.headerClicked(e, -1, '#')} theme={theme}>
               {headerCellRenderer({
                 column: -1,
                 key: '',
@@ -248,7 +248,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
                   sortable={sortable}
                   width={width}
                   key={key}
-                  onClick={e => this.headerClicked(e, cell, key)}
+                  onClick={(e: React.MouseEvent<HTMLTableCellElement>) => this.headerClicked(e, cell, key)}
                   theme={theme}>
                   {headerCellRenderer({
                     column: cell,
@@ -276,7 +276,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
       <StyledTableFoot theme={theme}>
         <StyledTableRow theme={theme}>
           {indexed && (
-            <StyledTableCell onClick={e => this.footerClicked(e, -1, '#')} theme={theme}>
+            <StyledTableCell onClick={(e: React.MouseEvent<HTMLTableCellElement>) => this.footerClicked(e, -1, '#')} theme={theme}>
               {footerCellRenderer({
                 column: -1,
                 key: '',
@@ -295,7 +295,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
             if (!hidden) {
               const name = typeof column === 'string' ? undefined : column.footer;
               return (
-                <StyledTableCell key={key} theme={theme} onClick={e => this.footerClicked(e, i, key)}>
+                <StyledTableCell key={key} theme={theme} onClick={(e: React.MouseEvent<HTMLTableCellElement>) => this.footerClicked(e, i, key)}>
                   {footerCellRenderer({
                     column: i,
                     key,

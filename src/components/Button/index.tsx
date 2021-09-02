@@ -133,7 +133,7 @@ const PseudoButtonStyle = (colorTheme: ButtonThemeSettings) => css`
 
 const AnchorInt: React.SFC<StyledButtonProps> = ({ buttonStyle, ...props }) => <Anchor {...props} />;
 const StyledButton = styled(AnchorInt)<StyledButtonProps>(
-  themed(props => {
+  themed<StyledButtonProps>(props => {
     const themeSettings = getThemeSettings(props.theme, props.buttonStyle);
     return css`
       box-sizing: border-box;

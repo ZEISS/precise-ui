@@ -12,7 +12,7 @@ import { getFontStyle } from '../../textStyles';
 import { IncreaseDecrease } from '../IncreaseDecrease';
 import { distance } from '../../distance';
 
-const StyledIncreaseDecrease = styled(IncreaseDecrease)`
+const StyledIncreaseDecrease: typeof IncreaseDecrease = styled(IncreaseDecrease)`
   margin-left: ${distance.xsmall};
 `;
 
@@ -30,7 +30,7 @@ const HeaderLabel = styled.div`
 
 export const StyledTableHead = styled.thead`
   ${getFontStyle({ weight: 'bold' })}
-  
+
   color: ${themed(({ theme }) => theme.text6 || theme.text1)};
 `;
 

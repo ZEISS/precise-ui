@@ -19,7 +19,7 @@ export interface ActiveProps {
 }
 
 const StyledContainer = styled('div')<ActiveProps>(
-  themed(
+  themed<ActiveProps>(
     ({
       open,
       theme: {
@@ -28,7 +28,7 @@ const StyledContainer = styled('div')<ActiveProps>(
       },
     }) => `
     ${getFontStyle({ size: 'medium' })}
-    
+
     position: relative;
     color: ${text1};
     border: 1px solid ${open ? openedBorderColor : borderColor};
@@ -37,7 +37,7 @@ const StyledContainer = styled('div')<ActiveProps>(
 );
 
 const StyledHeaderContainer = styled('div')<ActiveProps>(
-  themed(
+  themed<ActiveProps>(
     ({
       open,
       theme: {
@@ -52,7 +52,7 @@ const StyledHeaderContainer = styled('div')<ActiveProps>(
 );
 
 export const StyledActionContainer = styled.div<ActiveProps>(
-  themed(
+  themed<ActiveProps>(
     ({ open, theme: { ui0, ui1 } }) => css`
       text-align: center;
       padding: ${distance.small} ${distance.medium};

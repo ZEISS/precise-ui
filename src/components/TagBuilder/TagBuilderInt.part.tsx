@@ -73,7 +73,7 @@ const StyledInput = styled('input')<StyledInputProps>`
   outline-color: transparent !important;
   background: ${transparent};
   width: ${props => (props.value.length > 2 ? props.value.length * 10 + 'px' : '20px')};
-  color: ${themed(({ disabled, theme, valid }) => (valid ? (disabled ? theme.textDisabled : dark) : purpleRed))};
+  color: ${themed<StyledInputProps>(({ disabled, theme, valid }) => (valid ? (disabled ? theme.textDisabled : dark) : purpleRed))};
   cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
   font-family: inherit;
 `;

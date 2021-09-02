@@ -90,7 +90,7 @@ interface StyledAutosuggestWrapperProps {
 }
 
 const StyledAutosuggestWrapper = styled.ul<StyledAutosuggestWrapperProps>(
-  themed(
+  themed<StyledAutosuggestWrapperProps>(
     ({ direction, theme: { ui1, ui4 } }) => css`
       list-style: none;
       width: 100%;

@@ -25,4 +25,5 @@ export interface TableType extends React.SFC<TableProps<any>> {
  */
 export const Table: TableType = withResponsiveMode<TableMode>(width =>
   !width || width > breakpoints.medium ? 'table' : 'card',
-)(TableInt) as any;
+  // @TODO proper typings needed
+)(TableInt as any) as any;

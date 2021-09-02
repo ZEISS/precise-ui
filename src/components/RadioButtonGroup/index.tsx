@@ -52,7 +52,7 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
           Array.isArray(value) && button.name ? value.indexOf(button.name) !== -1 : button.name === value;
         button.setValue(selected);
       }
-      super.setState({ ...state, value });
+      super.setState({ ...state, value } as RadioButtonGroupState);
     }
     super.setState(state);
   }
