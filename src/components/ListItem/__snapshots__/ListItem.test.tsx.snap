@@ -21,56 +21,9 @@ exports[`<ListItem /> should not present a border 1`] = `
   <styled.li
     border={false}
   >
-    <StyledComponent
-      border={false}
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  background-color: ",
-              [Function],
-              ";
-  color: ",
-              [Function],
-              ";
-  ",
-              [Function],
-              ";
-  margin-bottom: -1px;
-  padding: ",
-              [Function],
-              ";
-  position: relative;
-  text-decoration: none;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-",
-            ],
-          },
-          "displayName": "styled.li",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "li",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-    >
-      <li
-        className="c0"
-      />
-    </StyledComponent>
+    <li
+      className="c0"
+    />
   </styled.li>
 </ListItem>
 `;
