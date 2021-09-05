@@ -20,6 +20,7 @@ describe('Visual testing', () => {
         try {
           expect(screenshot).toMatchImageSnapshot({
             customSnapshotIdentifier: identifier,
+            dumpDiffToConsole: true,
           });
         } catch (e) {
           throw new Error(`${e}\n${link}`);
