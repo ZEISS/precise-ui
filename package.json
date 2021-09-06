@@ -1,6 +1,6 @@
 {
   "name": "precise-ui",
-  "version": "1.6.3",
+  "version": "2.0.0",
   "description": "Precise UI React component library powered by Styled Components.",
   "keywords": [
     "react",
@@ -32,7 +32,7 @@
     "start": "styleguidist server",
     "test": "npm run lint && npm run test:unit",
     "test:unit": "cross-env NODE_ENV=test jest",
-    "test:visual": "jest -c integration/jest.config.js --runInBand",
+    "test:visual": "jest -c integration/jest.config.js --noStackTrace --runInBand",
     "test:visual:update": "npm run test:visual -- -u",
     "test:watch": "npm run test:unit -- --watch",
     "webpack:analyzer": "npm run build:bundle -- --config ./tools/bundle-analyzer.js"

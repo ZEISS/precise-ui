@@ -1,5 +1,13 @@
 # Precise UI Changelog
 
+## 2.0.0
+
+- Update Typescript from to v4
+- Update Puppeteer to v10
+- Update Styled Components to v5
+- Update React Datepicker to v4
+- Replace awesome-typescript-loader with ts-loader
+- Many minor dependency updates
 ## 1.6.3
 
 - fix(563167): add validation error
