@@ -55,14 +55,14 @@ interface ContentColumn {
 }
 
 const ContentColumn = styled('div')<ContentColumn>(
-  themed(
+  themed<ContentColumn>(
     ({ hasSidebar, theme }) => `
     flex: 1;
     padding: ${distance.xxlarge} ${distance.xlarge};
     ${
       hasSidebar
         ? `margin-left: ${tocColumnWidth}px;`
-        : `width: ${theme.breakpoints.large}px; 
+        : `width: ${theme.breakpoints.large}px;
       margin: 0 auto;`
     }
   `,

@@ -331,7 +331,7 @@ const getHeaderRender = ({
   months = defaultMonths,
 }: {
   months: CustomReactDatepickerProps['months'];
-}): ReactDatePickerProps['renderCustomHeader'] => ({ date, increaseMonth, decreaseMonth, changeYear }) => {
+}): ReactDatePickerProps<unknown>['renderCustomHeader'] => ({ date, increaseMonth, decreaseMonth, changeYear }) => {
   const monthName = months[date.getMonth()];
   const year = date.getFullYear();
   return (
@@ -352,7 +352,7 @@ const getHeaderRender = ({
   );
 };
 
-export interface CustomReactDatepickerProps extends ReactDatePickerProps {
+export interface CustomReactDatepickerProps extends ReactDatePickerProps<unknown> {
   months?: Array<string>;
   weekDays?: Array<string>;
 }
@@ -364,7 +364,7 @@ export const CustomReactDatepicker: React.FC<CustomReactDatepickerProps> = ({
   ...props
 }) => (
   <ReactDatePickerContainer>
-    <ReactDatePicker
+    <ReactDatePicker<unknown>
       locale={patchLocale(enGB, weekDays, months)}
       renderCustomHeader={getHeaderRender({ months })}
       showMonthYearPicker={showMonthYearPicker}
