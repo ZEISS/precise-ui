@@ -80,7 +80,7 @@ const TextFieldArea = styled.textarea<TextFieldAreaProps>`
   word-break: break-word;
 
   ${getFontSize('medium')}
-  color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text2))};
+  color: ${themed<TextFieldAreaProps>(({ theme, disabled }) => (disabled ? theme.text3 : theme.text2))};
   border-radius: 0;
   font-family: inherit;
   padding: ${props => (props.labelShown ? `${distance.large} ${distance.medium} ${distance.small}` : distance.medium)};
@@ -92,11 +92,13 @@ const TextFieldArea = styled.textarea<TextFieldAreaProps>`
   cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
   border: none;
   border-bottom: 1px solid
-    ${themed(({ theme, border }) => (border === TextFieldBorderType.error ? purpleRed : theme.ui4))};
+    ${themed<TextFieldAreaProps>(({ theme, border }) =>
+      border === TextFieldBorderType.error ? purpleRed : theme.ui4,
+    )};
   background: ${themed(({ theme }) => theme.ui2)};
 
   &::placeholder {
-    color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text2))};
+    color: ${themed<TextFieldAreaProps>(({ theme, disabled }) => (disabled ? theme.text3 : theme.text2))};
     opacity: ${props => (props.labelShown ? '0' : '1')};
     transition: inherit;
   }
@@ -285,7 +287,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
         />
       ) : (
         <StyledInput
-          ref={el => this.setTextFieldNode(el as TextFieldInputNodeType)}
+          ref={(el: TextFieldInputNodeType | null) => this.setTextFieldNode(el)}
           theme={theme}
           disabled={disabled}
           labelShown={label !== undefined}

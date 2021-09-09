@@ -38,7 +38,7 @@ interface MenuItemProps extends ActionLinkProps {
 const NavItems = styled.div``;
 
 const MenuItem = styled(ActionLink)<MenuItemProps>(
-  themed(
+  themed<MenuItemProps>(
     ({ selected, theme }) => `
   position: relative;
   display: block;

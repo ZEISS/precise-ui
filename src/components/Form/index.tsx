@@ -207,7 +207,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
     const keys = Object.keys(current);
     const errors = { ...this.state.errors };
 
-    for (const key of keys) {
+    for (const key of keys as Array<Extract<keyof Values, string>>) {
       const value = current[key];
       const error = this.getError(key, value);
       errors[key] = error;
@@ -257,7 +257,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
             });
           } else {
             const value = field.state.value;
-            current[name] = value;
+            current[name as Extract<keyof Values, string>] = value;
             error = this.getError(name, value);
           }
 

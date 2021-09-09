@@ -19,7 +19,7 @@ export interface AccordionTableRowProps extends StandardProps {
 }
 
 const StyledAccordionTableRow = styled.tr<AccordionTableRowProps>(
-  themed(
+  themed<AccordionTableRowProps>(
     ({ active, clickable, theme: { ui1, ui2, ui3, ui4, ui5, text1 } }) => `
     background: ${active ? ui2 : ui1};
     border: ${active ? `1px solid ${ui5}` : 'none'};

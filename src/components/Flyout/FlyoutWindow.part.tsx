@@ -254,7 +254,7 @@ export interface StyledFlyoutWindowProps {
 }
 
 const StyledFlyoutWindow = styled('div')<StyledFlyoutWindowProps>(
-  themed(
+  themed<StyledFlyoutWindowProps>(
     ({ theme, size, position, noGutter }) => css`
       ${getFontStyle({ size: 'medium' })}
 
@@ -285,7 +285,7 @@ interface StyledFlyoutArrowProps extends Position {
 }
 
 const StyledFlyoutArrow = styled('div')<StyledFlyoutArrowProps>(
-  themed(
+  themed<StyledFlyoutArrowProps>(
     ({ top, left, bottom, right, rotate, theme }) => css`
       pointer-events: none;
       position: absolute;

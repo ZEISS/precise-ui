@@ -38,7 +38,7 @@ const StyledTable = styled(Table)`
 `;
 
 const StyledTableRowCollapse = styled.tr<AccordionTableItemProps>(
-  themed(
+  themed<AccordionTableItemProps>(
     ({ theme, active }) => css`
       border: ${active ? `1px solid ${theme.ui5}` : 'none'};
       ${!active ? 'display: none;' : ''}

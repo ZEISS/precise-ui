@@ -28,7 +28,8 @@ export class Tooltip extends React.Component<TooltipProps, TooltipState> {
     this.state = {
       controlled: props.open !== undefined,
       open: props.open || false,
-      targetRect: { top: 0, right: 0, bottom: 0, left: 0, width: 0, height: 0 },
+      // Typing error here looks like a bug, so 'any' makes sense
+      targetRect: { top: 0, right: 0, bottom: 0, left: 0, width: 0, height: 0 } as any,
       dirtyFlag: false,
     };
   }

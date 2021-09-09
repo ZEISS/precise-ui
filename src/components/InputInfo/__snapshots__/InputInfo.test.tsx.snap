@@ -169,406 +169,99 @@ exports[`<InputInfo /> should be shown with the withValidation hoc if not change
       onChange={[Function]}
     >
       <styled.div>
-        <StyledComponent
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-kGXeez",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "
-  position: relative;
-",
-                ],
-              },
-              "displayName": "styled.div",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-kGXeez",
-              "target": "div",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
+        <div
+          className="c0"
         >
-          <div
-            className="c0"
-          >
-            <Styled(StackPanel)>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-kpOJdX",
-                      "isStatic": true,
-                      "lastClassName": "c1",
-                      "rules": Array [
-                        "
-  display: flex;
-",
-                      ],
-                    },
-                    "displayName": "Styled(StackPanel)",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-kpOJdX",
-                    "target": [Function],
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+          <Styled(StackPanel)>
+            <StackPanel
+              className="c1"
+            >
+              <styled.div
+                className="c1"
+                dir="row"
+                wrapping="nowrap"
               >
-                <StackPanel
-                  className="c1"
+                <div
+                  className="c2 c1"
+                  dir="row"
                 >
                   <styled.div
-                    className="c1"
-                    dir="row"
-                    wrapping="nowrap"
+                    border={1}
+                    focused={false}
+                    hasValue={false}
                   >
-                    <StyledComponent
-                      className="c1"
-                      dir="row"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-bwzfXH",
-                            "isStatic": false,
-                            "lastClassName": "c2",
-                            "rules": Array [
-                              "
-  display: flex;
-  flex-direction: ",
-                              [Function],
-                              ";
-  flex-wrap: ",
-                              [Function],
-                              ";
-  justify-content: flex-start;
-",
-                            ],
-                          },
-                          "displayName": "styled.div",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-bwzfXH",
-                          "target": "div",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      wrapping="nowrap"
+                    <div
+                      className="c3"
                     >
-                      <div
-                        className="c1 c2"
-                        dir="row"
+                      <StyledInputRow
+                        error={false}
+                        focused={false}
+                        hasValue={false}
+                        multiline={false}
                       >
-                        <styled.div
-                          border={1}
-                          focused={false}
-                          hasValue={false}
-                        >
-                          <StyledComponent
-                            border={1}
-                            focused={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jzJRlG",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    [Function],
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-jzJRlG",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            hasValue={false}
+                        <styled.div>
+                          <div
+                            className="c4"
                           >
-                            <div
-                              className="c3"
+                            <styled.input
+                              labelShown={false}
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onFocus={[Function]}
+                              value=""
                             >
-                              <Component
-                                error={false}
-                                focused={false}
-                                hasValue={false}
-                                multiline={false}
-                              >
-                                <styled.div>
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "sc-gqjmRU",
-                                          "isStatic": true,
-                                          "lastClassName": "c4",
-                                          "rules": Array [
-                                            "
-  flex-grow: 1;
-  display: flex;
-  flex-flow: column-reverse;
-  height: 100%;
-  position: relative;
-  min-width: 0;
-  margin: auto;
-",
-                                          ],
-                                        },
-                                        "displayName": "styled.div",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "sc-gqjmRU",
-                                        "target": "div",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                  >
-                                    <div
-                                      className="c4"
-                                    >
-                                      <styled.input
-                                        labelShown={false}
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        value=""
-                                      >
-                                        <StyledComponent
-                                          forwardedComponent={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "attrs": Array [],
-                                              "componentStyle": ComponentStyle {
-                                                "componentId": "sc-fjdhpX",
-                                                "isStatic": false,
-                                                "lastClassName": "c5",
-                                                "rules": Array [
-                                                  "
-  ::-ms-clear {
-    display: none;
-  }
-
-  color: ",
-                                                  [Function],
-                                                  ";
-  background: none;
-  border: none;
-  border-radius: 0;
-  font-size: ",
-                                                  "1rem",
-                                                  ";
-  font-family: inherit;
-  padding: ",
-                                                  [Function],
-                                                  ";
-  box-sizing: border-box;
-  box-shadow: none;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  cursor: ",
-                                                  [Function],
-                                                  ";
-  -webkit-appearance: none;
-  transition: all 0.2s;
-
-  &::placeholder {
-    color: ",
-                                                  [Function],
-                                                  ";
-    opacity: ",
-                                                  [Function],
-                                                  ";
-    transition: inherit;
-  }
-
-  &:focus {
-    outline: none;
-
-    &::placeholder {
-      opacity: 1;
-    }
-  }
-",
-                                                ],
-                                              },
-                                              "displayName": "styled.input",
-                                              "foldedComponentIds": Array [],
-                                              "render": [Function],
-                                              "styledComponentId": "sc-fjdhpX",
-                                              "target": "input",
-                                              "toString": [Function],
-                                              "warnTooManyClasses": [Function],
-                                              "withComponent": [Function],
-                                            }
-                                          }
-                                          forwardedRef={[Function]}
-                                          labelShown={false}
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onFocus={[Function]}
-                                          value=""
-                                        >
-                                          <input
-                                            className="c5"
-                                            onBlur={[Function]}
-                                            onChange={[Function]}
-                                            onFocus={[Function]}
-                                            value=""
-                                          />
-                                        </StyledComponent>
-                                      </styled.input>
-                                    </div>
-                                  </StyledComponent>
-                                </styled.div>
-                              </Component>
-                              <Component
-                                hasValue={false}
-                                onClear={[Function]}
-                                onClick={[Function]}
+                              <input
+                                className="c5"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onFocus={[Function]}
+                                value=""
                               />
-                            </div>
-                          </StyledComponent>
+                            </styled.input>
+                          </div>
                         </styled.div>
-                      </div>
-                    </StyledComponent>
+                      </StyledInputRow>
+                      <InputIcon
+                        hasValue={false}
+                        onClear={[Function]}
+                        onClick={[Function]}
+                      />
+                    </div>
                   </styled.div>
-                </StackPanel>
-              </StyledComponent>
-            </Styled(StackPanel)>
-            <Component
+                </div>
+              </styled.div>
+            </StackPanel>
+          </Styled(StackPanel)>
+          <PaddedContainer
+            bottom="xsmall"
+            left="medium"
+            top="xsmall"
+          >
+            <styled.div
               bottom="xsmall"
               left="medium"
               top="xsmall"
             >
-              <styled.div
-                bottom="xsmall"
-                left="medium"
-                top="xsmall"
+              <div
+                className="c6"
               >
-                <StyledComponent
-                  bottom="xsmall"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-kgoBCf",
-                        "isStatic": false,
-                        "lastClassName": "c6",
-                        "rules": Array [
-                          [Function],
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-kgoBCf",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  left="medium"
-                  top="xsmall"
+                <InputNotification
+                  info="Required input"
                 >
-                  <div
-                    className="c6"
-                  >
-                    <Component
-                      info="Required input"
-                    >
-                      <InputInfo>
-                        <styled.div>
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c7",
-                                  "rules": Array [
-                                    "
-  ",
-                                    "
-    ",
-                                    "font-size: 0.75rem;
-  ",
-                                    "
-    ",
-                                    "line-height: 0.875rem;
-  ",
-                                    "
-    ",
-                                    "
-  ",
-                                    ";
-  color: ",
-                                    [Function],
-                                    ";
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                          >
-                            <div
-                              className="c7"
-                            >
-                              Required input
-                            </div>
-                          </StyledComponent>
-                        </styled.div>
-                      </InputInfo>
-                    </Component>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </Component>
-          </div>
-        </StyledComponent>
+                  <InputInfo>
+                    <styled.div>
+                      <div
+                        className="c7"
+                      >
+                        Required input
+                      </div>
+                    </styled.div>
+                  </InputInfo>
+                </InputNotification>
+              </div>
+            </styled.div>
+          </PaddedContainer>
+        </div>
       </styled.div>
     </TextFieldInt>
   </TextField>
@@ -744,406 +437,99 @@ exports[`<InputInfo /> should not be shown with the withValidation hoc if change
       onChange={[Function]}
     >
       <styled.div>
-        <StyledComponent
-          forwardedComponent={
-            Object {
-              "$$typeof": Symbol(react.forward_ref),
-              "attrs": Array [],
-              "componentStyle": ComponentStyle {
-                "componentId": "sc-kGXeez",
-                "isStatic": true,
-                "lastClassName": "c0",
-                "rules": Array [
-                  "
-  position: relative;
-",
-                ],
-              },
-              "displayName": "styled.div",
-              "foldedComponentIds": Array [],
-              "render": [Function],
-              "styledComponentId": "sc-kGXeez",
-              "target": "div",
-              "toString": [Function],
-              "warnTooManyClasses": [Function],
-              "withComponent": [Function],
-            }
-          }
-          forwardedRef={null}
+        <div
+          className="c0"
         >
-          <div
-            className="c0"
-          >
-            <Styled(StackPanel)>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-kpOJdX",
-                      "isStatic": true,
-                      "lastClassName": "c1",
-                      "rules": Array [
-                        "
-  display: flex;
-",
-                      ],
-                    },
-                    "displayName": "Styled(StackPanel)",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-kpOJdX",
-                    "target": [Function],
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+          <Styled(StackPanel)>
+            <StackPanel
+              className="c1"
+            >
+              <styled.div
+                className="c1"
+                dir="row"
+                wrapping="nowrap"
               >
-                <StackPanel
-                  className="c1"
+                <div
+                  className="c2 c1"
+                  dir="row"
                 >
                   <styled.div
-                    className="c1"
-                    dir="row"
-                    wrapping="nowrap"
+                    border={1}
+                    focused={false}
+                    hasValue={false}
                   >
-                    <StyledComponent
-                      className="c1"
-                      dir="row"
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-bwzfXH",
-                            "isStatic": false,
-                            "lastClassName": "c2",
-                            "rules": Array [
-                              "
-  display: flex;
-  flex-direction: ",
-                              [Function],
-                              ";
-  flex-wrap: ",
-                              [Function],
-                              ";
-  justify-content: flex-start;
-",
-                            ],
-                          },
-                          "displayName": "styled.div",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-bwzfXH",
-                          "target": "div",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      wrapping="nowrap"
+                    <div
+                      className="c3"
                     >
-                      <div
-                        className="c1 c2"
-                        dir="row"
+                      <StyledInputRow
+                        error={false}
+                        focused={false}
+                        hasValue={false}
+                        multiline={false}
                       >
-                        <styled.div
-                          border={1}
-                          focused={false}
-                          hasValue={false}
-                        >
-                          <StyledComponent
-                            border={1}
-                            focused={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-jzJRlG",
-                                  "isStatic": false,
-                                  "lastClassName": "fvjFQg",
-                                  "rules": Array [
-                                    [Function],
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-jzJRlG",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            hasValue={false}
+                        <styled.div>
+                          <div
+                            className="c4"
                           >
-                            <div
-                              className="c3"
+                            <styled.input
+                              labelShown={false}
+                              onBlur={[Function]}
+                              onChange={[Function]}
+                              onFocus={[Function]}
+                              value=""
                             >
-                              <Component
-                                error={false}
-                                focused={false}
-                                hasValue={false}
-                                multiline={false}
-                              >
-                                <styled.div>
-                                  <StyledComponent
-                                    forwardedComponent={
-                                      Object {
-                                        "$$typeof": Symbol(react.forward_ref),
-                                        "attrs": Array [],
-                                        "componentStyle": ComponentStyle {
-                                          "componentId": "sc-gqjmRU",
-                                          "isStatic": true,
-                                          "lastClassName": "c4",
-                                          "rules": Array [
-                                            "
-  flex-grow: 1;
-  display: flex;
-  flex-flow: column-reverse;
-  height: 100%;
-  position: relative;
-  min-width: 0;
-  margin: auto;
-",
-                                          ],
-                                        },
-                                        "displayName": "styled.div",
-                                        "foldedComponentIds": Array [],
-                                        "render": [Function],
-                                        "styledComponentId": "sc-gqjmRU",
-                                        "target": "div",
-                                        "toString": [Function],
-                                        "warnTooManyClasses": [Function],
-                                        "withComponent": [Function],
-                                      }
-                                    }
-                                    forwardedRef={null}
-                                  >
-                                    <div
-                                      className="c4"
-                                    >
-                                      <styled.input
-                                        labelShown={false}
-                                        onBlur={[Function]}
-                                        onChange={[Function]}
-                                        onFocus={[Function]}
-                                        value=""
-                                      >
-                                        <StyledComponent
-                                          forwardedComponent={
-                                            Object {
-                                              "$$typeof": Symbol(react.forward_ref),
-                                              "attrs": Array [],
-                                              "componentStyle": ComponentStyle {
-                                                "componentId": "sc-fjdhpX",
-                                                "isStatic": false,
-                                                "lastClassName": "c5",
-                                                "rules": Array [
-                                                  "
-  ::-ms-clear {
-    display: none;
-  }
-
-  color: ",
-                                                  [Function],
-                                                  ";
-  background: none;
-  border: none;
-  border-radius: 0;
-  font-size: ",
-                                                  "1rem",
-                                                  ";
-  font-family: inherit;
-  padding: ",
-                                                  [Function],
-                                                  ";
-  box-sizing: border-box;
-  box-shadow: none;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  cursor: ",
-                                                  [Function],
-                                                  ";
-  -webkit-appearance: none;
-  transition: all 0.2s;
-
-  &::placeholder {
-    color: ",
-                                                  [Function],
-                                                  ";
-    opacity: ",
-                                                  [Function],
-                                                  ";
-    transition: inherit;
-  }
-
-  &:focus {
-    outline: none;
-
-    &::placeholder {
-      opacity: 1;
-    }
-  }
-",
-                                                ],
-                                              },
-                                              "displayName": "styled.input",
-                                              "foldedComponentIds": Array [],
-                                              "render": [Function],
-                                              "styledComponentId": "sc-fjdhpX",
-                                              "target": "input",
-                                              "toString": [Function],
-                                              "warnTooManyClasses": [Function],
-                                              "withComponent": [Function],
-                                            }
-                                          }
-                                          forwardedRef={[Function]}
-                                          labelShown={false}
-                                          onBlur={[Function]}
-                                          onChange={[Function]}
-                                          onFocus={[Function]}
-                                          value=""
-                                        >
-                                          <input
-                                            className="c5"
-                                            onBlur={[Function]}
-                                            onChange={[Function]}
-                                            onFocus={[Function]}
-                                            value=""
-                                          />
-                                        </StyledComponent>
-                                      </styled.input>
-                                    </div>
-                                  </StyledComponent>
-                                </styled.div>
-                              </Component>
-                              <Component
-                                hasValue={false}
-                                onClear={[Function]}
-                                onClick={[Function]}
+                              <input
+                                className="c5"
+                                onBlur={[Function]}
+                                onChange={[Function]}
+                                onFocus={[Function]}
+                                value=""
                               />
-                            </div>
-                          </StyledComponent>
+                            </styled.input>
+                          </div>
                         </styled.div>
-                      </div>
-                    </StyledComponent>
+                      </StyledInputRow>
+                      <InputIcon
+                        hasValue={false}
+                        onClear={[Function]}
+                        onClick={[Function]}
+                      />
+                    </div>
                   </styled.div>
-                </StackPanel>
-              </StyledComponent>
-            </Styled(StackPanel)>
-            <Component
+                </div>
+              </styled.div>
+            </StackPanel>
+          </Styled(StackPanel)>
+          <PaddedContainer
+            bottom="xsmall"
+            left="medium"
+            top="xsmall"
+          >
+            <styled.div
               bottom="xsmall"
               left="medium"
               top="xsmall"
             >
-              <styled.div
-                bottom="xsmall"
-                left="medium"
-                top="xsmall"
+              <div
+                className="c6"
               >
-                <StyledComponent
-                  bottom="xsmall"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-kgoBCf",
-                        "isStatic": false,
-                        "lastClassName": "c6",
-                        "rules": Array [
-                          [Function],
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-kgoBCf",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  left="medium"
-                  top="xsmall"
+                <InputNotification
+                  info="Required input"
                 >
-                  <div
-                    className="c6"
-                  >
-                    <Component
-                      info="Required input"
-                    >
-                      <InputInfo>
-                        <styled.div>
-                          <StyledComponent
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c7",
-                                  "rules": Array [
-                                    "
-  ",
-                                    "
-    ",
-                                    "font-size: 0.75rem;
-  ",
-                                    "
-    ",
-                                    "line-height: 0.875rem;
-  ",
-                                    "
-    ",
-                                    "
-  ",
-                                    ";
-  color: ",
-                                    [Function],
-                                    ";
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                          >
-                            <div
-                              className="c7"
-                            >
-                              Required input
-                            </div>
-                          </StyledComponent>
-                        </styled.div>
-                      </InputInfo>
-                    </Component>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </Component>
-          </div>
-        </StyledComponent>
+                  <InputInfo>
+                    <styled.div>
+                      <div
+                        className="c7"
+                      >
+                        Required input
+                      </div>
+                    </styled.div>
+                  </InputInfo>
+                </InputNotification>
+              </div>
+            </styled.div>
+          </PaddedContainer>
+        </div>
       </styled.div>
     </TextFieldInt>
   </TextField>

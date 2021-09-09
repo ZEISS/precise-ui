@@ -38,7 +38,7 @@ const InteractiveListContainer = styled.div`
 `;
 
 const ListWrapper = styled('ul')<InteractiveListWrapperProps>(
-  themed(
+  themed<InteractiveListWrapperProps>(
     ({ open, border, direction, theme: { ui4 } }) => css`
       display: ${open ? 'block' : 'none'};
       list-style: none;
@@ -60,10 +60,10 @@ const ListWrapper = styled('ul')<InteractiveListWrapperProps>(
 );
 
 const ListItem = styled.li<ListItemProps>(
-  themed(
+  themed<ListItemProps>(
     ({ hovered, theme: { ui3, text2 }, disabled }) => css`
       ${getFontStyle({ size: 'medium' })}
-      
+
       background: ${hovered ? ui3 : transparent};
       color: ${text2};
       list-style: none;
@@ -129,7 +129,7 @@ const ListDivider = styled.hr`
 
 const ListHeader = styled.span`
   ${getFontStyle({ size: 'medium' })}
-  
+
   padding: ${distance.medium} ${distance.small};
   width: 100%;
   display: block;

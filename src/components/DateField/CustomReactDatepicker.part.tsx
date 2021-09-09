@@ -19,19 +19,20 @@ function patchLocale(locale: Locale, inputWeekDays = defaultWeekDays, months = d
   return {
     ...locale,
     localize: {
-      ordinalNumber() {},
-      era() {},
-      quarter() {},
-      dayPeriod() {},
+      // @TODO Find out if these methods can indeed be missing in the runtime, change Locale type accordingly
+      // ordinalNumber() {},
+      // era() {},
+      // quarter() {},
+      // dayPeriod() {},
       ...locale.localize,
       month: (month: number) => months[month],
       day: (day: number) => weekDays[day],
     },
     match: {
-      ordinalNumber() {},
-      era() {},
-      quarter() {},
-      dayPeriod() {},
+      // ordinalNumber() {},
+      // era() {},
+      // quarter() {},
+      // dayPeriod() {},
       ...locale.match,
       month: (month: string) => months.indexOf(month),
       day: (day: string) => weekDays.indexOf(day),
@@ -330,7 +331,7 @@ const getHeaderRender = ({
   months = defaultMonths,
 }: {
   months: CustomReactDatepickerProps['months'];
-}): ReactDatePickerProps['renderCustomHeader'] => ({ date, increaseMonth, decreaseMonth, changeYear }) => {
+}): ReactDatePickerProps<unknown>['renderCustomHeader'] => ({ date, increaseMonth, decreaseMonth, changeYear }) => {
   const monthName = months[date.getMonth()];
   const year = date.getFullYear();
   return (
@@ -351,7 +352,7 @@ const getHeaderRender = ({
   );
 };
 
-export interface CustomReactDatepickerProps extends ReactDatePickerProps {
+export interface CustomReactDatepickerProps extends ReactDatePickerProps<unknown> {
   months?: Array<string>;
   weekDays?: Array<string>;
 }
@@ -363,7 +364,7 @@ export const CustomReactDatepicker: React.FC<CustomReactDatepickerProps> = ({
   ...props
 }) => (
   <ReactDatePickerContainer>
-    <ReactDatePicker
+    <ReactDatePicker<unknown>
       locale={patchLocale(enGB, weekDays, months)}
       renderCustomHeader={getHeaderRender({ months })}
       showMonthYearPicker={showMonthYearPicker}

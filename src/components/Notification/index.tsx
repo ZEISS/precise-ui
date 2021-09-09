@@ -88,7 +88,7 @@ interface LayoutProps {
 }
 
 const StyledNotification = styled.div<StyledNotificationProps>(
-  themed(
+  themed<StyledNotificationProps>(
     ({ closed, type, theme }) => `
   position: relative;
   display: ${closed ? 'none' : 'flex'};
@@ -120,7 +120,7 @@ const ContentWrapper = styled.span`
 `;
 
 const StyledContent = styled.div<LayoutProps>(
-  themed(
+  themed<LayoutProps>(
     ({ inline, theme: { notificationTextFontSize, notificationTextLineHeight } }) => `
   display: ${inline ? 'inline' : 'block'};
   font-family: inherit;
@@ -179,7 +179,7 @@ interface StyledIconProps extends IconProps {
 const StyledIconInt: React.SFC<StyledIconProps> = ({ type: _0, ...props }) => <Icon {...props} />;
 
 const StyledIcon = styled(StyledIconInt)<StyledIconProps>`
-  color: ${themed(props => getNotificationColor(props.type, props.theme))};
+  color: ${themed<StyledIconProps>(props => getNotificationColor(props.type, props.theme))};
 `;
 
 /**

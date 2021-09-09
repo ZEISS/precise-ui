@@ -7,7 +7,7 @@ exports[`<TagBuilderInt /> should render component with empty value 1`] = `
     focused={false}
     hasValue={false}
   >
-    <Component
+    <StyledInputRow
       error={false}
       focused={false}
       hasValue={false}
@@ -32,20 +32,20 @@ exports[`<TagBuilderInt /> should render component with empty value 1`] = `
           />
         </styled.div>
       </styled.div>
-    </Component>
-    <Component
+    </StyledInputRow>
+    <InputIcon
       hasValue={false}
     />
   </styled.div>
-  <Component
+  <PaddedContainer
     bottom="xsmall"
     left="medium"
     top="xsmall"
   >
-    <Component
+    <InputNotification
       info="info block"
     />
-  </Component>
+  </PaddedContainer>
 </styled.div>
 `;
 
@@ -56,7 +56,7 @@ exports[`<TagBuilderInt /> should render component with error block and default 
     focused={false}
     hasValue={true}
   >
-    <Component
+    <StyledInputRow
       error={true}
       focused={false}
       hasValue={true}
@@ -125,21 +125,21 @@ exports[`<TagBuilderInt /> should render component with error block and default 
           />
         </styled.div>
       </styled.div>
-    </Component>
-    <Component
+    </StyledInputRow>
+    <InputIcon
       error="error block"
       hasValue={true}
     />
   </styled.div>
-  <Component
+  <PaddedContainer
     bottom="xsmall"
     left="medium"
     top="xsmall"
   >
-    <Component
+    <InputNotification
       error="error block"
     />
-  </Component>
+  </PaddedContainer>
 </styled.div>
 `;
 
@@ -150,7 +150,7 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
     focused={false}
     hasValue={true}
   >
-    <Component
+    <StyledInputRow
       error={false}
       focused={false}
       hasValue={true}
@@ -219,20 +219,20 @@ exports[`<TagBuilderInt /> should render component with info block and value 1`]
           />
         </styled.div>
       </styled.div>
-    </Component>
-    <Component
+    </StyledInputRow>
+    <InputIcon
       hasValue={true}
     />
   </styled.div>
-  <Component
+  <PaddedContainer
     bottom="xsmall"
     left="medium"
     top="xsmall"
   >
-    <Component
+    <InputNotification
       info="info block"
     />
-  </Component>
+  </PaddedContainer>
 </styled.div>
 `;
 
@@ -243,7 +243,7 @@ exports[`<TagBuilderInt /> should render the component 1`] = `
     focused={false}
     hasValue={false}
   >
-    <Component
+    <StyledInputRow
       error={false}
       focused={false}
       hasValue={false}
@@ -268,8 +268,8 @@ exports[`<TagBuilderInt /> should render the component 1`] = `
           />
         </styled.div>
       </styled.div>
-    </Component>
-    <Component
+    </StyledInputRow>
+    <InputIcon
       hasValue={false}
     />
   </styled.div>
