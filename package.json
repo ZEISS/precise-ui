@@ -43,10 +43,12 @@
     }
   },
   "dependencies": {
+    "@popperjs/core": "^2.10.1",
     "date-fns": "^2.3.0",
     "memoize-one": "^5.1.0",
     "react-datepicker": "^4.2.1",
     "react-onclickoutside": "^6.7.1",
+    "react-popper": "^2.2.5",
     "typescript-plugin-inner-jsx": "^0.1.9"
   },
   "devDependencies": {

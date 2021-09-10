@@ -33,6 +33,7 @@ export * from './FileSelect';
 export * from './FileUploader';
 export * from './FileUploaderDetails';
 export * from './Flyout';
+export * from './Flyout2';
 export * from './Form';
 export * from './GradientContainer';
 export * from './Grid';
