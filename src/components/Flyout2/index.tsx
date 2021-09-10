@@ -8,8 +8,6 @@ import { FlyoutProps } from '../Flyout/Flyout.types.part';
 import { mapFlyoutPositionToPopperPlacement, calculateArrowStyleOverrides } from './helpers'
 const { useState, useEffect } = React;
 
-const toolTipArrowSize = 18;
-
 const FlyoutContainer = styled.div`
   position: relative;
   display: inline-block;
@@ -28,26 +26,26 @@ const FlyoutArrow = styled('div')(
         position: absolute;
         box-sizing: border-box;
         z-index: 101;
-        width: ${toolTipArrowSize}px;
-        height: ${toolTipArrowSize}px;
+        width: ${theme.flyout.arrowSize}px;
+        height: ${theme.flyout.arrowSize}px;
 
         :before {
           content: ' ';
           position: absolute;
-          top: ${toolTipArrowSize - 1}px;
+          top: ${theme.flyout.arrowSize - 1}px;
           left: 0;
           border-style: solid;
-          border-width: ${toolTipArrowSize / 2}px;
+          border-width: ${theme.flyout.arrowSize / 2}px;
           border-color: ${theme.ui4} transparent transparent transparent;
         }
 
         :after {
           content: ' ';
           position: absolute;
-          top: ${toolTipArrowSize - 1}px;
+          top: ${theme.flyout.arrowSize - 1}px;
           left: 0;
           border-style: solid;
-          border-width: ${toolTipArrowSize / 2 - 1}px;
+          border-width: ${theme.flyout.arrowSize / 2 - 1}px;
           margin-left: 1px;
           border-color: ${theme.flyout.background} transparent transparent transparent;
         }
