@@ -4,12 +4,9 @@ import { Placement } from '@popperjs/core'
 import onClickOutside, { AdditionalProps } from 'react-onclickoutside';
 import styled, { css, themed } from '../../utils/styled';
 import { getFontStyle } from '../../textStyles';
-import { StandardProps } from '../../common';
-import { ResponsiveComponentProps } from '../../hoc/withResponsive';
 import { distance } from '../../distance';
 import { FlyoutPosition, FlyoutProps } from '../Flyout/Flyout.types.part';
-import { forwardRef } from 'react';
-const { useState, useEffect, useImperativeHandle } = React;
+const { useState, useEffect } = React;
 
 const toolTipArrowSize = 18;
 
@@ -20,33 +17,12 @@ display: inline-block;
 width: fit-content;
 `;
 
-export interface FlyoutWindowProps extends ResponsiveComponentProps, StandardProps {
-  targetRect: ClientRect;
-  children: React.ReactNode;
-  position?: FlyoutPosition;
-  defaultPosition?: FlyoutPosition;
-  offset?: number;
-}
-
-export interface Position {
-  top?: number;
-  right?: number;
-  bottom?: number;
-  left?: number;
-}
-
 const StyledTargetWrapper = styled.div``;
 
-interface StyledFlyoutArrowProps extends Position {
-  rotate?: number;
-  popperStyles: any;
-  show: boolean;
-}
-const StyledFlyoutArrow = styled('div')<StyledFlyoutArrowProps>(
-  themed<StyledFlyoutArrowProps>(
-    ({ theme, show }) => {
+const StyledFlyoutArrow = styled('div')(
+  themed(
+    ({ theme }) => {
       return css`
-      visibility: ${show ? 'visible' : 'hidden'};
       pointer-events: none;
       position: absolute;
       box-sizing: border-box;
@@ -77,21 +53,15 @@ const StyledFlyoutArrow = styled('div')<StyledFlyoutArrowProps>(
 `}));
 
 export interface StyledFlyoutWindowProps {
-  size?: {
-    width?: number;
-    height?: number;
-  };
-  position?: Position;
+  visibility: boolean;
   noGutter?: boolean;
-  open?: boolean;
-  popperStyles: any;
 }
 
 const StyledFlyoutWindow = styled('div')<StyledFlyoutWindowProps>(
   themed<StyledFlyoutWindowProps>(
-    ({ theme, open, noGutter }) => css`
+    ({ theme, visibility, noGutter }) => css`
     ${getFontStyle({ size: 'medium' })}
-    visibility: ${open ? 'visible' : 'hidden'};
+    visibility: ${visibility ? 'visible' : 'hidden'};
     z-index: 100;
     box-sizing: border-box;
     box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
@@ -125,9 +95,48 @@ const mapFlyoutPositionToPopperPlacement = (position?: FlyoutPosition): Placemen
   return 'auto';
 }
 
-const FlyoutInt2: React.FC<FlyoutProps & AdditionalProps> = forwardRef((props, ref) => {
+const calculateArrowStyleOverrides = (popperAttributes = {}, arrowStyles: React.CSSProperties): React.CSSProperties => {
+  const placement = (popperAttributes['data-popper-placement'] ?? 'top').split('-')[0]
+  const rotate = {
+    left: -90,
+    right: 90,
+    top: 0,
+    bottom: 180,
+  } [placement];
+
+  const { transform, ...arrowStylesWithoutTransform } = arrowStyles;
+  const placementDependentStyles: React.CSSProperties = {
+    transform: transform + ` rotate(${rotate}deg)`,
+  }
+  switch (placement) {
+    case 'top': {
+      placementDependentStyles.bottom = '0px';
+      break;
+    };
+    case 'bottom': {
+      placementDependentStyles.top = '0px';
+      break;
+    };
+    case 'left': {
+      placementDependentStyles.right = '0px';
+      break;
+    };
+    case 'right': {
+      placementDependentStyles.left = '0px';
+      break;
+    }
+  }
+
+  return {...arrowStylesWithoutTransform, ...placementDependentStyles}
+}
+
+interface OutsideClickProps {
+  outsideClickEvent: React.SyntheticEvent | null;
+}
+
+const FlyoutInt: React.FC<FlyoutProps & AdditionalProps & OutsideClickProps> = (props) => {
   const [controlled ] = useState<boolean>(props.open !== undefined);
-  const [open, setOpenInt] = useState<boolean>(Boolean(props.open))
+  const [visibility, setVisibility] = useState<boolean>(Boolean(props.open))
   const [referenceElement, setReferenceElement] = useState<HTMLDivElement | null>(null);
   const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null);
   const [arrowElement, setArrowElement] = useState<HTMLDivElement | null>(null);
@@ -143,83 +152,61 @@ const FlyoutInt2: React.FC<FlyoutProps & AdditionalProps> = forwardRef((props, r
     ],
   });
 
-  useImperativeHandle(ref, () => ({
-    handleClickOutside: () => {
-      setOpen(false)
-    }
-  }));
+  useEffect(() => setVisibility(Boolean(props.open)), [props.open])
+  useEffect(() => changeVisibility(false), [props.outsideClickEvent])
 
-  useEffect(() => setOpenInt(Boolean(props.open)), [props.open])
-  const onClick = () => {
-    setOpen(!open);
-  }
+  const onClick = () => changeVisibility(!visibility);
 
-  const setOpen = (nextOpen: boolean) => {
-    if (controlled || nextOpen === open) {
+  const changeVisibility = (nextVisibility: boolean) => {
+    if (controlled || nextVisibility === visibility) {
       return
     }
-    typeof props.onChange === 'function' && props.onChange({ open: nextOpen });
-    setOpenInt(nextOpen);
+    typeof props.onChange === 'function' && props.onChange({ open: nextVisibility });
+    setVisibility(nextVisibility);
   }
-
-  const placement = ((attributes?.popper || {})['data-popper-placement'] ?? 'bottom').split('-')[0]
-
-  const rotate = {
-    left: -90,
-    right: 90,
-    top: 0,
-    bottom: 180,
-  } [placement];
-
-  const { transform, ...arrowStylesWithoutTransform } = styles.arrow;
-  const popperArrowStyles: any = {
-    transform: transform + ` rotate(${rotate}deg)`,
-  }
-  switch (placement) {
-    case 'top': {
-      popperArrowStyles.bottom = '0px';
-      break;
-    };
-    case 'bottom': {
-      popperArrowStyles.top = '0px';
-      break;
-    };
-    case 'left': {
-      popperArrowStyles.right = '0px';
-      break;
-    };
-    case 'right': {
-      popperArrowStyles.left = '0px';
-      break;
-    }
-  }
-
-  const arrowStyles = {...arrowStylesWithoutTransform, ...popperArrowStyles}
+FlyoutInt.displayName = 'FlyoutInt';
 
   return (
     <FlyoutContainer>
       <StyledTargetWrapper onClick={onClick} ref={setReferenceElement}>{props.children}</StyledTargetWrapper>
       <div ref={setPopperElement} style={styles.popper} {...attributes.popper}>
-        <StyledFlyoutWindow {...attributes.popper} open={open}>
+        <StyledFlyoutWindow visibility={visibility}>
           {props.content}
-          <StyledFlyoutArrow ref={setArrowElement} style={arrowStyles} popperStyles={styles} show={open} rotate={rotate}></StyledFlyoutArrow>
+          <StyledFlyoutArrow ref={setArrowElement} style={calculateArrowStyleOverrides(attributes.popper, styles.arrow)}></StyledFlyoutArrow>
         </StyledFlyoutWindow>
       </div>
     </FlyoutContainer>
   );
-})
-
-class OutsideClickAdapter extends React.Component<FlyoutProps & AdditionalProps> {
-  private ref = React.createRef<React.FC>()
-
-  // @ts-ignore
-  handleClickOutside = () => this.ref?.current?.handleClickOutside()
-
-  render() {
-    // @ts-ignore
-    return <FlyoutInt2 ref={this.ref} {...this.props}>{this.props.children}</FlyoutInt2>
-  }
 }
 
-export const Flyout2: React.ComponentClass<FlyoutProps & AdditionalProps> = onClickOutside(OutsideClickAdapter);
+function withClickOutsideFunctionalAdapter<P extends object>(Component: React.FC<P>) {
+  class OutsideClickAdapter extends React.Component<P, OutSideClickAdapterState> {
+    static displayName: string;
+    constructor(props: P) {
+      super(props);
+      this.state = {
+        outsideClickEvent: null,
+      }
+    }
+
+    handleClickOutside = (e: React.SyntheticEvent) => {
+      this.setState({ outsideClickEvent: e })
+    }
+
+    render() {
+      const { children, ...otherProps } = this.props;
+      return <Component outsideClickEvent={this.state.outsideClickEvent} {...otherProps as P}>{children}</Component>
+    }
+  }
+
+  OutsideClickAdapter.displayName = 'withClickOutsideWrapper';
+
+  return OutsideClickAdapter
+}
+
+interface OutSideClickAdapterState {
+  outsideClickEvent: React.SyntheticEvent | null;
+}
+
+export const Flyout2: React.ComponentClass<FlyoutProps & AdditionalProps> = onClickOutside(withClickOutsideFunctionalAdapter<FlyoutProps & AdditionalProps & OutsideClickProps>(FlyoutInt));
 Flyout2.displayName = 'Flyout2';
