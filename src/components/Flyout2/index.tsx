@@ -11,7 +11,6 @@ const { useState, useEffect } = React;
 const toolTipArrowSize = 18;
 
 const FlyoutContainer = styled.div`
-  z-index: 100;
   position: relative;
   display: inline-block;
   width: fit-content;
@@ -57,15 +56,13 @@ const FlyoutArrow = styled('div')(
 FlyoutArrow.displayName = 'FlyoutArrow';
 
 interface FlyoutBodyProps {
-  visibility: boolean;
   noGutter?: boolean;
 }
 
 const FlyoutBody = styled('div')<FlyoutBodyProps>(
   themed<FlyoutBodyProps>(
-    ({ theme, visibility, noGutter }) => css`
+    ({ theme, noGutter }) => css`
       ${getFontStyle({ size: 'medium' })}
-      visibility: ${visibility ? 'visible' : 'hidden'};
       z-index: 100;
       box-sizing: border-box;
       box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
@@ -82,7 +79,7 @@ FlyoutBody.displayName = 'FlyoutBody';
 
 const FlyoutInt: React.FC<FlyoutProps & WithClickOutsideFCProps> = (props) => {
   const [controlled ] = useState<boolean>(props.open !== undefined);
-  const [visibility, setVisibility] = useState<boolean>(Boolean(props.open))
+  const [visible, setVisible] = useState<boolean>(Boolean(props.open))
   const [referenceElement, setReferenceElement] = useState<HTMLDivElement | null>(null);
   const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null);
   const [arrowElement, setArrowElement] = useState<HTMLDivElement | null>(null);
@@ -97,28 +94,28 @@ const FlyoutInt: React.FC<FlyoutProps & WithClickOutsideFCProps> = (props) => {
     ],
   });
 
-  useEffect(() => setVisibility(Boolean(props.open)), [props.open])
+  useEffect(() => setVisible(Boolean(props.open)), [props.open])
   useEffect(() => changeVisibility(false), [props.outsideClickEvent])
 
-  const onClick = () => changeVisibility(!visibility);
+  const onClick = () => changeVisibility(!visible);
 
   const changeVisibility = (nextVisibility: boolean) => {
-    if (controlled || nextVisibility === visibility) {
+    if (controlled || nextVisibility === visible) {
       return
     }
     typeof props.onChange === 'function' && props.onChange({ open: nextVisibility });
-    setVisibility(nextVisibility);
+    setVisible(nextVisibility);
   }
 
   return (
     <FlyoutContainer>
       <FlyoutTargetWrapper onClick={onClick} ref={setReferenceElement}>{props.children}</FlyoutTargetWrapper>
-      <div ref={setPopperElement} style={styles.popper} {...attributes.popper}>
-        <FlyoutBody visibility={visibility}>
-          {props.content}
-          <FlyoutArrow ref={setArrowElement} style={calculateArrowStyleOverrides(attributes.popper, styles.arrow)}></FlyoutArrow>
-        </FlyoutBody>
-      </div>
+        {visible && props.content &&
+          <FlyoutBody ref={setPopperElement} style={styles.popper} {...attributes.popper}>
+            {props.content}
+            <FlyoutArrow ref={setArrowElement} style={calculateArrowStyleOverrides(attributes.popper, styles.arrow)}></FlyoutArrow>
+          </FlyoutBody>
+        }
     </FlyoutContainer>
   );
 }

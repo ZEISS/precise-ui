@@ -22,10 +22,10 @@ export const mapFlyoutPositionToPopperPlacement = (position?: FlyoutPosition): P
   return 'auto';
 }
 
-export const calculateArrowStyleOverrides = (popperAttributes = {}, arrowStyles: React.CSSProperties): React.CSSProperties => {
-  const primaryPlacement = (popperAttributes['data-popper-placement'] as Placement).split('-')[0]
+export const calculateArrowStyleOverrides = (popperAttributes = {}, arrowStyles: React.CSSProperties = {}): React.CSSProperties => {
+  const primaryPlacement = (popperAttributes['data-popper-placement'] as Placement ?? 'top').split('-')[0]
 
-  const { transform, ...arrowStylesWithoutTransform } = arrowStyles;
+  const { transform = '', ...arrowStylesWithoutTransform } = arrowStyles;
   const placementDependentStyles: React.CSSProperties = {
     top: {
       bottom: 0,
