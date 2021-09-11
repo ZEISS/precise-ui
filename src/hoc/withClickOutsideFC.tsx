@@ -10,7 +10,7 @@ import onClickOutside, { AdditionalProps } from 'react-onclickoutside';
 import * as React from 'react';
 
 interface OutsideClickProps {
-  outsideClickEvent: React.SyntheticEvent | null;
+  outsideClickEvent: React.SyntheticEvent | undefined;
 }
 
 export function withClickOutsideFC<P extends object>(Component: React.FC<P>) {
@@ -19,23 +19,27 @@ export function withClickOutsideFC<P extends object>(Component: React.FC<P>) {
     constructor(props: P) {
       super(props);
       this.state = {
-        outsideClickEvent: null,
-      }
+        outsideClickEvent: undefined,
+      };
     }
 
     handleClickOutside = (e: React.SyntheticEvent) => {
-      this.setState({ outsideClickEvent: e })
-    }
+      this.setState({ outsideClickEvent: e });
+    };
 
     render() {
       const { children, ...otherProps } = this.props;
-      return <Component outsideClickEvent={this.state.outsideClickEvent} {...otherProps as P}>{children}</Component>
+      return (
+        <Component outsideClickEvent={this.state.outsideClickEvent} {...otherProps as P}>
+          {children}
+        </Component>
+      );
     }
   }
 
   OutsideClickAdapter.displayName = 'withClickOutsideWrapper';
 
-  return onClickOutside(OutsideClickAdapter)
+  return onClickOutside(OutsideClickAdapter);
 }
 
-export interface WithClickOutsideFCProps extends AdditionalProps, OutsideClickProps {};
+export interface WithClickOutsideFCProps extends AdditionalProps, OutsideClickProps {}
