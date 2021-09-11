@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { usePopper } from 'react-popper'
+import { usePopper, Modifier } from 'react-popper'
 import { withClickOutsideFC, WithClickOutsideFCProps } from '../../hoc/withClickOutsideFC';
 import styled, { css, themed } from '../../utils/styled';
 import { getFontStyle } from '../../textStyles';
@@ -7,6 +7,8 @@ import { distance } from '../../distance';
 import { FlyoutProps } from '../Flyout/Flyout.types.part';
 import { mapFlyoutPositionToPopperPlacement, calculateArrowStyleOverrides } from './helpers'
 const { useState, useEffect } = React;
+import { flyout } from '../../themes';
+import { flip } from '@popperjs/core';
 
 const FlyoutContainer = styled.div`
   position: relative;
@@ -15,16 +17,31 @@ const FlyoutContainer = styled.div`
 `;
 FlyoutContainer.displayName = 'FlyoutContainer';
 
-const FlyoutTargetWrapper = styled.div``;
-FlyoutTargetWrapper.displayName = 'FlyoutTargetWrapper';
+const FlyoutTarget = styled.div``;
+FlyoutTarget.displayName = 'FlyoutTarget';
 
-const FlyoutArrow = styled('div')(
+const FlyoutBody = styled.div(
   themed(
-    ({ theme }) => {
-      return css`
+    ({ theme }) => css`
+      ${getFontStyle({ size: 'medium' })}
+      z-index: 100;
+      position: absolute;
+      width: fit-conent;
+      box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
+      border: 1px solid ${theme.ui4};
+      overflow: visible;
+      &[data-popper-reference-hidden='true'] {
+        visibility: hidden;
+      }
+  `)
+);
+FlyoutBody.displayName = 'FlyoutBody';
+
+const FlyoutArrow = styled.div(
+  themed(
+    ({ theme }) => css`
         pointer-events: none;
         position: absolute;
-        box-sizing: border-box;
         z-index: 101;
         width: ${theme.flyout.arrowSize}px;
         height: ${theme.flyout.arrowSize}px;
@@ -32,7 +49,7 @@ const FlyoutArrow = styled('div')(
         :before {
           content: ' ';
           position: absolute;
-          top: ${theme.flyout.arrowSize - 1}px;
+          top: ${theme.flyout.arrowSize}px;
           left: 0;
           border-style: solid;
           border-width: ${theme.flyout.arrowSize / 2}px;
@@ -42,54 +59,59 @@ const FlyoutArrow = styled('div')(
         :after {
           content: ' ';
           position: absolute;
-          top: ${theme.flyout.arrowSize - 1}px;
+          top: ${theme.flyout.arrowSize}px;
           left: 0;
           border-style: solid;
           border-width: ${theme.flyout.arrowSize / 2 - 1}px;
           margin-left: 1px;
           border-color: ${theme.flyout.background} transparent transparent transparent;
         }
-  `})
+  `)
 );
 FlyoutArrow.displayName = 'FlyoutArrow';
 
-interface FlyoutBodyProps {
+interface FlyoutContentProps {
   noGutter?: boolean;
 }
 
-const FlyoutBody = styled('div')<FlyoutBodyProps>(
-  themed<FlyoutBodyProps>(
-    ({ theme, noGutter }) => css`
-      ${getFontStyle({ size: 'medium' })}
-      z-index: 100;
-      box-sizing: border-box;
-      box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
-      border: 1px solid ${theme.ui4};
-      background: ${theme.flyout.background};
-      color: ${theme.flyout.textColor};
-      max-width: ${theme.flyout.maxWidth};
-      max-height: ${theme.flyout.maxHeight};
-      ${!noGutter ? `padding: ${distance.small} ${distance.medium};` : ''} box-sizing: border-box;
-      overflow: auto;
+const FlyoutContent = styled.div<FlyoutContentProps>(
+  themed<FlyoutContentProps>(({ theme, noGutter }) => css`
+    overflow: auto;
+    background: ${theme.flyout.background};
+    color: ${theme.flyout.textColor};
+    max-width: ${theme.flyout.maxWidth};
+    max-height: ${theme.flyout.maxHeight};
+    ${noGutter ? '' : `padding: ${distance.small} ${distance.medium};`}
   `)
 );
-FlyoutBody.displayName = 'FlyoutBody';
+FlyoutContent.displayName = 'FlyoutContent'
+
 
 const FlyoutInt: React.FC<FlyoutProps & WithClickOutsideFCProps> = (props) => {
   const [controlled ] = useState<boolean>(props.open !== undefined);
-  const [visible, setVisible] = useState<boolean>(Boolean(props.open))
+  const [visible, setVisible] = useState<boolean>(Boolean(props.open));
   const [referenceElement, setReferenceElement] = useState<HTMLDivElement | null>(null);
   const [popperElement, setPopperElement] = useState<HTMLDivElement | null>(null);
   const [arrowElement, setArrowElement] = useState<HTMLDivElement | null>(null);
+
+  const popperModifiers: Array<Modifier<unknown>> = [
+    { name: 'hide' },
+    { name: 'flip', enabled: !props.position },
+    { name: 'arrow', options: { element: arrowElement } },
+    { name: 'offset', options: { offset: [0, props.offset ?? 4 + flyout.arrowSize / 2] } },
+  ];
+
+  if (!props.position) {
+    popperModifiers.push({ name: 'preventOverflow',
+      options: {
+        altAxis: true,
+      },
+    });
+  }
+
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
-    placement: mapFlyoutPositionToPopperPlacement(props.position),
-    modifiers: [
-      { name: 'hide' },
-      { name: 'arrow', options: {
-        element: arrowElement,
-      } },
-      { name: 'offset', options: { offset: [0,20]}}
-    ],
+    placement: mapFlyoutPositionToPopperPlacement(props.position || props.defaultPosition),
+    modifiers: popperModifiers,
   });
 
   useEffect(() => setVisible(Boolean(props.open)), [props.open])
@@ -107,13 +129,13 @@ const FlyoutInt: React.FC<FlyoutProps & WithClickOutsideFCProps> = (props) => {
 
   return (
     <FlyoutContainer>
-      <FlyoutTargetWrapper onClick={onClick} ref={setReferenceElement}>{props.children}</FlyoutTargetWrapper>
-        {visible && props.content &&
-          <FlyoutBody ref={setPopperElement} style={styles.popper} {...attributes.popper}>
-            {props.content}
-            <FlyoutArrow ref={setArrowElement} style={calculateArrowStyleOverrides(attributes.popper, styles.arrow)}></FlyoutArrow>
-          </FlyoutBody>
-        }
+      <FlyoutTarget onClick={onClick} ref={setReferenceElement}>{props.children}</FlyoutTarget>
+      {visible && props.content &&
+        <FlyoutBody ref={setPopperElement} style={styles.popper} {...attributes.popper}>
+          <FlyoutContent noGutter={props.noGutter}>{props.content}</FlyoutContent>
+          <FlyoutArrow ref={setArrowElement} style={calculateArrowStyleOverrides(attributes.popper, styles.arrow)}></FlyoutArrow>
+        </FlyoutBody>
+      }
     </FlyoutContainer>
   );
 }
