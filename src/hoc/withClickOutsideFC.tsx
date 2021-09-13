@@ -14,7 +14,7 @@ interface OutsideClickProps {
 }
 
 export function withClickOutsideFC<P extends object>(Component: React.FC<P>) {
-  class OutsideClickAdapter extends React.Component<P, OutsideClickProps> {
+  class OutsideClickAdapter extends React.Component<P, AdditionalProps & OutsideClickProps> {
     static displayName: string;
     constructor(props: P) {
       super(props);

@@ -1,4 +1,4 @@
-import { FlyoutPosition } from '../Flyout/Flyout.types.part';
+import { FlyoutPosition } from '../components/Flyout/Flyout.types.part';
 import { Placement } from '@popperjs/core';
 
 export const mapFlyoutPositionToPopperPlacement = (position?: FlyoutPosition): Placement => {
@@ -19,7 +19,7 @@ export const mapFlyoutPositionToPopperPlacement = (position?: FlyoutPosition): P
     } as const)[position];
   }
 
-  return 'auto';
+  return 'bottom';
 };
 
 export const calculateArrowStyleOverrides = (
