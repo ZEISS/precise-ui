@@ -244,6 +244,11 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
   };
 
   private changeInput = (e: React.FocusEvent<HTMLInputElement>) => {
+    // in the latest version of React-datepicker changeRaw() is called on each change,
+    // not only on raw input change. In that case it may not have value
+    if (!e.target.value) {
+      return;
+    }
     const { onChangeRaw } = this.props;
     const { value } = e.target;
     this.change(this.parseDate(value), value);

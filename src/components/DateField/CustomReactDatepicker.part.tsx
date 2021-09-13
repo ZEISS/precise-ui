@@ -19,20 +19,19 @@ function patchLocale(locale: Locale, inputWeekDays = defaultWeekDays, months = d
   return {
     ...locale,
     localize: {
-      // @TODO Find out if these methods can indeed be missing in the runtime, change Locale type accordingly
-      // ordinalNumber() {},
-      // era() {},
-      // quarter() {},
-      // dayPeriod() {},
+      ordinalNumber() {},
+      era() {},
+      quarter() {},
+      dayPeriod() {},
       ...locale.localize,
       month: (month: number) => months[month],
       day: (day: number) => weekDays[day],
     },
     match: {
-      // ordinalNumber() {},
-      // era() {},
-      // quarter() {},
-      // dayPeriod() {},
+      ordinalNumber() {},
+      era() {},
+      quarter() {},
+      dayPeriod() {},
       ...locale.match,
       month: (month: string) => months.indexOf(month),
       day: (day: string) => weekDays.indexOf(day),
