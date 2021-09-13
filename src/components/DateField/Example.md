@@ -1,6 +1,6 @@
 **Elementary**
 
-The `DateField` component provides an easy way for selecting a date. As all inputs it can be used in a controlled and managed mode. 
+The `DateField` component provides an easy way for selecting a date. As all inputs it can be used in a controlled and managed mode.
 
 `DateField` is based on [ReactJS Datepicker](https://reactdatepicker.com/). Please refer to ReactJS Datepicker Docs for the detailed props description.
 
@@ -31,11 +31,11 @@ Select time
 ```jsx { "props": { "data-skip": true } }
 const { DateField } = require('precise-ui');
 
-<DateField 
-  showTimeSelect 
-  timeFormat="HH:mm" 
-  timeIntervals={15} 
-  dateFormat="MMMM d, yyyy h:mm aa" 
+<DateField
+  showTimeSelect
+  timeFormat="HH:mm"
+  timeIntervals={15}
+  dateFormat="MMMM d, yyyy h:mm aa"
   onChange={(e) => console.log(e)}
   placeholder="Select time" />
 ```
@@ -130,8 +130,8 @@ const { subDays } = require('date-fns');
 
 <DateField
   excludeDates={[new Date(), subDays(new Date(), 1)]}
-  placeholder="Select a date other than today or yesterday" 
-  onChange={(e) => console.log(e)} 
+  placeholder="Select a date other than today or yesterday"
+  onChange={(e) => console.log(e)}
   placeholder="Exluded times" />
 ```
 
@@ -157,7 +157,7 @@ const { subDays, addDays } = require('date-fns');
 
 <DateField
   highlightDates={[subDays(new Date(), 7), addDays(new Date(), 7)]}
-  placeholder="This highlights a week ago and a week from today" 
+  placeholder="This highlights a week ago and a week from today"
   onChange={(e) => console.log(e)} />
 ```
 
@@ -169,7 +169,7 @@ const { addDays } = require('date-fns');
 
 <DateField
   includeDates={[new Date(), addDays(new Date(), 1)]}
-  placeholder="This only includes today and tomorrow" 
+  placeholder="This only includes today and tomorrow"
   onChange={(e) => console.log(e)} />
 ```
 
@@ -194,7 +194,7 @@ const DateRange = () => {
           placeholder="Select start date"
         />
       </StackItem>
-      
+
       <StackItem>
         <DateField
           selected={endDate}
@@ -231,7 +231,7 @@ const { DateField } = require('precise-ui');
 
 <DateField
   disabledKeyboardNavigation
-  placeholder="This has disabled keyboard navigation" 
+  placeholder="This has disabled keyboard navigation"
   onChange={(e) => console.log(e)} />
 ```
 
@@ -243,17 +243,19 @@ const { DateField } = require('precise-ui');
 <DateField
   popperClassName="some-custom-class"
   popperPlacement="top-end"
-  popperModifiers={{
-    offset: {
-      enabled: true,
-      offset: '5px, 10px'
+  popperModifiers={[{
+    name: 'offset',
+    options: {
+      offset: [5, 10]
     },
-    preventOverflow: {
+  }, {
+    name: 'preventOverflow',
+    options: {
       enabled: true,
       escapeWithReference: false, // force popper to stay in viewport (even when input is scrolled out of view)
       boundariesElement: 'viewport'
     }
-  }}
+  }]}
   onChange={(e) => console.log(e)}
   placeholder="With changed popup position"
 />
@@ -329,7 +331,7 @@ const Example = () => {
 
   return (
     <div>
-      <DateField open={open} onOpenChange={(open) => console.log(open)} placeholder="Click show button"/>
+      <DateField popperPlacement='bottom' open={open} onOpenChange={(open) => console.log(open)} placeholder="Click show button"/>
       <Button onClick={() => setOpen(!open)}>{ open ? 'Hide' : 'Show' }</Button>
     </div>
   )
@@ -401,10 +403,10 @@ const Example = () => {
   const validate = (value) => setError(value.match(/^\d{2}-\d{2}-\d{4}$/) ? undefined : 'Invalid date format')
 
   return (
-    <DateField 
-      onChangeRaw={(e) => validate(e.target.value)} 
+    <DateField
+      onChangeRaw={(e) => validate(e.target.value)}
       onChange={({value}) => validate(value)}
-      error={error} 
+      error={error}
       placeholder="Type aaaa"
     />
   )
@@ -428,13 +430,13 @@ Inline version time
 ```jsx
 const { DateField } = require('precise-ui');
 
-<DateField 
+<DateField
   selected={new Date("1988/06/14")}
-  inline 
-  showTimeSelect 
-  timeFormat="HH:mm" 
-  timeIntervals={15} 
-  dateFormat="MMMM d, yyyy h:mm aa" 
+  inline
+  showTimeSelect
+  timeFormat="HH:mm"
+  timeIntervals={15}
+  dateFormat="MMMM d, yyyy h:mm aa"
   onChange={(e) => console.log(e)} />
 ```
 
