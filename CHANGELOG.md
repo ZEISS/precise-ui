@@ -1,5 +1,10 @@
 # Precise UI Changelog
 
+## 2.0.1
+
+- Fix onChangeRow() method in DateField component
+- Use modern Popper modifiers format in DateField component
+
 ## 2.0.0
 
 - Update Typescript from to v4
