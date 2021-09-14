@@ -39,7 +39,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "node tools/deps-duplication-detector.js && npm run test & npm run build"
+      "pre-push": "node tools/deps-duplication-detector.js && (npm run test & npm run build)"
     }
   },
   "dependencies": {
@@ -47,7 +47,7 @@
     "date-fns": "^2.23.0",
     "memoize-one": "^5.1.0",
     "react-datepicker": "^4.2.1",
-    "react-onclickoutside": "^6.7.1",
+    "react-onclickoutside": "^6.11.2",
     "react-popper": "^2.2.5",
     "typescript-plugin-inner-jsx": "^0.1.9"
   },
