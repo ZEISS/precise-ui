@@ -39,7 +39,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run test & npm run build"
+      "pre-push": "node tools/deps-duplication-detector.js && npm run test & npm run build"
     }
   },
   "dependencies": {
