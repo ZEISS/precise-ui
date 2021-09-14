@@ -37,19 +37,19 @@ export const calculateArrowStyleOverrides = (
   const placementDependentStyles: React.CSSProperties = {
     top: {
       bottom: 0,
-      transform: transform + ` rotate(${0}deg)`,
+      transform: `${transform} rotate(${0}deg)`,
     },
     bottom: {
       top: 0,
-      transform: transform + ` rotate(${180}deg)`,
+      transform: `${transform} rotate(${180}deg)`,
     },
     left: {
       right: 0,
-      transform: transform + ` rotate(${-90}deg)`,
+      transform: `${transform} rotate(${-90}deg)`,
     },
     right: {
       left: 0,
-      transform: transform + ` rotate(${90}deg)`,
+      transform: `${transform} rotate(${90}deg)`,
     },
   }[primaryPlacement as 'top' | 'bottom' | 'left' | 'right'];
 
