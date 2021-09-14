@@ -77,6 +77,7 @@ export const flyout: FlyoutStyling = {
   background: colors.white,
   textColor: colors.black,
   fontSize: remCalc('16px'),
+  arrowSize: 18,
 };
 
 export const metroInfoTile: MetroInfoTileStyling = {

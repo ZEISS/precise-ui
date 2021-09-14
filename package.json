@@ -1,6 +1,6 @@
 {
   "name": "precise-ui",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Precise UI React component library powered by Styled Components.",
   "keywords": [
     "react",
@@ -23,6 +23,7 @@
     "build:demo:test": "cross-env NODE_ENV=test styleguidist build",
     "build:es5": "build-with-transform-jsx -t es5 --outDir dist/es5 --declaration --inlineSourceMap --inlineSources --config ./tsconfig.json",
     "build:es6": "build-with-transform-jsx -t es6 -m es6 --outDir dist/es6 --declaration --inlineSourceMap --inlineSources --config ./tsconfig.json",
+    "check-deps": "node tools/deps-duplication-detector.js",
     "deploy": "gh-pages -d styleguide",
     "icongen": "node tools/convert-icons.js",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --project tsconfig.json",
@@ -39,14 +40,16 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run test & npm run build"
+      "pre-push": "npm run check-deps && (npm run test & npm run build)"
     }
   },
   "dependencies": {
-    "date-fns": "^2.3.0",
+    "@popperjs/core": "^2.9.2",
+    "date-fns": "^2.23.0",
     "memoize-one": "^5.1.0",
     "react-datepicker": "^4.2.1",
-    "react-onclickoutside": "^6.7.1",
+    "react-onclickoutside": "^6.11.2",
+    "react-popper": "^2.2.5",
     "typescript-plugin-inner-jsx": "^0.1.9"
   },
   "devDependencies": {
