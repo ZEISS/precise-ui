@@ -23,6 +23,7 @@
     "build:demo:test": "cross-env NODE_ENV=test styleguidist build",
     "build:es5": "build-with-transform-jsx -t es5 --outDir dist/es5 --declaration --inlineSourceMap --inlineSources --config ./tsconfig.json",
     "build:es6": "build-with-transform-jsx -t es6 -m es6 --outDir dist/es6 --declaration --inlineSourceMap --inlineSources --config ./tsconfig.json",
+    "check-deps": "node tools/deps-duplication-detector.js",
     "deploy": "gh-pages -d styleguide",
     "icongen": "node tools/convert-icons.js",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --project tsconfig.json",
@@ -39,7 +40,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "node tools/deps-duplication-detector.js && (npm run test & npm run build)"
+      "pre-push": "npm run check-deps && (npm run test & npm run build)"
     }
   },
   "dependencies": {
