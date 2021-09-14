@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 2.1.0
+
+- Flyout component reimplemented using Popper.js (556349)
+- HOC for using functional components with react-onclickoutside implemented
 ## 2.0.1
 
 - Fix onChangeRow() method in DateField component
