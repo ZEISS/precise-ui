@@ -216,4 +216,4 @@ To find out about the currently released version you have two options. Either yo
 
 Precise UI is released using the MIT license. For more information see the [license file](LICENSE).
 
-We are using some icons from [Material UI Icons](https://github.com/mui-org/material-ui/tree/master/packages/material-ui-icons). Their code and design is covered by the respective license of [Material UI](https://github.com/mui-org/material-ui) (MIT).
+We are using some icons from [Material UI Icons](https://github.com/mui-org/material-ui/tree/master/packages/mui-icons-material). Their code and design is covered by the respective license of [Material UI](https://github.com/mui-org/material-ui) (MIT).
