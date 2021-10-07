@@ -1,5 +1,10 @@
 # Precise UI Changelog
 
+## 2.1.1
+
+- Fix Flyout styling when extended with styled components
+- Remove dead code in Tooltip component
+
 ## 2.1.0
 
 - Flyout component reimplemented using Popper.js (556349)
