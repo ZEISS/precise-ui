@@ -30,8 +30,7 @@ const FlyoutBody = styled.div(
       ${getFontStyle({ size: 'medium' })}
       z-index: 100;
       position: absolute;
-      width: fit-conent;
-      box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
+      box-shadow: 0 2qpx 6px 0 rgba(75, 78, 82, 0.2);
       border: 1px solid ${theme.ui4};
       overflow: visible;
       &[data-popper-reference-hidden='true'] {
@@ -95,20 +94,33 @@ const FlyoutContent = styled.div<FlyoutContentProps>(
 FlyoutContent.displayName = 'FlyoutContent';
 
 const FlyoutInt: React.FC<FlyoutProps & WithClickOutsideFCProps> = props => {
-  const [controlled] = useState<boolean>(props.open !== undefined);
-  const [visible, setVisible] = useState<boolean>(Boolean(props.open));
+  const {
+    position,
+    defaultPosition,
+    offset,
+    open,
+    outsideClickEvent,
+    onChange,
+    children,
+    content,
+    theme,
+    ...restProps
+  } = props;
+
+  const [controlled] = useState<boolean>(open !== undefined);
+  const [visible, setVisible] = useState<boolean>(Boolean(open));
   const [referenceElement, setReferenceElement] = useState<HTMLDivElement | undefined>();
   const [popperElement, setPopperElement] = useState<HTMLDivElement | undefined>();
   const [arrowElement, setArrowElement] = useState<HTMLDivElement | undefined>();
 
   const popperModifiers: Array<Modifier<unknown>> = [
     { name: 'hide' },
-    { name: 'flip', enabled: !props.position },
+    { name: 'flip', enabled: !position },
     { name: 'arrow', options: { element: arrowElement } },
-    { name: 'offset', options: { offset: [0, props.offset || 4 + flyout.arrowSize / 2] } },
+    { name: 'offset', options: { offset: [0, offset || 4 + flyout.arrowSize / 2] } },
   ];
 
-  if (!props.position) {
+  if (!position) {
     popperModifiers.push({
       name: 'preventOverflow',
       options: {
@@ -118,12 +130,12 @@ const FlyoutInt: React.FC<FlyoutProps & WithClickOutsideFCProps> = props => {
   }
 
   const { styles, attributes } = usePopper(referenceElement, popperElement, {
-    placement: mapFlyoutPositionToPopperPlacement(props.position || props.defaultPosition),
+    placement: mapFlyoutPositionToPopperPlacement(position || defaultPosition),
     modifiers: popperModifiers,
   });
 
-  useEffect(() => setVisible(Boolean(props.open)), [props.open]);
-  useEffect(() => changeVisibility(false), [props.outsideClickEvent]);
+  useEffect(() => setVisible(Boolean(open)), [open]);
+  useEffect(() => changeVisibility(false), [outsideClickEvent]);
 
   const onClick = () => changeVisibility(!visible);
 
@@ -131,22 +143,22 @@ const FlyoutInt: React.FC<FlyoutProps & WithClickOutsideFCProps> = props => {
     if (controlled || nextVisibility === visible) {
       return;
     }
-    typeof props.onChange === 'function' && props.onChange({ open: nextVisibility });
+    typeof onChange === 'function' && onChange({ open: nextVisibility });
     setVisible(nextVisibility);
   };
 
   return (
     <FlyoutContainer>
       <FlyoutTarget onClick={onClick} ref={setReferenceElement}>
-        {props.children}
+        {children}
       </FlyoutTarget>
-      {visible && props.content && (
-        <FlyoutBody ref={setPopperElement} style={styles.popper} {...attributes.popper}>
+      {visible && content && (
+        <FlyoutBody ref={setPopperElement} style={styles.popper} {...attributes.popper} {...restProps}>
           {/* Normally a styled component gets the theme from context. But some other component
           may pass a customized theme as a prop. See example at Tooltip component */}
-          <FlyoutContent theme={props.theme}>{props.content}</FlyoutContent>
+          <FlyoutContent theme={theme}>{content}</FlyoutContent>
           <FlyoutArrow
-            theme={props.theme}
+            theme={theme}
             ref={setArrowElement}
             style={calculateArrowStyleOverrides(attributes.popper, styles.arrow)}
           />
@@ -155,6 +167,7 @@ const FlyoutInt: React.FC<FlyoutProps & WithClickOutsideFCProps> = props => {
     </FlyoutContainer>
   );
 };
+
 FlyoutInt.displayName = 'FlyoutInt';
 
 export const Flyout = withClickOutsideFC<FlyoutProps>(FlyoutInt);
