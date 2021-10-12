@@ -1,5 +1,10 @@
 # Precise UI Changelog
 
+## 2.1.2
+
+- Fix Flyout container styles, add an example
+- Improve arrow rendering on some displays
+
 ## 2.1.1
 
 - Fix Flyout styling when extended with styled components
