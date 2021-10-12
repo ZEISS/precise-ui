@@ -11,3 +11,21 @@ const { Tooltip, Avatar } = require('precise-ui');
 ```
 
 The tooltip needs to wrap the content for which it needs to present some content. This pattern ensures the autoplacement and managed mode (on hover) is applied correctly.
+
+**Styled**
+
+We can use `styled()` wrapper to customize Tooltip appearance
+
+```jsx
+const { styled, Tooltip, Avatar } = require('precise-ui');
+
+const StyledTooltip = styled(Tooltip)`
+  min-width: 350px;
+  display: flex;
+  justify-content: center;
+}`;
+
+<StyledTooltip content="Tooltip content" position="right">
+  <Avatar initials="R" description="Sample" size="x-small" />
+</StyledTooltip>
+```

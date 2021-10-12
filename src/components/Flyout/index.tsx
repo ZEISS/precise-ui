@@ -155,7 +155,9 @@ const FlyoutInt: React.FC<FlyoutProps & WithClickOutsideFCProps> = props => {
         <FlyoutBody ref={setPopperElement} style={styles.popper} {...attributes.popper} {...restProps}>
           {/* Normally a styled component gets the theme from context. But some other component
           may pass a customized theme as a prop. See example at Tooltip component */}
-          <FlyoutContent theme={theme}>{content}</FlyoutContent>
+          <FlyoutContent theme={theme} {...restProps}>
+            {content}
+          </FlyoutContent>
           <FlyoutArrow
             theme={theme}
             ref={setArrowElement}
