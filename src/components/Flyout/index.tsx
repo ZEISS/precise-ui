@@ -30,7 +30,7 @@ const FlyoutBody = styled.div(
       ${getFontStyle({ size: 'medium' })}
       z-index: 100;
       position: absolute;
-      box-shadow: 0 2qpx 6px 0 rgba(75, 78, 82, 0.2);
+      box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
       border: 1px solid ${theme.ui4};
       overflow: visible;
       &[data-popper-reference-hidden='true'] {
@@ -53,7 +53,7 @@ const FlyoutArrow = styled.div(
       :before {
         content: ' ';
         position: absolute;
-        top: ${theme.flyout.arrowSize}px;
+        top: ${theme.flyout.arrowSize + 0.5}px;
         left: 0;
         border-style: solid;
         border-width: ${theme.flyout.arrowSize / 2}px;
@@ -63,11 +63,10 @@ const FlyoutArrow = styled.div(
       :after {
         content: ' ';
         position: absolute;
-        top: ${theme.flyout.arrowSize}px;
-        left: 0;
+        top: ${theme.flyout.arrowSize - 0.5}px;
+        left: 0.5px;
         border-style: solid;
-        border-width: ${theme.flyout.arrowSize / 2 - 1}px;
-        margin-left: 1px;
+        border-width: ${theme.flyout.arrowSize / 2 - 0.5}px;
         border-color: ${theme.flyout.background} transparent transparent transparent;
       }
     `,
