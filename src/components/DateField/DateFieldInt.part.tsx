@@ -203,7 +203,9 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
       this.setState({ value, date: this.parseDate(value) });
     }
 
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   componentDidMount() {

@@ -156,7 +156,9 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
     if (this.state.controlled) {
       this.setState({ value });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   componentDidMount() {

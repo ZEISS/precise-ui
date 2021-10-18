@@ -100,7 +100,9 @@ export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxStat
     if (this.state.controlled) {
       this.setState({ value });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   componentDidMount() {
