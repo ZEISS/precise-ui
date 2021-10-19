@@ -151,7 +151,9 @@ class AutocompleteInt<T> extends React.Component<SupportedAutocompleteProps<T> &
     if (this.state.controlled) {
       this.setState({ value });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   componentDidMount() {

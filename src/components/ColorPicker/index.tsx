@@ -228,7 +228,9 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
         base,
       });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   componentDidMount() {

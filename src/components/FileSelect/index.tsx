@@ -93,7 +93,9 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
         previews: [],
       });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   private addFileEntries = (ev: React.ChangeEvent<HTMLInputElement>) => {

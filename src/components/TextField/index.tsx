@@ -140,7 +140,9 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
     if (this.state.controlled) {
       this.setState({ value });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   componentDidMount() {

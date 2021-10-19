@@ -245,7 +245,9 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
       });
     }
 
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   private show = () =>

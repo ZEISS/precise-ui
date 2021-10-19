@@ -142,7 +142,9 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
         inputValue: inputValue,
       });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   componentDidMount() {

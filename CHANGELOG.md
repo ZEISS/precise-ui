@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 2.1.3
+
+ - Persist validation state in Form controls when Form gets re-rendered
+
 ## 2.1.2
 
 - Fix Flyout container styles, add an example

@@ -83,7 +83,9 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
         value,
       });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   private getNextValue = (groupItemName?: string) => {
