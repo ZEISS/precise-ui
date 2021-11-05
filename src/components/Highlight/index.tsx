@@ -64,14 +64,11 @@ function validateMatches(matches: Array<Array<number>>) {
  * Component will render a SPAN or series of SPAN with the content and highlights
  */
 export const Highlight: React.FC<HighlightProps> = ({ text, matches, highlight, ignoreCase = true, theme }) => {
-  if (!matches && undefined === highlight) {
-    throw new Error('You must set either indices or highlight');
-  }
-
   if (matches) {
     validateMatches(matches);
 
     let lastMatch = 0;
+
     return (
       <>
         {matches.map((match, i) => {
@@ -89,26 +86,27 @@ export const Highlight: React.FC<HighlightProps> = ({ text, matches, highlight, 
     );
   }
 
-  if (highlight === '') {
-    return <>{text}</>;
+  if (highlight && typeof highlight === 'string') {
+    // Sanitized the user input to prevent them from using RegEx patterns
+    const sanitized = highlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const parts = text.split(new RegExp(`(${sanitized})`, ignoreCase ? 'gi' : 'g')).filter(Boolean);
+
+    return (
+      <>
+        {parts.map((part, i) =>
+          part.toLowerCase() === (highlight && highlight.toLowerCase()) ? (
+            <Highlighted theme={theme} key={i}>
+              {part}
+            </Highlighted>
+          ) : (
+            <span key={i}>{part}</span>
+          ),
+        )}
+      </>
+    );
   }
 
-  // Sanitized the user input to prevent them from using RegEx patterns
-  const sanitized = highlight && highlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const parts = text.split(new RegExp(`(${sanitized})`, ignoreCase ? 'gi' : 'g')).filter(Boolean);
-  return (
-    <>
-      {parts.map((part, i) =>
-        part.toLowerCase() === (highlight && highlight.toLowerCase()) ? (
-          <Highlighted theme={theme} key={i}>
-            {part}
-          </Highlighted>
-        ) : (
-          <span key={i}>{part}</span>
-        ),
-      )}
-    </>
-  );
+  return <>{text}</>;
 };
 
 Highlight.displayName = 'Highlight';

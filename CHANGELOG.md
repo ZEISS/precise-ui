@@ -1,34 +1,39 @@
 # Precise UI Changelog
 
+## 2.1.4
+
+- Updated `Highlight` component to have optional highlight prop (#280)
+
 ## 2.1.3
 
- - Persist validation state in Form controls when Form gets re-rendered
+- Persist validation state in Form controls when Form gets re-rendered
 
 ## 2.1.2
 
-- Fix Flyout container styles, add an example
+- Fix `Flyout` container styles, add an example
 - Improve arrow rendering on some displays
 
 ## 2.1.1
 
-- Fix Flyout styling when extended with styled components
+- Fix `Flyout` styling when extended with styled components
 - Remove dead code in Tooltip component
 
 ## 2.1.0
 
-- Flyout component reimplemented using Popper.js (556349)
-- HOC for using functional components with react-onclickoutside implemented
-- Fix onChangeRow() method in DateField component
-- Use modern Popper modifiers format in DateField component
+- `Flyout` component reimplemented using Popper.js (556349)
+- HOC for using functional components with `react-onclickoutside` implemented
+- Fix `onChangeRow()` method in `DateField` component
+- Use modern Popper.js modifiers format in `DateField` component
 
 ## 2.0.0
 
 - Update Typescript from to v4
 - Update Puppeteer to v10
 - Update Styled Components to v5
-- Update React Datepicker to v4
-- Replace awesome-typescript-loader with ts-loader
+- Update React `Datepicker` to v4
+- Replace `awesome-typescript-loader` with `ts-loader`
 - Many minor dependency updates
+
 ## 1.6.3
 
 - fix(563167): add validation error
@@ -59,7 +64,7 @@
 
 ## 1.5.1
 
-- Fix marking selected date in Datepicker of `DateField`
+- Fix marking selected date in `Datepicker` of `DateField`
 
 ## 1.5.0
 
