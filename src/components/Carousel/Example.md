@@ -18,6 +18,21 @@ const { Carousel } = require('precise-ui');
 </Carousel>
 ```
 
+**Single page**
+
+Example of the basic `Carousel` component usage. Only one page present (`Bullets` disabled).
+
+```jsx
+const { Carousel } = require('precise-ui');
+
+<Carousel infinite>
+  <div style={{ height: '150px', width: '100%', backgroundColor: '#f3a', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    First page
+  </div>
+</Carousel>
+```
+
+
 **Controlled Mode**
 
 An example with controlled mode and page open by default. In this mode component behavior is controlled by code exclusively.

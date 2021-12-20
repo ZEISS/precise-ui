@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 2.1.5
+
+- Fixed `Navigation` behavior when `Carousel` contains only one `Page`: `Bullets` disabled (#600319)
+
 ## 2.1.4
 
 - Updated `Highlight` component to have optional highlight prop (#280)

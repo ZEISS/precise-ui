@@ -1,7 +1,6 @@
 import * as React from 'react';
 import styled, { css } from '../../utils/styled';
-import { KeyCodes } from '../../utils/keyCodes';
-import { remCalc } from '../../utils/remCalc';
+import { KeyCodes, remCalc } from '../../utils';
 import { InteractiveSurface, InteractiveSurfaceChangeEvent, InteractiveSurfaceProps } from '../InteractiveSurface';
 import { Icon } from '../Icon';
 import { StandardProps } from '../../common';
@@ -452,6 +451,7 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
 
     const disableLeft = !infinite && selectedIndex < 1;
     const disableRight = !infinite && selectedIndex > childrenCount - 2;
+    const enableBullets = bullets && bullets.length > 1;
 
     return (
       <RootContainer {...props} onKeyDown={this.handleKeyDown} tabIndex={0}>
@@ -474,7 +474,7 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
             </div>
           )}
         </Mask>
-        <BulletsContainer>{bullets}</BulletsContainer>
+        {enableBullets && <BulletsContainer>{bullets}</BulletsContainer>}
       </RootContainer>
     );
   }
