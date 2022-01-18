@@ -12,7 +12,7 @@ A complete opinionated React component library with minimal dependencies powered
 
 The UI component library contains both, very low-level design elements as well as combined high-level design elements. In general, the intention of the library is to simplify development by exposing components that satisfy design specifications and provide ease of programming. Repeatable UI designs should therefore only take minutes instead of hours.
 
-See [https://precise-ui.io](https://precise-ui.io) for our kitchen sink (i.e., demo page illustrating all the components incl. their documentation).
+See [https://precise-ui.io](https://www.precise-ui.io) for our kitchen sink (i.e., demo page illustrating all the components incl. their documentation).
 
 ## Getting Started
 
@@ -50,7 +50,7 @@ import { TextField } from 'precise-ui';
 <TextField label="Label" />
 ```
 
-You can see a list of all available components on our [website](https://precise-ui.io/).
+You can see a list of all available components on our [website](https://www.precise-ui.io/).
 
 ## Contributing
 
