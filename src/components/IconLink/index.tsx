@@ -24,7 +24,6 @@ export interface StyledAnchorProps {
 
 export interface StyledIconProps {
   disabled?: boolean;
-  iconOnly?: boolean;
 }
 
 const StyledAnchor = styled(Anchor)<StyledAnchorProps>(
@@ -52,9 +51,7 @@ const StyledAnchor = styled(Anchor)<StyledAnchorProps>(
 );
 
 const StyledIcon = styled(Icon)<StyledIconProps & IconProps>`
-  color: ${themed<StyledIconProps & IconProps>(({ disabled, iconOnly, theme: { ui0, ui4, ui5 } }) =>
-    disabled ? ui4 : iconOnly ? ui5 : ui0,
-  )};
+  color: ${themed<StyledIconProps & IconProps>(({ disabled, theme: { ui0, ui4 } }) => (disabled ? ui4 : ui0))};
   display: inline-block;
   vertical-align: middle;
 `;
@@ -73,9 +70,7 @@ const AnchorText = styled.span`
 export const IconLink: React.SFC<IconLinkProps> = ({ icon, theme, disabled, children, block, ...other }) => {
   return (
     <StyledAnchor disabled={disabled} display={block ? 'block' : 'inline-block'} {...other}>
-      {icon && (
-        <StyledIcon disabled={disabled} iconOnly={children ? false : true} name={icon} theme={theme} size={'22px'} />
-      )}
+      {icon && <StyledIcon disabled={disabled} name={icon} theme={theme} size={'22px'} />}
       {children && <AnchorText>{children}</AnchorText>}
     </StyledAnchor>
   );
