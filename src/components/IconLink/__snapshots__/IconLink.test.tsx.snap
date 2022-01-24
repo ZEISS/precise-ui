@@ -6,6 +6,7 @@ exports[`<IconLink /> should render a <IconLink> with some content component 1`]
   href="foo"
 >
   <Styled(Icon)
+    iconOnly={false}
     name="Favorite"
     size="22px"
   />
@@ -24,6 +25,7 @@ exports[`<IconLink /> should render a disabled <IconLink> with some content 1`] 
 >
   <Styled(Icon)
     disabled={true}
+    iconOnly={false}
     name="Favorite"
     size="22px"
   />
