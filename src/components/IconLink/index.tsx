@@ -15,6 +15,13 @@ export interface IconLinkProps extends AnchorProps {
    * The name of the icon to display.
    */
   icon: IconName;
+  /**
+   * Controls the icon's color style.
+   *  If `true`, the icon will be colored with the theme's `ui0` color.
+   *  Otherwise, it will be colored in `ui0` only if the `IconLink` has children.
+   *  If set to `false` and the `IconLink` has no children, the icon will be colored in `ui5`.
+   */
+  isInteractiveIcon?: boolean;
 }
 
 export interface StyledAnchorProps {
@@ -70,11 +77,25 @@ const AnchorText = styled.span`
 /**
  * The icon link component shows an icon with optional text.
  */
-export const IconLink: React.SFC<IconLinkProps> = ({ icon, theme, disabled, children, block, ...other }) => {
+export const IconLink: React.SFC<IconLinkProps> = ({
+  icon,
+  theme,
+  disabled,
+  children,
+  block,
+  isInteractiveIcon,
+  ...other
+}) => {
   return (
     <StyledAnchor disabled={disabled} display={block ? 'block' : 'inline-block'} {...other}>
       {icon && (
-        <StyledIcon disabled={disabled} iconOnly={children ? false : true} name={icon} theme={theme} size={'22px'} />
+        <StyledIcon
+          disabled={disabled}
+          iconOnly={isInteractiveIcon ? false : !children}
+          name={icon}
+          theme={theme}
+          size={'22px'}
+        />
       )}
       {children && <AnchorText>{children}</AnchorText>}
     </StyledAnchor>
