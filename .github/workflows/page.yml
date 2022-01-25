@@ -3,7 +3,7 @@ name: Demo Page CI
 on:
   release:
     types:
-      - created
+      - published
 
 jobs:
   deploy_www:
