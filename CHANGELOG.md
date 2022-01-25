@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 2.1.5
+
+- Improved trigger and added CNAME to kitchen sink
+
 ## 2.1.4
 
 - Updated `Highlight` component to have optional highlight prop (#280)

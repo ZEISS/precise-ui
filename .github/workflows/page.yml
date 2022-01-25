@@ -26,6 +26,7 @@ jobs:
         npm run build:demo
         cd styleguide
         ln -s index.html 404.html
+        echo "www.precise-ui.io" > CNAME
     - name: Deploy with gh-pages
       run: |
         git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
