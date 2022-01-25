@@ -1,8 +1,13 @@
 # Precise UI Changelog
 
+## 2.1.5
+
+- Improved trigger and added CNAME to kitchen sink
+
 ## 2.1.4
 
 - Updated `Highlight` component to have optional highlight prop (#280)
+- Fix `IconLink` without label color style (#357)
 
 ## 2.1.3
 

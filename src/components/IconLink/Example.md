@@ -25,3 +25,11 @@ const { IconLink } = require('precise-ui');
   This link is <IconLink block icon="Cached">Refresh</IconLink> displayed as a block and this is <IconLink disabled icon="VisibilityOff">disabled</IconLink>
 </div>
 ```
+
+`IconLink` can be also displayed as an interactive component.
+
+```jsx
+const { IconLink } = require('precise-ui');
+
+<IconLink icon="Add" href="#🎩"  isInteractiveIcon={true}/>
+```
