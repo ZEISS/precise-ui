@@ -3,6 +3,7 @@
 ## 2.1.5
 
 - Improved trigger and added CNAME to kitchen sink
+- Updated `Form` component to have `onValidate` callback
 
 ## 2.1.4
 
