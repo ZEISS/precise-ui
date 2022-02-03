@@ -62,4 +62,22 @@ describe('<Pagination />', () => {
     );
     expect(wrapper.find('.foo')).toHaveLength(2);
   });
+
+  it('should respect the `value` property', () => {
+    const wrapper = enzyme.mount(
+      <Pagination size={3}>
+        <div className="foo">First</div>
+        <div className="foo">Second</div>
+        <div className="foo">3</div>
+        <div className="foo">4</div>
+        <div className="foo">5</div>
+        <div className="foo">6</div>
+        <div className="foo">7</div>
+      </Pagination>,
+    );
+    
+    wrapper.setProps({value: 2})
+
+    expect(wrapper.find('.foo')).toHaveLength(1);
+  });
 });

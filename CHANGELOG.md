@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 2.1.6
+
+- Fixed controlled mode on Pagination component
+
 ## 2.1.5
 
 - Improved trigger and added CNAME to kitchen sink
