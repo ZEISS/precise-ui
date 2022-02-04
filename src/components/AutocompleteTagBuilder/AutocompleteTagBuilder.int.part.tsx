@@ -31,7 +31,7 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
     }, delay);
   }
 
-  public componentWillReceiveProps(nextProps: AutocompleteTagBuilderProps<T>) {
+  public UNSAFE_componentWillReceiveProps(nextProps: AutocompleteTagBuilderProps<T>) {
     if (this.state.controlled) {
       const { value, inputValue } = nextProps;
       this.setState({
@@ -200,6 +200,8 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
       info,
       borderless = false,
       error,
+      onBlur,
+      onFocus,
     } = this.props;
 
     const { inputValue } = this.state;
@@ -220,6 +222,8 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
         info={info}
         error={error}
         borderless={borderless}
+        onBlur={onBlur}
+        onFocus={onFocus}
       />
     );
   }

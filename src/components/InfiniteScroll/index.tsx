@@ -121,7 +121,7 @@ export class InfiniteScroll extends React.Component<InfiniteScrollProps, Infinit
     }
   }
 
-  componentWillReceiveProps(nextProps: InfiniteScrollProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: InfiniteScrollProps) {
     if (nextProps.data.length !== this.props.data.length || nextProps.hasMore !== this.props.hasMore) {
       this.setState({
         isLoading: false,

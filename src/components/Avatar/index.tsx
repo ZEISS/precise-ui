@@ -90,7 +90,9 @@ const AvatarInitials = styled('div')<SizeProp & AvatarInitialsBaseProps>`
   justify-content: center;
 
   text-align: center;
-  background-color: ${themed(props => props.color || colorCycle(props.theme.colorCycle, props.initials))};
+  background-color: ${themed<SizeProp & AvatarInitialsBaseProps>(
+    props => props.color || colorCycle(props.theme.colorCycle, props.initials),
+  )};
   ${({ size }) => `
     height: ${avatarSize[size]};
     width: ${avatarSize[size]};

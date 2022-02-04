@@ -128,7 +128,7 @@ const SliderBar = styled(InteractiveSurface)<SliderBarProps>`
     border-radius: ${distance.small};
     height: 100%;
     width: 100%;
-    background: ${themed(props =>
+    background: ${themed<SliderBarProps>(props =>
       props.disabled
         ? props.theme.ui3
         : props.active
@@ -149,7 +149,7 @@ const SliderBar = styled(InteractiveSurface)<SliderBarProps>`
 
 const IndicatorBar = styled('div')<IndicatorBarProps>`
   border-radius: ${distance.small};
-  background: ${themed(props =>
+  background: ${themed<IndicatorBarProps>(props =>
     props.disabled ? props.theme.ui4 : props.active ? ocean : transparentize(props.theme.ui5, 0.75),
   )};
   transition: background ${transitionDuration} ${transitionEase};
@@ -204,7 +204,7 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
     }
   }
 
-  componentWillReceiveProps({ value = this.state.value, error, orientation }: SliderProps) {
+  UNSAFE_componentWillReceiveProps({ value = this.state.value, error, orientation }: SliderProps) {
     if (this.state.controlled) {
       this.setState({ value });
     }

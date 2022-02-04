@@ -1,10 +1,17 @@
 import * as React from 'react';
-import onClickOutside, { AdditionalProps } from 'react-onclickoutside';
-import styled from '../../utils/styled';
-import { FlyoutWindow } from './FlyoutWindow.part';
+import { usePopper, Modifier } from 'react-popper';
+import { withClickOutsideFC, WithClickOutsideFCProps } from '../../hoc/withClickOutsideFC';
+import styled, { css, themed } from '../../utils/styled';
+import { getFontStyle } from '../../textStyles';
+import { distance } from '../../distance';
+import {
+  mapFlyoutPositionToPopperPlacement,
+  calculateArrowStyleOverrides,
+} from '../../utils/flyoutCompatibilityHelpers';
+const { useState, useEffect } = React;
+import { flyout } from '../../themes';
 import { FlyoutProps } from './Flyout.types.part';
-
-export { FlyoutPosition, FlyoutChangeEvent, FlyoutProps } from './Flyout.types.part';
+export { FlyoutProps } from './Flyout.types.part';
 
 const FlyoutContainer = styled.div`
   position: relative;
@@ -12,102 +19,157 @@ const FlyoutContainer = styled.div`
   width: fit-content;
 `;
 
-const StyledTargetWrapper = styled.div``;
+FlyoutContainer.displayName = 'FlyoutContainer';
 
-export interface FlyoutState {
-  controlled: boolean;
-  targetRect?: ClientRect;
-  dirtyFlag: boolean;
-  open: boolean;
+const FlyoutTarget = styled.div``;
+FlyoutTarget.displayName = 'FlyoutTarget';
+
+const FlyoutBody = styled.div(
+  themed(
+    ({ theme }) => css`
+      ${getFontStyle({ size: 'medium' })}
+      z-index: 100;
+      position: absolute;
+      box-shadow: 0 2px 6px 0 rgba(75, 78, 82, 0.2);
+      border: 1px solid ${theme.ui4};
+      overflow: visible;
+      &[data-popper-reference-hidden='true'] {
+        visibility: hidden;
+      }
+    `,
+  ),
+);
+FlyoutBody.displayName = 'FlyoutBody';
+
+const FlyoutArrow = styled.div(
+  themed(
+    ({ theme }) => css`
+      pointer-events: none;
+      position: absolute;
+      z-index: 101;
+      width: ${theme.flyout.arrowSize}px;
+      height: ${theme.flyout.arrowSize}px;
+
+      :before {
+        content: ' ';
+        position: absolute;
+        top: ${theme.flyout.arrowSize + 0.5}px;
+        left: 0;
+        border-style: solid;
+        border-width: ${theme.flyout.arrowSize / 2}px;
+        border-color: ${theme.ui4} transparent transparent transparent;
+      }
+
+      :after {
+        content: ' ';
+        position: absolute;
+        top: ${theme.flyout.arrowSize - 0.5}px;
+        left: 0.5px;
+        border-style: solid;
+        border-width: ${theme.flyout.arrowSize / 2 - 0.5}px;
+        border-color: ${theme.flyout.background} transparent transparent transparent;
+      }
+    `,
+  ),
+);
+FlyoutArrow.displayName = 'FlyoutArrow';
+
+interface FlyoutContentProps {
+  noGutter?: boolean;
 }
 
-class FlyoutInt extends React.Component<FlyoutProps, FlyoutState> {
-  private targetContainer: HTMLDivElement | null;
+const FlyoutContent = styled.div<FlyoutContentProps>(
+  themed<FlyoutContentProps>(
+    ({ theme, noGutter }) => css`
+      overflow: auto;
+      background: ${theme.flyout.background};
+      color: ${theme.flyout.textColor};
+      max-width: ${theme.flyout.maxWidth};
+      max-height: ${theme.flyout.maxHeight};
+      ${noGutter ? '' : `padding: ${distance.small} ${distance.medium};`}
+    `,
+  ),
+);
+FlyoutContent.displayName = 'FlyoutContent';
 
-  constructor(props: FlyoutProps) {
-    super(props);
-    this.state = {
-      controlled: props.open !== undefined,
-      open: props.open || false,
-      targetRect: undefined,
-      dirtyFlag: false,
-    };
-  }
+const FlyoutInt: React.FC<FlyoutProps & WithClickOutsideFCProps> = props => {
+  const {
+    position,
+    defaultPosition,
+    offset,
+    open,
+    outsideClickEvent,
+    onChange,
+    children,
+    content,
+    theme,
+    ...restProps
+  } = props;
 
-  handleClickOutside = () => {
-    this.state.open && !this.state.controlled && this.setOpen(false);
-  };
+  const [controlled] = useState<boolean>(open !== undefined);
+  const [visible, setVisible] = useState<boolean>(Boolean(open));
+  const [referenceElement, setReferenceElement] = useState<HTMLDivElement | undefined>();
+  const [popperElement, setPopperElement] = useState<HTMLDivElement | undefined>();
+  const [arrowElement, setArrowElement] = useState<HTMLDivElement | undefined>();
 
-  componentDidMount() {
-    this.updateMeasurements();
-  }
+  const popperModifiers: Array<Modifier<unknown>> = [
+    { name: 'hide' },
+    { name: 'flip', enabled: !position },
+    { name: 'arrow', options: { element: arrowElement } },
+    { name: 'offset', options: { offset: [0, offset || 4 + flyout.arrowSize / 2] } },
+  ];
 
-  componentWillReceiveProps(nextProps: FlyoutProps) {
-    if (this.state.controlled && nextProps.open !== undefined) {
-      this.setOpen(nextProps.open);
-    }
-  }
-
-  componentDidUpdate() {
-    const { dirtyFlag } = this.state;
-
-    if (dirtyFlag) {
-      this.updateMeasurements();
-      this.setState({
-        dirtyFlag: false,
-      });
-    }
-  }
-
-  private updateMeasurements() {
-    if (this.targetContainer) {
-      const targetRect = this.targetContainer.getBoundingClientRect();
-      this.setState({
-        targetRect,
-      });
-    }
-  }
-
-  private setTargetRef = (el: HTMLDivElement | null) => {
-    this.targetContainer = el;
-  };
-
-  private setOpen(open: boolean) {
-    const { onChange } = this.props;
-
-    if (typeof onChange === 'function') {
-      onChange({ open });
-    }
-
-    this.setState({
-      open,
-      dirtyFlag: open === true,
+  if (!position) {
+    popperModifiers.push({
+      name: 'preventOverflow',
+      options: {
+        altAxis: true,
+      },
     });
   }
 
-  private onClick = () => {
-    if (!this.state.controlled) {
-      this.setOpen(!this.state.open);
+  const { styles, attributes } = usePopper(referenceElement, popperElement, {
+    placement: mapFlyoutPositionToPopperPlacement(position || defaultPosition),
+    modifiers: popperModifiers,
+  });
+
+  useEffect(() => setVisible(Boolean(open)), [open]);
+  useEffect(() => changeVisibility(false), [outsideClickEvent]);
+
+  const onClick = () => changeVisibility(!visible);
+
+  const changeVisibility = (nextVisibility: boolean) => {
+    if (controlled || nextVisibility === visible) {
+      return;
     }
+    typeof onChange === 'function' && onChange({ open: nextVisibility });
+    setVisible(nextVisibility);
   };
 
-  render() {
-    const { children, content, open: _0, onChange: _1, ...props } = this.props;
-    const { targetRect } = this.state;
-    const { open } = this.state;
-
-    return (
-      <FlyoutContainer ref={this.setTargetRef}>
-        <StyledTargetWrapper onClick={this.onClick}>{children}</StyledTargetWrapper>
-        {!!content && targetRect && open && (
-          <FlyoutWindow {...props} targetRect={targetRect}>
+  return (
+    <FlyoutContainer>
+      <FlyoutTarget onClick={onClick} ref={setReferenceElement}>
+        {children}
+      </FlyoutTarget>
+      {visible && content && (
+        <FlyoutBody ref={setPopperElement} style={styles.popper} {...attributes.popper} {...restProps}>
+          {/* Normally a styled component gets the theme from context. But some other component
+          may pass a customized theme as a prop. See example at Tooltip component */}
+          <FlyoutContent theme={theme} {...restProps}>
             {content}
-          </FlyoutWindow>
-        )}
-      </FlyoutContainer>
-    );
-  }
-}
+          </FlyoutContent>
+          <FlyoutArrow
+            theme={theme}
+            ref={setArrowElement}
+            style={calculateArrowStyleOverrides(attributes.popper, styles.arrow)}
+          />
+        </FlyoutBody>
+      )}
+    </FlyoutContainer>
+  );
+};
 
-export const Flyout: React.ComponentClass<FlyoutProps & AdditionalProps> = onClickOutside(FlyoutInt);
+FlyoutInt.displayName = 'FlyoutInt';
+
+export const Flyout = withClickOutsideFC<FlyoutProps>(FlyoutInt);
 Flyout.displayName = 'Flyout';

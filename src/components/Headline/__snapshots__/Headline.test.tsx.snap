@@ -43,38 +43,11 @@ exports[`<Headline /> should render h2 headline 1`] = `
   <styled.h2
     level={2}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bwzfXH",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              [Function],
-            ],
-          },
-          "displayName": "styled.h2",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bwzfXH",
-          "target": "h2",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      level={2}
+    <h2
+      className="c0"
     >
-      <h2
-        className="c0"
-      >
-        h2 Headline
-      </h2>
-    </StyledComponent>
+      h2 Headline
+    </h2>
   </styled.h2>
 </Headline>
 `;

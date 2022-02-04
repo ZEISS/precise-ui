@@ -73,7 +73,9 @@ const StyledInput = styled('input')<StyledInputProps>`
   outline-color: transparent !important;
   background: ${transparent};
   width: ${props => (props.value.length > 2 ? props.value.length * 10 + 'px' : '20px')};
-  color: ${themed(({ disabled, theme, valid }) => (valid ? (disabled ? theme.textDisabled : dark) : purpleRed))};
+  color: ${themed<StyledInputProps>(({ disabled, theme, valid }) =>
+    valid ? (disabled ? theme.textDisabled : dark) : purpleRed,
+  )};
   cursor: ${props => (props.disabled ? 'not-allowed' : 'auto')};
   font-family: inherit;
 `;
@@ -133,14 +135,16 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
     };
   }
 
-  componentWillReceiveProps({ value, inputValue = '', error }: TagBuilderProps) {
+  UNSAFE_componentWillReceiveProps({ value, inputValue = '', error }: TagBuilderProps) {
     if (this.state.controlled && value !== undefined) {
       this.setState({
         value: [...value],
         inputValue: inputValue,
       });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   componentDidMount() {

@@ -22,59 +22,11 @@ exports[`<Tag /> should render a <Tag> with a info type if explicitly given 1`] 
       }
     }
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  display: inline-block;
-  border-radius: 3px;
-  font-size: 0.8em;
-  border: 0;
-  color: ",
-              [Function],
-              ";
-  background-color: ",
-              [Function],
-              ";
-  padding: ",
-              "0.25rem",
-              " ",
-              "1rem",
-              ";
-",
-            ],
-          },
-          "displayName": "styled.span",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      theme={
-        Object {
-          "tagBackground": "rgba(201,239,148,1)",
-          "tagColor": "rgba(47,101,20,1)",
-        }
-      }
+    <span
+      className="c0"
     >
-      <span
-        className="c0"
-      >
-        foo
-      </span>
-    </StyledComponent>
+      foo
+    </span>
   </styled.span>
 </Tag>
 `;
@@ -99,59 +51,11 @@ exports[`<Tag /> should render a <Tag> with a primary type if nothing given 1`] 
       }
     }
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  display: inline-block;
-  border-radius: 3px;
-  font-size: 0.8em;
-  border: 0;
-  color: ",
-              [Function],
-              ";
-  background-color: ",
-              [Function],
-              ";
-  padding: ",
-              "0.25rem",
-              " ",
-              "1rem",
-              ";
-",
-            ],
-          },
-          "displayName": "styled.span",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      theme={
-        Object {
-          "tagBackground": "rgba(193,230,254,1)",
-          "tagColor": "rgba(52,93,127,1)",
-        }
-      }
+    <span
+      className="c0"
     >
-      <span
-        className="c0"
-      >
-        my-nice-tag
-      </span>
-    </StyledComponent>
+      my-nice-tag
+    </span>
   </styled.span>
 </Tag>
 `;
@@ -178,59 +82,11 @@ exports[`<Tag /> should render a <Tag> with a primary type if something wrong gi
       }
     }
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-bdVaJa",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  display: inline-block;
-  border-radius: 3px;
-  font-size: 0.8em;
-  border: 0;
-  color: ",
-              [Function],
-              ";
-  background-color: ",
-              [Function],
-              ";
-  padding: ",
-              "0.25rem",
-              " ",
-              "1rem",
-              ";
-",
-            ],
-          },
-          "displayName": "styled.span",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-bdVaJa",
-          "target": "span",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      theme={
-        Object {
-          "tagBackground": "rgba(193,230,254,1)",
-          "tagColor": "rgba(52,93,127,1)",
-        }
-      }
+    <span
+      className="c0"
     >
-      <span
-        className="c0"
-      >
-        foo
-      </span>
-    </StyledComponent>
+      foo
+    </span>
   </styled.span>
 </Tag>
 `;

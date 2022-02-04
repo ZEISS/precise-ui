@@ -1,19 +1,30 @@
 import * as React from 'react';
 import * as enzyme from 'enzyme';
-import { RadioButton } from './';
-import { RadioButtonGroupContextType, RadioButtonGroupNotifier } from '../../contexts';
+import { RadioButton, RadioButtonProps } from './';
+import {
+  FormContext,
+  RadioButtonGroupContext,
+  RadioButtonGroupContextType,
+  RadioButtonGroupNotifier,
+} from '../../contexts';
 
 function getRadioButtonWithContext(radioGroupCtx?: RadioButtonGroupContextType) {
-  jest.doMock('../../contexts', () => ({
-    RadioButtonGroupContext: {
-      Consumer: props => props.children(radioGroupCtx),
-    },
-    FormContext: {
-      Consumer: props => props.children(),
-    },
-  }));
-
-  return require('./').RadioButton;
+  const formCtx = {
+    subscribe() {},
+    unsubscribe() {},
+    change() {},
+  };
+  return class RadioButtonWithContext extends React.Component<RadioButtonProps> {
+    render() {
+      return (
+        <FormContext.Provider value={formCtx}>
+          <RadioButtonGroupContext.Provider value={radioGroupCtx}>
+            <RadioButton {...this.props}>Value</RadioButton>
+          </RadioButtonGroupContext.Provider>
+        </FormContext.Provider>
+      );
+    }
+  };
 }
 
 beforeEach(() => {

@@ -37,7 +37,7 @@ export type PreciseInterpolationFunc<Props, Theme> = InterpolationFunction<
 export const themed = <Props>(interpolation: PreciseInterpolationFunc<Props, PreciseFullTheme>) => (
   props: ThemedStyledProps<Props, PreciseTheme>,
 ) => {
-  const { theme, ...rest } = props as ThemedStyledProps<any, PreciseTheme>;
+  const { theme, ...rest } = props as ThemedStyledProps<Props, PreciseTheme>;
 
   const hasNestedProps = (prop: object) =>
     typeof prop === 'object' && !Array.isArray(prop) && Object.keys(prop).length > 0;

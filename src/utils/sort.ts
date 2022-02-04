@@ -96,21 +96,41 @@ function getComparer(exampleValue: any, reverse: boolean): (a: any, b: any) => b
   return reverse ? compareGeneralReverse : compareGeneralNormal;
 }
 
-function sorter<T extends {}>(indices: Array<number>, items: Array<T>, key: keyof T, reverse = false) {
-  const values = items.map(item => item[key]);
-  const n = values.length;
+function getCombinedComparer<T>(keyValues: Array<T[keyof T]>, groupValues: Array<T[keyof T]>, reverse: boolean) {
+  const hasGroups = groupValues && groupValues.length;
+  const keycomparer = getComparer(keyValues.find(item => !!item), reverse);
+
+  if (hasGroups) {
+    const groupcomparer = getComparer(groupValues.find(item => !!item), false); // Group order is always ascending
+
+    return (a: number, b: number) =>
+      groupcomparer(groupValues[a], groupValues[b]) ||
+      (groupValues[a] === groupValues[b] && keycomparer(keyValues[a], keyValues[b]));
+  } else {
+    return (a: number, b: number) => keycomparer(keyValues[a], keyValues[b]);
+  }
+}
+
+function sorter<T extends {}>(
+  indices: Array<number>,
+  items: Array<T>,
+  key: keyof T,
+  groupBy?: keyof T,
+  reverse = false,
+) {
+  const keyValues = items.map(item => item[key]);
+  const n = keyValues.length;
 
   if (n > 1) {
-    const firstNonFalsyValue = values.find(item => !!item);
-
-    const comparer = getComparer(firstNonFalsyValue, reverse);
+    const groupValues = groupBy ? items.map(item => item[groupBy]) : [];
+    const comparer = getCombinedComparer(keyValues, groupValues, reverse);
 
     for (let i = 1; i < n; i++) {
       for (let j = 0; j < i; j++) {
         const ij = indices[j];
         const ii = indices[i];
 
-        if (comparer(values[ii], values[ij])) {
+        if (comparer(ii, ij)) {
           indices[i] = ij;
           indices[j] = ii;
         }
@@ -128,11 +148,9 @@ export function sortObjectList<T extends {}>(
   const result = items.map((_, index) => index);
 
   if (sortBy) {
-    sorter(result, items, sortBy, order === 'descending');
-  }
-
-  if (groupBy && groupBy !== sortBy) {
-    sorter(result, items, groupBy);
+    sorter(result, items, sortBy, groupBy, order === 'descending');
+  } else if (groupBy) {
+    sorter(result, items, groupBy, undefined, order === 'descending');
   }
 
   return result;

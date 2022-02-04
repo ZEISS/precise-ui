@@ -49,7 +49,7 @@ const Container = styled.div`
 `;
 
 const ContentContainer = styled.div<ActiveProps>(
-  themed(
+  themed<ActiveProps>(
     ({ open, theme: { ui1, ui2, ui4, ui5 } }) => css`
       ${getFontStyle({ size: 'small' })}
 
@@ -69,7 +69,7 @@ const DetailsContainerAnimator = styled('div')<ActiveProps>`
 `;
 
 const DetailsContainer = styled.div<ActiveProps>(
-  themed(
+  themed<ActiveProps>(
     ({ open, theme: { ui4, ui5 } }) => css`
       border-right: 1px solid ${open ? ui5 : ui4};
       border-left: 1px solid ${open ? ui5 : ui4};
@@ -78,7 +78,7 @@ const DetailsContainer = styled.div<ActiveProps>(
 );
 
 const ActionContainer = styled.div<ActiveProps>(
-  themed(
+  themed<ActiveProps>(
     ({ open, theme: { ui0, ui1 } }) => css`
       text-align: center;
       padding: ${distance.small} ${distance.medium};

@@ -231,7 +231,7 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
     };
   }
 
-  componentWillReceiveProps(nextProps: CarouselProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: CarouselProps) {
     const { selectedIndex } = nextProps;
     const { controlled } = this.state;
 
@@ -354,8 +354,7 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
   private resetInitialStyle(node: HTMLElement) {
     const style = node.style;
 
-    // tslint:disable-next-line
-    style.left = null;
+    style.left = '';
     style.transitionProperty = 'left';
     style.transitionDuration = animationDuration;
     style.transitionTimingFunction = animationFunction;
@@ -458,7 +457,9 @@ export class Carousel extends React.PureComponent<CarouselProps, CarouselState> 
       <RootContainer {...props} onKeyDown={this.handleKeyDown} tabIndex={0}>
         <Mask>
           <InteractiveSurface theme={theme} onChange={this.dragTile} opaque={opaque}>
-            <PagesContainer ref={node => (this.pagesContainer = node)} selectedIndex={selectedIndex}>
+            <PagesContainer
+              ref={(node: HTMLDivElement | null) => (this.pagesContainer = node)}
+              selectedIndex={selectedIndex}>
               {items}
             </PagesContainer>
           </InteractiveSurface>

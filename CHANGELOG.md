@@ -1,8 +1,80 @@
 # Precise UI Changelog
 
+## 2.1.6
+
+- Fixed controlled mode on Pagination component
+
+## 2.1.5
+
+- Improved trigger and added CNAME to kitchen sink
+- Updated `Form` component to have `onValidate` callback
+
+## 2.1.4
+
+- Updated `Highlight` component to have optional highlight prop (#280)
+- Fix `IconLink` without label color style (#357)
+
+## 2.1.3
+
+- Persist validation state in Form controls when Form gets re-rendered
+
+## 2.1.2
+
+- Fix `Flyout` container styles, add an example
+- Improve arrow rendering on some displays
+
+## 2.1.1
+
+- Fix `Flyout` styling when extended with styled components
+- Remove dead code in Tooltip component
+
+## 2.1.0
+
+- `Flyout` component reimplemented using Popper.js (556349)
+- HOC for using functional components with `react-onclickoutside` implemented
+- Fix `onChangeRow()` method in `DateField` component
+- Use modern Popper.js modifiers format in `DateField` component
+
+## 2.0.0
+
+- Update Typescript from to v4
+- Update Puppeteer to v10
+- Update Styled Components to v5
+- Update React `Datepicker` to v4
+- Replace `awesome-typescript-loader` with `ts-loader`
+- Many minor dependency updates
+
+## 1.6.3
+
+- fix(563167): add validation error
+
+## 1.6.2
+
+- Change to `flex-base: auto` for `RadioButtonCircle` to work on different box-sizing models
+
+## 1.6.1
+
+- Removed unused dependencies (`css-loader`,`file-loader`,`html-webpack-plugin`,`postcss-loader`,`sass-loader`,`style-loader`)
+- Upgraded `memoize-one` dependency and remove no longer maintained `@types/memoize-one`
+- Bumped `jest-puppeteer-docker` to `1.4.2`
+- Sorted *package.json* using `npx sort-package-json` command
+- Reverted PR#258
+
+## 1.6.0
+
+- Updated dependencies
+- Migrated to GitHub actions
+- Fixed `cellRenderer` passed key in `AccordionTableCard`
+- Added `UNSAFE_` prefix for deprecated lifecycle hooks
+
+## 1.5.2
+
+- Fix sorting of `Table` and `AccordionTable` when groups are defined
+- Fix `onBlur` and `onFocus` props for `AutocompleteTagBuilder` component
+
 ## 1.5.1
 
-- Fix marking selected date in Datepicker of `DateField`
+- Fix marking selected date in `Datepicker` of `DateField`
 
 ## 1.5.0
 
@@ -57,6 +129,7 @@
 - Enable `date-fns` tree-shaking
 
 ## 1.0.2
+
 - Fix opening file selection of `FileUploader` for single file upload (#243)
 
 ## 1.0.1

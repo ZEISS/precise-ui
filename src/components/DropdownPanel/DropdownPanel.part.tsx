@@ -19,7 +19,7 @@ const StyledWrapper = styled.div<StyledWrapperProps>`
   box-shadow: none;
   margin: 0 0 ${props => (props.open ? '10px' : '0')} 0;
   padding: 0;
-  border: 1px solid ${themed(({ theme, open }) => (open ? theme.ui0 : transparent))};
+  border: 1px solid ${themed<StyledWrapperProps>(({ theme, open }) => (open ? theme.ui0 : transparent))};
 `;
 
 const MenuCaret = styled.div`

@@ -30,6 +30,11 @@ function cellRenderer({key, value}) {
     {tag: 'C', value: 'Charlie', team: 'Charlie team'},
     {tag: 'E', value: 'Echo', team: 'Echo team'},
   ]}
+  columns={{
+    tag: 'Tag',
+    value: 'Value',
+    team: 'Team'
+  }}
   cellRenderer={cellRenderer}
   detailsRenderer={getContent} />
 ```
@@ -258,6 +263,7 @@ function getContent({index, data}) {
 
 <AccordionTable
   groupBy="tag"
+  columns={{tag:{header: 'tag'}, value: {header: 'value', sortable:  true}, team: {header: 'team'}}}
   detailsRenderer={getContent}
   data={[
     {tag: 'A', value: 'Alpha1', team: 'Alpha team'},
@@ -378,7 +384,7 @@ const data = [
   {tag: 'B', value: 'Bravo1', team: 'Bravo team'},
   {tag: 'E', value: 'Echo2', team: 'Echo team'},
 ]
-   
+
 function getContent({index, data}) {
   return (
     <div>
@@ -387,12 +393,12 @@ function getContent({index, data}) {
     </div>
   );
 }
-     
-<AccordionTable 
-  groupBy="tag" 
-  detailsRenderer={getContent} 
-  data={data} 
-  noValueGroupLabel="No value" 
+
+<AccordionTable
+  groupBy="tag"
+  detailsRenderer={getContent}
+  data={data}
+  noValueGroupLabel="No value"
 />
 ```
 
@@ -411,7 +417,7 @@ const data = [
   {tag: ['B'], value: 'Bravo1', team: 'Bravo team'},
   {tag: ['E'], value: 'Echo2', team: 'Echo team'},
 ]
-   
+
 function getContent({index, data}) {
   return (
     <div>
@@ -420,11 +426,11 @@ function getContent({index, data}) {
     </div>
   );
 }
-     
-<AccordionTable 
-  groupBy="tag" 
-  detailsRenderer={getContent} 
-  data={data} 
-  noValueGroupLabel="No value" 
+
+<AccordionTable
+  groupBy="tag"
+  detailsRenderer={getContent}
+  data={data}
+  noValueGroupLabel="No value"
 />
 ```

@@ -70,286 +70,72 @@ exports[`<Slider /> should render <Slider> 1`] = `
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        onChange={[Function]}
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           onChange={[Function]}
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
             >
-              <styled.div
-                active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
+              <div
+                key="0"
               >
-                <StyledComponent
+                <IndicatorKnob
                   active={false}
-                  className="c1"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
+                  key="0"
+                  x={0}
+                  y={0.5}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "0%",
+                        "top": "50%",
+                      }
+                    }
                   >
                     <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="0"
-                        x={0}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "0%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "0%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "0%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "0%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;
@@ -437,357 +223,90 @@ exports[`<Slider /> should render <Slider> in controlled mode 1`] = `
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        onChange={[Function]}
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           onChange={[Function]}
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
             >
               <styled.div
                 active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
+                style={
+                  Object {
+                    "width": "50%",
+                  }
+                }
+                vertical={false}
               >
-                <StyledComponent
-                  active={false}
-                  className="c1"
-                  forwardedComponent={
+                <div
+                  className="c3"
+                  style={
                     Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
+                      "width": "50%",
                     }
                   }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
+                />
+              </styled.div>
+              <div
+                key="0"
+              >
+                <IndicatorKnob
+                  active={false}
+                  key="0"
+                  x={0.5}
+                  y={0.5}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "50%",
+                        "top": "50%",
+                      }
+                    }
                   >
-                    <styled.div
-                      active={false}
+                    <div
+                      className="c4"
                       style={
                         Object {
-                          "width": "50%",
+                          "backgroundColor": undefined,
+                          "left": "50%",
+                          "top": "50%",
                         }
                       }
-                      vertical={false}
-                    >
-                      <StyledComponent
-                        active={false}
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-gqjmRU",
-                              "isStatic": false,
-                              "lastClassName": "c3",
-                              "rules": Array [
-                                "
-  border-radius: ",
-                                "0.5rem",
-                                ";
-  background: ",
-                                [Function],
-                                ";
-  transition: background ",
-                                "0.3s",
-                                " ",
-                                "cubic-bezier(0, 0, 0.25, 1)",
-                                ";
-  height: ",
-                                [Function],
-                                ";
-  width: ",
-                                [Function],
-                                ";
-  position: absolute;
-  margin: auto;
-",
-                              ],
-                            },
-                            "displayName": "styled.div",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "sc-gqjmRU",
-                            "target": "div",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        style={
-                          Object {
-                            "width": "50%",
-                          }
-                        }
-                        vertical={false}
-                      >
-                        <div
-                          className="c3"
-                          style={
-                            Object {
-                              "width": "50%",
-                            }
-                          }
-                        />
-                      </StyledComponent>
-                    </styled.div>
-                    <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="0"
-                        x={0.5}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "50%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "50%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c4"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "50%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;
@@ -869,391 +388,104 @@ exports[`<Slider /> should render <Slider> in controlled mode with multiple valu
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        onChange={[Function]}
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           onChange={[Function]}
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
             >
-              <styled.div
-                active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
+              <div
+                key="0"
               >
-                <StyledComponent
+                <IndicatorKnob
                   active={false}
-                  className="c1"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
+                  key="0"
+                  x={0.5}
+                  y={0.5}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "50%",
+                        "top": "50%",
+                      }
+                    }
                   >
                     <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="0"
-                        x={0.5}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "50%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "50%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "50%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "50%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+              <div
+                key="1"
+              >
+                <IndicatorKnob
+                  active={false}
+                  key="1"
+                  x={0.75}
+                  y={0.5}
+                >
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "75%",
+                        "top": "50%",
+                      }
+                    }
+                  >
                     <div
-                      key="1"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="1"
-                        x={0.75}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "75%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "75%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "75%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "75%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;
@@ -1330,287 +562,73 @@ exports[`<Slider /> should render <Slider> using a custom indicator color 1`] = 
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        onChange={[Function]}
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           onChange={[Function]}
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
             >
-              <styled.div
-                active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
+              <div
+                key="0"
               >
-                <StyledComponent
+                <IndicatorKnob
                   active={false}
-                  className="c1"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
+                  color="red"
+                  key="0"
+                  x={0}
+                  y={0.5}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": "red",
+                        "left": "0%",
+                        "top": "50%",
+                      }
+                    }
                   >
                     <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        color="red"
-                        key="0"
-                        x={0}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": "red",
-                              "left": "0%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": "red",
-                                "left": "0%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": "red",
-                                  "left": "0%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": "red",
+                          "left": "0%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;
@@ -1695,496 +713,136 @@ exports[`<Slider /> should render <Slider> with an initial multiple values 1`] =
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        onChange={[Function]}
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           onChange={[Function]}
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
             >
-              <styled.div
-                active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
+              <div
+                key="0"
               >
-                <StyledComponent
+                <IndicatorKnob
                   active={false}
-                  className="c1"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
+                  key="0"
+                  x={0}
+                  y={0.5}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "0%",
+                        "top": "50%",
+                      }
+                    }
                   >
                     <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="0"
-                        x={0}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "0%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "0%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "0%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "0%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+              <div
+                key="1"
+              >
+                <IndicatorKnob
+                  active={false}
+                  key="1"
+                  x={0.5}
+                  y={0.5}
+                >
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "50%",
+                        "top": "50%",
+                      }
+                    }
+                  >
                     <div
-                      key="1"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="1"
-                        x={0.5}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "50%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "50%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "50%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "50%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+              <div
+                key="2"
+              >
+                <IndicatorKnob
+                  active={false}
+                  key="2"
+                  x={1}
+                  y={0.5}
+                >
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "100%",
+                        "top": "50%",
+                      }
+                    }
+                  >
                     <div
-                      key="2"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="2"
-                        x={1}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "100%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "100%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "100%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "100%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;
@@ -2272,357 +930,90 @@ exports[`<Slider /> should render <Slider> with an initial value 1`] = `
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        onChange={[Function]}
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           onChange={[Function]}
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
             >
               <styled.div
                 active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
+                style={
+                  Object {
+                    "width": "76%",
+                  }
+                }
+                vertical={false}
               >
-                <StyledComponent
-                  active={false}
-                  className="c1"
-                  forwardedComponent={
+                <div
+                  className="c3"
+                  style={
                     Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
+                      "width": "76%",
                     }
                   }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
+                />
+              </styled.div>
+              <div
+                key="0"
+              >
+                <IndicatorKnob
+                  active={false}
+                  key="0"
+                  x={0.76}
+                  y={0.5}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "76%",
+                        "top": "50%",
+                      }
+                    }
                   >
-                    <styled.div
-                      active={false}
+                    <div
+                      className="c4"
                       style={
                         Object {
-                          "width": "76%",
+                          "backgroundColor": undefined,
+                          "left": "76%",
+                          "top": "50%",
                         }
                       }
-                      vertical={false}
-                    >
-                      <StyledComponent
-                        active={false}
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-gqjmRU",
-                              "isStatic": false,
-                              "lastClassName": "c3",
-                              "rules": Array [
-                                "
-  border-radius: ",
-                                "0.5rem",
-                                ";
-  background: ",
-                                [Function],
-                                ";
-  transition: background ",
-                                "0.3s",
-                                " ",
-                                "cubic-bezier(0, 0, 0.25, 1)",
-                                ";
-  height: ",
-                                [Function],
-                                ";
-  width: ",
-                                [Function],
-                                ";
-  position: absolute;
-  margin: auto;
-",
-                              ],
-                            },
-                            "displayName": "styled.div",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "sc-gqjmRU",
-                            "target": "div",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        style={
-                          Object {
-                            "width": "76%",
-                          }
-                        }
-                        vertical={false}
-                      >
-                        <div
-                          className="c3"
-                          style={
-                            Object {
-                              "width": "76%",
-                            }
-                          }
-                        />
-                      </StyledComponent>
-                    </styled.div>
-                    <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="0"
-                        x={0.76}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "76%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "76%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c4"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "76%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;
@@ -2707,391 +1098,104 @@ exports[`<Slider /> should render <Slider> with multiple values and a fixed marg
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        onChange={[Function]}
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           onChange={[Function]}
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
             >
-              <styled.div
-                active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
+              <div
+                key="0"
               >
-                <StyledComponent
+                <IndicatorKnob
                   active={false}
-                  className="c1"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
+                  key="0"
+                  x={0}
+                  y={0.5}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "0%",
+                        "top": "50%",
+                      }
+                    }
                   >
                     <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="0"
-                        x={0}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "0%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "0%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "0%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "0%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+              <div
+                key="1"
+              >
+                <IndicatorKnob
+                  active={false}
+                  key="1"
+                  x={1}
+                  y={0.5}
+                >
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "100%",
+                        "top": "50%",
+                      }
+                    }
+                  >
                     <div
-                      key="1"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="1"
-                        x={1}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "100%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "100%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "100%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "100%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;
@@ -3180,357 +1284,90 @@ exports[`<Slider /> should render a <Slider> with a fixed stepping 1`] = `
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        onChange={[Function]}
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           onChange={[Function]}
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
             >
               <styled.div
                 active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
+                style={
+                  Object {
+                    "width": "50%",
+                  }
+                }
+                vertical={false}
               >
-                <StyledComponent
-                  active={false}
-                  className="c1"
-                  forwardedComponent={
+                <div
+                  className="c3"
+                  style={
                     Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
+                      "width": "50%",
                     }
                   }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
+                />
+              </styled.div>
+              <div
+                key="0"
+              >
+                <IndicatorKnob
+                  active={false}
+                  key="0"
+                  x={0.5}
+                  y={0.5}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "50%",
+                        "top": "50%",
+                      }
+                    }
                   >
-                    <styled.div
-                      active={false}
+                    <div
+                      className="c4"
                       style={
                         Object {
-                          "width": "50%",
+                          "backgroundColor": undefined,
+                          "left": "50%",
+                          "top": "50%",
                         }
                       }
-                      vertical={false}
-                    >
-                      <StyledComponent
-                        active={false}
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-gqjmRU",
-                              "isStatic": false,
-                              "lastClassName": "c3",
-                              "rules": Array [
-                                "
-  border-radius: ",
-                                "0.5rem",
-                                ";
-  background: ",
-                                [Function],
-                                ";
-  transition: background ",
-                                "0.3s",
-                                " ",
-                                "cubic-bezier(0, 0, 0.25, 1)",
-                                ";
-  height: ",
-                                [Function],
-                                ";
-  width: ",
-                                [Function],
-                                ";
-  position: absolute;
-  margin: auto;
-",
-                              ],
-                            },
-                            "displayName": "styled.div",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "sc-gqjmRU",
-                            "target": "div",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        style={
-                          Object {
-                            "width": "50%",
-                          }
-                        }
-                        vertical={false}
-                      >
-                        <div
-                          className="c3"
-                          style={
-                            Object {
-                              "width": "50%",
-                            }
-                          }
-                        />
-                      </StyledComponent>
-                    </styled.div>
-                    <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="0"
-                        x={0.5}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "50%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "50%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c4"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "50%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;
@@ -3620,357 +1457,90 @@ exports[`<Slider /> should render a <Slider> with custom boundaries in controlle
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        onChange={[Function]}
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           onChange={[Function]}
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
             >
               <styled.div
                 active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
+                style={
+                  Object {
+                    "width": "55.55555555555556%",
+                  }
+                }
+                vertical={false}
               >
-                <StyledComponent
-                  active={false}
-                  className="c1"
-                  forwardedComponent={
+                <div
+                  className="c3"
+                  style={
                     Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
+                      "width": "55.55555555555556%",
                     }
                   }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
+                />
+              </styled.div>
+              <div
+                key="0"
+              >
+                <IndicatorKnob
+                  active={false}
+                  key="0"
+                  x={0.5555555555555556}
+                  y={0.5}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "55.55555555555556%",
+                        "top": "50%",
+                      }
+                    }
                   >
-                    <styled.div
-                      active={false}
+                    <div
+                      className="c4"
                       style={
                         Object {
-                          "width": "55.55555555555556%",
+                          "backgroundColor": undefined,
+                          "left": "55.55555555555556%",
+                          "top": "50%",
                         }
                       }
-                      vertical={false}
-                    >
-                      <StyledComponent
-                        active={false}
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-gqjmRU",
-                              "isStatic": false,
-                              "lastClassName": "c3",
-                              "rules": Array [
-                                "
-  border-radius: ",
-                                "0.5rem",
-                                ";
-  background: ",
-                                [Function],
-                                ";
-  transition: background ",
-                                "0.3s",
-                                " ",
-                                "cubic-bezier(0, 0, 0.25, 1)",
-                                ";
-  height: ",
-                                [Function],
-                                ";
-  width: ",
-                                [Function],
-                                ";
-  position: absolute;
-  margin: auto;
-",
-                              ],
-                            },
-                            "displayName": "styled.div",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "sc-gqjmRU",
-                            "target": "div",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        style={
-                          Object {
-                            "width": "55.55555555555556%",
-                          }
-                        }
-                        vertical={false}
-                      >
-                        <div
-                          className="c3"
-                          style={
-                            Object {
-                              "width": "55.55555555555556%",
-                            }
-                          }
-                        />
-                      </StyledComponent>
-                    </styled.div>
-                    <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="0"
-                        x={0.5555555555555556}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "55.55555555555556%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "55.55555555555556%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c4"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "55.55555555555556%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;
@@ -4047,293 +1617,77 @@ exports[`<Slider /> should render a disabled <Slider> 1`] = `
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        disabled={true}
+        onChange={[Function]}
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           disabled={true}
           onChange={[Function]}
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            disabled={true}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              disabled={true}
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
             >
-              <styled.div
-                active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
+              <div
+                key="0"
               >
-                <StyledComponent
+                <IndicatorKnob
                   active={false}
-                  className="c1"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
+                  disabled={true}
+                  key="0"
+                  x={0}
+                  y={0.5}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
+                  <styled.div
+                    active={false}
+                    disabled={true}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "0%",
+                        "top": "50%",
+                      }
+                    }
                   >
                     <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        disabled={true}
-                        key="0"
-                        x={0}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          disabled={true}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "0%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            disabled={true}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "0%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              disabled={true}
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "0%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                      className="c3"
+                      disabled={true}
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "0%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;
@@ -4422,363 +1776,94 @@ exports[`<Slider /> should render a horizontal <Slider> 1`] = `
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        onChange={[Function]}
+        orientation="horizontal"
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           onChange={[Function]}
           orientation="horizontal"
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
             orientation="horizontal"
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
               orientation="horizontal"
             >
               <styled.div
                 active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
-                orientation="horizontal"
+                style={
+                  Object {
+                    "width": "50%",
+                  }
+                }
+                vertical={false}
               >
-                <StyledComponent
-                  active={false}
-                  className="c1"
-                  forwardedComponent={
+                <div
+                  className="c3"
+                  style={
                     Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
+                      "width": "50%",
                     }
                   }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
-                  orientation="horizontal"
+                />
+              </styled.div>
+              <div
+                key="0"
+              >
+                <IndicatorKnob
+                  active={false}
+                  key="0"
+                  x={0.5}
+                  y={0.5}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
-                    orientation="horizontal"
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "50%",
+                        "top": "50%",
+                      }
+                    }
                   >
-                    <styled.div
-                      active={false}
+                    <div
+                      className="c4"
                       style={
                         Object {
-                          "width": "50%",
+                          "backgroundColor": undefined,
+                          "left": "50%",
+                          "top": "50%",
                         }
                       }
-                      vertical={false}
-                    >
-                      <StyledComponent
-                        active={false}
-                        forwardedComponent={
-                          Object {
-                            "$$typeof": Symbol(react.forward_ref),
-                            "attrs": Array [],
-                            "componentStyle": ComponentStyle {
-                              "componentId": "sc-gqjmRU",
-                              "isStatic": false,
-                              "lastClassName": "c3",
-                              "rules": Array [
-                                "
-  border-radius: ",
-                                "0.5rem",
-                                ";
-  background: ",
-                                [Function],
-                                ";
-  transition: background ",
-                                "0.3s",
-                                " ",
-                                "cubic-bezier(0, 0, 0.25, 1)",
-                                ";
-  height: ",
-                                [Function],
-                                ";
-  width: ",
-                                [Function],
-                                ";
-  position: absolute;
-  margin: auto;
-",
-                              ],
-                            },
-                            "displayName": "styled.div",
-                            "foldedComponentIds": Array [],
-                            "render": [Function],
-                            "styledComponentId": "sc-gqjmRU",
-                            "target": "div",
-                            "toString": [Function],
-                            "warnTooManyClasses": [Function],
-                            "withComponent": [Function],
-                          }
-                        }
-                        forwardedRef={null}
-                        style={
-                          Object {
-                            "width": "50%",
-                          }
-                        }
-                        vertical={false}
-                      >
-                        <div
-                          className="c3"
-                          style={
-                            Object {
-                              "width": "50%",
-                            }
-                          }
-                        />
-                      </StyledComponent>
-                    </styled.div>
-                    <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="0"
-                        x={0.5}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "50%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c4",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "50%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c4"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "50%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;
@@ -4863,496 +1948,136 @@ exports[`<Slider /> should render a multi-value <Slider> with a fixed stepping 1
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        onChange={[Function]}
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           onChange={[Function]}
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
             >
-              <styled.div
-                active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
+              <div
+                key="0"
               >
-                <StyledComponent
+                <IndicatorKnob
                   active={false}
-                  className="c1"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
+                  key="0"
+                  x={0}
+                  y={0.5}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "0%",
+                        "top": "50%",
+                      }
+                    }
                   >
                     <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="0"
-                        x={0}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "0%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "0%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "0%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "0%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+              <div
+                key="1"
+              >
+                <IndicatorKnob
+                  active={false}
+                  key="1"
+                  x={0.05}
+                  y={0.5}
+                >
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "5%",
+                        "top": "50%",
+                      }
+                    }
+                  >
                     <div
-                      key="1"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="1"
-                        x={0.05}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "5%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "5%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "5%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "5%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+              <div
+                key="2"
+              >
+                <IndicatorKnob
+                  active={false}
+                  key="2"
+                  x={0.1}
+                  y={0.5}
+                >
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "10%",
+                        "top": "50%",
+                      }
+                    }
+                  >
                     <div
-                      key="2"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="2"
-                        x={0.1}
-                        y={0.5}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "10%",
-                              "top": "50%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "10%",
-                                "top": "50%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "10%",
-                                  "top": "50%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "10%",
+                          "top": "50%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;
@@ -5429,292 +2154,76 @@ exports[`<Slider /> should render a vertical <Slider> 1`] = `
     onMouseLeave={[Function]}
     tabIndex={0}
   >
-    <StyledComponent
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "sc-iwsKbI",
-            "isStatic": true,
-            "lastClassName": "c0",
-            "rules": Array [
-              "
-  position: relative;
-  outline: 0;
-  height: 100%;
-",
-            ],
-          },
-          "displayName": "styled.div",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "sc-iwsKbI",
-          "target": "div",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
+    <div
+      className="c0"
       onKeyDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       tabIndex={0}
     >
-      <div
-        className="c0"
-        onKeyDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        tabIndex={0}
+      <Styled(InteractiveSurface)
+        active={false}
+        onChange={[Function]}
+        orientation="vertical"
       >
-        <Styled(InteractiveSurface)
+        <InteractiveSurface
           active={false}
+          className="c1"
           onChange={[Function]}
           orientation="vertical"
         >
-          <StyledComponent
+          <styled.div
             active={false}
-            forwardedComponent={
-              Object {
-                "$$typeof": Symbol(react.forward_ref),
-                "attrs": Array [],
-                "componentStyle": ComponentStyle {
-                  "componentId": "sc-gZMcBi",
-                  "isStatic": false,
-                  "lastClassName": "c1",
-                  "rules": Array [
-                    "
-  position: relative;
-  padding: ",
-                    [Function],
-                    ";
-  height: ",
-                    [Function],
-                    ";
-  width: ",
-                    [Function],
-                    ";
-  box-sizing: content-box;
-
-  &:after {
-    content: '';
-    display: block;
-    border-radius: ",
-                    "0.5rem",
-                    ";
-    height: 100%;
-    width: 100%;
-    background: ",
-                    [Function],
-                    ";
-    transition: background ",
-                    "0.3s",
-                    " ",
-                    "cubic-bezier(0, 0, 0.25, 1)",
-                    ";
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    &:after {
-      background: ",
-                    "rgba(0, 102, 156, 0.25)",
-                    ";
-    }
-  }
-",
-                  ],
-                },
-                "displayName": "Styled(InteractiveSurface)",
-                "foldedComponentIds": Array [],
-                "render": [Function],
-                "styledComponentId": "sc-gZMcBi",
-                "target": [Function],
-                "toString": [Function],
-                "warnTooManyClasses": [Function],
-                "withComponent": [Function],
-              }
-            }
-            forwardedRef={null}
-            onChange={[Function]}
+            className="c1"
+            onClickCapture={[Function]}
+            onMouseDownCapture={[Function]}
+            onTouchStartCapture={[Function]}
             orientation="vertical"
           >
-            <InteractiveSurface
-              active={false}
-              className="c1"
-              onChange={[Function]}
+            <div
+              className="c2 c1"
+              onClickCapture={[Function]}
+              onMouseDownCapture={[Function]}
+              onTouchStartCapture={[Function]}
               orientation="vertical"
             >
-              <styled.div
-                active={false}
-                className="c1"
-                onClickCapture={[Function]}
-                onMouseDownCapture={[Function]}
-                onTouchStartCapture={[Function]}
-                orientation="vertical"
+              <div
+                key="0"
               >
-                <StyledComponent
+                <IndicatorKnob
                   active={false}
-                  className="c1"
-                  forwardedComponent={
-                    Object {
-                      "$$typeof": Symbol(react.forward_ref),
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "sc-bwzfXH",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "
-  position: relative;
-  touch-action: ",
-                          [Function],
-                          ";
-  user-select: ",
-                          [Function],
-                          ";
-",
-                        ],
-                      },
-                      "displayName": "styled.div",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "sc-bwzfXH",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  onClickCapture={[Function]}
-                  onMouseDownCapture={[Function]}
-                  onTouchStartCapture={[Function]}
-                  orientation="vertical"
+                  key="0"
+                  x={0.5}
+                  y={1}
                 >
-                  <div
-                    className="c1 c2"
-                    onClickCapture={[Function]}
-                    onMouseDownCapture={[Function]}
-                    onTouchStartCapture={[Function]}
-                    orientation="vertical"
+                  <styled.div
+                    active={false}
+                    style={
+                      Object {
+                        "backgroundColor": undefined,
+                        "left": "50%",
+                        "top": "100%",
+                      }
+                    }
                   >
                     <div
-                      key="0"
-                    >
-                      <IndicatorKnob
-                        active={false}
-                        key="0"
-                        x={0.5}
-                        y={1}
-                      >
-                        <styled.div
-                          active={false}
-                          style={
-                            Object {
-                              "backgroundColor": undefined,
-                              "left": "50%",
-                              "top": "100%",
-                            }
-                          }
-                        >
-                          <StyledComponent
-                            active={false}
-                            forwardedComponent={
-                              Object {
-                                "$$typeof": Symbol(react.forward_ref),
-                                "attrs": Array [],
-                                "componentStyle": ComponentStyle {
-                                  "componentId": "sc-bdVaJa",
-                                  "isStatic": false,
-                                  "lastClassName": "c3",
-                                  "rules": Array [
-                                    "
-  width: ",
-                                    "1.5rem",
-                                    ";
-  height: ",
-                                    "1.5rem",
-                                    ";
-  position: absolute;
-  border: ",
-                                    [Function],
-                                    ";
-  border-radius: 50%;
-  background: ",
-                                    [Function],
-                                    ";
-  transform: translate(-50%, -50%);
-  cursor: ",
-                                    [Function],
-                                    ";
-  box-sizing: border-box;
-  transition: background ",
-                                    "0.3s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    ",
-    border ",
-                                    "0.2s",
-                                    " ",
-                                    "cubic-bezier(0, 0, 0.25, 1)",
-                                    "
-      ",
-                                    [Function],
-                                    ";
-
-  &:hover {
-    border: ",
-                                    [Function],
-                                    ";
-  }
-",
-                                  ],
-                                },
-                                "displayName": "styled.div",
-                                "foldedComponentIds": Array [],
-                                "render": [Function],
-                                "styledComponentId": "sc-bdVaJa",
-                                "target": "div",
-                                "toString": [Function],
-                                "warnTooManyClasses": [Function],
-                                "withComponent": [Function],
-                              }
-                            }
-                            forwardedRef={null}
-                            style={
-                              Object {
-                                "backgroundColor": undefined,
-                                "left": "50%",
-                                "top": "100%",
-                              }
-                            }
-                          >
-                            <div
-                              className="c3"
-                              style={
-                                Object {
-                                  "backgroundColor": undefined,
-                                  "left": "50%",
-                                  "top": "100%",
-                                }
-                              }
-                            />
-                          </StyledComponent>
-                        </styled.div>
-                      </IndicatorKnob>
-                    </div>
-                  </div>
-                </StyledComponent>
-              </styled.div>
-            </InteractiveSurface>
-          </StyledComponent>
-        </Styled(InteractiveSurface)>
-      </div>
-    </StyledComponent>
+                      className="c3"
+                      style={
+                        Object {
+                          "backgroundColor": undefined,
+                          "left": "50%",
+                          "top": "100%",
+                        }
+                      }
+                    />
+                  </styled.div>
+                </IndicatorKnob>
+              </div>
+            </div>
+          </styled.div>
+        </InteractiveSurface>
+      </Styled(InteractiveSurface)>
+    </div>
   </styled.div>
 </SliderInt>
 `;

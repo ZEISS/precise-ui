@@ -117,10 +117,11 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
       Object {
         "$$typeof": Symbol(react.forward_ref),
         "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "sc-ifAKCX",
+        "componentStyle": e {
+          "baseHash": 1382014160,
+          "baseStyle": undefined,
+          "componentId": "sc-eCstlR",
           "isStatic": false,
-          "lastClassName": "c3",
           "rules": Array [
             "
   ",
@@ -128,11 +129,13 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
             ";
 ",
           ],
+          "staticRulesId": "",
         },
         "displayName": "styled.div",
         "foldedComponentIds": Array [],
         "render": [Function],
-        "styledComponentId": "sc-ifAKCX",
+        "shouldForwardProp": undefined,
+        "styledComponentId": "sc-eCstlR",
         "target": "div",
         "toString": [Function],
         "warnTooManyClasses": [Function],
@@ -207,784 +210,132 @@ exports[`<Tabs /> should render a <Tabs> component with some props 1`] = `
                 }
               }
             >
-              <StyledComponent
-                defaultIndex={2}
-                dimensions={
-                  Object {
-                    "angle": 0,
-                    "height": 768,
-                    "width": 1024,
-                  }
-                }
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-bwzfXH",
-                      "isStatic": true,
-                      "lastClassName": "c0",
-                      "rules": Array [
-                        "
-  margin: 0 0 ",
-                        "0.25rem",
-                        ";
-  padding: 0;
-  display: flex;
-",
-                      ],
-                    },
-                    "displayName": "styled.ul",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-bwzfXH",
-                    "target": "ul",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+              <ul
+                className="c0"
               >
-                <ul
-                  className="c0"
+                <styled.li
+                  active={false}
+                  key="head-0"
+                  onClick={[Function]}
                 >
-                  <styled.li
-                    active={false}
-                    key="head-0"
+                  <li
+                    className="c1"
                     onClick={[Function]}
                   >
-                    <StyledComponent
-                      active={false}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
-                            "isStatic": false,
-                            "lastClassName": "c1",
-                            "rules": Array [
-                              "
-  ",
-                              "
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(min-width: 980px)",
-                              " {
-        ",
-                              "font-size: ",
-                              "1.1875rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(max-width: 979px)",
-                              " {
-        ",
-                              "font-size: ",
-                              "1rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-      ",
-                              "
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(min-width: 980px)",
-                              " {
-        ",
-                              "line-height: ",
-                              "1.5rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(max-width: 979px)",
-                              " {
-        ",
-                              "line-height: ",
-                              "1.375rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-      ",
-                              "
-    ",
-                              "font-weight: 400;",
-                              "
-  ",
-                              "
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  list-style: none;
-  cursor: pointer;
-  overflow: visible;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  box-sizing: border-box;
-  border-bottom: 2px solid transparent;
-  margin-right: ",
-                              "3rem",
-                              ";
-  ",
-                              [Function],
-                              ";
-
-  &:last-child {
-    margin-right: 0;
-  }
-",
-                            ],
-                          },
-                          "displayName": "styled.li",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
-                          "target": "li",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      onClick={[Function]}
-                    >
-                      <li
-                        className="c1"
-                        onClick={[Function]}
-                      >
-                        First
-                      </li>
-                    </StyledComponent>
-                  </styled.li>
-                  <styled.li
-                    active={false}
-                    key="head-1"
+                    First
+                  </li>
+                </styled.li>
+                <styled.li
+                  active={false}
+                  key="head-1"
+                  onClick={[Function]}
+                >
+                  <li
+                    className="c1"
                     onClick={[Function]}
                   >
-                    <StyledComponent
-                      active={false}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
-                            "isStatic": false,
-                            "lastClassName": "c1",
-                            "rules": Array [
-                              "
-  ",
-                              "
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(min-width: 980px)",
-                              " {
-        ",
-                              "font-size: ",
-                              "1.1875rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(max-width: 979px)",
-                              " {
-        ",
-                              "font-size: ",
-                              "1rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-      ",
-                              "
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(min-width: 980px)",
-                              " {
-        ",
-                              "line-height: ",
-                              "1.5rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(max-width: 979px)",
-                              " {
-        ",
-                              "line-height: ",
-                              "1.375rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-      ",
-                              "
-    ",
-                              "font-weight: 400;",
-                              "
-  ",
-                              "
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  list-style: none;
-  cursor: pointer;
-  overflow: visible;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  box-sizing: border-box;
-  border-bottom: 2px solid transparent;
-  margin-right: ",
-                              "3rem",
-                              ";
-  ",
-                              [Function],
-                              ";
-
-  &:last-child {
-    margin-right: 0;
-  }
-",
-                            ],
-                          },
-                          "displayName": "styled.li",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
-                          "target": "li",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      onClick={[Function]}
-                    >
-                      <li
-                        className="c1"
-                        onClick={[Function]}
-                      >
-                        Second
-                      </li>
-                    </StyledComponent>
-                  </styled.li>
-                  <styled.li
-                    active={true}
-                    key="head-2"
+                    Second
+                  </li>
+                </styled.li>
+                <styled.li
+                  active={true}
+                  key="head-2"
+                  onClick={[Function]}
+                >
+                  <li
+                    className="c2"
                     onClick={[Function]}
                   >
-                    <StyledComponent
-                      active={true}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
-                            "isStatic": false,
-                            "lastClassName": "c1",
-                            "rules": Array [
-                              "
-  ",
-                              "
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(min-width: 980px)",
-                              " {
-        ",
-                              "font-size: ",
-                              "1.1875rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(max-width: 979px)",
-                              " {
-        ",
-                              "font-size: ",
-                              "1rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-      ",
-                              "
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(min-width: 980px)",
-                              " {
-        ",
-                              "line-height: ",
-                              "1.5rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(max-width: 979px)",
-                              " {
-        ",
-                              "line-height: ",
-                              "1.375rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-      ",
-                              "
-    ",
-                              "font-weight: 400;",
-                              "
-  ",
-                              "
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  list-style: none;
-  cursor: pointer;
-  overflow: visible;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  box-sizing: border-box;
-  border-bottom: 2px solid transparent;
-  margin-right: ",
-                              "3rem",
-                              ";
-  ",
-                              [Function],
-                              ";
-
-  &:last-child {
-    margin-right: 0;
-  }
-",
-                            ],
-                          },
-                          "displayName": "styled.li",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
-                          "target": "li",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      onClick={[Function]}
-                    >
-                      <li
-                        className="c2"
-                        onClick={[Function]}
-                      >
-                        Third
-                      </li>
-                    </StyledComponent>
-                  </styled.li>
-                  <styled.li
-                    active={false}
-                    key="head-3"
+                    Third
+                  </li>
+                </styled.li>
+                <styled.li
+                  active={false}
+                  key="head-3"
+                  onClick={[Function]}
+                >
+                  <li
+                    className="c1"
                     onClick={[Function]}
                   >
-                    <StyledComponent
-                      active={false}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-bxivhb",
-                            "isStatic": false,
-                            "lastClassName": "c1",
-                            "rules": Array [
-                              "
-  ",
-                              "
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(min-width: 980px)",
-                              " {
-        ",
-                              "font-size: ",
-                              "1.1875rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(max-width: 979px)",
-                              " {
-        ",
-                              "font-size: ",
-                              "1rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-      ",
-                              "
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(min-width: 980px)",
-                              " {
-        ",
-                              "line-height: ",
-                              "1.5rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-        ",
-                              "
-      @media ",
-                              "(max-width: 979px)",
-                              " {
-        ",
-                              "line-height: ",
-                              "1.375rem",
-                              ";",
-                              ";
-      }
-    ",
-                              "
-      ",
-                              "
-    ",
-                              "font-weight: 400;",
-                              "
-  ",
-                              "
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  list-style: none;
-  cursor: pointer;
-  overflow: visible;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  box-sizing: border-box;
-  border-bottom: 2px solid transparent;
-  margin-right: ",
-                              "3rem",
-                              ";
-  ",
-                              [Function],
-                              ";
-
-  &:last-child {
-    margin-right: 0;
-  }
-",
-                            ],
-                          },
-                          "displayName": "styled.li",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-bxivhb",
-                          "target": "li",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
-                      onClick={[Function]}
-                    >
-                      <li
-                        className="c1"
-                        onClick={[Function]}
-                      >
-                        Last
-                      </li>
-                    </StyledComponent>
-                  </styled.li>
-                </ul>
-              </StyledComponent>
+                    Last
+                  </li>
+                </styled.li>
+              </ul>
             </styled.ul>
             <styled.div>
-              <StyledComponent
-                forwardedComponent={
-                  Object {
-                    "$$typeof": Symbol(react.forward_ref),
-                    "attrs": Array [],
-                    "componentStyle": ComponentStyle {
-                      "componentId": "sc-htpNat",
-                      "isStatic": true,
-                      "lastClassName": "KtFsv",
-                      "rules": Array [],
-                    },
-                    "displayName": "styled.div",
-                    "foldedComponentIds": Array [],
-                    "render": [Function],
-                    "styledComponentId": "sc-htpNat",
-                    "target": "div",
-                    "toString": [Function],
-                    "warnTooManyClasses": [Function],
-                    "withComponent": [Function],
-                  }
-                }
-                forwardedRef={null}
+              <div
+                className=""
               >
-                <div
-                  className=""
+                <styled.div
+                  active={false}
+                  key="item-0"
                 >
-                  <styled.div
-                    active={false}
-                    key="item-0"
+                  <div
+                    className="c3"
                   >
-                    <StyledComponent
-                      active={false}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-ifAKCX",
-                            "isStatic": false,
-                            "lastClassName": "c3",
-                            "rules": Array [
-                              "
-  ",
-                              [Function],
-                              ";
-",
-                            ],
-                          },
-                          "displayName": "styled.div",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-ifAKCX",
-                          "target": "div",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
+                    <TabPage
+                      header="First"
+                      key=".0"
                     >
-                      <div
-                        className="c3"
-                      >
-                        <TabPage
-                          header="First"
-                          key=".0"
-                        >
-                          <div>
-                            First content.
-                          </div>
-                        </TabPage>
+                      <div>
+                        First content.
                       </div>
-                    </StyledComponent>
-                  </styled.div>
-                  <styled.div
-                    active={false}
-                    key="item-1"
+                    </TabPage>
+                  </div>
+                </styled.div>
+                <styled.div
+                  active={false}
+                  key="item-1"
+                >
+                  <div
+                    className="c3"
                   >
-                    <StyledComponent
-                      active={false}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-ifAKCX",
-                            "isStatic": false,
-                            "lastClassName": "c3",
-                            "rules": Array [
-                              "
-  ",
-                              [Function],
-                              ";
-",
-                            ],
-                          },
-                          "displayName": "styled.div",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-ifAKCX",
-                          "target": "div",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
+                    <TabPage
+                      header="Second"
+                      key=".1"
                     >
-                      <div
-                        className="c3"
-                      >
-                        <TabPage
-                          header="Second"
-                          key=".1"
-                        >
-                          <div>
-                            Second content.
-                          </div>
-                        </TabPage>
+                      <div>
+                        Second content.
                       </div>
-                    </StyledComponent>
-                  </styled.div>
-                  <styled.div
-                    active={true}
-                    key="item-2"
+                    </TabPage>
+                  </div>
+                </styled.div>
+                <styled.div
+                  active={true}
+                  key="item-2"
+                >
+                  <div
+                    className=""
                   >
-                    <StyledComponent
-                      active={true}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-ifAKCX",
-                            "isStatic": false,
-                            "lastClassName": "c3",
-                            "rules": Array [
-                              "
-  ",
-                              [Function],
-                              ";
-",
-                            ],
-                          },
-                          "displayName": "styled.div",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-ifAKCX",
-                          "target": "div",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
+                    <TabPage
+                      header="Third"
+                      key=".2"
                     >
-                      <div
-                        className=""
-                      >
-                        <TabPage
-                          header="Third"
-                          key=".2"
-                        >
-                          <div>
-                            Third content.
-                          </div>
-                        </TabPage>
+                      <div>
+                        Third content.
                       </div>
-                    </StyledComponent>
-                  </styled.div>
-                  <styled.div
-                    active={false}
-                    key="item-3"
+                    </TabPage>
+                  </div>
+                </styled.div>
+                <styled.div
+                  active={false}
+                  key="item-3"
+                >
+                  <div
+                    className="c3"
                   >
-                    <StyledComponent
-                      active={false}
-                      forwardedComponent={
-                        Object {
-                          "$$typeof": Symbol(react.forward_ref),
-                          "attrs": Array [],
-                          "componentStyle": ComponentStyle {
-                            "componentId": "sc-ifAKCX",
-                            "isStatic": false,
-                            "lastClassName": "c3",
-                            "rules": Array [
-                              "
-  ",
-                              [Function],
-                              ";
-",
-                            ],
-                          },
-                          "displayName": "styled.div",
-                          "foldedComponentIds": Array [],
-                          "render": [Function],
-                          "styledComponentId": "sc-ifAKCX",
-                          "target": "div",
-                          "toString": [Function],
-                          "warnTooManyClasses": [Function],
-                          "withComponent": [Function],
-                        }
-                      }
-                      forwardedRef={null}
+                    <TabPage
+                      header="Last"
+                      key=".3"
                     >
-                      <div
-                        className="c3"
-                      >
-                        <TabPage
-                          header="Last"
-                          key=".3"
-                        >
-                          <div>
-                            Final content.
-                          </div>
-                        </TabPage>
+                      <div>
+                        Final content.
                       </div>
-                    </StyledComponent>
-                  </styled.div>
-                </div>
-              </StyledComponent>
+                    </TabPage>
+                  </div>
+                </styled.div>
+              </div>
             </styled.div>
           </div>
         </TabInt>

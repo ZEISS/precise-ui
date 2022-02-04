@@ -90,7 +90,7 @@ interface StyledAutosuggestWrapperProps {
 }
 
 const StyledAutosuggestWrapper = styled.ul<StyledAutosuggestWrapperProps>(
-  themed(
+  themed<StyledAutosuggestWrapperProps>(
     ({ direction, theme: { ui1, ui4 } }) => css`
       list-style: none;
       width: 100%;
@@ -147,11 +147,13 @@ class AutocompleteInt<T> extends React.Component<SupportedAutocompleteProps<T> &
     };
   }
 
-  componentWillReceiveProps({ value = '', error }: AutocompleteProps<T>) {
+  UNSAFE_componentWillReceiveProps({ value = '', error }: AutocompleteProps<T>) {
     if (this.state.controlled) {
       this.setState({ value });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   componentDidMount() {

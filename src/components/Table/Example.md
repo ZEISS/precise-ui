@@ -409,7 +409,16 @@ const data = [{
   age: 12,
 }, {
   name: 'C',
+  age: 22,
+}, {
+  name: 'C',
   age: 25,
+}, {
+  name: 'B',
+  age: 15,
+}, {
+  name: 'B',
+  age: 14,
 }, {
   name: 'D',
   age: 15,

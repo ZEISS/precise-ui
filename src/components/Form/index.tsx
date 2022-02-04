@@ -30,6 +30,17 @@ export interface FormChangeEvent {
   changed: boolean;
 }
 
+export interface FormValidateEvent {
+  /**
+   * The current values of the form fields.
+   */
+  value: FormValuesData;
+  /**
+   * Validation errors
+   */
+  errors?: Array<FormValidationError>;
+}
+
 export interface FormValuesData {
   [name: string]: any;
 }
@@ -65,6 +76,10 @@ export interface FormProps<FormValues> extends StandardProps {
    * Event emitted when the form is submitted.
    */
   onSubmit?(e: FormSubmitEvent): void;
+  /**
+   * Event emitted when form errors are set or cleared
+   */
+  onValidate?(e: FormValidateEvent): void;
   /**
    * Disables the form in case of invalid input. Effectively
    * disables the possibility of submitting forms.
@@ -149,7 +164,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
     };
   }
 
-  componentWillReceiveProps(nextProps: FormProps<Values>) {
+  UNSAFE_componentWillReceiveProps(nextProps: FormProps<Values>) {
     const { controlled, initial } = this.state;
 
     if (controlled) {
@@ -157,6 +172,26 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
       const changed = isChanged(initial, value);
       this.setValues(value, changed);
     }
+  }
+
+  componentDidUpdate(_: FormProps<Values>, prevState: FormState<Values>) {
+    const { onValidate } = this.props;
+    const { errors, current } = this.state;
+
+    if (typeof onValidate === 'function' && JSON.stringify(prevState.errors) !== JSON.stringify(errors)) {
+      const arrayErrors = this.getErrorsAsArray(errors);
+      onValidate({ errors: arrayErrors, value: current });
+    }
+  }
+
+  private getErrorsAsArray(errors: FormState<Values>['errors']) {
+    return Object.keys(errors).reduce<Array<FormValidationError>>((arrayErrors, field) => {
+      const error = errors[field];
+      if (error) {
+        arrayErrors.push({ field, error });
+      }
+      return arrayErrors;
+    }, []);
   }
 
   private setValues(current: Values, changed: boolean) {
@@ -207,7 +242,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
     const keys = Object.keys(current);
     const errors = { ...this.state.errors };
 
-    for (const key of keys) {
+    for (const key of keys as Array<Extract<keyof Values, string>>) {
       const value = current[key];
       const error = this.getError(key, value);
       errors[key] = error;
@@ -248,7 +283,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
         if (name) {
           this.fields.push(field);
 
-          let error;
+          let error: React.ReactChild | undefined;
           if (name in current) {
             const value = current[name];
             error = this.getError(name, value);
@@ -257,12 +292,12 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
             });
           } else {
             const value = field.state.value;
-            current[name] = value;
+            current[name as Extract<keyof Values, string>] = value;
             error = this.getError(name, value);
           }
 
           if (error) {
-            this.setState({ errors: { ...errors, [name]: error } as FormState<Values>['errors'] });
+            this.setState(({ errors }) => ({ errors: { ...errors, [name]: error } }));
           }
         }
       },
@@ -280,13 +315,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
     this.setErrors(current);
 
     if (!disabled && typeof onSubmit === 'function') {
-      const arrayErrors = Object.keys(errors).reduce<Array<FormValidationError>>((arrayErrors, field) => {
-        const error = errors[field];
-        if (error) {
-          arrayErrors.push({ field, error });
-        }
-        return arrayErrors;
-      }, []);
+      const arrayErrors = this.getErrorsAsArray(errors);
 
       this.setState(
         {

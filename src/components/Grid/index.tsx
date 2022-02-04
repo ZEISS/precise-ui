@@ -139,6 +139,16 @@ interface GridCellProps {
   cf: number;
 }
 
+// Remark:
+// At PR #258 a fix for "complex content that overflows" was introduced
+// which caused some problem. If this fix should be required in the future
+// again we should bring in something like the following:
+//
+// ```css
+// overflow: auto;
+// margin: -1em;
+// padding: 1em;
+// ```
 const GridCell = styled.div<GridCellProps>`
   -ms-grid-row: ${props => props.ri + 1};
   -ms-grid-row-span: ${props => props.rf - props.ri};
@@ -204,26 +214,27 @@ function computeAllocations(props: GridProps): GridLayout {
     columns: typeof columns !== 'string' ? columns : undefined,
   });
 
-  const cells = React.Children.map(children, (child: GridChild, index) => {
-    const position = layout.cells[index];
+  const cells =
+    React.Children.map(children, (child: GridChild, index) => {
+      const position = layout.cells[index];
 
-    if (child && position) {
-      allocation.push(position);
-      const { colSpan, column, row, rowSpan } = position;
+      if (child && position) {
+        allocation.push(position);
+        const { colSpan, column, row, rowSpan } = position;
 
-      if (!colSpan || !rowSpan) {
-        return <HiddenGridCell>{child}</HiddenGridCell>;
+        if (!colSpan || !rowSpan) {
+          return <HiddenGridCell>{child}</HiddenGridCell>;
+        }
+
+        return (
+          <GridCell ci={column} cf={column + colSpan} ri={row} rf={row + rowSpan} key={index}>
+            {child}
+          </GridCell>
+        );
       }
 
-      return (
-        <GridCell ci={column} cf={column + colSpan} ri={row} rf={row + rowSpan} key={index}>
-          {child}
-        </GridCell>
-      );
-    }
-
-    return undefined;
-  });
+      return undefined;
+    }) || [];
 
   return {
     allocation,
@@ -267,7 +278,7 @@ export class Grid extends React.PureComponent<GridProps, GridState> {
     };
   }
 
-  componentWillReceiveProps(nextProps: GridProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: GridProps) {
     const currLayout = this.state.layout;
     const nextLayout = computeAllocations(nextProps);
 

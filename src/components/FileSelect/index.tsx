@@ -86,14 +86,16 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
     }
   }
 
-  componentWillReceiveProps({ value = [], error }: FileSelectProps) {
+  UNSAFE_componentWillReceiveProps({ value = [], error }: FileSelectProps) {
     if (this.state.controlled && value && this.state.value !== value) {
       this.setState({
         value,
         previews: [],
       });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   private addFileEntries = (ev: React.ChangeEvent<HTMLInputElement>) => {

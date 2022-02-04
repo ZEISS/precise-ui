@@ -6,7 +6,7 @@ Precise UI gives you a UI component library fully based on **React**. This means
 
 ### Features
 
-- There are more than **75** components currently available in this library and even more are being implemented. Make sure you check the [Components](/components/accordion) section for a better overview.
+- There are more than **75** components currently available in this library and even more are being implemented. Make sure you check the [Components](#/Components/Accordion) section for a better overview.
 - It is written in **TypeScript**.
 - You can build fully responsive applications with it.
 

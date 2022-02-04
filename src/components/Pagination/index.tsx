@@ -108,6 +108,18 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
     };
   }
 
+  static getDerivedStateFromProps(props: PaginationProps, state: PaginationState) {
+    const { value } = props;
+
+    if (typeof value === 'number' && state.current !== value) {
+      return {
+        current: value,
+      };
+    }
+
+    return state;
+  }
+
   private handlePageChange = ({ page }: PaginationBarPageChangedEvent) => {
     const { onChange, value } = this.props;
 

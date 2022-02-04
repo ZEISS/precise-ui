@@ -84,7 +84,7 @@ export class TabControl extends React.PureComponent<TabControlProps, TabControlS
     };
   }
 
-  componentWillReceiveProps(nextProps: TabControlProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: TabControlProps) {
     const selectedIndex = nextProps.selectedIndex;
 
     if (this.state.controlled && typeof selectedIndex === 'number') {
@@ -159,7 +159,10 @@ function useTabControl({ children, selectedIndex, defaultIndex, onTabChange }: U
   }, [selectedIndex]);
 
   const elements = React.useMemo(
-    () => React.Children.map(children, child => (React.isValidElement(child) ? child : undefined)).filter(isTabPage),
+    () =>
+      (React.Children.map(children, child => (React.isValidElement(child) ? child : undefined)) || []).filter(
+        isTabPage,
+      ),
     [children],
   );
   const headers = React.useMemo(() => elements.map(child => child.props.header), [elements]);

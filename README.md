@@ -1,7 +1,6 @@
 # <img src="docs/assets/precise-logo.svg" width="240">
 
-[![Website Build status](https://dev.azure.com/ZEISSgroup/SIP_UI_Library/_apis/build/status/Precise-CI)](https://dev.azure.com/ZEISSgroup/SIP_UI_Library/_build/latest?definitionId=1106)
-[![Package Build Status](https://travis-ci.org/ZEISS/precise-ui.svg?branch=master)](https://travis-ci.org/ZEISS/precise-ui)
+[![Build CI](https://github.com/ZEISS/precise-ui/actions/workflows/build.yml/badge.svg?event=push)](https://github.com/ZEISS/precise-ui/actions/workflows/build.yml)
 [![NPM](https://img.shields.io/npm/v/precise-ui.svg)](https://www.npmjs.com/package/precise-ui)
 [![Node](https://img.shields.io/node/v/precise-ui.svg)](https://www.npmjs.com/package/precise-ui)
 [![GitHub Tag](https://img.shields.io/github/tag/ZEISS/precise-ui.svg)](https://github.com/ZEISS/precise-ui/releases)
@@ -13,7 +12,7 @@ A complete opinionated React component library with minimal dependencies powered
 
 The UI component library contains both, very low-level design elements as well as combined high-level design elements. In general, the intention of the library is to simplify development by exposing components that satisfy design specifications and provide ease of programming. Repeatable UI designs should therefore only take minutes instead of hours.
 
-See [https://precise-ui.io](https://precise-ui.io) for our kitchen sink (i.e., demo page illustrating all the components incl. their documentation).
+See [https://precise-ui.io](https://www.precise-ui.io) for our kitchen sink (i.e., demo page illustrating all the components incl. their documentation).
 
 ## Getting Started
 
@@ -51,11 +50,11 @@ import { TextField } from 'precise-ui';
 <TextField label="Label" />
 ```
 
-You can see a list of all available components on our [website](https://precise-ui.io/).
+You can see a list of all available components on our [website](https://www.precise-ui.io/).
 
 ## Contributing
 
-Everyone is welcome to make any contribution on Precise UI. However, before you start, make sure you read our [Contribution](/.github/CONTRIBUTING.md) instructions.
+Everyone is welcome to make any contribution on Precise UI. However, before you start, make sure you read our [Contribution](.github/CONTRIBUTING.md) instructions.
 
 If you feel uncertain whether you should contribute or not maybe our [code of conduct](CODE_OF_CONDUCT.md) can help you.
 
@@ -86,6 +85,7 @@ Here is a quick example to get you started. All you need is to run:
 npm start
 ```
 
+<!-- markdown-link-check-disable-next-line -->
 As a result this will start the development server running the kitchen sink (our demo application), which runs locally and can be reached via [localhost:6060](http://localhost:6060). Note: this port can be changed. The available page contains all included components and some hopefully useful documentation for these.
 
 #### Versioning
@@ -196,8 +196,24 @@ In some cases it's needed to tell visual test to wait before doing a snapshot. I
 
 The list of all imported icons is in `/tools/icongen.config`. After modifying the list you should run `npm run icongen` or it will be run on prepush.
 
+### Making a Release
+
+All releasable code is aggregated in the `develop` branch. To make a release simply create a GitHub release (usually copying over the current entries from the `CHANGELOG.md` file).
+
+A standard workflow thus looks like:
+
+1. Clone the repository
+2. Make a branch
+3. Do the work
+4. Push your changes
+5. Make a PR of your fork / branch to `develop`
+6. Once "enough" features aggregated in `develop` make a GitHub release
+7. For the next changes to `develop` make sure to change / increment the version number
+
+To find out about the currently released version you have two options. Either you [go to the NPM page](https://www.npmjs.com/package/precise-ui) or you [use the GitHub releases](https://github.com/ZEISS/precise-ui/releases). Both are linked on top of the *README.md*, too.
+
 ## License
 
 Precise UI is released using the MIT license. For more information see the [license file](LICENSE).
 
-We are using some icons from [Material UI Icons](https://github.com/mui-org/material-ui/tree/master/packages/material-ui-icons). Their code and design is covered by the respective license of [Material UI](https://github.com/mui-org/material-ui) (MIT).
+We are using some icons from [Material UI Icons](https://github.com/mui-org/material-ui/tree/master/packages/mui-icons-material). Their code and design is covered by the respective license of [Material UI](https://github.com/mui-org/material-ui) (MIT).

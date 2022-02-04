@@ -171,7 +171,7 @@ export interface DateFieldBasicProps extends FormContextProps, TextInputProps {
 }
 
 export type DateFieldProps = DateFieldBasicProps &
-  Omit<ReactDatePickerProps, keyof typeof excludedReactDatePickerProps>;
+  Omit<ReactDatePickerProps<unknown>, keyof typeof excludedReactDatePickerProps>;
 
 interface DateFieldState {
   value: string;
@@ -198,12 +198,14 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
     };
   }
 
-  componentWillReceiveProps({ value = '', error }: DateFieldProps) {
+  UNSAFE_componentWillReceiveProps({ value = '', error }: DateFieldProps) {
     if (this.valueControlled) {
       this.setState({ value, date: this.parseDate(value) });
     }
 
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   componentDidMount() {
@@ -232,18 +234,23 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
     }
   }
 
-  private changeValue: ReactDatePickerProps['onChange'] = inputDate => {
+  private changeValue: ReactDatePickerProps<unknown>['onChange'] = inputDate => {
     const { dateFormat = DefaultDateFormat, locale } = this.props;
     const date = inputDate || undefined;
-    const value = safeDateFormat(date, {
+    const value = safeDateFormat(date as Date, {
       dateFormat,
       locale,
     });
 
-    this.change(date, value);
+    this.change(date as Date, value);
   };
 
   private changeInput = (e: React.FocusEvent<HTMLInputElement>) => {
+    // in the latest version of React-datepicker changeRaw() is called on each change,
+    // not only on raw input change. In that case it may not have value
+    if (!e.target.value) {
+      return;
+    }
     const { onChangeRaw } = this.props;
     const { value } = e.target;
     this.change(this.parseDate(value), value);
@@ -322,7 +329,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
       ...rest
     } = this.props;
 
-    const datePickerProps = {} as ReactDatePickerProps;
+    const datePickerProps = {} as ReactDatePickerProps<unknown>;
     const customInputProps = {} as Omit<DateFieldBasicProps, 'onChange' | 'children'>;
     Object.keys(rest).forEach(propName => {
       if (excludedReactDatePickerProps[propName]) {

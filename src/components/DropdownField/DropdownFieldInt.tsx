@@ -21,6 +21,7 @@ import {
 import {
   StyledInputRow,
   StyledInputBox,
+  StyledInputBoxProps,
   getTextFieldBorderType,
   StyledTagItem,
   StyledIconContainer,
@@ -42,8 +43,8 @@ interface DropDownOptionsTextProps {
   disabled?: boolean;
 }
 
-const DropdownInputBox = styled(StyledInputBox)`
-  border: 1px solid ${themed(({ focused, theme: { ui4 } }) => (focused ? ui4 : transparent))};
+const DropdownInputBox = styled(StyledInputBox)<StyledInputBoxProps>`
+  border: 1px solid ${themed<StyledInputBoxProps>(({ focused, theme: { ui4 } }) => (focused ? ui4 : transparent))};
 `;
 
 const DropdownOptionText = styled.div<DropDownOptionsTextProps>`
@@ -54,7 +55,7 @@ const DropdownOptionText = styled.div<DropDownOptionsTextProps>`
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  color: ${themed(({ theme, disabled }) => (disabled ? theme.text3 : theme.text1))};
+  color: ${themed<DropDownOptionsTextProps>(({ theme, disabled }) => (disabled ? theme.text3 : theme.text1))};
   font-family: inherit;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -85,7 +86,9 @@ const StyledStandardWrapper = styled('ul')<StyledStandardWrapperProps>`
   padding: 0;
   background: ${themed(props => props.theme.ui1)};
   border: 1px solid
-    ${themed(({ border, theme: { ui0, ui4 } }) => (border === InteractiveListBorderType.none ? ui0 : ui4))};
+    ${themed<StyledStandardWrapperProps>(({ border, theme: { ui0, ui4 } }) =>
+      border === InteractiveListBorderType.none ? ui0 : ui4,
+    )};
   max-height: 50vh;
   ${props =>
     props.direction === InteractiveListDirection.normal
@@ -233,7 +236,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
     }
   }
 
-  componentWillReceiveProps({ data = [], value = [], error, multiple }: DropdownFieldProps) {
+  UNSAFE_componentWillReceiveProps({ data = [], value = [], error, multiple }: DropdownFieldProps) {
     const { controlled } = this.state;
 
     if (controlled) {
@@ -242,16 +245,18 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
       });
     }
 
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   private show = () =>
-    new Promise(resolve => {
+    new Promise<void>(resolve => {
       this.setState({ open: true }, resolve);
     });
 
   private hide = () =>
-    new Promise(resolve => {
+    new Promise<void>(resolve => {
       this.setState({ open: false }, resolve);
     });
 

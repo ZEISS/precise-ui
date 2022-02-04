@@ -86,7 +86,7 @@ const RadioButtonCircle = styled.div(
   vertical-align: middle;
   position: relative;
   overflow: hidden;
-  flex: 0 0 0.5em;
+  flex: 0 0 auto;
   padding: 0.1875em;
   border: 2px solid ${ui5};
   border-radius: 100%;
@@ -152,11 +152,13 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
     };
   }
 
-  componentWillReceiveProps({ value = false, error }: RadioButtonIntProps) {
+  UNSAFE_componentWillReceiveProps({ value = false, error }: RadioButtonIntProps) {
     if (this.state.controlled) {
       this.setState({ value });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   componentDidMount() {

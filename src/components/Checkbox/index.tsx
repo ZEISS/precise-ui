@@ -43,7 +43,7 @@ const CheckboxContainer = styled('div')<CheckboxContainerProps>`
 `;
 
 const CheckboxBox = styled('div')<CheckboxBoxProps>(
-  themed(
+  themed<CheckboxBoxProps>(
     ({ disabled, checked, theme: { ui0, ui1, ui4, ui5 } }) => css`
       outline: 0;
       flex: 0 0 1.0625em;
@@ -96,11 +96,13 @@ export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxStat
     };
   }
 
-  componentWillReceiveProps({ value = false, error }: CheckboxProps) {
+  UNSAFE_componentWillReceiveProps({ value = false, error }: CheckboxProps) {
     if (this.state.controlled) {
       this.setState({ value });
     }
-    this.setState({ error });
+    if ('error' in this.props) {
+      this.setState({ error });
+    }
   }
 
   componentDidMount() {

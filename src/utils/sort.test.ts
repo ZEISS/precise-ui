@@ -160,19 +160,23 @@ describe('data sorting', () => {
           age: 25,
         },
         {
-          name: 'D',
+          name: 'B',
           age: 15,
         },
         {
-          name: 'D',
+          name: 'B',
           age: 14,
+        },
+        {
+          name: 'D',
+          age: 15,
         },
       ],
       'age',
       'descending',
       'name',
     );
-    expect(result).toEqual([2, 1, 0, 3, 4, 6, 5, 7, 8]);
+    expect(result).toEqual([2, 1, 0, 3, 7, 8, 4, 6, 5, 9]);
   });
 
   it('should return sorted indices with non-sorted table on not defined values', () => {

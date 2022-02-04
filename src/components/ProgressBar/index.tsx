@@ -101,7 +101,9 @@ const ProgressStop = styled('div')<StopProps & React.HTMLProps<HTMLInputElement>
   position: absolute;
   width: ${distance.small};
   height: ${distance.small};
-  background: ${themed(props => (props.active ? props.theme.ui7 : props.theme.text2))};
+  background: ${themed<StopProps & React.HTMLProps<HTMLInputElement>>(props =>
+    props.active ? props.theme.ui7 : props.theme.text2,
+  )};
   top: 50%;
   transform: translateY(-50%);
 `;

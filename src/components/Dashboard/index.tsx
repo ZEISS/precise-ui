@@ -185,8 +185,7 @@ function notEqual(a: Array<DashboardTile>, b: Array<DashboardTile>) {
 }
 
 function resetStyle(node: HTMLElement) {
-  // tslint:disable-next-line
-  const defaultValue = null;
+  const defaultValue = '';
   const style = node.style;
   style.position = 'static';
   style.cursor = defaultValue;
@@ -275,7 +274,7 @@ export class Dashboard extends React.Component<DashboardProps, DashboardState> {
     };
   }
 
-  componentWillReceiveProps(nextProps: DashboardProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: DashboardProps) {
     const { defaultTiles: currTiles = [] } = this.props;
     const { defaultTiles: nextTiles = [] } = nextProps;
 

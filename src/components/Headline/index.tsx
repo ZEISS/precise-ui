@@ -62,7 +62,7 @@ function getStyledHeadline(level: number) {
 
   if (!Headline) {
     const NewHeadline = styled(component as 'h1')<StyledHeadlineProps>(
-      themed(
+      themed<StyledHeadlineProps>(
         props => css`
           ${getHeadlineStyle(props.level)}
 

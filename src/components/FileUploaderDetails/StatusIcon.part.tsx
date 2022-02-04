@@ -10,7 +10,7 @@ export interface StatusIconProps extends IconProps {
 }
 
 export const StatusIcon: React.ComponentType<StatusIconProps> = styled(Icon)<StatusIconProps>(
-  themed(
+  themed<StatusIconProps>(
     ({ theme, type, condensed }) => `
       color: ${
         type === 'success' ? colors.lightGreen : type === 'error' || type === 'canceled' ? colors.purpleRed : theme.ui0

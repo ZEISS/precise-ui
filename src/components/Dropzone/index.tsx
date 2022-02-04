@@ -57,7 +57,7 @@ interface StyledDropzoneProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const StyledDropzone = styled.div<StyledDropzoneProps>(
-  themed(
+  themed<StyledDropzoneProps>(
     ({ disabled, active, theme }) => css`
       width: 100%;
       height: 100%;
@@ -146,7 +146,7 @@ class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, Drop
     }
   }
 
-  componentWillReceiveProps(e: DropzoneProps) {
+  UNSAFE_componentWillReceiveProps(e: DropzoneProps) {
     const { controlled, value } = this.state;
 
     if (controlled && e.value && value !== e.value) {

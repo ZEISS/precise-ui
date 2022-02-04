@@ -80,6 +80,10 @@ export interface FlyoutStyling {
    * Flyout text font size.
    */
   fontSize: string;
+  /**
+   * Flyout arrow size
+   */
+  arrowSize: number;
 }
 
 export interface ButtonThemeSettings {

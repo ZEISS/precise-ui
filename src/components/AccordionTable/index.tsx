@@ -13,13 +13,14 @@ export {
   AccordionTableRowEvent,
 } from './AccordionTable.types.part';
 
-export interface AccordionTableType extends React.SFC<AccordionTableProps<any>> {
+export interface AccordionTableType extends React.FC<AccordionTableProps<any>> {
   <T = {}>(props: AccordionTableProps<T> & { children?: React.ReactNode }, context?: any): JSX.Element;
 }
 
 /**
  * The accordion table component is used to define a special table with expandable rows.
  */
-export const AccordionTable: AccordionTableType = withResponsiveMode<TableMode>(width =>
-  !width || width > breakpoints.medium ? 'table' : 'card',
-)(AccordionTableInt) as any;
+export const AccordionTable: AccordionTableType = withResponsiveMode<TableMode>(
+  width => (!width || width > breakpoints.medium ? 'table' : 'card'),
+  // @TODO proper typings needed
+)(AccordionTableInt as any) as any;
