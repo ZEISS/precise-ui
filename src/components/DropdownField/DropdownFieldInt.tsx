@@ -89,7 +89,7 @@ const StyledStandardWrapper = styled('ul')<StyledStandardWrapperProps>`
     ${themed<StyledStandardWrapperProps>(({ border, theme: { ui0, ui4 } }) =>
       border === InteractiveListBorderType.none ? ui0 : ui4,
     )};
-  max-height: 50vh;
+  max-height: 40vh;
   ${props =>
     props.direction === InteractiveListDirection.normal
       ? 'border-top-color: transparent'
