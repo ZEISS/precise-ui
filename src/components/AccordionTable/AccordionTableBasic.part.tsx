@@ -297,7 +297,13 @@ export class AccordionTableBasic<T> extends React.Component<AccordionTableProps<
     const { row, data } = e;
 
     if (e.column === 0) {
-      return <StyledIcon isRotated={hasIndex(this.state.selectedIndex, row)} name="KeyboardArrowRight" />;
+      return (
+        <StyledIcon
+          isRotated={hasIndex(this.state.selectedIndex, row)}
+          name="KeyboardArrowRight"
+          onClick={() => data && this.props.arrowToggle && this.handleClick(row, data)}
+        />
+      );
     }
 
     const { cellRenderer } = this.props;

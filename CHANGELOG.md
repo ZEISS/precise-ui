@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 2.1.9
+
+- Fixed `arrowToggle` on `AccordionTable`
+
 ## 2.1.8
 
 - Fixed max height dropdown
