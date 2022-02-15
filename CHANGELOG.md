@@ -1,5 +1,13 @@
 # Precise UI Changelog
 
+## 2.1.8
+
+- Fixed max height dropdown
+
+## 2.1.7
+
+- Fix `onChange` double trigger on clicking `AccordionTable` expand icon
+
 ## 2.1.6
 
 - Fixed controlled mode on Pagination component
