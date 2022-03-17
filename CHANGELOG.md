@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 2.1.10
+
+- Fix WCAG error: Empty table header
+
 ## 2.1.9
 
 - Fixed `arrowToggle` on `AccordionTable`
