@@ -1,0 +1,8 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^https://stackoverflow.com/tags/"
+    }
+  ],
+  "aliveStatusCodes": [429, 200]
+}
