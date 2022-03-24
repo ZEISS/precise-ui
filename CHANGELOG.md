@@ -1,5 +1,8 @@
 # Precise UI Changelog
 
+## 2.1.11
+
+- fixed issue 373, passed onSizeChanged event as a prop to the Pagination component
 ## 2.1.10
 
 - Fix WCAG error: Empty table header
