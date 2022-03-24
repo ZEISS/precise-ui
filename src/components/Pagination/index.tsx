@@ -9,6 +9,12 @@ export interface PaginationChangeEvent {
    */
   value: number;
 }
+export interface PaginationSizeChangeEvent {
+  /**
+   * The current item size per page.
+   */
+  value: number;
+}
 
 export interface PaginationState {
   current: number;
@@ -68,6 +74,10 @@ export interface PaginationProps extends StandardProps {
    * Event fired when the selected page changes.
    */
   onChange?(e: PaginationChangeEvent): void;
+  /**
+   * Event fired when the size per page changes.
+   */
+  onSizeChanged?(e: PaginationSizeChangeEvent): void;
   /**
    * The optional footer info label override, e.g., for localization.
    */
@@ -137,7 +147,7 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
   };
 
   private handleSizeChange = ({ size }: PaginationBarSizeChangedEvent) => {
-    const { children } = this.props;
+    const { children, onSizeChanged } = this.props;
     const { current } = this.state;
     const total = React.Children.count(children);
     const maxPageCount = Math.max(Math.ceil(total / size) - 1, 0);
@@ -145,6 +155,12 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
       size,
       current: Math.min(current, maxPageCount),
     });
+
+    if (typeof onSizeChanged === 'function') {
+      onSizeChanged({
+        value: size,
+      });
+    }
   };
 
   private getDim(count: number) {
