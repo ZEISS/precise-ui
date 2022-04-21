@@ -66,8 +66,8 @@ const formatValue = (value: string | number) => {
 };
 
 const StyledSpan = styled(Span)<SkeletonProps>`
-  ${({ count = 1, duration = 1.2, width = '100%', height = '100%', isCircle, isText, isPulsing = true }) => css`
-    animation: ${shine} ${duration}s infinite linear ${isPulsing ? 'running' : 'running'};
+  ${({ count, duration = 1.2, width = '100%', height = '100%', isCircle, isText, isPulsing = true }) => css`
+    animation: ${shine} ${duration}s infinite linear ${isPulsing ? 'running' : 'paused'};
     width: ${count > 1 && isText ? `${randomInt(80, 100)}%` : formatValue(width)};
     height: ${formatValue(height)};
     ${(height && width && isCircle && 'border-radius: 50%') || ''};
@@ -83,7 +83,7 @@ export const Skeleton: React.FC<SkeletonProps> = props => {
 
   for (let i = 0; i < count; i++) {
     skeletons.push(
-      <StyledSpan key={i} {...props}>
+      <StyledSpan key={i} count={count} {...props}>
         &zwnj;
       </StyledSpan>,
     );
