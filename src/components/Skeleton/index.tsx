@@ -61,32 +61,29 @@ const Span = styled.span`
 
 const randomInt = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
+const formatValue = (value: string | number) => {
+  return typeof value === 'number' ? `${value}px` : value;
+};
+
+const StyledSpan = styled(Span)<SkeletonProps>`
+  ${({ count, duration = 1.2, width = '100%', height = '100%', isCircle, isText, isPulsing = true }) => css`
+    animation: ${shine} ${duration}s infinite linear ${isPulsing ? 'running' : 'paused'};
+    width: ${count > 1 && isText ? `${randomInt(80, 100)}%` : formatValue(width)};
+    height: ${formatValue(height)};
+    ${(height && width && isCircle && 'border-radius: 50%') || ''};
+  `}
+`;
+
 /**
  * The `Sekeleton` component displays a low fidelity UI into which information will be gradually loaded.
  */
 export const Skeleton: React.FC<SkeletonProps> = props => {
-  const { count = 1, duration = 1.2, width = '100%', height = '100%', isCircle, isText, isPulsing = true } = props;
+  const { count = 1 } = props;
   const skeletons = [];
 
   for (let i = 0; i < count; i++) {
-    const StyledSpan = styled(Span)`
-      animation: ${shine} ${duration}s infinite linear ${!isPulsing ? 'paused' : 'running'};
-
-      ${count > 1 && isText
-        ? { width: `${randomInt(80, 100)}%` }
-        : { width: typeof width === 'number' ? `${width}px` : width }};
-
-      height: ${typeof height === 'number' ? `${height}px` : height};
-
-      ${height &&
-        width &&
-        isCircle && {
-          borderRadius: '50%',
-        }};
-    `;
-
     skeletons.push(
-      <StyledSpan key={i} {...props}>
+      <StyledSpan key={i} count={count} {...props}>
         &zwnj;
       </StyledSpan>,
     );
