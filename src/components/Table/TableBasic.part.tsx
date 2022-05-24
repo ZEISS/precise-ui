@@ -246,7 +246,7 @@ export class TableBasic<T> extends React.Component<TableProps<T> & RefProps, Tab
               const width = typeof column === 'string' ? undefined : column.width;
               const sortable = this.isSortable(key, columns);
               const direction = sortable && sortBy && (sortBy.columnKey !== key ? undefined : sortBy.order);
-              const headTag = `${name}`.trim() ? 'th' : 'td';
+              const headTag = typeof name === 'string' && name.trim() ? 'th' : 'td';
 
               return (
                 <StyledTableHeader

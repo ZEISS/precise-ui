@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 2.1.13
+
+- Fix WCAG error: Empty table header in case of JSX element
+
 ## 2.1.12
 
 - Fix the issue `The component Styled(styled.span) has been created dynamically`
