@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 2.1.14
+
+- Fix crumbled pagination controls on narrow screens
+
 ## 2.1.13
 
 - Fix WCAG error: Empty table header in case of JSX element

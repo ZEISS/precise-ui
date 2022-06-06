@@ -30,6 +30,7 @@ function getPages(itemsPerPage: number, total: number) {
 
 const ControlsContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-left: auto;
   align-items: center;
