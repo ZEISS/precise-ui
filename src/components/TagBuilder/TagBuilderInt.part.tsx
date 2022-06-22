@@ -354,6 +354,7 @@ export class TagBuilderInt extends React.Component<TagBuilderProps & FormContext
         form.change({
           name,
           value,
+          validateWith: this.props.validateWith,
         });
       } else {
         this.setState({

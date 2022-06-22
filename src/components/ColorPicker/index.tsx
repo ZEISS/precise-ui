@@ -258,6 +258,7 @@ class ColorPickerInt extends React.PureComponent<ColorPickerProps & FormContextP
       form.change({
         name,
         value: (state as Pick<ColorPickerState, 'value'>).value,
+        validateWith: this.props.validateWith,
       });
     } else {
       this.setState(state);

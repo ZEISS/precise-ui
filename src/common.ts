@@ -488,6 +488,10 @@ export interface InputProps<T> extends StandardProps {
    * Sets maximum lenngth of input field.
    */
   maxLength?: number;
+  /**
+   * List of fields, that need to be revalidated when the field value is changed
+   */
+  validateWith?: Array<string>;
 }
 
 export interface LabeledInputProps<T> extends InputProps<T> {

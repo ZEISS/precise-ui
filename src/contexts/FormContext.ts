@@ -14,6 +14,7 @@ export interface FormValueNotifier {
 export interface FormValueChange {
   name: string;
   value: any;
+  validateWith?: Array<string>;
 }
 
 export interface FormContextType {

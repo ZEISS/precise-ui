@@ -92,6 +92,7 @@ export class AutocompleteTagBuilderInt<T> extends React.Component<
         form.change({
           name,
           value: newValue,
+          validateWith: this.props.validateWith,
         });
       } else {
         this.setState({

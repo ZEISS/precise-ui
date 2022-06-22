@@ -274,6 +274,7 @@ class DateFieldInt extends React.Component<DateFieldProps, DateFieldState> {
           form.change({
             name,
             value,
+            validateWith: this.props.validateWith,
           });
         this.onOpenChange(true);
       });
