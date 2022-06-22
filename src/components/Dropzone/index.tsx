@@ -166,6 +166,7 @@ class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, Drop
         form.change({
           name,
           value: multiple ? [...this.state.value, ...files] : files,
+          validateWith: this.props.validateWith,
         });
       } else {
         this.setState(
@@ -250,6 +251,7 @@ class DropzoneInt extends React.Component<DropzoneProps & FormContextProps, Drop
         form.change({
           name,
           value: this.state.value.filter(file => f !== file),
+          validateWith: this.props.validateWith,
         });
       } else {
         this.setState(

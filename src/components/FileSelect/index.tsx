@@ -107,6 +107,7 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
         form.change({
           name,
           value: getFiles(multiple ? [...this.state.value] : [], files),
+          validateWith: this.props.validateWith,
         });
       } else {
         this.setState(
@@ -130,6 +131,7 @@ class FileSelectInt extends React.Component<FileSelectProps & FormContextProps, 
         form.change({
           name,
           value: this.state.value.filter(file => f !== file),
+          validateWith: this.props.validateWith,
         });
       } else {
         this.setState(

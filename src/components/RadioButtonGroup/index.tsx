@@ -113,6 +113,7 @@ class RadioButtonGroupInt extends React.PureComponent<RadioButtonGroupProps & Fo
             form.change({
               name,
               value,
+              validateWith: this.props.validateWith,
             });
           } else if (value) {
             this.setState({

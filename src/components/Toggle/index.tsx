@@ -138,6 +138,7 @@ class ToggleInt extends React.PureComponent<ToggleProps & FormContextProps, Togg
           form.change({
             name,
             value: status,
+            validateWith: this.props.validateWith,
           });
         } else {
           this.setState({

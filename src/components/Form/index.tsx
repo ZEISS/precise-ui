@@ -67,7 +67,7 @@ export interface FormProps<FormValues> extends StandardProps {
   /**
    * Rules for validating fields values.
    */
-  validationRules?: { [T in keyof FormValues]?: (value: any) => React.ReactChild | true };
+  validationRules?: { [T in keyof FormValues]?: (value: any, formValues: FormValues) => React.ReactChild | true };
   /**
    * Event emitted when a field of the form changed.
    */
@@ -215,9 +215,9 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
     }
   }
 
-  private getError(name: string, value: any) {
+  private getError(name: string, value: any, current: Values) {
     const validator = this.props.validationRules && this.props.validationRules[name];
-    const validationResult = validator ? validator(value) : true;
+    const validationResult = validator ? validator(value, current) : true;
     const error = validationResult === true ? undefined : validationResult;
     return error;
   }
@@ -231,8 +231,8 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
     }
   }
 
-  private setError({ name, value }: FormValueChange) {
-    const error = this.getError(name, value);
+  private setError({ name, value }: FormValueChange, current: Values) {
+    const error = this.getError(name, value, current);
     this.setFieldError(name, error);
 
     this.setState({ errors: { ...this.state.errors, [name]: error } });
@@ -244,12 +244,13 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
 
     for (const key of keys as Array<Extract<keyof Values, string>>) {
       const value = current[key];
-      const error = this.getError(key, value);
+      const error = this.getError(key, value, current);
       errors[key] = error;
       this.setFieldError(key, error);
     }
 
     this.setState({ errors });
+    return errors;
   }
 
   private createContext(): FormContextType {
@@ -267,7 +268,11 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
           this.setValues(proposed, changed);
         }
 
-        this.setError(field);
+        this.setError(field, proposed);
+
+        (field.validateWith || []).forEach((fieldName: string) => {
+          return this.setError({ name: fieldName, value: proposed[fieldName] }, proposed);
+        });
 
         if (typeof onChange === 'function') {
           onChange({
@@ -286,14 +291,14 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
           let error: React.ReactChild | undefined;
           if (name in current) {
             const value = current[name];
-            error = this.getError(name, value);
+            error = this.getError(name, value, current);
             field.setState({
               value,
             });
           } else {
             const value = field.state.value;
             current[name as Extract<keyof Values, string>] = value;
-            error = this.getError(name, value);
+            error = this.getError(name, value, current);
           }
 
           if (error) {
@@ -310,9 +315,9 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
 
   private submit = (e: React.FormEvent<HTMLFormElement>) => {
     const { onSubmit, disabled } = this.props;
-    const { current, changed, errors } = this.state;
+    const { current, changed } = this.state;
 
-    this.setErrors(current);
+    const errors = this.setErrors(current);
 
     if (!disabled && typeof onSubmit === 'function') {
       const arrayErrors = this.getErrorsAsArray(errors);

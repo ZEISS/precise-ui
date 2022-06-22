@@ -320,6 +320,7 @@ export class DropdownFieldInt extends React.Component<DropdownFieldProps & FormC
         form.change({
           name,
           value,
+          validateWith: this.props.validateWith,
         });
       } else {
         this.setState({

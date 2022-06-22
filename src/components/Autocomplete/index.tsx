@@ -178,7 +178,7 @@ class AutocompleteInt<T> extends React.Component<SupportedAutocompleteProps<T> &
     const { onChange, name = '', form } = this.props;
 
     if (!this.state.controlled) {
-      form ? form.change({ name, value }) : this.setState({ value });
+      form ? form.change({ name, value, validateWith: this.props.validateWith }) : this.setState({ value });
     }
 
     suggestionSelected ? this.hide() : this.show();

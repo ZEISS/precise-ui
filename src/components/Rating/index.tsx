@@ -182,6 +182,7 @@ class RatingInt extends React.Component<RatingProps & FormContextProps, RatingSt
         form.change({
           name,
           value,
+          validateWith: this.props.validateWith,
         });
       } else {
         this.setState({

@@ -279,6 +279,7 @@ class SliderInt extends React.PureComponent<SliderProps & FormContextProps, Slid
           form.change({
             name,
             value,
+            validateWith: this.props.validateWith,
           });
         } else {
           this.setState({

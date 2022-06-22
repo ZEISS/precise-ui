@@ -46,6 +46,10 @@ export interface RadioButtonProps extends StandardProps {
    * Name of the radio button within a radio button group.
    */
   name?: string;
+  /**
+   * List of fields, that need to be revalidated when the field value is changed
+   */
+  validateWith?: Array<string>;
 }
 
 export interface RadioButtonIntProps extends RadioButtonProps {
@@ -213,6 +217,7 @@ export class RadioButtonInt extends React.PureComponent<RadioButtonIntProps & Fo
           form.change({
             name,
             value,
+            validateWith: this.props.validateWith,
           });
         } else {
           this.setState({

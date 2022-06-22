@@ -176,6 +176,7 @@ class TextFieldInt extends React.Component<TextFieldProps & FormContextProps, Te
         form.change({
           name,
           value,
+          validateWith: this.props.validateWith,
         });
       } else {
         this.setState({

@@ -159,6 +159,7 @@ export class CheckboxInt extends React.PureComponent<CheckboxProps, CheckboxStat
           form.change({
             name,
             value: checked,
+            validateWith: this.props.validateWith,
           });
         } else {
           this.setState({
