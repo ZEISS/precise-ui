@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 2.1.15
+
+- Fix React error when onSizeChanged gets added to the Pagination component
+
 ## 2.1.14
 
 - Improve validation of `Form`

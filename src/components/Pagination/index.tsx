@@ -186,7 +186,7 @@ export class Pagination extends React.Component<PaginationProps, PaginationState
   }
 
   render() {
-    const { children, host, size: sizeProp, itemsInfo, pagesInfo, label, render, ...props } = this.props;
+    const { children, host, size: sizeProp, itemsInfo, pagesInfo, label, render, onSizeChanged, ...props } = this.props;
     const count = React.Children.count(children);
     const { current, min, max, sizeState } = this.getDim(count);
     const content =
