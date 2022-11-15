@@ -417,11 +417,6 @@ export interface StandardProps {
    * The style prop for explicitly overriding some CSS styles.
    */
   style?: React.CSSProperties;
-  /**
-   * Make it compatible with React 18, where React.FC and React.Component are missing
-   * the default children prop.
-   */
-  children?: React.ReactNode | undefined;
 }
 
 export interface InputChangeEvent<T> {

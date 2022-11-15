@@ -3,6 +3,7 @@ import styled from '../../utils/styled';
 import { Prompt } from '../Prompt';
 import { FormContext, FormContextType, FormValueNotifier, FormValueChange } from '../../contexts';
 import { StandardProps } from '../../common';
+import { ReactComponentDefaultProps } from '../../utils/react-18-compat';
 
 export interface FormSubmitEvent {
   /**
@@ -50,7 +51,7 @@ export interface FormValidationError {
   error: React.ReactChild;
 }
 
-export interface FormProps<FormValues> extends StandardProps {
+export interface FormProps<FormValues> extends StandardProps, ReactComponentDefaultProps {
   /**
    * Shows the given message if the user wants to navigate
    * with changes being made or renders custom component with message if provided.
@@ -351,6 +352,7 @@ export class Form<Values extends FormValuesData> extends React.Component<FormPro
       prompt,
       ...rest
     } = this.props;
+
     const { changed } = this.state;
     return (
       <StyledForm {...rest} onSubmit={this.submit}>
