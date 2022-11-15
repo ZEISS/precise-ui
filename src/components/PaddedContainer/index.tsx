@@ -1,8 +1,9 @@
 import * as React from 'react';
 import styled, { css } from '../../utils/styled';
 import { distance } from '../../distance';
+import { ReactComponentDefaultProps } from '../../utils/react-18-compat';
 
-export interface PaddedContainerProps {
+export interface PaddedContainerProps extends ReactComponentDefaultProps {
   /**
    * Padding on top. Valid values: xxsmall, xsmall, small, medium, large, xlarge, xxlarge, xxxlarge.
    */
