@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled, { css } from '../../utils/styled';
 import { distance } from '../../distance';
+import { ReactFC } from '../../utils/react-18-compat';
 
 export interface PaddedContainerProps {
   /**
@@ -40,6 +41,6 @@ const StyledContainer = styled('div')<PaddedContainerProps>(
   `,
 );
 
-export const PaddedContainer: React.FC<PaddedContainerProps> = props => {
+export const PaddedContainer: ReactFC<PaddedContainerProps> = props => {
   return <StyledContainer {...props} />;
 };
