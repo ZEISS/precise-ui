@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 2.1.16
+
+- Fix some typings for React 18 compatibility.
+
 ## 2.1.15
 
 - Fix React error when onSizeChanged gets added to the Pagination component
