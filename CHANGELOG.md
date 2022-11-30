@@ -1,5 +1,9 @@
 # Precise UI Changelog
 
+## 2.1.17
+
+- Make dynamically created Headline subcomponents static
+
 ## 2.1.16
 
 - Fix some typings for React 18 compatibility.
