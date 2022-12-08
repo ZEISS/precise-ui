@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { mount, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { Headline } from './';
 import { light } from '../../themes';
 
