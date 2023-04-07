@@ -73,6 +73,8 @@ const StyledError = styled.span`
  * so that it scales with it's parent.
  */
 export class Image extends React.Component<ImageProps, ImageState> {
+  private hiddenImageElement: HTMLImageElement | null = null;
+
   constructor(props: ImageProps) {
     super(props);
     this.state = {
@@ -84,11 +86,42 @@ export class Image extends React.Component<ImageProps, ImageState> {
     const { preload, src } = this.props;
 
     if (preload) {
-      const image = document.createElement('img');
-      image.onload = () => this.setState({ status: 'loaded' });
-      image.onerror = () => this.setState({ status: 'error' });
+      let image = this.hiddenImageElement;
+      if (!image) {
+        image = document.createElement('img');
+        this.hiddenImageElement = image;
+        image.hidden = true;
+        image.onload = () => this.setState({ status: 'loaded' });
+        image.onerror = () => this.setState({ status: 'error' });
+        document.body.appendChild(image);
+      }
       image.src = src;
     }
+  }
+
+  componentDidUpdate(prevProps: ImageProps) {
+    const { preload, src } = this.props;
+
+    if (preload && prevProps.src != src) {
+      this.setState({ status: 'idle' });
+
+      let image = this.hiddenImageElement;
+      if (!image) {
+        image = document.createElement('img');
+        this.hiddenImageElement = image;
+        image.hidden = true;
+        image.onload = () => this.setState({ status: 'loaded' });
+        image.onerror = () => this.setState({ status: 'error' });
+        document.body.appendChild(image);
+      }
+      image.src = src;
+    }
+  }
+
+  componentWillUnmount() {
+    const imageElement = this.hiddenImageElement;
+    if (imageElement)
+      document.body.removeChild(imageElement);
   }
 
   render() {

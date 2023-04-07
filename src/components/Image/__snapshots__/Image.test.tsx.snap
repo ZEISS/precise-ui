@@ -23,6 +23,15 @@ exports[`<Image /> should render default error component when image fails onload
 </styled.div>
 `;
 
+exports[`<Image /> should update src when preload is set 1`] = `
+<styled.div>
+  <styled.img
+    alt="some image"
+    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg=="
+  />
+</styled.div>
+`;
+
 exports[`<Image /> should use alternative error component when one provided 1`] = `
 <styled.div>
   <div>
