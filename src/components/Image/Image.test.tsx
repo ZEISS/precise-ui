@@ -35,4 +35,13 @@ describe('<Image />', () => {
     wrapper.setState({ status: 'error' });
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should update src when preload is set', () => {
+    const wrapper = shallow(<Image preload src="some-image.png" alt={"some image"} />);
+    wrapper.setProps({ src: image });
+    // @ts-ignore private member on <Image />
+    const img = wrapper.instance().hiddenImageElement;
+    img?.onload?.call(this);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
